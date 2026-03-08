@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar Plante — Proiect Șerban · Dobrogea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-light: #3d3d5c;
+    --paper: #f7f4ef;
+    --paper-warm: #ede9e0;
+    --accent-green: #2d6a4f;
+    --accent-green-light: #b7e4c7;
+    --accent-blue: #1565c0;
+    --accent-blue-light: #bbdefb;
+    --accent-pink: #880e4f;
+    --accent-pink-light: #fce4ec;
+    --accent-gold: #e6a817;
+    --accent-gold-light: #fff8e1;
+    --border: #d4cec4;
+    --shadow: rgba(26,26,46,0.10);
+
+    /* Month season tints */
+    --m-winter: #dde8f0;
+    --m-spring: #dff0df;
+    --m-summer: #fdf3d0;
+    --m-autumn: #f5e6d3;
+
+    /* State colors */
+    --water-bg: #bbdefb;
+    --water-txt: #0d47a1;
+    --green-bg: #c8e6c9;
+    --green-txt: #1b5e20;
+    --flower-bg: #f8bbd0;
+    --flower-txt: #880e4f;
+    --dormant-bg: #eeeeee;
+    --dormant-txt: #9e9e9e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    color: #fff;
+    padding: 28px 40px 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 4px solid var(--accent-gold);
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+  header h1 span { color: var(--accent-gold); }
+  header p {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 4px;
+  }
+
+  /* ── LEGEND ── */
+  .legend {
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 40px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ink-light);
+    margin-right: 8px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-dot {
+    width: 22px; height: 22px;
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* ── FILTERS ── */
+  .filters {
+    padding: 12px 40px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-label {
+    font-size: 11px;
+    color: var(--ink-light);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .filter-btn {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .15s;
+    color: var(--ink);
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .search-box {
+    margin-left: auto;
+    padding: 5px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    outline: none;
+    background: var(--paper);
+    color: var(--ink);
+    width: 200px;
+    transition: border-color .2s;
+  }
+  .search-box:focus { border-color: var(--accent-green); }
+
+  /* ── TABLE WRAPPER ── */
+  .table-wrapper {
+    overflow-x: auto;
+    padding: 0 0 40px;
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    min-width: 1200px;
+    width: 100%;
+  }
+
+  /* ── THEAD ── */
+  thead tr.row-months th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 0;
+    background: var(--ink);
+  }
+  thead tr.row-months th.th-info {
+    background: #16213e;
+    padding: 10px 12px;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #90a4ae;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+  thead tr.row-months th.th-info.th-name {
+    color: #eceff1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .month-header {
+    width: 78px;
+    min-width: 78px;
+  }
+  .month-header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px 6px;
+    gap: 3px;
+  }
+  .month-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .month-season {
+    font-size: 9px;
+    color: #78909c;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .month-stripe {
+    height: 3px;
+    width: 100%;
+    border-radius: 2px 2px 0 0;
+  }
+
+  /* Season colors for month stripe */
+  .season-winter .month-stripe { background: #90caf9; }
+  .season-spring .month-stripe { background: #a5d6a7; }
+  .season-summer .month-stripe { background: #ffcc80; }
+  .season-autumn .month-stripe { background: #ffab91; }
+
+  /* ── TBODY ── */
+  tbody tr {
+    transition: background .12s;
+  }
+  tbody tr:hover td { background: #f0f4ff !important; }
+  tbody tr.hidden { display: none; }
+
+  td {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid #ebe8e2;
+    vertical-align: middle;
+    padding: 0;
+  }
+
+  /* Info columns */
+  td.td-qty {
+    padding: 6px 10px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-blue);
+    background: #f0f4ff;
+    white-space: nowrap;
+    min-width: 44px;
+  }
+  td.td-code {
+    padding: 6px 8px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #78909c;
+    background: #f5f5f5;
+    white-space: nowrap;
+    min-width: 48px;
+  }
+  td.td-name {
+    padding: 7px 14px 7px 12px;
+    min-width: 230px;
+    max-width: 260px;
+    background: #fff;
+    border-right: 2px solid var(--border);
+  }
+  .plant-name-ro {
+    font-weight: 600;
+    font-size: 12.5px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .plant-name-lat {
+    font-size: 10.5px;
+    font-style: italic;
+    color: #78909c;
+    margin-top: 1px;
+  }
+  .plant-link {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 9.5px;
+    color: var(--accent-green);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.2px;
+    opacity: 0.8;
+    transition: opacity .15s;
+  }
+  .plant-link:hover { opacity: 1; text-decoration: underline; }
+  .plant-links { display: flex; gap: 8px; }
+
+  td.td-h3, td.td-h7, td.td-water {
+    padding: 6px 8px;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 56px;
+  }
+  td.td-h3, td.td-h7 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #6a1b9a;
+    background: #f3e5f5;
+  }
+  td.td-water {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-blue);
+    background: #e3f2fd;
+  }
+
+  /* ── MONTH CELLS ── */
+  td.td-month {
+    width: 78px;
+    min-width: 78px;
+    height: 44px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px 3px;
+    cursor: default;
+  }
+  .cell-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 100%;
+    border-radius: 6px;
+    padding: 3px 2px;
+    min-height: 34px;
+    transition: transform .1s;
+  }
+  .cell-inner:hover { transform: scale(1.08); }
+
+  .cell-icons {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .cell-label {
+    font-size: 8.5px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    line-height: 1;
+  }
+
+  /* State combinations */
+  .state-dormant   { background: var(--dormant-bg); color: var(--dormant-txt); }
+  .state-green     { background: var(--green-bg);   color: var(--green-txt); }
+  .state-water     { background: var(--water-bg);   color: var(--water-txt); }
+  .state-flower    { background: var(--flower-bg);  color: var(--flower-txt); }
+  .state-peak      { background: #f48fb1;           color: #4a0023; }
+  .state-green-water { background: #dcedc8;         color: #33691e; }
+  .state-flower-water { background: #f8bbd0;        color: #880e4f; }
+
+  /* ── TOOLTIPS ── */
+  td.td-month { position: relative; }
+  td.td-month::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .15s;
+    z-index: 100;
+    font-family: 'DM Sans', sans-serif;
+  }
+  td.td-month:hover::after { opacity: 1; }
+
+  /* ── SECTION DIVIDERS ── */
+  tr.section-header td {
+    background: var(--ink);
+    color: #fff;
+    padding: 5px 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-style: italic;
+    color: #cfd8dc;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── STICKY COLS ── */
+  td.td-qty, td.td-code, td.td-name,
+  th.th-qty, th.th-code, th.th-name {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
+  td.td-code { left: 44px; }
+  td.td-name { left: 92px; }
+  th.th-qty { left: 0; }
+  th.th-code { left: 44px; }
+  th.th-name { left: 92px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: #78909c;
+    padding: 16px 40px;
+    font-size: 11px;
+    text-align: center;
+  }
+  footer strong { color: #ccc; }
+
+  /* ── PRINT ── */
+  @media print {
+    .filters, .search-box { display: none; }
+    body { font-size: 10px; }
+    header { padding: 12px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🌿 Calendar Plante &mdash; <span>Proiect Șerban</span></h1>
+    <p>Dobrogea · Stare lunară · Udare · Înflorire · Frunziș</p>
+  </div>
+  <div style="text-align:right">
+    <p style="color:#ccc;font-size:13px;font-weight:600;">65 specii</p>
+    <p>Surse: Wikipedia RO/EN · Plants of the World (Kew)</p>
+  </div>
+</header>
+
+<div class="legend">
+  <span class="legend-title">Legendă</span>
+  <div class="legend-item"><div class="legend-dot" style="background:#bbdefb;color:#0d47a1">💧</div> Necesită udare</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c8e6c9;color:#1b5e20">🌿</div> Frunziș verde</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f8bbd0;color:#880e4f">🌸</div> Înflorire</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#dcedc8;color:#33691e">💧🌿</div> Udare + verde</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f48fb1;color:#4a0023">🌸💧</div> Vârf activitate</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#eee;color:#9e9e9e">·</div> Dormant</div>
+</div>
+
+<div class="filters">
+  <span class="filter-label">Filtru:</span>
+  <button class="filter-btn active" onclick="filterPlants('all',this)">Toate</button>
+  <button class="filter-btn" onclick="filterPlants('arbori',this)">🌳 Arbori</button>
+  <button class="filter-btn" onclick="filterPlants('arbusti',this)">🌿 Arbuști</button>
+  <button class="filter-btn" onclick="filterPlants('fructiferi',this)">🍎 Fructiferi</button>
+  <button class="filter-btn" onclick="filterPlants('aromatice',this)">🌾 Aromatice</button>
+  <button class="filter-btn" onclick="filterPlants('evergreen',this)">🟢 Veșnic verzi</button>
+  <input class="search-box" type="text" placeholder="🔍 Caută plantă..." oninput="searchPlants(this.value)">
+</div>
+
+<div class="table-wrapper">
+<table id="mainTable">
+<thead>
+  <tr class="row-months">
+    <th class="th-info th-qty th-name" style="min-width:44px">Buc.</th>
+    <th class="th-info th-code th-name" style="min-width:48px">Cod</th>
+    <th class="th-info th-name" style="min-width:230px">Denumire plantă</th>
+    <th class="th-info" style="min-width:56px">H<br>3 ani</th>
+    <th class="th-info" style="min-width:56px">H<br>7 ani</th>
+    <th class="th-info" style="min-width:56px">Apă/ud<br>(L)</th>
+    <th class="month-header season-winter"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Ian</span><span class="month-season">iarnă</span></div></th>
+    <th class="month-header season-winter"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Feb</span><span class="month-season">iarnă</span></div></th>
+    <th class="month-header season-spring"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Mar</span><span class="month-season">primăvară</span></div></th>
+    <th class="month-header season-spring"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Apr</span><span class="month-season">primăvară</span></div></th>
+    <th class="month-header season-spring"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Mai</span><span class="month-season">primăvară</span></div></th>
+    <th class="month-header season-summer"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Iun</span><span class="month-season">vară</span></div></th>
+    <th class="month-header season-summer"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Iul</span><span class="month-season">vară</span></div></th>
+    <th class="month-header season-summer"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Aug</span><span class="month-season">vară</span></div></th>
+    <th class="month-header season-autumn"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Sep</span><span class="month-season">toamnă</span></div></th>
+    <th class="month-header season-autumn"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Oct</span><span class="month-season">toamnă</span></div></th>
+    <th class="month-header season-autumn"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Nov</span><span class="month-season">toamnă</span></div></th>
+    <th class="month-header season-winter"><div class="month-header-inner"><div class="month-stripe"></div><span class="month-name">Dec</span><span class="month-season">iarnă</span></div></th>
+  </tr>
+</thead>
+<tbody id="tableBody">
+</tbody>
+</table>
+</div>
+
+<footer>
+  <strong>Surse informații:</strong> Wikipedia RO (ro.wikipedia.org) · Wikipedia EN (en.wikipedia.org) · Plants of the World Online / Kew Gardens (powo.science.kew.org) &nbsp;|&nbsp;
+  Date adaptate pentru clima continentală din <strong>Dobrogea</strong>
+</footer>
+
+<script>
+const PLANTS = [
+  { qty:2,   code:"F32",   ro:"Agriș",          lat:"Ribes uva-crispa",                  h3:0.8, h7:1.2, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Agri%C8%99"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:719823-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:12,  code:"F1",    ro:"Alun",            lat:"Corylus avellana",                  h3:1.5, h7:3.5, water:15, cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Corylus_avellana"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:332442-2"}],
+    months:[[0,0,1],[0,0,1],[0,1,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"F34",   ro:"Arbore de mazăre", lat:"Caragana arborescens",             h3:1.5, h7:3.0, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Caragana_arborescens"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:500040-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"A28",   ro:"Arborele de lalea", lat:"Liriodendron tulipifera",         h3:2.0, h7:6.0, water:30, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Liriodendron_tulipifera"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:574283-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"A11",   ro:"Arborele de mătase", lat:"Albizia julibrissin",            h3:2.0, h7:5.0, water:15, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Albizia_julibrissin"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30002560-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"F59",   ro:"Aronia",           lat:"Aronia melanocarpa",                h3:1.0, h7:1.8, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Aronia_melanocarpa"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77099372-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F10",   ro:"Cireș",            lat:"Prunus avium",                      h3:2.5, h7:6.0, water:30, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_avium"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728092-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"F31",   ro:"Coacăz alb",       lat:"Ribes glandulosum",                 h3:0.8, h7:1.2, water:5,  cat:"fructiferi",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Ribes_glandulosum"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:720001-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"F30",   ro:"Coacăz negru",     lat:"Ribes nigrum",                      h3:0.8, h7:1.3, water:5,  cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Coacăz_negru"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:720008-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:16,  code:"F29",   ro:"Coacăz roșu",      lat:"Ribes rubrum",                      h3:0.8, h7:1.3, water:5,  cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Coacăz_roșu"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:720016-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F11",   ro:"Corcoduș",         lat:"Prunus cerasifera",                 h3:2.0, h7:4.5, water:20, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_cerasifera"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728005-1"}],
+    months:[[0,0,0],[0,0,1],[0,0,1],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:14,  code:"F21",   ro:"Corn",             lat:"Cornus mas",                        h3:1.5, h7:3.5, water:10, cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Corn_(plantă)"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331610-2"}],
+    months:[[0,0,0],[0,0,1],[0,1,1],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"S38",   ro:"Cununiță",         lat:"Spiraea japonica",                  h3:0.5, h7:0.8, water:4,  cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Spiraea_japonica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:726882-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:4,   code:"S72",   ro:"Călin",            lat:"Viburnum opulus",                   h3:1.2, h7:2.5, water:10, cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Viburnum_opulus"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:839690-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:5,   code:"F26",   ro:"Cătină",           lat:"Hippophae rhamnoides",              h3:1.5, h7:3.5, water:3,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Cătină_albă"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:550072-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:16,  code:"F9",    ro:"Dud alb",          lat:"Morus alba",                        h3:3.0, h7:7.0, water:20, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Morus_alba"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:588937-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"ia19",  ro:"Fenicul",          lat:"Foeniculum vulgare",                h3:1.2, h7:1.5, water:3,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Fenicul"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:840411-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:17,  code:"A24",   ro:"Frasin",           lat:"Fraxinus excelsior",                h3:3.0, h7:8.0, water:30, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Fraxinus_excelsior"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:800571-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:9,   code:"S6",    ro:"Hibiscus",         lat:"Hibiscus syriacus",                 h3:1.0, h7:2.5, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Hibiscus_syriacus"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:550895-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:4,   code:"S3",    ro:"Iasomie falsă",    lat:"Philadelphus coronarius",           h3:1.2, h7:2.5, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Philadelphus_coronarius"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:685462-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"ip44",  ro:"Isop",             lat:"Hyssopus officinalis",              h3:0.4, h7:0.6, water:2,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Isop"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:551624-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:1,   code:"F18",   ro:"Jujuba",           lat:"Ziziphus jujuba",                   h3:1.5, h7:4.0, water:10, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Ziziphus_jujuba"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:723536-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"F3",    ro:"Kaki",             lat:"Diospyros kaki",                    h3:1.5, h7:4.0, water:20, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Diospyros_kaki"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:322671-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:8,   code:"S50",   ro:"Kerria",           lat:"Kerria japonica",                   h3:1.0, h7:1.8, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Kerria_japonica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:562745-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:10,  code:"ar2",   ro:"Lavandă",          lat:"Lavandula angustifolia",            h3:0.4, h7:0.6, water:2,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Lavandă"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:563892-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:168, code:"S34",   ro:"Lemn câinesc",     lat:"Ligustrum ovalifolium",             h3:1.5, h7:3.0, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Ligustrum_ovalifolium"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:567033-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:2,   code:"S21",   ro:"Liliac",           lat:"Syringa vulgaris",                  h3:1.5, h7:3.5, water:10, cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Syringa_vulgaris"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601619-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:6,   code:"S80",   ro:"Liliac de vară",   lat:"Buddleja davidii",                  h3:1.5, h7:3.0, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Buddleja_davidii"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296795-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:5,   code:"ip102", ro:"Lofantus",         lat:"Agastache foeniculum",              h3:0.8, h7:1.2, water:3,  cat:"aromatice",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Agastache_foeniculum"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316985-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"A30",   ro:"Magnolie",         lat:"Magnolia × soulangeana",            h3:1.5, h7:4.0, water:20, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Magnolia_×_soulangeana"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:824553-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F14",   ro:"Migdal",           lat:"Prunus dulcis",                     h3:2.0, h7:4.5, water:15, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_dulcis"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728048-1"}],
+    months:[[0,0,0],[0,0,1],[0,1,1],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F8",    ro:"Moșmon",           lat:"Mespilus germanica",                h3:1.5, h7:3.5, water:15, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Moșmon"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:579834-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:8,   code:"F28",   ro:"Măceș",            lat:"Rosa canina",                       h3:1.5, h7:2.5, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Rosa_canina"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728277-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F7",    ro:"Măr",              lat:"Malus domestica",                   h3:2.5, h7:5.5, water:25, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Malus_domestica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:577328-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F56",   ro:"Nectarin",         lat:"Prunus persica var. nucipersica",   h3:2.0, h7:4.5, water:25, cat:"fructiferi",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Nectarine"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728079-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"F6",    ro:"Nuc",              lat:"Juglans regia",                     h3:2.5, h7:6.0, water:30, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Juglans_regia"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:297896-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"S17",   ro:"Oțetar",           lat:"Rhus typhina",                      h3:2.0, h7:5.0, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Rhus_typhina"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:715091-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"A5",    ro:"Paltin de câmp",   lat:"Acer platanoides",                  h3:3.0, h7:8.0, water:25, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Acer_platanoides"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:314452-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:76,  code:"S11",   ro:"Photinia",         lat:"Photinia × fraseri",                h3:1.5, h7:4.0, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Photinia_%C3%97_fraseri"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:686117-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:1,   code:"F15",   ro:"Piersic",          lat:"Prunus persica",                    h3:2.0, h7:4.5, water:25, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_persica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728079-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:20,  code:"A34",   ro:"Pin negru",        lat:"Pinus nigra",                       h3:1.5, h7:4.0, water:5,  cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Pinus_nigra"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262453-2"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:15,  code:"S28",   ro:"Forsythia",        lat:"Forsythia × intermedia",            h3:1.2, h7:2.5, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Forsythia"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:906004-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F19",   ro:"Pom de stafide",   lat:"Amelanchier lamarckii",             h3:1.5, h7:4.0, water:15, cat:"fructiferi",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Amelanchier_lamarckii"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321067-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"ip126", ro:"Potentilla",       lat:"Potentilla fruticosa",              h3:0.5, h7:0.8, water:3,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Potentilla_fruticosa"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:707893-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F53",   ro:"Prun",             lat:"Prunus domestica",                  h3:2.5, h7:5.0, water:25, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_domestica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728041-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:7,   code:"S5",    ro:"Păducel",          lat:"Crataegus monogyna",                h3:1.5, h7:3.5, water:5,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Crataegus_monogyna"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331939-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F17",   ro:"Păr",              lat:"Pyrus communis",                    h3:2.5, h7:6.0, water:25, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Pyrus_communis"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:713519-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F16",   ro:"Rodiu",            lat:"Punica granatum",                   h3:1.2, h7:3.0, water:15, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Punica_granatum"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:712521-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:3,   code:"ar9",   ro:"Roiniță",          lat:"Melissa officinalis",               h3:0.5, h7:0.7, water:3,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Melissa_officinalis"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:448499-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"ar6",   ro:"Rozmarin",         lat:"Salvia rosmarinus",                 h3:0.5, h7:0.8, water:2,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Rozmarin"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77191652-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,1],[0,1,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:2,   code:"A43",   ro:"Salcie plângătoare", lat:"Salix babylonica",                h3:4.0, h7:9.0, water:40, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Salix_babylonica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:723399-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"S10",   ro:"Salcâm galben",    lat:"Laburnum anagyroides",              h3:2.0, h7:5.0, water:15, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Laburnum_anagyroides"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:563255-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"ar7",   ro:"Salvie",           lat:"Salvia officinalis",                h3:0.4, h7:0.6, water:2,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Salvia_officinalis"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:451304-1"}],
+    months:[[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0]]},
+
+  { qty:1,   code:"S4",    ro:"Scumpie",          lat:"Cotinus coggygria",                 h3:1.5, h7:3.5, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Cotinus_coggygria"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331736-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"F4",    ro:"Smochin",          lat:"Ficus carica",                      h3:1.5, h7:4.0, water:20, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Ficus_carica"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:330761-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"S18",   ro:"Soc",              lat:"Sambucus nigra",                    h3:2.5, h7:5.0, water:15, cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Sambucus_nigra"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321960-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"A40",   ro:"Stejar pufos",     lat:"Quercus pubescens",                 h3:1.5, h7:4.0, water:15, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Quercus_pubescens"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:712837-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:2,   code:"F44",   ro:"Sânger",           lat:"Cornus sanguinea",                  h3:1.5, h7:3.0, water:8,  cat:"arbusti",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Cornus_sanguinea"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331607-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,0],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:32,  code:"A21",   ro:"Sălcioară",        lat:"Elaeagnus angustifolia",            h3:2.5, h7:6.0, water:5,  cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Elaeagnus_angustifolia"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:323810-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"A48",   ro:"Tei argintiu",     lat:"Tilia tomentosa",                   h3:3.0, h7:8.0, water:30, cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Tilia_tomentosa"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:324140-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,0],[1,1,1],[1,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:4,   code:"S69",   ro:"Trandafir cățărător", lat:"Rosa 'Rose de Rescht'",          h3:1.5, h7:2.5, water:10, cat:"arbusti",
+    links:[{txt:"Wikipedia EN",url:"https://en.wikipedia.org/wiki/Rosa_%27Rose_de_Rescht%27"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728247-1"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,0],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[1,1,1],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:4,   code:"ip19",  ro:"Tătăneasă",        lat:"Symphytum officinale",              h3:0.6, h7:0.8, water:5,  cat:"aromatice",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Tătăneasă"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296428-2"}],
+    months:[[0,0,0],[0,0,0],[0,1,0],[0,1,1],[1,1,1],[1,1,1],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:951, code:"A52",   ro:"Ulm de Turkestan", lat:"Ulmus pumila",                      h3:3.5, h7:9.0, water:5,  cat:"arbori",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Ulmus_pumila"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:322562-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+
+  { qty:1,   code:"F12",   ro:"Vișin",            lat:"Prunus cerasus",                    h3:2.0, h7:4.5, water:20, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Prunus_cerasus"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:728009-1"}],
+    months:[[0,0,0],[0,0,0],[0,0,1],[0,1,1],[1,1,0],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0],[0,0,0]]},
+
+  { qty:15,  code:"F33",   ro:"Viță de vie",      lat:"Vitis vinifera",                    h3:2.0, h7:4.0, water:15, cat:"fructiferi",
+    links:[{txt:"Wikipedia RO",url:"https://ro.wikipedia.org/wiki/Vi%C8%9B%C4%83_de_vie"},{txt:"Kew",url:"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331110-2"}],
+    months:[[0,0,0],[0,0,0],[0,0,0],[0,1,0],[1,1,0],[1,1,1],[1,1,0],[1,1,0],[1,1,0],[0,1,0],[0,0,0],[0,0,0]]},
+];
+
+function stateClass(u, v, f) {
+  if (!u && !v && !f) return 'state-dormant';
+  if (f && v && u)    return 'state-peak';
+  if (f && u)         return 'state-flower-water';
+  if (f)              return 'state-flower';
+  if (v && u)         return 'state-green-water';
+  if (v)              return 'state-green';
+  if (u)              return 'state-water';
+  return 'state-dormant';
+}
+
+function stateIcons(u, v, f) {
+  if (!u && !v && !f) return '<span style="opacity:.3;font-size:11px">·</span>';
+  let s = '';
+  if (u) s += '💧';
+  if (v) s += '🌿';
+  if (f) s += '🌸';
+  return s;
+}
+
+function stateTip(u, v, f) {
+  let p = [];
+  if (u) p.push('Udare necesară');
+  if (v) p.push('Frunziș verde');
+  if (f) p.push('Înflorire');
+  return p.length ? p.join(' · ') : 'Dormant';
+}
+
+function stateLabel(u, v, f) {
+  if (!u && !v && !f) return 'dormant';
+  let s = [];
+  if (u) s.push('ud');
+  if (v) s.push('vrd');
+  if (f) s.push('flr');
+  return s.join('+');
+}
+
+function buildTable(plantList) {
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  plantList.forEach((p, i) => {
+    const tr = document.createElement('tr');
+    tr.dataset.cat = p.cat;
+    tr.dataset.name = (p.ro + ' ' + p.lat).toLowerCase();
+    // Check if evergreen (verde all year)
+    const allGreen = p.months.every(m => m[1] === 1);
+    if (allGreen) tr.dataset.evergreen = '1';
+
+    let html = `
+      <td class="td-qty">${p.qty}</td>
+      <td class="td-code">${p.code}</td>
+      <td class="td-name">
+        <div class="plant-name-ro">${p.ro}</div>
+        <div class="plant-name-lat">${p.lat}</div>
+        <div class="plant-links">
+          ${p.links.map(l => `<a class="plant-link" href="${l.url}" target="_blank" rel="noopener">↗ ${l.txt}</a>`).join('')}
+        </div>
+      </td>
+      <td class="td-h3">${p.h3} m</td>
+      <td class="td-h7">${p.h7} m</td>
+      <td class="td-water">${p.water} L</td>
+    `;
+    p.months.forEach(([u,v,f]) => {
+      const cls = stateClass(u,v,f);
+      const icons = stateIcons(u,v,f);
+      const tip = stateTip(u,v,f);
+      const lbl = stateLabel(u,v,f);
+      html += `<td class="td-month" data-tip="${tip}">
+        <div class="cell-inner ${cls}">
+          <div class="cell-icons">${icons}</div>
+          <div class="cell-label">${lbl}</div>
+        </div>
+      </td>`;
+    });
+
+    tr.innerHTML = html;
+    tbody.appendChild(tr);
+  });
+}
+
+buildTable(PLANTS);
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function applyFilters() {
+  const rows = document.querySelectorAll('#tableBody tr');
+  rows.forEach(tr => {
+    const cat = tr.dataset.cat;
+    const name = tr.dataset.name;
+    const evg = tr.dataset.evergreen;
+    let show = true;
+    if (currentFilter === 'evergreen') show = !!evg;
+    else if (currentFilter !== 'all') show = cat === currentFilter;
+    if (show && currentSearch) show = name.includes(currentSearch);
+    tr.classList.toggle('hidden', !show);
+  });
+}
+
+function filterPlants(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function searchPlants(val) {
+  currentSearch = val.toLowerCase().trim();
+  applyFilters();
+}
+</script>
+</body>
+</html>
