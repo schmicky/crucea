@@ -282,6 +282,15 @@
     }
     .cal-m { font-size: 7px; text-align: center; color: #6e7681; }
 
+    #popup-link { margin-top: 9px; }
+    #popup-link a {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 12px; color: #58a6ff; text-decoration: none;
+      padding: 4px 8px; border-radius: 5px;
+      border: 1px solid #1f4a7a; background: rgba(31,111,235,0.1);
+      transition: background 0.15s;
+    }
+    #popup-link a:hover { background: rgba(31,111,235,0.25); }
     #popup-actions { display: flex; gap: 6px; margin-top: 10px; align-items: center; }
     #popup-close { margin-left: auto; }
 
@@ -438,6 +447,7 @@
     <div id="popup-cal-bar"></div>
     <div id="popup-cal-months"></div>
   </div>
+  <div id="popup-link"></div>
   <div id="popup-actions">
     <button class="btn red" id="popup-delete" onclick="deleteSelected()"
             style="display:none">🗑 Șterge punct</button>
@@ -613,6 +623,65 @@ const stateColors  = {repaus:'#555',    vegetatie:'#238636',  inflorire:'#bf3081
 const stateEmoji   = {repaus:'❄',       vegetatie:'🌿',       inflorire:'🌸',      fructificare:'🍓'};
 const stateLabelRO = {repaus:'Repaus',  vegetatie:'Vegetație',inflorire:'Înflorire',fructificare:'Fructificare'};
 
+// Linkuri Wikipedia RO verificate (extrase din sursă plante_calendar.html)
+const PLANT_LINKS = {
+  A5:   'https://ro.wikipedia.org/wiki/Acer_platanoides',
+  A11:  'https://ro.wikipedia.org/wiki/Albizia_julibrissin',
+  A21:  'https://ro.wikipedia.org/wiki/Elaeagnus_angustifolia',
+  A24:  'https://ro.wikipedia.org/wiki/Fraxinus_excelsior',
+  A28:  'https://ro.wikipedia.org/wiki/Liriodendron_tulipifera',
+  A30:  'https://ro.wikipedia.org/wiki/Magnolia_%C3%97_soulangeana',
+  A34:  'https://ro.wikipedia.org/wiki/Pinus_nigra',
+  A40:  'https://ro.wikipedia.org/wiki/Quercus_pubescens',
+  A43:  'https://ro.wikipedia.org/wiki/Salix_babylonica',
+  A48:  'https://ro.wikipedia.org/wiki/Tilia_tomentosa',
+  A52:  'https://ro.wikipedia.org/wiki/Ulmus_pumila',
+  F1:   'https://ro.wikipedia.org/wiki/Corylus_avellana',
+  F3:   'https://ro.wikipedia.org/wiki/Diospyros_kaki',
+  F4:   'https://ro.wikipedia.org/wiki/Ficus_carica',
+  F6:   'https://ro.wikipedia.org/wiki/Juglans_regia',
+  F7:   'https://ro.wikipedia.org/wiki/Malus_domestica',
+  F8:   'https://ro.wikipedia.org/wiki/Mo%C8%99mon',
+  F9:   'https://ro.wikipedia.org/wiki/Morus_alba',
+  F10:  'https://ro.wikipedia.org/wiki/Prunus_avium',
+  F11:  'https://ro.wikipedia.org/wiki/Prunus_cerasifera',
+  F12:  'https://ro.wikipedia.org/wiki/Prunus_cerasus',
+  F14:  'https://ro.wikipedia.org/wiki/Prunus_dulcis',
+  F15:  'https://ro.wikipedia.org/wiki/Prunus_persica',
+  F16:  'https://ro.wikipedia.org/wiki/Punica_granatum',
+  F17:  'https://ro.wikipedia.org/wiki/Pyrus_communis',
+  F18:  'https://ro.wikipedia.org/wiki/Ziziphus_jujuba',
+  F21:  'https://ro.wikipedia.org/wiki/Corn_(plant%C4%83)',
+  F26:  'https://ro.wikipedia.org/wiki/C%C4%83tin%C4%83_alb%C4%83',
+  F28:  'https://ro.wikipedia.org/wiki/Rosa_canina',
+  F29:  'https://ro.wikipedia.org/wiki/Coa%C4%83z_ro%C8%99u',
+  F30:  'https://ro.wikipedia.org/wiki/Coa%C4%83z_negru',
+  F32:  'https://ro.wikipedia.org/wiki/Agri%C8%99',
+  F33:  'https://ro.wikipedia.org/wiki/Vi%C8%9B%C4%83_de_vie',
+  F44:  'https://ro.wikipedia.org/wiki/Cornus_sanguinea',
+  F53:  'https://ro.wikipedia.org/wiki/Prunus_domestica',
+  F59:  'https://ro.wikipedia.org/wiki/Aronia_melanocarpa',
+  S3:   'https://ro.wikipedia.org/wiki/Philadelphus_coronarius',
+  S4:   'https://ro.wikipedia.org/wiki/Cotinus_coggygria',
+  S5:   'https://ro.wikipedia.org/wiki/Crataegus_monogyna',
+  S6:   'https://ro.wikipedia.org/wiki/Hibiscus_syriacus',
+  S10:  'https://ro.wikipedia.org/wiki/Laburnum_anagyroides',
+  S17:  'https://ro.wikipedia.org/wiki/Rhus_typhina',
+  S18:  'https://ro.wikipedia.org/wiki/Sambucus_nigra',
+  S21:  'https://ro.wikipedia.org/wiki/Syringa_vulgaris',
+  S28:  'https://ro.wikipedia.org/wiki/Forsythia',
+  S72:  'https://ro.wikipedia.org/wiki/Viburnum_opulus',
+  S80:  'https://ro.wikipedia.org/wiki/Buddleja_davidii',
+  ar2:  'https://ro.wikipedia.org/wiki/Lavand%C4%83',
+  ar6:  'https://ro.wikipedia.org/wiki/Rozmarin',
+  ar7:  'https://ro.wikipedia.org/wiki/Salvia_officinalis',
+  ar9:  'https://ro.wikipedia.org/wiki/Melissa_officinalis',
+  ia19: 'https://ro.wikipedia.org/wiki/Fenicul',
+  ip19: 'https://ro.wikipedia.org/wiki/T%C4%83t%C4%83neas%C4%83',
+  ip44: 'https://ro.wikipedia.org/wiki/Isop',
+  ip126:'https://ro.wikipedia.org/wiki/Potentilla_fruticosa',
+};
+
 // Sezon overlay — culori subtile per lună
 const SEASON_OVERLAY = [
   'rgba(180,220,255,0.10)', 'rgba(180,220,255,0.10)', // ian, feb — iarnă
@@ -651,14 +720,15 @@ function getState(code, monthIdx) {
 // ══════════════════════════════════════════════════════════════
 // STATE APLICAȚIE
 // ══════════════════════════════════════════════════════════════
-let points    = [];
-let nextId    = 1;
-let appMode   = 'timelapse'; // 'timelapse' | 'edit'
-let addMode   = false;
-let curMonth  = 0;
-let playing   = false;
-let playTimer = null;
-let selectedId = null;
+let points       = [];
+let nextId       = 1;
+let appMode      = 'timelapse'; // 'timelapse' | 'edit'
+let addMode      = false;
+let curMonth     = 0;
+let playing      = false;
+let playTimer    = null;
+let selectedId   = null;
+let highlightCode = null; // cod specie selectată — celelalte sunt faded
 let scale = 1, tx = 0, ty = 0;
 let isDragging = false, dragX0, dragY0, tx0, ty0;
 
@@ -811,14 +881,17 @@ function positionDot(dot, p) {
 }
 
 function styleDot(dot, p) {
-  const info = DB[p.code] || { type: 'arbore' };
-  const sz   = typeSizePx[info.type] || 50;
+  const info   = DB[p.code] || { type: 'arbore' };
+  const sz     = typeSizePx[info.type] || 50;
   dot.style.width  = sz + 'px';
   dot.style.height = sz + 'px';
 
+  // Fade dacă altă specie e selectată
+  const faded = highlightCode !== null && p.code !== highlightCode;
+
   if (appMode === 'edit') {
     dot.style.background  = typeColors[info.type] || '#555';
-    dot.style.opacity     = '1';
+    dot.style.opacity     = faded ? '0.15' : '1';
     dot.style.fontSize    = Math.round(sz * 0.22) + 'px';
     dot.style.color       = 'rgba(255,255,255,0.85)';
     dot.textContent       = p.code.slice(0, 3);
@@ -826,11 +899,15 @@ function styleDot(dot, p) {
   } else {
     const state           = getState(p.code, curMonth);
     dot.style.background  = stateColors[state];
-    dot.style.opacity     = state === 'repaus' ? '0.4' : '0.92';
     dot.style.fontSize    = Math.round(sz * (state === 'repaus' ? 0.28 : 0.38)) + 'px';
     dot.style.color       = '';
     dot.textContent       = stateEmoji[state];
     dot.style.border      = '2px solid rgba(0,0,0,0.25)';
+    if (faded) {
+      dot.style.opacity = '0.12';
+    } else {
+      dot.style.opacity = state === 'repaus' ? '0.4' : '0.92';
+    }
   }
 }
 
@@ -960,7 +1037,23 @@ function showPopup(id, cx, cy) {
 
   buildMiniCalendar(p.code);
 
+  // Link Wikipedia RO
+  const linkEl = document.getElementById('popup-link');
+  const url    = PLANT_LINKS[p.code];
+  if (url) {
+    linkEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener">
+      🔗 Wikipedia RO — ${info.ro}
+    </a>`;
+    linkEl.style.display = '';
+  } else {
+    linkEl.style.display = 'none';
+  }
+
   document.getElementById('popup-delete').style.display = appMode === 'edit' ? '' : 'none';
+
+  // Highlight specie
+  highlightCode = p.code;
+  updateAllDots();
 
   popup.classList.add('visible');
   // Poziționare inteligentă
@@ -999,7 +1092,9 @@ function buildMiniCalendar(code) {
 
 function closePopup() {
   popup.classList.remove('visible');
-  selectedId = null;
+  selectedId    = null;
+  highlightCode = null;
+  updateAllDots();
 }
 
 function deleteSelected() {
