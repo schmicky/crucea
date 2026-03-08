@@ -197,7 +197,7 @@
     /* Plant dots */
     .pdot {
       position: absolute;
-      width: 22px; height: 22px;
+      width: 50px; height: 50px; /* suprascris dinamic per tip */
       border-radius: 50%;
       transform: translate(-50%, -50%);
       display: flex; align-items: center; justify-content: center;
@@ -608,6 +608,7 @@ const PLANTS_RAW = [
 
 const typeColors   = {arbore:'#2d6a2d', fructifer:'#c0392b', arbust:'#8e44ad', aromat:'#c7a200', ierbacee:'#1a7a9a'};
 const typeLabelRO  = {arbore:'Arbore',  fructifer:'Fructifer',arbust:'Arbust',  aromat:'Aromatic',ierbacee:'Ierbacee'};
+const typeSizePx   = {arbore:90,        fructifer:72,          arbust:54,        aromat:44,         ierbacee:40};
 const stateColors  = {repaus:'#555',    vegetatie:'#238636',  inflorire:'#bf3081', fructificare:'#c0622c'};
 const stateEmoji   = {repaus:'❄',       vegetatie:'🌿',       inflorire:'🌸',      fructificare:'🍓'};
 const stateLabelRO = {repaus:'Repaus',  vegetatie:'Vegetație',inflorire:'Înflorire',fructificare:'Fructificare'};
@@ -810,11 +811,15 @@ function positionDot(dot, p) {
 }
 
 function styleDot(dot, p) {
+  const info = DB[p.code] || { type: 'arbore' };
+  const sz   = typeSizePx[info.type] || 50;
+  dot.style.width  = sz + 'px';
+  dot.style.height = sz + 'px';
+
   if (appMode === 'edit') {
-    const info = DB[p.code] || { type: 'arbore' };
     dot.style.background  = typeColors[info.type] || '#555';
     dot.style.opacity     = '1';
-    dot.style.fontSize    = '8px';
+    dot.style.fontSize    = Math.round(sz * 0.22) + 'px';
     dot.style.color       = 'rgba(255,255,255,0.85)';
     dot.textContent       = p.code.slice(0, 3);
     dot.style.border      = '2px solid rgba(255,255,255,0.2)';
@@ -822,7 +827,7 @@ function styleDot(dot, p) {
     const state           = getState(p.code, curMonth);
     dot.style.background  = stateColors[state];
     dot.style.opacity     = state === 'repaus' ? '0.4' : '0.92';
-    dot.style.fontSize    = state === 'repaus' ? '9px' : '11px';
+    dot.style.fontSize    = Math.round(sz * (state === 'repaus' ? 0.28 : 0.38)) + 'px';
     dot.style.color       = '';
     dot.textContent       = stateEmoji[state];
     dot.style.border      = '2px solid rgba(0,0,0,0.25)';
