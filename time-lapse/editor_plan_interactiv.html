@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Editor Plan Grădină – Proiect Șerban</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -103,12 +104,102 @@ body{font-family:'Segoe UI',sans-serif;background:#1a1a2e;color:#eee;height:100v
 .leg-row{display:flex;align-items:center;gap:6px;margin-bottom:3px}
 .leg-dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(255,255,255,.4)}
 #dot-count{margin-top:6px;font-size:10px;color:#aaa}
+
+/* ===== MOBILE TOGGLE BUTTON ===== */
+#mobile-toggle{
+  display:none;background:#0f3460;border:none;color:#fff;
+  padding:5px 10px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;
+  white-space:nowrap;
+}
+#mobile-toggle:hover{background:#e94560}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  body{overflow:hidden}
+
+  /* Toolbar: 2-row layout */
+  #toolbar{
+    padding:6px 8px;gap:5px;flex-wrap:wrap;
+    max-height:none;overflow:visible;
+  }
+  #toolbar h1{font-size:12px;flex-shrink:0}
+  #mobile-toggle{display:inline-block;margin-left:auto}
+
+  /* Collapsible section */
+  #toolbar-extra{
+    display:none;width:100%;flex-wrap:wrap;gap:5px;align-items:center;
+  }
+  #toolbar-extra.open{display:flex}
+
+  .mode-btn{padding:6px 14px;font-size:12px;min-height:36px}
+  #code-select{min-width:0;width:100%;font-size:13px;min-height:36px}
+  #search-box{width:100%;font-size:13px;min-height:36px}
+  #hint{display:none !important}
+
+  /* Filter buttons: scrollable row */
+  .filter-btn{padding:5px 11px;font-size:11px;min-height:32px;flex-shrink:0}
+
+  /* Zoom buttons */
+  #zbtn-wrap{margin-left:0}
+  .zbtn{width:36px;height:36px;font-size:18px;border-radius:8px}
+
+  /* Popup: full-width bottom sheet on mobile */
+  #popup{
+    left:8px !important;right:8px !important;bottom:8px !important;
+    top:auto !important;
+    min-width:0;max-width:none;width:auto;
+    border-radius:14px 14px 14px 14px;
+    padding:16px 18px;
+  }
+  #popup-code{font-size:20px}
+  #popup-ro{font-size:16px}
+  #popup-lat{font-size:13px}
+  .plink{padding:10px 12px;font-size:13px;border-radius:10px}
+  #del-dot-btn{padding:10px;font-size:13px;border-radius:10px}
+
+  /* Legend: smaller, repositioned */
+  #legend{
+    bottom:auto;top:auto;right:8px;left:auto;
+    bottom:8px;
+    padding:8px 10px;font-size:10px;
+    max-width:130px;
+    border-radius:8px;
+    opacity:0.9;
+  }
+  #legend h4{font-size:11px}
+
+  /* Export panel: full-width at bottom */
+  #export-panel{
+    left:8px;right:8px;bottom:8px;
+    max-width:none;width:auto;
+    padding:10px 12px;
+    border-radius:10px;
+    max-height:40vh;overflow-y:auto;
+  }
+  #export-area{height:60px;font-size:11px}
+  .exp-btn{padding:8px 12px;font-size:12px;min-height:36px}
+  #import-area{height:50px;font-size:11px}
+
+  /* Dots: slightly larger for touch */
+  .pdot{width:16px;height:16px;border-width:2px}
+}
+
+/* Extra small phones */
+@media(max-width:400px){
+  #toolbar h1{font-size:11px}
+  .mode-btn{padding:5px 10px;font-size:11px}
+  #code-select{font-size:12px}
+  .filter-btn{padding:4px 8px;font-size:10px}
+  #legend{max-width:110px;font-size:9px;padding:6px 8px}
+}
 </style>
 </head>
 <body>
 
 <div id="toolbar">
   <h1>✏️ Editor Plan Grădină</h1>
+  <button id="mobile-toggle">☰ Meniu</button>
+  <div id="toolbar-extra">
   <button class="mode-btn active" id="btn-view">👆 Vizualizare</button>
   <button class="mode-btn" id="btn-add">➕ Adaugă punct</button>
   <select id="code-select"><option value="A11">[A11] Arborele de mătase</option>
@@ -189,6 +280,7 @@ body{font-family:'Segoe UI',sans-serif;background:#1a1a2e;color:#eee;height:100v
     <button class="zbtn" id="zout">−</button>
     <button class="zbtn" id="zreset" style="width:auto;padding:0 8px;font-size:11px">Reset</button>
   </div>
+  </div><!-- /toolbar-extra -->
 </div>
 
 <div id="map-wrap" class="mode-view">
@@ -348,6 +440,11 @@ function setMode(m) {
 }
 setMode('view');
 
+// Mobile toggle
+document.getElementById('mobile-toggle').addEventListener('click', () => {
+  document.getElementById('toolbar-extra').classList.toggle('open');
+});
+
 // Click on map → add point
 mapWrap.addEventListener('click', e => {
   if (mode !== 'add') return;
@@ -379,12 +476,17 @@ function showPopupForId(id, cx, cy) {
   document.getElementById('lro').href  = 'https://ro.wikipedia.org/wiki/'+latClean;
   document.getElementById('len').href  = 'https://en.wikipedia.org/wiki/'+latClean;
   document.getElementById('lkew').href = 'https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:search?q='+info.lat.split(' ').slice(0,2).join('+');
-  // position
-  const pw=300,ph=220,vw=window.innerWidth,vh=window.innerHeight;
-  let px=cx+14,py=cy+14;
-  if(px+pw>vw) px=cx-pw-14;
-  if(py+ph>vh) py=cy-ph-14;
-  popup.style.left=px+'px'; popup.style.top=py+'px';
+  // position — on mobile use bottom-sheet style (CSS handles it), on desktop float near click
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    popup.style.left=''; popup.style.right=''; popup.style.top=''; popup.style.bottom='';
+  } else {
+    const pw=300,ph=220,vw=window.innerWidth,vh=window.innerHeight;
+    let px=cx+14,py=cy+14;
+    if(px+pw>vw) px=cx-pw-14;
+    if(py+ph>vh) py=cy-ph-14;
+    popup.style.left=px+'px'; popup.style.top=py+'px';
+  }
   popup.classList.add('visible');
   document.querySelectorAll('.pdot').forEach(d=>d.classList.remove('selected'));
   const dot = dotsLayer.querySelector(`.pdot[data-id="${id}"]`);
