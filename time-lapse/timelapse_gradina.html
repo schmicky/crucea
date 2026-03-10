@@ -340,6 +340,96 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #0d1117; }
     ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+
+    /* ── Mobile toggle button ── */
+    #mobile-toggle {
+      display: none; background: #21262d; border: 1px solid #30363d;
+      color: #c9d1d9; padding: 5px 10px; border-radius: 6px;
+      font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap;
+    }
+    #mobile-toggle:hover { background: #30363d; border-color: #58a6ff; }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 768px) {
+      /* Toolbar */
+      #toolbar { padding: 6px 8px; gap: 5px; }
+      #toolbar h1 { font-size: 13px; }
+      #mobile-toggle { display: inline-block; margin-left: auto; }
+      .tb-sep { display: none; }
+
+      /* Collapsible toolbar section */
+      #toolbar-extra {
+        display: none; width: 100%; flex-wrap: wrap; gap: 5px; align-items: center;
+      }
+      #toolbar-extra.open { display: flex; }
+
+      /* Mode buttons */
+      #mode-group { width: 100%; }
+      #mode-group .btn { flex: 1; min-height: 36px; font-size: 13px; text-align: center; }
+
+      /* Month controls */
+      #month-control { width: 100%; flex-wrap: wrap; gap: 6px; }
+      #month-slider { width: 100%; min-height: 30px; }
+      #month-display { font-size: 14px; }
+      #play-btn { min-height: 36px; font-size: 13px; }
+      #speed-select { min-height: 34px; font-size: 12px; }
+
+      /* Edit panel */
+      #edit-panel { width: 100%; }
+      #code-select { max-width: none; width: 100%; min-height: 36px; font-size: 13px; }
+      #edit-panel .btn { min-height: 36px; font-size: 12px; }
+
+      /* Count badge */
+      #count-badge { width: 100%; text-align: center; font-size: 12px; }
+
+      /* Month bar at bottom — make buttons taller for touch */
+      #month-bar { padding: 4px 4px; gap: 2px; flex-wrap: nowrap; overflow-x: auto; }
+      .month-btn { padding: 8px 3px; font-size: 11px; min-height: 36px; }
+
+      /* Zoom controls — bigger for touch */
+      #zoom-controls { top: 8px; right: 8px; }
+      .zoom-btn { width: 38px; height: 38px; font-size: 20px; border-radius: 8px; }
+
+      /* Legend — smaller */
+      #legend, #legend-edit {
+        bottom: 8px; right: 8px;
+        padding: 7px 10px; font-size: 11px;
+        max-width: 140px;
+      }
+      .leg-dot { width: 14px; height: 14px; font-size: 9px; }
+      .leg-row span { font-size: 11px; }
+
+      /* Popup — bottom sheet */
+      #popup {
+        left: 8px !important; right: 8px !important;
+        bottom: 50px !important; top: auto !important;
+        min-width: 0; max-width: none; width: auto;
+        border-radius: 12px;
+        padding: 14px 16px;
+        max-height: 55vh; overflow-y: auto;
+      }
+      #popup-name { font-size: 15px; }
+      #popup-lat { font-size: 12px; }
+      #popup-link a { font-size: 13px; padding: 8px 10px; }
+      #popup-actions .btn { min-height: 36px; font-size: 13px; }
+      .cal-cell { height: 24px; font-size: 10px; }
+
+      /* IO Panel */
+      #io-panel { width: 95vw; padding: 14px; }
+      #io-textarea { height: 120px; font-size: 12px; }
+      .io-actions .btn { min-height: 36px; font-size: 13px; }
+
+      /* Load notice */
+      #load-notice { max-width: 90vw; padding: 14px 16px; }
+    }
+
+    /* Extra small phones */
+    @media (max-width: 400px) {
+      #toolbar h1 { font-size: 11px; }
+      #mode-group .btn { font-size: 11px; }
+      .month-btn { font-size: 10px; padding: 7px 2px; }
+      #legend, #legend-edit { max-width: 120px; font-size: 10px; padding: 6px 8px; }
+    }
   </style>
 </head>
 <body>
@@ -347,8 +437,10 @@
 <!-- ── Toolbar ── -->
 <div id="toolbar">
   <h1>🌿 Time-lapse Grădină</h1>
+  <button id="mobile-toggle">☰ Meniu</button>
   <div class="tb-sep"></div>
 
+  <div id="toolbar-extra">
   <div id="mode-group">
     <button class="btn active" id="btn-timelapse" onclick="setAppMode('timelapse')">👁 Vizualizare</button>
     <button class="btn"        id="btn-edit"      onclick="setAppMode('edit')">✏ Editare</button>
@@ -385,6 +477,7 @@
   </div>
 
   <span id="count-badge"></span>
+  </div><!-- /toolbar-extra -->
 </div>
 
 <!-- ── Map area ── -->
@@ -776,6 +869,11 @@ const popup     = document.getElementById('popup');
   });
 })();
 
+// Mobile toolbar toggle
+document.getElementById('mobile-toggle').addEventListener('click', () => {
+  document.getElementById('toolbar-extra').classList.toggle('open');
+});
+
 // ══════════════════════════════════════════════════════════════
 // ZOOM / PAN
 // ══════════════════════════════════════════════════════════════
@@ -1056,16 +1154,22 @@ function showPopup(id, cx, cy) {
   updateAllDots();
 
   popup.classList.add('visible');
-  // Poziționare inteligentă
-  const pw = popup.offsetWidth  || 260;
-  const ph = popup.offsetHeight || 220;
-  const vw = window.innerWidth, vh = window.innerHeight;
-  let left = cx + 14, top = cy - 20;
-  if (left + pw > vw - 10) left = cx - pw - 10;
-  if (top  + ph > vh - 10) top  = vh - ph - 10;
-  if (top < 10) top = 10;
-  popup.style.left = left + 'px';
-  popup.style.top  = top  + 'px';
+  // Poziționare — pe mobil bottom-sheet (CSS), pe desktop float lângă click
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    popup.style.left = ''; popup.style.right = '';
+    popup.style.top = ''; popup.style.bottom = '';
+  } else {
+    const pw = popup.offsetWidth  || 260;
+    const ph = popup.offsetHeight || 220;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    let left = cx + 14, top = cy - 20;
+    if (left + pw > vw - 10) left = cx - pw - 10;
+    if (top  + ph > vh - 10) top  = vh - ph - 10;
+    if (top < 10) top = 10;
+    popup.style.left = left + 'px';
+    popup.style.top  = top  + 'px';
+  }
 }
 
 function buildMiniCalendar(code) {
