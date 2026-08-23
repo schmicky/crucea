@@ -2310,7 +2310,9 @@ function exportMeasures() {
       })),
       total_m: +totalM(m).toFixed(2),
       arie_m2: (m.closed && m.pts.length > 2) ? +areaM2(m.pts).toFixed(1) : null,
-      puncte_pct: m.pts.map(q => ({ x_pct: +q.x.toFixed(2), y_pct: +q.y.toFixed(2) }))
+      // 3 zecimale: o zecimală de procent valorează ~1,2 cm pe teren, deci la
+      // 2 zecimale un dus-întors prin export ar deplasa punctele cu ~0,6 cm
+      puncte_pct: m.pts.map(q => ({ x_pct: +q.x.toFixed(3), y_pct: +q.y.toFixed(3) }))
     }))
   };
   document.getElementById('io-title').textContent        = 'Export măsurători';
