@@ -302,6 +302,26 @@
       border-radius: 8px; padding: 6px 12px; font-size: 11.5px; color: #ffd79a;
     }
 
+    /* Panoul de import măsurători */
+    #mimport-panel {
+      display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #161b22; border: 1px solid #30363d;
+      border-radius: 10px; padding: 18px; width: 460px; max-width: 92vw;
+      z-index: 300; box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+    }
+    #mimport-panel.visible { display: block; }
+    #mimport-panel h3 { margin-bottom: 8px; color: #7ee787; font-size: 14px; }
+    #mimport-panel p { font-size: 11.5px; color: #8b949e; line-height: 1.5; margin-bottom: 8px; }
+    #mimport-text {
+      width: 100%; height: 150px;
+      background: #0d1117; border: 1px solid #30363d; border-radius: 5px;
+      color: #c9d1d9; font-family: 'Cascadia Code', 'Fira Mono', monospace;
+      font-size: 11px; padding: 8px; resize: vertical;
+    }
+    #mimport-status { font-size: 11.5px; margin-top: 7px; min-height: 16px; }
+    #mimport-file { display: none; }
+
     /* Panoul de calibrare */
     #cal-panel {
       display: none; position: fixed; top: 50%; left: 50%;
@@ -522,7 +542,8 @@
 
       /* IO Panel */
       #io-panel { width: 95vw; padding: 14px; }
-      #cal-panel { width: 95vw; padding: 14px; }
+      #cal-panel, #mimport-panel { width: 95vw; padding: 14px; }
+      #mimport-text { height: 120px; font-size: 12px; }
       #measure-results { width: 178px; font-size: 10.5px; top: 6px; left: 6px; }
       #io-textarea { height: 120px; font-size: 12px; }
       .io-actions .btn { min-height: 36px; font-size: 13px; }
@@ -604,6 +625,8 @@
     <button class="btn" onclick="startCalibration()">📐 Calibrează</button>
     <button class="btn" onclick="exportMeasures()"
             title="Exportă măsurătorile ca JSON">⬇ Export</button>
+    <button class="btn" onclick="openMImportPanel()"
+            title="Importă măsurători din JSON">⬆ Import</button>
     <span id="cal-badge"></span>
   </div>
 
@@ -688,6 +711,24 @@
 
 <!-- ── IO Panel ── -->
 <div id="overlay-bg" onclick="closeModals()"></div>
+
+<!-- ── Import măsurători ── -->
+<div id="mimport-panel">
+  <h3>⬆ Import măsurători</h3>
+  <p>Lipește un JSON exportat din acest mod, sau deschide fișierul.
+  Se citesc punctele fiecărei zone; lungimile și ariile se recalculează
+  cu scara activă acum.</p>
+  <textarea id="mimport-text" placeholder='{ "masuratori": [ … ] }'></textarea>
+  <div id="mimport-status"></div>
+  <div class="io-actions">
+    <label class="btn" for="mimport-file" style="cursor:pointer">📂 Din fișier</label>
+    <input type="file" id="mimport-file" accept=".json,application/json"
+           onchange="loadMeasureFile(event)">
+    <button class="btn" onclick="doMeasureImport(false)">＋ Adaugă</button>
+    <button class="btn green" onclick="doMeasureImport(true)">⇄ Înlocuiește</button>
+    <button class="btn" onclick="closeMImportPanel()">✕ Renunță</button>
+  </div>
+</div>
 
 <!-- ── Calibrare scară ── -->
 <div id="cal-panel">
@@ -2281,7 +2322,100 @@ function exportMeasures() {
   document.getElementById('overlay-bg').classList.add('visible');
 }
 
-function closeModals() { closeIOPanel(); closeCalPanel(); }
+// ── Import măsurători ─────────────────────────────────────────
+function openMImportPanel() {
+  if (appMode !== 'measure') setAppMode('measure');
+  document.getElementById('mimport-text').value = '';
+  setMImportStatus('', null);
+  document.getElementById('mimport-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+  setTimeout(() => document.getElementById('mimport-text').focus(), 60);
+}
+
+function closeMImportPanel() {
+  document.getElementById('mimport-panel').classList.remove('visible');
+  document.getElementById('overlay-bg').classList.remove('visible');
+  renderMeasures();
+}
+
+function setMImportStatus(msg, ok) {
+  const el = document.getElementById('mimport-status');
+  el.textContent = msg;
+  el.style.color = ok === null ? '#8b949e' : (ok ? '#7ee787' : '#ff7b72');
+}
+
+function loadMeasureFile(e) {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    document.getElementById('mimport-text').value = ev.target.result;
+    setMImportStatus('Fișier citit: ' + f.name + '. Alege Adaugă sau Înlocuiește.', null);
+  };
+  r.onerror = () => setMImportStatus('Fișierul nu a putut fi citit.', false);
+  r.readAsText(f);
+  e.target.value = '';
+}
+
+// Acceptă obiectul complet de export, sau direct lista de măsurători.
+function parseMeasures(raw) {
+  const data = JSON.parse(raw);
+  const lista = Array.isArray(data) ? data
+              : (Array.isArray(data.masuratori) ? data.masuratori : null);
+  if (!lista) throw new Error('nu am găsit lista „masuratori”');
+  const out = [], sarite = [];
+  lista.forEach((m, i) => {
+    // acceptăm și formatul intern (pts) și pe cel exportat (puncte_pct)
+    const src = Array.isArray(m && m.puncte_pct) ? m.puncte_pct
+              : (Array.isArray(m && m.pts) ? m.pts : null);
+    if (!src) { sarite.push(i + 1); return; }
+    const pts = [];
+    for (const q of src) {
+      const x = +(q.x_pct !== undefined ? q.x_pct : q.x);
+      const y = +(q.y_pct !== undefined ? q.y_pct : q.y);
+      if (!isFinite(x) || !isFinite(y) || x < 0 || x > 100 || y < 0 || y > 100) return;
+      pts.push({ x, y });
+    }
+    if (pts.length < 2) { sarite.push(i + 1); return; }
+    const rec = { pts, closed: !!(m.inchis || m.closed) };
+    const nume = typeof m.nume === 'string' ? m.nume
+               : (typeof m.name === 'string' ? m.name : '');
+    if (nume.trim()) rec.name = nume.trim().slice(0, 40);
+    out.push(rec);
+  });
+  return { lista: out, sarite, calibrare: (data && data.calibrare) || null };
+}
+
+function doMeasureImport(inlocuieste) {
+  const raw = document.getElementById('mimport-text').value.trim();
+  if (!raw) { setMImportStatus('Nu ai lipit nimic.', false); return; }
+  let r;
+  try { r = parseMeasures(raw); }
+  catch (e) { setMImportStatus('JSON invalid: ' + e.message, false); return; }
+  if (!r.lista.length) { setMImportStatus('Nu am găsit nicio zonă valabilă.', false); return; }
+
+  // calibrarea din fișier diferă de cea activă → întrebăm, nu schimbăm pe furiș
+  const f = r.calibrare && +r.calibrare.factor_manual;
+  if (isFinite(f) && f > 0 && Math.abs(f - calK) > 0.0001) {
+    const dif = ((f / calK - 1) * 100).toFixed(2);
+    if (confirm('Fișierul a fost salvat cu altă calibrare (' + dif + '% față de cea activă).\n\n' +
+                'OK = folosesc calibrarea din fișier\nAnulează = păstrez calibrarea actuală')) {
+      calK = f; calSave(); updateCalBadge();
+    }
+  }
+
+  const inainte = measures.length;
+  measures = inlocuieste ? r.lista : measures.concat(r.lista);
+  activeM = -1;
+  measSave();
+  closeMImportPanel();
+  let msg = (inlocuieste ? 'Înlocuit: ' : 'Adăugat: ') + r.lista.length + ' zone';
+  if (!inlocuieste) msg += ' (total ' + measures.length + ', erau ' + inainte + ')';
+  if (r.sarite.length) msg += ' · sărite: ' + r.sarite.length;
+  console.log(msg);
+}
+
+function closeModals() { closeIOPanel(); closeCalPanel(); closeMImportPanel(); }
 
 // ══════════════════════════════════════════════════════════════
 // AUTO-LOAD pozitie.json
