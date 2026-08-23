@@ -38,6 +38,23 @@
     }
     .tb-sep { width: 1px; height: 20px; background: #30363d; flex-shrink: 0; }
 
+    /* Grupul de comenzi: butoanele de mod plus panoul modului activ, pe același
+       rând, la dreapta titlului. Fără asta ar fi un div bloc și panourile ar
+       cădea sub butoanele de mod. */
+    #toolbar-extra {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;      /* panoul modului stă la dreapta, nu sub butoane */
+      gap: 8px;
+      flex: 1 1 0;
+      min-width: 0;
+      overflow-x: auto;       /* pe ecrane înguste se derulează, nu se rupe */
+      overflow-y: hidden;
+      scrollbar-width: thin;
+    }
+    #mode-group, #month-control, #edit-panel, #measure-panel { flex-shrink: 0; }
+    #toolbar-extra > .tb-sep { flex-shrink: 0; }
+
     .btn {
       padding: 4px 10px;
       border: 1px solid #30363d;
@@ -440,7 +457,9 @@
       /* Collapsible toolbar section */
       #toolbar-extra {
         display: none; width: 100%; flex-wrap: wrap; gap: 5px; align-items: center;
+        overflow-x: visible;
       }
+      #mode-group, #month-control, #edit-panel, #measure-panel { flex-shrink: 1; }
       #toolbar-extra.open { display: flex; }
 
       /* Mode buttons */
@@ -563,15 +582,21 @@
 
   <!-- Măsurare -->
   <div id="measure-panel">
-    <button class="btn green" onclick="newMeasure()">＋ Măsurătoare nouă</button>
-    <button class="btn" onclick="finishMeasure()">✓ Termină</button>
-    <button class="btn" onclick="undoVertex()">↶ Anulează vârf</button>
-    <button class="btn red" onclick="clearMeasures()">🗑 Șterge tot</button>
-    <label id="snap-label"><input type="checkbox" id="snap-check" checked
-           onchange="snapOn = this.checked">lipire la plante</label>
+    <button class="btn green" onclick="newMeasure()"
+            title="Măsurătoare nouă">＋ Nouă</button>
+    <button class="btn" onclick="finishMeasure()"
+            title="Termină măsurătoarea (Enter)">✓ Termină</button>
+    <button class="btn" onclick="undoVertex()"
+            title="Anulează ultimul vârf (Backspace)">↶ Anulează</button>
+    <button class="btn red" onclick="clearMeasures()"
+            title="Șterge toate măsurătorile">🗑 Șterge</button>
+    <label id="snap-label" title="Punctele se lipesc la cea mai apropiată plantă"><input
+           type="checkbox" id="snap-check" checked
+           onchange="snapOn = this.checked">lipire</label>
     <div class="tb-sep"></div>
     <button class="btn" onclick="startCalibration()">📐 Calibrează</button>
-    <button class="btn" onclick="exportMeasures()">⬇ Export</button>
+    <button class="btn" onclick="exportMeasures()"
+            title="Exportă măsurătorile ca JSON">⬇ Export</button>
     <span id="cal-badge"></span>
   </div>
 
@@ -2151,13 +2176,15 @@ function updateCalBadge() {
   const b   = document.getElementById('cal-badge');
   const dev = (calK - 1) * 100;
   if (Math.abs(dev) < 0.005) {
-    b.textContent = 'scară 1:100 (A0), verificată';
+    b.textContent = '1:100';
     b.style.color = '#8b949e';
+    b.title = 'Scară 1:100 (planșă A0), verificată contra desenului DWG';
   } else {
-    b.textContent = 'calibrare manuală ' + (dev > 0 ? '+' : '') + dev.toFixed(2) + '%';
+    b.textContent = (dev > 0 ? '+' : '') + dev.toFixed(2) + '%';
     b.style.color = '#f0a030';
+    b.title = 'Calibrare manuală, abatere ' + dev.toFixed(2) + '% de la scara verificată';
   }
-  b.title = '1% lățime = ' + mxM().toFixed(4) + ' m · 1% înălțime = ' + myM().toFixed(4) + ' m';
+  b.title += '\n1% lățime = ' + mxM().toFixed(4) + ' m · 1% înălțime = ' + myM().toFixed(4) + ' m';
 }
 
 document.getElementById('cal-input').addEventListener('keydown', e => {
