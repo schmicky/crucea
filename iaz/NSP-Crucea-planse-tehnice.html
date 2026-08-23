@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NSP Crucea — Set planșe tehnice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F5F0;
+    --ink:#16181A;
+    --ink-2:#5A6068;
+    --rule:#C9C6BE;
+    --loess:#C9A063;
+    --loess-dk:#9A7439;
+    --water:#2E7C9B;
+    --water-lt:#CFE4EC;
+    --flow:#B5471F;
+    --concrete:#8B8D8F;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:15px; line-height:1.55;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 18px 80px}
+
+  /* ---- cover ---- */
+  .cover{border:1.5px solid var(--ink);padding:22px 20px 18px;margin-bottom:34px}
+  .cover .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-2)}
+  .cover h1{font-family:'Archivo Narrow','Archivo',sans-serif;font-weight:700;
+    font-size:clamp(28px,7vw,46px);line-height:1.02;margin:10px 0 4px;letter-spacing:-.01em}
+  .cover .sub{font-family:'Archivo Narrow','Archivo',sans-serif;font-size:clamp(15px,3.6vw,20px);
+    color:var(--ink-2);font-weight:600;margin-bottom:18px}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0;
+    border-top:1px solid var(--rule)}
+  .meta div{padding:9px 10px 8px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .meta div:last-child{border-right:none}
+  .meta dt{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink-2);margin:0 0 3px}
+  .meta dd{margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500}
+
+  /* ---- sheets ---- */
+  .sheet{border:1px solid var(--ink);background:#fff;margin:0 0 30px;overflow:hidden}
+  .sheet-head{display:flex;align-items:baseline;gap:12px;padding:11px 14px;
+    border-bottom:1px solid var(--ink);flex-wrap:wrap}
+  .code{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;
+    background:var(--ink);color:#fff;padding:2px 7px;letter-spacing:.06em}
+  .sheet-head h2{font-family:'Archivo Narrow','Archivo',sans-serif;font-weight:700;
+    font-size:clamp(16px,4.2vw,22px);margin:0;letter-spacing:-.005em;flex:1}
+  .scale{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2)}
+  .canvas{padding:6px 4px 2px;background:#fff}
+  svg{display:block;width:100%;height:auto}
+  .sheet-foot{border-top:1px solid var(--rule);padding:12px 14px 14px;background:#FCFBF8}
+  .sheet-foot p{margin:0 0 8px}
+  .sheet-foot p:last-child{margin-bottom:0}
+  .sheet-foot strong{font-weight:600}
+  .note{font-size:13.5px;line-height:1.5}
+  .note-lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;
+    color:var(--flow);letter-spacing:.04em;text-transform:uppercase}
+
+  h3.block{font-family:'Archivo Narrow','Archivo',sans-serif;font-size:20px;font-weight:700;
+    margin:34px 0 12px;padding-bottom:6px;border-bottom:1.5px solid var(--ink)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--ink);font-weight:600}
+  td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;font-weight:500}
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--ink)}
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+  ol.steps li{counter-increment:s;position:relative;padding:11px 0 11px 42px;
+    border-bottom:1px solid var(--rule);font-size:14px}
+  ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:11px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--flow)}
+  ol.steps li b{font-weight:600}
+  .warn{border-left:3px solid var(--flow);padding:10px 0 10px 13px;margin:14px 0;font-size:14px}
+
+  @media print{
+    body{background:#fff}
+    .sheet{page-break-inside:avoid;break-inside:avoid}
+    .wrap{max-width:none;padding:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ DEFS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6" fill="none" stroke="#16181A" stroke-width="1"/></marker>
+  <marker id="arS" markerWidth="9" markerHeight="9" refX="1" refY="3" orient="auto">
+    <path d="M8,0 L0,3 L8,6" fill="none" stroke="#16181A" stroke-width="1"/></marker>
+  <marker id="flow" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+    <path d="M0,0 L9,3.5 L0,7 Z" fill="#B5471F"/></marker>
+  <marker id="flowB" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+    <path d="M0,0 L9,3.5 L0,7 Z" fill="#2E7C9B"/></marker>
+
+  <pattern id="pLoess" width="9" height="9" patternUnits="userSpaceOnUse">
+    <rect width="9" height="9" fill="#E7D3B0"/>
+    <circle cx="2" cy="3" r="0.7" fill="#B8905A"/><circle cx="7" cy="7" r="0.7" fill="#B8905A"/>
+    <circle cx="5.5" cy="1.5" r="0.5" fill="#C9A063"/>
+  </pattern>
+  <pattern id="pHumus" width="7" height="7" patternUnits="userSpaceOnUse">
+    <rect width="7" height="7" fill="#6B5540"/>
+    <circle cx="2" cy="2" r="0.8" fill="#4A3A2B"/><circle cx="5.5" cy="5" r="0.8" fill="#4A3A2B"/>
+  </pattern>
+  <pattern id="pGravel" width="13" height="13" patternUnits="userSpaceOnUse">
+    <rect width="13" height="13" fill="#EDEAE3"/>
+    <circle cx="3" cy="3.5" r="2.4" fill="none" stroke="#8B8D8F" stroke-width="0.9"/>
+    <circle cx="9.5" cy="9" r="2.8" fill="none" stroke="#8B8D8F" stroke-width="0.9"/>
+    <circle cx="10.5" cy="2" r="1.7" fill="none" stroke="#8B8D8F" stroke-width="0.9"/>
+    <circle cx="2.5" cy="10.5" r="1.6" fill="none" stroke="#8B8D8F" stroke-width="0.9"/>
+  </pattern>
+  <pattern id="pBeton" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <rect width="8" height="8" fill="#DCDCDA"/>
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#8B8D8F" stroke-width="1"/>
+  </pattern>
+  <pattern id="pSand" width="6" height="6" patternUnits="userSpaceOnUse">
+    <rect width="6" height="6" fill="#F0E4CC"/>
+    <circle cx="1.5" cy="1.5" r="0.6" fill="#C9A063"/><circle cx="4.5" cy="4" r="0.6" fill="#C9A063"/>
+  </pattern>
+  <pattern id="pWater" width="10" height="10" patternUnits="userSpaceOnUse">
+    <rect width="10" height="10" fill="#DCEBF2"/>
+  </pattern>
+</defs>
+</svg>
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="eyebrow">Set planșe de execuție · rev. D — plan de situație pe parcelă 50 × 100 m · recirculare airlift (met. Pagan Butler) · skimmere perete S · talpă + contraforți · iernare</div>
+  <h1>Iaz de înot natural</h1>
+  <div class="sub">Zonă de înot 6,00 × 10,00 m · adâncime 1,80 m · regenerare perimetrală</div>
+  <div class="meta">
+    <div><dt>Amplasament</dt><dd>44,53187 / 28,22835</dd></div>
+    <div><dt>Parcelă</dt><dd>50 × 100 m · 5.000 m²</dd></div>
+    <div><dt>Teren</dt><dd>pantă 3% · sud</dd></div>
+    <div><dt>Sol</dt><dd>cernoziom / loess</dd></div>
+    <div><dt>Luciu apă</dt><dd>137 m²</dd></div>
+    <div><dt>Volum total</dt><dd>≈ 175 m³</dd></div>
+    <div><dt>Raport zone</dt><dd>44 : 56</dd></div>
+  </div>
+</section>
+
+<!-- ============ PL-00 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-00</span><h2>Plan de situație — parcelă 50 × 100 m</h2><span class="scale">1:600 · 44,53187 N / 28,22835 E</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 580 720" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- parcel -->
+    <rect x="140" y="50" width="300" height="600" fill="#F2F0E9" stroke="#16181A" stroke-width="1.6"/>
+
+    <!-- street -->
+    <rect x="120" y="656" width="340" height="26" fill="#DCDAD4" stroke="#16181A" stroke-width="1"/>
+    <line x1="120" y1="669" x2="460" y2="669" stroke="#fff" stroke-width="1.6" stroke-dasharray="14 10"/>
+    <text x="290" y="700" text-anchor="middle" font-size="12" font-weight="600">STRADĂ — latura sudică</text>
+
+    <!-- drain field SE -->
+    <rect x="320" y="530" width="120" height="108" fill="#EFE2D2" stroke="#9A7439" stroke-width="1.2" stroke-dasharray="6 3"/>
+    <g stroke="#9A7439" stroke-width="0.9">
+      <line x1="332" y1="540" x2="332" y2="630"/><line x1="356" y1="540" x2="356" y2="630"/>
+      <line x1="380" y1="540" x2="380" y2="630"/><line x1="404" y1="540" x2="404" y2="630"/>
+      <line x1="428" y1="540" x2="428" y2="630"/>
+    </g>
+    <text x="380" y="578" text-anchor="middle" font-size="10.5" font-weight="600" fill="#9A7439">ZONĂ</text>
+    <text x="380" y="592" text-anchor="middle" font-size="10.5" font-weight="600" fill="#9A7439">REFULARE</text>
+    <rect x="296" y="608" width="20" height="20" fill="#fff" stroke="#9A7439" stroke-width="1.4"/>
+    <text x="292" y="622" text-anchor="end" font-size="10" fill="#9A7439" font-weight="600">FOSĂ</text>
+
+    <!-- house -->
+    <rect x="160" y="518" width="120" height="84" fill="#E4DED2" stroke="#16181A" stroke-width="1.4"/>
+    <text x="220" y="556" text-anchor="middle" font-size="12" font-weight="600">CASĂ</text>
+    <text x="220" y="572" text-anchor="middle" font-size="9.5" fill="#5A6068">≈ 120 m² acoperiș</text>
+    <!-- annex -->
+    <rect x="160" y="470" width="86" height="40" fill="#E4DED2" stroke="#16181A" stroke-width="1.4" stroke-dasharray="5 3"/>
+    <text x="203" y="488" text-anchor="middle" font-size="10" font-weight="600">ANEXĂ / ȘOPRON</text>
+    <text x="203" y="501" text-anchor="middle" font-size="9.5" fill="#B5471F">+130 m² acoperiș — necesar</text>
+
+    <!-- buffer -->
+    <text x="330" y="470" text-anchor="middle" font-size="10.5" fill="#5A6068">grădină / livadă tampon</text>
+
+    <!-- pond -->
+    <rect x="248" y="286" width="68" height="76" fill="url(#pGravel)" stroke="#16181A" stroke-width="1.4"/>
+    <rect x="255" y="299" width="54" height="60" fill="#CFE4EC" stroke="#2E7C9B" stroke-width="1"/>
+    <text x="282" y="326" text-anchor="middle" font-size="10" font-weight="600" fill="#2E7C9B">IAZ</text>
+    <text x="282" y="340" text-anchor="middle" font-size="8.5" fill="#2E7C9B">11,4 × 12,7</text>
+    <rect x="255" y="362" width="54" height="12" fill="#EFEAE0" stroke="#16181A" stroke-width="0.9"/>
+    <text x="282" y="386" text-anchor="middle" font-size="9" fill="#5A6068">deck</text>
+
+    <!-- infiltration basin -->
+    <ellipse cx="392" cy="392" rx="30" ry="18" fill="#DCEBF2" stroke="#2E7C9B" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <text x="392" y="390" text-anchor="middle" font-size="9" fill="#2E7C9B" font-weight="600">BAZIN</text>
+    <text x="392" y="401" text-anchor="middle" font-size="9" fill="#2E7C9B" font-weight="600">INFILTRARE</text>
+    <path d="M316,340 L358,382" fill="none" stroke="#2E7C9B" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#flowB)"/>
+
+    <!-- west screen -->
+    <g fill="#5C8A55" opacity="0.85">
+      <circle cx="176" cy="200" r="9"/><circle cx="194" cy="222" r="9"/><circle cx="176" cy="244" r="9"/>
+      <circle cx="194" cy="266" r="9"/><circle cx="176" cy="288" r="9"/><circle cx="194" cy="310" r="9"/>
+      <circle cx="176" cy="332" r="9"/><circle cx="194" cy="354" r="9"/><circle cx="176" cy="376" r="9"/>
+      <circle cx="194" cy="398" r="9"/><circle cx="176" cy="420" r="9"/><circle cx="194" cy="442" r="9"/>
+      <circle cx="176" cy="464" r="9"/><circle cx="194" cy="486" r="9"/><circle cx="176" cy="508" r="9"/>
+    </g>
+    <text x="158" y="330" text-anchor="middle" font-size="10.5" font-weight="600" transform="rotate(-90 158 330)">ECRAN V / SV — umbră 15–18h + praf stradal</text>
+
+    <!-- north screen -->
+    <g fill="#5C8A55" opacity="0.85">
+      <circle cx="164" cy="214" r="9"/><circle cx="200" cy="196" r="9"/><circle cx="236" cy="214" r="9"/>
+      <circle cx="272" cy="196" r="9"/><circle cx="308" cy="214" r="9"/><circle cx="344" cy="196" r="9"/>
+      <circle cx="380" cy="214" r="9"/><circle cx="416" cy="196" r="9"/>
+    </g>
+    <text x="290" y="176" text-anchor="middle" font-size="10.5" font-weight="600">ECRAN N / NE — Crivăț</text>
+
+    <!-- wind -->
+    <g transform="translate(478,110)">
+      <path d="M0,0 L-24,30" stroke="#2E7C9B" stroke-width="2.2" marker-end="url(#flowB)"/>
+      <text x="6" y="-6" text-anchor="middle" font-size="10" fill="#2E7C9B" font-weight="600">CRIVĂȚ</text>
+    </g>
+    <!-- north -->
+    <g transform="translate(478,60)">
+      <path d="M0,-18 L6,8 L0,3 L-6,8 Z" fill="#16181A"/>
+      <text x="0" y="24" text-anchor="middle" font-size="11" font-weight="700">N</text>
+    </g>
+    <!-- slope -->
+    <path d="M108,240 L108,560" stroke="#9A7439" stroke-width="1.6" marker-end="url(#ar)"/>
+    <text x="98" y="400" text-anchor="middle" font-size="10" fill="#9A7439" font-weight="600" transform="rotate(-90 98 400)">pantă 3% → aval spre S</text>
+
+    <!-- separation dim -->
+    <line x1="470" y1="362" x2="470" y2="530" stroke="#B5471F" stroke-width="1.2" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="486" y="446" text-anchor="middle" font-size="11" font-weight="700" fill="#B5471F" transform="rotate(-90 486 446)">28 m separare iaz ↔ refulare</text>
+
+    <!-- overall dims -->
+    <line x1="140" y1="34" x2="440" y2="34" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="290" y="28" text-anchor="middle" font-size="12" font-weight="600">50,00 m — deschidere la stradă</text>
+    <line x1="524" y1="50" x2="524" y2="650" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="518" y="350" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 518 350)">100,00 m</text>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Ordinea pe pantă</span> Ecran N/NE → iaz → grădină tampon → anexă → casă → fosă + refulare → stradă. Separarea iaz ↔ zonă de refulare rezultă <strong>28 m</strong>, peste minimul de 20 m, cu fosa deplasată lateral în colțul SE ca axul parcelei să rămână liber.</p>
+    <p><span class="note-lbl">Preaplin · rev. D</span> Bazinul de infiltrare se mută <strong>lateral (E)</strong>, nu în ax spre S. Descărcarea în axul sudic ar satura exact coloana de loess pe care se bazează câmpul de infiltrare al fosei — pierdere de capacitate a drenajului și risc de tasare, nu contaminare.</p>
+    <p><span class="note-lbl">Deficit de acoperiș</span> Bilanțul cere <strong>230–250 m²</strong> suprafață de captare. O casă de ~120 m² amprentă acoperă doar jumătate (≈41 m³/an din cei 75–85 necesari). Anexa/șopronul de ~130 m² nu e opțional — face parte din bilanțul hidric al iazului și trebuie prevăzut din faza de autorizare, cu jgheaburi dirijate spre tanc.</p>
+  </div>
+</section>
+
+<!-- ============ PL-01 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-01</span><h2>Plan general — zonare și cote</h2><span class="scale">1:100</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 760" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- regeneration zone fill -->
+    <rect x="140" y="90" width="502" height="559" fill="url(#pGravel)" stroke="none"/>
+    <!-- swim zone -->
+    <rect x="259" y="209" width="264" height="440" fill="#DCEBF2"/>
+    <!-- walls -->
+    <rect x="250" y="200" width="282" height="9" fill="#8B8D8F"/>
+    <rect x="250" y="200" width="9" height="449" fill="#8B8D8F"/>
+    <rect x="523" y="200" width="9" height="449" fill="#8B8D8F"/>
+    <!-- outline -->
+    <rect x="140" y="90" width="502" height="559" fill="none" stroke="#16181A" stroke-width="1.6"/>
+
+    <!-- deck -->
+    <rect x="250" y="649" width="282" height="52" fill="#EFEAE0" stroke="#16181A" stroke-width="1"/>
+    <line x1="250" y1="662" x2="532" y2="662" stroke="#B9B3A6" stroke-width="1"/>
+    <line x1="250" y1="675" x2="532" y2="675" stroke="#B9B3A6" stroke-width="1"/>
+    <line x1="250" y1="688" x2="532" y2="688" stroke="#B9B3A6" stroke-width="1"/>
+    <text x="391" y="722" text-anchor="middle" font-size="12" font-weight="600">DECK / ACCES  6,00 m</text>
+
+    <!-- entry steps -->
+    <rect x="330" y="620" width="122" height="14" fill="#BFD9E4" stroke="#2E7C9B" stroke-width="0.9"/>
+    <rect x="330" y="606" width="122" height="14" fill="#CFE4EC" stroke="#2E7C9B" stroke-width="0.9"/>
+    <text x="391" y="598" text-anchor="middle" font-size="10" fill="#2E7C9B" font-weight="600">TREPTE −0,40 / −1,00</text>
+
+    <!-- swim label -->
+    <text x="391" y="392" text-anchor="middle" font-size="17" font-weight="600" fill="#16181A">ZONĂ DE ÎNOT</text>
+    <text x="391" y="414" text-anchor="middle" font-size="13" fill="#2E7C9B">6,00 × 10,00 m · −1,80 m</text>
+    <text x="391" y="434" text-anchor="middle" font-size="12" fill="#5A6068">60 m² · 108 m³</text>
+
+    <!-- regen labels -->
+    <text x="196" y="330" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 196 330)">ZONĂ REGENERARE  2,50 m</text>
+    <text x="586" y="430" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 586 430)">ZONĂ REGENERARE  2,50 m</text>
+    <text x="391" y="152" text-anchor="middle" font-size="12" font-weight="600">ZONĂ REGENERARE — 77,5 m² total</text>
+
+    <!-- bottom drain -->
+    <circle cx="391" cy="470" r="10" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <line x1="384" y1="463" x2="398" y2="477" stroke="#B5471F" stroke-width="1.3"/>
+    <line x1="398" y1="463" x2="384" y2="477" stroke="#B5471F" stroke-width="1.3"/>
+    <text x="407" y="474" font-size="10.5" fill="#B5471F" font-weight="600">PF · priză de fund DN110</text>
+
+    <!-- skimmers rev. B: perete S (singurul la linia apei), in aval de Crivat -->
+    <rect x="285" y="641" width="28" height="16" fill="#fff" stroke="#B5471F" stroke-width="1.5"/>
+    <text x="299" y="636" text-anchor="middle" font-size="10.5" fill="#B5471F" font-weight="600">SK1</text>
+    <rect x="469" y="641" width="28" height="16" fill="#fff" stroke="#B5471F" stroke-width="1.5"/>
+    <text x="483" y="636" text-anchor="middle" font-size="10.5" fill="#B5471F" font-weight="600">SK2</text>
+    <!-- vant dominant -->
+    <g transform="translate(702,178)">
+      <path d="M0,0 L-28,28" stroke="#2E7C9B" stroke-width="2" marker-end="url(#flowB)"/>
+      <text x="8" y="-6" text-anchor="middle" font-size="10" fill="#2E7C9B" font-weight="600">CRIVĂȚ</text>
+      <text x="8" y="6" text-anchor="middle" font-size="9" fill="#2E7C9B">N/NE</text>
+    </g>
+    <!-- preaplin spre aval -->
+    <path d="M540,649 L540,700 L562,736" fill="none" stroke="#2E7C9B" stroke-width="1.8" stroke-dasharray="6 3" marker-end="url(#flowB)"/>
+    <text x="572" y="742" font-size="10" fill="#2E7C9B" font-weight="600">PREAPLIN → bazin infiltrare ≥ 12 m aval</text>
+
+    <!-- distribution manifold (dashed) -->
+    <path d="M175,215 L175,630 M607,215 L607,630 M175,215 L607,215"
+          fill="none" stroke="#B5471F" stroke-width="1.6" stroke-dasharray="7 4"/>
+    <text x="618" y="600" font-size="10.5" fill="#B5471F" font-weight="600" transform="rotate(-90 618 600)">DISTRIBUITOR DN75 PERFORAT</text>
+
+    <!-- technical chamber -->
+    <rect x="648" y="600" width="86" height="66" fill="#fff" stroke="#16181A" stroke-width="1.4"/>
+    <text x="691" y="626" text-anchor="middle" font-size="11" font-weight="600">CĂMIN</text>
+    <text x="691" y="640" text-anchor="middle" font-size="11" font-weight="600">TEHNIC</text>
+    <text x="691" y="656" text-anchor="middle" font-size="8.5" fill="#5A6068">prefiltru · airlift · suflantă</text>
+    <path d="M642,633 L648,633" stroke="#B5471F" stroke-width="1.6"/>
+    <path d="M607,633 L642,633" stroke="#B5471F" stroke-width="1.6" stroke-dasharray="7 4"/>
+
+    <!-- section line A-A -->
+    <line x1="108" y1="470" x2="676" y2="470" stroke="#16181A" stroke-width="1" stroke-dasharray="12 4 3 4"/>
+    <text x="100" y="466" text-anchor="end" font-size="13" font-weight="700">A</text>
+    <text x="684" y="466" font-size="13" font-weight="700">A</text>
+
+    <!-- dimensions: width -->
+    <line x1="140" y1="66" x2="642" y2="66" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <line x1="140" y1="60" x2="140" y2="90" stroke="#16181A" stroke-width="0.6"/>
+    <line x1="642" y1="60" x2="642" y2="90" stroke="#16181A" stroke-width="0.6"/>
+    <text x="391" y="58" text-anchor="middle" font-size="13" font-weight="600">11,40</text>
+
+    <line x1="259" y1="180" x2="523" y2="180" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="391" y="175" text-anchor="middle" font-size="12" font-weight="600">6,00</text>
+
+    <!-- dimensions: length -->
+    <line x1="762" y1="90" x2="762" y2="649" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <line x1="756" y1="90" x2="768" y2="90" stroke="#16181A" stroke-width="0.6"/>
+    <line x1="756" y1="649" x2="768" y2="649" stroke="#16181A" stroke-width="0.6"/>
+    <text x="756" y="370" text-anchor="middle" font-size="13" font-weight="600" transform="rotate(-90 756 370)">12,70</text>
+
+    <line x1="726" y1="209" x2="726" y2="649" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="720" y="430" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 720 430)">10,00</text>
+
+    <line x1="118" y1="90" x2="118" y2="200" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+    <text x="112" y="145" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 112 145)">2,50</text>
+
+    <!-- north arrow -->
+    <g transform="translate(700,120)">
+      <path d="M0,-26 L8,10 L0,3 L-8,10 Z" fill="#16181A"/>
+      <text x="0" y="28" text-anchor="middle" font-size="12" font-weight="700">N</text>
+    </g>
+    <text x="700" y="52" text-anchor="middle" font-size="10" fill="#5A6068">deck = latura S</text>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Orientare</span> Deckul pe latura sudică. Ecranul de arbori (ulm siberian / salcâm japonez / dud) se plantează pe <strong>SV, la 6–8 m de marginea iazului</strong> — umbrește oglinda între 15:00 și 18:00, când evaporarea e maximă, fără să umbrească zona de regenerare dimineața.</p>
+    <p><span class="note-lbl">Distanțe minime</span> Fosă septică și drenaj: <strong>≥ 20 m, în aval hidraulic</strong> față de iaz. Pe pantă de 3% orientată S, iazul se amplasează în <em>partea de sus</em> a terenului.</p>
+    <p><span class="note-lbl">Skimmere · rev. B</span> Mutate pe peretele sudic — singurul cu coama la linia apei (pereții despărțitori sunt submerși cu 5–10 cm, un skimmer nu poate fi montat în ei). Poziția e și în aval de vântul dominant (Crivăț N/NE), care împinge polenul și frunzele spre S; returul peste coamele lungi creează fluxul de suprafață N→S care le alimentează.</p>
+    <p><span class="note-lbl">Preaplin · rev. B</span> Nu se descarcă în loess lângă cuvetă — risc de tasare la umezire. Conductă îngropată dusă ≥ 12 m în aval, într-un bazin de infiltrare plantat.</p>
+  </div>
+</section>
+
+<!-- ============ PL-02 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-02</span><h2>Secțiune transversală A–A</h2><span class="scale">H 1:50 · V 1:35 (exagerat)</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- native ground -->
+    <path d="M20,100 L80,100 L80,180 L102,180 L102,216 L135,216 L135,216 L218,264 L229,264 L229,280 L559,280 L559,264 L570,264 L653,216 L686,216 L686,180 L707,180 L707,100 L780,100 L780,330 L20,330 Z"
+          fill="url(#pLoess)" stroke="none"/>
+    <path d="M20,100 L80,100 L80,180 L102,180 L102,216 L135,216 L218,264 L229,264 L229,280 L559,280 L559,264 L570,264 L653,216 L686,216 L686,180 L707,180 L707,100 L780,100"
+          fill="none" stroke="#9A7439" stroke-width="1.4"/>
+    <rect x="20" y="86" width="60" height="14" fill="url(#pHumus)"/>
+    <rect x="707" y="86" width="73" height="14" fill="url(#pHumus)"/>
+
+    <!-- water body -->
+    <path d="M80,120 L80,180 L102,180 L102,216 L135,216 L218,264 L229,264 L229,120 Z" fill="#DCEBF2"/>
+    <path d="M570,264 L653,216 L686,216 L686,180 L707,180 L707,120 L559,120 L559,264 Z" fill="#DCEBF2"/>
+    <rect x="229" y="120" width="330" height="144" fill="#CFE4EC"/>
+
+    <!-- gravel beds -->
+    <path d="M80,148 L102,148 L102,184 L218,184 L218,264 L135,216 L102,216 L102,180 L80,180 Z" fill="url(#pGravel)" stroke="#8B8D8F" stroke-width="0.8"/>
+    <path d="M707,148 L686,148 L686,184 L570,184 L570,264 L653,216 L686,216 L686,180 L707,180 Z" fill="url(#pGravel)" stroke="#8B8D8F" stroke-width="0.8"/>
+
+    <!-- walls -->
+    <rect x="218" y="126" width="11" height="138" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.2"/>
+    <rect x="559" y="126" width="11" height="138" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.2"/>
+    <rect x="207" y="264" width="33" height="16" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.2"/>
+    <rect x="548" y="264" width="33" height="16" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.2"/>
+
+    <!-- liner line -->
+    <path d="M62,96 L80,120 L80,180 L102,180 L102,216 L135,216 L218,264 L229,264 L229,280 L559,280 L559,264 L570,264 L653,216 L686,216 L686,180 L707,180 L707,120 L725,96"
+          fill="none" stroke="#16181A" stroke-width="2.4"/>
+
+    <!-- manifold -->
+    <circle cx="196" cy="250" r="7" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <circle cx="592" cy="250" r="7" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <path d="M196,240 L196,200 M186,232 L172,206 M206,232 L220,206" stroke="#B5471F" stroke-width="1.2" marker-end="url(#flow)"/>
+    <path d="M592,240 L592,200 M582,232 L568,206 M602,232 L616,206" stroke="#B5471F" stroke-width="1.2" marker-end="url(#flow)"/>
+
+    <!-- plants schematic -->
+    <g stroke="#3E7A46" stroke-width="1.6" fill="none">
+      <path d="M88,148 L88,124 M92,148 L96,126 M84,148 L80,128"/>
+      <path d="M120,184 L120,150 M126,184 L131,156 M114,184 L109,158"/>
+      <path d="M160,184 L160,154 M166,184 L171,160"/>
+      <path d="M699,148 L699,124 M695,148 L691,126 M703,148 L707,128"/>
+      <path d="M668,184 L668,150 M662,184 L657,156 M674,184 L679,158"/>
+      <path d="M628,184 L628,154 M622,184 L617,160"/>
+    </g>
+
+    <!-- water surface -->
+    <line x1="56" y1="120" x2="731" y2="120" stroke="#2E7C9B" stroke-width="1.8"/>
+    <path d="M735,120 l-9,-5 l0,10 Z" fill="#2E7C9B"/>
+    <text x="742" y="117" font-size="10.5" fill="#2E7C9B" font-weight="600">±0,00</text>
+
+    <!-- levels -->
+    <g font-size="10" fill="#16181A">
+      <line x1="229" y1="264" x2="300" y2="264" stroke="#16181A" stroke-width="0.5" stroke-dasharray="3 3"/>
+      <text x="304" y="261">−1,80  radier înot</text>
+      <line x1="218" y1="126" x2="290" y2="126" stroke="#16181A" stroke-width="0.5" stroke-dasharray="3 3"/>
+      <text x="294" y="123">−0,07  coamă perete</text>
+      <line x1="102" y1="184" x2="60" y2="184" stroke="#16181A" stroke-width="0.5" stroke-dasharray="3 3"/>
+      <text x="56" y="181" text-anchor="end">−0,80</text>
+      <line x1="102" y1="148" x2="60" y2="148" stroke="#16181A" stroke-width="0.5" stroke-dasharray="3 3"/>
+      <text x="56" y="145" text-anchor="end">−0,35</text>
+      <line x1="135" y1="216" x2="60" y2="216" stroke="#16181A" stroke-width="0.5" stroke-dasharray="3 3"/>
+      <text x="56" y="213" text-anchor="end">−1,20</text>
+    </g>
+
+    <!-- zone dims -->
+    <g font-size="11" font-weight="600">
+      <line x1="80" y1="356" x2="218" y2="356" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="149" y="351" text-anchor="middle">2,50</text>
+      <line x1="229" y1="356" x2="559" y2="356" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="394" y="351" text-anchor="middle">6,00 — zonă de înot</text>
+      <line x1="570" y1="356" x2="707" y2="356" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="638" y="351" text-anchor="middle">2,50</text>
+      <line x1="80" y1="382" x2="707" y2="382" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="394" y="377" text-anchor="middle">11,40</text>
+    </g>
+
+    <!-- callouts -->
+    <g font-size="10" fill="#16181A">
+      <text x="149" y="141">emergente</text>
+      <text x="149" y="153">0,35 m apă</text>
+      <text x="118" y="205" font-size="9.5">submerse · 0,80 m</text>
+      <text x="196" y="298" font-size="9.5" text-anchor="middle" fill="#B5471F">buzunar profund</text>
+      <text x="196" y="310" font-size="9.5" text-anchor="middle" fill="#B5471F">distribuitor</text>
+      <text x="394" y="300" text-anchor="middle" font-size="10">radier · pantă 1% spre priza de fund</text>
+      <text x="60" y="94" text-anchor="end" font-size="10">teren natural</text>
+      <text x="760" y="150" text-anchor="end" font-size="10" fill="#9A7439">loess</text>
+      <text x="740" y="330" text-anchor="end" font-size="9.5" fill="#B5471F">pantă taluz max 1:2,5</text>
+    </g>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Principiu</span> Apa intră prin distribuitorul perforat din buzunarul profund de la baza peretelui și percolează <strong>ascendent și centrifug</strong> prin pietriș, ieșind în zona plantată. Fluxul forțat menține tot patul aerob — de aceea buzunarul de 1,00 m nu devine anaerob.</p>
+    <p><span class="note-lbl">Atenție</span> Scara verticală e exagerată pentru lizibilitate. La execuție se lucrează după cote, nu după desen.</p>
+  </div>
+</section>
+
+<!-- ============ PL-03 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-03</span><h2>Detaliu perete despărțitor</h2><span class="scale">1:20</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- swim side water -->
+    <rect x="300" y="70" width="200" height="330" fill="#CFE4EC"/>
+    <text x="400" y="250" text-anchor="middle" font-size="13" fill="#2E7C9B" font-weight="600">ZONĂ DE ÎNOT</text>
+    <text x="400" y="270" text-anchor="middle" font-size="11" fill="#2E7C9B">apă 1,73 m</text>
+
+    <!-- regen side -->
+    <rect x="120" y="70" width="120" height="120" fill="#DCEBF2"/>
+    <rect x="120" y="190" width="120" height="210" fill="url(#pGravel)" stroke="#8B8D8F" stroke-width="0.8"/>
+    <text x="180" y="130" text-anchor="middle" font-size="11" fill="#2E7C9B">apă liberă</text>
+    <text x="150" y="316" text-anchor="middle" font-size="11">pietriș</text>
+    <text x="150" y="332" text-anchor="middle" font-size="11">16–32 mm</text>
+
+    <!-- wall body -->
+    <rect x="240" y="82" width="60" height="318" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.6"/>
+    <!-- courses -->
+    <g stroke="#16181A" stroke-width="0.8">
+      <line x1="240" y1="122" x2="300" y2="122"/><line x1="240" y1="162" x2="300" y2="162"/>
+      <line x1="240" y1="202" x2="300" y2="202"/><line x1="240" y1="242" x2="300" y2="242"/>
+      <line x1="240" y1="282" x2="300" y2="282"/><line x1="240" y1="322" x2="300" y2="322"/>
+      <line x1="240" y1="362" x2="300" y2="362"/>
+    </g>
+    <!-- bond beam highlight -->
+    <rect x="240" y="202" width="60" height="40" fill="none" stroke="#B5471F" stroke-width="2"/>
+    <rect x="240" y="322" width="60" height="40" fill="none" stroke="#B5471F" stroke-width="2"/>
+
+    <!-- vertical rebar -->
+    <line x1="258" y1="90" x2="258" y2="430" stroke="#B5471F" stroke-width="2.6"/>
+    <line x1="282" y1="90" x2="282" y2="430" stroke="#B5471F" stroke-width="2.6"/>
+
+    <!-- footing rev. B: 0,90 x 0,25 cu calcai sub pietris -->
+    <rect x="120" y="400" width="215" height="34" fill="url(#pBeton)" stroke="#16181A" stroke-width="1.6"/>
+    <g stroke="#B5471F" stroke-width="2">
+      <circle cx="138" cy="425" r="3.4" fill="#B5471F"/><circle cx="170" cy="425" r="3.4" fill="#B5471F"/>
+      <circle cx="202" cy="425" r="3.4" fill="#B5471F"/><circle cx="234" cy="425" r="3.4" fill="#B5471F"/>
+      <circle cx="266" cy="425" r="3.4" fill="#B5471F"/><circle cx="298" cy="425" r="3.4" fill="#B5471F"/>
+      <circle cx="322" cy="425" r="3.4" fill="#B5471F"/>
+      <line x1="120" y1="410" x2="335" y2="410"/></g>
+    <!-- contrafort (proiectie, rev. B) -->
+    <rect x="186" y="230" width="54" height="170" fill="none" stroke="#B5471F" stroke-width="1.4" stroke-dasharray="6 4"/>
+    <text x="126" y="218" font-size="10" fill="#B5471F" font-weight="600">contraforți 0,20×0,60</text>
+    <text x="126" y="230" font-size="10" fill="#B5471F">interax 3,00 m</text>
+
+    <!-- layers under -->
+    <rect x="120" y="434" width="560" height="7" fill="#16181A"/>
+    <rect x="120" y="441" width="560" height="9" fill="#D8D4C8" stroke="#8B8D8F" stroke-width="0.5"/>
+    <rect x="120" y="450" width="560" height="7" fill="#16181A"/>
+    <rect x="120" y="457" width="560" height="10" fill="#D8D4C8" stroke="#8B8D8F" stroke-width="0.5"/>
+    <rect x="120" y="467" width="560" height="16" fill="url(#pSand)" stroke="#C9A063" stroke-width="0.5"/>
+    <rect x="120" y="483" width="560" height="30" fill="url(#pLoess)"/>
+
+    <!-- protection geotex under footing extra -->
+    <text x="690" y="440" font-size="10">geotextil 300 (protecție)</text>
+    <text x="690" y="450" font-size="10" font-weight="600">EPDM 1,52 mm</text>
+    <text x="690" y="466" font-size="10">geotextil 500</text>
+    <text x="690" y="480" font-size="10">nisip 5 cm</text>
+    <text x="690" y="502" font-size="10" fill="#9A7439">loess compactat</text>
+    <line x1="682" y1="437" x2="676" y2="437" stroke="#16181A" stroke-width="0.6"/>
+
+    <!-- water level -->
+    <line x1="100" y1="70" x2="520" y2="70" stroke="#2E7C9B" stroke-width="1.8"/>
+    <text x="96" y="67" text-anchor="end" font-size="11" fill="#2E7C9B" font-weight="600">±0,00</text>
+    <text x="400" y="60" text-anchor="middle" font-size="10.5" fill="#B5471F" font-weight="600">coamă la −0,05 … −0,10 · marcată vizibil</text>
+
+    <!-- dims -->
+    <g font-size="11" font-weight="600">
+      <line x1="560" y1="82" x2="560" y2="400" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="554" y="240" text-anchor="middle" transform="rotate(-90 554 240)">1,73</text>
+      <line x1="240" y1="466" x2="300" y2="466" stroke="#16181A" stroke-width="0" />
+      <line x1="205" y1="380" x2="240" y2="380" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="222" y="374" text-anchor="middle" font-size="10">0,20</text>
+      <line x1="240" y1="52" x2="300" y2="52" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="270" y="46" text-anchor="middle" font-size="10">0,20</text>
+      <line x1="120" y1="500" x2="335" y2="500" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="228" y="516" text-anchor="middle" font-size="10">talpă 0,90 × 0,25 · călcâi sub pietriș</text>
+    </g>
+
+    <!-- annotations -->
+    <g font-size="10.5">
+      <line x1="258" y1="150" x2="180" y2="60" stroke="#B5471F" stroke-width="0.7"/>
+      <text x="176" y="56" text-anchor="end" fill="#B5471F" font-weight="600">Ø12 vertical / 50 cm</text>
+      <line x1="302" y1="222" x2="380" y2="180" stroke="#B5471F" stroke-width="0.7"/>
+      <text x="384" y="177" fill="#B5471F" font-weight="600">centură din 3 în 3 rânduri</text>
+      <line x1="302" y1="342" x2="380" y2="342" stroke="#B5471F" stroke-width="0.7"/>
+      <text x="384" y="339" fill="#B5471F" font-weight="600">alveole umplute cu beton C16/20</text>
+    </g>
+
+    <!-- pressure diagram -->
+    <g transform="translate(120,70)">
+      <path d="M0,120 L0,330 L46,330 Z" fill="#B5471F" opacity="0.18"/>
+      <path d="M0,120 L46,330" stroke="#B5471F" stroke-width="1.2" stroke-dasharray="4 3"/>
+    </g>
+    <text x="130" y="392" font-size="9.5" fill="#B5471F">Δp la golire</text>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Caz de calcul · rev. B</span> Cu apă la același nivel pe ambele fețe, împingerea netă e mică (~4,8 kN/ml). Dimensionarea se face pentru <strong>bazin golit cu pietriș saturat</strong> (~19 kN/ml): talpă lărgită la 0,90 m cu călcâi sub pietriș + contraforți 0,20×0,60 m la interax 3,00 m, pe fața dinspre regenerare (invizibili sub pietriș). Peretele devine stabil structural și la golire accidentală; regula de mai jos rămâne ca a doua barieră, nu ca singura.</p>
+    <div class="warn"><strong>Regulă de exploatare, afișată la cămin:</strong> zona de înot nu se golește niciodată fără drenarea simultană a zonei de regenerare. Prevezi o vană de golire în buzunarul profund, la aceeași cotă.</div>
+    <p><span class="note-lbl">Finisaj</span> Boltarii levigă var — pH > 9 în primul sezon. Tencuială cu adaos de silicat pe fața dinspre înot, sau un an de rodaj cu apă de sacrificiu înainte de plantare.</p>
+  </div>
+</section>
+
+<!-- ============ PL-04 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-04</span><h2>Stratificația cuvetei și ancorarea membranei</h2><span class="scale">1:10</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- layer stack, left -->
+    <g>
+      <rect x="60" y="300" width="380" height="70" fill="url(#pLoess)" stroke="#9A7439" stroke-width="1"/>
+      <rect x="60" y="272" width="380" height="28" fill="url(#pSand)" stroke="#C9A063" stroke-width="1"/>
+      <rect x="60" y="258" width="380" height="14" fill="#D8D4C8" stroke="#8B8D8F" stroke-width="1"/>
+      <rect x="60" y="248" width="380" height="10" fill="#16181A"/>
+      <rect x="60" y="236" width="380" height="12" fill="#D8D4C8" stroke="#8B8D8F" stroke-width="1"/>
+      <rect x="60" y="166" width="380" height="70" fill="url(#pGravel)" stroke="#8B8D8F" stroke-width="1"/>
+      <rect x="60" y="96" width="380" height="70" fill="#DCEBF2"/>
+      <line x1="60" y1="96" x2="440" y2="96" stroke="#2E7C9B" stroke-width="1.8"/>
+    </g>
+
+    <!-- leaders -->
+    <g font-size="11.5" stroke="#16181A" stroke-width="0.6">
+      <line x1="440" y1="120" x2="480" y2="120"/><line x1="440" y1="200" x2="480" y2="200"/>
+      <line x1="440" y1="242" x2="480" y2="242"/><line x1="440" y1="253" x2="500" y2="253"/>
+      <line x1="440" y1="265" x2="480" y2="265"/><line x1="440" y1="286" x2="480" y2="286"/>
+      <line x1="440" y1="335" x2="480" y2="335"/>
+    </g>
+    <g font-size="11.5">
+      <text x="488" y="117" font-weight="600" fill="#2E7C9B">Apă</text><text x="488" y="131" fill="#5A6068">0,35 / 0,80 m după treaptă</text>
+      <text x="488" y="197" font-weight="600">Pietriș spălat 16–32 mm</text><text x="488" y="211" fill="#5A6068">40–50 cm · fără fracție fină</text>
+      <text x="488" y="239" font-weight="600">Geotextil 300 g/m²</text><text x="488" y="252" fill="#5A6068">protecție deasupra</text>
+      <text x="508" y="250" font-weight="600">EPDM 1,52 mm (60 mil)</text>
+      <text x="488" y="269" font-weight="600">Geotextil 500 g/m²</text>
+      <text x="488" y="290" font-weight="600">Nisip 0–2 mm · 5 cm</text>
+      <text x="488" y="332" font-weight="600" fill="#9A7439">Loess — fund afânat cu furca</text>
+      <text x="488" y="346" fill="#5A6068">niciodată netezit / compactat cu utilaj</text>
+    </g>
+
+    <!-- anchor trench detail -->
+    <g transform="translate(0,0)">
+      <text x="60" y="60" font-size="13" font-weight="700">DETALIU ANCORARE PERIMETRALĂ</text>
+      <text x="60" y="76" font-size="10.5" fill="#5A6068">tranșee 30 × 30 cm pe tot conturul</text>
+    </g>
+    <g transform="translate(560,-10)">
+      <rect x="0" y="380" width="180" height="46" fill="url(#pLoess)" stroke="#9A7439" stroke-width="1"/>
+      <path d="M0,380 L60,380 L60,410 L110,410 L110,380 L180,380" fill="#F7F5F0" stroke="none"/>
+      <path d="M0,380 L60,380 L60,410 L110,410 L110,380 L180,380" fill="none" stroke="#9A7439" stroke-width="1.2"/>
+      <path d="M0,372 L58,372 L58,408 L112,408 L112,372 L180,372" fill="none" stroke="#16181A" stroke-width="2.4"/>
+      <rect x="60" y="392" width="50" height="18" fill="url(#pGravel)"/>
+      <text x="90" y="366" text-anchor="middle" font-size="10">0,30</text>
+      <text x="90" y="424" text-anchor="middle" font-size="10">umplere cu pietriș + pământ</text>
+    </g>
+
+    <!-- dims left stack -->
+    <g font-size="10.5" font-weight="600">
+      <line x1="42" y1="166" x2="42" y2="236" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="34" y="204" text-anchor="middle" transform="rotate(-90 34 204)">0,45</text>
+      <line x1="42" y1="272" x2="42" y2="300" stroke="#16181A" stroke-width="0.9" marker-start="url(#arS)" marker-end="url(#ar)"/>
+      <text x="34" y="290" text-anchor="middle" transform="rotate(-90 34 290)">0,05</text>
+    </g>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Critic pe loess</span> Geotextilul de <strong>sub</strong> membrană e mai important decât cel de deasupra. Loessul conține concrețiuni calcaroase dure (bieloglazkă) care perforează EPDM-ul la prima încărcare cu apă. 500 g/m², fără excepție.</p>
+    <p><span class="note-lbl">Croială</span> Transect pe lățime ≈ 16,5 m, pe lungime ≈ 17,6 m → comandă <strong>18 × 18 m</strong>. Peste 15,25 m EPDM-ul necesită sudură — cere-o executată în fabrică, nu pe șantier.</p>
+    <p><span class="note-lbl">Montaj</span> Se desfășoară pe vreme caldă (peste 15 °C), membrana se relaxează 1–2 ore înainte de fixare. Umplerea se face treptat, lăsând membrana să se așeze singură în colțuri.</p>
+  </div>
+</section>
+
+<!-- ============ PL-05 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-05</span><h2>Schemă hidraulică — circuit de recirculare</h2><span class="scale">schematic</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+
+    <!-- swim zone box -->
+    <rect x="220" y="70" width="330" height="180" fill="#CFE4EC" stroke="#16181A" stroke-width="1.4"/>
+    <text x="385" y="150" text-anchor="middle" font-size="15" font-weight="600">ZONĂ DE ÎNOT</text>
+    <text x="385" y="172" text-anchor="middle" font-size="12" fill="#2E7C9B">108 m³</text>
+
+    <!-- regen boxes -->
+    <rect x="70" y="70" width="120" height="180" fill="url(#pGravel)" stroke="#16181A" stroke-width="1.4"/>
+    <text x="130" y="150" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 130 150)">REGENERARE</text>
+    <rect x="580" y="70" width="120" height="180" fill="url(#pGravel)" stroke="#16181A" stroke-width="1.4"/>
+    <text x="640" y="150" text-anchor="middle" font-size="12" font-weight="600" transform="rotate(-90 640 150)">REGENERARE</text>
+
+    <!-- skimmer rev. B: perete S, la linia apei -->
+    <rect x="262" y="240" width="22" height="24" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <text x="273" y="219" text-anchor="middle" font-size="9.5" fill="#5A6068">perete S · ≈65% debit</text>
+    <text x="273" y="233" text-anchor="middle" font-size="10.5" font-weight="600" fill="#B5471F">SKIMMER ×2</text>
+
+    <!-- bottom drain -->
+    <rect x="370" y="240" width="30" height="14" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <text x="385" y="272" text-anchor="middle" font-size="11" font-weight="600" fill="#B5471F">PRIZĂ DE FUND</text>
+    <text x="385" y="286" text-anchor="middle" font-size="10" fill="#5A6068">≈ 35% debit · DN110</text>
+
+    <!-- pipes to prefilter -->
+    <path d="M273,264 L273,330 L300,330" fill="none" stroke="#B5471F" stroke-width="2.6" marker-end="url(#flow)"/>
+    <path d="M385,254 L385,330" fill="none" stroke="#B5471F" stroke-width="2.6"/>
+
+    <!-- prefilter -->
+    <rect x="306" y="308" width="92" height="46" fill="#fff" stroke="#16181A" stroke-width="1.6"/>
+    <g stroke="#8B8D8F" stroke-width="1.2">
+      <line x1="320" y1="316" x2="320" y2="346"/><line x1="334" y1="316" x2="334" y2="346"/>
+      <line x1="348" y1="316" x2="348" y2="346"/><line x1="362" y1="316" x2="362" y2="346"/>
+      <line x1="376" y1="316" x2="376" y2="346"/>
+    </g>
+    <text x="352" y="374" text-anchor="middle" font-size="11" font-weight="600">PREFILTRU</text>
+    <text x="352" y="388" text-anchor="middle" font-size="10" fill="#5A6068">site/perii · curățat săptămânal</text>
+
+    <!-- airlift rev. C -->
+    <path d="M398,331 L436,331" fill="none" stroke="#B5471F" stroke-width="2.6" marker-end="url(#flow)"/>
+    <rect x="440" y="298" width="50" height="66" fill="#fff" stroke="#16181A" stroke-width="1.6"/>
+    <g stroke="#16181A" stroke-width="1.2" fill="none">
+      <line x1="450" y1="304" x2="450" y2="358"/><line x1="462" y1="304" x2="462" y2="358"/>
+      <line x1="468" y1="304" x2="468" y2="358"/><line x1="480" y1="304" x2="480" y2="358"/>
+    </g>
+    <g fill="#2E7C9B">
+      <circle cx="456" cy="350" r="1.7"/><circle cx="456" cy="338" r="2.1"/><circle cx="456" cy="324" r="2.5"/><circle cx="456" cy="310" r="2.9"/>
+      <circle cx="474" cy="346" r="1.7"/><circle cx="474" cy="332" r="2.1"/><circle cx="474" cy="318" r="2.5"/><circle cx="474" cy="306" r="2.9"/>
+    </g>
+    <text x="465" y="290" text-anchor="middle" font-size="11" font-weight="600">AIRLIFT ×2 · DN110</text>
+    <text x="465" y="378" text-anchor="middle" font-size="10" fill="#5A6068">5–8 m³/h fiecare</text>
+    <rect x="424" y="392" width="82" height="34" fill="#fff" stroke="#16181A" stroke-width="1.4"/>
+    <text x="465" y="406" text-anchor="middle" font-size="10.5" font-weight="600">SUFLANTĂ</text>
+    <text x="465" y="419" text-anchor="middle" font-size="9.5" fill="#5A6068">50–70 W · aer</text>
+    <path d="M465,392 L465,366" fill="none" stroke="#5A6068" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+    <!-- to manifolds -->
+    <path d="M490,331 L560,331 L560,220 L640,220" fill="none" stroke="#B5471F" stroke-width="2.6" marker-end="url(#flow)"/>
+    <path d="M490,331 L560,331 L560,430 L130,430 L130,220" fill="none" stroke="#B5471F" stroke-width="2.6" marker-end="url(#flow)"/>
+
+    <!-- manifolds -->
+    <rect x="96" y="212" width="68" height="16" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <rect x="606" y="212" width="68" height="16" fill="#fff" stroke="#B5471F" stroke-width="1.6"/>
+    <g stroke="#B5471F" stroke-width="1.4">
+      <path d="M108,212 L108,190" marker-end="url(#flow)"/><path d="M130,212 L130,190" marker-end="url(#flow)"/>
+      <path d="M152,212 L152,190" marker-end="url(#flow)"/>
+      <path d="M618,212 L618,190" marker-end="url(#flow)"/><path d="M640,212 L640,190" marker-end="url(#flow)"/>
+      <path d="M662,212 L662,190" marker-end="url(#flow)"/>
+    </g>
+    <text x="130" y="248" text-anchor="middle" font-size="10" font-weight="600" fill="#B5471F">DISTRIBUITOR DN75</text>
+
+    <!-- return over wall -->
+    <path d="M190,110 L220,110" fill="none" stroke="#2E7C9B" stroke-width="2.6" marker-end="url(#flow)"/>
+    <path d="M580,110 L550,110" fill="none" stroke="#2E7C9B" stroke-width="2.6" marker-end="url(#flow)"/>
+    <text x="385" y="46" text-anchor="middle" font-size="10.5" fill="#2E7C9B" font-weight="600">întoarcere gravitațională peste coama peretelui</text>
+
+    <!-- makeup water -->
+    <rect x="676" y="404" width="104" height="42" fill="#fff" stroke="#16181A" stroke-width="1.4" stroke-dasharray="5 3"/>
+    <text x="728" y="422" text-anchor="middle" font-size="10.5" font-weight="600">TANC PLOAIE</text>
+    <text x="728" y="436" text-anchor="middle" font-size="10" fill="#5A6068">20 m³ · completare</text>
+    <path d="M676,425 L600,425 L600,340" fill="none" stroke="#2E7C9B" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#flow)"/>
+
+    <!-- overflow rev. B: bazin de infiltrare aval -->
+    <path d="M700,96 L742,96" fill="none" stroke="#2E7C9B" stroke-width="2" marker-end="url(#flowB)"/>
+    <rect x="744" y="74" width="50" height="42" fill="none" stroke="#2E7C9B" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <text x="769" y="91" text-anchor="middle" font-size="9" fill="#2E7C9B" font-weight="600">BAZIN</text>
+    <text x="769" y="102" text-anchor="middle" font-size="9" fill="#2E7C9B" font-weight="600">INFILTR.</text>
+    <text x="769" y="130" text-anchor="middle" font-size="8.5" fill="#5A6068">≥ 12 m aval</text>
+
+    <!-- legend -->
+    <g font-size="10.5">
+      <line x1="70" y1="466" x2="98" y2="466" stroke="#B5471F" stroke-width="2.6"/>
+      <text x="104" y="470">circuit forțat</text>
+      <line x1="200" y1="466" x2="228" y2="466" stroke="#2E7C9B" stroke-width="2.6"/>
+      <text x="234" y="470">curgere liberă / completare</text>
+      <line x1="440" y1="466" x2="468" y2="466" stroke="#5A6068" stroke-width="1.6" stroke-dasharray="4 3"/>
+      <text x="474" y="470">aer comprimat</text>
+    </g>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Dimensionare · rev. C</span> Recirculare pe principiul airlift (metoda Pagan Butler / Organic Pools): două coloane DN110 imersate 1,5–1,8 m, cu difuzor la bază, ridică apa 15–20 cm peste nivelul iazului într-un jgheab care alimentează gravitațional distribuitoarele. Debit 5–8 m³/h pe coloană → 10–15 m³/h total. Suflantă de membrană 50–70 W: ≈ 250–300 kWh/sezon, de ~5 ori sub varianta cu pompă — un panou PV de 100 W cu un acumulator mic o acoperă integral. Iarna, aceeași suflantă la debit redus ține fereastra de aerare din capitolul de iernare.</p>
+    <p><span class="note-lbl">De ce airlift</span> Zero piese în mișcare în apă, nimic de gresat, iar dafnia trece nevătămată — o pompă centrifugă toacă zooplanctonul care face de fapt limpezirea. Prețul: sensibilitate la înălțimea de ridicare. Jgheabul de distribuție se ține la <strong>max. 20 cm peste nivelul apei</strong>, altfel debitul se prăbușește neliniar.</p>
+    <p><span class="note-lbl">Fără UV, fără clor, fără filtru cu nisip</span> Sterilizatorul UV omoară dafnia, care e principalul consumator de alge. Filtrul cu nisip reține particulele dar nu extrage fosfor.</p>
+    <p><span class="note-lbl">Preaplin · rev. B</span> La cotă fixă. Fără el, completarea din puț calcaros concentrează carbonați și nitrați an după an — în 3–4 ani ai un iaz sărat. Descărcarea <strong>nu se face în loess lângă cuvetă</strong> (tasare la umezire): conductă îngropată ≥ 12 m în aval, într-un bazin de infiltrare plantat.</p>
+  </div>
+</section>
+
+<!-- ============ PL-06 ============ -->
+<section class="sheet">
+  <div class="sheet-head"><span class="code">PL-06</span><h2>Plan de plantare — zona de regenerare</h2><span class="scale">schematic</span></div>
+  <div class="canvas">
+  <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+    <!-- band -->
+    <rect x="60" y="60" width="680" height="150" fill="url(#pGravel)" stroke="#16181A" stroke-width="1.4"/>
+    <line x1="286" y1="60" x2="286" y2="210" stroke="#16181A" stroke-width="1"/>
+    <line x1="513" y1="60" x2="513" y2="210" stroke="#16181A" stroke-width="1"/>
+
+    <text x="173" y="46" text-anchor="middle" font-size="11.5" font-weight="700">MARGINE · apă 0,35 m</text>
+    <text x="400" y="46" text-anchor="middle" font-size="11.5" font-weight="700">MIJLOC · apă 0,80 m</text>
+    <text x="626" y="46" text-anchor="middle" font-size="11.5" font-weight="700">LÂNGĂ PERETE · buzunar</text>
+
+    <g font-size="11.5">
+      <text x="76" y="88" font-style="italic">Iris pseudacorus</text>
+      <text x="76" y="108" font-style="italic">Acorus calamus</text>
+      <text x="76" y="128" font-style="italic">Mentha aquatica</text>
+      <text x="76" y="148" font-style="italic">Butomus umbellatus</text>
+      <text x="76" y="168" font-style="italic">Carex elata</text>
+      <text x="76" y="192" font-size="10" fill="#5A6068">6–8 buc/m²</text>
+
+      <text x="302" y="88" font-style="italic">Ceratophyllum demersum</text>
+      <text x="302" y="108" font-style="italic">Myriophyllum spicatum</text>
+      <text x="302" y="128" font-style="italic">Potamogeton crispus</text>
+      <text x="302" y="148" font-style="italic">Elodea nuttallii</text>
+      <text x="302" y="168" font-style="italic">Hippuris vulgaris</text>
+      <text x="302" y="192" font-size="10" fill="#5A6068">3–5 buc/m² · motorul extragerii de N și P</text>
+
+      <text x="529" y="88" fill="#B5471F" font-weight="600">FĂRĂ PLANTE</text>
+      <text x="529" y="108" font-size="10.5" fill="#5A6068">zonă de distribuție</text>
+      <text x="529" y="124" font-size="10.5" fill="#5A6068">acces la conductă pentru</text>
+      <text x="529" y="140" font-size="10.5" fill="#5A6068">spălare inversă</text>
+      <text x="529" y="168" font-size="10.5" fill="#5A6068">pietriș vizibil, curat</text>
+    </g>
+
+    <text x="60" y="240" font-size="11.5" font-weight="700">EXCLUS:</text>
+    <text x="140" y="240" font-size="11.5">nuferi în pat (doar în coșuri izolate) · Typha (rizomi perforanți) · Phragmites · orice plantă în pământ sau compost</text>
+    <text x="60" y="266" font-size="11.5" font-weight="700">ÎNTREȚINERE:</text>
+    <text x="170" y="266" font-size="11.5">tăierea și <tspan font-weight="600">îndepărtarea</tspan> biomasei în octombrie — singura cale prin care fosforul iese din sistem.</text>
+  </svg>
+  </div>
+  <div class="sheet-foot note">
+    <p><span class="note-lbl">Prag</span> Fosfor total sub <strong>10 µg/L</strong>. Peste această valoare apar algele filamentoase, indiferent câte plante ai. Zero pământ, zero compost, zero îngrășământ în zona de regenerare — plantele se aduc cu rădăcina spălată.</p>
+    <p><span class="note-lbl">Maturare</span> Două sezoane. Primul an va fi tulbure și cu alge; e comportamentul normal al unui sistem nematurat, nu un defect de proiectare.</p>
+  </div>
+</section>
+
+<!-- ============ CANTITĂȚI ============ -->
+<h3 class="block">Antemăsurătoare — cantități principale</h3>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Poziție</th><th>U.M.</th><th>Cantitate</th><th>Observații</th></tr></thead>
+  <tbody>
+    <tr><td>Săpătură mecanizată, inclusiv terasare</td><td class="num">m³</td><td class="num">≈ 190</td><td>taluz max 1:2,5; loessul nu ține vertical</td></tr>
+    <tr><td>Nisip 0–2 mm pentru pat</td><td class="num">m³</td><td class="num">17</td><td>5 cm pe ≈ 340 m² suprafață desfășurată</td></tr>
+    <tr><td>Geotextil 500 g/m² (sub membrană)</td><td class="num">m²</td><td class="num">400</td><td>obligatoriu pe loess</td></tr>
+    <tr><td>Membrană EPDM 1,52 mm</td><td class="num">m²</td><td class="num">324</td><td>o singură bucată 18 × 18 m, sudată în fabrică</td></tr>
+    <tr><td>Geotextil 300 g/m² (peste membrană)</td><td class="num">m²</td><td class="num">250</td><td>sub talpă și sub pietriș</td></tr>
+    <tr><td>Pietriș spălat 16–32 mm</td><td class="num">m³</td><td class="num">39</td><td>≈ 62 t · spălat, fără fracție fină</td></tr>
+    <tr><td>Boltari 20 cm</td><td class="num">ml perete</td><td class="num">26</td><td>H = 1,73 m · ≈ 230 buc</td></tr>
+    <tr><td>Beton C16/20 (talpă + alveole + centuri + contraforți)</td><td class="num">m³</td><td class="num">≈ 11</td><td>talpă 0,90 × 0,25 cu călcâi · contraforți la 3,00 m</td></tr>
+    <tr><td>Oțel-beton Ø12 / Ø10</td><td class="num">kg</td><td class="num">≈ 520</td><td>vertical la 50 cm + 3 centuri + contraforți</td></tr>
+    <tr><td>Conductă DN110 / DN75 perforată</td><td class="num">ml</td><td class="num">30 / 45</td><td>priză fund + distribuitor</td></tr>
+    <tr><td>Suflantă de membrană (rev. C)</td><td class="num">buc</td><td class="num">1</td><td>50–70 W · 60–80 L/min aer · exterior, în cămin</td></tr>
+    <tr><td>Coloane airlift DN110 + difuzoare</td><td class="num">buc</td><td class="num">2 (+1)</td><td>+1 opțional ca skimmer de suprafață tip Butler</td></tr>
+    <tr><td>Furtun aer UV-rezistent + robineți reglaj</td><td class="num">ml</td><td class="num">≈ 25</td><td>câte un robinet pe coloană, pentru echilibrare</td></tr>
+    <tr><td>Skimmer</td><td class="num">buc</td><td class="num">2</td><td>pe laturile lungi, în perete</td></tr>
+    <tr><td>Plante acvatice</td><td class="num">buc</td><td class="num">≈ 400</td><td>≈ 250 emergente + 150 submerse</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3 class="block">Ordinea de execuție</h3>
+<ol class="steps">
+  <li><b>Test de percolație și analiză puț.</b> Groapă 30×30×30 cm, saturare 4 h, măsurare pe oră. În paralel: P total, NO₃, duritate, conductivitate din puț. Rezultatele decid dacă tancul de ploaie e opțional sau obligatoriu.</li>
+  <li><b>Trasare și verificarea distanței față de fosă</b> — minimum 20 m, iazul în amonte hidraulic pe panta de 3%.</li>
+  <li><b>Săpătură terasată</b> cu cotele din PL-02. Fundul se afânează cu furca, nu se compactează cu utilaj. Pereții se profilează la 1:2,5.</li>
+  <li><b>Nisip 5 cm + geotextil 500 g/m²</b> pe toată suprafața desfășurată, cu suprapuneri de 30 cm.</li>
+  <li><b>Desfășurarea EPDM</b> pe vreme caldă, cu relaxare 1–2 ore înainte de fixare. Fără călcat cu încălțăminte cu talpă dură.</li>
+  <li><b>Geotextil de protecție + turnarea tălpii</b> peretelui. Talpa nu se toarnă niciodată direct pe membrană.</li>
+  <li><b>Zidărie boltari</b> cu armare verticală și centuri. Coama la −0,05 … −0,10, nivelată cu lasere sau furtun de nivel.</li>
+  <li><b>Montaj distribuitor, skimmere, priză de fund</b> și tragerea conductelor la căminul tehnic.</li>
+  <li><b>Așternerea pietrișului</b>, cu protecție a membranei sub roata roabei. Pietrișul se verifică prin spălare la fața locului: apa scursă trebuie să fie limpede.</li>
+  <li><b>Umplere lentă</b> (2–3 zile), lăsând membrana să se așeze. Rodaj pH dacă boltarii nu sunt tencuiți.</li>
+  <li><b>Plantare</b> — submersele primele, emergentele la 2–3 săptămâni după stabilizarea nivelului.</li>
+  <li><b>Ancorare finală și umplerea tranșeei perimetrale</b>, după ce membrana s-a așezat complet sub sarcina apei.</li>
+</ol>
+
+<h3 class="block">Bilanțul apei — verificare anuală</h3>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Parametru</th><th>Valoare</th><th>Consecință</th></tr></thead>
+  <tbody>
+    <tr><td>Luciu de apă</td><td class="num">137 m²</td><td>suprafață de evaporare</td></tr>
+    <tr><td>Evaporație mai–sept.</td><td class="num">≈ 700 mm</td><td>96 m³ pierdere brută</td></tr>
+    <tr><td>Precipitații mai–sept.</td><td class="num">≈ 200 mm</td><td>27 m³ aport direct</td></tr>
+    <tr><td>Evapotranspirație emergente</td><td class="num">+20–50%</td><td>pe ~30 m² de stand dens (iris, Acorus, Carex)</td></tr>
+    <tr><td><strong>Deficit net de sezon · rev. B</strong></td><td class="num"><strong>≈ 75–85 m³</strong></td><td>43–49% din volumul total</td></tr>
+    <tr><td>Vârf iulie</td><td class="num">≈ 0,8 m³/zi</td><td>dimensionarea completării</td></tr>
+    <tr><td>Captare acoperiș necesară</td><td class="num">≈ 230–250 m²</td><td>la 400 mm/an, cu 20 m³ stocare</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="warn">Umbrirea parțială a oglinzii pe direcția SV, între orele 15 și 18, reduce deficitul cu 15–25%. Ecranul de arbori nu e element decorativ — face parte din bilanțul hidric al iazului.</div>
+
+<h3 class="block">Iernare — nou în rev. B</h3>
+<ol class="steps">
+  <li><b>Nivelul apei se menține la cota normală toată iarna.</b> Gheața flotantă (10–15 cm, normală la Crucea) e inofensivă pentru EPDM și pentru pereții cu apă pe ambele fețe. Gheața ancorată de o coamă descoperită, în schimb, smulge zidăria la variațiile de nivel.</li>
+  <li><b>Liniile de skimmer se golesc și se blindează în octombrie.</b> Sunt exact la linia apei — primele care îngheață și singurele conducte din sistem expuse la îngheț.</li>
+  <li><b>Recircularea se oprește; suflanta rămâne în funcțiune la minim.</b> Nu există pompă de apă de iernat — singurul echipament e suflanta din căminul izolat, comutată pe difuzorul de iarnă. Prefiltrul se curăță și rămâne deschis.</li>
+  <li><b>O fereastră de aerare se menține cu suflanta sistemului, la debit redus,</b> printr-un singur difuzor ridicat la ~40 cm sub luciu — nu pe fund, unde ar amesteca și răci stratul de apă de 4 °C în care iernează fauna. Gheața nu se sparge mecanic; undele de șoc stresează fauna.</li>
+  <li><b>Emergentele se taie deasupra liniei estimate a gheții, nu la bază.</b> Tulpinile goale de iris și Acorus funcționează iarna ca tuburi de schimb de gaze între apă și atmosferă.</li>
+  <li><b>Verificarea de primăvară:</b> nivelul coamei pereților (tasări), ancorarea perimetrală, starea prefiltrului, apoi repornirea recirculării când apa trece de 8–10 °C.</li>
+</ol>
+
+</div>
+</body>
+</html>
