@@ -1,9 +1,10 @@
 # Iaz de înot natural — Crucea, Dobrogea
 ## Memoriu tehnic și sinteza deciziilor de proiectare
 
-**Amplasament:** 44,53187 N / 28,22835 E — parcelă 50 × 100 m (5.000 m²), pantă 3% orientată sud, stradă pe latura sudică
+**Amplasament:** 44,53187 N / 28,22835 E — parcelă reală ≈ 4.800 m², neregulată (perimetru 283 m), stradă pe latura **VSV**; panta presupusă spre stradă, de confirmat cu nivela
+**Geometrie de referință:** planul peisager (DWG „Plan Proiect Serban", scară verificată 1:100/A0) și măsurătorile trasate pe el (`time-lapse/masuratori.json`)
 **Document însoțitor:** `NSP-Crucea-planse-tehnice.html` (planșele PL-00 … PL-06, antemăsurătoare, ordine de execuție)
-**Stadiu:** revizia D · august 2026
+**Stadiu:** revizia E · august 2026
 
 ---
 
@@ -40,21 +41,21 @@ Două motive independente, fiecare suficient:
 
 Argilizarea (bentonită, gleizare) și baterea mecanică a cuvetei **nu sunt soluții** pe loess colapsibil: se fisurează la primul ciclu uscare/umezire.
 
-**Concluzie: membrană EPDM, obligatoriu.**
+**Concluzie: membrană EPDM, obligatoriu.** (rev. E: foaie 18 × 15,25 m ≈ 275 m², sudată în fabrică)
 
 ---
 
 ## 3. Soluția adoptată — parametri de bază
 
-| Parametru | Valoare |
-|---|---|
-| Zonă de înot | 6,00 × 10,00 m · adâncime 1,80 m · 60 m² · 108 m³ |
-| Zonă de regenerare | bandă 2,50 m pe trei laturi · 77,5 m² |
-| Amprentă totală | 11,40 × 12,70 m |
-| Luciu de apă | ≈ 137 m² |
-| Volum total sistem | ≈ 175 m³ |
-| Raport înot : regenerare | 44 : 56 |
-| Perete despărțitor | 26 ml · H 1,73 m · coamă la −0,05…−0,10 |
+| Parametru | rev. D (proiect inițial) | **rev. E (planul peisager)** |
+|---|---|---|
+| Zonă de înot | 6,00 × 10,00 m · 60 m² · 108 m³ | **5,95 × 4,95 m · 29,5 m² · 53 m³** |
+| Zonă de regenerare | bandă 2,50 m pe trei laturi · 77,5 m² | **inel complet · bandă 1,2–4,0 m · 56 m²** |
+| Amprentă totală | 11,40 × 12,70 m | **12,50 × 10,30 m** |
+| Luciu de apă | ≈ 137 m² | **≈ 85 m²** |
+| Volum total sistem | ≈ 175 m³ | **≈ 85 m³** |
+| Raport înot : regenerare | 44 : 56 | **35 : 65** |
+| Perete despărțitor | 26 ml | **inel 22 ml** · H 1,73 m · coamă la −0,05…−0,10 |
 
 Regenerarea e terasată pe trei trepte (buzunar profund la perete → 0,80 m apă pentru submerse → 0,35 m apă pentru emergente), tocmai pentru a evita eroarea clasică a patului uniform de pietriș, care devine anaerob sub 40 cm și **eliberează fosfor înapoi în apă**.
 
@@ -98,25 +99,46 @@ Două corecții rezultate:
 
 Separarea rezultată iaz ↔ zonă de refulare: **28 m** (minim cerut 20), obținută prin deplasarea fosei lateral în colțul SE.
 
+### Rev. D → E (verificarea pe planul peisager real)
+
+Suprapunerea proiectului peste planul peisager (DWG, scară verificată) și peste zonele măsurate direct pe plan a schimbat premisele de amplasament:
+
+| # | Premisa rev. D | Realitatea de pe plan | Consecința |
+|---|---|---|---|
+| 1 | parcelă 50 × 100 m, stradă la S | parcelă neregulată ≈ 4.800 m², stradă pe **VSV** | ordinea pe pantă rămâne valabilă dacă terenul coboară spre stradă — de confirmat cu nivela; direcțiile din planșe sunt acum cele reale |
+| 2 | înot 6 × 10 m | **6 × 5 m** — jumătate | volum, bilanț, cantități recalculate; vezi decizia de mai jos |
+| 3 | regenerare pe 3 laturi, bandă 2,50 m | **inel complet**, bandă 1,2–4,0 m | terasarea completă doar pe VSV/ENE; pe SSE/NNV doar treapta de emergente |
+| 4 | skimmere în peretele sudic, la linia apei | **toți pereții au coama submersă** (inel) | skimmerele de perete dispar; **skimmer airlift de suprafață tip Butler** în colțul SV, unde împinge Crivățul |
+| 5 | acces direct de pe deck, latura S | nicio latură liberă la mal | **punte peste banda îngustă SSE**, în continuarea platformelor din planul peisager |
+| 6 | casă ~120 m² amprentă | **62 m²** pe plan | acoperișul casei acoperă ~40% din necesarul (redus) de completare; anexa rămâne necesară, dar mai mică |
+| 7 | salcie/oțetar nespecificate | **salcie plângătoare la 8 m S**, **oțetar la 4 m SE** de iaz | ambele se mută înainte de execuție (frunziș în apă, rădăcini spre cuvetă / drajoni în tranșeea de ancorare) |
+| 8 | ecran N/NE de plantat | pe plan, direcția Crivățului are doar fructiferi mici; gardul de ulm de pe limită (20 m N) se tunde jos | recomandarea rev. D rămâne în picioare |
+
+**Decizie de semnalat, nu de ascuns:** la 5,95 × 4,95 m, zona de înot nu mai oferă culoar de înot în lungime — e un bazin de îmbăiere/plonjare cu apă adâncă. Dacă se dorește înot real, extinderea se face spre VNV–NNV, unde planul are spațiu liber până la limita nordică (20 m). Documentul de față dimensionează varianta desenată pe plan.
+
+Verificate și fără conflict: utilitățile marcate pe plan (canalizare/curent, conductă de apă) la ≈ 68–70 m SV; liniile de irigare la ≥ 8,8 m; casa la 24,8 m SV; sera la 16,9 m S. Poziția fosei nu apare pe plan — separarea de ≥ 20 m rămâne de confirmat pe teren (pct. 8.5).
+
 ---
 
 ## 5. Bilanțul apei — constrângerea care decide proiectul
 
 Aceasta este, de departe, cea mai serioasă limitare. Nu impermeabilizarea, nu structura.
 
-| Parametru | Valoare |
-|---|---|
-| Evaporație mai–septembrie | ≈ 700 mm → 96 m³ |
-| Precipitații mai–septembrie | ≈ 200 mm → 27 m³ |
-| Evapotranspirație emergente | +20–50% pe ~30 m² de stand dens |
-| **Deficit net de sezon** | **75–85 m³** (43–49% din volumul total) |
-| Vârf iulie | ≈ 0,8 m³/zi |
-| **Suprafață de captare necesară** | **230–250 m²** |
-| Tanc-tampon | 20 m³ |
+| Parametru | rev. D | **rev. E (85 m² luciu)** |
+|---|---|---|
+| Evaporație mai–septembrie | 96 m³ | **≈ 60 m³** |
+| Precipitații mai–septembrie | 27 m³ | **≈ 17 m³** |
+| Evapotranspirație emergente | +20–50% pe ~30 m² | +20–50% pe **~20 m²** de stand dens |
+| **Deficit net de sezon** | 75–85 m³ (43–49% din volum) | **47–52 m³ — 55–61% din volum** |
+| Vârf iulie | ≈ 0,8 m³/zi | **≈ 0,5 m³/zi** |
+| **Suprafață de captare necesară** | 230–250 m² | **145–165 m²** |
+| Tanc-tampon | 20 m³ | **12–15 m³** |
+
+De remarcat: procentual, iazul mic pierde **mai mult** decât cel mare — luciul (sursa evaporării) scade mai încet decât volumul. Bilanțul rămâne constrângerea numărul unu a proiectului.
 
 ### Deficitul de acoperiș — punct de atenție
 
-O casă de ~120 m² amprentă produce ≈41 m³/an, adică **jumătate** din necesar. **Anexa sau șopronul de încă ~130 m² nu e opțional** — face parte din sistemul iazului și trebuie prevăzut din faza de autorizare, cu jgheaburi dirijate spre tanc.
+Casa de pe planul peisager are **62 m² amprentă** (nu ~120 m² cum presupunea rev. D): acoperișul ei produce ≈ 22 m³/an, adică **~40%** din necesarul redus al rev. E. **Anexa sau șopronul de ~70–90 m² rămâne necesar** — face parte din sistemul iazului și trebuie prevăzut din faza de autorizare, cu jgheaburi dirijate spre tanc. Sera (20 m²) poate contribui marginal.
 
 Alternativa — completarea integrală din puțul calcaros — transformă iazul într-un sistem evaporativ închis care concentrează carbonați, nitrați și fosfați an după an.
 
@@ -178,7 +200,7 @@ Cifra explică toate regulile care par excesive:
 Ancorare: tranșee perimetrală 30 × 30 cm, umplută după ce membrana s-a așezat sub sarcina apei.
 
 ### Peretele despărțitor
-Boltari 20 cm, H = 1,73 m, armătură Ø12 vertical la 50 cm în alveole betonate, centuri din 3 în 3 rânduri, talpă continuă 0,90 × 0,25 cu călcâi sub pietriș, contraforți 0,20 × 0,60 la interax 3,00 m pe fața dinspre regenerare.
+Inel complet de **22 ml** (rev. E). Boltari 20 cm, H = 1,73 m, armătură Ø12 vertical la 50 cm în alveole betonate, centuri din 3 în 3 rânduri, talpă continuă 0,90 × 0,25 cu călcâi sub pietriș, contraforți 0,20 × 0,60 la interax 3,00 m pe fața dinspre regenerare.
 
 > **Regulă de exploatare, de afișat la căminul tehnic:**
 > Zona de înot nu se golește niciodată fără drenarea simultană a zonei de regenerare. Cu apă la același nivel pe ambele fețe, împingerea e ~4,8 kN/ml; la golire cu pietriș saturat, ~19 kN/ml. Contraforții din rev. B fac peretele stabil și în acest caz, dar regula rămâne ca a doua barieră.
@@ -189,7 +211,7 @@ Boltarii levigă var — pH > 9 în primul sezon. Tencuială cu adaos de silicat
 - 2 × coloană airlift DN110, imersate 1,5–1,8 m, difuzor la bază
 - Suflantă de membrană 50–70 W, 60–80 L/min aer
 - Debit 5–8 m³/h pe coloană → 10–15 m³/h total
-- Skimmer ×2 pe peretele sudic (≈65% debit) + priză de fund DN110 (≈35%)
+- Skimmer airlift de suprafață tip Butler în colțul SV (≈65% debit) + priză de fund DN110 (≈35%) — rev. E: skimmerele de perete au dispărut, toți pereții au coama submersă
 - Prefiltru cu site/perii înainte de pat, curățat săptămânal
 - Distribuitor DN75 perforat la baza pietrișului, percolare ascendentă și centrifugă
 - Robineți de reglaj pe fiecare coloană, pentru echilibrare
@@ -209,7 +231,9 @@ Boltarii levigă var — pH > 9 în primul sezon. Tencuială cu adaos de silicat
 
 - **Zid sub sau peste membrană.** Planșele arată varianta „peste liner, pe geotextil dublu + talpă". Varianta cu linerul drapat peste zid elimină riscul de perforare, dar solicită membrana pe muchii, care trebuie rotunjite.
 - **Trepte de acces.** Adâncimea uniformă de 1,80 m nu are intrare gradată. PL-01 propune o treaptă la −0,40 și una la −1,00 pe latura deckului.
-- **Poziția exactă a casei și anexei** pe parcelă — de care depinde traseul jgheaburilor spre tancul-tampon.
+- **Poziția anexei** pe parcelă — casa există pe plan (62 m², la 24,8 m SV de iaz); de anexă depinde traseul jgheaburilor spre tancul-tampon.
+- **Mutarea salciei plângătoare și a oțetarului** — unde se replantează (salcia s-ar potrivi lângă bazinul de infiltrare al preaplinului, unde apa în plus e binevenită).
+- **Extinderea zonei de înot spre VNV** dacă se dorește culoar de înot în lungime — planul are spațiu până la limita nordică.
 - **Dimensionarea PV-ului** pentru suflantă, dacă se merge pe alimentare autonomă.
 
 ---
