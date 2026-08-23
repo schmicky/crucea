@@ -218,6 +218,85 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
+    /* ── Măsurare ── */
+    #measure-panel { display: none; align-items: center; gap: 6px; flex-wrap: wrap; }
+    #measure-panel.visible { display: flex; }
+    #cal-badge { font-size: 10.5px; color: #8b949e; white-space: nowrap; }
+    #snap-label { font-size: 11px; color: #8b949e; display: flex;
+                  align-items: center; gap: 4px; cursor: pointer; }
+    #snap-label input { accent-color: #2ea043; cursor: pointer; }
+    #map-wrap.mode-measure { cursor: crosshair; }
+
+    #measure-layer   { position: absolute; top: 0; left: 0; overflow: visible;
+                       pointer-events: none; z-index: 12; }
+    #measure-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       pointer-events: none; z-index: 14; }
+    .mvertex {
+      position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
+      border-radius: 50%; background: #f0a030; border: 2px solid #0d1117;
+      transform: scale(var(--mz, 1));
+    }
+    .mvertex.first { background: #7ee787; }
+    .mlabel {
+      position: absolute; transform: translate(-50%, -50%) scale(var(--mz, 1));
+      background: rgba(13,17,23,0.92); border: 1px solid #f0a030; color: #ffd79a;
+      font-size: 11px; font-weight: 600; padding: 1px 5px;
+      border-radius: 4px; white-space: nowrap;
+    }
+    .mlabel.tot { border-color: #2ea043; color: #7ee787; }
+
+    /* Panoul cu rezultate */
+    #measure-results {
+      display: none; position: absolute; top: 10px; left: 10px;
+      background: rgba(22,27,34,0.95); border: 1px solid #30363d;
+      border-radius: 8px; padding: 8px 10px; z-index: 60;
+      max-height: calc(100% - 24px); overflow-y: auto;
+      width: 232px; font-size: 11.5px;
+    }
+    .mres { border-bottom: 1px solid #21262d; padding-bottom: 6px; margin-bottom: 6px; }
+    .mres:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .mres.act { outline: 1px solid #f0a030; outline-offset: 3px; border-radius: 3px; }
+    .mres-h { display: flex; justify-content: space-between; align-items: center;
+              gap: 6px; margin-bottom: 3px; }
+    .mres-h b { color: #7ee787; font-size: 11.5px; }
+    button.mini {
+      background: #21262d; border: 1px solid #30363d; color: #c9d1d9;
+      border-radius: 4px; font-size: 10px; padding: 1px 4px; cursor: pointer;
+    }
+    button.mini:hover { background: #30363d; border-color: #58a6ff; }
+    .mrow { display: flex; gap: 6px; align-items: baseline; color: #8b949e; }
+    .mrow span { width: 15px; color: #6e7681; }
+    .mrow b { color: #ffd79a; font-weight: 600; min-width: 62px; }
+    .mrow i { color: #6e7681; font-style: normal; font-size: 10.5px; }
+    .mang { color: #6e7681; font-size: 10px; margin-top: 2px; line-height: 1.35; }
+    .mtot { margin-top: 3px; color: #8b949e; }
+    .mtot b { color: #7ee787; }
+    #measure-hint {
+      display: none; position: absolute; bottom: 12px; left: 50%;
+      transform: translateX(-50%); z-index: 60;
+      background: rgba(22,27,34,0.95); border: 1px solid #f0a030;
+      border-radius: 8px; padding: 6px 12px; font-size: 11.5px; color: #ffd79a;
+    }
+
+    /* Panoul de calibrare */
+    #cal-panel {
+      display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #161b22; border: 1px solid #30363d;
+      border-radius: 10px; padding: 18px; width: 420px; max-width: 92vw;
+      z-index: 300; box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+    }
+    #cal-panel.visible { display: block; }
+    #cal-panel h3 { margin-bottom: 8px; color: #7ee787; font-size: 14px; }
+    #cal-panel p { font-size: 12px; color: #8b949e; line-height: 1.5; margin-bottom: 10px; }
+    #cal-panel p strong { color: #ffd79a; }
+    #cal-input {
+      width: 110px; background: #0d1117; border: 1px solid #30363d;
+      border-radius: 5px; color: #c9d1d9; font-size: 14px; padding: 6px 8px;
+    }
+    #cal-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    #cal-row label { font-size: 12px; color: #c9d1d9; }
+
     /* ── Month bar ── */
     #month-bar {
       background: #161b22;
@@ -417,6 +496,8 @@
 
       /* IO Panel */
       #io-panel { width: 95vw; padding: 14px; }
+      #cal-panel { width: 95vw; padding: 14px; }
+      #measure-results { width: 178px; font-size: 10.5px; top: 6px; left: 6px; }
       #io-textarea { height: 120px; font-size: 12px; }
       .io-actions .btn { min-height: 36px; font-size: 13px; }
 
@@ -445,6 +526,7 @@
   <div id="mode-group">
     <button class="btn active" id="btn-timelapse" onclick="setAppMode('timelapse')">👁 Vizualizare</button>
     <button class="btn"        id="btn-edit"      onclick="setAppMode('edit')">✏ Editare</button>
+    <button class="btn"        id="btn-measure"   onclick="setAppMode('measure')">📏 Măsurare</button>
   </div>
   <div class="tb-sep"></div>
 
@@ -477,6 +559,22 @@
            onchange="loadFileJSON(event)">
   </div>
 
+  <div class="tb-sep" id="tb-sep-measure" style="display:none"></div>
+
+  <!-- Măsurare -->
+  <div id="measure-panel">
+    <button class="btn green" onclick="newMeasure()">＋ Măsurătoare nouă</button>
+    <button class="btn" onclick="finishMeasure()">✓ Termină</button>
+    <button class="btn" onclick="undoVertex()">↶ Anulează vârf</button>
+    <button class="btn red" onclick="clearMeasures()">🗑 Șterge tot</button>
+    <label id="snap-label"><input type="checkbox" id="snap-check" checked
+           onchange="snapOn = this.checked">lipire la plante</label>
+    <div class="tb-sep"></div>
+    <button class="btn" onclick="startCalibration()">📐 Calibrează</button>
+    <button class="btn" onclick="exportMeasures()">⬇ Export</button>
+    <span id="cal-badge"></span>
+  </div>
+
   <span id="count-badge"></span>
   </div><!-- /toolbar-extra -->
 </div>
@@ -485,7 +583,9 @@
 <div id="map-wrap">
   <div id="map-inner">
     <img id="plan-img" src="plan.jpg" draggable="false" alt="Plan grădină">
+    <svg id="measure-layer" xmlns="http://www.w3.org/2000/svg"></svg>
     <div id="dots-layer"></div>
+    <div id="measure-overlay"></div>
     <div id="month-overlay">Ianuarie</div>
   </div>
 
@@ -514,6 +614,10 @@
     <div class="leg-row"><div class="leg-dot" style="background:#c7a200"></div><span>Aromatic</span></div>
     <div class="leg-row"><div class="leg-dot" style="background:#1a7a9a"></div><span>Ierbacee</span></div>
   </div>
+
+  <!-- Rezultate măsurare -->
+  <div id="measure-results"></div>
+  <div id="measure-hint"></div>
 
   <!-- Manual load notice -->
   <div id="load-notice">
@@ -551,7 +655,24 @@
 </div>
 
 <!-- ── IO Panel ── -->
-<div id="overlay-bg" onclick="closeIOPanel()"></div>
+<div id="overlay-bg" onclick="closeModals()"></div>
+
+<!-- ── Calibrare scară ── -->
+<div id="cal-panel">
+  <h3>📐 Calibrare scară</h3>
+  <p>Segmentul măsurat are <strong id="cal-current">—</strong> cu calibrarea actuală.
+  Scrie cât are în realitate și restul planului se recalculează proporțional.</p>
+  <div id="cal-row">
+    <label for="cal-input">Lungime reală:</label>
+    <input type="text" id="cal-input" inputmode="decimal" placeholder="ex. 12.5">
+    <span style="font-size:12px;color:#8b949e">metri</span>
+  </div>
+  <div class="io-actions">
+    <button class="btn" onclick="resetCalibration()">↺ Valoarea verificată</button>
+    <button class="btn green" onclick="applyCalibration()">✓ Aplică</button>
+    <button class="btn" onclick="closeCalPanel()">✕ Renunță</button>
+  </div>
+</div>
 <div id="io-panel">
   <h3 id="io-title">Export JSON</h3>
   <textarea id="io-textarea" spellcheck="false"></textarea>
@@ -1177,6 +1298,8 @@ document.getElementById('mobile-toggle').addEventListener('click', () => {
 // ══════════════════════════════════════════════════════════════
 function applyTransform() {
   mapInner.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+  // vârfurile și etichetele de măsurare rămân de mărime constantă pe ecran
+  mapInner.style.setProperty('--mz', 1 / scale);
 }
 
 function setScale(s, cx, cy) {
@@ -1289,6 +1412,8 @@ function renderDot(p) {
   positionDot(dot, p);
   styleDot(dot, p);
   dot.addEventListener('click', e => {
+    // în modul măsurare click-ul trebuie să ajungă la hartă, ca să se lipească
+    if (appMode === 'measure') return;
     e.stopPropagation();
     if (!isDragging) showPopup(p.id, e.clientX, e.clientY);
   });
@@ -1345,8 +1470,8 @@ function repositionAllDots() {
   });
 }
 
-planImg.addEventListener('load',  repositionAllDots);
-window.addEventListener('resize', repositionAllDots);
+planImg.addEventListener('load',  () => { repositionAllDots(); renderMeasures(); });
+window.addEventListener('resize', () => { repositionAllDots(); renderMeasures(); });
 
 // ══════════════════════════════════════════════════════════════
 // NAVIGARE LUNI
@@ -1399,22 +1524,34 @@ function setAppMode(m) {
 
   document.getElementById('btn-timelapse').classList.toggle('active', m === 'timelapse');
   document.getElementById('btn-edit').classList.toggle('active', m === 'edit');
+  document.getElementById('btn-measure').classList.toggle('active', m === 'measure');
   document.getElementById('month-control').style.display = m === 'timelapse' ? '' : 'none';
   document.getElementById('tb-sep-edit').style.display   = m === 'edit' ? '' : 'none';
   document.getElementById('edit-panel').classList.toggle('visible', m === 'edit');
+  document.getElementById('tb-sep-measure').style.display = m === 'measure' ? '' : 'none';
+  document.getElementById('measure-panel').classList.toggle('visible', m === 'measure');
   document.getElementById('hint').style.display = 'none';
   document.getElementById('month-overlay').style.display = m === 'timelapse' ? '' : 'none';
   document.getElementById('legend').style.display      = m === 'timelapse' ? '' : 'none';
   document.getElementById('legend-edit').style.display = m === 'edit'      ? '' : 'none';
 
-  mapWrap.className = '';
+  mapWrap.className = m === 'measure' ? 'mode-measure' : '';
 
   if (m === 'timelapse' && playing) {
     // nu oprim play-ul la revenire
   }
 
+  // la ieșirea din măsurare abandonăm măsurătoarea neterminată și calibrarea
+  if (m !== 'measure') {
+    if (activeM >= 0 && measures[activeM] && measures[activeM].pts.length < 2) {
+      measures.splice(activeM, 1);
+    }
+    activeM = -1; calStep = 0; calPts = [];
+  }
+
   updateAllDots();
   closePopup();
+  renderMeasures();
 }
 
 function setAddMode() {
@@ -1643,6 +1780,417 @@ function loadFileJSON(e) {
 }
 
 // ══════════════════════════════════════════════════════════════
+// MĂSURARE — distanțe, arii, azimut
+// ══════════════════════════════════════════════════════════════
+// Scara planului: plan.jpg este planșa A0 tipărită la 1:100, deci
+// acoperă 118,9 × 84,1 m de teren (raportul laturilor imaginii,
+// 5056/3576 = 1,41387, coincide cu cel al formatului A0). De aici:
+//   1% din lățimea imaginii = 1,1902 m
+//   1% din înălțimea imaginii = 0,8419 m
+// ATENȚIE: cele două valori sunt diferite, pentru că procentele au
+// numitori diferiți (5056 px pe orizontală, 3576 px pe verticală).
+// Tratarea lor ca aceeași unitate ar greși segmentele oblice cu 41%.
+//
+// Verificat contra fișierului original resurse/Plan Proiect Serban dwg.dwg
+// (unde 1 unitate de desen = 1 m): 829 de distanțe între plantele cu
+// același cod dau un factor de corecție de 1,0002 — abatere 0,02% —
+// cu rezidual median de 6 cm.
+//
+// Nordul: 210,42° față de „sus" pe imagine, în sens orar. Dedus din
+// simbolul de nord al DWG-ului (vârful săgeții indică −X) combinat cu
+// rotația planșei față de desen (300,42°), determinată prin potrivirea
+// norului de puncte și confirmată prin suprapunerea limitei de
+// proprietate peste plan.jpg.
+const CAL_BASE  = { mx: 1.1902, my: 0.8419 };
+const NORTH_DEG = 210.42;
+const CAL_KEY   = 'gradina-calibrare';
+const MEAS_KEY  = 'gradina-masuratori';
+const SNAP_PX   = 14;   // rază de lipire la plante, în pixeli de ecran
+const CLOSE_PX  = 16;   // rază pentru închiderea conturului
+
+let calK     = 1;    // factor din calibrarea manuală (1 = valoarea verificată)
+let measures = [];   // [{ pts: [{x, y}], closed: bool }] — coordonate în procente
+let activeM  = -1;   // indexul măsurătorii în lucru
+let snapOn   = true;
+let calStep  = 0;    // 0 = inactiv, 1 = aștept punctele de calibrare
+let calPts   = [];
+
+const mxM = () => CAL_BASE.mx * calK;
+const myM = () => CAL_BASE.my * calK;
+
+const measLayer   = document.getElementById('measure-layer');
+const measOverlay = document.getElementById('measure-overlay');
+
+// ── Persistență (poate arunca în navigare privată) ──────────────
+function calSave()  { try { localStorage.setItem(CAL_KEY, String(calK)); } catch(e) {} }
+function measSave() { try { localStorage.setItem(MEAS_KEY, JSON.stringify(measures)); } catch(e) {} }
+function calLoad()  {
+  try {
+    const v = parseFloat(localStorage.getItem(CAL_KEY));
+    if (isFinite(v) && v > 0.2 && v < 5) calK = v;
+  } catch(e) {}
+}
+function measLoad() {
+  try {
+    const d = JSON.parse(localStorage.getItem(MEAS_KEY) || '[]');
+    if (Array.isArray(d)) {
+      measures = d.filter(m => m && Array.isArray(m.pts) &&
+                               m.pts.every(q => isFinite(q.x) && isFinite(q.y)));
+    }
+  } catch(e) {}
+}
+
+// ── Geometrie, în metri reali ───────────────────────────────────
+function segM(a, b) {
+  return Math.hypot((b.x - a.x) * mxM(), (b.y - a.y) * myM());
+}
+
+// azimut față de nord, în sens orar
+function bearingDeg(a, b) {
+  const dx = (b.x - a.x) * mxM(), dy = (b.y - a.y) * myM();
+  const fromUp = Math.atan2(dx, -dy) * 180 / Math.PI;
+  return ((fromUp - NORTH_DEG) % 360 + 360) % 360;
+}
+
+// unghiul interior din vârful p, între vecinii a și b
+function vertexAngle(p, a, b) {
+  const ux = (a.x - p.x) * mxM(), uy = (a.y - p.y) * myM();
+  const vx = (b.x - p.x) * mxM(), vy = (b.y - p.y) * myM();
+  const lu = Math.hypot(ux, uy), lv = Math.hypot(vx, vy);
+  if (!lu || !lv) return null;
+  const c = Math.min(1, Math.max(-1, (ux * vx + uy * vy) / (lu * lv)));
+  return Math.acos(c) * 180 / Math.PI;
+}
+
+// aria prin formula lui Gauss
+function areaM2(pts) {
+  let s = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length];
+    s += (a.x * mxM()) * (b.y * myM()) - (b.x * mxM()) * (a.y * myM());
+  }
+  return Math.abs(s) / 2;
+}
+
+function segList(m) {
+  const out = [];
+  for (let i = 0; i < m.pts.length - 1; i++) out.push([i, i + 1]);
+  if (m.closed && m.pts.length > 2) out.push([m.pts.length - 1, 0]);
+  return out;
+}
+function totalM(m) {
+  return segList(m).reduce((t, [i, j]) => t + segM(m.pts[i], m.pts[j]), 0);
+}
+function fmtM(v)  { return (v < 10 ? v.toFixed(2) : v.toFixed(1)) + ' m'; }
+function fmtA(v)  { return v < 1000 ? v.toFixed(1) + ' m²'
+                                    : (v / 10000).toFixed(3) + ' ha'; }
+
+// ── Desenare ────────────────────────────────────────────────────
+function renderMeasures() {
+  const on = appMode === 'measure';
+  measLayer.style.display   = on ? '' : 'none';
+  measOverlay.style.display = on ? '' : 'none';
+  if (!on) { renderMeasureList(); return; }
+
+  const W = imgW(), H = imgH();
+  measLayer.setAttribute('width',  W);
+  measLayer.setAttribute('height', H);
+  measLayer.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+  const px = q => [q.x / 100 * W, q.y / 100 * H];
+  let svg = '', ov = '';
+
+  const draw = (m, idx, temp) => {
+    const pts = m.pts.map(px);
+    if (!pts.length) return;
+    const col = temp ? '#58a6ff' : (idx === activeM ? '#f0a030' : '#d0863a');
+    const pp  = pts.map(q => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join(' ');
+    if (m.closed && pts.length > 2) {
+      svg += '<polygon points="' + pp + '" fill="' + col + '25" stroke="' + col +
+             '" stroke-width="2" vector-effect="non-scaling-stroke"/>';
+    } else if (pts.length > 1) {
+      svg += '<polyline points="' + pp + '" fill="none" stroke="' + col +
+             '" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>';
+    }
+    pts.forEach((q, i) => {
+      ov += '<div class="mvertex' + (i === 0 ? ' first' : '') +
+            '" style="left:' + q[0].toFixed(1) + 'px;top:' + q[1].toFixed(1) + 'px"></div>';
+    });
+    segList(m).forEach(([i, j]) => {
+      const a = pts[i], b = pts[j];
+      ov += '<div class="mlabel" style="left:' + ((a[0] + b[0]) / 2).toFixed(1) +
+            'px;top:' + ((a[1] + b[1]) / 2).toFixed(1) + 'px">' +
+            fmtM(segM(m.pts[i], m.pts[j])) + '</div>';
+    });
+    if (m.pts.length > 1 && !temp) {
+      const last  = pts[pts.length - 1];
+      const extra = (m.closed && m.pts.length > 2) ? ' · ' + fmtA(areaM2(m.pts)) : '';
+      ov += '<div class="mlabel tot" style="left:' + last[0].toFixed(1) +
+            'px;top:' + (last[1] - 24).toFixed(1) + 'px">Σ ' + fmtM(totalM(m)) +
+            extra + '</div>';
+    }
+  };
+
+  measures.forEach((m, i) => draw(m, i, false));
+  if (calPts.length) draw({ pts: calPts, closed: false }, -1, true);
+
+  measLayer.innerHTML   = svg;
+  measOverlay.innerHTML = ov;
+  renderMeasureList();
+  updateMeasureHint();
+}
+
+function renderMeasureList() {
+  const box = document.getElementById('measure-results');
+  if (appMode !== 'measure' || !measures.length) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  let out = '';
+  measures.forEach((m, i) => {
+    const nume = (m.closed ? 'Contur ' : 'Traseu ') + (i + 1);
+    out += '<div class="mres' + (i === activeM ? ' act' : '') + '">' +
+           '<div class="mres-h"><b>' + nume + '</b><span>' +
+           '<button class="mini" title="Continuă (un contur închis se redeschide)" ' +
+           'onclick="pickMeasure(' + i + ')">✎</button> ' +
+           '<button class="mini" title="Șterge" onclick="delMeasure(' + i + ')">🗑</button>' +
+           '</span></div>';
+    segList(m).forEach(([a, b], k) => {
+      out += '<div class="mrow"><span>' + (k + 1) + '</span><b>' +
+             fmtM(segM(m.pts[a], m.pts[b])) + '</b><i>az ' +
+             bearingDeg(m.pts[a], m.pts[b]).toFixed(0) + '°</i></div>';
+    });
+    const angs = [];
+    const n = m.pts.length;
+    for (let k = 1; k < n - 1; k++) {
+      const v = vertexAngle(m.pts[k], m.pts[k - 1], m.pts[k + 1]);
+      if (v != null) angs.push('V' + (k + 1) + ' ' + v.toFixed(0) + '°');
+    }
+    if (m.closed && n > 2) {
+      const v0 = vertexAngle(m.pts[0], m.pts[n - 1], m.pts[1]);
+      const vn = vertexAngle(m.pts[n - 1], m.pts[n - 2], m.pts[0]);
+      if (v0 != null) angs.unshift('V1 ' + v0.toFixed(0) + '°');
+      if (vn != null) angs.push('V' + n + ' ' + vn.toFixed(0) + '°');
+    }
+    if (angs.length) out += '<div class="mang">Unghiuri: ' + angs.join(' · ') + '</div>';
+    out += '<div class="mtot">Total <b>' + fmtM(totalM(m)) + '</b>';
+    if (m.closed && n > 2) out += ' · Arie <b>' + fmtA(areaM2(m.pts)) + '</b>';
+    out += '</div></div>';
+  });
+  box.innerHTML = out;
+}
+
+function updateMeasureHint() {
+  const hint = document.getElementById('measure-hint');
+  if (appMode !== 'measure') { hint.style.display = 'none'; return; }
+  let txt = '';
+  if (calStep) {
+    txt = calPts.length === 0
+      ? '📐 Click pe primul capăt al distanței cunoscute'
+      : '📐 Click pe al doilea capăt';
+  } else if (activeM >= 0) {
+    const n = measures[activeM].pts.length;
+    txt = n === 0 ? '⬥ Click pe hartă pentru primul punct'
+        : 'Click = punct nou · dublu-click sau Enter = termină · Backspace = anulează' +
+          (n > 2 ? ' · click pe punctul verde = închide conturul' : '');
+  } else {
+    txt = '⬥ Click pe hartă pentru a începe o măsurătoare';
+  }
+  hint.textContent = txt;
+  hint.style.display = 'block';
+}
+
+// ── Comenzi ─────────────────────────────────────────────────────
+function newMeasure() {
+  if (appMode !== 'measure') setAppMode('measure');
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  measures.push({ pts: [], closed: false });
+  activeM = measures.length - 1;
+  calStep = 0; calPts = [];
+  renderMeasures();
+}
+function finishMeasure() {
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  activeM = -1;
+  measSave(); renderMeasures();
+}
+function undoVertex() {
+  if (activeM < 0) { if (measures.length) activeM = measures.length - 1; else return; }
+  const m = measures[activeM];
+  if (m.closed) m.closed = false;
+  else m.pts.pop();
+  if (!m.pts.length) { measures.splice(activeM, 1); activeM = -1; }
+  measSave(); renderMeasures();
+}
+function pickMeasure(i) {
+  activeM = i;
+  if (measures[i]) measures[i].closed = false;
+  renderMeasures();
+}
+function delMeasure(i) {
+  measures.splice(i, 1);
+  if (activeM === i) activeM = -1;
+  else if (activeM > i) activeM--;
+  measSave(); renderMeasures();
+}
+function clearMeasures() {
+  if (measures.length && !confirm('Ștergi toate măsurătorile?')) return;
+  measures = []; activeM = -1;
+  measSave(); renderMeasures();
+}
+
+// ── Click pe hartă ──────────────────────────────────────────────
+function measureClick(e) {
+  const rect = planImg.getBoundingClientRect();
+  let x = (e.clientX - rect.left) / rect.width  * 100;
+  let y = (e.clientY - rect.top)  / rect.height * 100;
+  if (x < 0 || x > 100 || y < 0 || y > 100) return;
+
+  // lipire la cea mai apropiată plantă
+  if (snapOn) {
+    let best = null, bestD = SNAP_PX;
+    points.forEach(p => {
+      const d = Math.hypot((p.x_pct - x) / 100 * rect.width,
+                           (p.y_pct - y) / 100 * rect.height);
+      if (d < bestD) { bestD = d; best = p; }
+    });
+    if (best) { x = best.x_pct; y = best.y_pct; }
+  }
+
+  // calibrare în curs
+  if (calStep) {
+    calPts.push({ x, y });
+    if (calPts.length === 2) { calStep = 0; openCalDialog(); }
+    renderMeasures();
+    return;
+  }
+
+  if (activeM < 0) newMeasure();
+  const m = measures[activeM];
+
+  const near = (q) => Math.hypot((q.x - x) / 100 * rect.width,
+                                 (q.y - y) / 100 * rect.height);
+  // click pe primul vârf → închide conturul
+  if (m.pts.length > 2 && near(m.pts[0]) < CLOSE_PX) {
+    m.closed = true; activeM = -1;
+    measSave(); renderMeasures();
+    return;
+  }
+  // ignorăm dublura produsă de al doilea click al unui dublu-click
+  if (m.pts.length && near(m.pts[m.pts.length - 1]) < 3) return;
+
+  m.pts.push({ x, y });
+  measSave(); renderMeasures();
+}
+
+mapWrap.addEventListener('click', e => {
+  if (appMode !== 'measure' || isDragging) return;
+  measureClick(e);
+});
+mapWrap.addEventListener('dblclick', e => {
+  if (appMode !== 'measure') return;
+  e.preventDefault();
+  finishMeasure();
+});
+window.addEventListener('keydown', e => {
+  if (appMode !== 'measure') return;
+  const t = (e.target.tagName || '').toUpperCase();
+  if (t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT') return;
+  if (e.key === 'Enter' || e.key === 'Escape') { finishMeasure(); }
+  else if (e.key === 'Backspace') { e.preventDefault(); undoVertex(); }
+});
+
+// ── Calibrare cu o singură măsurătoare ──────────────────────────
+function startCalibration() {
+  if (appMode !== 'measure') setAppMode('measure');
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  activeM = -1; calStep = 1; calPts = [];
+  renderMeasures();
+}
+
+function openCalDialog() {
+  document.getElementById('cal-current').textContent = fmtM(segM(calPts[0], calPts[1]));
+  const inp = document.getElementById('cal-input');
+  inp.value = '';
+  document.getElementById('cal-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+  setTimeout(() => inp.focus(), 60);
+}
+
+// O singură măsurătoare e suficientă: raportul laturilor imaginii e
+// cunoscut, deci corectăm ambele axe cu același factor.
+function applyCalibration() {
+  const real = parseFloat(String(document.getElementById('cal-input').value).replace(',', '.'));
+  const cur  = calPts.length === 2 ? segM(calPts[0], calPts[1]) : 0;
+  if (!isFinite(real) || real <= 0) { alert('Scrie lungimea reală în metri (ex. 12.5).'); return; }
+  if (!cur) { alert('Măsurătoarea de calibrare lipsește.'); return; }
+  calK = calK * real / cur;
+  calSave(); closeCalPanel(); updateCalBadge();
+}
+
+function resetCalibration() {
+  calK = 1;
+  calSave(); closeCalPanel(); updateCalBadge();
+}
+
+function closeCalPanel() {
+  calStep = 0; calPts = [];
+  document.getElementById('cal-panel').classList.remove('visible');
+  document.getElementById('overlay-bg').classList.remove('visible');
+  document.getElementById('cal-input').value = '';
+  renderMeasures();
+}
+
+function updateCalBadge() {
+  const b   = document.getElementById('cal-badge');
+  const dev = (calK - 1) * 100;
+  if (Math.abs(dev) < 0.005) {
+    b.textContent = 'scară 1:100 (A0), verificată';
+    b.style.color = '#8b949e';
+  } else {
+    b.textContent = 'calibrare manuală ' + (dev > 0 ? '+' : '') + dev.toFixed(2) + '%';
+    b.style.color = '#f0a030';
+  }
+  b.title = '1% lățime = ' + mxM().toFixed(4) + ' m · 1% înălțime = ' + myM().toFixed(4) + ' m';
+}
+
+document.getElementById('cal-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') applyCalibration();
+});
+
+// ── Export ──────────────────────────────────────────────────────
+function exportMeasures() {
+  if (!measures.length) { alert('Nu există măsurători de exportat.'); return; }
+  const out = {
+    calibrare: {
+      m_per_procent_latime:  +mxM().toFixed(5),
+      m_per_procent_inaltime: +myM().toFixed(5),
+      factor_manual: +calK.toFixed(5),
+      nord_grade_fata_de_sus: NORTH_DEG
+    },
+    masuratori: measures.map((m, i) => ({
+      nume: (m.closed ? 'Contur ' : 'Traseu ') + (i + 1),
+      inchis: !!m.closed,
+      segmente: segList(m).map(([a, b], k) => ({
+        nr: k + 1,
+        lungime_m: +segM(m.pts[a], m.pts[b]).toFixed(2),
+        azimut_grade: +bearingDeg(m.pts[a], m.pts[b]).toFixed(1)
+      })),
+      total_m: +totalM(m).toFixed(2),
+      arie_m2: (m.closed && m.pts.length > 2) ? +areaM2(m.pts).toFixed(1) : null,
+      puncte_pct: m.pts.map(q => ({ x_pct: +q.x.toFixed(2), y_pct: +q.y.toFixed(2) }))
+    }))
+  };
+  document.getElementById('io-title').textContent        = 'Export măsurători';
+  document.getElementById('io-textarea').value           = JSON.stringify(out, null, 2);
+  document.getElementById('io-textarea').readOnly        = true;
+  document.getElementById('io-import-btn').style.display = 'none';
+  document.getElementById('io-copy').style.display       = '';
+  document.getElementById('io-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+}
+
+function closeModals() { closeIOPanel(); closeCalPanel(); }
+
+// ══════════════════════════════════════════════════════════════
 // AUTO-LOAD pozitie.json
 // La deschidere se încarcă singur, în ordinea:
 //   1. fișierul pozitie.json de lângă pagină (dacă e accesibil)
@@ -1686,6 +2234,11 @@ async function autoLoad() {
 // ══════════════════════════════════════════════════════════════
 // PORNIRE
 // ══════════════════════════════════════════════════════════════
+calLoad();
+measLoad();
+updateCalBadge();
+document.getElementById('snap-check').checked = snapOn;
+applyTransform();
 setMonth(0);
 setAppMode('timelapse');
 autoLoad();
