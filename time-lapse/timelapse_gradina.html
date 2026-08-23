@@ -275,7 +275,14 @@
     .mres.act { outline: 1px solid #f0a030; outline-offset: 3px; border-radius: 3px; }
     .mres-h { display: flex; justify-content: space-between; align-items: center;
               gap: 6px; margin-bottom: 3px; }
-    .mres-h b { color: #7ee787; font-size: 11.5px; }
+    .mres-h b { color: #7ee787; font-size: 11.5px; cursor: pointer;
+                border-bottom: 1px dashed transparent; }
+    .mres-h b:hover { border-bottom-color: #7ee787; }
+    .mres-h input {
+      background: #0d1117; border: 1px solid #58a6ff; border-radius: 4px;
+      color: #c9d1d9; font-size: 11.5px; font-weight: 600;
+      padding: 1px 4px; width: 130px;
+    }
     button.mini {
       background: #21262d; border: 1px solid #30363d; color: #c9d1d9;
       border-radius: 4px; font-size: 10px; padding: 1px 4px; cursor: pointer;
@@ -1869,6 +1876,10 @@ function measLoad() {
     if (Array.isArray(d)) {
       measures = d.filter(m => m && Array.isArray(m.pts) &&
                                m.pts.every(q => isFinite(q.x) && isFinite(q.y)));
+      measures.forEach(m => {
+        if (typeof m.name !== 'string' || !m.name.trim()) delete m.name;
+        else m.name = m.name.slice(0, 40);
+      });
     }
   } catch(e) {}
 }
@@ -1903,6 +1914,46 @@ function areaM2(pts) {
     s += (a.x * mxM()) * (b.y * myM()) - (b.x * mxM()) * (a.y * myM());
   }
   return Math.abs(s) / 2;
+}
+
+function measureName(m, i) {
+  return m.name || (m.closed ? 'Contur ' : 'Traseu ') + (i + 1);
+}
+
+function escHTML(s) {
+  return String(s).replace(/[&<>"]/g,
+    ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[ch]));
+}
+
+function renameMeasure(i) {
+  const el = document.getElementById('mname-' + i);
+  if (!el || el.querySelector('input')) return;
+  const m = measures[i];
+  const inp = document.createElement('input');
+  inp.maxLength = 40;
+  inp.value = measureName(m, i);
+  el.textContent = '';
+  el.appendChild(inp);
+  inp.focus(); inp.select();
+  let done = false;
+  const commit = save => {
+    if (done) return;
+    done = true;
+    if (save) {
+      const v = inp.value.trim();
+      // gol sau numele implicit → revenim la numerotarea automată
+      if (!v || v === (m.closed ? 'Contur ' : 'Traseu ') + (i + 1)) delete m.name;
+      else m.name = v;
+      measSave();
+    }
+    renderMeasureList();
+  };
+  inp.addEventListener('keydown', e => {
+    e.stopPropagation();
+    if (e.key === 'Enter')  commit(true);
+    if (e.key === 'Escape') commit(false);
+  });
+  inp.addEventListener('blur', () => commit(true));
 }
 
 function segList(m) {
@@ -1979,9 +2030,9 @@ function renderMeasureList() {
   box.style.display = 'block';
   let out = '';
   measures.forEach((m, i) => {
-    const nume = (m.closed ? 'Contur ' : 'Traseu ') + (i + 1);
     out += '<div class="mres' + (i === activeM ? ' act' : '') + '">' +
-           '<div class="mres-h"><b>' + nume + '</b><span>' +
+           '<div class="mres-h"><b id="mname-' + i + '" title="Click pentru redenumire" ' +
+           'onclick="renameMeasure(' + i + ')">' + escHTML(measureName(m, i)) + '</b><span>' +
            '<button class="mini" title="Continuă (un contur închis se redeschide)" ' +
            'onclick="pickMeasure(' + i + ')">✎</button> ' +
            '<button class="mini" title="Șterge" onclick="delMeasure(' + i + ')">🗑</button>' +
@@ -2114,6 +2165,13 @@ function measureClick(e) {
   measSave(); renderMeasures();
 }
 
+// Panourile suprapuse peste hartă sunt interactive: click-urile din ele nu
+// trebuie să ajungă la hartă, altfel ar adăuga un punct sau un vârf dedesubt.
+['measure-results', 'measure-hint', 'zoom-controls'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', e => e.stopPropagation());
+});
+
 mapWrap.addEventListener('click', e => {
   if (appMode !== 'measure' || isDragging) return;
   measureClick(e);
@@ -2202,7 +2260,7 @@ function exportMeasures() {
       nord_grade_fata_de_sus: NORTH_DEG
     },
     masuratori: measures.map((m, i) => ({
-      nume: (m.closed ? 'Contur ' : 'Traseu ') + (i + 1),
+      nume: measureName(m, i),
       inchis: !!m.closed,
       segmente: segList(m).map(([a, b], k) => ({
         nr: k + 1,
