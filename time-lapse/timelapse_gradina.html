@@ -261,6 +261,12 @@
       border-radius: 4px; white-space: nowrap;
     }
     .mlabel.tot { border-color: #2ea043; color: #7ee787; }
+    .mlabel.view {
+      border-color: rgba(88,166,255,0.55); text-align: center;
+      padding: 3px 9px; line-height: 1.3; font-weight: 500;
+    }
+    .mlabel.view b { display: block; color: #79b8ff; font-size: 11.5px; font-weight: 700; }
+    .mlabel.view span { font-size: 10px; color: #8b949e; }
 
     /* Panoul cu rezultate */
     #measure-results {
@@ -2011,11 +2017,31 @@ function fmtA(v)  { return v < 1000 ? v.toFixed(1) + ' m²'
                                     : (v / 10000).toFixed(3) + ' ha'; }
 
 // ── Desenare ────────────────────────────────────────────────────
+// centrul unui poligon (formula lui Gauss); pentru trasee, media vârfurilor
+function polyCenter(pts, closed) {
+  const n = pts.length;
+  if (closed && n > 2) {
+    let a = 0, cx = 0, cy = 0;
+    for (let i = 0; i < n; i++) {
+      const p = pts[i], q = pts[(i + 1) % n];
+      const c = p.x * q.y - q.x * p.y;
+      a += c; cx += (p.x + q.x) * c; cy += (p.y + q.y) * c;
+    }
+    if (Math.abs(a) > 1e-9) return { x: cx / (3 * a), y: cy / (3 * a) };
+  }
+  return { x: pts.reduce((s, q) => s + q.x, 0) / n,
+           y: pts.reduce((s, q) => s + q.y, 0) / n };
+}
+
 function renderMeasures() {
-  const on = appMode === 'measure';
-  measLayer.style.display   = on ? '' : 'none';
-  measOverlay.style.display = on ? '' : 'none';
-  if (!on) { renderMeasureList(); return; }
+  // measure = desen complet; timelapse = doar contur + nume + suprafață,
+  // fără vârfuri, fără cote pe segmente (straturile au pointer-events:none,
+  // deci nu se pot nici selecta, nici modifica); edit = ascuns
+  const mode = appMode === 'measure' ? 'full'
+             : (appMode === 'timelapse' ? 'view' : 'off');
+  measLayer.style.display   = mode === 'off' ? 'none' : '';
+  measOverlay.style.display = mode === 'off' ? 'none' : '';
+  if (mode === 'off') { renderMeasureList(); return; }
 
   const W = imgW(), H = imgH();
   measLayer.setAttribute('width',  W);
@@ -2024,6 +2050,36 @@ function renderMeasures() {
 
   const px = q => [q.x / 100 * W, q.y / 100 * H];
   let svg = '', ov = '';
+
+  if (mode === 'view') {
+    const puse = [];   // centre deja folosite — zonele concentrice și-ar suprapune etichetele
+    measures.forEach((m, i) => {
+      if (m.pts.length < 2) return;
+      const pts = m.pts.map(px);
+      const pp  = pts.map(q => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join(' ');
+      if (m.closed && pts.length > 2) {
+        svg += '<polygon points="' + pp + '" fill="rgba(88,166,255,0.10)" stroke="#58a6ff" ' +
+               'stroke-width="1.6" vector-effect="non-scaling-stroke"/>';
+      } else {
+        svg += '<polyline points="' + pp + '" fill="none" stroke="#58a6ff" ' +
+               'stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>';
+      }
+      const c    = polyCenter(m.pts, m.closed);
+      while (puse.some(q => Math.abs(q.x - c.x) < 9 && Math.abs(q.y - c.y) < 4)) c.y += 4;
+      puse.push({ x: c.x, y: c.y });
+      const info = (m.closed && m.pts.length > 2)
+                 ? fmtA(areaM2(m.pts))
+                 : fmtM(totalM(m));
+      ov += '<div class="mlabel view" style="left:' + (c.x / 100 * W).toFixed(1) +
+            'px;top:' + (c.y / 100 * H).toFixed(1) + 'px"><b>' +
+            escHTML(measureName(m, i)) + '</b><span>' + info + '</span></div>';
+    });
+    measLayer.innerHTML   = svg;
+    measOverlay.innerHTML = ov;
+    renderMeasureList();
+    updateMeasureHint();
+    return;
+  }
 
   const draw = (m, idx, temp) => {
     const pts = m.pts.map(px);
