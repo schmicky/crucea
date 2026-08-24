@@ -1,0 +1,126 @@
+{
+  "calibrare": {
+    "m_per_procent_latime": 1.1902,
+    "m_per_procent_inaltime": 0.8419,
+    "factor_manual": 1.0,
+    "nord_grade_fata_de_sus": 210.42
+  },
+  "masuratori": [
+    {
+      "nume": "Iaz Culoar Inot",
+      "inchis": true,
+      "puncte_pct": [
+        {
+          "x_pct": 44.682,
+          "y_pct": 65.744
+        },
+        {
+          "x_pct": 47.958,
+          "y_pct": 66.766
+        },
+        {
+          "x_pct": 50.126,
+          "y_pct": 52.857
+        },
+        {
+          "x_pct": 46.849,
+          "y_pct": 51.835
+        }
+      ]
+    },
+    {
+      "nume": "Iaz Zona Regenerare",
+      "inchis": true,
+      "puncte_pct": [
+        {
+          "x_pct": 48.261,
+          "y_pct": 68.037
+        },
+        {
+          "x_pct": 48.723,
+          "y_pct": 67.573
+        },
+        {
+          "x_pct": 48.983,
+          "y_pct": 66.849
+        },
+        {
+          "x_pct": 51.21,
+          "y_pct": 52.536
+        },
+        {
+          "x_pct": 51.134,
+          "y_pct": 51.728
+        },
+        {
+          "x_pct": 50.807,
+          "y_pct": 51.075
+        },
+        {
+          "x_pct": 50.294,
+          "y_pct": 50.707
+        },
+        {
+          "x_pct": 46.16,
+          "y_pct": 49.436
+        },
+        {
+          "x_pct": 45.589,
+          "y_pct": 49.531
+        },
+        {
+          "x_pct": 45.127,
+          "y_pct": 50.006
+        },
+        {
+          "x_pct": 44.866,
+          "y_pct": 50.73
+        },
+        {
+          "x_pct": 42.64,
+          "y_pct": 65.364
+        },
+        {
+          "x_pct": 42.766,
+          "y_pct": 65.994
+        },
+        {
+          "x_pct": 43.052,
+          "y_pct": 66.504
+        },
+        {
+          "x_pct": 43.446,
+          "y_pct": 66.813
+        },
+        {
+          "x_pct": 47.698,
+          "y_pct": 68.143
+        },
+        {
+          "x_pct": 48.261,
+          "y_pct": 68.037
+        },
+        {
+          "x_pct": 47.958,
+          "y_pct": 66.766
+        },
+        {
+          "x_pct": 44.682,
+          "y_pct": 65.744
+        },
+        {
+          "x_pct": 46.849,
+          "y_pct": 51.835
+        },
+        {
+          "x_pct": 50.126,
+          "y_pct": 52.857
+        },
+        {
+          "x_pct": 47.958,
+          "y_pct": 66.766
+        }
+      ]
+    }
+  ]
+}
