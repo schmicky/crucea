@@ -12,6 +12,21 @@ Proiectul cuprinde planificarea, organizarea și urmărirea lucrărilor de amena
 - **Județ:** Constanța
 - **Țară:** România
 
+## Pagini publicate (GitHub Pages)
+
+Paginile interactive ale proiectului pot fi vizitate direct în browser:
+
+| Pagină | Descriere |
+|---|---|
+| [🌿 Time-lapse Grădină](https://schmicky.github.io/crucea/time-lapse/timelapse_gradina.html) | Aplicația principală: planul grădinii cu cele ~290 de plante, animație fenologică pe luni (repaus / vegetație / înflorire / fructificare), mod de editare a pozițiilor și mod de măsurare — distanțe, arii, azimut, calibrare, import/export de zone |
+| [🗺 Editor plan interactiv](https://schmicky.github.io/crucea/time-lapse/editor_plan_interactiv.html) | Editorul de plan pentru plasarea și ajustarea punctelor pe planșă |
+| [📅 Calendar plante](https://schmicky.github.io/crucea/time-lapse/plante_calendar.html) | Calendarul fenologic al speciilor din grădină, lună cu lună |
+| [💧 Plan irigare](https://schmicky.github.io/crucea/resurse/irigare_plan.html) | Planul sistemului de irigare prin picurare, pe categorii de zone |
+| [🏗 Iaz de înot natural — planșe tehnice](https://schmicky.github.io/crucea/iaz/NSP-Crucea-planse-tehnice.html) | Setul de planșe PL-00…PL-06: plan de situație cu orientare și arcele soarelui, plan general al culoarului de înot 12 × 4 m, secțiuni, detalii de execuție, schema hidraulică, antemăsurătoare |
+| [🧱 Demo straturi DWG](https://schmicky.github.io/crucea/resurse/demostraturi.html) | Straturile planului peisager extrase din DWG, comutabile individual |
+
+Documentul însoțitor al iazului: [memoriul tehnic](https://github.com/schmicky/crucea/blob/master/iaz/NSP-Crucea-memoriu-tehnic.md) (se citește direct pe GitHub).
+
 ## Obiective
 
 - Planificarea etapelor de amenajare

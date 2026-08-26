@@ -38,6 +38,23 @@
     }
     .tb-sep { width: 1px; height: 20px; background: #30363d; flex-shrink: 0; }
 
+    /* Grupul de comenzi: butoanele de mod plus panoul modului activ, pe același
+       rând, la dreapta titlului. Fără asta ar fi un div bloc și panourile ar
+       cădea sub butoanele de mod. */
+    #toolbar-extra {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;      /* panoul modului stă la dreapta, nu sub butoane */
+      gap: 8px;
+      flex: 1 1 0;
+      min-width: 0;
+      overflow-x: auto;       /* pe ecrane înguste se derulează, nu se rupe */
+      overflow-y: hidden;
+      scrollbar-width: thin;
+    }
+    #mode-group, #month-control, #edit-panel, #measure-panel { flex-shrink: 0; }
+    #toolbar-extra > .tb-sep { flex-shrink: 0; }
+
     .btn {
       padding: 4px 10px;
       border: 1px solid #30363d;
@@ -218,6 +235,118 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
 
+    /* ── Măsurare ── */
+    #measure-panel { display: none; align-items: center; gap: 6px; flex-wrap: wrap; }
+    #measure-panel.visible { display: flex; }
+    #cal-badge { font-size: 10.5px; color: #8b949e; white-space: nowrap; }
+    #snap-label { font-size: 11px; color: #8b949e; display: flex;
+                  align-items: center; gap: 4px; cursor: pointer; }
+    #snap-label input { accent-color: #2ea043; cursor: pointer; }
+    #map-wrap.mode-measure { cursor: crosshair; }
+
+    #measure-layer   { position: absolute; top: 0; left: 0; overflow: visible;
+                       pointer-events: none; z-index: 12; }
+    #measure-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                       pointer-events: none; z-index: 14; }
+    .mvertex {
+      position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
+      border-radius: 50%; background: #f0a030; border: 2px solid #0d1117;
+      transform: scale(var(--mz, 1));
+    }
+    .mvertex.first { background: #7ee787; }
+    .mlabel {
+      position: absolute; transform: translate(-50%, -50%) scale(var(--mz, 1));
+      background: rgba(13,17,23,0.92); border: 1px solid #f0a030; color: #ffd79a;
+      font-size: 11px; font-weight: 600; padding: 1px 5px;
+      border-radius: 4px; white-space: nowrap;
+    }
+    .mlabel.tot { border-color: #2ea043; color: #7ee787; }
+    .mlabel.view {
+      border-color: rgba(88,166,255,0.55); text-align: center;
+      padding: 3px 9px; line-height: 1.3; font-weight: 500;
+    }
+    .mlabel.view b { display: block; color: #79b8ff; font-size: 11.5px; font-weight: 700; }
+    .mlabel.view span { font-size: 10px; color: #8b949e; }
+
+    /* Panoul cu rezultate */
+    #measure-results {
+      display: none; position: absolute; top: 10px; left: 10px;
+      background: rgba(22,27,34,0.95); border: 1px solid #30363d;
+      border-radius: 8px; padding: 8px 10px; z-index: 60;
+      max-height: calc(100% - 24px); overflow-y: auto;
+      width: 232px; font-size: 11.5px;
+    }
+    .mres { border-bottom: 1px solid #21262d; padding-bottom: 6px; margin-bottom: 6px; }
+    .mres:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .mres.act { outline: 1px solid #f0a030; outline-offset: 3px; border-radius: 3px; }
+    .mres-h { display: flex; justify-content: space-between; align-items: center;
+              gap: 6px; margin-bottom: 3px; }
+    .mres-h b { color: #7ee787; font-size: 11.5px; cursor: pointer;
+                border-bottom: 1px dashed transparent; }
+    .mres-h b:hover { border-bottom-color: #7ee787; }
+    .mres-h input {
+      background: #0d1117; border: 1px solid #58a6ff; border-radius: 4px;
+      color: #c9d1d9; font-size: 11.5px; font-weight: 600;
+      padding: 1px 4px; width: 130px;
+    }
+    button.mini {
+      background: #21262d; border: 1px solid #30363d; color: #c9d1d9;
+      border-radius: 4px; font-size: 10px; padding: 1px 4px; cursor: pointer;
+    }
+    button.mini:hover { background: #30363d; border-color: #58a6ff; }
+    .mrow { display: flex; gap: 6px; align-items: baseline; color: #8b949e; }
+    .mrow span { width: 15px; color: #6e7681; }
+    .mrow b { color: #ffd79a; font-weight: 600; min-width: 62px; }
+    .mrow i { color: #6e7681; font-style: normal; font-size: 10.5px; }
+    .mang { color: #6e7681; font-size: 10px; margin-top: 2px; line-height: 1.35; }
+    .mtot { margin-top: 3px; color: #8b949e; }
+    .mtot b { color: #7ee787; }
+    #measure-hint {
+      display: none; position: absolute; bottom: 12px; left: 50%;
+      transform: translateX(-50%); z-index: 60;
+      background: rgba(22,27,34,0.95); border: 1px solid #f0a030;
+      border-radius: 8px; padding: 6px 12px; font-size: 11.5px; color: #ffd79a;
+    }
+
+    /* Panoul de import măsurători */
+    #mimport-panel {
+      display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #161b22; border: 1px solid #30363d;
+      border-radius: 10px; padding: 18px; width: 460px; max-width: 92vw;
+      z-index: 300; box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+    }
+    #mimport-panel.visible { display: block; }
+    #mimport-panel h3 { margin-bottom: 8px; color: #7ee787; font-size: 14px; }
+    #mimport-panel p { font-size: 11.5px; color: #8b949e; line-height: 1.5; margin-bottom: 8px; }
+    #mimport-text {
+      width: 100%; height: 150px;
+      background: #0d1117; border: 1px solid #30363d; border-radius: 5px;
+      color: #c9d1d9; font-family: 'Cascadia Code', 'Fira Mono', monospace;
+      font-size: 11px; padding: 8px; resize: vertical;
+    }
+    #mimport-status { font-size: 11.5px; margin-top: 7px; min-height: 16px; }
+    #mimport-file { display: none; }
+
+    /* Panoul de calibrare */
+    #cal-panel {
+      display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #161b22; border: 1px solid #30363d;
+      border-radius: 10px; padding: 18px; width: 420px; max-width: 92vw;
+      z-index: 300; box-shadow: 0 10px 40px rgba(0,0,0,0.85);
+    }
+    #cal-panel.visible { display: block; }
+    #cal-panel h3 { margin-bottom: 8px; color: #7ee787; font-size: 14px; }
+    #cal-panel p { font-size: 12px; color: #8b949e; line-height: 1.5; margin-bottom: 10px; }
+    #cal-panel p strong { color: #ffd79a; }
+    #cal-input {
+      width: 110px; background: #0d1117; border: 1px solid #30363d;
+      border-radius: 5px; color: #c9d1d9; font-size: 14px; padding: 6px 8px;
+    }
+    #cal-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    #cal-row label { font-size: 12px; color: #c9d1d9; }
+
     /* ── Month bar ── */
     #month-bar {
       background: #161b22;
@@ -361,7 +490,9 @@
       /* Collapsible toolbar section */
       #toolbar-extra {
         display: none; width: 100%; flex-wrap: wrap; gap: 5px; align-items: center;
+        overflow-x: visible;
       }
+      #mode-group, #month-control, #edit-panel, #measure-panel { flex-shrink: 1; }
       #toolbar-extra.open { display: flex; }
 
       /* Mode buttons */
@@ -417,6 +548,9 @@
 
       /* IO Panel */
       #io-panel { width: 95vw; padding: 14px; }
+      #cal-panel, #mimport-panel { width: 95vw; padding: 14px; }
+      #mimport-text { height: 120px; font-size: 12px; }
+      #measure-results { width: 178px; font-size: 10.5px; top: 6px; left: 6px; }
       #io-textarea { height: 120px; font-size: 12px; }
       .io-actions .btn { min-height: 36px; font-size: 13px; }
 
@@ -445,6 +579,7 @@
   <div id="mode-group">
     <button class="btn active" id="btn-timelapse" onclick="setAppMode('timelapse')">👁 Vizualizare</button>
     <button class="btn"        id="btn-edit"      onclick="setAppMode('edit')">✏ Editare</button>
+    <button class="btn"        id="btn-measure"   onclick="setAppMode('measure')">📏 Măsurare</button>
   </div>
   <div class="tb-sep"></div>
 
@@ -477,6 +612,30 @@
            onchange="loadFileJSON(event)">
   </div>
 
+  <div class="tb-sep" id="tb-sep-measure" style="display:none"></div>
+
+  <!-- Măsurare -->
+  <div id="measure-panel">
+    <button class="btn green" onclick="newMeasure()"
+            title="Măsurătoare nouă">＋ Nouă</button>
+    <button class="btn" onclick="finishMeasure()"
+            title="Termină măsurătoarea (Enter)">✓ Termină</button>
+    <button class="btn" onclick="undoVertex()"
+            title="Anulează ultimul vârf (Backspace)">↶ Anulează</button>
+    <button class="btn red" onclick="clearMeasures()"
+            title="Șterge toate măsurătorile">🗑 Șterge</button>
+    <label id="snap-label" title="Punctele se lipesc la cea mai apropiată plantă"><input
+           type="checkbox" id="snap-check" checked
+           onchange="snapOn = this.checked">lipire</label>
+    <div class="tb-sep"></div>
+    <button class="btn" onclick="startCalibration()">📐 Calibrează</button>
+    <button class="btn" onclick="exportMeasures()"
+            title="Exportă măsurătorile ca JSON">⬇ Export</button>
+    <button class="btn" onclick="openMImportPanel()"
+            title="Importă măsurători din JSON">⬆ Import</button>
+    <span id="cal-badge"></span>
+  </div>
+
   <span id="count-badge"></span>
   </div><!-- /toolbar-extra -->
 </div>
@@ -485,7 +644,9 @@
 <div id="map-wrap">
   <div id="map-inner">
     <img id="plan-img" src="plan.jpg" draggable="false" alt="Plan grădină">
+    <svg id="measure-layer" xmlns="http://www.w3.org/2000/svg"></svg>
     <div id="dots-layer"></div>
+    <div id="measure-overlay"></div>
     <div id="month-overlay">Ianuarie</div>
   </div>
 
@@ -515,10 +676,15 @@
     <div class="leg-row"><div class="leg-dot" style="background:#1a7a9a"></div><span>Ierbacee</span></div>
   </div>
 
+  <!-- Rezultate măsurare -->
+  <div id="measure-results"></div>
+  <div id="measure-hint"></div>
+
   <!-- Manual load notice -->
   <div id="load-notice">
-    <p>Nu s-a putut încărca <strong>pozitie.json</strong> automat.<br>
-    Deschide pagina printr-un server HTTP sau importă fișierul manual.</p>
+    <p>Nu s-a găsit nicio poziție salvată — nici <strong>pozitie.json</strong>,
+    nici copia încorporată în pagină.<br>
+    Importă fișierul manual.</p>
     <button class="btn green" onclick="document.getElementById('file-input').click()">
       📂 Încarcă JSON manual
     </button>
@@ -550,7 +716,42 @@
 </div>
 
 <!-- ── IO Panel ── -->
-<div id="overlay-bg" onclick="closeIOPanel()"></div>
+<div id="overlay-bg" onclick="closeModals()"></div>
+
+<!-- ── Import măsurători ── -->
+<div id="mimport-panel">
+  <h3>⬆ Import măsurători</h3>
+  <p>Lipește un JSON exportat din acest mod, sau deschide fișierul.
+  Se citesc punctele fiecărei zone; lungimile și ariile se recalculează
+  cu scara activă acum.</p>
+  <textarea id="mimport-text" placeholder='{ "masuratori": [ … ] }'></textarea>
+  <div id="mimport-status"></div>
+  <div class="io-actions">
+    <label class="btn" for="mimport-file" style="cursor:pointer">📂 Din fișier</label>
+    <input type="file" id="mimport-file" accept=".json,application/json"
+           onchange="loadMeasureFile(event)">
+    <button class="btn" onclick="doMeasureImport(false)">＋ Adaugă</button>
+    <button class="btn green" onclick="doMeasureImport(true)">⇄ Înlocuiește</button>
+    <button class="btn" onclick="closeMImportPanel()">✕ Renunță</button>
+  </div>
+</div>
+
+<!-- ── Calibrare scară ── -->
+<div id="cal-panel">
+  <h3>📐 Calibrare scară</h3>
+  <p>Segmentul măsurat are <strong id="cal-current">—</strong> cu calibrarea actuală.
+  Scrie cât are în realitate și restul planului se recalculează proporțional.</p>
+  <div id="cal-row">
+    <label for="cal-input">Lungime reală:</label>
+    <input type="text" id="cal-input" inputmode="decimal" placeholder="ex. 12.5">
+    <span style="font-size:12px;color:#8b949e">metri</span>
+  </div>
+  <div class="io-actions">
+    <button class="btn" onclick="resetCalibration()">↺ Valoarea verificată</button>
+    <button class="btn green" onclick="applyCalibration()">✓ Aplică</button>
+    <button class="btn" onclick="closeCalPanel()">✕ Renunță</button>
+  </div>
+</div>
 <div id="io-panel">
   <h3 id="io-title">Export JSON</h3>
   <textarea id="io-textarea" spellcheck="false"></textarea>
@@ -561,6 +762,310 @@
     <button class="btn" onclick="closeIOPanel()">✕ Închide</button>
   </div>
 </div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     Copie încorporată a fișierului pozitie.json.
+     Este folosită automat la deschidere ca sursă de rezervă, atunci
+     când pagina e deschisă direct de pe disc (file://) și browserul
+     blochează citirea fișierului alăturat. Dacă pozitie.json poate fi
+     citit (server HTTP), acela are prioritate.
+     După ce modifici punctele: „⬇ Export JSON” → salvează în
+     pozitie.json și înlocuiește lista de mai jos cu același conținut.
+     ══════════════════════════════════════════════════════════════ -->
+<script type="application/json" id="pozitie-embedded">
+[
+  {"code":"A21","x_pct":19.2,"y_pct":21,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":21.74,"y_pct":21.08,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":24.19,"y_pct":21.08,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":26.84,"y_pct":21.29,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":29.23,"y_pct":21.24,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":31.8,"y_pct":21.45,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":34.34,"y_pct":21.49,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":36.82,"y_pct":21.74,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":39.42,"y_pct":21.66,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":41.84,"y_pct":21.86,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":44.49,"y_pct":21.99,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":46.92,"y_pct":22.07,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":49.37,"y_pct":22.15,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":52.02,"y_pct":22.28,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":54.5,"y_pct":22.4,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":56.95,"y_pct":22.4,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":12.75,"y_pct":22.88,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":12.31,"y_pct":26.32,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":11.83,"y_pct":29.97,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":11.36,"y_pct":33.65,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":10.94,"y_pct":37.13,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":10.48,"y_pct":40.87,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":10.06,"y_pct":44.46,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.56,"y_pct":47.95,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.34,"y_pct":51.68,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.3,"y_pct":55.38,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.24,"y_pct":58.97,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.2,"y_pct":62.59,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.24,"y_pct":66.26,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.18,"y_pct":69.88,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.14,"y_pct":73.58,"ro":"Sălcioară"},
+  {"code":"A21","x_pct":9.02,"y_pct":77.09,"ro":"Sălcioară"},
+  {"code":"A24","x_pct":10.22,"y_pct":77.43,"ro":"Frasin"},
+  {"code":"A24","x_pct":15.41,"y_pct":79.01,"ro":"Frasin"},
+  {"code":"F21","x_pct":13.25,"y_pct":47.09,"ro":"Corn"},
+  {"code":"F21","x_pct":12.8,"y_pct":54.25,"ro":"Corn"},
+  {"code":"F21","x_pct":12.31,"y_pct":61.37,"ro":"Corn"},
+  {"code":"F21","x_pct":11.8,"y_pct":68.5,"ro":"Corn"},
+  {"code":"F21","x_pct":14.34,"y_pct":32.77,"ro":"Corn"},
+  {"code":"F21","x_pct":13.78,"y_pct":40.02,"ro":"Corn"},
+  {"code":"F21","x_pct":15.09,"y_pct":25.77,"ro":"Corn"},
+  {"code":"F21","x_pct":11.35,"y_pct":75.53,"ro":"Corn"},
+  {"code":"A24","x_pct":13.44,"y_pct":75.91,"ro":"Frasin"},
+  {"code":"A24","x_pct":13.93,"y_pct":68.74,"ro":"Frasin"},
+  {"code":"A40","x_pct":15.67,"y_pct":71.52,"ro":"Stejar pufos"},
+  {"code":"F9","x_pct":12.94,"y_pct":77.52,"ro":"Dud alb"},
+  {"code":"F28","x_pct":17.64,"y_pct":79.83,"ro":"Măceș"},
+  {"code":"F28","x_pct":23.14,"y_pct":80.76,"ro":"Măceș"},
+  {"code":"F28","x_pct":28.66,"y_pct":81.38,"ro":"Măceș"},
+  {"code":"F28","x_pct":34.23,"y_pct":81.5,"ro":"Măceș"},
+  {"code":"F28","x_pct":39.82,"y_pct":81.41,"ro":"Măceș"},
+  {"code":"A24","x_pct":16.47,"y_pct":33.23,"ro":"Frasin"},
+  {"code":"A34","x_pct":18.89,"y_pct":28.33,"ro":"Pin negru"},
+  {"code":"A34","x_pct":18.62,"y_pct":32.29,"ro":"Pin negru"},
+  {"code":"A34","x_pct":18.38,"y_pct":36.02,"ro":"Pin negru"},
+  {"code":"A34","x_pct":21.36,"y_pct":28.33,"ro":"Pin negru"},
+  {"code":"A34","x_pct":23.92,"y_pct":28.45,"ro":"Pin negru"},
+  {"code":"A34","x_pct":26.46,"y_pct":28.45,"ro":"Pin negru"},
+  {"code":"A34","x_pct":28.99,"y_pct":28.57,"ro":"Pin negru"},
+  {"code":"A34","x_pct":31.44,"y_pct":28.66,"ro":"Pin negru"},
+  {"code":"A34","x_pct":34.05,"y_pct":28.66,"ro":"Pin negru"},
+  {"code":"A34","x_pct":36.59,"y_pct":28.86,"ro":"Pin negru"},
+  {"code":"A34","x_pct":39.1,"y_pct":28.81,"ro":"Pin negru"},
+  {"code":"A34","x_pct":19.13,"y_pct":32.9,"ro":"Pin negru"},
+  {"code":"A34","x_pct":17.34,"y_pct":48.41,"ro":"Pin negru"},
+  {"code":"A24","x_pct":14.95,"y_pct":21.81,"ro":"Frasin"},
+  {"code":"F9","x_pct":17.47,"y_pct":22.69,"ro":"Dud alb"},
+  {"code":"F21","x_pct":19.21,"y_pct":23.57,"ro":"Corn"},
+  {"code":"F21","x_pct":24.22,"y_pct":23.79,"ro":"Corn"},
+  {"code":"F21","x_pct":29.24,"y_pct":23.94,"ro":"Corn"},
+  {"code":"F21","x_pct":34.28,"y_pct":24.16,"ro":"Corn"},
+  {"code":"F21","x_pct":39.37,"y_pct":24.23,"ro":"Corn"},
+  {"code":"F21","x_pct":44.42,"y_pct":24.31,"ro":"Corn"},
+  {"code":"A24","x_pct":18.97,"y_pct":25.77,"ro":"Frasin"},
+  {"code":"A24","x_pct":24.15,"y_pct":25.89,"ro":"Frasin"},
+  {"code":"A24","x_pct":29.08,"y_pct":26.07,"ro":"Frasin"},
+  {"code":"A24","x_pct":34.23,"y_pct":26.22,"ro":"Frasin"},
+  {"code":"A24","x_pct":39.22,"y_pct":26.44,"ro":"Frasin"},
+  {"code":"A24","x_pct":44.36,"y_pct":26.55,"ro":"Frasin"},
+  {"code":"A34","x_pct":44.16,"y_pct":29.01,"ro":"Pin negru"},
+  {"code":"A34","x_pct":41.58,"y_pct":28.93,"ro":"Pin negru"},
+  {"code":"F9","x_pct":16.71,"y_pct":29.67,"ro":"Dud alb"},
+  {"code":"F9","x_pct":16.14,"y_pct":36.8,"ro":"Dud alb"},
+  {"code":"F9","x_pct":21.55,"y_pct":25.74,"ro":"Dud alb"},
+  {"code":"F9","x_pct":26.54,"y_pct":26.07,"ro":"Dud alb"},
+  {"code":"F9","x_pct":31.6,"y_pct":26.03,"ro":"Dud alb"},
+  {"code":"F9","x_pct":36.62,"y_pct":26.14,"ro":"Dud alb"},
+  {"code":"F9","x_pct":41.69,"y_pct":26.4,"ro":"Dud alb"},
+  {"code":"F9","x_pct":15.49,"y_pct":43.85,"ro":"Dud alb"},
+  {"code":"F1","x_pct":78.07,"y_pct":30,"ro":"Alun"},
+  {"code":"F1","x_pct":79.79,"y_pct":29.63,"ro":"Alun"},
+  {"code":"F1","x_pct":81.47,"y_pct":29.82,"ro":"Alun"},
+  {"code":"F1","x_pct":83.29,"y_pct":29.82,"ro":"Alun"},
+  {"code":"F1","x_pct":82.25,"y_pct":36.1,"ro":"Alun"},
+  {"code":"S38","x_pct":76.77,"y_pct":40.58,"ro":"Cununiță"},
+  {"code":"S38","x_pct":75.5,"y_pct":39.3,"ro":"Cununiță"},
+  {"code":"S38","x_pct":75.86,"y_pct":37.39,"ro":"Cununiță"},
+  {"code":"S6","x_pct":85.01,"y_pct":43.93,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":85.01,"y_pct":45.43,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":84.96,"y_pct":46.87,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":84.93,"y_pct":48.04,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":84.15,"y_pct":46.68,"ro":"Hibiscus"},
+  {"code":"S28","x_pct":85.22,"y_pct":37.09,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":85.22,"y_pct":38.63,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":84.39,"y_pct":39.22,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":85.27,"y_pct":39.88,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":85.06,"y_pct":41.13,"ro":"Ploaie de aur"},
+  {"code":"S80","x_pct":85.42,"y_pct":33.97,"ro":"Liliac de vară"},
+  {"code":"S80","x_pct":85.48,"y_pct":31.14,"ro":"Liliac de vară"},
+  {"code":"S72","x_pct":81.99,"y_pct":42.24,"ro":"Călin"},
+  {"code":"S72","x_pct":85.48,"y_pct":27.61,"ro":"Călin"},
+  {"code":"F1","x_pct":49.05,"y_pct":25.1,"ro":"Alun"},
+  {"code":"F1","x_pct":51.62,"y_pct":24.97,"ro":"Alun"},
+  {"code":"F1","x_pct":54.46,"y_pct":25.16,"ro":"Alun"},
+  {"code":"F1","x_pct":57.06,"y_pct":25.16,"ro":"Alun"},
+  {"code":"F34","x_pct":58.93,"y_pct":28.99,"ro":"Arbore de mazăre"},
+  {"code":"F34","x_pct":59,"y_pct":25.55,"ro":"Arbore de mazăre"},
+  {"code":"F34","x_pct":58.68,"y_pct":32.06,"ro":"Arbore de mazăre"},
+  {"code":"F33","x_pct":61.14,"y_pct":38.44,"ro":"Viță de vie"},
+  {"code":"F33","x_pct":61.35,"y_pct":36.49,"ro":"Viță de vie"},
+  {"code":"F33","x_pct":61.46,"y_pct":34.32,"ro":"Viță de vie"},
+  {"code":"F33","x_pct":61.53,"y_pct":32.88,"ro":"Viță de vie"},
+  {"code":"F33","x_pct":61.66,"y_pct":31.13,"ro":"Viță de vie"},
+  {"code":"F26","x_pct":49.05,"y_pct":34.32,"ro":"Cătină"},
+  {"code":"F26","x_pct":50.33,"y_pct":34.8,"ro":"Cătină"},
+  {"code":"F26","x_pct":47.92,"y_pct":33.59,"ro":"Cătină"},
+  {"code":"F26","x_pct":51.3,"y_pct":30.08,"ro":"Cătină"},
+  {"code":"F26","x_pct":50.09,"y_pct":29.12,"ro":"Cătină"},
+  {"code":"F3","x_pct":48.69,"y_pct":31.35,"ro":"Kaki"},
+  {"code":"S6","x_pct":46.59,"y_pct":30.97,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":46.61,"y_pct":34.13,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":48.19,"y_pct":36.14,"ro":"Hibiscus"},
+  {"code":"S6","x_pct":50.4,"y_pct":36.59,"ro":"Hibiscus"},
+  {"code":"F29","x_pct":55.29,"y_pct":51.35,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":56.25,"y_pct":50.95,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":56.09,"y_pct":49.56,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":57.05,"y_pct":49.7,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":56.66,"y_pct":47.84,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":57.56,"y_pct":48.24,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":57.31,"y_pct":46.16,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":58.13,"y_pct":46.89,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":57.77,"y_pct":44.77,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":58.7,"y_pct":45.53,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":58.34,"y_pct":43.49,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":59.22,"y_pct":44.03,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":58.86,"y_pct":41.84,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":59.79,"y_pct":42.32,"ro":"Coacăz roșu"},
+  {"code":"A28","x_pct":43.84,"y_pct":44.22,"ro":"Arborele de lalea"},
+  {"code":"A30","x_pct":46.15,"y_pct":40.15,"ro":"Magnolie"},
+  {"code":"S17","x_pct":45.46,"y_pct":48.32,"ro":"Oțetar"},
+  {"code":"F17","x_pct":34.24,"y_pct":33.83,"ro":"Păr"},
+  {"code":"F4","x_pct":38.48,"y_pct":33.96,"ro":"Smochin"},
+  {"code":"F30","x_pct":36.14,"y_pct":44.24,"ro":"Coacăz negru"},
+  {"code":"F30","x_pct":34.51,"y_pct":44.68,"ro":"Coacăz negru"},
+  {"code":"F30","x_pct":33.02,"y_pct":44.8,"ro":"Coacăz negru"},
+  {"code":"F15","x_pct":32.35,"y_pct":44.05,"ro":"Piersic"},
+  {"code":"ip102","x_pct":39.08,"y_pct":42.67,"ro":"Lofantus"},
+  {"code":"ip102","x_pct":39.97,"y_pct":42.35,"ro":"Lofantus"},
+  {"code":"ip102","x_pct":39.7,"y_pct":43.55,"ro":"Lofantus"},
+  {"code":"ip102","x_pct":40.37,"y_pct":37.44,"ro":"Lofantus"},
+  {"code":"ip102","x_pct":40.68,"y_pct":38.57,"ro":"Lofantus"},
+  {"code":"ip19","x_pct":38.21,"y_pct":50.64,"ro":"Tătăneasă"},
+  {"code":"ip19","x_pct":38.16,"y_pct":51.93,"ro":"Tătăneasă"},
+  {"code":"ip19","x_pct":38.01,"y_pct":53.06,"ro":"Tătăneasă"},
+  {"code":"ip19","x_pct":37.94,"y_pct":54.32,"ro":"Tătăneasă"},
+  {"code":"A5","x_pct":69.44,"y_pct":70.43,"ro":"Paltin de câmp"},
+  {"code":"A5","x_pct":66.4,"y_pct":64.63,"ro":"Paltin de câmp"},
+  {"code":"F7","x_pct":70.65,"y_pct":61.28,"ro":"Măr"},
+  {"code":"S69","x_pct":66.99,"y_pct":60.09,"ro":"Trandafir cățărător"},
+  {"code":"S69","x_pct":66.89,"y_pct":62.33,"ro":"Trandafir cățărător"},
+  {"code":"S69","x_pct":65.13,"y_pct":63.73,"ro":"Trandafir cățărător"},
+  {"code":"S69","x_pct":63.33,"y_pct":63.43,"ro":"Trandafir cățărător"},
+  {"code":"S80","x_pct":84.17,"y_pct":67.87,"ro":"Liliac de vară"},
+  {"code":"S80","x_pct":84.25,"y_pct":65.51,"ro":"Liliac de vară"},
+  {"code":"S50","x_pct":84.19,"y_pct":70.93,"ro":"Kerria"},
+  {"code":"S50","x_pct":84.13,"y_pct":72.38,"ro":"Kerria"},
+  {"code":"S50","x_pct":83.96,"y_pct":73.53,"ro":"Kerria"},
+  {"code":"S50","x_pct":83.84,"y_pct":74.62,"ro":"Kerria"},
+  {"code":"S3","x_pct":81.73,"y_pct":74.38,"ro":"Iasomie falsă"},
+  {"code":"S28","x_pct":84.5,"y_pct":62.76,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":84.67,"y_pct":61.46,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":83.75,"y_pct":60.76,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":84.61,"y_pct":60.2,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":84.8,"y_pct":58.81,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":84.86,"y_pct":57.42,"ro":"Ploaie de aur"},
+  {"code":"ar2","x_pct":80.21,"y_pct":50.85,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":80.85,"y_pct":50.8,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":81.45,"y_pct":50.94,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":82.1,"y_pct":51.03,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":82.71,"y_pct":50.98,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":83.28,"y_pct":51,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":83.95,"y_pct":51.07,"ro":"Lavandă"},
+  {"code":"ar6","x_pct":84.53,"y_pct":50.22,"ro":"Rozmarin"},
+  {"code":"A48","x_pct":79.62,"y_pct":48.96,"ro":"Tei argintiu"},
+  {"code":"S21","x_pct":82.49,"y_pct":47.78,"ro":"Liliac"},
+  {"code":"A43","x_pct":73.31,"y_pct":35.35,"ro":"Salcie plângătoare"},
+  {"code":"F6","x_pct":79.68,"y_pct":35.68,"ro":"Nuc"},
+  {"code":"S3","x_pct":61.92,"y_pct":63.14,"ro":"Iasomie falsă"},
+  {"code":"S3","x_pct":59.9,"y_pct":67.68,"ro":"Iasomie falsă"},
+  {"code":"ar6","x_pct":53.71,"y_pct":57.92,"ro":"Rozmarin"},
+  {"code":"ar2","x_pct":54.62,"y_pct":58.3,"ro":"Lavandă"},
+  {"code":"ip44","x_pct":54.5,"y_pct":59.52,"ro":"Isop"},
+  {"code":"ip44","x_pct":53.67,"y_pct":63.49,"ro":"Isop"},
+  {"code":"ar7","x_pct":54.37,"y_pct":60.98,"ro":"Salvie"},
+  {"code":"ar7","x_pct":53.07,"y_pct":64.54,"ro":"Salvie"},
+  {"code":"ar2","x_pct":54.17,"y_pct":62.24,"ro":"Lavandă"},
+  {"code":"ar2","x_pct":52.28,"y_pct":65.45,"ro":"Lavandă"},
+  {"code":"S18","x_pct":41.77,"y_pct":55.85,"ro":"Soc"},
+  {"code":"ia19","x_pct":42.01,"y_pct":57.26,"ro":"Fenicul"},
+  {"code":"ia19","x_pct":42.21,"y_pct":58.74,"ro":"Fenicul"},
+  {"code":"ip126","x_pct":43.67,"y_pct":62.18,"ro":"Potentilla"},
+  {"code":"ip126","x_pct":43.12,"y_pct":61.2,"ro":"Potentilla"},
+  {"code":"ip126","x_pct":42.72,"y_pct":60.09,"ro":"Potentilla"},
+  {"code":"S21","x_pct":45.41,"y_pct":64.75,"ro":"Liliac"},
+  {"code":"F28","x_pct":50.8,"y_pct":81.47,"ro":"Măceș"},
+  {"code":"F28","x_pct":45.29,"y_pct":81.47,"ro":"Măceș"},
+  {"code":"F28","x_pct":56.31,"y_pct":81.58,"ro":"Măceș"},
+  {"code":"S5","x_pct":42.37,"y_pct":79.46,"ro":"Păducel"},
+  {"code":"S5","x_pct":48.13,"y_pct":79.24,"ro":"Păducel"},
+  {"code":"S50","x_pct":73.08,"y_pct":80.07,"ro":"Kerria"},
+  {"code":"S50","x_pct":64.29,"y_pct":80.27,"ro":"Kerria"},
+  {"code":"S50","x_pct":65.91,"y_pct":80.3,"ro":"Kerria"},
+  {"code":"S5","x_pct":20.48,"y_pct":79.69,"ro":"Păducel"},
+  {"code":"S5","x_pct":31.4,"y_pct":80.57,"ro":"Păducel"},
+  {"code":"S5","x_pct":26.16,"y_pct":79.95,"ro":"Păducel"},
+  {"code":"S5","x_pct":36.77,"y_pct":79.62,"ro":"Păducel"},
+  {"code":"A34","x_pct":16.23,"y_pct":65.77,"ro":"Pin negru"},
+  {"code":"A34","x_pct":16.47,"y_pct":62.2,"ro":"Pin negru"},
+  {"code":"A34","x_pct":16.68,"y_pct":58.51,"ro":"Pin negru"},
+  {"code":"A34","x_pct":19.13,"y_pct":75.65,"ro":"Pin negru"},
+  {"code":"A34","x_pct":17.01,"y_pct":55.02,"ro":"Pin negru"},
+  {"code":"A34","x_pct":17.21,"y_pct":51.51,"ro":"Pin negru"},
+  {"code":"A24","x_pct":15.32,"y_pct":47.41,"ro":"Frasin"},
+  {"code":"A24","x_pct":14.81,"y_pct":54.6,"ro":"Frasin"},
+  {"code":"A24","x_pct":14.33,"y_pct":61.65,"ro":"Frasin"},
+  {"code":"F9","x_pct":15.09,"y_pct":51.01,"ro":"Dud alb"},
+  {"code":"F9","x_pct":14.63,"y_pct":58.12,"ro":"Dud alb"},
+  {"code":"F9","x_pct":14.17,"y_pct":65.27,"ro":"Dud alb"},
+  {"code":"F9","x_pct":13.69,"y_pct":72.43,"ro":"Dud alb"},
+  {"code":"F19","x_pct":23.8,"y_pct":75.68,"ro":"Pom de stafide"},
+  {"code":"F3","x_pct":36.17,"y_pct":67.82,"ro":"Kaki"},
+  {"code":"F4","x_pct":31.8,"y_pct":67.99,"ro":"Smochin"},
+  {"code":"F53","x_pct":33.96,"y_pct":77.85,"ro":"Prun"},
+  {"code":"S18","x_pct":28.76,"y_pct":77.05,"ro":"Soc"},
+  {"code":"F12","x_pct":40.26,"y_pct":76.8,"ro":"Vișin"},
+  {"code":"F59","x_pct":42.61,"y_pct":74.56,"ro":"Aronia"},
+  {"code":"F59","x_pct":43.86,"y_pct":76.02,"ro":"Aronia"},
+  {"code":"F59","x_pct":45.23,"y_pct":77.65,"ro":"Aronia"},
+  {"code":"S5","x_pct":53.78,"y_pct":79.12,"ro":"Păducel"},
+  {"code":"F6","x_pct":57.04,"y_pct":75.15,"ro":"Nuc"},
+  {"code":"F44","x_pct":38.75,"y_pct":61.71,"ro":"Sânger"},
+  {"code":"F44","x_pct":38.21,"y_pct":59.49,"ro":"Sânger"},
+  {"code":"F32","x_pct":26.26,"y_pct":59.28,"ro":"Agriș"},
+  {"code":"F32","x_pct":27.75,"y_pct":59,"ro":"Agriș"},
+  {"code":"F14","x_pct":27.83,"y_pct":60.79,"ro":"Migdal"},
+  {"code":"F56","x_pct":28.81,"y_pct":49.57,"ro":"Nectarin"},
+  {"code":"F29","x_pct":34.98,"y_pct":51.76,"ro":"Coacăz roșu"},
+  {"code":"F29","x_pct":35.61,"y_pct":53.11,"ro":"Coacăz roșu"},
+  {"code":"F8","x_pct":28.18,"y_pct":52.59,"ro":"Moșmon"},
+  {"code":"F31","x_pct":25.92,"y_pct":42.33,"ro":"Coacăz alb"},
+  {"code":"F31","x_pct":25.26,"y_pct":40.57,"ro":"Coacăz alb"},
+  {"code":"F18","x_pct":33.73,"y_pct":52.72,"ro":"Jujuba"},
+  {"code":"F11","x_pct":40.45,"y_pct":66.43,"ro":"Corcoduș"},
+  {"code":"S4","x_pct":37.29,"y_pct":56.3,"ro":"Scumpie"},
+  {"code":"A43","x_pct":51.79,"y_pct":46.79,"ro":"Salcie plângătoare"},
+  {"code":"A11","x_pct":56.39,"y_pct":43.93,"ro":"Arborele de mătase"},
+  {"code":"F16","x_pct":56.07,"y_pct":35.58,"ro":"Rodiu"},
+  {"code":"A24","x_pct":65.55,"y_pct":23.48,"ro":"Frasin"},
+  {"code":"A24","x_pct":69.31,"y_pct":23.83,"ro":"Frasin"},
+  {"code":"F1","x_pct":75.49,"y_pct":27.29,"ro":"Alun"},
+  {"code":"F1","x_pct":74.21,"y_pct":27.29,"ro":"Alun"},
+  {"code":"F1","x_pct":72.96,"y_pct":26.97,"ro":"Alun"},
+  {"code":"F9","x_pct":59.34,"y_pct":22.9,"ro":"Dud alb"},
+  {"code":"F9","x_pct":62.02,"y_pct":23.4,"ro":"Dud alb"},
+  {"code":"S72","x_pct":82.66,"y_pct":80.25,"ro":"Călin"},
+  {"code":"S80","x_pct":80.08,"y_pct":80.21,"ro":"Liliac de vară"},
+  {"code":"S80","x_pct":71.28,"y_pct":80.25,"ro":"Liliac de vară"},
+  {"code":"S28","x_pct":76.59,"y_pct":80.19,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":78.23,"y_pct":80.23,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":69.56,"y_pct":80.27,"ro":"Ploaie de aur"},
+  {"code":"S28","x_pct":67.63,"y_pct":80.21,"ro":"Ploaie de aur"},
+  {"code":"S50","x_pct":74.74,"y_pct":80.17,"ro":"Kerria"},
+  {"code":"A52","x_pct":85.94,"y_pct":25.16,"ro":"Ulm de Turkestan"},
+  {"code":"A52","x_pct":84.02,"y_pct":82.29,"ro":"Ulm de Turkestan"},
+  {"code":"F10","x_pct":27.55,"y_pct":41.41,"ro":"Cireș"},
+  {"code":"S10","x_pct":78.75,"y_pct":56.28,"ro":"Salcâm galben"},
+  {"code":"S3","x_pct":40.76,"y_pct":34.22,"ro":"Iasomie falsă"},
+  {"code":"ar9","x_pct":42.4,"y_pct":32.76,"ro":"Roiniță"},
+  {"code":"ar9","x_pct":42.66,"y_pct":33.4,"ro":"Roiniță"},
+  {"code":"ar9","x_pct":42.93,"y_pct":34.06,"ro":"Roiniță"}
+]
+</script>
 
 <script>
 // ══════════════════════════════════════════════════════════════
@@ -880,6 +1385,8 @@ document.getElementById('mobile-toggle').addEventListener('click', () => {
 // ══════════════════════════════════════════════════════════════
 function applyTransform() {
   mapInner.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+  // vârfurile și etichetele de măsurare rămân de mărime constantă pe ecran
+  mapInner.style.setProperty('--mz', 1 / scale);
 }
 
 function setScale(s, cx, cy) {
@@ -992,6 +1499,8 @@ function renderDot(p) {
   positionDot(dot, p);
   styleDot(dot, p);
   dot.addEventListener('click', e => {
+    // în modul măsurare click-ul trebuie să ajungă la hartă, ca să se lipească
+    if (appMode === 'measure') return;
     e.stopPropagation();
     if (!isDragging) showPopup(p.id, e.clientX, e.clientY);
   });
@@ -1048,8 +1557,8 @@ function repositionAllDots() {
   });
 }
 
-planImg.addEventListener('load',  repositionAllDots);
-window.addEventListener('resize', repositionAllDots);
+planImg.addEventListener('load',  () => { repositionAllDots(); renderMeasures(); });
+window.addEventListener('resize', () => { repositionAllDots(); renderMeasures(); });
 
 // ══════════════════════════════════════════════════════════════
 // NAVIGARE LUNI
@@ -1102,22 +1611,34 @@ function setAppMode(m) {
 
   document.getElementById('btn-timelapse').classList.toggle('active', m === 'timelapse');
   document.getElementById('btn-edit').classList.toggle('active', m === 'edit');
+  document.getElementById('btn-measure').classList.toggle('active', m === 'measure');
   document.getElementById('month-control').style.display = m === 'timelapse' ? '' : 'none';
   document.getElementById('tb-sep-edit').style.display   = m === 'edit' ? '' : 'none';
   document.getElementById('edit-panel').classList.toggle('visible', m === 'edit');
+  document.getElementById('tb-sep-measure').style.display = m === 'measure' ? '' : 'none';
+  document.getElementById('measure-panel').classList.toggle('visible', m === 'measure');
   document.getElementById('hint').style.display = 'none';
   document.getElementById('month-overlay').style.display = m === 'timelapse' ? '' : 'none';
   document.getElementById('legend').style.display      = m === 'timelapse' ? '' : 'none';
   document.getElementById('legend-edit').style.display = m === 'edit'      ? '' : 'none';
 
-  mapWrap.className = '';
+  mapWrap.className = m === 'measure' ? 'mode-measure' : '';
 
   if (m === 'timelapse' && playing) {
     // nu oprim play-ul la revenire
   }
 
+  // la ieșirea din măsurare abandonăm măsurătoarea neterminată și calibrarea
+  if (m !== 'measure') {
+    if (activeM >= 0 && measures[activeM] && measures[activeM].pts.length < 2) {
+      measures.splice(activeM, 1);
+    }
+    activeM = -1; calStep = 0; calPts = [];
+  }
+
   updateAllDots();
   closePopup();
+  renderMeasures();
 }
 
 function setAddMode() {
@@ -1346,14 +1867,651 @@ function loadFileJSON(e) {
 }
 
 // ══════════════════════════════════════════════════════════════
-// AUTO-LOAD pozitie.json
+// MĂSURARE — distanțe, arii, azimut
 // ══════════════════════════════════════════════════════════════
-async function autoLoad() {
+// Scara planului: plan.jpg este planșa A0 tipărită la 1:100, deci
+// acoperă 118,9 × 84,1 m de teren (raportul laturilor imaginii,
+// 5056/3576 = 1,41387, coincide cu cel al formatului A0). De aici:
+//   1% din lățimea imaginii = 1,1902 m
+//   1% din înălțimea imaginii = 0,8419 m
+// ATENȚIE: cele două valori sunt diferite, pentru că procentele au
+// numitori diferiți (5056 px pe orizontală, 3576 px pe verticală).
+// Tratarea lor ca aceeași unitate ar greși segmentele oblice cu 41%.
+//
+// Verificat contra fișierului original resurse/Plan Proiect Serban dwg.dwg
+// (unde 1 unitate de desen = 1 m): 829 de distanțe între plantele cu
+// același cod dau un factor de corecție de 1,0002 — abatere 0,02% —
+// cu rezidual median de 6 cm.
+//
+// Nordul: 210,42° față de „sus" pe imagine, în sens orar. Dedus din
+// simbolul de nord al DWG-ului (vârful săgeții indică −X) combinat cu
+// rotația planșei față de desen (300,42°), determinată prin potrivirea
+// norului de puncte și confirmată prin suprapunerea limitei de
+// proprietate peste plan.jpg.
+const CAL_BASE  = { mx: 1.1902, my: 0.8419 };
+const NORTH_DEG = 210.42;
+const CAL_KEY   = 'gradina-calibrare';
+const MEAS_KEY  = 'gradina-masuratori';
+const SNAP_PX   = 14;   // rază de lipire la plante, în pixeli de ecran
+const CLOSE_PX  = 16;   // rază pentru închiderea conturului
+
+let calK     = 1;    // factor din calibrarea manuală (1 = valoarea verificată)
+let measures = [];   // [{ pts: [{x, y}], closed: bool }] — coordonate în procente
+let activeM  = -1;   // indexul măsurătorii în lucru
+let snapOn   = true;
+let calStep  = 0;    // 0 = inactiv, 1 = aștept punctele de calibrare
+let calPts   = [];
+
+const mxM = () => CAL_BASE.mx * calK;
+const myM = () => CAL_BASE.my * calK;
+
+const measLayer   = document.getElementById('measure-layer');
+const measOverlay = document.getElementById('measure-overlay');
+
+// ── Persistență (poate arunca în navigare privată) ──────────────
+function calSave()  { try { localStorage.setItem(CAL_KEY, String(calK)); } catch(e) {} }
+function measSave() { try { localStorage.setItem(MEAS_KEY, JSON.stringify(measures)); } catch(e) {} }
+function calLoad()  {
   try {
-    const resp = await fetch('pozitie.json');
+    const v = parseFloat(localStorage.getItem(CAL_KEY));
+    if (isFinite(v) && v > 0.2 && v < 5) calK = v;
+  } catch(e) {}
+}
+function measLoad() {
+  try {
+    const d = JSON.parse(localStorage.getItem(MEAS_KEY) || '[]');
+    if (Array.isArray(d)) {
+      measures = d.filter(m => m && Array.isArray(m.pts) &&
+                               m.pts.every(q => isFinite(q.x) && isFinite(q.y)));
+      measures.forEach(m => {
+        if (typeof m.name !== 'string' || !m.name.trim()) delete m.name;
+        else m.name = m.name.slice(0, 40);
+      });
+    }
+  } catch(e) {}
+}
+
+// ── Geometrie, în metri reali ───────────────────────────────────
+function segM(a, b) {
+  return Math.hypot((b.x - a.x) * mxM(), (b.y - a.y) * myM());
+}
+
+// azimut față de nord, în sens orar
+function bearingDeg(a, b) {
+  const dx = (b.x - a.x) * mxM(), dy = (b.y - a.y) * myM();
+  const fromUp = Math.atan2(dx, -dy) * 180 / Math.PI;
+  return ((fromUp - NORTH_DEG) % 360 + 360) % 360;
+}
+
+// unghiul interior din vârful p, între vecinii a și b
+function vertexAngle(p, a, b) {
+  const ux = (a.x - p.x) * mxM(), uy = (a.y - p.y) * myM();
+  const vx = (b.x - p.x) * mxM(), vy = (b.y - p.y) * myM();
+  const lu = Math.hypot(ux, uy), lv = Math.hypot(vx, vy);
+  if (!lu || !lv) return null;
+  const c = Math.min(1, Math.max(-1, (ux * vx + uy * vy) / (lu * lv)));
+  return Math.acos(c) * 180 / Math.PI;
+}
+
+// aria prin formula lui Gauss
+function areaM2(pts) {
+  let s = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const a = pts[i], b = pts[(i + 1) % pts.length];
+    s += (a.x * mxM()) * (b.y * myM()) - (b.x * mxM()) * (a.y * myM());
+  }
+  return Math.abs(s) / 2;
+}
+
+function measureName(m, i) {
+  return m.name || (m.closed ? 'Contur ' : 'Traseu ') + (i + 1);
+}
+
+function escHTML(s) {
+  return String(s).replace(/[&<>"]/g,
+    ch => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[ch]));
+}
+
+function renameMeasure(i) {
+  const el = document.getElementById('mname-' + i);
+  if (!el || el.querySelector('input')) return;
+  const m = measures[i];
+  const inp = document.createElement('input');
+  inp.maxLength = 40;
+  inp.value = measureName(m, i);
+  el.textContent = '';
+  el.appendChild(inp);
+  inp.focus(); inp.select();
+  let done = false;
+  const commit = save => {
+    if (done) return;
+    done = true;
+    if (save) {
+      const v = inp.value.trim();
+      // gol sau numele implicit → revenim la numerotarea automată
+      if (!v || v === (m.closed ? 'Contur ' : 'Traseu ') + (i + 1)) delete m.name;
+      else m.name = v;
+      measSave();
+    }
+    renderMeasureList();
+  };
+  inp.addEventListener('keydown', e => {
+    e.stopPropagation();
+    if (e.key === 'Enter')  commit(true);
+    if (e.key === 'Escape') commit(false);
+  });
+  inp.addEventListener('blur', () => commit(true));
+}
+
+function segList(m) {
+  const out = [];
+  for (let i = 0; i < m.pts.length - 1; i++) out.push([i, i + 1]);
+  if (m.closed && m.pts.length > 2) out.push([m.pts.length - 1, 0]);
+  return out;
+}
+function totalM(m) {
+  return segList(m).reduce((t, [i, j]) => t + segM(m.pts[i], m.pts[j]), 0);
+}
+function fmtM(v)  { return (v < 10 ? v.toFixed(2) : v.toFixed(1)) + ' m'; }
+function fmtA(v)  { return v < 1000 ? v.toFixed(1) + ' m²'
+                                    : (v / 10000).toFixed(3) + ' ha'; }
+
+// ── Desenare ────────────────────────────────────────────────────
+// centrul unui poligon (formula lui Gauss); pentru trasee, media vârfurilor
+function polyCenter(pts, closed) {
+  const n = pts.length;
+  if (closed && n > 2) {
+    let a = 0, cx = 0, cy = 0;
+    for (let i = 0; i < n; i++) {
+      const p = pts[i], q = pts[(i + 1) % n];
+      const c = p.x * q.y - q.x * p.y;
+      a += c; cx += (p.x + q.x) * c; cy += (p.y + q.y) * c;
+    }
+    if (Math.abs(a) > 1e-9) return { x: cx / (3 * a), y: cy / (3 * a) };
+  }
+  return { x: pts.reduce((s, q) => s + q.x, 0) / n,
+           y: pts.reduce((s, q) => s + q.y, 0) / n };
+}
+
+function renderMeasures() {
+  // measure = desen complet; timelapse = doar contur + nume + suprafață,
+  // fără vârfuri, fără cote pe segmente (straturile au pointer-events:none,
+  // deci nu se pot nici selecta, nici modifica); edit = ascuns
+  const mode = appMode === 'measure' ? 'full'
+             : (appMode === 'timelapse' ? 'view' : 'off');
+  measLayer.style.display   = mode === 'off' ? 'none' : '';
+  measOverlay.style.display = mode === 'off' ? 'none' : '';
+  if (mode === 'off') { renderMeasureList(); return; }
+
+  const W = imgW(), H = imgH();
+  measLayer.setAttribute('width',  W);
+  measLayer.setAttribute('height', H);
+  measLayer.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+  const px = q => [q.x / 100 * W, q.y / 100 * H];
+  let svg = '', ov = '';
+
+  if (mode === 'view') {
+    const puse = [];   // centre deja folosite — zonele concentrice și-ar suprapune etichetele
+    measures.forEach((m, i) => {
+      if (m.pts.length < 2) return;
+      const pts = m.pts.map(px);
+      const pp  = pts.map(q => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join(' ');
+      if (m.closed && pts.length > 2) {
+        svg += '<polygon points="' + pp + '" fill="rgba(88,166,255,0.10)" stroke="#58a6ff" ' +
+               'stroke-width="1.6" vector-effect="non-scaling-stroke"/>';
+      } else {
+        svg += '<polyline points="' + pp + '" fill="none" stroke="#58a6ff" ' +
+               'stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>';
+      }
+      const c    = polyCenter(m.pts, m.closed);
+      while (puse.some(q => Math.abs(q.x - c.x) < 9 && Math.abs(q.y - c.y) < 4)) c.y += 4;
+      puse.push({ x: c.x, y: c.y });
+      const info = (m.closed && m.pts.length > 2)
+                 ? fmtA(areaM2(m.pts))
+                 : fmtM(totalM(m));
+      ov += '<div class="mlabel view" style="left:' + (c.x / 100 * W).toFixed(1) +
+            'px;top:' + (c.y / 100 * H).toFixed(1) + 'px"><b>' +
+            escHTML(measureName(m, i)) + '</b><span>' + info + '</span></div>';
+    });
+    measLayer.innerHTML   = svg;
+    measOverlay.innerHTML = ov;
+    renderMeasureList();
+    updateMeasureHint();
+    return;
+  }
+
+  const draw = (m, idx, temp) => {
+    const pts = m.pts.map(px);
+    if (!pts.length) return;
+    const col = temp ? '#58a6ff' : (idx === activeM ? '#f0a030' : '#d0863a');
+    const pp  = pts.map(q => q[0].toFixed(1) + ',' + q[1].toFixed(1)).join(' ');
+    if (m.closed && pts.length > 2) {
+      svg += '<polygon points="' + pp + '" fill="' + col + '25" stroke="' + col +
+             '" stroke-width="2" vector-effect="non-scaling-stroke"/>';
+    } else if (pts.length > 1) {
+      svg += '<polyline points="' + pp + '" fill="none" stroke="' + col +
+             '" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>';
+    }
+    pts.forEach((q, i) => {
+      ov += '<div class="mvertex' + (i === 0 ? ' first' : '') +
+            '" style="left:' + q[0].toFixed(1) + 'px;top:' + q[1].toFixed(1) + 'px"></div>';
+    });
+    segList(m).forEach(([i, j]) => {
+      const a = pts[i], b = pts[j];
+      ov += '<div class="mlabel" style="left:' + ((a[0] + b[0]) / 2).toFixed(1) +
+            'px;top:' + ((a[1] + b[1]) / 2).toFixed(1) + 'px">' +
+            fmtM(segM(m.pts[i], m.pts[j])) + '</div>';
+    });
+    if (m.pts.length > 1 && !temp) {
+      const last  = pts[pts.length - 1];
+      const extra = (m.closed && m.pts.length > 2) ? ' · ' + fmtA(areaM2(m.pts)) : '';
+      ov += '<div class="mlabel tot" style="left:' + last[0].toFixed(1) +
+            'px;top:' + (last[1] - 24).toFixed(1) + 'px">Σ ' + fmtM(totalM(m)) +
+            extra + '</div>';
+    }
+  };
+
+  measures.forEach((m, i) => draw(m, i, false));
+  if (calPts.length) draw({ pts: calPts, closed: false }, -1, true);
+
+  measLayer.innerHTML   = svg;
+  measOverlay.innerHTML = ov;
+  renderMeasureList();
+  updateMeasureHint();
+}
+
+function renderMeasureList() {
+  const box = document.getElementById('measure-results');
+  if (appMode !== 'measure' || !measures.length) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  let out = '';
+  measures.forEach((m, i) => {
+    out += '<div class="mres' + (i === activeM ? ' act' : '') + '">' +
+           '<div class="mres-h"><b id="mname-' + i + '" title="Click pentru redenumire" ' +
+           'onclick="renameMeasure(' + i + ')">' + escHTML(measureName(m, i)) + '</b><span>' +
+           '<button class="mini" title="Continuă (un contur închis se redeschide)" ' +
+           'onclick="pickMeasure(' + i + ')">✎</button> ' +
+           '<button class="mini" title="Șterge" onclick="delMeasure(' + i + ')">🗑</button>' +
+           '</span></div>';
+    segList(m).forEach(([a, b], k) => {
+      out += '<div class="mrow"><span>' + (k + 1) + '</span><b>' +
+             fmtM(segM(m.pts[a], m.pts[b])) + '</b><i>az ' +
+             bearingDeg(m.pts[a], m.pts[b]).toFixed(0) + '°</i></div>';
+    });
+    const angs = [];
+    const n = m.pts.length;
+    for (let k = 1; k < n - 1; k++) {
+      const v = vertexAngle(m.pts[k], m.pts[k - 1], m.pts[k + 1]);
+      if (v != null) angs.push('V' + (k + 1) + ' ' + v.toFixed(0) + '°');
+    }
+    if (m.closed && n > 2) {
+      const v0 = vertexAngle(m.pts[0], m.pts[n - 1], m.pts[1]);
+      const vn = vertexAngle(m.pts[n - 1], m.pts[n - 2], m.pts[0]);
+      if (v0 != null) angs.unshift('V1 ' + v0.toFixed(0) + '°');
+      if (vn != null) angs.push('V' + n + ' ' + vn.toFixed(0) + '°');
+    }
+    if (angs.length) out += '<div class="mang">Unghiuri: ' + angs.join(' · ') + '</div>';
+    out += '<div class="mtot">Total <b>' + fmtM(totalM(m)) + '</b>';
+    if (m.closed && n > 2) out += ' · Arie <b>' + fmtA(areaM2(m.pts)) + '</b>';
+    out += '</div></div>';
+  });
+  box.innerHTML = out;
+}
+
+function updateMeasureHint() {
+  const hint = document.getElementById('measure-hint');
+  if (appMode !== 'measure') { hint.style.display = 'none'; return; }
+  let txt = '';
+  if (calStep) {
+    txt = calPts.length === 0
+      ? '📐 Click pe primul capăt al distanței cunoscute'
+      : '📐 Click pe al doilea capăt';
+  } else if (activeM >= 0) {
+    const n = measures[activeM].pts.length;
+    txt = n === 0 ? '⬥ Click pe hartă pentru primul punct'
+        : 'Click = punct nou · dublu-click sau Enter = termină · Backspace = anulează' +
+          (n > 2 ? ' · click pe punctul verde = închide conturul' : '');
+  } else {
+    txt = '⬥ Click pe hartă pentru a începe o măsurătoare';
+  }
+  hint.textContent = txt;
+  hint.style.display = 'block';
+}
+
+// ── Comenzi ─────────────────────────────────────────────────────
+function newMeasure() {
+  if (appMode !== 'measure') setAppMode('measure');
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  measures.push({ pts: [], closed: false });
+  activeM = measures.length - 1;
+  calStep = 0; calPts = [];
+  renderMeasures();
+}
+function finishMeasure() {
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  activeM = -1;
+  measSave(); renderMeasures();
+}
+function undoVertex() {
+  if (activeM < 0) { if (measures.length) activeM = measures.length - 1; else return; }
+  const m = measures[activeM];
+  if (m.closed) m.closed = false;
+  else m.pts.pop();
+  if (!m.pts.length) { measures.splice(activeM, 1); activeM = -1; }
+  measSave(); renderMeasures();
+}
+function pickMeasure(i) {
+  activeM = i;
+  if (measures[i]) measures[i].closed = false;
+  renderMeasures();
+}
+function delMeasure(i) {
+  measures.splice(i, 1);
+  if (activeM === i) activeM = -1;
+  else if (activeM > i) activeM--;
+  measSave(); renderMeasures();
+}
+function clearMeasures() {
+  if (measures.length && !confirm('Ștergi toate măsurătorile?')) return;
+  measures = []; activeM = -1;
+  measSave(); renderMeasures();
+}
+
+// ── Click pe hartă ──────────────────────────────────────────────
+function measureClick(e) {
+  const rect = planImg.getBoundingClientRect();
+  let x = (e.clientX - rect.left) / rect.width  * 100;
+  let y = (e.clientY - rect.top)  / rect.height * 100;
+  if (x < 0 || x > 100 || y < 0 || y > 100) return;
+
+  // lipire la cea mai apropiată plantă
+  if (snapOn) {
+    let best = null, bestD = SNAP_PX;
+    points.forEach(p => {
+      const d = Math.hypot((p.x_pct - x) / 100 * rect.width,
+                           (p.y_pct - y) / 100 * rect.height);
+      if (d < bestD) { bestD = d; best = p; }
+    });
+    if (best) { x = best.x_pct; y = best.y_pct; }
+  }
+
+  // calibrare în curs
+  if (calStep) {
+    calPts.push({ x, y });
+    if (calPts.length === 2) { calStep = 0; openCalDialog(); }
+    renderMeasures();
+    return;
+  }
+
+  if (activeM < 0) newMeasure();
+  const m = measures[activeM];
+
+  const near = (q) => Math.hypot((q.x - x) / 100 * rect.width,
+                                 (q.y - y) / 100 * rect.height);
+  // click pe primul vârf → închide conturul
+  if (m.pts.length > 2 && near(m.pts[0]) < CLOSE_PX) {
+    m.closed = true; activeM = -1;
+    measSave(); renderMeasures();
+    return;
+  }
+  // ignorăm dublura produsă de al doilea click al unui dublu-click
+  if (m.pts.length && near(m.pts[m.pts.length - 1]) < 3) return;
+
+  m.pts.push({ x, y });
+  measSave(); renderMeasures();
+}
+
+// Panourile suprapuse peste hartă sunt interactive: click-urile din ele nu
+// trebuie să ajungă la hartă, altfel ar adăuga un punct sau un vârf dedesubt.
+['measure-results', 'measure-hint', 'zoom-controls'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', e => e.stopPropagation());
+});
+
+mapWrap.addEventListener('click', e => {
+  if (appMode !== 'measure' || isDragging) return;
+  measureClick(e);
+});
+mapWrap.addEventListener('dblclick', e => {
+  if (appMode !== 'measure') return;
+  e.preventDefault();
+  finishMeasure();
+});
+window.addEventListener('keydown', e => {
+  if (appMode !== 'measure') return;
+  const t = (e.target.tagName || '').toUpperCase();
+  if (t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT') return;
+  if (e.key === 'Enter' || e.key === 'Escape') { finishMeasure(); }
+  else if (e.key === 'Backspace') { e.preventDefault(); undoVertex(); }
+});
+
+// ── Calibrare cu o singură măsurătoare ──────────────────────────
+function startCalibration() {
+  if (appMode !== 'measure') setAppMode('measure');
+  if (activeM >= 0 && measures[activeM].pts.length < 2) measures.splice(activeM, 1);
+  activeM = -1; calStep = 1; calPts = [];
+  renderMeasures();
+}
+
+function openCalDialog() {
+  document.getElementById('cal-current').textContent = fmtM(segM(calPts[0], calPts[1]));
+  const inp = document.getElementById('cal-input');
+  inp.value = '';
+  document.getElementById('cal-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+  setTimeout(() => inp.focus(), 60);
+}
+
+// O singură măsurătoare e suficientă: raportul laturilor imaginii e
+// cunoscut, deci corectăm ambele axe cu același factor.
+function applyCalibration() {
+  const real = parseFloat(String(document.getElementById('cal-input').value).replace(',', '.'));
+  const cur  = calPts.length === 2 ? segM(calPts[0], calPts[1]) : 0;
+  if (!isFinite(real) || real <= 0) { alert('Scrie lungimea reală în metri (ex. 12.5).'); return; }
+  if (!cur) { alert('Măsurătoarea de calibrare lipsește.'); return; }
+  calK = calK * real / cur;
+  calSave(); closeCalPanel(); updateCalBadge();
+}
+
+function resetCalibration() {
+  calK = 1;
+  calSave(); closeCalPanel(); updateCalBadge();
+}
+
+function closeCalPanel() {
+  calStep = 0; calPts = [];
+  document.getElementById('cal-panel').classList.remove('visible');
+  document.getElementById('overlay-bg').classList.remove('visible');
+  document.getElementById('cal-input').value = '';
+  renderMeasures();
+}
+
+function updateCalBadge() {
+  const b   = document.getElementById('cal-badge');
+  const dev = (calK - 1) * 100;
+  if (Math.abs(dev) < 0.005) {
+    b.textContent = '1:100';
+    b.style.color = '#8b949e';
+    b.title = 'Scară 1:100 (planșă A0), verificată contra desenului DWG';
+  } else {
+    b.textContent = (dev > 0 ? '+' : '') + dev.toFixed(2) + '%';
+    b.style.color = '#f0a030';
+    b.title = 'Calibrare manuală, abatere ' + dev.toFixed(2) + '% de la scara verificată';
+  }
+  b.title += '\n1% lățime = ' + mxM().toFixed(4) + ' m · 1% înălțime = ' + myM().toFixed(4) + ' m';
+}
+
+document.getElementById('cal-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') applyCalibration();
+});
+
+// ── Export ──────────────────────────────────────────────────────
+function exportMeasures() {
+  if (!measures.length) { alert('Nu există măsurători de exportat.'); return; }
+  const out = {
+    calibrare: {
+      m_per_procent_latime:  +mxM().toFixed(5),
+      m_per_procent_inaltime: +myM().toFixed(5),
+      factor_manual: +calK.toFixed(5),
+      nord_grade_fata_de_sus: NORTH_DEG
+    },
+    masuratori: measures.map((m, i) => ({
+      nume: measureName(m, i),
+      inchis: !!m.closed,
+      segmente: segList(m).map(([a, b], k) => ({
+        nr: k + 1,
+        lungime_m: +segM(m.pts[a], m.pts[b]).toFixed(2),
+        azimut_grade: +bearingDeg(m.pts[a], m.pts[b]).toFixed(1)
+      })),
+      total_m: +totalM(m).toFixed(2),
+      arie_m2: (m.closed && m.pts.length > 2) ? +areaM2(m.pts).toFixed(1) : null,
+      // 3 zecimale: o zecimală de procent valorează ~1,2 cm pe teren, deci la
+      // 2 zecimale un dus-întors prin export ar deplasa punctele cu ~0,6 cm
+      puncte_pct: m.pts.map(q => ({ x_pct: +q.x.toFixed(3), y_pct: +q.y.toFixed(3) }))
+    }))
+  };
+  document.getElementById('io-title').textContent        = 'Export măsurători';
+  document.getElementById('io-textarea').value           = JSON.stringify(out, null, 2);
+  document.getElementById('io-textarea').readOnly        = true;
+  document.getElementById('io-import-btn').style.display = 'none';
+  document.getElementById('io-copy').style.display       = '';
+  document.getElementById('io-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+}
+
+// ── Import măsurători ─────────────────────────────────────────
+function openMImportPanel() {
+  if (appMode !== 'measure') setAppMode('measure');
+  document.getElementById('mimport-text').value = '';
+  setMImportStatus('', null);
+  document.getElementById('mimport-panel').classList.add('visible');
+  document.getElementById('overlay-bg').classList.add('visible');
+  setTimeout(() => document.getElementById('mimport-text').focus(), 60);
+}
+
+function closeMImportPanel() {
+  document.getElementById('mimport-panel').classList.remove('visible');
+  document.getElementById('overlay-bg').classList.remove('visible');
+  renderMeasures();
+}
+
+function setMImportStatus(msg, ok) {
+  const el = document.getElementById('mimport-status');
+  el.textContent = msg;
+  el.style.color = ok === null ? '#8b949e' : (ok ? '#7ee787' : '#ff7b72');
+}
+
+function loadMeasureFile(e) {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    document.getElementById('mimport-text').value = ev.target.result;
+    setMImportStatus('Fișier citit: ' + f.name + '. Alege Adaugă sau Înlocuiește.', null);
+  };
+  r.onerror = () => setMImportStatus('Fișierul nu a putut fi citit.', false);
+  r.readAsText(f);
+  e.target.value = '';
+}
+
+// Acceptă obiectul complet de export, sau direct lista de măsurători.
+function parseMeasures(raw) {
+  const data = JSON.parse(raw);
+  const lista = Array.isArray(data) ? data
+              : (Array.isArray(data.masuratori) ? data.masuratori : null);
+  if (!lista) throw new Error('nu am găsit lista „masuratori”');
+  const out = [], sarite = [];
+  lista.forEach((m, i) => {
+    // acceptăm și formatul intern (pts) și pe cel exportat (puncte_pct)
+    const src = Array.isArray(m && m.puncte_pct) ? m.puncte_pct
+              : (Array.isArray(m && m.pts) ? m.pts : null);
+    if (!src) { sarite.push(i + 1); return; }
+    const pts = [];
+    for (const q of src) {
+      const x = +(q.x_pct !== undefined ? q.x_pct : q.x);
+      const y = +(q.y_pct !== undefined ? q.y_pct : q.y);
+      if (!isFinite(x) || !isFinite(y) || x < 0 || x > 100 || y < 0 || y > 100) return;
+      pts.push({ x, y });
+    }
+    if (pts.length < 2) { sarite.push(i + 1); return; }
+    const rec = { pts, closed: !!(m.inchis || m.closed) };
+    const nume = typeof m.nume === 'string' ? m.nume
+               : (typeof m.name === 'string' ? m.name : '');
+    if (nume.trim()) rec.name = nume.trim().slice(0, 40);
+    out.push(rec);
+  });
+  return { lista: out, sarite, calibrare: (data && data.calibrare) || null };
+}
+
+function doMeasureImport(inlocuieste) {
+  const raw = document.getElementById('mimport-text').value.trim();
+  if (!raw) { setMImportStatus('Nu ai lipit nimic.', false); return; }
+  let r;
+  try { r = parseMeasures(raw); }
+  catch (e) { setMImportStatus('JSON invalid: ' + e.message, false); return; }
+  if (!r.lista.length) { setMImportStatus('Nu am găsit nicio zonă valabilă.', false); return; }
+
+  // calibrarea din fișier diferă de cea activă → întrebăm, nu schimbăm pe furiș
+  const f = r.calibrare && +r.calibrare.factor_manual;
+  if (isFinite(f) && f > 0 && Math.abs(f - calK) > 0.0001) {
+    const dif = ((f / calK - 1) * 100).toFixed(2);
+    if (confirm('Fișierul a fost salvat cu altă calibrare (' + dif + '% față de cea activă).\n\n' +
+                'OK = folosesc calibrarea din fișier\nAnulează = păstrez calibrarea actuală')) {
+      calK = f; calSave(); updateCalBadge();
+    }
+  }
+
+  const inainte = measures.length;
+  measures = inlocuieste ? r.lista : measures.concat(r.lista);
+  activeM = -1;
+  measSave();
+  closeMImportPanel();
+  let msg = (inlocuieste ? 'Înlocuit: ' : 'Adăugat: ') + r.lista.length + ' zone';
+  if (!inlocuieste) msg += ' (total ' + measures.length + ', erau ' + inainte + ')';
+  if (r.sarite.length) msg += ' · sărite: ' + r.sarite.length;
+  console.log(msg);
+}
+
+function closeModals() { closeIOPanel(); closeCalPanel(); closeMImportPanel(); }
+
+// ══════════════════════════════════════════════════════════════
+// AUTO-LOAD pozitie.json
+// La deschidere se încarcă singur, în ordinea:
+//   1. fișierul pozitie.json de lângă pagină (dacă e accesibil)
+//   2. copia încorporată din #pozitie-embedded
+// Notița de încărcare manuală apare doar dacă niciuna nu reușește.
+// ══════════════════════════════════════════════════════════════
+async function fetchPozitieJSON() {
+  // file:// blochează fetch în majoritatea browserelor — nu insistăm.
+  if (location.protocol === 'file:') return null;
+  try {
+    const resp = await fetch('pozitie.json', { cache: 'no-store' });
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    loadData(await resp.json());
+    const data = await resp.json();
+    return Array.isArray(data) && data.length ? data : null;
   } catch(e) {
+    return null;
+  }
+}
+
+function embeddedPozitieJSON() {
+  const el = document.getElementById('pozitie-embedded');
+  if (!el) return null;
+  try {
+    const data = JSON.parse(el.textContent);
+    return Array.isArray(data) && data.length ? data : null;
+  } catch(e) {
+    return null;
+  }
+}
+
+async function autoLoad() {
+  const data = (await fetchPozitieJSON()) || embeddedPozitieJSON();
+  if (data) {
+    loadData(data);
+    document.getElementById('load-notice').style.display = 'none';
+  } else {
     document.getElementById('load-notice').style.display = 'block';
   }
 }
@@ -1361,6 +2519,11 @@ async function autoLoad() {
 // ══════════════════════════════════════════════════════════════
 // PORNIRE
 // ══════════════════════════════════════════════════════════════
+calLoad();
+measLoad();
+updateCalBadge();
+document.getElementById('snap-check').checked = snapOn;
+applyTransform();
 setMonth(0);
 setAppMode('timelapse');
 autoLoad();

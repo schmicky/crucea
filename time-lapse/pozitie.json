@@ -564,22 +564,22 @@
     "ro": "Alun"
   },
   {
-    "code": "S34",
+    "code": "S38",
     "x_pct": 76.77,
     "y_pct": 40.58,
-    "ro": "Lemn câinesc"
+    "ro": "Cununiță"
   },
   {
-    "code": "S34",
+    "code": "S38",
     "x_pct": 75.5,
     "y_pct": 39.3,
-    "ro": "Lemn câinesc"
+    "ro": "Cununiță"
   },
   {
-    "code": "S34",
+    "code": "S38",
     "x_pct": 75.86,
     "y_pct": 37.39,
-    "ro": "Lemn câinesc"
+    "ro": "Cununiță"
   },
   {
     "code": "S6",
@@ -966,28 +966,28 @@
     "ro": "Lofantus"
   },
   {
-    "code": "ia19",
+    "code": "ip19",
     "x_pct": 38.21,
     "y_pct": 50.64,
-    "ro": "Fenicul"
+    "ro": "Tătăneasă"
   },
   {
-    "code": "ia19",
+    "code": "ip19",
     "x_pct": 38.16,
     "y_pct": 51.93,
-    "ro": "Fenicul"
+    "ro": "Tătăneasă"
   },
   {
-    "code": "ia19",
+    "code": "ip19",
     "x_pct": 38.01,
     "y_pct": 53.06,
-    "ro": "Fenicul"
+    "ro": "Tătăneasă"
   },
   {
-    "code": "ia19",
+    "code": "ip19",
     "x_pct": 37.94,
     "y_pct": 54.32,
-    "ro": "Fenicul"
+    "ro": "Tătăneasă"
   },
   {
     "code": "A5",
@@ -1332,28 +1332,28 @@
     "ro": "Kerria"
   },
   {
-    "code": "S50",
+    "code": "S5",
     "x_pct": 20.48,
     "y_pct": 79.69,
-    "ro": "Kerria"
+    "ro": "Păducel"
   },
   {
-    "code": "S50",
+    "code": "S5",
     "x_pct": 31.4,
     "y_pct": 80.57,
-    "ro": "Kerria"
+    "ro": "Păducel"
   },
   {
-    "code": "S50",
+    "code": "S5",
     "x_pct": 26.16,
     "y_pct": 79.95,
-    "ro": "Kerria"
+    "ro": "Păducel"
   },
   {
-    "code": "S50",
+    "code": "S5",
     "x_pct": 36.77,
     "y_pct": 79.62,
-    "ro": "Kerria"
+    "ro": "Păducel"
   },
   {
     "code": "A34",
@@ -1690,5 +1690,53 @@
     "x_pct": 74.74,
     "y_pct": 80.17,
     "ro": "Kerria"
+  },
+  {
+    "code": "A52",
+    "x_pct": 85.94,
+    "y_pct": 25.16,
+    "ro": "Ulm de Turkestan"
+  },
+  {
+    "code": "A52",
+    "x_pct": 84.02,
+    "y_pct": 82.29,
+    "ro": "Ulm de Turkestan"
+  },
+  {
+    "code": "F10",
+    "x_pct": 27.55,
+    "y_pct": 41.41,
+    "ro": "Cireș"
+  },
+  {
+    "code": "S10",
+    "x_pct": 78.75,
+    "y_pct": 56.28,
+    "ro": "Salcâm galben"
+  },
+  {
+    "code": "S3",
+    "x_pct": 40.76,
+    "y_pct": 34.22,
+    "ro": "Iasomie falsă"
+  },
+  {
+    "code": "ar9",
+    "x_pct": 42.4,
+    "y_pct": 32.76,
+    "ro": "Roiniță"
+  },
+  {
+    "code": "ar9",
+    "x_pct": 42.66,
+    "y_pct": 33.4,
+    "ro": "Roiniță"
+  },
+  {
+    "code": "ar9",
+    "x_pct": 42.93,
+    "y_pct": 34.06,
+    "ro": "Roiniță"
   }
 ]
