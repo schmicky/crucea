@@ -24,6 +24,7 @@ Paginile interactive ale proiectului pot fi vizitate direct în browser:
 | [💧 Plan irigare](https://schmicky.github.io/crucea/resurse/irigare_plan.html) | Planul sistemului de irigare prin picurare, pe categorii de zone |
 | [🏗 Iaz de înot natural — planșe tehnice](https://schmicky.github.io/crucea/iaz/NSP-Crucea-planse-tehnice.html) | Setul de planșe PL-00…PL-06: plan de situație cu orientare și arcele soarelui, plan general al culoarului de înot 12 × 4 m, secțiuni, detalii de execuție, schema hidraulică, antemăsurătoare |
 | [🧱 Demo straturi DWG](https://schmicky.github.io/crucea/resurse/demostraturi.html) | Straturile planului peisager extrase din DWG, comutabile individual |
+| [📷 Galerie foto](https://schmicky.github.io/crucea/foto/) | Cele 30 de randări ale proiectului — grilă cu miniaturi, vizualizare pe tot ecranul, navigare cu tastele sau prin glisare pe telefon, plus acces la PNG-ul original |
 
 Documentul însoțitor al iazului: [memoriul tehnic](https://github.com/schmicky/crucea/blob/master/iaz/NSP-Crucea-memoriu-tehnic.md) (se citește direct pe GitHub).
 
