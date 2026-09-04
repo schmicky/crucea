@@ -370,22 +370,62 @@
     }
 
     /* ── Popup ── */
+    /* Fișă de specie: dialog centrat, cu fotografie și date de creștere.
+       Pe telefon devine ecran plin (vezi media query). */
     #popup {
       display: none; position: fixed;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
       background: #161b22; border: 1px solid #30363d;
-      border-radius: 9px; padding: 13px;
-      min-width: 240px; max-width: 285px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.75);
-      z-index: 200; font-size: 12px;
+      border-radius: 12px; padding: 16px 18px;
+      width: 720px; max-width: 94vw; max-height: 92vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      z-index: 300; font-size: 12px;
     }
     #popup.visible { display: block; }
-    #popup-name { font-size: 14px; font-weight: 700; color: #7ee787; margin-bottom: 2px; }
-    #popup-lat  { color: #8b949e; font-style: italic; font-size: 11px; margin-bottom: 7px; }
-    #popup-meta { display: flex; gap: 6px; margin-bottom: 9px; flex-wrap: wrap; }
+    #popup-head { display: flex; align-items: flex-start; gap: 10px; }
+    #popup-head > div:first-child { flex: 1; min-width: 0; }
+    #popup-x { padding: 4px 9px; font-size: 13px; }
+    #popup-name { font-size: 19px; font-weight: 700; color: #7ee787; margin-bottom: 2px; }
+    #popup-lat  { color: #8b949e; font-style: italic; font-size: 12.5px; margin-bottom: 8px; }
+    #popup-meta { display: flex; gap: 6px; margin-bottom: 4px; flex-wrap: wrap; }
     .popup-tag {
       font-size: 10px; padding: 2px 7px; border-radius: 12px;
       color: white; font-weight: 600;
     }
+
+    #popup-body {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-top: 12px;
+    }
+    #popup-photo {
+      position: relative; width: 100%; aspect-ratio: 4 / 3;
+      background: #0d1117; border: 1px solid #21262d; border-radius: 8px;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+    }
+    #popup-photo-state {
+      color: #6e7681; font-size: 11px; text-align: center; padding: 0 12px; line-height: 1.5;
+    }
+    #popup-img {
+      display: none; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0; transition: opacity 0.25s;
+    }
+    #popup-img.loaded { opacity: 1; }
+    #popup-credit { margin-top: 5px; font-size: 10px; color: #6e7681; }
+    #popup-credit a { color: #6e7681; }
+    #popup-extract {
+      margin-top: 8px; font-size: 11.5px; color: #8b949e; line-height: 1.55;
+    }
+    #popup-h { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+    #popup-h td { padding: 4px 0; border-bottom: 1px solid #21262d; font-size: 12px; }
+    #popup-h td:first-child { color: #8b949e; }
+    #popup-h td:last-child { text-align: right; font-weight: 700; color: #c9d1d9; }
+    #popup-h tr:last-child td { border-bottom: none; color: #8b949e; }
+    #popup-h tr:last-child td:last-child { color: #8b949e; font-weight: 600; }
+    #popup-note {
+      font-size: 11px; color: #d29922; line-height: 1.5; margin-bottom: 12px;
+    }
+    #popup-note:empty { display: none; }
 
     /* Mini calendar in popup */
     .cal-section-title {
@@ -412,16 +452,16 @@
     }
     .cal-m { font-size: 7px; text-align: center; color: #6e7681; }
 
-    #popup-link { margin-top: 9px; }
+    #popup-link { margin-top: 11px; display: flex; flex-direction: column; gap: 6px; }
     #popup-link a {
-      display: inline-flex; align-items: center; gap: 5px;
+      display: inline-flex; align-items: center; gap: 6px;
       font-size: 12px; color: #58a6ff; text-decoration: none;
-      padding: 4px 8px; border-radius: 5px;
+      padding: 6px 9px; border-radius: 6px;
       border: 1px solid #1f4a7a; background: rgba(31,111,235,0.1);
       transition: background 0.15s;
     }
     #popup-link a:hover { background: rgba(31,111,235,0.25); }
-    #popup-actions { display: flex; gap: 6px; margin-top: 10px; align-items: center; }
+    #popup-actions { display: flex; gap: 6px; margin-top: 14px; align-items: center; }
     #popup-close { margin-left: auto; }
 
     /* ── IO Panel ── */
@@ -531,19 +571,21 @@
       .leg-dot { width: 14px; height: 14px; font-size: 9px; }
       .leg-row span { font-size: 11px; }
 
-      /* Popup — bottom sheet */
+      /* Popup — fișă pe tot ecranul */
       #popup {
-        left: 8px !important; right: 8px !important;
-        bottom: 50px !important; top: auto !important;
-        min-width: 0; max-width: none; width: auto;
-        border-radius: 12px;
-        padding: 14px 16px;
-        max-height: 55vh; overflow-y: auto;
+        inset: 0 !important;
+        transform: none !important;
+        width: auto; max-width: none; max-height: none;
+        border: none; border-radius: 0;
+        padding: 14px 16px 18px;
       }
-      #popup-name { font-size: 15px; }
-      #popup-lat { font-size: 12px; }
-      #popup-link a { font-size: 13px; padding: 8px 10px; }
-      #popup-actions .btn { min-height: 36px; font-size: 13px; }
+      #popup-body { grid-template-columns: 1fr; gap: 12px; }
+      #popup-photo { aspect-ratio: 16 / 10; }
+      #popup-name { font-size: 18px; }
+      #popup-lat { font-size: 12.5px; }
+      #popup-link a { font-size: 13px; padding: 9px 11px; }
+      #popup-actions .btn { min-height: 40px; font-size: 13px; }
+      #popup-x { min-height: 34px; }
       .cal-cell { height: 24px; font-size: 10px; }
 
       /* IO Panel */
@@ -696,18 +738,47 @@
 
 <!-- ── Popup ── -->
 <div id="popup">
-  <div id="popup-name"></div>
-  <div id="popup-lat"></div>
-  <div id="popup-meta">
-    <span id="popup-code" class="popup-tag"></span>
-    <span id="popup-type" class="popup-tag"></span>
+  <div id="popup-head">
+    <div>
+      <div id="popup-name"></div>
+      <div id="popup-lat"></div>
+      <div id="popup-meta">
+        <span id="popup-code" class="popup-tag"></span>
+        <span id="popup-type" class="popup-tag"></span>
+      </div>
+    </div>
+    <button class="btn" id="popup-x" onclick="closePopup()" title="Închide">✕</button>
   </div>
-  <div id="popup-cal-wrap">
-    <div class="cal-section-title">Calendar fenologic — Ian › Dec</div>
-    <div id="popup-cal-bar"></div>
-    <div id="popup-cal-months"></div>
+
+  <div id="popup-body">
+    <div id="popup-photo-col">
+      <div id="popup-photo">
+        <div id="popup-photo-state">se caută fotografia…</div>
+        <img id="popup-img" alt="">
+      </div>
+      <div id="popup-credit"></div>
+      <div id="popup-extract"></div>
+    </div>
+
+    <div id="popup-data-col">
+      <div class="cal-section-title">Înălțime estimată</div>
+      <table id="popup-h">
+        <tr><td>la 2 ani</td><td id="popup-h2">—</td></tr>
+        <tr><td>la 5 ani</td><td id="popup-h5">—</td></tr>
+        <tr><td>la maturitate</td><td id="popup-hm">—</td></tr>
+      </table>
+      <div id="popup-note"></div>
+
+      <div id="popup-cal-wrap">
+        <div class="cal-section-title">Calendar fenologic — Ian › Dec</div>
+        <div id="popup-cal-bar"></div>
+        <div id="popup-cal-months"></div>
+      </div>
+
+      <div id="popup-link"></div>
+    </div>
   </div>
-  <div id="popup-link"></div>
+
   <div id="popup-actions">
     <button class="btn red" id="popup-delete" onclick="deleteSelected()"
             style="display:none">🗑 Șterge punct</button>
@@ -1281,6 +1352,81 @@ const PLANT_LINKS = {
   ip126:'https://ro.wikipedia.org/wiki/Potentilla_fruticosa',
 };
 
+// ── Date suplimentare pe specie ─────────────────────────────────
+// en   = titlul articolului de pe Wikipedia engleză. Lipsește când e
+//        identic cu numele latin (cazul obișnuit) — se deduce din `lat`.
+// h2/h5 = înălțimea estimată la 2 și la 5 ani de la plantare, pentru
+//        material de pepinieră obișnuit, în condițiile din Crucea
+//        (stepă dobrogeană, ~400 mm/an) CU irigare prin picurare.
+// hm   = înălțimea la maturitate, pentru rezervarea spațiului în plan.
+const PLANT_INFO = {
+  "A5":    {h2:"3,0–3,5 m", h5:"5,0–6,0 m", hm:"20–25 m"},
+  "A11":   {h2:"2,5–3,0 m", h5:"4,5–5,5 m", hm:"6–9 m", note:"Poate degera parțial la ierni sub −20 °C; lăstărește din tulpină."},
+  "A21":   {h2:"2,5–3,0 m", h5:"4,0–5,0 m", hm:"6–8 m", note:"Foarte rezistentă la secetă și vânt — bună în perdeaua dinspre crivăț."},
+  "A24":   {h2:"2,5–3,5 m", h5:"5,0–6,5 m", hm:"25–30 m"},
+  "A28":   {h2:"2,5–3,5 m", h5:"5,0–7,0 m", hm:"25–30 m", note:"Cere apă constantă; fără irigare crește mult mai lent în Dobrogea."},
+  "A30":   {en:"Magnolia × soulangeana", h2:"1,5–2,0 m", h5:"2,5–3,5 m", hm:"6–8 m", note:"Creștere lentă; florile pot fi prinse de brumele târzii de aprilie."},
+  "A34":   {h2:"1,2–1,8 m", h5:"2,5–3,5 m", hm:"20–30 m", note:"Pornește lent primii 2–3 ani, apoi accelerează."},
+  "A40":   {h2:"1,2–1,8 m", h5:"2,5–3,5 m", hm:"10–15 m", note:"Specie locală de Dobrogea, foarte rezistentă la secetă; creștere lentă."},
+  "A43":   {h2:"3,0–4,0 m", h5:"6,0–8,0 m", hm:"10–12 m", note:"Creștere foarte rapidă doar cu apă la rădăcină — potrivită lângă iaz."},
+  "A48":   {h2:"2,5–3,0 m", h5:"4,5–6,0 m", hm:"25–30 m"},
+  "A52":   {h2:"3,0–4,0 m", h5:"6,0–7,0 m", hm:"12–15 m", note:"Cel mai rapid arbore din plan; suportă seceta și solurile sărace."},
+  "F1":    {h2:"1,5–2,0 m", h5:"2,5–3,5 m", hm:"4–5 m", note:"Tufă cu mai multe tulpini; prima recoltă la 3–4 ani."},
+  "F3":    {en:"Diospyros kaki", h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"6–8 m", note:"Rezistă la −15 °C matur; primii 3 ani cere protecție la tulpină. Prima recoltă la 4–5 ani."},
+  "F4":    {h2:"1,5–2,5 m", h5:"3,0–4,0 m", hm:"4–6 m", note:"În ierni grele degeră până la bază și repornește din colet — se ține în formă de tufă."},
+  "F6":    {h2:"2,0–2,5 m", h5:"4,0–5,0 m", hm:"15–20 m", note:"Prima recoltă la 5–7 ani; rezervă-i 8–10 m de spațiu liber."},
+  "F7":    {h2:"1,8–2,2 m", h5:"3,0–3,5 m", hm:"4–5 m", note:"Înălțimea depinde de portaltoi; valorile sunt pentru portaltoi semi-viguros, condus la 3,5 m."},
+  "F8":    {h2:"1,5–1,8 m", h5:"2,5–3,0 m", hm:"4–6 m", note:"Creștere lentă, coroană largă și joasă."},
+  "F9":    {h2:"2,5–3,0 m", h5:"5,0–6,0 m", hm:"10–12 m", note:"Creștere rapidă; se poate ține la 4–5 m prin tăieri."},
+  "F10":   {h2:"2,0–2,5 m", h5:"3,5–4,5 m", hm:"6–9 m", note:"Prima recoltă la 4–5 ani; pe portaltoi pitic rămâne la 3–4 m."},
+  "F11":   {h2:"2,0–2,5 m", h5:"4,0–5,0 m", hm:"6–8 m", note:"Foarte rustic, suportă seceta; bun ca portaltoi și ca gard viu fructifer."},
+  "F12":   {h2:"1,8–2,2 m", h5:"3,0–3,5 m", hm:"4–5 m"},
+  "F14":   {h2:"1,8–2,5 m", h5:"3,5–4,5 m", hm:"5–7 m", note:"Înflorește foarte timpuriu (martie) — riscul de brumă e real în Crucea."},
+  "F15":   {h2:"1,8–2,5 m", h5:"3,0–3,5 m", hm:"4–5 m", note:"Cere tăiere anuală severă; durată de viață scurtă (12–15 ani)."},
+  "F16":   {h2:"1,2–1,8 m", h5:"2,5–3,0 m", hm:"3–4 m", note:"La limita de rezistență în zona 6b: primii ani cere protecție iarna."},
+  "F17":   {h2:"2,0–2,5 m", h5:"3,5–4,5 m", hm:"6–10 m"},
+  "F18":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"6–8 m", note:"Extrem de rezistent la secetă și căldură; pornește târziu primăvara."},
+  "F19":   {en:"Amelanchier × lamarckii", h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"5–8 m"},
+  "F21":   {h2:"1,2–1,6 m", h5:"2,5–3,0 m", hm:"5–6 m", note:"Creștere lentă; înflorește în februarie–martie, prima hrană pentru albine."},
+  "F26":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"4–6 m", note:"Fixează azot; are nevoie de exemplare mascule și femele pentru fruct."},
+  "F28":   {h2:"1,2–1,8 m", h5:"2,5–3,0 m", hm:"3–4 m"},
+  "F29":   {h2:"0,8–1,0 m", h5:"1,2–1,5 m", hm:"1,5 m", note:"Preferă poziția semiumbrită — la sud de arbori."},
+  "F30":   {h2:"0,9–1,2 m", h5:"1,5–1,8 m", hm:"1,8–2,0 m", note:"Cere sol reavăn; se reînnoiește prin tăierea tulpinilor de peste 4 ani."},
+  "F31":   {h2:"0,5–0,8 m", h5:"0,8–1,2 m", hm:"1,2 m", note:"Tufă joasă, târâtoare; cere umbră parțială și sol reavăn."},
+  "F32":   {h2:"0,7–0,9 m", h5:"1,0–1,3 m", hm:"1,5 m"},
+  "F33":   {h2:"1,5–2,0 m", h5:"2,0–2,5 m", hm:"2,0–2,5 m", note:"Înălțimea e dată de spalier și de tăierea anuală, nu de vârstă."},
+  "F34":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"4–6 m", note:"Fixează azot; foarte rezistent la secetă și frig."},
+  "F44":   {h2:"1,2–1,8 m", h5:"2,5–3,5 m", hm:"4–5 m"},
+  "F53":   {h2:"2,0–2,5 m", h5:"3,5–4,5 m", hm:"5–6 m"},
+  "F56":   {en:"Peach", h2:"1,8–2,5 m", h5:"3,0–3,5 m", hm:"4–5 m", note:"Ca piersicul: tăiere anuală severă, sensibil la bășicarea foilor."},
+  "F59":   {h2:"0,9–1,2 m", h5:"1,5–2,0 m", hm:"2,0–2,5 m"},
+  "S3":    {h2:"1,0–1,5 m", h5:"2,0–2,5 m", hm:"3,0 m"},
+  "S4":    {h2:"1,0–1,5 m", h5:"2,0–3,0 m", hm:"4–5 m", note:"Specie de stepă dobrogeană; culoare roșie de toamnă, zero pretenții la apă."},
+  "S5":    {h2:"1,2–1,8 m", h5:"2,5–3,5 m", hm:"6–8 m", note:"Ca gard viu se menține la 1,8–2,0 m prin tunderi de două ori pe an."},
+  "S6":    {h2:"1,0–1,4 m", h5:"2,0–2,5 m", hm:"3–4 m", note:"Pornește târziu primăvara; înflorește iulie–septembrie."},
+  "S10":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"5–7 m", note:"Toate părțile plantei sunt toxice — atenție lângă zonele de joacă."},
+  "S11":   {en:"Photinia × fraseri", h2:"1,0–1,4 m", h5:"2,0–2,5 m", hm:"3–4 m", note:"Semiveșnic verde; la −15…−18 °C pierde frunzele și lăstarii tineri."},
+  "S17":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"4–5 m", note:"Drajonează agresiv — cere limitator de rădăcină sau cosire în jur."},
+  "S18":   {h2:"1,5–2,5 m", h5:"3,0–4,0 m", hm:"4–6 m"},
+  "S21":   {h2:"1,0–1,5 m", h5:"2,5–3,0 m", hm:"4–5 m"},
+  "S28":   {en:"Forsythia × intermedia", h2:"1,2–1,6 m", h5:"2,0–2,5 m", hm:"3,0 m", note:"Se tunde imediat după înflorire, altfel se golește la bază."},
+  "S34":   {h2:"1,0–1,5 m", h5:"2,0–3,0 m", hm:"3–4 m", note:"Ca gard viu tuns se ține la 1,5–2,0 m."},
+  "S38":   {h2:"0,5–0,7 m", h5:"0,8–1,2 m", hm:"1,2–1,5 m"},
+  "S50":   {h2:"0,8–1,2 m", h5:"1,5–2,0 m", hm:"2,0–2,5 m"},
+  "S69":   {en:"Rosa 'de Rescht'", h2:"0,7–0,9 m", h5:"1,0–1,3 m", hm:"1,2–1,5 m", note:"Portland compact, nu urcă — nu are nevoie de suport de cățărare."},
+  "S72":   {h2:"1,2–1,6 m", h5:"2,5–3,0 m", hm:"4–5 m"},
+  "S80":   {h2:"1,5–2,0 m", h5:"2,0–2,5 m", hm:"2,5–3,0 m", note:"Se scurtează la 30 cm în fiecare martie; înălțimea se reface într-un sezon."},
+  "ar2":   {h2:"0,30–0,40 m", h5:"0,50–0,60 m", hm:"0,60–0,80 m", note:"Se tunde după înflorire; durată utilă 8–10 ani."},
+  "ar6":   {h2:"0,40–0,60 m", h5:"0,80–1,20 m", hm:"1,20–1,50 m", note:"Rezistă până la −12…−15 °C; poziție adăpostită, drenaj bun."},
+  "ar7":   {h2:"0,40–0,50 m", h5:"0,60–0,70 m", hm:"0,70–0,80 m"},
+  "ar9":   {h2:"0,50–0,70 m", h5:"0,60–0,80 m", hm:"0,80–1,00 m", note:"Erbacee perenă: repornește din rădăcină în fiecare primăvară."},
+  "ia19":  {h2:"1,50–1,80 m", h5:"1,80–2,00 m", hm:"2,00 m", note:"Erbacee perenă: înălțimea e cea de sezon, atinsă în fiecare an."},
+  "ip19":  {h2:"0,60–0,90 m", h5:"0,90–1,20 m", hm:"1,20 m", note:"Erbacee perenă; se poate cosi de 3–4 ori pe an pentru mulci bogat în potasiu."},
+  "ip44":  {h2:"0,40–0,50 m", h5:"0,50–0,60 m", hm:"0,60 m"},
+  "ip102": {h2:"0,70–0,90 m", h5:"0,90–1,20 m", hm:"1,20 m", note:"Erbacee perenă: repornește din rădăcină în fiecare primăvară."},
+  "ip126": {en:"Dasiphora fruticosa", h2:"0,50–0,70 m", h5:"0,80–1,00 m", hm:"1,00–1,20 m", note:"Înflorește din iunie până la brumele de octombrie."}
+};
+
 // Sezon overlay — culori subtile per lună
 const SEASON_OVERLAY = [
   'rgba(180,220,255,0.10)', 'rgba(180,220,255,0.10)', // ian, feb — iarnă
@@ -1682,11 +1828,132 @@ mapWrap.addEventListener('click', e => {
 // ══════════════════════════════════════════════════════════════
 // POPUP
 // ══════════════════════════════════════════════════════════════
+// ── Wikipedia engleză: titlu, link verificat și fotografie ─────
+// Titlul articolului e numele latin (așa își denumește Wikipedia
+// engleză articolele de specii), cu excepțiile din PLANT_INFO.en.
+function wikiTitle(code) {
+  const ex = PLANT_INFO[code];
+  if (ex && ex.en) return ex.en;
+  const lat = (DB[code] || {}).lat || '';
+  return lat.replace(/\s+/g, ' ').trim();
+}
+function wikiArticleURL(title) {
+  return 'https://en.wikipedia.org/wiki/' + encodeURIComponent(title.replace(/ /g, '_'));
+}
+// Dacă articolul nu există, „go=Go" duce la căutare în loc de pagină moartă.
+function wikiSearchURL(title) {
+  return 'https://en.wikipedia.org/w/index.php?search=' +
+         encodeURIComponent(title) + '&title=Special%3ASearch&go=Go';
+}
+
+// Rezumatul REST al Wikipediei dă fotografia, textul introductiv și
+// adresa canonică a articolului (deci redirecturile se rezolvă singure).
+// Răspunsul are Access-Control-Allow-Origin: *, deci merge și de pe
+// GitHub Pages și din fișier local. Se ține în localStorage 30 de zile.
+const WIKI_KEY = 'gradina-wiki-cache';
+const WIKI_TTL = 30 * 24 * 3600 * 1000;
+let wikiCache = {};
+try { wikiCache = JSON.parse(localStorage.getItem(WIKI_KEY) || '{}') || {}; } catch (e) { wikiCache = {}; }
+
+function wikiCacheSave() {
+  try { localStorage.setItem(WIKI_KEY, JSON.stringify(wikiCache)); } catch (e) {}
+}
+
+async function wikiSummary(title) {
+  const hit = wikiCache[title];
+  if (hit && Date.now() - hit.ts < WIKI_TTL) return hit;
+  const resp = await fetch(
+    'https://en.wikipedia.org/api/rest_v1/page/summary/' +
+    encodeURIComponent(title.replace(/ /g, '_')) + '?redirect=true',
+    { headers: { Accept: 'application/json' } });
+  if (resp.status === 404) {
+    const miss = { ts: Date.now(), missing: true };
+    wikiCache[title] = miss; wikiCacheSave();
+    return miss;
+  }
+  if (!resp.ok) throw new Error('HTTP ' + resp.status);
+  const d = await resp.json();
+  const rec = {
+    ts:      Date.now(),
+    url:     (d.content_urls && d.content_urls.desktop && d.content_urls.desktop.page) || wikiArticleURL(title),
+    img:     (d.thumbnail && d.thumbnail.source) || '',
+    big:     (d.originalimage && d.originalimage.source) || '',
+    extract: d.extract || '',
+    title:   (d.titles && d.titles.normalized) || d.title || title
+  };
+  wikiCache[title] = rec; wikiCacheSave();
+  return rec;
+}
+
+// Umple fotografia, textul și linkul EN. Rulează asincron: dacă nu e
+// internet, fișa rămâne completă, doar fără poză, iar linkul direct
+// (sau cel de căutare) e pus deja din showPopup.
+let wikiReq = 0;
+async function fillWikipedia(code) {
+  const my    = ++wikiReq;
+  const title = wikiTitle(code);
+  const state = document.getElementById('popup-photo-state');
+  const img   = document.getElementById('popup-img');
+  const cred  = document.getElementById('popup-credit');
+  const extr  = document.getElementById('popup-extract');
+  if (!title) { state.textContent = 'fără nume latin — nu se poate căuta'; return; }
+
+  try {
+    const d = await wikiSummary(title);
+    if (my !== wikiReq) return;                 // s-a deschis altă plantă
+
+    if (d.missing) {
+      state.textContent = 'articol inexistent pe Wikipedia EN';
+      setWikiLink(code, wikiSearchURL(title), true);
+      return;
+    }
+    setWikiLink(code, d.url, false);
+    if (d.extract) extr.textContent = shortExtract(d.extract);
+    if (d.img) {
+      img.onload  = () => { if (my === wikiReq) { state.style.display = 'none'; img.classList.add('loaded'); } };
+      img.onerror = () => { if (my === wikiReq) { img.style.display = 'none'; state.textContent = 'fotografia nu s-a putut încărca'; } };
+      img.style.display = 'block';   // în CSS e none până avem o poză
+      img.src = d.img;
+      img.alt = d.title;
+      cred.innerHTML = 'Foto: <a href="' + escAttr(d.big || d.img) +
+                       '" target="_blank" rel="noopener">Wikipedia / Wikimedia Commons</a>';
+    } else {
+      state.textContent = 'articolul nu are fotografie';
+    }
+  } catch (e) {
+    if (my !== wikiReq) return;
+    state.textContent = 'fără conexiune — fotografia se încarcă la următoarea deschidere';
+  }
+}
+
+function setWikiLink(code, url, isSearch) {
+  const a = document.getElementById('wiki-en-link');
+  if (!a) return;
+  a.href = url;
+  a.textContent = isSearch
+    ? '🔎 Caută pe Wikipedia EN — ' + wikiTitle(code)
+    : '🔗 Wikipedia EN — ' + wikiTitle(code);
+}
+
+// Rezumatele Wikipedia pot fi lungi; păstrăm primele fraze.
+function shortExtract(t, max = 300) {
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const dot = cut.lastIndexOf('. ');
+  return (dot > 120 ? cut.slice(0, dot + 1) : cut.trimEnd() + '…');
+}
+
+function escAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+                  .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function showPopup(id, cx, cy) {
   selectedId = id;
   const p    = points.find(x => x.id === id);
   if (!p) return;
   const info = DB[p.code] || { ro: p.code, lat: '—', type: 'arbore' };
+  const ex   = PLANT_INFO[p.code] || {};
 
   document.getElementById('popup-name').textContent = info.ro;
   document.getElementById('popup-lat').textContent  = info.lat;
@@ -1699,19 +1966,42 @@ function showPopup(id, cx, cy) {
   typeEl.textContent    = typeLabelRO[info.type] || info.type;
   typeEl.style.background = typeColors[info.type] || '#555';
 
+  // Înălțimi estimate
+  document.getElementById('popup-h2').textContent = ex.h2 || '—';
+  document.getElementById('popup-h5').textContent = ex.h5 || '—';
+  document.getElementById('popup-hm').textContent = ex.hm || '—';
+  document.getElementById('popup-note').textContent = ex.note || '';
+
   buildMiniCalendar(p.code);
 
-  // Link Wikipedia RO
+  // Linkuri: EN (pus imediat pe adresa directă, corectat de fillWikipedia
+  // dacă articolul e redirect sau lipsește) și RO, unde există.
   const linkEl = document.getElementById('popup-link');
-  const url    = PLANT_LINKS[p.code];
-  if (url) {
-    linkEl.innerHTML = `<a href="${url}" target="_blank" rel="noopener">
-      🔗 Wikipedia RO — ${info.ro}
-    </a>`;
-    linkEl.style.display = '';
-  } else {
-    linkEl.style.display = 'none';
+  const enT    = wikiTitle(p.code);
+  const roURL  = PLANT_LINKS[p.code];
+  let html = '';
+  if (enT) {
+    html += '<a id="wiki-en-link" href="' + escAttr(wikiArticleURL(enT)) +
+            '" target="_blank" rel="noopener">🔗 Wikipedia EN — ' + escHTML(enT) + '</a>';
   }
+  if (roURL) {
+    html += '<a href="' + escAttr(roURL) + '" target="_blank" rel="noopener">' +
+            '🔗 Wikipedia RO — ' + escHTML(info.ro) + '</a>';
+  }
+  linkEl.innerHTML = html;
+
+  // Fotografia: se resetează, apoi se caută
+  const img = document.getElementById('popup-img');
+  img.onload = img.onerror = null;
+  img.classList.remove('loaded');
+  img.removeAttribute('src');
+  img.style.display = 'none';
+  const st = document.getElementById('popup-photo-state');
+  st.style.display = '';
+  st.textContent = 'se caută fotografia…';
+  document.getElementById('popup-credit').innerHTML = '';
+  document.getElementById('popup-extract').textContent = '';
+  fillWikipedia(p.code);
 
   document.getElementById('popup-delete').style.display = appMode === 'edit' ? '' : 'none';
 
@@ -1720,22 +2010,8 @@ function showPopup(id, cx, cy) {
   updateAllDots();
 
   popup.classList.add('visible');
-  // Poziționare — pe mobil bottom-sheet (CSS), pe desktop float lângă click
-  const isMobile = window.innerWidth <= 768;
-  if (isMobile) {
-    popup.style.left = ''; popup.style.right = '';
-    popup.style.top = ''; popup.style.bottom = '';
-  } else {
-    const pw = popup.offsetWidth  || 260;
-    const ph = popup.offsetHeight || 220;
-    const vw = window.innerWidth, vh = window.innerHeight;
-    let left = cx + 14, top = cy - 20;
-    if (left + pw > vw - 10) left = cx - pw - 10;
-    if (top  + ph > vh - 10) top  = vh - ph - 10;
-    if (top < 10) top = 10;
-    popup.style.left = left + 'px';
-    popup.style.top  = top  + 'px';
-  }
+  document.getElementById('overlay-bg').classList.add('visible');
+  popup.scrollTop = 0;
 }
 
 function buildMiniCalendar(code) {
@@ -1762,6 +2038,8 @@ function buildMiniCalendar(code) {
 
 function closePopup() {
   popup.classList.remove('visible');
+  document.getElementById('overlay-bg').classList.remove('visible');
+  wikiReq++;                       // anulează o căutare de foto în curs
   selectedId    = null;
   highlightCode = null;
   updateAllDots();
@@ -2298,6 +2576,13 @@ mapWrap.addEventListener('dblclick', e => {
   e.preventDefault();
   finishMeasure();
 });
+// Escape închide fișa de specie, în orice mod
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && popup.classList.contains('visible')) {
+    closePopup();
+    e.stopPropagation();
+  }
+});
 window.addEventListener('keydown', e => {
   if (appMode !== 'measure') return;
   const t = (e.target.tagName || '').toUpperCase();
@@ -2493,7 +2778,7 @@ function doMeasureImport(inlocuieste) {
   console.log(msg);
 }
 
-function closeModals() { closeIOPanel(); closeCalPanel(); closeMImportPanel(); }
+function closeModals() { closeIOPanel(); closeCalPanel(); closeMImportPanel(); closePopup(); }
 
 // ══════════════════════════════════════════════════════════════
 // AUTO-LOAD pozitie.json
