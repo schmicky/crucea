@@ -1013,10 +1013,10 @@
   {"code":"A5","x_pct":69.44,"y_pct":70.43,"ro":"Paltin de câmp"},
   {"code":"A5","x_pct":66.4,"y_pct":64.63,"ro":"Paltin de câmp"},
   {"code":"F7","x_pct":70.65,"y_pct":61.28,"ro":"Măr"},
-  {"code":"S69","x_pct":66.99,"y_pct":60.09,"ro":"Trandafir cățărător"},
-  {"code":"S69","x_pct":66.89,"y_pct":62.33,"ro":"Trandafir cățărător"},
-  {"code":"S69","x_pct":65.13,"y_pct":63.73,"ro":"Trandafir cățărător"},
-  {"code":"S69","x_pct":63.33,"y_pct":63.43,"ro":"Trandafir cățărător"},
+  {"code":"S69","x_pct":66.99,"y_pct":60.09,"ro":"Trandafir de Rescht"},
+  {"code":"S69","x_pct":66.89,"y_pct":62.33,"ro":"Trandafir de Rescht"},
+  {"code":"S69","x_pct":65.13,"y_pct":63.73,"ro":"Trandafir de Rescht"},
+  {"code":"S69","x_pct":63.33,"y_pct":63.43,"ro":"Trandafir de Rescht"},
   {"code":"S80","x_pct":84.17,"y_pct":67.87,"ro":"Liliac de vară"},
   {"code":"S80","x_pct":84.25,"y_pct":65.51,"ro":"Liliac de vară"},
   {"code":"S50","x_pct":84.19,"y_pct":70.93,"ro":"Kerria"},
@@ -1162,7 +1162,7 @@ const DB = {
   "A48":  {"ro":"Tei argintiu",          "lat":"Tilia tomentosa",                 "type":"arbore"},
   "A52":  {"ro":"Ulm de Turkestan",      "lat":"Ulmus pumila",                    "type":"arbore"},
   "F1":   {"ro":"Alun",                  "lat":"Corylus avellana",                "type":"fructifer"},
-  "F3":   {"ro":"Kaki",                  "lat":"Diospyros oblonga",               "type":"fructifer"},
+  "F3":   {"ro":"Kaki",                  "lat":"Diospyros kaki",                  "type":"fructifer"},
   "F4":   {"ro":"Smochin",               "lat":"Ficus carica",                    "type":"fructifer"},
   "F6":   {"ro":"Nuc",                   "lat":"Juglans regia",                   "type":"fructifer"},
   "F7":   {"ro":"Măr",                   "lat":"Malus domestica",                 "type":"fructifer"},
@@ -1182,7 +1182,7 @@ const DB = {
   "F28":  {"ro":"Măceș",                 "lat":"Rosa canina",                     "type":"fructifer"},
   "F29":  {"ro":"Coacăz roșu",           "lat":"Ribes rubrum",                    "type":"fructifer"},
   "F30":  {"ro":"Coacăz negru",          "lat":"Ribes nigrum",                    "type":"fructifer"},
-  "F31":  {"ro":"Coacăz alb",            "lat":"Ribes glandulosum",               "type":"fructifer"},
+  "F31":  {"ro":"Coacăz alb",            "lat":"Ribes rubrum (varietatea albă)",  "type":"fructifer"},
   "F32":  {"ro":"Agriș",                 "lat":"Ribes uva-crispa",                "type":"fructifer"},
   "F33":  {"ro":"Viță de vie",           "lat":"Vitis vinifera",                  "type":"fructifer"},
   "F34":  {"ro":"Arbore de mazăre",      "lat":"Caragana arborescens",            "type":"fructifer"},
@@ -1203,7 +1203,7 @@ const DB = {
   "S34":  {"ro":"Lemn câinesc",          "lat":"Ligustrum ovalifolium",           "type":"arbust"},
   "S38":  {"ro":"Cununiță",              "lat":"Spiraea japonica",                "type":"arbust"},
   "S50":  {"ro":"Kerria",                "lat":"Kerria japonica",                 "type":"arbust"},
-  "S69":  {"ro":"Trandafir cățărător",   "lat":"Rosa 'Rose de Rescht'",           "type":"arbust"},
+  "S69":  {"ro":"Trandafir de Rescht",   "lat":"Rosa 'de Rescht'",                "type":"arbust"},
   "S72":  {"ro":"Călin",                 "lat":"Viburnum opulus",                 "type":"arbust"},
   "S80":  {"ro":"Liliac de vară",        "lat":"Buddleja davidii",                "type":"arbust"},
   "ar2":  {"ro":"Lavandă",               "lat":"Lavandula angustifolia",          "type":"aromat"},
@@ -1324,8 +1324,9 @@ const PLANT_LINKS = {
   F21:  'https://ro.wikipedia.org/wiki/Corn_(plant%C4%83)',
   F26:  'https://ro.wikipedia.org/wiki/C%C4%83tin%C4%83_alb%C4%83',
   F28:  'https://ro.wikipedia.org/wiki/Rosa_canina',
-  F29:  'https://ro.wikipedia.org/wiki/Coa%C4%83z_ro%C8%99u',
-  F30:  'https://ro.wikipedia.org/wiki/Coa%C4%83z_negru',
+  F29:  'https://ro.wikipedia.org/wiki/Coac%C4%83z_ro%C8%99u',
+  F30:  'https://ro.wikipedia.org/wiki/Coac%C4%83z_negru',
+  F31:  'https://ro.wikipedia.org/wiki/Coac%C4%83z_alb',
   F32:  'https://ro.wikipedia.org/wiki/Agri%C8%99',
   F33:  'https://ro.wikipedia.org/wiki/Vi%C8%9B%C4%83_de_vie',
   F44:  'https://ro.wikipedia.org/wiki/Cornus_sanguinea',
@@ -1372,7 +1373,7 @@ const PLANT_INFO = {
   "A48":   {h2:"2,5–3,0 m", h5:"4,5–6,0 m", hm:"25–30 m"},
   "A52":   {h2:"3,0–4,0 m", h5:"6,0–7,0 m", hm:"12–15 m", note:"Cel mai rapid arbore din plan; suportă seceta și solurile sărace."},
   "F1":    {h2:"1,5–2,0 m", h5:"2,5–3,5 m", hm:"4–5 m", note:"Tufă cu mai multe tulpini; prima recoltă la 3–4 ani."},
-  "F3":    {en:"Diospyros kaki", h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"6–8 m", note:"Rezistă la −15 °C matur; primii 3 ani cere protecție la tulpină. Prima recoltă la 4–5 ani."},
+  "F3":    {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"6–8 m", note:"Rezistă la −15 °C matur; primii 3 ani cere protecție la tulpină. Prima recoltă la 4–5 ani."},
   "F4":    {h2:"1,5–2,5 m", h5:"3,0–4,0 m", hm:"4–6 m", note:"În ierni grele degeră până la bază și repornește din colet — se ține în formă de tufă."},
   "F6":    {h2:"2,0–2,5 m", h5:"4,0–5,0 m", hm:"15–20 m", note:"Prima recoltă la 5–7 ani; rezervă-i 8–10 m de spațiu liber."},
   "F7":    {h2:"1,8–2,2 m", h5:"3,0–3,5 m", hm:"4–5 m", note:"Înălțimea depinde de portaltoi; valorile sunt pentru portaltoi semi-viguros, condus la 3,5 m."},
@@ -1392,7 +1393,7 @@ const PLANT_INFO = {
   "F28":   {h2:"1,2–1,8 m", h5:"2,5–3,0 m", hm:"3–4 m"},
   "F29":   {h2:"0,8–1,0 m", h5:"1,2–1,5 m", hm:"1,5 m", note:"Preferă poziția semiumbrită — la sud de arbori."},
   "F30":   {h2:"0,9–1,2 m", h5:"1,5–1,8 m", hm:"1,8–2,0 m", note:"Cere sol reavăn; se reînnoiește prin tăierea tulpinilor de peste 4 ani."},
-  "F31":   {h2:"0,5–0,8 m", h5:"0,8–1,2 m", hm:"1,2 m", note:"Tufă joasă, târâtoare; cere umbră parțială și sol reavăn."},
+  "F31":   {en:"White currant", h2:"0,8–1,0 m", h5:"1,2–1,5 m", hm:"1,5 m", note:"Varietate albă de coacăz roșu — aceeași specie, aceeași îngrijire; preferă poziția semiumbrită."},
   "F32":   {h2:"0,7–0,9 m", h5:"1,0–1,3 m", hm:"1,5 m"},
   "F33":   {h2:"1,5–2,0 m", h5:"2,0–2,5 m", hm:"2,0–2,5 m", note:"Înălțimea e dată de spalier și de tăierea anuală, nu de vârstă."},
   "F34":   {h2:"1,5–2,0 m", h5:"3,0–4,0 m", hm:"4–6 m", note:"Fixează azot; foarte rezistent la secetă și frig."},
@@ -1413,7 +1414,7 @@ const PLANT_INFO = {
   "S34":   {h2:"1,0–1,5 m", h5:"2,0–3,0 m", hm:"3–4 m", note:"Ca gard viu tuns se ține la 1,5–2,0 m."},
   "S38":   {h2:"0,5–0,7 m", h5:"0,8–1,2 m", hm:"1,2–1,5 m"},
   "S50":   {h2:"0,8–1,2 m", h5:"1,5–2,0 m", hm:"2,0–2,5 m"},
-  "S69":   {en:"Rosa 'de Rescht'", h2:"0,7–0,9 m", h5:"1,0–1,3 m", hm:"1,2–1,5 m", note:"Portland compact, nu urcă — nu are nevoie de suport de cățărare."},
+  "S69":   {en:"Rosa 'de Rescht'", h2:"0,7–0,9 m", h5:"1,0–1,3 m", hm:"1,2–1,5 m", note:"Portland compact și remontant: nu e cățărător, nu are nevoie de suport."},
   "S72":   {h2:"1,2–1,6 m", h5:"2,5–3,0 m", hm:"4–5 m"},
   "S80":   {h2:"1,5–2,0 m", h5:"2,0–2,5 m", hm:"2,5–3,0 m", note:"Se scurtează la 30 cm în fiecare martie; înălțimea se reface într-un sezon."},
   "ar2":   {h2:"0,30–0,40 m", h5:"0,50–0,60 m", hm:"0,60–0,80 m", note:"Se tunde după înflorire; durată utilă 8–10 ani."},
@@ -1834,8 +1835,9 @@ mapWrap.addEventListener('click', e => {
 function wikiTitle(code) {
   const ex = PLANT_INFO[code];
   if (ex && ex.en) return ex.en;
+  // se scot lămuririle dintre paranteze — „Ribes rubrum (varietatea albă)"
   const lat = (DB[code] || {}).lat || '';
-  return lat.replace(/\s+/g, ' ').trim();
+  return lat.replace(/\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
 }
 function wikiArticleURL(title) {
   return 'https://en.wikipedia.org/wiki/' + encodeURIComponent(title.replace(/ /g, '_'));
