@@ -1,5 +1,7 @@
 # Amenajare Proprietate - Crucea, Constanța
 
+**Pagina proiectului: [https://bit.ly/vialunga](https://bit.ly/vialunga)** — link scurt de acces la paginile publicate.
+
 ## Despre proiect
 
 Acest proiect are ca scop amenajarea și valorificarea unei proprietăți situate în **localitatea Crucea, județul Constanța**, România.
@@ -14,7 +16,7 @@ Proiectul cuprinde planificarea, organizarea și urmărirea lucrărilor de amena
 
 ## Pagini publicate (GitHub Pages)
 
-Paginile interactive ale proiectului pot fi vizitate direct în browser:
+Paginile interactive ale proiectului pot fi vizitate direct în browser, prin link-ul scurt <https://bit.ly/vialunga> sau direct:
 
 | Pagină | Descriere |
 |---|---|

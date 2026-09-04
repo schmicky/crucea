@@ -1330,6 +1330,7 @@ let selectedId   = null;
 let highlightCode = null; // cod specie selectată — celelalte sunt faded
 let scale = 1, tx = 0, ty = 0;
 let viewFitted = false;   // planul a fost încadrat o dată la deschidere
+const OPEN_ZOOM = 2;      // la deschidere: zoom 200% față de încadrarea completă
 let isDragging = false, dragX0, dragY0, tx0, ty0;
 
 const mapWrap   = document.getElementById('map-wrap');
@@ -1405,11 +1406,13 @@ function setScale(s, cx, cy) {
 
 // Încadrează planul în zona vizibilă și îl centrează. Planul are 5056 ×
 // 3576 px, deci la scara 1 s-ar vedea doar un colț — de aici încadrarea.
-function fitView() {
+// z = factor față de încadrarea completă (1 = tot planul, 2 = zoom 200%);
+// centrul planului rămâne în centrul ecranului la orice z.
+function fitView(z = 1) {
   const r = mapWrap.getBoundingClientRect();
   const W = imgW(), H = imgH();
   if (!W || !H || !r.width || !r.height) return false;
-  scale = Math.min(r.width / W, r.height / H) * 0.96;   // 2% margine pe fiecare latură
+  scale = Math.min(r.width / W, r.height / H) * 0.96 * z;   // 2% margine pe fiecare latură
   tx = (r.width  - W * scale) / 2;
   ty = (r.height - H * scale) / 2;
   applyTransform();
@@ -1573,7 +1576,7 @@ function repositionAllDots() {
 planImg.addEventListener('load', () => {
   repositionAllDots();
   renderMeasures();
-  if (!viewFitted) viewFitted = fitView();   // prima încadrare, o singură dată
+  if (!viewFitted) viewFitted = fitView(OPEN_ZOOM);   // prima încadrare, o singură dată
 });
 window.addEventListener('resize', () => { repositionAllDots(); renderMeasures(); });
 
@@ -2545,7 +2548,7 @@ setMonth(7);              // se deschide pe August, luna cu grădina în plin
 setAppMode('timelapse');
 autoLoad();
 // imaginea poate fi deja în cache, caz în care „load" nu se mai declanșează
-if (planImg.complete) viewFitted = fitView();
+if (planImg.complete) viewFitted = fitView(OPEN_ZOOM);
 </script>
 </body>
 </html>
