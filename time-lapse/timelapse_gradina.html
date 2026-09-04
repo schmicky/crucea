@@ -1329,6 +1329,7 @@ let playTimer    = null;
 let selectedId   = null;
 let highlightCode = null; // cod specie selectată — celelalte sunt faded
 let scale = 1, tx = 0, ty = 0;
+let viewFitted = false;   // planul a fost încadrat o dată la deschidere
 let isDragging = false, dragX0, dragY0, tx0, ty0;
 
 const mapWrap   = document.getElementById('map-wrap');
@@ -1394,16 +1395,28 @@ function setScale(s, cx, cy) {
   cx = cx ?? rect.width  / 2;
   cy = cy ?? rect.height / 2;
   const old = scale;
-  scale = Math.max(0.1, Math.min(10, s));
+  // minimul e mic pentru că planul e uriaș (5056 px): pe telefon
+  // încadrarea cere ~0,08, deci o limită de 0,1 ar bloca zoom-out-ul
+  scale = Math.max(0.03, Math.min(10, s));
   tx = cx - (cx - tx) * (scale / old);
   ty = cy - (cy - ty) * (scale / old);
   applyTransform();
 }
 
-function resetView() {
-  scale = 1; tx = 0; ty = 0;
+// Încadrează planul în zona vizibilă și îl centrează. Planul are 5056 ×
+// 3576 px, deci la scara 1 s-ar vedea doar un colț — de aici încadrarea.
+function fitView() {
+  const r = mapWrap.getBoundingClientRect();
+  const W = imgW(), H = imgH();
+  if (!W || !H || !r.width || !r.height) return false;
+  scale = Math.min(r.width / W, r.height / H) * 0.96;   // 2% margine pe fiecare latură
+  tx = (r.width  - W * scale) / 2;
+  ty = (r.height - H * scale) / 2;
   applyTransform();
+  return true;
 }
+
+function resetView() { fitView(); }
 
 mapWrap.addEventListener('wheel', e => {
   e.preventDefault();
@@ -1557,7 +1570,11 @@ function repositionAllDots() {
   });
 }
 
-planImg.addEventListener('load',  () => { repositionAllDots(); renderMeasures(); });
+planImg.addEventListener('load', () => {
+  repositionAllDots();
+  renderMeasures();
+  if (!viewFitted) viewFitted = fitView();   // prima încadrare, o singură dată
+});
 window.addEventListener('resize', () => { repositionAllDots(); renderMeasures(); });
 
 // ══════════════════════════════════════════════════════════════
@@ -2524,9 +2541,11 @@ measLoad();
 updateCalBadge();
 document.getElementById('snap-check').checked = snapOn;
 applyTransform();
-setMonth(0);
+setMonth(7);              // se deschide pe August, luna cu grădina în plin
 setAppMode('timelapse');
 autoLoad();
+// imaginea poate fi deja în cache, caz în care „load" nu se mai declanșează
+if (planImg.complete) viewFitted = fitView();
 </script>
 </body>
 </html>
