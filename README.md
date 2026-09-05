@@ -20,7 +20,7 @@ Paginile interactive ale proiectului pot fi vizitate direct în browser, prin li
 
 | Pagină | Descriere |
 |---|---|
-| [🌿 Time-lapse Grădină](https://schmicky.github.io/crucea/time-lapse/plan-amenajare.html) | Aplicația principală: planul grădinii cu cele ~290 de plante, animație fenologică pe luni (repaus / vegetație / înflorire / fructificare), mod de editare a pozițiilor și mod de măsurare — distanțe, arii, azimut, calibrare, import/export de zone. La click pe o plantă se deschide fișa speciei: fotografie și rezumat de pe Wikipedia, înălțimea estimată la 2 ani, la 5 ani și la maturitate, calendarul fenologic și linkuri către Wikipedia engleză și română |
+| [🌿 Time-lapse Grădină](https://schmicky.github.io/crucea/time-lapse/plan-amenajare.html) | Aplicația principală: planul grădinii cu cele ~290 de plante, animație fenologică pe luni (repaus / vegetație / înflorire / fructificare), mod de editare a pozițiilor și mod de măsurare — distanțe, arii, azimut, calibrare, import/export de zone. La click pe o plantă se deschide fișa speciei: fotografie și rezumat de pe Wikipedia, înălțimea estimată la 2 ani, la 5 ani și la maturitate, dozele de udare din primii doi ani, calendarul fenologic și linkuri către Wikipedia engleză și română |
 | [🗺 Editor plan interactiv](https://schmicky.github.io/crucea/time-lapse/editor_plan_interactiv.html) | Editorul de plan pentru plasarea și ajustarea punctelor pe planșă |
 | [📅 Calendar plante](https://schmicky.github.io/crucea/time-lapse/plante_calendar.html) | Calendarul fenologic al speciilor din grădină, lună cu lună |
 | [💧 Plan irigare](https://schmicky.github.io/crucea/resurse/irigare_plan.html) | Planul sistemului de irigare prin picurare, pe categorii de zone |
