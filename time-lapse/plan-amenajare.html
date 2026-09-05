@@ -143,6 +143,13 @@
       background: rgba(13,17,23,0.9); border: 1px solid #30363d; border-radius: 9px;
     }
     #geo-status:empty { display: none; }
+    #geo-zoomhint {
+      position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+      z-index: 500; background: rgba(13,17,23,0.9); border: 1px solid #30363d;
+      border-radius: 7px; padding: 5px 10px; font-size: 10.5px; color: #d29922;
+      max-width: 80%; text-align: center;
+    }
+    #geo-zoomhint:empty { display: none; }
     #geo-info {
       position: absolute; top: 8px; right: 8px; z-index: 500;
       background: rgba(13,17,23,0.88); border: 1px solid #30363d;
@@ -791,6 +798,7 @@
     <div id="geo-map"></div>
     <div id="geo-status"></div>
     <div id="geo-info"></div>
+    <div id="geo-zoomhint"></div>
   </div>
 
   <!-- Zoom controls -->
@@ -2022,15 +2030,25 @@ function pctToLatLon(x_pct, y_pct) {
 // Fondul de hartă. Google Maps nu poate fi desenat în pagină fără o cheie
 // Maps JavaScript API, așa că imaginile satelitare vin de la Esri (fără
 // cheie); butonul „Google Maps" deschide aceeași zonă la ei, în filă nouă.
+// „blankTile=false" face serverul Esri să răspundă cu eroare acolo unde nu
+// are imagine, în loc de dala gri cu „Map data not yet available". Așa se
+// poate detecta singur nivelul maxim real de detaliu pentru Crucea.
+const ESRI_IMG = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?blankTile=false';
 const GEO_LAYERS = {
-  satelit: { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-             attr: 'Imagini: Esri, Maxar, Earthstar Geographics', max: 21 },
-  hibrid:  { url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-             attr: 'Imagini: Esri, Maxar, Earthstar Geographics', max: 21,
-             over: 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}' },
+  satelit: { url: ESRI_IMG, attr: 'Imagini: Esri, Maxar, Earthstar Geographics', max: 19 },
+  hibrid:  { url: ESRI_IMG, attr: 'Imagini: Esri, Maxar, Earthstar Geographics', max: 19,
+             over: 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}?blankTile=false',
+             overMax: 19 },
   stradal: { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
              attr: '© colaboratorii OpenStreetMap', max: 19 }
 };
+// Nivelul de detaliu găsit efectiv pe teren, ținut minte între vizite.
+const GEO_ZKEY = 'gradina-geo-zoom-nativ';
+function nativeMaxFor(cfg, name) {
+  if (name === 'stradal') return cfg.max;      // OSM are dale până la 19 oriunde
+  const saved = parseInt(localStorage.getItem(GEO_ZKEY) || '', 10);
+  return (saved >= 15 && saved <= 21) ? Math.min(saved, cfg.max) : cfg.max;
+}
 const LEAFLET_VER = '1.9.4';
 const GEO_SIZE = { arbore: 30, fructifer: 25, arbust: 19, aromat: 15, ierbacee: 13 };
 
@@ -2074,6 +2092,7 @@ async function ensureGeoMap() {
     });
     L.control.attribution({ position: 'bottomleft', prefix: 'Leaflet' }).addTo(geoMap);
     geoMap.on('dragstart zoomstart', () => { if (!geoFitting) geoUserMoved = true; });
+    geoMap.on('zoomend', geoZoomHint);
     setGeoLayer(geoLayerName);
     buildGeoDots();
     renderGeoShapes();
@@ -2100,11 +2119,49 @@ function setGeoLayer(name) {
   const cfg = GEO_LAYERS[name] || GEO_LAYERS.satelit;
   if (geoBase) geoMap.removeLayer(geoBase);
   if (geoOver) { geoMap.removeLayer(geoOver); geoOver = null; }
-  geoBase = L.tileLayer(cfg.url, { maxZoom: 21, maxNativeZoom: cfg.max, attribution: cfg.attr })
-             .addTo(geoMap);
+
+  // maxZoom 21 dar maxNativeZoom la ultimul nivel cu imagine: peste el
+  // Leaflet mărește ultima dală bună în loc să ceară dale inexistente.
+  geoBase = L.tileLayer(cfg.url, {
+    maxZoom: 21, maxNativeZoom: nativeMaxFor(cfg, name), attribution: cfg.attr
+  }).addTo(geoMap);
+  if (name !== 'stradal') geoBase.on('tileerror', onTileError);
+  geoBase.on('load', geoZoomHint);
   if (cfg.over) {
-    geoOver = L.tileLayer(cfg.over, { maxZoom: 21, maxNativeZoom: cfg.max }).addTo(geoMap);
+    geoOver = L.tileLayer(cfg.over, {
+      maxZoom: 21, maxNativeZoom: Math.min(cfg.overMax || cfg.max, nativeMaxFor(cfg, name))
+    }).addTo(geoMap);
   }
+  geoZoomHint();
+}
+
+// O dală lipsă înseamnă că zona nu are imagine la nivelul ăla: se coboară
+// plafonul cu un nivel, se ține minte și se redesenează.
+let geoZFix = null;
+function onTileError(e) {
+  const z = e.coords && e.coords.z;
+  if (!z || z <= 15) return;
+  if (z > geoBase.options.maxNativeZoom) return;      // deja coborât
+  geoBase.options.maxNativeZoom = z - 1;
+  if (geoOver) geoOver.options.maxNativeZoom = Math.min(geoOver.options.maxNativeZoom, z - 1);
+  try { localStorage.setItem(GEO_ZKEY, String(z - 1)); } catch (err) {}
+  clearTimeout(geoZFix);
+  geoZFix = setTimeout(() => {
+    geoBase.redraw();
+    if (geoOver) geoOver.redraw();
+    geoZoomHint();
+  }, 120);
+}
+
+// Explică imaginea moale când s-a depășit nivelul cu imagine reală.
+function geoZoomHint() {
+  const el = document.getElementById('geo-zoomhint');
+  if (!el || !geoMap || !geoBase) return;
+  const over = geoMap.getZoom() - geoBase.options.maxNativeZoom;
+  el.textContent = over > 0.5
+    ? 'Imagine mărită digital: satelitul are detaliu până la nivelul ' +
+      geoBase.options.maxNativeZoom + '. Pozițiile rămân exacte.'
+    : '';
 }
 
 function styleGeoDot(el, p) {
