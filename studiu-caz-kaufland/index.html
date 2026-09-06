@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studiu de caz — vegetația benzii plantate Kaufland</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #0d1117; color: #c9d1d9;
+    font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: #58a6ff; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 26px 16px 70px; }
+
+  header { border-bottom: 1px solid #21262d; padding-bottom: 22px; }
+  .eyebrow { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: #6e7681; }
+  h1 { margin: 8px 0 10px; font-size: clamp(22px, 4vw, 32px); color: #7ee787; font-weight: 700; line-height: 1.15; }
+  .lead { color: #8b949e; max-width: 72ch; margin: 0 0 4px; }
+  .lead + .lead { margin-top: 10px; }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .stat {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 8px 12px; min-width: 88px;
+  }
+  .stat b { display: block; font-size: 19px; color: #c9d1d9; }
+  .stat span { font-size: 11px; color: #8b949e; }
+
+  h2 { margin: 34px 0 12px; font-size: 16px; color: #c9d1d9; }
+  h2 .n { font-size: 11px; color: #6e7681; font-weight: 400; margin-left: 8px; }
+
+  .takeaways { margin: 22px 0 0; padding: 0; list-style: none; }
+  .takeaways li {
+    position: relative; padding-left: 20px; margin-bottom: 7px;
+    color: #8b949e; max-width: 78ch;
+  }
+  .takeaways li::before { content: "▸"; position: absolute; left: 2px; color: #7ee787; }
+  .takeaways b { color: #c9d1d9; }
+
+  /* filtre */
+  #filtre { display: flex; flex-wrap: wrap; gap: 6px; margin: 26px 0 4px; position: sticky; top: 0;
+            background: #0d1117; padding: 10px 0; z-index: 20; border-bottom: 1px solid #21262d; }
+  .chip {
+    border: 1px solid #30363d; background: #161b22; color: #c9d1d9;
+    border-radius: 999px; padding: 5px 13px; font-size: 12px; cursor: pointer;
+    font-family: inherit; transition: .15s;
+  }
+  .chip:hover { border-color: #58a6ff; }
+  .chip.on { background: #238636; border-color: #2ea043; color: #fff; font-weight: 600; }
+
+  /* grila de fise */
+  #grid { display: grid; gap: 12px; margin-top: 16px;
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+    overflow: hidden; cursor: pointer; transition: border-color .15s, transform .15s;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+  .card .ph { aspect-ratio: 4 / 3; background: #0d1117; position: relative; }
+  .card .ph img { width: 100%; height: 100%; object-fit: cover; display: block;
+                  opacity: 0; transition: opacity .3s; }
+  .card .ph img.gata { opacity: 1; }
+  .card .body { padding: 10px 12px 12px; flex: 1; display: flex; flex-direction: column; }
+  .card .ro { font-weight: 700; color: #c9d1d9; line-height: 1.3; }
+  .card .lat { font-style: italic; color: #8b949e; font-size: 12px; margin-top: 1px; }
+  .card .tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
+
+  .tag { font-size: 9.5px; padding: 2px 7px; border-radius: 12px; color: #fff; font-weight: 600;
+         letter-spacing: .3px; }
+  .t-arbore   { background: #1f6f3f; }
+  .t-arbust   { background: #6d7c2f; }
+  .t-conifer  { background: #1a6f73; }
+  .t-spontan  { background: #7b6440; }
+  .tag.plan   { background: #1f6feb; }
+  .tag.prob   { background: #9e3b2e; }
+  .tag.incert { background: #30363d; color: #8b949e; }
+
+  .verdict { margin-top: 9px; font-size: 11.5px; line-height: 1.45; color: #8b949e; }
+  .verdict b { font-weight: 700; }
+  .v-retine b { color: #7ee787; }
+  .v-evita  b { color: #f78166; }
+  .v-neutru b { color: #d29922; }
+
+  /* fisa mare */
+  #bg { display: none; position: fixed; inset: 0; background: rgba(1,4,9,.7); z-index: 100; }
+  #bg.on { display: block; }
+  #fisa {
+    display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 860px; max-width: 94vw; max-height: 92vh; overflow-y: auto;
+    background: #161b22; border: 1px solid #30363d; border-radius: 12px;
+    padding: 18px 20px 20px; z-index: 110;
+    box-shadow: 0 10px 44px rgba(0,0,0,.8);
+  }
+  #fisa.on { display: block; }
+  #fh { display: flex; align-items: flex-start; gap: 12px; }
+  #fh > div:first-child { flex: 1; min-width: 0; }
+  #f-ro { font-size: 20px; font-weight: 700; color: #7ee787; }
+  #f-lat { font-style: italic; color: #8b949e; font-size: 13px; margin-top: 2px; }
+  #f-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .btn {
+    border: 1px solid #30363d; background: #21262d; color: #c9d1d9;
+    border-radius: 6px; padding: 5px 11px; font-size: 12px; cursor: pointer; font-family: inherit;
+  }
+  .btn:hover { border-color: #58a6ff; }
+
+  #f-body { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+  #f-poze { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  #f-poze.una { grid-template-columns: 1fr; }
+  #f-poze.una a { aspect-ratio: 4 / 3; }   /* o singură poză: preview mai scund */
+  #f-poze a { display: block; position: relative; aspect-ratio: 3 / 4; border-radius: 7px;
+              overflow: hidden; border: 1px solid #21262d; }
+  #f-poze img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #f-poze span { position: absolute; left: 5px; bottom: 5px; background: rgba(1,4,9,.8);
+                 border-radius: 4px; padding: 1px 6px; font-size: 10px; color: #c9d1d9; }
+  .sec { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #8b949e;
+         margin: 0 0 5px; }
+  .sec + .sec { margin-top: 14px; }
+  table.kv { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+  table.kv td { padding: 4px 0; border-bottom: 1px solid #21262d; font-size: 12px; }
+  table.kv td:first-child { color: #8b949e; }
+  table.kv td:last-child { text-align: right; font-weight: 700; color: #c9d1d9; }
+  table.kv tr:last-child td { border-bottom: none; }
+  #f-nota, #f-crucea { font-size: 12.5px; line-height: 1.55; color: #a9b3bd; margin-bottom: 12px; }
+  #f-crucea { border-left: 2px solid #238636; padding-left: 10px; }
+  #f-prob {
+    font-size: 12px; line-height: 1.5; color: #ffb4a2; background: rgba(158,59,46,.14);
+    border: 1px solid #7d3227; border-radius: 7px; padding: 8px 10px; margin-bottom: 12px;
+  }
+  #f-prob:empty, #f-crucea:empty { display: none; }
+
+  .cal { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; }
+  .cal div { height: 22px; border-radius: 3px; display: flex; align-items: center;
+             justify-content: center; font-size: 9px; }
+  .calm { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; margin-top: 3px; }
+  .calm span { font-size: 8px; text-align: center; color: #6e7681; }
+  .s-repaus       { background: #2c2c2c; }
+  .s-persistent   { background: #1e3a2f; }
+  .s-vegetatie    { background: #14532d; }
+  .s-inflorire    { background: #831843; }
+  .s-fructificare { background: #7c2d12; }
+  .legenda { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; font-size: 10.5px; color: #8b949e; }
+  .legenda i { width: 11px; height: 11px; border-radius: 3px; display: inline-block;
+               margin-right: 4px; vertical-align: -1px; font-style: normal; }
+  #f-link { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+  #f-link a { display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+              color: #58a6ff; text-decoration: none; padding: 6px 9px; border-radius: 6px;
+              border: 1px solid #1f4a7a; background: rgba(31,111,235,.1); }
+  #f-link a:hover { background: rgba(31,111,235,.25); }
+
+  /* probleme */
+  #probleme { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .pb { display: flex; gap: 11px; background: #161b22; border: 1px solid #30363d;
+        border-left: 3px solid #9e3b2e; border-radius: 9px; padding: 11px; }
+  .pb img { width: 76px; height: 100px; object-fit: cover; border-radius: 6px; flex: 0 0 auto;
+            cursor: pointer; }
+  .pb b { color: #ffb4a2; display: block; }
+  .pb small { color: #6e7681; }
+  .pb p { margin: 6px 0 0; font-size: 12px; color: #8b949e; line-height: 1.5; }
+
+  footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid #21262d;
+           color: #6e7681; font-size: 11.5px; line-height: 1.7; }
+
+  /* lupa foto */
+  #lupa { display: none; position: fixed; inset: 0; background: #010409; z-index: 200; }
+  #lupa.on { display: flex; align-items: center; justify-content: center; }
+  #lupa img { max-width: 96vw; max-height: 88vh; object-fit: contain; }
+  #lupa-cap { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+              color: #8b949e; font-size: 12px; background: rgba(13,17,23,.85);
+              border-radius: 6px; padding: 5px 11px; max-width: 90vw; text-align: center; }
+  #lupa .x { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px;
+             border-radius: 9px; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 18px 12px 60px; }
+    #f-body { grid-template-columns: 1fr; gap: 14px; }
+    #fisa { inset: 0; transform: none; width: auto; max-width: none; max-height: none;
+            border: none; border-radius: 0; padding: 14px 15px 20px; }
+    #grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; }
+    .card .ro { font-size: 13px; }
+    .card .lat { font-size: 11px; }
+    .card .verdict { display: none; }
+    #filtre { gap: 5px; }
+    .chip { padding: 6px 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Studiu de caz · 5 septembrie 2026</div>
+  <h1>Vegetația benzii plantate de la Kaufland</h1>
+  <p class="lead">Inventar botanic făcut din 28 de fotografii, la fața locului: <b>21 de taxoni</b>
+  pe o fâșie îngustă, între parcare și carosabil. E cel mai apropiat lucru de un test în condiții
+  reale pe care îl avem — sol compactat, căldură reflectată de asfalt, praf, sare de iarnă și,
+  aproape sigur, nicio irigare după primul an.</p>
+  <p class="lead">De aceea merită citit ca sursă pentru amenajarea din Crucea: ce rezistă aici
+  rezistă și pe un teren de stepă dobrogeană. Fiecare fișă spune ce s-a văzut în teren, cât crește
+  planta, cât o uzi la început și dacă merită copiată sau ocolită.</p>
+  <div class="stats">
+    <div class="stat"><b>21</b><span>taxoni</span></div>
+    <div class="stat"><b>5</b><span>arbori</span></div>
+    <div class="stat"><b>11</b><span>arbuști</span></div>
+    <div class="stat"><b>4</b><span>conifere</span></div>
+    <div class="stat"><b>28</b><span>fotografii</span></div>
+    <div class="stat"><b>3</b><span>probleme</span></div>
+  </div>
+</header>
+
+<h2>Ce arată banda</h2>
+<ul class="takeaways">
+  <li><b>Scheletul e veșnic verde și rezistent la secetă.</b> Cotoneaster, ienupăr târâtor,
+      pyracantha, tuia și laurocireș acoperă cea mai mare parte a suprafeței. Foioasele sunt
+      accente, nu masa principală — exact invers față de o grădină de casă.</li>
+  <li><b>Fructificarea de iarnă face toată treaba decorativă.</b> Pyracantha, cotoneaster și
+      dracilă țin culoare din octombrie până în februarie, fără să ceară nimic.</li>
+  <li><b>Acoperirea solului e continuă.</b> Nicăieri pământ gol: ienupăr târâtor, cotoneaster
+      culcat sau voscovici. Singura buruiană din tot inventarul e o volbură.</li>
+  <li><b>Problemele apar unde e prea des plantat.</b> Făinarea de pe dracilă și păduchii țestoși
+      de pe laurocireș sunt boli de aer stătut, nu de sol sărac.</li>
+  <li><b>Trei specii se regăsesc deja în planul din Crucea</b> — hibiscus, forsiție și photinia —
+      iar banda confirmă că suportă condiții mai aspre decât ale tale.</li>
+</ul>
+
+<div id="filtre"></div>
+<div id="grid"></div>
+
+<h2>Probleme identificate<span class="n">de rezolvat sau de evitat la tine</span></h2>
+<div id="probleme"></div>
+
+<footer>
+  Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele o permit
+  și la nivel de gen sau grup acolo unde nu — cele nesigure sunt marcate ca atare în fișă.
+  Înălțimile și dozele de udare sunt estimări pentru material de pepinieră obișnuit în clima
+  Dobrogei, nu măsurători pe exemplarele din poze. Fotografiile sunt proprii, făcute pe 5
+  septembrie 2026; numerotarea p1–p28 urmează ordinea în care au fost făcute.<br>
+  Parte din proiectul de amenajare Crucea — <a href="../">înapoi la proiect</a>.
+</footer>
+
+</div>
+
+<!-- fisa unei specii -->
+<div id="bg" onclick="inchide()"></div>
+<div id="fisa">
+  <div id="fh">
+    <div>
+      <div id="f-ro"></div>
+      <div id="f-lat"></div>
+      <div id="f-tags"></div>
+    </div>
+    <button class="btn" onclick="inchide()" title="Închide">✕</button>
+  </div>
+  <div id="f-body">
+    <div>
+      <div id="f-poze"></div>
+      <div style="margin-top:10px">
+        <p class="sec">Ce s-a văzut în teren</p>
+        <div id="f-nota"></div>
+        <div id="f-prob"></div>
+      </div>
+    </div>
+    <div>
+      <p class="sec">Înălțime estimată</p>
+      <table class="kv" id="f-h"></table>
+      <p class="sec">Udare în primii 2 ani <span style="text-transform:none;letter-spacing:0">(vara)</span></p>
+      <table class="kv" id="f-w"></table>
+      <p class="sec">Calendar fenologic — Ian › Dec</p>
+      <div class="cal" id="f-cal"></div>
+      <div class="calm" id="f-calm"></div>
+      <div class="legenda" id="f-leg"></div>
+      <p class="sec">Pentru amenajarea din Crucea</p>
+      <div id="f-crucea"></div>
+      <div id="f-link"></div>
+    </div>
+  </div>
+</div>
+
+<!-- foto pe tot ecranul -->
+<div id="lupa" onclick="inchideLupa(event)">
+  <button class="btn x" onclick="inchideLupa(event, true)">✕</button>
+  <img id="lupa-img" alt="">
+  <div id="lupa-cap"></div>
+</div>
+
+<script>
+const TAXONI = [
+ {
+  "id": "acer-saccharinum",
+  "lat": "Acer saccharinum",
+  "ro": "Arțar argintiu",
+  "tip": "arbore",
+  "en": "Acer saccharinum",
+  "row": "Acer saccharinum",
+  "poze": [
+   "p07",
+   "p01"
+  ],
+  "nota": "Arborele de fond al benzii. Frunze adânc lobate, cu dosul palid-argintiu. Marginile arse ale frunzelor sunt normale la sfârșit de vară, în plin asfalt.",
+  "h2": "3,0–4,0 m",
+  "h5": "6,0–8,0 m",
+  "hm": "20–25 m",
+  "apa": {
+   "l": 30,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "inflorire",
+   "vegetatie",
+   "fructificare",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "evita",
+  "crucea": "Crește repede și dă umbră devreme, dar are lemn casant, rădăcini care ridică pavajul și consum mare de apă. Pentru un teren de stepă fără apă de suprafață, nu."
+ },
+ {
+  "id": "platanus",
+  "lat": "Platanus × acerifolia",
+  "ro": "Platan",
+  "tip": "arbore",
+  "en": "London plane",
+  "row": "Platan",
+  "poze": [
+   "p03"
+  ],
+  "nota": "Plantat în aliniament, pe latura dinspre carosabil. În poza 3 apare în plan îndepărtat, în spatele tuiei globulare — de aceea cadrul pare dominat de conifere.",
+  "h2": "3,0–3,5 m",
+  "h5": "6,0–7,0 m",
+  "hm": "25–30 m",
+  "apa": {
+   "l": 30,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "repaus",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "repaus"
+  ],
+  "verdict": "evita",
+  "crucea": "Suportă căldura și praful de oraș, dar la maturitate cere 15 m de coroană și apă în adâncime. E arbore de bulevard, nu de curte."
+ },
+ {
+  "id": "carpinus",
+  "lat": "Carpinus betulus",
+  "cv": "și forma 'Fastigiata'",
+  "ro": "Carpen, inclusiv forma columnară",
+  "tip": "arbore",
+  "en": "Carpinus betulus",
+  "row": "Carpen",
+  "poze": [
+   "p15",
+   "p18"
+  ],
+  "nota": "Frunze dublu dințate, cu nervuri paralele foarte marcate. Exemplarele columnare sunt folosite ca ecran vertical, într-o fâșie îngustă.",
+  "h2": "2,0–2,5 m",
+  "h5": "4,0–5,0 m",
+  "hm": "15–20 m (forma columnară 8–10 m)",
+  "apa": {
+   "l": 20,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "repaus",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "retine",
+  "crucea": "Forma columnară e soluția pentru ecran vertical acolo unde nu ai lățime — la limita de proprietate. Suportă tunderea, dar vrea sol reavăn: la tine doar cu picurare."
+ },
+ {
+  "id": "acer-negundo",
+  "lat": "Acer negundo",
+  "ro": "Arțar american",
+  "tip": "arbore",
+  "en": "Acer negundo",
+  "row": "Acer negundo",
+  "poze": [
+   "p20",
+   "p21"
+  ],
+  "nota": "Singurul arțar cu frunze compuse, din 3–5 foliole. Frunzișul gălbui din poza 21 e început de toamnă, nu variegație.",
+  "h2": "3,0–4,0 m",
+  "h5": "6,0–8,0 m",
+  "hm": "12–15 m",
+  "apa": {
+   "l": 15,
+   "f": 1
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "vegetatie",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "evita",
+  "crucea": "Specie invazivă în România: se însămânțează singură și scapă de sub control. Lemn casant, viață scurtă. De scos, nu de plantat."
+ },
+ {
+  "id": "catalpa",
+  "lat": "Catalpa bignonioides",
+  "cv": "'Nana'",
+  "ro": "Catalpă globulară",
+  "tip": "arbore",
+  "en": "Catalpa bignonioides",
+  "row": "Catalpa bignonioides",
+  "poze": [
+   "p24"
+  ],
+  "nota": "Coroană sferică altoită pe tulpină, frunze mari cordate. Se vede și o păstaie uscată rămasă din anul trecut — capul altoit poate înflori ocazional.",
+  "h2": "2,2–2,6 m",
+  "h5": "2,6–3,0 m",
+  "hm": "3–4 m înălțime, coroană 3–4 m",
+  "apa": {
+   "l": 20,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "repaus",
+   "repaus",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "retine",
+  "crucea": "Umbră densă, punctuală, fără să crească în înălțime — exact ce trebuie lângă terasă sau la masa de picnic. Pornește târziu în frunză, deci lasă soarele de primăvară să treacă."
+ },
+ {
+  "id": "hibiscus",
+  "lat": "Hibiscus syriacus",
+  "ro": "Zaharea, hibiscus de Siria",
+  "tip": "arbust",
+  "en": "Hibiscus syriacus",
+  "row": "Hibiscus syriacus",
+  "poze": [
+   "p02",
+   "p01"
+  ],
+  "inPlan": "S6",
+  "nota": "Cel puțin două cultivaruri — cu flori albe și cu flori mov. În septembrie e la sfârșit de înflorire, cu boboci verzi și flori deja ofilite.",
+  "h2": "1,0–1,4 m",
+  "h5": "2,0–2,5 m",
+  "hm": "3–4 m",
+  "apa": {
+   "l": 8,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "repaus",
+   "repaus",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "inflorire",
+   "fructificare",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "retine",
+  "crucea": "Îl ai deja în plan (S6). Aici e dovada că duce căldura reflectată de asfalt și că înflorește în iulie–septembrie, când restul grădinii tace."
+ },
+ {
+  "id": "berberis",
+  "lat": "Berberis thunbergii",
+  "cv": "'Atropurpurea'",
+  "ro": "Dracilă roșie",
+  "tip": "arbust",
+  "en": "Berberis thunbergii",
+  "row": "Berberis thunbergii",
+  "poze": [
+   "p14",
+   "p10"
+  ],
+  "nota": "Frunziș roșu-purpuriu tot sezonul, tufă deasă și spinoasă.",
+  "problema": "Făinare (oidium) pe frunzele din poza 10: depozit alb-pulverulent pe fața superioară. Cere rărire prin tăiere și tratament cu fungicid sistemic.",
+  "h2": "0,6–0,8 m",
+  "h5": "1,0–1,3 m",
+  "hm": "1,5 m",
+  "apa": {
+   "l": 5,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "fructificare",
+   "repaus"
+  ],
+  "verdict": "retine",
+  "crucea": "Barieră joasă și spinoasă, pentru marginea aleii de acces. Făinarea de aici e avertismentul: plantată prea des și fără curent de aer, se îmbolnăvește."
+ },
+ {
+  "id": "cotoneaster-fr",
+  "lat": "Cotoneaster franchetii",
+  "cv": "sau horizontalis",
+  "ro": "Cotoneaster cu port etajat",
+  "tip": "arbust",
+  "en": "Cotoneaster franchetii",
+  "row": "Cotoneaster",
+  "poze": [
+   "p06"
+  ],
+  "nota": "Ramuri dispuse în planuri orizontale suprapuse, frunze mici și pubescente.",
+  "h2": "0,5–0,8 m",
+  "h5": "1,0–1,5 m",
+  "hm": "1,5–2,5 m",
+  "apa": {
+   "l": 5,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "fructificare",
+   "persistent"
+  ],
+  "verdict": "retine",
+  "crucea": "Portul etajat ține pământul pe taluz și nu cere nimic. Bun pe panta dinspre stradă."
+ },
+ {
+  "id": "cotoneaster-sal",
+  "lat": "Cotoneaster salicifolius",
+  "ro": "Cotoneaster cu frunză de salcie",
+  "tip": "arbust",
+  "en": "Cotoneaster salicifolius",
+  "row": "Cotoneaster",
+  "poze": [
+   "p13",
+   "p19",
+   "p08",
+   "p12"
+  ],
+  "nota": "Cel mai răspândit arbust al benzii, folosit și ca acoperitor de sol. Fructele erau încă verzi în septembrie; se înroșesc în octombrie și rămân peste iarnă.",
+  "h2": "0,6–0,9 m",
+  "h5": "1,2–1,8 m",
+  "hm": "2–3 m",
+  "apa": {
+   "l": 5,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "fructificare"
+  ],
+  "verdict": "retine",
+  "crucea": "Veșnic verde, fructifică abundent, iarna hrănește păsările, iar vara nu cere apă. Dacă e un singur lucru de copiat din banda asta, ăsta e."
+ },
+ {
+  "id": "pyracantha",
+  "lat": "Pyracantha coccinea",
+  "ro": "Pyracantha",
+  "tip": "arbust",
+  "en": "Pyracantha coccinea",
+  "row": "Pyracantha",
+  "poze": [
+   "p17"
+  ],
+  "nota": "În plin rod, cu fructe portocalii dese. Elementul cel mai vizibil al benzii toamna.",
+  "h2": "1,0–1,5 m",
+  "h5": "2,0–2,5 m",
+  "hm": "3–4 m",
+  "apa": {
+   "l": 8,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "fructificare",
+   "fructificare"
+  ],
+  "verdict": "retine",
+  "crucea": "Spinos, veșnic verde, fructifică fără irigare — candidatul serios pentru gardul dinspre stradă: oprește și oamenii, și câinii, și hrănește păsările iarna."
+ },
+ {
+  "id": "euonymus-fortunei",
+  "lat": "Euonymus fortunei",
+  "ro": "Voscovici târâtor pestriț",
+  "tip": "arbust",
+  "en": "Euonymus fortunei",
+  "row": "Euonymus fortunei",
+  "poze": [
+   "p11"
+  ],
+  "nota": "Frunze mici, marginite crem, port târâtor — tipul 'Emerald Gaiety' sau 'Silver Queen'.",
+  "h2": "0,2–0,3 m",
+  "h5": "0,4–0,5 m",
+  "hm": "0,6 m culcat (2 m dacă urcă pe suport)",
+  "apa": {
+   "l": 4,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "retine",
+  "crucea": "Acoperitor pentru umbra uscată de sub arbori, unde iarba nu prinde. Frunza pestriță luminează colțurile întunecate."
+ },
+ {
+  "id": "euonymus-japonicus",
+  "lat": "Euonymus japonicus",
+  "cv": "'Aureomarginatus'",
+  "ro": "Voscovici japonez",
+  "tip": "arbust",
+  "en": "Euonymus japonicus",
+  "row": "Euonymus japonicus",
+  "poze": [
+   "p22"
+  ],
+  "nota": "Se deosebește de cel târâtor prin frunza mai mare și mai groasă și prin portul de tufă erectă.",
+  "h2": "0,6–0,9 m",
+  "h5": "1,2–1,5 m",
+  "hm": "2–3 m",
+  "apa": {
+   "l": 6,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "neutru",
+  "crucea": "Suportă tunderea și sarea de pe drum. La −18 °C poate pierde frunzișul, deci la tine doar în poziție adăpostită."
+ },
+ {
+  "id": "lonicera-nitida",
+  "lat": "Lonicera nitida",
+  "ro": "Caprifoi arbustiv",
+  "tip": "arbust",
+  "en": "Lonicera nitida",
+  "row": "Lonicera nitida",
+  "poze": [
+   "p12"
+  ],
+  "incert": true,
+  "nota": "Frunzuliță mică, ovală, opusă, amestecată cu cotoneasterul. Determinare probabilă: ar fi confirmată de flori sau de fructele violet-translucide.",
+  "h2": "0,6–0,8 m",
+  "h5": "1,0–1,3 m",
+  "hm": "1,5–2 m",
+  "apa": {
+   "l": 5,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "retine",
+  "crucea": "Alternativa la buxus pentru borduri tunse mărunt — și fără riscul moliei buxusului, care a ras gardurile vii din toată țara."
+ },
+ {
+  "id": "forsythia",
+  "lat": "Forsythia × intermedia",
+  "ro": "Forsiție, ploaie de aur",
+  "tip": "arbust",
+  "en": "Forsythia × intermedia",
+  "row": "Forsythia",
+  "poze": [
+   "p16",
+   "p09"
+  ],
+  "incert": true,
+  "inPlan": "S28",
+  "nota": "Frunze opuse, alungite, dințate, lăstari lungi și arcuiți. Fără flori sau fructe în poze; o imagine din martie–aprilie ar lămuri-o definitiv.",
+  "h2": "1,2–1,6 m",
+  "h5": "2,0–2,5 m",
+  "hm": "3 m",
+  "apa": {
+   "l": 8,
+   "f": 2
+  },
+  "luni": [
+   "repaus",
+   "repaus",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "retine",
+  "crucea": "O ai deja în plan (S28). De reținut regula: se tunde imediat după înflorire, altfel se golește la bază — exact ce s-a întâmplat aici."
+ },
+ {
+  "id": "laurocerasus",
+  "lat": "Prunus laurocerasus",
+  "ro": "Laurocireș",
+  "tip": "arbust",
+  "en": "Prunus laurocerasus",
+  "row": "Prunus laurocerasus",
+  "poze": [
+   "p28",
+   "p25",
+   "p23"
+  ],
+  "nota": "Masă verde-închis, frunze mari, pieloase, lucioase. Folosit ca ecran des.",
+  "problema": "Păduchi țestoși — aglomerări albe pe tulpini în poza 28 — plus frunze roase în semicerc pe margine, tiparul gărgăriței Otiorhynchus.",
+  "h2": "0,8–1,2 m",
+  "h5": "1,8–2,5 m",
+  "hm": "4–6 m",
+  "apa": {
+   "l": 15,
+   "f": 2
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "evita",
+  "crucea": "Cere apă și aer; în Dobrogea, fără irigare și în plin soare, se usucă pe margini. Aglomerarea de aici a adus păduchi țestoși — semnul clasic al ecranului prea des."
+ },
+ {
+  "id": "photinia",
+  "lat": "Photinia × fraseri",
+  "ro": "Photinia, tipul 'Red Robin'",
+  "tip": "arbust",
+  "en": "Photinia × fraseri",
+  "row": "Photinia",
+  "poze": [
+   "p27"
+  ],
+  "inPlan": "S11",
+  "nota": "Lăstari roșiatici la vârf, frunze pieloase, alterne. În septembrie roșul caracteristic al lăstarilor trecuse deja în verde.",
+  "h2": "1,0–1,4 m",
+  "h5": "2,0–2,5 m",
+  "hm": "3–4 m",
+  "apa": {
+   "l": 8,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "neutru",
+  "crucea": "O ai în plan (S11). Aici arată bine, dar Constanța litorală e mai blândă decât Crucea: la −15…−18 °C pierde frunzele și lăstarii tineri."
+ },
+ {
+  "id": "thuja",
+  "lat": "Thuja occidentalis",
+  "cv": "'Danica' / 'Globosa'",
+  "ro": "Tuia globulară",
+  "tip": "conifer",
+  "en": "Thuja occidentalis",
+  "row": "Thuja occidentalis",
+  "poze": [
+   "p04",
+   "p03"
+  ],
+  "nota": "Solzi turtiți, dispuși în evantai. Formă tunsă bilă, plantată la marginea aleii.",
+  "h2": "0,4–0,6 m",
+  "h5": "0,8–1,0 m",
+  "hm": "1,0–1,5 m",
+  "apa": {
+   "l": 8,
+   "f": 2
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "neutru",
+  "crucea": "Accent formal, ieftin și disponibil peste tot. Odată prinsă suportă seceta, dar în primii doi ani se rumenește dacă o uiți nestropită."
+ },
+ {
+  "id": "juniperus-horizontalis",
+  "lat": "Juniperus horizontalis",
+  "cv": "sau sabina",
+  "ro": "Ienupăr târâtor",
+  "tip": "conifer",
+  "en": "Juniperus horizontalis",
+  "row": "Juniperus horizontalis",
+  "poze": [
+   "p05",
+   "p03"
+  ],
+  "nota": "Acoperitor de sol pe suprafețe mari, între tuia și cotoneaster.",
+  "h2": "0,2–0,3 m",
+  "h5": "0,3–0,5 m",
+  "hm": "0,4–0,6 m înălțime, 2–3 m lățime",
+  "apa": {
+   "l": 5,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "retine",
+  "crucea": "Zero întreținere pe taluzuri însorite. Atenție: J. sabina e toxic și e gazdă pentru rugina părului — nu-l pune lângă păr sau păducel."
+ },
+ {
+  "id": "juniperus-squamata",
+  "lat": "Juniperus squamata",
+  "cv": "'Glauca'",
+  "ro": "Ienupăr albastru",
+  "tip": "conifer",
+  "en": "Juniperus squamata",
+  "row": "Juniperus squamata",
+  "poze": [
+   "p21"
+  ],
+  "nota": "Pata argintie-cenușie din stânga pozei 21, distinctă de ienupărul verde din restul benzii.",
+  "h2": "0,4–0,6 m",
+  "h5": "0,8–1,2 m",
+  "hm": "1,5–2 m",
+  "apa": {
+   "l": 5,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "neutru",
+  "crucea": "Culoare rece de contrast, într-o paletă altfel verde. Cere drenaj bun; în sol greu putrezește."
+ },
+ {
+  "id": "taxus",
+  "lat": "Taxus baccata",
+  "cv": "'Repandens'",
+  "ro": "Tisă târâtoare",
+  "tip": "conifer",
+  "en": "Taxus baccata",
+  "row": "Taxus baccata",
+  "poze": [
+   "p26",
+   "p21"
+  ],
+  "nota": "Ace plate, moi, dispuse pieptenat pe două rânduri, cu lăstari noi verde-gălbui. Masa verde-închis din prim-planul pozei 21.",
+  "h2": "0,3–0,4 m",
+  "h5": "0,5–0,7 m",
+  "hm": "0,8–1,0 m înălțime, 3–5 m lățime",
+  "apa": {
+   "l": 8,
+   "f": 1
+  },
+  "luni": [
+   "persistent",
+   "persistent",
+   "persistent",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "vegetatie",
+   "fructificare",
+   "fructificare",
+   "persistent",
+   "persistent"
+  ],
+  "verdict": "neutru",
+  "crucea": "Singurul conifer care merge la umbră deasă. Toxic în toate părțile, cu excepția pulpei roșii — de ținut departe de zona copiilor."
+ },
+ {
+  "id": "convolvulus",
+  "lat": "Convolvulus sp.",
+  "ro": "Volbură",
+  "tip": "spontan",
+  "en": "Convolvulus",
+  "row": "Volbură",
+  "poze": [
+   "p23"
+  ],
+  "nota": "Vrejuri subțiri, răsucite, urcate în laurocireș. Singura plantă neplantată din inventar.",
+  "h2": "—",
+  "h5": "—",
+  "hm": "urcă 1–3 m pe suport",
+  "apa": null,
+  "luni": [
+   "repaus",
+   "repaus",
+   "repaus",
+   "vegetatie",
+   "vegetatie",
+   "inflorire",
+   "inflorire",
+   "inflorire",
+   "inflorire",
+   "vegetatie",
+   "repaus",
+   "repaus"
+  ],
+  "verdict": "evita",
+  "crucea": "Nu e specie de plantat, e un indicator: acolo unde apare, mulciul lipsește sau s-a subțiat. Rizomii merg la 1 m adâncime, deci se scoate devreme, nu la sfârșit de vară."
+ }
+];
+const PROBLEME = [
+ {
+  "titlu": "Exemplar mort integral",
+  "unde": "centrul-stânga al pozei 3",
+  "poza": "p03",
+  "text": "Un exemplar uscat complet, lăsat pe loc în aliniament. Golul se vede din drum și nu se mai umple de la sine — se scoate cu rădăcină și se înlocuiește la aceeași distanță."
+ },
+ {
+  "titlu": "Făinare pe dracilă",
+  "unde": "poza 10",
+  "poza": "p10",
+  "text": "Depozit alb-pulverulent pe fața superioară a frunzelor. Apare unde tufele sunt prea dese și aerul nu circulă. Se rărește prin tăiere, apoi se tratează cu fungicid sistemic."
+ },
+ {
+  "titlu": "Păduchi țestoși pe laurocireș",
+  "unde": "poza 28",
+  "poza": "p28",
+  "text": "Aglomerări albe pe tulpini, plus frunze roase în semicerc pe margine — tiparul gărgăriței Otiorhynchus. Tratament cu ulei horticol la sfârșit de iarnă și rărirea tufelor."
+ }
+];
+
+const LUNI = ['Ian','Feb','Mar','Apr','Mai','Iun','Iul','Aug','Sep','Oct','Nov','Dec'];
+const TIP_RO  = { arbore:'Arbore', arbust:'Arbust', conifer:'Conifer', spontan:'Spontan' };
+const STARE_RO = { repaus:'Repaus', persistent:'Frunziș peren', vegetatie:'Vegetație',
+                   inflorire:'Înflorire', fructificare:'Fructificare' };
+const STARE_EM = { repaus:'❄', persistent:'🌲', vegetatie:'🌿', inflorire:'🌸', fructificare:'🍒' };
+const VERDICT = {
+  retine: ['De reținut', 'v-retine'],
+  evita:  ['De evitat',  'v-evita'],
+  neutru: ['Cu rezerve', 'v-neutru']
+};
+const esc = s => String(s == null ? '' : s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const nrPoza = p => String(parseInt(p.slice(1), 10));
+
+/* ── grila ─────────────────────────────────────────────────────── */
+let filtru = 'toate';
+
+function chipuri() {
+  const n = t => TAXONI.filter(x => t === 'toate' || x.tip === t).length;
+  const lista = [['toate','Toate'],['arbore','Arbori'],['arbust','Arbuști'],
+                 ['conifer','Conifere'],['spontan','Spontane']];
+  document.getElementById('filtre').innerHTML =
+    lista.map(([k, et]) =>
+      '<button class="chip' + (k === filtru ? ' on' : '') + '" onclick="setFiltru(\'' + k + '\')">' +
+      et + ' <span style="opacity:.6">' + n(k) + '</span></button>').join('') +
+    '<button class="chip' + (filtru === 'plan' ? ' on' : '') + '" onclick="setFiltru(\'plan\')">' +
+    'Și în planul Crucea <span style="opacity:.6">' + TAXONI.filter(x => x.inPlan).length + '</span></button>' +
+    '<button class="chip' + (filtru === 'prob' ? ' on' : '') + '" onclick="setFiltru(\'prob\')">' +
+    'Cu probleme <span style="opacity:.6">' + TAXONI.filter(x => x.problema).length + '</span></button>';
+}
+function setFiltru(k) { filtru = k; chipuri(); grila(); }
+
+function potrivit(t) {
+  if (filtru === 'toate') return true;
+  if (filtru === 'plan')  return !!t.inPlan;
+  if (filtru === 'prob')  return !!t.problema;
+  return t.tip === filtru;
+}
+
+function grila() {
+  const g = document.getElementById('grid');
+  g.innerHTML = TAXONI.filter(potrivit).map((t, i) => {
+    const idx = TAXONI.indexOf(t);
+    const [et, cls] = VERDICT[t.verdict];
+    return '<article class="card" onclick="deschide(' + idx + ')">' +
+      '<div class="ph"><img loading="lazy" src="poze/thumb/' + t.poze[0] + '.webp" alt="' +
+        esc(t.ro) + '" onload="this.classList.add(\'gata\')"></div>' +
+      '<div class="body">' +
+        '<div class="ro">' + esc(t.ro) + '</div>' +
+        '<div class="lat">' + esc(t.lat) + (t.cv ? ' ' + esc(t.cv) : '') + '</div>' +
+        '<div class="tags">' + etichete(t) + '</div>' +
+        '<div class="verdict ' + cls + '"><b>' + et + '</b> — ' + esc(scurt(t.crucea)) + '</div>' +
+      '</div></article>';
+  }).join('');
+}
+function scurt(txt, n = 92) {
+  if (txt.length <= n) return txt;
+  const c = txt.slice(0, n), p = c.lastIndexOf(' ');
+  return c.slice(0, p > 40 ? p : n) + '…';
+}
+function etichete(t) {
+  let h = '<span class="tag t-' + t.tip + '">' + TIP_RO[t.tip] + '</span>';
+  if (t.inPlan)  h += '<span class="tag plan">și în planul Crucea · ' + esc(t.inPlan) + '</span>';
+  if (t.problema) h += '<span class="tag prob">problemă</span>';
+  if (t.incert)  h += '<span class="tag incert">determinare probabilă</span>';
+  return h;
+}
+
+/* ── fisa ──────────────────────────────────────────────────────── */
+let cerere = 0;
+
+function deschide(i) {
+  const t = TAXONI[i];
+  document.getElementById('f-ro').textContent  = t.ro;
+  document.getElementById('f-lat').innerHTML   = esc(t.lat) + (t.cv ? ' <span style="font-style:normal;color:#6e7681">' + esc(t.cv) + '</span>' : '');
+  document.getElementById('f-tags').innerHTML  = etichete(t);
+
+  const pz = document.getElementById('f-poze');
+  pz.className = t.poze.length === 1 ? 'una' : '';
+  pz.innerHTML = t.poze.map(p =>
+    '<a href="poze/mare/' + p + '.webp" onclick="lupa(event, \'' + p + '\', \'' +
+      esc(t.ro).replace(/'/g, "\\'") + '\')">' +
+    '<img loading="lazy" src="poze/thumb/' + p + '.webp" alt="Poza ' + nrPoza(p) + '">' +
+    '<span>poza ' + nrPoza(p) + '</span></a>').join('');
+
+  document.getElementById('f-nota').textContent = t.nota;
+  document.getElementById('f-prob').innerHTML =
+    t.problema ? '<b>Problemă observată.</b> ' + esc(t.problema) : '';
+
+  document.getElementById('f-h').innerHTML =
+    '<tr><td>la 2 ani</td><td>' + esc(t.h2) + '</td></tr>' +
+    '<tr><td>la 5 ani</td><td>' + esc(t.h5) + '</td></tr>' +
+    '<tr><td>la maturitate</td><td>' + esc(t.hm) + '</td></tr>';
+
+  const w = t.apa;
+  document.getElementById('f-w').innerHTML = w
+    ? '<tr><td>anul 1 (plantare)</td><td>' + udare(w, 1.5, 1) + '</td></tr>' +
+      '<tr><td>anul 2</td><td>' + udare(w, 1.25, 0) + '</td></tr>' +
+      '<tr><td>din anul 3</td><td>' + udare(w, 1, 0) + '</td></tr>'
+    : '<tr><td colspan="2" style="color:#6e7681;text-align:left">Nu se plantează — specie spontană.</td></tr>';
+
+  const cal = document.getElementById('f-cal'), calm = document.getElementById('f-calm');
+  cal.innerHTML  = t.luni.map((s, m) => '<div class="s-' + s + '" title="' + LUNI[m] + ': ' +
+                    STARE_RO[s] + '">' + STARE_EM[s] + '</div>').join('');
+  calm.innerHTML = LUNI.map(l => '<span>' + l[0] + '</span>').join('');
+  const stari = [...new Set(t.luni)];
+  document.getElementById('f-leg').innerHTML = stari.map(s =>
+    '<span><i class="s-' + s + '"></i>' + STARE_RO[s] + '</span>').join('');
+
+  document.getElementById('f-crucea').textContent = t.crucea;
+
+  // Linkurile se verifică la deschidere: adresa canonică vine de la Wikipedia,
+  // iar dacă articolul nu există butonul devine căutare, nu pagină moartă.
+  const lk = document.getElementById('f-link');
+  lk.innerHTML =
+    '<a id="lk-en" target="_blank" rel="noopener" href="' + wikiURL('en', t.en) + '">🔗 Wikipedia EN — ' + esc(t.en) + '</a>' +
+    (t.row ? '<a id="lk-ro" target="_blank" rel="noopener" style="display:none" href="' + wikiURL('ro', t.row) + '"></a>' : '');
+  verificaLinkuri(++cerere, t);
+
+  document.getElementById('fisa').classList.add('on');
+  document.getElementById('bg').classList.add('on');
+  document.getElementById('fisa').scrollTop = 0;
+}
+
+function udare(w, k, plusFrecventa) {
+  const l = w.l * k >= 10 ? Math.round(w.l * k / 5) * 5 : Math.max(1, Math.round(w.l * k));
+  const f = w.f + plusFrecventa;
+  return l + ' l × ' + f + '/săpt. — ' + (l * f) + ' l/săpt.';
+}
+
+function wikiURL(lang, titlu) {
+  return 'https://' + lang + '.wikipedia.org/wiki/' + encodeURIComponent(titlu.replace(/ /g, '_'));
+}
+function cautaURL(lang, titlu) {
+  return 'https://' + lang + '.wikipedia.org/w/index.php?search=' +
+         encodeURIComponent(titlu) + '&title=Special%3ASearch&go=Go';
+}
+
+const CACHE_KEY = 'kaufland-wiki';
+let cache = {};
+try { cache = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}') || {}; } catch (e) {}
+
+async function rezumat(lang, titlu) {
+  const k = lang + ':' + titlu;
+  if (cache[k] && Date.now() - cache[k].ts < 30 * 24 * 3600 * 1000) return cache[k];
+  const r = await fetch('https://' + lang + '.wikipedia.org/api/rest_v1/page/summary/' +
+                        encodeURIComponent(titlu.replace(/ /g, '_')) + '?redirect=true');
+  const rec = r.status === 404 ? { ts: Date.now(), lipsa: true }
+            : { ts: Date.now(), url: (await r.json()).content_urls?.desktop?.page || wikiURL(lang, titlu) };
+  cache[k] = rec;
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch (e) {}
+  return rec;
+}
+
+async function verificaLinkuri(nr, t) {
+  try {
+    const en = await rezumat('en', t.en);
+    if (nr !== cerere) return;
+    const a = document.getElementById('lk-en');
+    if (a) {
+      a.href = en.lipsa ? cautaURL('en', t.en) : en.url;
+      a.textContent = (en.lipsa ? '🔎 Caută pe Wikipedia EN — ' : '🔗 Wikipedia EN — ') + t.en;
+    }
+  } catch (e) {}
+  if (!t.row) return;
+  try {
+    const ro = await rezumat('ro', t.row);
+    if (nr !== cerere) return;
+    const a = document.getElementById('lk-ro');
+    if (a && !ro.lipsa) {
+      a.href = ro.url;
+      a.textContent = '🔗 Wikipedia RO — ' + t.row;
+      a.style.display = '';
+    }
+  } catch (e) {}
+}
+
+function inchide() {
+  document.getElementById('fisa').classList.remove('on');
+  document.getElementById('bg').classList.remove('on');
+  cerere++;
+}
+
+/* ── probleme ──────────────────────────────────────────────────── */
+function probleme() {
+  document.getElementById('probleme').innerHTML = PROBLEME.map(p =>
+    '<div class="pb">' +
+      '<img loading="lazy" src="poze/thumb/' + p.poza + '.webp" alt="' + esc(p.titlu) + '" ' +
+        'onclick="lupa(event, \'' + p.poza + '\', \'' + esc(p.titlu).replace(/'/g, "\\'") + '\')">' +
+      '<div><b>' + esc(p.titlu) + '</b><small>' + esc(p.unde) + '</small>' +
+      '<p>' + esc(p.text) + '</p></div>' +
+    '</div>').join('');
+}
+
+/* ── lupa ──────────────────────────────────────────────────────── */
+function lupa(ev, poza, cap) {
+  if (ev) ev.preventDefault();
+  document.getElementById('lupa-img').src = 'poze/mare/' + poza + '.webp';
+  document.getElementById('lupa-cap').textContent = cap + ' — poza ' + nrPoza(poza);
+  document.getElementById('lupa').classList.add('on');
+}
+function inchideLupa(ev, fortat) {
+  if (!fortat && ev && ev.target.tagName === 'IMG') return;
+  document.getElementById('lupa').classList.remove('on');
+  document.getElementById('lupa-img').removeAttribute('src');
+}
+
+window.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('lupa').classList.contains('on')) inchideLupa(null, true);
+  else inchide();
+});
+
+chipuri(); grila(); probleme();
+</script>
+</body>
+</html>
