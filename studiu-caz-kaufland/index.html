@@ -78,6 +78,16 @@
   .tag.prob   { background: #9e3b2e; }
   .tag.incert { background: #30363d; color: #8b949e; }
 
+  .lumbadge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px;
+              font-weight: 600; border-radius: 12px; padding: 2px 8px; border: 1px solid;
+              background: #0d1117; }
+  .l-soare { border-color: #8a6d1f; color: #e3b341; }
+  .l-mixt  { border-color: #2d5a3d; color: #7ee787; }
+  .l-umbra { border-color: #2f4a6d; color: #79c0ff; }
+  #f-lum { margin-bottom: 6px; }
+  #f-lumd { font-size: 11.5px; color: #8b949e; line-height: 1.5; margin-bottom: 12px; }
+  #f-lumd:empty { display: none; }
+
   .verdict { margin-top: 9px; font-size: 11.5px; line-height: 1.45; color: #8b949e; }
   .verdict b { font-weight: 700; }
   .v-retine b { color: #7ee787; }
@@ -227,6 +237,10 @@
       tuia bilă la bordură, masă de acoperitori. Arțarul american care crește prin mijlocul
       tisei și volbura sunt însămânțate ulterior, iar exemplarul uscat lăsat pe loc arată că
       pierderile nu se înlocuiesc.</li>
+  <li><b>Plantarea respectă lumina, pe straturi.</b> Sub coroana arborilor stau singurele trei
+      specii tolerante la umbră — tisa, laurocireșul și voscoviciul târâtor. La bordură, în plin
+      soare, stau ienupărul, tuia și dracila. Se vede direct în poza 21: tisa de sub arțar e deasă,
+      iar ienupărul albastru prins sub aceeași coroană e răsfirat și întins după lumină.</li>
   <li><b>Trei specii se regăsesc deja în planul din Crucea</b> — hibiscus, forsiție și photinia —
       iar banda confirmă că suportă condiții mai aspre decât ale tale.</li>
 </ul>
@@ -269,6 +283,9 @@
       </div>
     </div>
     <div>
+      <p class="sec">Lumină</p>
+      <div id="f-lum"></div>
+      <div id="f-lumd"></div>
       <p class="sec">Înălțime estimată</p>
       <table class="kv" id="f-h"></table>
       <p class="sec">Udare în primii 2 ani <span style="text-transform:none;letter-spacing:0">(vara)</span></p>
@@ -295,6 +312,7 @@
 const TAXONI = [
  {
   "id": "acer-saccharinum",
+  "lum": "soare",
   "lat": "Acer saccharinum",
   "ro": "Arțar argintiu",
   "tip": "arbore",
@@ -331,6 +349,7 @@ const TAXONI = [
  },
  {
   "id": "platanus",
+  "lum": "soare",
   "lat": "Platanus × acerifolia",
   "ro": "Platan",
   "tip": "arbore",
@@ -366,6 +385,8 @@ const TAXONI = [
  },
  {
   "id": "carpinus",
+  "lum": "mixt",
+  "lumd": "Cel mai tolerant la umbră dintre arborii benzii — crește și sub coroana altora.",
   "lat": "Carpinus betulus",
   "cv": "și forma 'Fastigiata'",
   "ro": "Carpen, inclusiv forma columnară",
@@ -403,6 +424,7 @@ const TAXONI = [
  },
  {
   "id": "acer-negundo",
+  "lum": "soare",
   "lat": "Acer negundo",
   "ro": "Arțar american",
   "tip": "arbore",
@@ -439,6 +461,8 @@ const TAXONI = [
  },
  {
   "id": "catalpa",
+  "lum": "soare",
+  "lumd": "Capul altoit are nevoie de lumină din toate părțile ca să rămână sferic.",
   "lat": "Catalpa bignonioides",
   "cv": "'Nana'",
   "ro": "Catalpă globulară",
@@ -475,6 +499,8 @@ const TAXONI = [
  },
  {
   "id": "hibiscus",
+  "lum": "soare",
+  "lumd": "La umbră aproape nu înflorește.",
   "lat": "Hibiscus syriacus",
   "ro": "Zaharea, hibiscus de Siria",
   "tip": "arbust",
@@ -512,6 +538,8 @@ const TAXONI = [
  },
  {
   "id": "berberis",
+  "lum": "soare",
+  "lumd": "La umbră purpuriul se pierde și frunza devine verzuie — plus aerul stătut aduce făinarea.",
   "lat": "Berberis thunbergii",
   "cv": "'Atropurpurea'",
   "ro": "Dracilă roșie",
@@ -550,6 +578,7 @@ const TAXONI = [
  },
  {
   "id": "cotoneaster-fr",
+  "lum": "mixt",
   "lat": "Cotoneaster franchetii",
   "cv": "sau horizontalis",
   "ro": "Cotoneaster cu port etajat",
@@ -586,6 +615,8 @@ const TAXONI = [
  },
  {
   "id": "cotoneaster-sal",
+  "lum": "mixt",
+  "lumd": "Fructifică mai bogat la soare, dar ține și sub arbori.",
   "lat": "Cotoneaster salicifolius",
   "ro": "Cotoneaster cu frunză de salcie",
   "tip": "arbust",
@@ -624,6 +655,8 @@ const TAXONI = [
  },
  {
   "id": "pyracantha",
+  "lum": "soare",
+  "lumd": "La umbră aproape nu fructifică — adică pierzi exact motivul pentru care o plantezi.",
   "lat": "Pyracantha coccinea",
   "ro": "Pyracantha",
   "tip": "arbust",
@@ -659,6 +692,8 @@ const TAXONI = [
  },
  {
   "id": "euonymus-fortunei",
+  "lum": "umbra",
+  "lumd": "Suportă umbra uscată de sub arbori; în plin soare și fără apă, frunza pestriță se arde.",
   "lat": "Euonymus fortunei",
   "ro": "Voscovici târâtor pestriț",
   "tip": "arbust",
@@ -694,6 +729,7 @@ const TAXONI = [
  },
  {
   "id": "euonymus-japonicus",
+  "lum": "mixt",
   "lat": "Euonymus japonicus",
   "cv": "'Aureomarginatus'",
   "ro": "Voscovici japonez",
@@ -730,6 +766,7 @@ const TAXONI = [
  },
  {
   "id": "lonicera-nitida",
+  "lum": "mixt",
   "lat": "Lonicera nitida",
   "ro": "Caprifoi arbustiv",
   "tip": "arbust",
@@ -766,6 +803,8 @@ const TAXONI = [
  },
  {
   "id": "forsythia",
+  "lum": "soare",
+  "lumd": "La umbră face lăstari lungi și puține flori.",
   "lat": "Forsythia × intermedia",
   "ro": "Forsiție, ploaie de aur",
   "tip": "arbust",
@@ -804,6 +843,8 @@ const TAXONI = [
  },
  {
   "id": "laurocerasus",
+  "lum": "umbra",
+  "lumd": "Tolerant la umbră; în plin soare și fără irigare frunzele se ard pe margini.",
   "lat": "Prunus laurocerasus",
   "ro": "Laurocireș",
   "tip": "arbust",
@@ -842,6 +883,8 @@ const TAXONI = [
  },
  {
   "id": "photinia",
+  "lum": "mixt",
+  "lumd": "Lăstarii roșii sunt mai intenși la soare.",
   "lat": "Photinia × fraseri",
   "ro": "Photinia, tipul 'Red Robin'",
   "tip": "arbust",
@@ -878,6 +921,8 @@ const TAXONI = [
  },
  {
   "id": "thuja",
+  "lum": "soare",
+  "lumd": "La umbră se desface și nu mai ține forma de bilă.",
   "lat": "Thuja occidentalis",
   "cv": "'Danica' / 'Globosa'",
   "ro": "Tuia globulară",
@@ -915,6 +960,8 @@ const TAXONI = [
  },
  {
   "id": "juniperus-horizontalis",
+  "lum": "soare",
+  "lumd": "Umbra îl rărește și îi pierde ramurile de jos — se vede pe exemplarele prinse sub arbori.",
   "lat": "Juniperus horizontalis",
   "cv": "sau sabina",
   "ro": "Ienupăr târâtor",
@@ -952,6 +999,8 @@ const TAXONI = [
  },
  {
   "id": "juniperus-squamata",
+  "lum": "soare",
+  "lumd": "Culoarea albăstruie se estompează la umbră.",
   "lat": "Juniperus squamata",
   "cv": "'Glauca'",
   "ro": "Ienupăr albastru",
@@ -988,6 +1037,8 @@ const TAXONI = [
  },
  {
   "id": "taxus",
+  "lum": "umbra",
+  "lumd": "Cel mai tolerant la umbră din toată banda — de aceea e sănătos sub arțar, unde ienupărul suferă.",
   "lat": "Taxus baccata",
   "cv": "'Repandens'",
   "ro": "Tisă târâtoare",
@@ -1025,6 +1076,7 @@ const TAXONI = [
  },
  {
   "id": "convolvulus",
+  "lum": "soare",
   "lat": "Convolvulus sp.",
   "ro": "Volbură",
   "tip": "spontan",
@@ -1082,6 +1134,11 @@ const TIP_RO  = { arbore:'Arbore', arbust:'Arbust', conifer:'Conifer', spontan:'
 const STARE_RO = { repaus:'Repaus', persistent:'Frunziș peren', vegetatie:'Vegetație',
                    inflorire:'Înflorire', fructificare:'Fructificare' };
 const STARE_EM = { repaus:'❄', persistent:'🌲', vegetatie:'🌿', inflorire:'🌸', fructificare:'🍒' };
+const LUMINA = {
+  soare: ['☀ Soare plin', '☀ Soare plin — minimum 6 h direct'],
+  mixt:  ['⛅ Soare–semiumbră', '⛅ Soare până la semiumbră'],
+  umbra: ['🌥 Semiumbră–umbră', '🌥 Semiumbră până la umbră']
+};
 const VERDICT = {
   retine: ['De reținut', 'v-retine'],
   evita:  ['De evitat',  'v-evita'],
@@ -1104,6 +1161,8 @@ function chipuri() {
       et + ' <span style="opacity:.6">' + n(k) + '</span></button>').join('') +
     '<button class="chip' + (filtru === 'plan' ? ' on' : '') + '" onclick="setFiltru(\'plan\')">' +
     'Și în planul Crucea <span style="opacity:.6">' + TAXONI.filter(x => x.inPlan).length + '</span></button>' +
+    '<button class="chip' + (filtru === 'umbra' ? ' on' : '') + '" onclick="setFiltru(\'umbra\')">' +
+    'Merg la umbră <span style="opacity:.6">' + TAXONI.filter(x => x.lum !== 'soare').length + '</span></button>' +
     '<button class="chip' + (filtru === 'prob' ? ' on' : '') + '" onclick="setFiltru(\'prob\')">' +
     'Cu probleme <span style="opacity:.6">' + TAXONI.filter(x => x.problema).length + '</span></button>';
 }
@@ -1113,6 +1172,7 @@ function potrivit(t) {
   if (filtru === 'toate') return true;
   if (filtru === 'plan')  return !!t.inPlan;
   if (filtru === 'prob')  return !!t.problema;
+  if (filtru === 'umbra') return t.lum !== 'soare';
   return t.tip === filtru;
 }
 
@@ -1127,7 +1187,8 @@ function grila() {
       '<div class="body">' +
         '<div class="ro">' + esc(t.ro) + '</div>' +
         '<div class="lat">' + esc(t.lat) + (t.cv ? ' ' + esc(t.cv) : '') + '</div>' +
-        '<div class="tags">' + etichete(t) + '</div>' +
+        '<div class="tags">' + etichete(t) +
+          '<span class="lumbadge l-' + t.lum + '">' + LUMINA[t.lum][0] + '</span></div>' +
         '<div class="verdict ' + cls + '"><b>' + et + '</b> — ' + esc(scurt(t.crucea)) + '</div>' +
       '</div></article>';
   }).join('');
@@ -1165,6 +1226,11 @@ function deschide(i) {
   document.getElementById('f-nota').textContent = t.nota;
   document.getElementById('f-prob').innerHTML =
     t.problema ? '<b>Problemă observată.</b> ' + esc(t.problema) : '';
+
+  const lu = document.getElementById('f-lum');
+  lu.innerHTML = '<span class="lumbadge l-' + t.lum + '" style="font-size:12px;padding:3px 11px">' +
+                 LUMINA[t.lum][1] + '</span>';
+  document.getElementById('f-lumd').textContent = t.lumd || '';
 
   document.getElementById('f-h').innerHTML =
     '<tr><td>la 2 ani</td><td>' + esc(t.h2) + '</td></tr>' +

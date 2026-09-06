@@ -479,6 +479,17 @@
     }
     #popup-note:empty { display: none; }
     #popup-min { padding: 4px 11px; font-size: 15px; line-height: 1; }
+    #popup-lum {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; color: #c9d1d9;
+      border: 1px solid #30363d; border-radius: 14px; padding: 3px 11px;
+      background: #0d1117; margin-bottom: 6px;
+    }
+    #popup-lum.l-soare { border-color: #8a6d1f; color: #e3b341; }
+    #popup-lum.l-mixt  { border-color: #2d5a3d; color: #7ee787; }
+    #popup-lum.l-umbra { border-color: #2f4a6d; color: #79c0ff; }
+    #popup-lumd { font-size: 11px; color: #8b949e; line-height: 1.5; margin-bottom: 12px; }
+    #popup-lumd:empty { display: none; }
     #popup-w { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
     #popup-w td { padding: 4px 0; border-bottom: 1px solid #21262d; font-size: 12px; }
     #popup-w td:first-child { color: #8b949e; }
@@ -874,6 +885,10 @@
     </div>
 
     <div id="popup-data-col">
+      <div class="cal-section-title">Lumină</div>
+      <div id="popup-lum"></div>
+      <div id="popup-lumd"></div>
+
       <div class="cal-section-title">Înălțime estimată</div>
       <table id="popup-h">
         <tr><td>la 2 ani</td><td id="popup-h2">—</td></tr>
@@ -1554,6 +1569,78 @@ const PLANT_INFO = {
   "ip44":  {h2:"0,40–0,50 m", h5:"0,50–0,60 m", hm:"0,60 m"},
   "ip102": {h2:"0,70–0,90 m", h5:"0,90–1,20 m", hm:"1,20 m", note:"Erbacee perenă: repornește din rădăcină în fiecare primăvară."},
   "ip126": {en:"Dasiphora fruticosa", h2:"0,50–0,70 m", h5:"0,80–1,00 m", hm:"1,00–1,20 m", note:"Înflorește din iunie până la brumele de octombrie."}
+};
+
+// ── Lumină ──────────────────────────────────────────────────────
+// n = 'soare' (minimum 6 h soare direct), 'mixt' (soare până la
+//     semiumbră) sau 'umbra' (semiumbră până la umbră).
+// d = ce se întâmplă dacă poziția e greșită — acolo unde contează.
+const LUMINA = {
+  "A5":    {n:"mixt", d:"Suportă semiumbra cât e tânăr; la maturitate vrea lumină deplină."},
+  "A11":   {n:"soare", d:"La umbră coroana se răsfiră și înflorește rar."},
+  "A21":   {n:"soare"},
+  "A24":   {n:"mixt"},
+  "A28":   {n:"soare"},
+  "A30":   {n:"mixt", d:"Poziție luminoasă, dar ferită de soarele de după-amiază și de vântul rece."},
+  "A34":   {n:"soare"},
+  "A40":   {n:"soare"},
+  "A43":   {n:"soare"},
+  "A48":   {n:"mixt"},
+  "A52":   {n:"soare"},
+  "F1":    {n:"mixt", d:"Crește și la semiumbră, dar fructifică bine doar cu soare pe coroană."},
+  "F3":    {n:"soare"},
+  "F4":    {n:"soare", d:"Cel mai cald și mai adăpostit loc din curte — lângă un zid sudic e ideal."},
+  "F6":    {n:"soare"},
+  "F7":    {n:"soare", d:"Fructifică pe lemnul care prinde soare — de aceea coroana se rărește prin tăiere."},
+  "F8":    {n:"mixt"},
+  "F9":    {n:"soare"},
+  "F10":   {n:"soare", d:"Fructifică pe lemnul care prinde soare — de aceea coroana se rărește prin tăiere."},
+  "F11":   {n:"soare"},
+  "F12":   {n:"soare"},
+  "F14":   {n:"soare"},
+  "F15":   {n:"soare", d:"Fără soare direct toată ziua, apare bășicarea frunzelor și rodul e slab."},
+  "F16":   {n:"soare", d:"Cere căldură acumulată: poziție sudică, adăpostită."},
+  "F17":   {n:"soare"},
+  "F18":   {n:"soare"},
+  "F19":   {n:"mixt"},
+  "F21":   {n:"mixt", d:"Suportă bine marginea de pădure — semiumbra nu-l deranjează."},
+  "F26":   {n:"soare", d:"Fără soare direct nu fructifică deloc."},
+  "F28":   {n:"soare"},
+  "F29":   {n:"mixt", d:"În clima de la noi preferă semiumbra: la soare direct frunzele se ard și fructul se coace mărunt."},
+  "F30":   {n:"mixt", d:"Cere sol reavăn; semiumbra de după-amiază îl ajută vara."},
+  "F31":   {n:"mixt", d:"Ca și coacăzul roșu: semiumbră, altfel frunzele se ard."},
+  "F32":   {n:"mixt", d:"Semiumbra îl ferește de făinare și de arsura fructelor."},
+  "F33":   {n:"soare", d:"Strugurii se coc doar cu expunere sudică sau sud-vestică."},
+  "F34":   {n:"soare"},
+  "F44":   {n:"mixt"},
+  "F53":   {n:"soare"},
+  "F56":   {n:"soare", d:"Ca piersicul: soare toată ziua, altfel bășicarea foilor devine cronică."},
+  "F59":   {n:"mixt", d:"Rodește mai bogat la soare, dar suportă și semiumbra."},
+  "S3":    {n:"mixt"},
+  "S4":    {n:"soare", d:"Culoarea de toamnă și „fumul\" de inflorescențe apar doar la soare."},
+  "S5":    {n:"mixt"},
+  "S6":    {n:"soare", d:"La umbră aproape nu înflorește."},
+  "S10":   {n:"mixt"},
+  "S11":   {n:"mixt", d:"Lăstarii roșii sunt mai intenși la soare; semiumbra îi ține mai mult verzi."},
+  "S17":   {n:"soare"},
+  "S18":   {n:"mixt"},
+  "S21":   {n:"soare", d:"Sub 5–6 ore de soare, înflorirea scade vizibil de la an la an."},
+  "S28":   {n:"soare", d:"La umbră face lăstari lungi și puține flori."},
+  "S34":   {n:"mixt", d:"Merge și la semiumbră — de aceea e bun ca gard viu pe latura nordică."},
+  "S38":   {n:"soare"},
+  "S50":   {n:"umbra", d:"Unul dintre puținii arbuști care înfloresc la umbră; la soare direct floarea se decolorează."},
+  "S69":   {n:"soare", d:"Sub 6 ore de soare face puține flori și se îmbolnăvește de pătare neagră."},
+  "S72":   {n:"mixt"},
+  "S80":   {n:"soare"},
+  "ar2":   {n:"soare", d:"La umbră se întinde, nu înflorește și putrezește la colet."},
+  "ar6":   {n:"soare", d:"Soare plin și drenaj — sunt condițiile obligatorii, nu preferințe."},
+  "ar7":   {n:"soare", d:"Aroma e mai puternică la soare și pe sol sărac."},
+  "ar9":   {n:"mixt", d:"Vara, semiumbra de după-amiază îi ține frunza fragedă."},
+  "ia19":  {n:"soare"},
+  "ip19":  {n:"mixt", d:"Suportă și umbra de sub arbori — de aceea e bună ca plantă de mulci acolo."},
+  "ip44":  {n:"soare"},
+  "ip102": {n:"soare"},
+  "ip126": {n:"soare", d:"Înflorește tot sezonul doar cu soare direct."}
 };
 
 // ── Udare ───────────────────────────────────────────────────────
@@ -2480,6 +2567,16 @@ function showPopup(id, cx, cy) {
   const typeEl = document.getElementById('popup-type');
   typeEl.textContent    = typeLabelRO[info.type] || info.type;
   typeEl.style.background = typeColors[info.type] || '#555';
+
+  // Lumină
+  const LUM_ET = { soare: '☀ Soare plin — minimum 6 h direct',
+                   mixt:  '⛅ Soare până la semiumbră',
+                   umbra: '🌥 Semiumbră până la umbră' };
+  const lum = LUMINA[p.code];
+  const lumEl = document.getElementById('popup-lum');
+  lumEl.className = lum ? 'l-' + lum.n : '';
+  lumEl.textContent = lum ? LUM_ET[lum.n] : '—';
+  document.getElementById('popup-lumd').textContent = (lum && lum.d) || '';
 
   // Înălțimi estimate
   document.getElementById('popup-h2').textContent = ex.h2 || '—';
