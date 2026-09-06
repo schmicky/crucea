@@ -26,6 +26,7 @@ Paginile interactive ale proiectului pot fi vizitate direct în browser, prin li
 | [💧 Plan irigare](https://schmicky.github.io/crucea/resurse/irigare_plan.html) | Planul sistemului de irigare prin picurare, pe categorii de zone |
 | [🏗 Iaz de înot natural — planșe tehnice](https://schmicky.github.io/crucea/iaz/NSP-Crucea-planse-tehnice.html) | Setul de planșe PL-00…PL-06: plan de situație cu orientare și arcele soarelui, plan general al culoarului de înot 12 × 4 m, secțiuni, detalii de execuție, schema hidraulică, antemăsurătoare |
 | [🧱 Demo straturi DWG](https://schmicky.github.io/crucea/resurse/demostraturi.html) | Straturile planului peisager extrase din DWG, comutabile individual |
+| [🔬 Studiu de caz — vegetație Kaufland](https://schmicky.github.io/crucea/studiu-caz-kaufland/) | Inventarul celor 21 de taxoni de pe banda plantată dintre parcare și carosabil, făcut din 28 de fotografii: fișă per specie în același format cu cea din planul de amenajare — creștere, udare, calendar fenologic, problemele văzute în teren și concluzia pentru Crucea |
 | [📷 Galerie foto](https://schmicky.github.io/crucea/foto/) | Cele 30 de randări ale proiectului — grilă cu miniaturi, vizualizare pe tot ecranul, navigare cu tastele sau prin glisare pe telefon, plus acces la PNG-ul original |
 
 Documentul însoțitor al iazului: [memoriul tehnic](https://github.com/schmicky/crucea/blob/master/iaz/NSP-Crucea-memoriu-tehnic.md) (se citește direct pe GitHub).
