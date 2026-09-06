@@ -13,9 +13,9 @@ pe teren de stepă dobrogeană.
 
 - `index.html` — pagina studiului: fișă per specie, în același format cu fișa de
   plantă din [planul de amenajare](../time-lapse/plan-amenajare.html) — fotografii,
-  ce s-a văzut în teren, înălțimea la 2 ani / 5 ani / maturitate, dozele de udare
-  din primii doi ani, calendarul fenologic, linkuri către Wikipedia și o concluzie
-  pentru Crucea (de reținut / cu rezerve / de evitat)
+  ce s-a văzut în teren, cerința de lumină, înălțimea la 2 ani / 5 ani / maturitate,
+  dozele de udare din primii doi ani, calendarul fenologic, linkuri către Wikipedia
+  și o concluzie pentru Crucea (de reținut / cu rezerve / de evitat)
 - `poze/thumb/p01..p28.webp` — miniaturi, latura lungă 480 px
 - `poze/mare/p01..p28.webp` — imagini de vizualizare, latura lungă 1400 px
 
@@ -30,6 +30,11 @@ forsiție (S28) și photinia (S11). Cele mai bune candidate noi sunt cotoneaster
 cu frunză de salcie, pyracantha și ienupărul târâtor: veșnic verzi, fructifică
 iarna, nu cer irigare. De evitat sunt arțarul american (invaziv), arțarul argintiu
 și laurocireșul (consum mare de apă).
+
+Banda e plantată pe straturi, iar straturile respectă lumina: sub coroana arborilor
+stau singurele trei specii tolerante la umbră — tisa, laurocireșul și voscoviciul
+târâtor — iar la bordură, în plin soare, stau ienupărul, tuia și dracila. Nouă din
+cei 21 de taxoni suportă semiumbra sau umbra; restul cer soare direct.
 
 Cele trei probleme identificate — un exemplar uscat lăsat în aliniament, făinare
 pe dracilă și păduchi țestoși pe laurocireș — au aceeași cauză: plantare prea deasă,
