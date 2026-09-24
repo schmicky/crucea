@@ -1,0 +1,482 @@
+{
+  "calibrare": {
+    "m_per_procent_latime": 1.45784,
+    "m_per_procent_inaltime": 1.33328,
+    "factor_manual": 1.0034,
+    "nord_grade_fata_de_sus": 0
+  },
+  "masuratori": [
+    {
+      "nume": "Iaz Zona Inot",
+      "inchis": true,
+      "segmente": [
+        {
+          "nr": 1,
+          "lungime_m": 5.96,
+          "azimut_grade": 252.5
+        },
+        {
+          "nr": 2,
+          "lungime_m": 4.94,
+          "azimut_grade": 341.9
+        },
+        {
+          "nr": 3,
+          "lungime_m": 5.98,
+          "azimut_grade": 72
+        },
+        {
+          "nr": 4,
+          "lungime_m": 5,
+          "azimut_grade": 162.2
+        }
+      ],
+      "total_m": 21.88,
+      "arie_m2": 29.7,
+      "puncte_pct": [
+        {
+          "x_pct": 51.581,
+          "y_pct": 44.841
+        },
+        {
+          "x_pct": 47.677,
+          "y_pct": 46.187
+        },
+        {
+          "x_pct": 46.628,
+          "y_pct": 42.658
+        },
+        {
+          "x_pct": 50.531,
+          "y_pct": 41.276
+        }
+      ]
+    },
+    {
+      "nume": "Iaz Zona Regenerare",
+      "inchis": true,
+      "segmente": [
+        {
+          "nr": 1,
+          "lungime_m": 1.02,
+          "azimut_grade": 51
+        },
+        {
+          "nr": 2,
+          "lungime_m": 1.45,
+          "azimut_grade": 26.2
+        },
+        {
+          "nr": 3,
+          "lungime_m": 0.88,
+          "azimut_grade": 9.6
+        },
+        {
+          "nr": 4,
+          "lungime_m": 0.74,
+          "azimut_grade": 359.3
+        },
+        {
+          "nr": 5,
+          "lungime_m": 1.02,
+          "azimut_grade": 345.3
+        },
+        {
+          "nr": 6,
+          "lungime_m": 1.08,
+          "azimut_grade": 333.7
+        },
+        {
+          "nr": 7,
+          "lungime_m": 1.39,
+          "azimut_grade": 323.9
+        },
+        {
+          "nr": 8,
+          "lungime_m": 0.5,
+          "azimut_grade": 298.3
+        },
+        {
+          "nr": 9,
+          "lungime_m": 0.81,
+          "azimut_grade": 309.8
+        },
+        {
+          "nr": 10,
+          "lungime_m": 1.83,
+          "azimut_grade": 289.3
+        },
+        {
+          "nr": 11,
+          "lungime_m": 0.95,
+          "azimut_grade": 265.3
+        },
+        {
+          "nr": 12,
+          "lungime_m": 0.94,
+          "azimut_grade": 267.8
+        },
+        {
+          "nr": 13,
+          "lungime_m": 1.14,
+          "azimut_grade": 254.4
+        },
+        {
+          "nr": 14,
+          "lungime_m": 1.54,
+          "azimut_grade": 254.6
+        },
+        {
+          "nr": 15,
+          "lungime_m": 1.6,
+          "azimut_grade": 252.3
+        },
+        {
+          "nr": 16,
+          "lungime_m": 1.34,
+          "azimut_grade": 156.1
+        },
+        {
+          "nr": 17,
+          "lungime_m": 6.01,
+          "azimut_grade": 72.4
+        },
+        {
+          "nr": 18,
+          "lungime_m": 4.98,
+          "azimut_grade": 162.8
+        },
+        {
+          "nr": 19,
+          "lungime_m": 5.98,
+          "azimut_grade": 252.2
+        },
+        {
+          "nr": 20,
+          "lungime_m": 4.81,
+          "azimut_grade": 342.1
+        },
+        {
+          "nr": 21,
+          "lungime_m": 1.52,
+          "azimut_grade": 329.6
+        },
+        {
+          "nr": 22,
+          "lungime_m": 1.11,
+          "azimut_grade": 245.1
+        },
+        {
+          "nr": 23,
+          "lungime_m": 1.36,
+          "azimut_grade": 224.6
+        },
+        {
+          "nr": 24,
+          "lungime_m": 1.56,
+          "azimut_grade": 197.8
+        },
+        {
+          "nr": 25,
+          "lungime_m": 1.39,
+          "azimut_grade": 178.7
+        },
+        {
+          "nr": 26,
+          "lungime_m": 1.54,
+          "azimut_grade": 161.7
+        },
+        {
+          "nr": 27,
+          "lungime_m": 0.97,
+          "azimut_grade": 130.3
+        },
+        {
+          "nr": 28,
+          "lungime_m": 1.18,
+          "azimut_grade": 113
+        },
+        {
+          "nr": 29,
+          "lungime_m": 1.18,
+          "azimut_grade": 96.2
+        },
+        {
+          "nr": 30,
+          "lungime_m": 1.26,
+          "azimut_grade": 75.1
+        },
+        {
+          "nr": 31,
+          "lungime_m": 1.57,
+          "azimut_grade": 72
+        },
+        {
+          "nr": 32,
+          "lungime_m": 1.08,
+          "azimut_grade": 80.3
+        },
+        {
+          "nr": 33,
+          "lungime_m": 1.11,
+          "azimut_grade": 97.9
+        },
+        {
+          "nr": 34,
+          "lungime_m": 0.98,
+          "azimut_grade": 108.4
+        },
+        {
+          "nr": 35,
+          "lungime_m": 1.24,
+          "azimut_grade": 100.6
+        },
+        {
+          "nr": 36,
+          "lungime_m": 0.87,
+          "azimut_grade": 81.2
+        }
+      ],
+      "total_m": 59.95,
+      "arie_m2": 55.9,
+      "puncte_pct": [
+        {
+          "x_pct": 52.265,
+          "y_pct": 46.716
+        },
+        {
+          "x_pct": 52.812,
+          "y_pct": 46.232
+        },
+        {
+          "x_pct": 53.257,
+          "y_pct": 45.256
+        },
+        {
+          "x_pct": 53.354,
+          "y_pct": 44.606
+        },
+        {
+          "x_pct": 53.35,
+          "y_pct": 44.05
+        },
+        {
+          "x_pct": 53.173,
+          "y_pct": 43.312
+        },
+        {
+          "x_pct": 52.842,
+          "y_pct": 42.591
+        },
+        {
+          "x_pct": 52.284,
+          "y_pct": 41.745
+        },
+        {
+          "x_pct": 51.979,
+          "y_pct": 41.566
+        },
+        {
+          "x_pct": 51.552,
+          "y_pct": 41.178
+        },
+        {
+          "x_pct": 50.369,
+          "y_pct": 40.726
+        },
+        {
+          "x_pct": 49.716,
+          "y_pct": 40.785
+        },
+        {
+          "x_pct": 49.073,
+          "y_pct": 40.808
+        },
+        {
+          "x_pct": 48.314,
+          "y_pct": 41.039
+        },
+        {
+          "x_pct": 47.3,
+          "y_pct": 41.344
+        },
+        {
+          "x_pct": 46.254,
+          "y_pct": 41.715
+        },
+        {
+          "x_pct": 46.623,
+          "y_pct": 42.631
+        },
+        {
+          "x_pct": 50.555,
+          "y_pct": 41.268
+        },
+        {
+          "x_pct": 51.568,
+          "y_pct": 44.835
+        },
+        {
+          "x_pct": 47.655,
+          "y_pct": 46.216
+        },
+        {
+          "x_pct": 46.645,
+          "y_pct": 42.779
+        },
+        {
+          "x_pct": 46.12,
+          "y_pct": 41.801
+        },
+        {
+          "x_pct": 45.425,
+          "y_pct": 42.152
+        },
+        {
+          "x_pct": 44.771,
+          "y_pct": 42.88
+        },
+        {
+          "x_pct": 44.44,
+          "y_pct": 43.997
+        },
+        {
+          "x_pct": 44.464,
+          "y_pct": 45.032
+        },
+        {
+          "x_pct": 44.795,
+          "y_pct": 46.127
+        },
+        {
+          "x_pct": 45.306,
+          "y_pct": 46.6
+        },
+        {
+          "x_pct": 46.054,
+          "y_pct": 46.95
+        },
+        {
+          "x_pct": 46.862,
+          "y_pct": 47.04
+        },
+        {
+          "x_pct": 47.693,
+          "y_pct": 46.801
+        },
+        {
+          "x_pct": 48.715,
+          "y_pct": 46.439
+        },
+        {
+          "x_pct": 49.447,
+          "y_pct": 46.299
+        },
+        {
+          "x_pct": 50.204,
+          "y_pct": 46.416
+        },
+        {
+          "x_pct": 50.84,
+          "y_pct": 46.646
+        },
+        {
+          "x_pct": 51.673,
+          "y_pct": 46.817
+        }
+      ]
+    },
+    {
+      "nume": "Sera Walpini",
+      "inchis": true,
+      "segmente": [
+        {
+          "nr": 1,
+          "lungime_m": 3.76,
+          "azimut_grade": 266.9
+        },
+        {
+          "nr": 2,
+          "lungime_m": 5.34,
+          "azimut_grade": 175.8
+        },
+        {
+          "nr": 3,
+          "lungime_m": 3.75,
+          "azimut_grade": 85.2
+        },
+        {
+          "nr": 4,
+          "lungime_m": 5.23,
+          "azimut_grade": 356
+        }
+      ],
+      "total_m": 18.07,
+      "arie_m2": 19.8,
+      "puncte_pct": [
+        {
+          "x_pct": 53.629,
+          "y_pct": 58.228
+        },
+        {
+          "x_pct": 51.053,
+          "y_pct": 58.383
+        },
+        {
+          "x_pct": 51.322,
+          "y_pct": 62.369
+        },
+        {
+          "x_pct": 53.884,
+          "y_pct": 62.135
+        }
+      ]
+    },
+    {
+      "nume": "Casa Principala",
+      "inchis": true,
+      "segmente": [
+        {
+          "nr": 1,
+          "lungime_m": 12.58,
+          "azimut_grade": 332.9
+        },
+        {
+          "nr": 2,
+          "lungime_m": 4.97,
+          "azimut_grade": 243.1
+        },
+        {
+          "nr": 3,
+          "lungime_m": 12.55,
+          "azimut_grade": 152.8
+        },
+        {
+          "nr": 4,
+          "lungime_m": 4.94,
+          "azimut_grade": 63.5
+        }
+      ],
+      "total_m": 35.05,
+      "arie_m2": 62.3,
+      "puncte_pct": [
+        {
+          "x_pct": 36.998,
+          "y_pct": 64.248
+        },
+        {
+          "x_pct": 33.067,
+          "y_pct": 55.847
+        },
+        {
+          "x_pct": 30.03,
+          "y_pct": 57.533
+        },
+        {
+          "x_pct": 33.963,
+          "y_pct": 65.903
+        }
+      ]
+    }
+  ]
+}
