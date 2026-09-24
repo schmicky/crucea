@@ -30,6 +30,8 @@ Paginile interactive ale proiectului pot fi vizitate direct în browser, prin li
 | [🔬 Studiu de caz — vegetație Kaufland](https://schmicky.github.io/crucea/studiu-caz-kaufland/) | Inventarul celor 21 de taxoni de pe banda plantată dintre parcare și carosabil, făcut din 28 de fotografii: fișă per specie în același format cu cea din planul de amenajare — lumină, creștere, udare, calendar fenologic, problemele văzute în teren și concluzia pentru Crucea |
 | [📷 Galerie foto](https://schmicky.github.io/crucea/foto/) | Cele 30 de randări ale proiectului — grilă cu miniaturi, vizualizare pe tot ecranul, navigare cu tastele sau prin glisare pe telefon, plus acces la PNG-ul original |
 
+Analiza plantării pe varianta nord — lumină, vânt, biodiversitate, relații între specii și întreținere: [analiza-plan-nord.md](https://github.com/schmicky/crucea/blob/master/time-lapse/analiza-plan-nord.md).
+
 Documentul însoțitor al iazului: [memoriul tehnic](https://github.com/schmicky/crucea/blob/master/iaz/NSP-Crucea-memoriu-tehnic.md) (se citește direct pe GitHub).
 
 ## Obiective
