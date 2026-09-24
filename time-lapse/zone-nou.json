@@ -1,0 +1,284 @@
+{
+ "calibrare": {
+  "m_per_procent_latime": 1.4529,
+  "m_per_procent_inaltime": 1.3286,
+  "factor_manual": 1.0,
+  "nord_grade_fata_de_sus": 0
+ },
+ "masuratori": [
+  {
+   "nume": "Perdea N — ulm, sălcioară, arbuști",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 69.707,
+     "y_pct": 14.165
+    },
+    {
+     "x_pct": 16.064,
+     "y_pct": 46.95
+    },
+    {
+     "x_pct": 19.026,
+     "y_pct": 52.466
+    },
+    {
+     "x_pct": 72.669,
+     "y_pct": 19.681
+    }
+   ]
+  },
+  {
+   "nume": "Perdea E — sălcioară, stejar, pin",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 85.376,
+     "y_pct": 47.491
+    },
+    {
+     "x_pct": 81.673,
+     "y_pct": 37.01
+    },
+    {
+     "x_pct": 77.442,
+     "y_pct": 25.032
+    },
+    {
+     "x_pct": 70.798,
+     "y_pct": 14.604
+    },
+    {
+     "x_pct": 63.675,
+     "y_pct": 19.177
+    },
+    {
+     "x_pct": 70.32,
+     "y_pct": 29.605
+    },
+    {
+     "x_pct": 74.551,
+     "y_pct": 41.583
+    },
+    {
+     "x_pct": 78.254,
+     "y_pct": 52.064
+    }
+   ]
+  },
+  {
+   "nume": "Gard comestibil S (jos, ≤ 6 m)",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 86.056,
+     "y_pct": 49.921
+    },
+    {
+     "x_pct": 34.39,
+     "y_pct": 81.081
+    },
+    {
+     "x_pct": 31.951,
+     "y_pct": 76.538
+    },
+    {
+     "x_pct": 83.617,
+     "y_pct": 45.379
+    }
+   ]
+  },
+  {
+   "nume": "Labirint — arbuști liberi, pomi",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 77.853,
+     "y_pct": 47.913
+    },
+    {
+     "x_pct": 62.312,
+     "y_pct": 57.892
+    },
+    {
+     "x_pct": 50.137,
+     "y_pct": 35.217
+    },
+    {
+     "x_pct": 65.678,
+     "y_pct": 25.238
+    }
+   ]
+  },
+  {
+   "nume": "Livadă caldă + grădina de bucătărie",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 60.306,
+     "y_pct": 62.118
+    },
+    {
+     "x_pct": 48.297,
+     "y_pct": 69.829
+    },
+    {
+     "x_pct": 39.79,
+     "y_pct": 53.984
+    },
+    {
+     "x_pct": 45.441,
+     "y_pct": 50.356
+    },
+    {
+     "x_pct": 48.668,
+     "y_pct": 56.366
+    },
+    {
+     "x_pct": 55.026,
+     "y_pct": 52.283
+    }
+   ]
+  },
+  {
+   "nume": "Iaz — borduri de stepă, plajă",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 59.183,
+     "y_pct": 44.103
+    },
+    {
+     "x_pct": 43.289,
+     "y_pct": 54.309
+    },
+    {
+     "x_pct": 36.248,
+     "y_pct": 41.196
+    },
+    {
+     "x_pct": 48.611,
+     "y_pct": 33.258
+    },
+    {
+     "x_pct": 50.664,
+     "y_pct": 37.083
+    },
+    {
+     "x_pct": 54.196,
+     "y_pct": 34.815
+    }
+   ]
+  },
+  {
+   "nume": "Grădina din față — pajiște, tei",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 41.94,
+     "y_pct": 73.911
+    },
+    {
+     "x_pct": 33.18,
+     "y_pct": 79.536
+    },
+    {
+     "x_pct": 26.286,
+     "y_pct": 66.696
+    },
+    {
+     "x_pct": 35.046,
+     "y_pct": 61.072
+    }
+   ]
+  },
+  {
+   "nume": "Crâng de alun și stejar (NE)",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 75.79,
+     "y_pct": 29.032
+    },
+    {
+     "x_pct": 66.607,
+     "y_pct": 34.929
+    },
+    {
+     "x_pct": 59.712,
+     "y_pct": 22.089
+    },
+    {
+     "x_pct": 70.309,
+     "y_pct": 15.285
+    }
+   ]
+  },
+  {
+   "nume": "Curtea găinilor — dud, soc",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 82.89,
+     "y_pct": 41.372
+    },
+    {
+     "x_pct": 74.767,
+     "y_pct": 46.588
+    },
+    {
+     "x_pct": 69.78,
+     "y_pct": 37.3
+    },
+    {
+     "x_pct": 77.903,
+     "y_pct": 32.083
+    }
+   ]
+  },
+  {
+   "nume": "Parcare umbrită — Koelreuteria",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 41.149,
+     "y_pct": 49.438
+    },
+    {
+     "x_pct": 30.906,
+     "y_pct": 56.015
+    },
+    {
+     "x_pct": 26.359,
+     "y_pct": 47.546
+    },
+    {
+     "x_pct": 36.602,
+     "y_pct": 40.969
+    }
+   ]
+  },
+  {
+   "nume": "Pajiște de stepă — cosită în august",
+   "inchis": true,
+   "puncte_pct": [
+    {
+     "x_pct": 68.699,
+     "y_pct": 31.748
+    },
+    {
+     "x_pct": 53.864,
+     "y_pct": 41.274
+    },
+    {
+     "x_pct": 49.024,
+     "y_pct": 32.258
+    },
+    {
+     "x_pct": 63.858,
+     "y_pct": 22.733
+    }
+   ]
+  }
+ ]
+}
