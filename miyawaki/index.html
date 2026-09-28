@@ -34,7 +34,30 @@
   button:hover { background:#eee; }
   #tip { position:fixed; pointer-events:none; background:#222; color:#fff; padding:6px 9px; border-radius:6px; font-size:13px; display:none; z-index:5; max-width:260px; }
   .note { font-size:13px; color:#555; margin-top:8px; }
-  @media print { body { background:#fff; } .tools, .noprint { display:none; } .wrap { grid-template-columns: 1fr 1fr; } }
+  @media print {
+    @page { size: A4 portrait; margin: 10mm; }
+    html, body { background:#fff; margin:0; }
+    header { padding:0 0 4px; }
+    h1 { font-size:16px; }
+    .sub { font-size:11px; }
+    .tools, .noprint, #tip { display:none !important; }
+    .wrap { display:block; padding:0; }
+    /* pagina 1: schema pe toată pagina */
+    .plan { border:none; padding:0; page-break-after:always; break-after:page; }
+    .plan svg { width:auto; height:236mm; max-width:100%; margin:0 auto; display:block; }
+    .plan .note { font-size:10px; margin-top:2px; }
+    /* pagina 2: legenda */
+    .legend { border:none; padding:0; page-break-before:always; break-before:page; font-size:12px; }
+    .legend h2 { font-size:14px; margin:6px 0 4px; }
+    .legend .print-only { display:block !important; font-size:16px; margin:0 0 8px; }
+    .legend table { font-size:10.5px; }
+    .legend td, .legend th { padding:1px 4px; line-height:1.25; }
+    .legend td br { display:none; }
+    .legend td i { margin-left:6px; }
+    .legend .strat { margin:2px 0; font-size:11px; }
+    .legend tr { page-break-inside:avoid; break-inside:avoid; }
+    .plant text { font-size:9px; }
+  }
 </style>
 </head>
 <body>
@@ -62,6 +85,7 @@
     <div class="note">Linia punctată la 1 m de gard este <b>mantaua</b>: acolo sunt mai ales arbuști și subarboret, arborii mari stau în interior. Fiecare cerc = un puiet; culoarea = stratul; codul = specia (lista din dreapta). Coordonatele din CSV se măsoară de la colțul de sud-vest (stânga-jos).</div>
   </div>
   <div class="legend">
+    <h2 class="print-only" style="display:none">Pădure Miyawaki 9 × 12 m — legendă</h2>
     <h2>Straturi</h2>
     <div class="strat" onclick="onlyLayer(&quot;A&quot;)"><span class="sw" style="background:#1b5e20"></span>Arbori mari (coronament, 15–25 m) — <b>48</b></div><div class="strat" onclick="onlyLayer(&quot;B&quot;)"><span class="sw" style="background:#43a047"></span>Arbori mici (8–15 m) — <b>81</b></div><div class="strat" onclick="onlyLayer(&quot;C&quot;)"><span class="sw" style="background:#9e9d24"></span>Subarboret (3–8 m) — <b>81</b></div><div class="strat" onclick="onlyLayer(&quot;D&quot;)"><span class="sw" style="background:#e08a1e"></span>Arbuști, manta (1–4 m) — <b>114</b></div>
     <h2>Specii (29)</h2>
