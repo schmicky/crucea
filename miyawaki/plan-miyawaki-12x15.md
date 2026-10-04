@@ -8,7 +8,7 @@ Metoda Miyawaki plantează, pe sol pregătit adânc, **puieți mici din speciile
 
 Pentru Crucea, „pădurea naturală a locului” este **silvostepa dobrogeană**, cum se vede în pădurile Babadag și Niculițel: stejar pufos și brumăriu, cer, tei argintiu, mojdrean, cărpiniță, jugastru, arțar tătăresc, vișin turcesc, păr sălbatic, cu subarboret de corn, păducel, scumpie, sânger și o manta de porumbar, lemn câinesc, dârmox, măceș. Toate cele 29 de specii alese sunt din această listă. Nimic exotic, nimic care cere apă după al treilea an.
 
-Parcela: 12 × 15 m = 180 m²; față de varianta de 9 × 12 m are un interior adevărat (la 4–5 m de orice margine) și poteca pe care intri în pădure. Varianta mică rămâne în `index.html`. Schema e cu nordul în sus. Pădurea poate fi așezată oriunde e soare plin și nu umbrește ceva important spre nord; cel mai natural loc e colțul de nord-est al terenului, în continuarea perdelei de vânt, unde devine și ecran contra crivățului.
+Parcela: 12 × 15 m = 180 m²; față de varianta de 9 × 12 m are un interior adevărat (la 4–5 m de orice margine) și poteca pe care intri în pădure. Varianta mică rămâne în `index.html`. Parcela, în schemă cu nordul în sus. Poate fi așezată oriunde e soare plin și nu umbrește ceva important spre nord; cel mai natural loc e colțul de nord-est al terenului, în continuarea perdelei de vânt, unde devine și ecran contra crivățului.
 
 ## 2. Cifre
 
