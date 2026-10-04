@@ -6,9 +6,11 @@ Sursa de apă: colțul de sud-est al casei, între casă și magazie. 325 plante
 
 Frecvența de udare stabilește zona (ce pornește împreună), doza se reglează prin numărul de picurătoare la fiecare plantă. Zonele sunt trase după poziție pe teren, așa că o plantă „setoasă” nimerită într-o zonă „uscată” primește picurătoare în plus și doza dublă la o singură udare pe săptămână.
 
+**Distribuitor central**: toate cele 8 electrovane stau într-un cămin lângă sursă, cu programatorul alături; de la cămin pleacă 8 țevi de 25 mm, câte una pe zonă. Cablul se reduce la câțiva metri, țeava rămâne aceeași cantitate (fiecare zonă avea oricum traseul ei), iar întreținerea și golirea de iarnă se fac dintr-un singur loc.
+
 ## Zonele (vanele)
 
-| Vană | Zonă | Program | Plante | Picurătoare | Debit l/h | Udare | l/săpt. din anul 3 | Tub 16 mm | Principală | Plante |
+| Vană | Zonă | Program | Plante | Picurătoare | Debit l/h | Udare | l/săpt. din anul 3 | Tub 16 mm | Țeavă 25 mm de la cămin | Plante |
 |---|---|---|---:|---:|---:|---|---:|---:|---:|---|
 | V1 | Perdeaua de nord | A | 82 | 116 | 464 | 75 min × 1/săpt | 580 | 209 m | 40 m | Ulm de Turkestan 24  Sălcioară 15  Măceș 8  Păducel 7  Kerria 5  Ploaie de aur 4  Frasin 3  Aronia 3  Dud alb 2  Liliac de vară 2  Corn 1  Iasomie falsă 1  Pin negru 1  Pom de stafide 1  Prun 1  Soc 1  Vișin 1  Nuc 1  Călin 1 |
 | V2 | Est — linia uscată | A | 26 | 26 | 104 | 75 min × 1/săpt | 130 | 100 m | 72 m | Sălcioară 16  Pin negru 10 |
@@ -42,10 +44,10 @@ Udare noaptea sau dimineața devreme, o vană odată, mai–septembrie, cu pauz�
 
 ## Materiale (orientativ)
 
-- conductă principală PE 32 mm: 350 m (îngropată, pe trasee de-a lungul aleilor)
+- țeavă PE 25 mm: 350 m în total, 8 trasee de la cămin la zone (îngropate, de-a lungul aleilor)
 - tub orb PE 16 mm: 1100 m, la suprafață sub mulci, agrafe la 2 m
 - picurătoare autocompensante 4 l/h: 650 buc
-- 8 electrovane 1" 24 V în 2–3 cămine, programator 8 zone cu senzor de ploaie, filtru cu discuri 120 mesh, reductor 1,5–2 bar, cablu 24 V
+- 8 electrovane 1" 24 V într-un cămin jumbo la sursă, pe distribuitor cu teuri de 1"; programator 8 zone + modul Wi-Fi și senzor de ploaie alături; filtru cu regulator la intrare; 5 m de cablu
 - robinet de golire la punctul cel mai jos al fiecărei zone, pentru iarnă
 - debit maxim pe o vană 464 l/h — fără pompă dacă presiunea la robinet e peste 2 bar
 
@@ -53,6 +55,6 @@ Consum din anul 3: ≈ 4 821 l/săpt  ≈ 106 mc pe sezon  ≈ 1 055 lei la tari
 
 ## Etape
 
-1. Toamna aceasta, odată cu plantarea: conducta principală și căminele de vane pentru V1–V4 (perdelele), tubul de 16 mm pe rândurile plantate, cu picurătoarele puse la fiecare puiet înainte de mulci.
+1. Toamna aceasta, odată cu plantarea: căminul cu distribuitorul și cele 4 țevi pentru V1–V4 (perdelele), tubul de 16 mm pe rândurile plantate, cu picurătoarele puse la fiecare puiet înainte de mulci.
 2. Primăvara: V5–V8, odată cu plantarea speciilor sensibile la ger.
 3. Programatorul se pune din prima zi; anul 1 are frecvența mărită cu o zi și durata cu 50 %.
