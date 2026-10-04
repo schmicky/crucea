@@ -9,26 +9,27 @@ Poligonul măsurat în aplicația planului nord („Contur 1”, 8 laturi, 73 m 
 Ce face pădurea aici:
 
 - **îngroașă perdeaua de crivăț**: vântul de nord-est lovește latura lungă la 20° de perpendiculară; 15 m de pădure protejează 150 m de curte, adică tot lotul;
-- **preia perdeaua de est existentă**: cei 31 de arbori și arbuști deja plantați în poligon (frasin 5, dud alb 4, pin negru 4, stejar pufos 1, sălcioară 9, pom de stafide 1, ulm de turkestan 1, corn 3, păducel 2, măceș 1) **rămân pe loc** și devin straturile de sus ale pădurii; puieții noi se plantează printre ei, la cel puțin 0,7 m. Pinii negri sunt singurele conifere și dau protecția de iarnă pe care foioasele n-o au;
-- restul perdelei de est (15 plante la sud de poligon) rămâne cum e.
+- **ia locul perdelei de est planificate** pe acest colț: perdeaua nu e plantată încă, așa că cele 31 de plante ale ei din interiorul poligonului (sălcioară 9, frasin 5, dud alb 4, pin negru 4, corn 3, păducel 2, stejar pufos 1, măceș 1, pom de stafide 1, ulm de turkestan 1) **se scot din planul nord**, iar pădurea, de 3 plante/m², face aceeași treabă mai bine. Din planul perdelei e preluat **pinul negru** (32 buc., strat A, în interior): e singura specie verde iarna și ține crivățul când foioasele sunt desfrunzite;
+- restul perdelei de est (la sud de poligon) și perdeaua de nord rămân cum sunt în plan; pădurea e capătul lor gros din colț.
 
-Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de nord stau numai arbuști** (stratul D), subarboretul de la 1 m, arborii mici și mari de la 2 m. Sălcioarele existente de pe gard rămân ca gard viu. Umbra de după-amiază cade peste gardul de est, pe terenul vecinului, pe 19 m de hotar; perdeaua actuală face deja asta cu pini și frasini, dar merită o vorbă cu vecinul înainte de plantare.
+Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de nord stau numai arbuști** (stratul D), subarboretul de la 1 m, arborii mici și mari de la 2 m. Mantaua de arbuști de pe gard (păducel, porumbar, lemn câinesc, măceș) ține locul sălcioarelor din planul perdelei. Umbra de după-amiază cade peste gardul de est, pe terenul vecinului, pe 19 m de hotar; perdeaua planificată ar fi făcut același lucru cu pini și frasini de 12–30 m, dar merită o vorbă cu vecinul înainte de plantare.
 
 ## 2. Cifre
 
 | | |
 |---|---:|
 | suprafață | 305.9 m², din care ≈ 12 m² alee și luminiș |
-| puieți noi | 852 |
-| existenți păstrați | 31 |
-| densitate | 3 / m² (cu tot cu existenți) |
-| specii noi | 29 (aceleași ca în celelalte variante) |
-| arbori mari (A) | 126 noi + 14 existenți |
-| arbori mici (B) | 214 noi + 11 existenți |
-| subarboret (C) | 213 noi + 5 existenți |
-| arbuști, manta (D) | 299 noi + 1 existent |
+| puieți | 883 |
+| densitate | 3 / m² |
+| specii | 30 (cele 29 din celelalte variante + pin negru) |
+| arbori mari (A) | 157 |
+| arbori mici (B) | 214 |
+| subarboret (C) | 213 |
+| arbuști, manta (D) | 299 |
 
 **Aleea** de 80 cm urmează traseul măsurat („Traseu 1”, 8,5 m, azimut 42°): intră de pe latura de sud-vest și urcă spre colțul de nord-est până la un **luminiș rotund de 2,6 m cu o băncuță** de 1,6 m, așezată de-a curmezișul, cu spatele spre colț și cu fața spre alee și spre curte. Arborii mari stau la peste 1,3 m de alee, arborii mici la peste 0,9 m; luminișul e înconjurat de arbuști și subarboret, deci la 4–5 ani băncuța e într-o cameră verde, nu sub coroane.
+
+**De modificat în planul nord:** cele 31 de plante ale perdelei de est din interiorul poligonului se șterg din `pozitie-nord.json` (lista e în `plantare-miyawaki-est.json`, cheia `plante_plan_nord_in_zona`), iar comenzile de noiembrie scad cu ele: pin negru −4, frasin −5, dud alb −4, sălcioară −9, corn −3, păducel −2, stejar pufos −1, măceș −1, pom de stafide −1, ulm de Turkestan −1. În schimb pădurea cere puieții din tabelele de mai jos.
 
 ## 3. Speciile
 
@@ -36,11 +37,12 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
 |---|---|---|---:|---|---|
 | Qp | Stejar pufos | *Quercus pubescens* | 36 | arborele-cheie al silvostepei dobrogene; 100 % rezistent la secetă | 3 oferte, de la 1.00 lei |
-| Qb | Stejar brumăriu | *Quercus pedunculiflora* | 26 | stejarul de stepă al Dobrogei, frunze brumării | 8 oferte, de la 0.90 lei |
+| Qb | Stejar brumăriu | *Quercus pedunculiflora* | 25 | stejarul de stepă al Dobrogei, frunze brumării | 8 oferte, de la 0.90 lei |
 | Tt | Tei argintiu | *Tilia tomentosa* | 21 | crește repede, umbră, albine în iunie | 1 oferte, de la 2.50 lei |
 | Qc | Cer | *Quercus cerris* | 16 | stejar rapid, tolerant la calcar | 7 oferte, de la 0.90 lei |
 | Um | Ulm de câmp | *Ulmus minor* | 16 | autohton, rapid; puțini, din cauza grafiozei | 2 oferte, de la 0.90 lei |
 | St | Sorb | *Sorbus torminalis* | 11 | rar, fructe pentru păsări, roșu toamna | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Pn | Pin negru | *Pinus nigra* | 32 | conifer, singura specie verde iarna: ține crivățul când foioasele sunt desfrunzite; preluat din planul perdelei de est | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 
 ### Strat B — arbori mici
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
@@ -81,7 +83,7 @@ Pentru speciile care nu se găsesc la pepiniere (cărpiniță, salbă râioasă,
 
 ## 4. Pregătire, plantare, întreținere
 
-Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), cu două deosebiri: **afânarea solului se face între arborii existenți, nu peste ei** (excavatorul nu intră la mai puțin de 1,5 m de trunchiurile pinilor, frasinilor, duzilor; acolo se sapă manual gropi individuale), iar **compostul nu se îngroapă lângă trunchiuri**, se întinde pe sol. Cantități: **30–40 m³ de compost**, mulci 15–20 cm (≈ 55 m³ tocătură sau 120 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 6 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 852 de puieți în două zile.
+Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), scalate la suprafață. Pinii negri se iau cu balot sau din container (nu rădăcină nudă) și se plantează în interior, la cel puțin 2 m unul de altul. Cantități: **30–40 m³ de compost**, mulci 15–20 cm (≈ 55 m³ tocătură sau 120 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 6 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 883 de puieți în două zile.
 
 Zăpada: perdeaua densă de pe nord-est depune troianul la 15–45 m în curte, spre livadă; să nu fie acolo o alee de acces de iarnă.
 
@@ -91,13 +93,15 @@ Legătura cu irigarea planului nord: zona preia vana V2 (est, uscat) și o parte
 
 | | lei |
 |---|---:|
-| puieți din pepiniere silvice (≈ 420 buc.) | 500–650 |
-| puieți din pepiniere ornamentale (≈ 430 buc., 4–8 lei) | 1 700–3 500 |
+| puieți din pepiniere silvice (≈ 460 buc., inclusiv pin negru) | 600–800 |
+| puieți din pepiniere ornamentale (≈ 420 buc., 4–8 lei) | 1 700–3 400 |
 | compost / gunoi fermentat 35 m³, cu transport | 4 000–7 000 |
 | mulci | 1 800–3 500 |
 | excavator mic, 2–3 zile | 1 600–3 600 |
 | plasă de iepuri 55 m + țăruși | 650–900 |
 | băncuță | 300–800 |
 | **Total** | **≈ 10 500–20 000** |
+
+Din comenzile de noiembrie ale planului nord dispar cele 31 de plante ale perdelei din acest colț (≈ 150–300 lei).
 
 Fără manoperă și fără apă.
