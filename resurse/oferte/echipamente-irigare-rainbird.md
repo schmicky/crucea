@@ -19,28 +19,28 @@ Rețeaua Wi-Fi trebuie să ajungă la magazie; dacă semnalul e slab, un repetor
 | Nr. | Echipament | Buc. | Preț orientativ | Link |
 |---:|---|---:|---:|---|
 | 6 | Electrovană Rain Bird **100-DV**, 1" FI, 24 V AC | 8 | 125–170 lei/buc | [mag-irigatii.ro](https://www.mag-irigatii.ro/electrovana-irigatii-24V-100-DV) · [irigatii.ro](https://irigatii.ro/electrovana-dv-100-rain-bird-24-v) · [eMAG](https://www.emag.ro/electrovana-sisteme-irigatii-24v-rain-bird-100-dv-fi-1-rainbird/pd/DJLHYVMBM/) |
-| 7 | Cămin standard Rain Bird pentru 3–4 electrovane (50 × 37 × 30 cm) | 3 | ≈ 150–200 lei/buc | [gardenium.ro](https://gardenium.ro/irigatii/cutii-electrovane-si-distribuitoare/cutie-standard-rain-bird-pentru-electrovane.html) · [irigatii.ro (jumbo)](https://irigatii.ro/camin-electrovane-jumbo-rainbird) |
-| 8 | Conectori etanși cu gel Rain Bird **DBRY-6** (2 per vană + rezervă) | 20 | ≈ 8–12 lei/buc | [irigarden.ro](https://irigarden.ro/produs/conectori-electrici-cabluri-irigatii/) |
-| 9 | Teu distribuitor pentru electrovane (intrare comună în cămin) | 3 | | [irigarden.ro](https://irigarden.ro/produs/teu-distribuitor-electrovalve-rain-bird/) |
+| 7 | Cămin jumbo Rain Bird (toate cele 8 electrovane, lângă sursă) sau 2 cămine standard | 1 (sau 2) | ≈ 250–400 lei | [gardenium.ro](https://gardenium.ro/irigatii/cutii-electrovane-si-distribuitoare/cutie-standard-rain-bird-pentru-electrovane.html) · [irigatii.ro (jumbo)](https://irigatii.ro/camin-electrovane-jumbo-rainbird) |
+| 8 | Conectori etanși cu gel Rain Bird **DBRY-6** (2 per vană + rezervă; în cămin, nu în pământ) | 20 | ≈ 8–12 lei/buc | [irigarden.ro](https://irigarden.ro/produs/conectori-electrici-cabluri-irigatii/) |
+| 9 | Teu distribuitor 1" pentru electrovane (distribuitorul central: 8 ieșiri) | 8 | | [irigarden.ro](https://irigarden.ro/produs/teu-distribuitor-electrovalve-rain-bird/) |
 | 10 | Niplu dublu 1" + racorduri olandeze pentru montarea vanelor demontabil | 8 + 16 | | Dedeman, raionul instalații |
 
-Căminele propuse: C1 la nord (V1, V2, V3), C2 la sud (V4, V8), C3 lângă casă (V5, V6, V7). Pe schemă electrovanele sunt desenate la intrarea fiecărei zone; gruparea în 3 cămine scurtează cablul și ușurează întreținerea.
+**Distribuitor central**: toate cele 8 electrovane stau în căminul de lângă sursă, pe un distribuitor din teuri de 1", la 2 m de programator. De la fiecare vană pleacă o țeavă de 25 mm până la zona ei. Cablul se reduce la câțiva metri, fără conectori în pământ.
 
-## 3. Conducta principală și cablul (Dedeman)
+## 3. Țevile zonelor și cablul (Dedeman)
 
 | Nr. | Material | Cant. | Preț orientativ | Link |
 |---:|---|---:|---:|---|
-| 11 | Țeavă PEHD apă PE80, D 32 mm, PN 6, colac 50 m | 7 colaci (350 m) | ≈ 3,5–4,5 lei/m | [Dedeman](https://www.dedeman.ro/ro/teava-pehd-apa-pe80-d-32-mm-pn-6-colac-50-m/p/2013913) |
-| 12 | Teu compresiune egal PEHD D 32 | 8 | | [Dedeman](https://www.dedeman.ro/ro/teu-compresiune-egal-pehd-d-32-mm/p/2002037) |
-| 13 | Teu compresiune PEHD 32 × 1" FI (derivație spre electrovană) | 8 | | [Dedeman (varianta 3/4")](https://www.dedeman.ro/ro/teu-compresiune-pehd-filet-interior-d-32-mm-x-3/4/p/2002089) — se cere varianta 32 × 1" |
-| 14 | Cot compresiune PEHD D 32, 90° | 10 | | [Dedeman](https://www.dedeman.ro/ro/cot-compresiune-pehd-d-32-mm-90-grade/p/2002022) |
-| 15 | Racord compresiune PEHD 32 × 1" FE (la filtru și la vane) | 10 | | [Dedeman (3/4")](https://www.dedeman.ro/ro/racord-compresiune-pehd-filet-exterior-d-32-mm-x-3/4/p/2002083) — se cere 32 × 1" |
-| 16 | Mufe compresiune D 32 (înnădiri colaci), dopuri D 32 | 8 + 4 | | [Dedeman — fitinguri PEHD](https://www.dedeman.ro/ro/fitinguri-pehd/c/890) |
-| 17 | Robinet apă PEHD mufă–mufă DN 32 (golire la capătul fiecărei zone) | 8 | | [Dedeman](https://www.dedeman.ro/ro/robinet-apa-pehd-mufa-mufa-dn32-pn-10/p/2016943) |
-| 18 | Cablu 24 V pentru vane: **Irricable 9 fire 0,8 mm** (specializat) sau **2 × MYYM 5 × 0,75** de la Dedeman (10 fire, mai ieftin) | 350 m | Irricable ≈ 19 lei/m; MYYM ≈ 4–5 lei/m × 2 | [irigatii.ro](https://irigatii.ro/cablu-electric-0,8-mm-irricable-9-fire) · [Dedeman MYYM 5 × 0,75](https://www.dedeman.ro/ro/cablu-electric-myym-5-x-0-75-mmp-vml-t-cupru/p/1044534) |
-| 19 | Tub gofrat / copex 20 mm pentru cablul îngropat | 350 m | ≈ 1,5 lei/m | Dedeman, electrice |
+| 11 | Țeavă PEHD apă PE80, **D 25 mm**, PN 6, colac 50 m — 8 trasee de la cămin la zone (14–75 m fiecare) | 7 colaci (350 m) | ≈ 2,5–3,5 lei/m | [Dedeman, categoria țevi PEHD](https://www.dedeman.ro/ro/fitinguri-pehd/c/890) (varianta de 32 mm: [link](https://www.dedeman.ro/ro/teava-pehd-apa-pe80-d-32-mm-pn-6-colac-50-m/p/2013913)) |
+| 12 | Racord compresiune 25 × 1" FE (ieșirea fiecărei vane) | 8 | | Dedeman, fitinguri PEHD 25 |
+| 13 | Racord compresiune 25 × 3/4" FE (capătul zonei, spre tubul de 16 mm) | 8 | | Dedeman, fitinguri PEHD 25 |
+| 14 | Coturi și mufe compresiune D 25 | 16 + 8 | | Dedeman, fitinguri PEHD 25 |
+| 15 | Distribuitor: 8 teuri alamă 1" FI + nipluri 1" + 2 dopuri (sau distribuitorul Rain Bird de la poz. 9) | set | | Dedeman, raionul instalații |
+| 16 | Racord compresiune 32 × 1" de la filtru la distribuitor + 2 m țeavă 32 | 2 | | [Dedeman](https://www.dedeman.ro/ro/racord-compresiune-pehd-filet-exterior-d-32-mm-x-3/4/p/2002083) — se cere 32 × 1" |
+| 17 | Robinet de golire la capătul fiecărei zone (robinet PEHD DN 25 sau robinet 3/4" pe tubul de 16) | 8 | | [Dedeman (varianta DN 32)](https://www.dedeman.ro/ro/robinet-apa-pehd-mufa-mufa-dn32-pn-10/p/2016943) |
+| 18 | Cablu 24 V programator → cămin: **2 × MYYM 5 × 0,75** (10 fire) | 5 m | ≈ 50 lei | [irigatii.ro](https://irigatii.ro/cablu-electric-0,8-mm-irricable-9-fire) · [Dedeman MYYM 5 × 0,75](https://www.dedeman.ro/ro/cablu-electric-myym-5-x-0-75-mmp-vml-t-cupru/p/1044534) |
+| 19 | Copex 20 mm pentru cei 5 m de cablu | 5 m | | Dedeman, electrice |
 
-Cablul MYYM nu e făcut pentru îngropare directă, de aceea merge în copex, în același șanț cu țeava. Cu 3 cămine, cablul real e mai scurt decât 350 m: se cumpără după traseul final.
+Cele 8 țevi de 25 mm pleacă împreună din cămin, în același șanț, și se despart treptat spre zone; se marchează fiecare cu bandă colorată la ambele capete. Debitul unei zone (max. 464 l/h) curge prin 25 mm cu 0,3 m/s, pierdere sub 0,3 bar pe 100 m.
 
 ## 4. Liniile de picurare
 
@@ -63,16 +63,16 @@ Cablul MYYM nu e făcut pentru îngropare directă, de aceea merge în copex, î
 |---|---:|
 | automatizare (1–5) | 1 900–2 200 |
 | electrovane și cămine (6–10) | 1 700–2 100 |
-| principală, fitinguri, cablu (11–19) | 3 000–4 500 (cu MYYM) / 8 000+ (cu Irricable) |
+| țevi de 25 mm, fitinguri, cablu (11–19) | 1 800–2 600 |
 | linii de picurare (20–29) | 2 300–3 000 |
-| **Total** | **≈ 9 000–12 000 lei** |
+| **Total** | **≈ 7 500–10 000 lei** |
 
 Fără manoperă și fără săpătura șanțurilor (≈ 350 m, 40 cm adâncime).
 
 ## Montaj — ordinea
 
-1. Șanțul principalei de la sursă la cele 3 cămine; țeava și copexul cu cablul în același șanț; cămine la nivelul solului.
-2. Vanele în cămine, pe niplu și olandez (demontabile), cablul conectat cu DBRY-6; firul comun (de obicei alb) la toate vanele.
+1. Căminul jumbo lângă magazie, la 1–2 m de sursă; distribuitorul din teuri de 1" cu cele 8 vane pe nipluri și olandeze (demontabile); cablul de 5 m de la programator, conectat cu DBRY-6; firul comun la toate vanele.
+2. Șanțul comun din cămin, din care se desprind pe rând cele 8 țevi de 25 mm spre zone; fiecare țeavă marcată cu culoarea zonei la ambele capete.
 3. Filtrul PRF-100-RBY și robinetul la sursă, programatorul în magazie, LNK2 înfipt în programator, aplicația Rain Bird pe telefon, senzorul de ploaie legat la bornele SENS.
 4. Tubul de 16 mm pe fiecare zonă, de la ieșirea vanei, întins pe zi caldă, agrafe la 2 m; picurătoarele perforate la fiecare plantă conform numărului de pe schemă; dopuri la capete.
 5. Spălare (fără dopuri, 5 minute pe zonă), apoi dopuri, test pe zonă din aplicație, mulci peste tub.
