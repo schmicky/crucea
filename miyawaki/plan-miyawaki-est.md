@@ -19,15 +19,15 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 | | |
 |---|---:|
 | suprafață | 305.9 m², din care ≈ 12 m² alee și luminiș |
-| puieți | 868 |
+| puieți | 858 |
 | densitate | 3 / m² |
 | specii | 30 (cele 29 din celelalte variante + pin negru) |
-| arbori mari (A) | 155 |
-| arbori mici (B) | 209 |
-| subarboret (C) | 209 |
-| arbuști, manta (D) | 295 |
+| arbori mari (A) | 153 |
+| arbori mici (B) | 207 |
+| subarboret (C) | 207 |
+| arbuști, manta (D) | 291 |
 
-**Aleea** de 80 cm urmează traseul măsurat („Traseu 1”, 5 puncte, 13,8 m), netezit în curbe: intră de pe latura de sud-vest, urcă spre nord, cotește spre est și se întoarce spre sud-est, în cârlig, așa că **băncuța nu se vede de la intrare**; o descoperi după ultima curbă, într-un **luminiș rotund de 2,6 m**. Băncuța de 1,6 m stă de-a curmezișul, cu fața înapoi spre alee. Arborii mari stau la peste 1,3 m de alee, arborii mici la peste 0,9 m; luminișul e înconjurat de arbuști și subarboret, deci la 4–5 ani băncuța e într-o cameră verde, nu sub coroane.
+**Aleea** de 80 cm e un traseu propus (6 puncte, 17,5 m), netezit în curbe: **intră dinspre nord-vest**, de pe latura 2–3 a poligonului, lângă colțul de vest, urcă spre nord-est, cotește spre est și se întoarce spre sud-vest, în cârlig, până lângă **centrul pădurii**, într-un **luminiș rotund de 2,6 m** cu băncuța de 1,6 m, de-a curmezișul, cu fața înapoi spre alee. **Interiorul cârligului** (≈ 35 m², între brațul de intrare și cel de întoarcere) e plantat numai cu arbuști și subarboret, cu speciile cele mai dese pe margine (lemn câinesc, porumbar, păducel, corn, sânger, dârmox, scumpie), fără niciun arbore mic sau mare: un perete verde compact de la sol, care ascunde băncuța de la intrare și de pe primul braț. Pozițiile aleii sunt în `plantare-miyawaki-est.json` (cheile `poteca`, `poteca_pct`, `carlig`) și se pot muta în aplicația planului nord. Arborii mari stau la peste 1,3 m de alee, arborii mici la peste 0,9 m; luminișul e înconjurat de arbuști și subarboret, deci la 4–5 ani băncuța e într-o cameră verde, nu sub coroane.
 
 **De modificat în planul nord:** cele 31 de plante ale perdelei de est din interiorul poligonului se șterg din `pozitie-nord.json` (lista e în `plantare-miyawaki-est.json`, cheia `plante_plan_nord_in_zona`), iar comenzile de noiembrie scad cu ele: pin negru −4, frasin −5, dud alb −4, sălcioară −9, corn −3, păducel −2, stejar pufos −1, măceș −1, pom de stafide −1, ulm de Turkestan −1. În schimb pădurea cere puieții din tabelele de mai jos.
 
@@ -36,11 +36,11 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 ### Strat A — arbori mari
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
 |---|---|---|---:|---|---|
-| Qp | Stejar pufos | *Quercus pubescens* | 35 | arborele-cheie al silvostepei dobrogene; 100 % rezistent la secetă | 3 oferte, de la 1.00 lei |
+| Qp | Stejar pufos | *Quercus pubescens* | 36 | arborele-cheie al silvostepei dobrogene; 100 % rezistent la secetă | 3 oferte, de la 1.00 lei |
 | Qb | Stejar brumăriu | *Quercus pedunculiflora* | 26 | stejarul de stepă al Dobrogei, frunze brumării | 8 oferte, de la 0.90 lei |
-| Tt | Tei argintiu | *Tilia tomentosa* | 21 | crește repede, umbră, albine în iunie | 1 oferte, de la 2.50 lei |
-| Qc | Cer | *Quercus cerris* | 16 | stejar rapid, tolerant la calcar | 7 oferte, de la 0.90 lei |
-| Um | Ulm de câmp | *Ulmus minor* | 16 | autohton, rapid; puțini, din cauza grafiozei | 2 oferte, de la 0.90 lei |
+| Tt | Tei argintiu | *Tilia tomentosa* | 20 | crește repede, umbră, albine în iunie | 1 oferte, de la 2.50 lei |
+| Qc | Cer | *Quercus cerris* | 15 | stejar rapid, tolerant la calcar | 7 oferte, de la 0.90 lei |
+| Um | Ulm de câmp | *Ulmus minor* | 15 | autohton, rapid; puțini, din cauza grafiozei | 2 oferte, de la 0.90 lei |
 | St | Sorb | *Sorbus torminalis* | 10 | rar, fructe pentru păsări, roșu toamna | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Pn | Pin negru | *Pinus nigra* | 31 | conifer, singura specie verde iarna: ține crivățul când foioasele sunt desfrunzite; preluat din planul perdelei de est | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 
@@ -51,8 +51,8 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 | Ac | Jugastru | *Acer campestre* | 36 | umple stratul mijlociu, galben toamna | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | At | Arțar tătăresc | *Acer tataricum* | 36 | samare roșii, tipic silvostepei | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Co | Cărpiniță | *Carpinus orientalis* | 36 | arborele Dobrogei de piatră; frunziș des, ține umbra | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Pp | Păr sălbatic | *Pyrus pyraster* | 21 | flori în aprilie, pere mici pentru păsări | 1 oferte, de la 2.50 lei |
-| Pm | Vișin turcesc | *Prunus mahaleb* | 21 | parfum, fructe, calcar | 1 oferte, de la 1.00 lei |
+| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | flori în aprilie, pere mici pentru păsări | 1 oferte, de la 2.50 lei |
+| Pm | Vișin turcesc | *Prunus mahaleb* | 20 | parfum, fructe, calcar | 1 oferte, de la 1.00 lei |
 | Pa | Cireș sălbatic | *Prunus avium* | 10 | crește repede, flori, cireșe pentru păsări | 6 oferte, de la 0.93 lei |
 | Ms | Măr pădureț | *Malus sylvestris* | 8 | flori roz, mere mici iarna pentru păsări | 2 oferte, de la 1.50 lei |
 
@@ -63,27 +63,27 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 | Cr | Păducel | *Crataegus monogyna* | 46 | cuiburi, flori, fructe; ghimpos | 2 oferte, de la 1.00 lei |
 | Ca | Alun | *Corylus avellana* | 31 | alune, umbră deasă la sol | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Cs | Sânger | *Cornus sanguinea* | 31 | ramuri roșii iarna, fructe pentru păsări | 2 oferte, de la 1.02 lei |
-| Cc | Scumpie | *Cotinus coggygria* | 34 | roșu toamna, calcar uscat | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Pc | Corcoduș | *Prunus cerasifera* | 21 | primul înflorit, fructe | 4 oferte, de la 0.80 lei |
+| Cc | Scumpie | *Cotinus coggygria* | 33 | roșu toamna, calcar uscat | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Pc | Corcoduș | *Prunus cerasifera* | 20 | primul înflorit, fructe | 4 oferte, de la 0.80 lei |
 
 ### Strat D — arbuști și manta
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
 |---|---|---|---:|---|---|
-| Lv | Lemn câinesc | *Ligustrum vulgare* | 57 | manta deasă, semipersistent | 2 oferte, de la 1.00 lei |
+| Lv | Lemn câinesc | *Ligustrum vulgare* | 56 | manta deasă, semipersistent | 2 oferte, de la 1.00 lei |
 | Ps | Porumbar | *Prunus spinosa* | 46 | manta ghimpoasă, flori în martie | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Vl | Dârmox | *Viburnum lantana* | 41 | frunze pâsloase, fructe roșii-negre | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Rc | Măceș | *Rosa canina* | 41 | măceșe, adăpost | 5 oferte, de la 1.00 lei |
 | Ev | Salbă râioasă | *Euonymus verrucosus* | 26 | arbust de pădure de stejar; fructe toxice | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Rh | Verigar | *Rhamnus cathartica* | 26 | fluturi (lămâița), fructe pentru păsări | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Jf | Iasomie sălbatică | *Jasminum fruticans* | 21 | specie dobrogeană, flori galbene | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Sn | Soc | *Sambucus nigra* | 16 | flori, fructe; crește repede | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Cl | Bășicoasă | *Colutea arborescens* | 21 | fixează azot, păstăi pentru copii | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Jf | Iasomie sălbatică | *Jasminum fruticans* | 20 | specie dobrogeană, flori galbene | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Sn | Soc | *Sambucus nigra* | 15 | flori, fructe; crește repede | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Cl | Bășicoasă | *Colutea arborescens* | 20 | fixează azot, păstăi pentru copii | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 
 Pentru speciile care nu se găsesc la pepiniere (cărpiniță, salbă râioasă, verigar, iasomie sălbatică, bășicoasă), înlocuitorii sunt în `resurse/oferte/pepiniere-mizil-cobadin.md`.
 
 ## 4. Pregătire, plantare, întreținere
 
-Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), scalate la suprafață. Pinii negri se iau cu balot sau din container (nu rădăcină nudă) și se plantează în interior, la cel puțin 2 m unul de altul. Cantități: **30–40 m³ de compost**, mulci 15–20 cm (≈ 55 m³ tocătură sau 120 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 6 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 868 de puieți în două zile.
+Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), scalate la suprafață. Pinii negri se iau cu balot sau din container (nu rădăcină nudă) și se plantează în interior, la cel puțin 2 m unul de altul. Cantități: **30–40 m³ de compost**, mulci 15–20 cm (≈ 55 m³ tocătură sau 120 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 6 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 858 de puieți în două zile.
 
 Zăpada: perdeaua densă de pe nord-est depune troianul la 15–45 m în curte, spre livadă; să nu fie acolo o alee de acces de iarnă.
 
