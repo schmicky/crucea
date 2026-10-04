@@ -11,6 +11,8 @@ Pentru schema din `time-lapse/irigare-plan-nord.md`: 8 zone, 550 de picurătoare
 | 3 | Senzor de ploaie Rain Bird **RSD-BEx** (cu fir, pe streașina magaziei) | 1 | 180–250 lei | [Altex](https://altex.ro/senzor-de-ploaie-rsd-bex-pentru-programatoarele-rain-bird/cpd/6820BC313D9DA/) · [gardenpedia.ro](https://www.gardenpedia.ro/senzor-de-ploaie-rsd-bex-pentru-sisteme-de-irigare-automate-rainbird-35786.html) |
 | 4 | Filtru Y cu regulator de presiune Rain Bird **PRF-100-RBY**, 1", 2,8 bar, 75 µm | 1 | 108–144 lei | [magazinirigatii.ro](https://magazinirigatii.ro/filtru-y-cu-regulator-de-presiune-1-fe-rain-bird.html) · [gardenium.ro](https://gardenium.ro/irigare-picurare/programatoare-picurare/filtru-cu-sita-si-regulator-de-presiune-rainbird-rby-2-8-bar-1.html) |
 | 5 | Robinet sferic alamă 1" FI-FI, înaintea filtrului (izolare + golire de iarnă) | 1 | ≈ 40 lei | [Dedeman](https://www.dedeman.ro/ro/robinet-sfera-ferro-alama-filet-interior-interior-1-pn25/p/2024489) |
+| 5b | Racord de aer pentru suflarea de toamnă: teu 1" + robinet 1/2" + niplu cu cuplă rapidă pneumatică (după robinetul general, înaintea colectorului) | 1 set | ≈ 40 lei | Dedeman, raionul instalații / scule pneumatice |
+| 5c | Compresor de aer 24–50 l (dacă nu există), reglat la 2–2,5 bar | 1 | 400–600 lei | Dedeman, scule |
 
 Rețeaua Wi-Fi trebuie să ajungă la magazie; dacă semnalul e slab, un repetor de 60–100 lei rezolvă. LNK2 merge pe 2,4 GHz.
 
