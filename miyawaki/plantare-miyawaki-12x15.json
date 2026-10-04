@@ -1,0 +1,4865 @@
+{
+ "latime_m": 12.0,
+ "lungime_m": 15.0,
+ "poteca": [
+  {
+   "x": 7.47,
+   "y": 0.0
+  },
+  {
+   "x": 7.63,
+   "y": 0.25
+  },
+  {
+   "x": 7.79,
+   "y": 0.5
+  },
+  {
+   "x": 7.93,
+   "y": 0.75
+  },
+  {
+   "x": 8.06,
+   "y": 1.0
+  },
+  {
+   "x": 8.18,
+   "y": 1.25
+  },
+  {
+   "x": 8.28,
+   "y": 1.5
+  },
+  {
+   "x": 8.37,
+   "y": 1.75
+  },
+  {
+   "x": 8.45,
+   "y": 2.0
+  },
+  {
+   "x": 8.51,
+   "y": 2.25
+  },
+  {
+   "x": 8.56,
+   "y": 2.5
+  },
+  {
+   "x": 8.59,
+   "y": 2.75
+  },
+  {
+   "x": 8.6,
+   "y": 3.0
+  },
+  {
+   "x": 8.6,
+   "y": 3.25
+  },
+  {
+   "x": 8.58,
+   "y": 3.5
+  },
+  {
+   "x": 8.54,
+   "y": 3.75
+  },
+  {
+   "x": 8.49,
+   "y": 4.0
+  },
+  {
+   "x": 8.43,
+   "y": 4.25
+  },
+  {
+   "x": 8.35,
+   "y": 4.5
+  },
+  {
+   "x": 8.25,
+   "y": 4.75
+  },
+  {
+   "x": 8.15,
+   "y": 5.0
+  },
+  {
+   "x": 8.02,
+   "y": 5.25
+  },
+  {
+   "x": 7.89,
+   "y": 5.5
+  },
+  {
+   "x": 7.74,
+   "y": 5.75
+  },
+  {
+   "x": 7.59,
+   "y": 6.0
+  },
+  {
+   "x": 7.42,
+   "y": 6.25
+  },
+  {
+   "x": 7.25,
+   "y": 6.5
+  },
+  {
+   "x": 7.06,
+   "y": 6.75
+  },
+  {
+   "x": 6.87,
+   "y": 7.0
+  },
+  {
+   "x": 6.68,
+   "y": 7.25
+  },
+  {
+   "x": 6.48,
+   "y": 7.5
+  },
+  {
+   "x": 6.28,
+   "y": 7.75
+  },
+  {
+   "x": 6.07,
+   "y": 8.0
+  },
+  {
+   "x": 5.87,
+   "y": 8.25
+  },
+  {
+   "x": 5.67,
+   "y": 8.5
+  },
+  {
+   "x": 5.46,
+   "y": 8.75
+  },
+  {
+   "x": 5.27,
+   "y": 9.0
+  },
+  {
+   "x": 5.07,
+   "y": 9.25
+  },
+  {
+   "x": 4.89,
+   "y": 9.5
+  },
+  {
+   "x": 4.7,
+   "y": 9.75
+  },
+  {
+   "x": 4.53,
+   "y": 10.0
+  },
+  {
+   "x": 4.37,
+   "y": 10.25
+  },
+  {
+   "x": 4.21,
+   "y": 10.5
+  },
+  {
+   "x": 4.07,
+   "y": 10.75
+  },
+  {
+   "x": 3.94,
+   "y": 11.0
+  },
+  {
+   "x": 3.82,
+   "y": 11.25
+  },
+  {
+   "x": 3.72,
+   "y": 11.5
+  },
+  {
+   "x": 3.63,
+   "y": 11.75
+  },
+  {
+   "x": 3.55,
+   "y": 12.0
+  },
+  {
+   "x": 3.49,
+   "y": 12.25
+  },
+  {
+   "x": 3.44,
+   "y": 12.5
+  },
+  {
+   "x": 3.41,
+   "y": 12.75
+  },
+  {
+   "x": 3.4,
+   "y": 13.0
+  },
+  {
+   "x": 3.4,
+   "y": 13.25
+  },
+  {
+   "x": 3.42,
+   "y": 13.5
+  },
+  {
+   "x": 3.46,
+   "y": 13.75
+  },
+  {
+   "x": 3.51,
+   "y": 14.0
+  },
+  {
+   "x": 3.57,
+   "y": 14.25
+  },
+  {
+   "x": 3.65,
+   "y": 14.5
+  },
+  {
+   "x": 3.75,
+   "y": 14.75
+  },
+  {
+   "x": 3.85,
+   "y": 15.0
+  }
+ ],
+ "loc_stat": {
+  "x": 5.87,
+  "y": 8.25,
+  "r": 1.2
+ },
+ "plante": [
+  {
+   "nr": 1,
+   "x": 6.62,
+   "y": 10.73,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 2,
+   "x": 3.14,
+   "y": 6.31,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 3,
+   "x": 7.06,
+   "y": 3.29,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 4,
+   "x": 6.41,
+   "y": 5.13,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 5,
+   "x": 1.27,
+   "y": 13.48,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 6,
+   "x": 7.28,
+   "y": 8.76,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 7,
+   "x": 10.06,
+   "y": 3.0,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 8,
+   "x": 0.83,
+   "y": 0.41,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 9,
+   "x": 10.97,
+   "y": 14.34,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 10,
+   "x": 11.56,
+   "y": 7.59,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 11,
+   "x": 5.47,
+   "y": 14.62,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 12,
+   "x": 0.97,
+   "y": 9.63,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 13,
+   "x": 10.35,
+   "y": 10.93,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 14,
+   "x": 4.77,
+   "y": 0.7,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 15,
+   "x": 0.54,
+   "y": 3.77,
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A"
+  },
+  {
+   "nr": 16,
+   "x": 4.81,
+   "y": 7.22,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 17,
+   "x": 2.71,
+   "y": 10.34,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 18,
+   "x": 2.73,
+   "y": 3.95,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 19,
+   "x": 4.87,
+   "y": 13.32,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 20,
+   "x": 11.59,
+   "y": 1.23,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 21,
+   "x": 11.59,
+   "y": 10.58,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 22,
+   "x": 10.17,
+   "y": 5.95,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 23,
+   "x": 6.8,
+   "y": 0.85,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 24,
+   "x": 9.59,
+   "y": 14.63,
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A"
+  },
+  {
+   "nr": 25,
+   "x": 8.84,
+   "y": 8.74,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 26,
+   "x": 1.34,
+   "y": 2.17,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 27,
+   "x": 9.53,
+   "y": 6.07,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 28,
+   "x": 1.53,
+   "y": 5.97,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 29,
+   "x": 1.88,
+   "y": 11.65,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 30,
+   "x": 6.55,
+   "y": 1.74,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 31,
+   "x": 4.84,
+   "y": 5.73,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 32,
+   "x": 10.59,
+   "y": 7.36,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 33,
+   "x": 5.43,
+   "y": 12.0,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 34,
+   "x": 1.35,
+   "y": 9.16,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 35,
+   "x": 3.73,
+   "y": 8.2,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 36,
+   "x": 11.47,
+   "y": 14.19,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 37,
+   "x": 11.51,
+   "y": 1.72,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 38,
+   "x": 8.09,
+   "y": 14.39,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 39,
+   "x": 11.28,
+   "y": 10.87,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 40,
+   "x": 0.97,
+   "y": 14.34,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 41,
+   "x": 3.79,
+   "y": 0.84,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 42,
+   "x": 7.32,
+   "y": 4.31,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 43,
+   "x": 8.31,
+   "y": 11.77,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 44,
+   "x": 4.93,
+   "y": 14.48,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 45,
+   "x": 6.26,
+   "y": 9.65,
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A"
+  },
+  {
+   "nr": 46,
+   "x": 2.25,
+   "y": 7.88,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 47,
+   "x": 9.73,
+   "y": 10.01,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 48,
+   "x": 8.61,
+   "y": 11.33,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 49,
+   "x": 10.71,
+   "y": 13.25,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 50,
+   "x": 11.65,
+   "y": 0.45,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 51,
+   "x": 3.53,
+   "y": 0.45,
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A"
+  },
+  {
+   "nr": 52,
+   "x": 8.91,
+   "y": 12.99,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 53,
+   "x": 7.03,
+   "y": 13.21,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 54,
+   "x": 5.07,
+   "y": 3.73,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 55,
+   "x": 10.56,
+   "y": 1.54,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 56,
+   "x": 3.35,
+   "y": 1.47,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 57,
+   "x": 10.75,
+   "y": 4.46,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 58,
+   "x": 8.7,
+   "y": 7.25,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 59,
+   "x": 0.62,
+   "y": 9.9,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 60,
+   "x": 1.61,
+   "y": 14.65,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 61,
+   "x": 0.56,
+   "y": 5.34,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 62,
+   "x": 4.4,
+   "y": 7.87,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 63,
+   "x": 11.39,
+   "y": 10.01,
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A"
+  },
+  {
+   "nr": 64,
+   "x": 4.82,
+   "y": 2.16,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 65,
+   "x": 10.16,
+   "y": 11.36,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 66,
+   "x": 0.54,
+   "y": 14.65,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 67,
+   "x": 11.56,
+   "y": 4.03,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 68,
+   "x": 0.77,
+   "y": 7.72,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 69,
+   "x": 6.05,
+   "y": 14.61,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 70,
+   "x": 7.32,
+   "y": 7.52,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 71,
+   "x": 0.4,
+   "y": 0.95,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 72,
+   "x": 3.05,
+   "y": 11.28,
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A"
+  },
+  {
+   "nr": 73,
+   "x": 1.97,
+   "y": 12.79,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 74,
+   "x": 10.3,
+   "y": 4.88,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 75,
+   "x": 10.46,
+   "y": 6.41,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 76,
+   "x": 8.29,
+   "y": 7.5,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 77,
+   "x": 6.1,
+   "y": 3.21,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 78,
+   "x": 2.8,
+   "y": 7.86,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 79,
+   "x": 4.13,
+   "y": 8.74,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 80,
+   "x": 5.15,
+   "y": 6.08,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 81,
+   "x": 1.44,
+   "y": 14.23,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 82,
+   "x": 3.93,
+   "y": 5.35,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 83,
+   "x": 9.6,
+   "y": 11.9,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 84,
+   "x": 3.11,
+   "y": 2.49,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 85,
+   "x": 1.85,
+   "y": 2.82,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 86,
+   "x": 4.25,
+   "y": 2.08,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 87,
+   "x": 2.08,
+   "y": 4.54,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 88,
+   "x": 1.02,
+   "y": 8.86,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 89,
+   "x": 8.09,
+   "y": 10.07,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 90,
+   "x": 5.67,
+   "y": 13.14,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 91,
+   "x": 6.4,
+   "y": 11.45,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 92,
+   "x": 10.14,
+   "y": 7.58,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 93,
+   "x": 10.37,
+   "y": 10.01,
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B"
+  },
+  {
+   "nr": 94,
+   "x": 1.1,
+   "y": 10.27,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 95,
+   "x": 11.07,
+   "y": 1.83,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 96,
+   "x": 11.11,
+   "y": 11.84,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 97,
+   "x": 6.19,
+   "y": 2.21,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 98,
+   "x": 0.77,
+   "y": 13.57,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 99,
+   "x": 4.4,
+   "y": 6.03,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 100,
+   "x": 10.64,
+   "y": 6.91,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 101,
+   "x": 2.65,
+   "y": 1.66,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 102,
+   "x": 8.15,
+   "y": 13.92,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 103,
+   "x": 10.8,
+   "y": 10.06,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 104,
+   "x": 4.68,
+   "y": 11.6,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 105,
+   "x": 8.06,
+   "y": 7.89,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 106,
+   "x": 0.84,
+   "y": 12.36,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 107,
+   "x": 1.4,
+   "y": 2.66,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 108,
+   "x": 8.62,
+   "y": 9.64,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 109,
+   "x": 9.32,
+   "y": 5.68,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 110,
+   "x": 7.69,
+   "y": 12.27,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 111,
+   "x": 2.0,
+   "y": 5.46,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 112,
+   "x": 3.06,
+   "y": 9.13,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 113,
+   "x": 4.47,
+   "y": 13.16,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 114,
+   "x": 5.71,
+   "y": 0.8,
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B"
+  },
+  {
+   "nr": 115,
+   "x": 9.06,
+   "y": 6.08,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 116,
+   "x": 6.77,
+   "y": 4.87,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 117,
+   "x": 3.13,
+   "y": 4.63,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 118,
+   "x": 4.6,
+   "y": 4.29,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 119,
+   "x": 0.83,
+   "y": 5.95,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 120,
+   "x": 2.14,
+   "y": 13.19,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 121,
+   "x": 9.06,
+   "y": 9.43,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 122,
+   "x": 2.29,
+   "y": 11.41,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 123,
+   "x": 9.77,
+   "y": 12.76,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 124,
+   "x": 2.03,
+   "y": 0.76,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 125,
+   "x": 7.77,
+   "y": 8.68,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 126,
+   "x": 3.94,
+   "y": 7.31,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 127,
+   "x": 3.68,
+   "y": 3.27,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 128,
+   "x": 11.04,
+   "y": 2.33,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 129,
+   "x": 7.53,
+   "y": 13.07,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 130,
+   "x": 9.2,
+   "y": 8.18,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 131,
+   "x": 4.82,
+   "y": 13.89,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 132,
+   "x": 10.29,
+   "y": 5.32,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 133,
+   "x": 5.86,
+   "y": 9.79,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 134,
+   "x": 7.23,
+   "y": 10.95,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 135,
+   "x": 2.27,
+   "y": 9.27,
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B"
+  },
+  {
+   "nr": 136,
+   "x": 10.31,
+   "y": 9.36,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 137,
+   "x": 1.7,
+   "y": 13.16,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 138,
+   "x": 6.89,
+   "y": 11.73,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 139,
+   "x": 5.86,
+   "y": 2.76,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 140,
+   "x": 10.97,
+   "y": 1.33,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 141,
+   "x": 10.1,
+   "y": 13.35,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 142,
+   "x": 8.82,
+   "y": 11.78,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 143,
+   "x": 3.19,
+   "y": 6.96,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 144,
+   "x": 9.66,
+   "y": 7.78,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 145,
+   "x": 1.52,
+   "y": 4.76,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 146,
+   "x": 5.23,
+   "y": 13.05,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 147,
+   "x": 2.53,
+   "y": 8.94,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 148,
+   "x": 7.36,
+   "y": 3.0,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 149,
+   "x": 9.88,
+   "y": 10.5,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 150,
+   "x": 1.49,
+   "y": 9.76,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 151,
+   "x": 9.79,
+   "y": 5.39,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 152,
+   "x": 4.62,
+   "y": 6.8,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 153,
+   "x": 7.75,
+   "y": 7.34,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 154,
+   "x": 6.63,
+   "y": 9.89,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 155,
+   "x": 9.09,
+   "y": 6.71,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 156,
+   "x": 6.77,
+   "y": 4.16,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 157,
+   "x": 5.5,
+   "y": 1.29,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 158,
+   "x": 1.03,
+   "y": 2.9,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 159,
+   "x": 10.36,
+   "y": 3.37,
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B"
+  },
+  {
+   "nr": 160,
+   "x": 8.29,
+   "y": 8.84,
+   "cod": "Ms",
+   "ro": "Măr pădureț",
+   "lat": "Malus sylvestris",
+   "strat": "B"
+  },
+  {
+   "nr": 161,
+   "x": 6.1,
+   "y": 10.25,
+   "cod": "Ms",
+   "ro": "Măr pădureț",
+   "lat": "Malus sylvestris",
+   "strat": "B"
+  },
+  {
+   "nr": 162,
+   "x": 5.65,
+   "y": 5.93,
+   "cod": "Ms",
+   "ro": "Măr pădureț",
+   "lat": "Malus sylvestris",
+   "strat": "B"
+  },
+  {
+   "nr": 163,
+   "x": 10.21,
+   "y": 6.99,
+   "cod": "Ms",
+   "ro": "Măr pădureț",
+   "lat": "Malus sylvestris",
+   "strat": "B"
+  },
+  {
+   "nr": 164,
+   "x": 0.71,
+   "y": 2.56,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 165,
+   "x": 1.58,
+   "y": 0.96,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 166,
+   "x": 3.65,
+   "y": 4.78,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 167,
+   "x": 7.32,
+   "y": 12.57,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 168,
+   "x": 11.18,
+   "y": 6.64,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 169,
+   "x": 9.26,
+   "y": 0.91,
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B"
+  },
+  {
+   "nr": 170,
+   "x": 10.3,
+   "y": 10.51,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 171,
+   "x": 7.39,
+   "y": 11.95,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 172,
+   "x": 5.38,
+   "y": 5.57,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 173,
+   "x": 9.4,
+   "y": 8.84,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 174,
+   "x": 2.35,
+   "y": 2.22,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 175,
+   "x": 6.79,
+   "y": 2.09,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 176,
+   "x": 9.56,
+   "y": 1.23,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 177,
+   "x": 10.57,
+   "y": 12.48,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 178,
+   "x": 9.79,
+   "y": 6.69,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 179,
+   "x": 1.34,
+   "y": 6.41,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 180,
+   "x": 1.84,
+   "y": 8.11,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 181,
+   "x": 5.28,
+   "y": 3.19,
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B"
+  },
+  {
+   "nr": 182,
+   "x": 9.87,
+   "y": 10.93,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 183,
+   "x": 7.88,
+   "y": 12.73,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 184,
+   "x": 1.78,
+   "y": 10.13,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 185,
+   "x": 7.88,
+   "y": 9.11,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 186,
+   "x": 10.98,
+   "y": 13.75,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 187,
+   "x": 5.63,
+   "y": 6.57,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 188,
+   "x": 3.7,
+   "y": 9.13,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 189,
+   "x": 10.34,
+   "y": 4.36,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 190,
+   "x": 5.94,
+   "y": 4.5,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 191,
+   "x": 6.5,
+   "y": 13.1,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 192,
+   "x": 4.54,
+   "y": 3.1,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 193,
+   "x": 4.36,
+   "y": 5.5,
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B"
+  },
+  {
+   "nr": 194,
+   "x": 6.17,
+   "y": 1.17,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 195,
+   "x": 4.27,
+   "y": 14.13,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 196,
+   "x": 6.71,
+   "y": 14.62,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 197,
+   "x": 6.78,
+   "y": 9.41,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 198,
+   "x": 7.21,
+   "y": 10.46,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 199,
+   "x": 11.31,
+   "y": 8.61,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 200,
+   "x": 3.25,
+   "y": 5.11,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 201,
+   "x": 1.22,
+   "y": 5.09,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 202,
+   "x": 11.61,
+   "y": 7.06,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 203,
+   "x": 5.95,
+   "y": 4.93,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 204,
+   "x": 2.42,
+   "y": 7.3,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 205,
+   "x": 4.27,
+   "y": 4.58,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 206,
+   "x": 9.78,
+   "y": 4.08,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 207,
+   "x": 3.82,
+   "y": 9.73,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 208,
+   "x": 9.72,
+   "y": 8.25,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 209,
+   "x": 2.19,
+   "y": 9.74,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 210,
+   "x": 1.12,
+   "y": 3.72,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 211,
+   "x": 9.05,
+   "y": 12.17,
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C"
+  },
+  {
+   "nr": 212,
+   "x": 2.83,
+   "y": 14.25,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 213,
+   "x": 1.7,
+   "y": 7.54,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 214,
+   "x": 0.61,
+   "y": 8.28,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 215,
+   "x": 5.23,
+   "y": 2.51,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 216,
+   "x": 2.68,
+   "y": 5.35,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 217,
+   "x": 4.41,
+   "y": 11.93,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 218,
+   "x": 8.52,
+   "y": 12.16,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 219,
+   "x": 8.63,
+   "y": 9.16,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 220,
+   "x": 9.7,
+   "y": 13.5,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 221,
+   "x": 9.61,
+   "y": 0.43,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 222,
+   "x": 10.92,
+   "y": 12.24,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 223,
+   "x": 2.52,
+   "y": 12.7,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 224,
+   "x": 7.84,
+   "y": 3.73,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 225,
+   "x": 5.79,
+   "y": 0.36,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 226,
+   "x": 7.37,
+   "y": 7.94,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 227,
+   "x": 11.59,
+   "y": 2.2,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 228,
+   "x": 11.37,
+   "y": 4.59,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 229,
+   "x": 6.13,
+   "y": 6.56,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 230,
+   "x": 5.58,
+   "y": 5.19,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 231,
+   "x": 9.68,
+   "y": 11.42,
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C"
+  },
+  {
+   "nr": 232,
+   "x": 10.51,
+   "y": 13.75,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 233,
+   "x": 2.24,
+   "y": 8.5,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 234,
+   "x": 2.34,
+   "y": 4.19,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 235,
+   "x": 2.32,
+   "y": 2.76,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 236,
+   "x": 10.97,
+   "y": 3.66,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 237,
+   "x": 9.11,
+   "y": 12.59,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 238,
+   "x": 2.78,
+   "y": 6.65,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 239,
+   "x": 4.06,
+   "y": 13.03,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 240,
+   "x": 5.17,
+   "y": 10.25,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 241,
+   "x": 7.06,
+   "y": 5.47,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 242,
+   "x": 1.67,
+   "y": 0.41,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 243,
+   "x": 11.64,
+   "y": 6.44,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 244,
+   "x": 11.56,
+   "y": 13.02,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 245,
+   "x": 5.04,
+   "y": 1.28,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 246,
+   "x": 10.51,
+   "y": 8.88,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 247,
+   "x": 5.97,
+   "y": 5.58,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 248,
+   "x": 7.79,
+   "y": 3.01,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 249,
+   "x": 3.83,
+   "y": 6.86,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 250,
+   "x": 0.39,
+   "y": 1.62,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 251,
+   "x": 1.26,
+   "y": 5.59,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 252,
+   "x": 5.9,
+   "y": 11.58,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 253,
+   "x": 0.6,
+   "y": 14.12,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 254,
+   "x": 0.57,
+   "y": 4.64,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 255,
+   "x": 10.86,
+   "y": 11.17,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 256,
+   "x": 10.67,
+   "y": 2.09,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 257,
+   "x": 9.15,
+   "y": 9.87,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 258,
+   "x": 4.9,
+   "y": 4.81,
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C"
+  },
+  {
+   "nr": 259,
+   "x": 4.38,
+   "y": 7.36,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 260,
+   "x": 6.42,
+   "y": 2.81,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 261,
+   "x": 10.31,
+   "y": 14.55,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 262,
+   "x": 6.2,
+   "y": 13.95,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 263,
+   "x": 4.2,
+   "y": 3.76,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 264,
+   "x": 4.4,
+   "y": 1.15,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 265,
+   "x": 4.72,
+   "y": 2.72,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 266,
+   "x": 2.0,
+   "y": 3.74,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 267,
+   "x": 5.15,
+   "y": 5.2,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 268,
+   "x": 6.03,
+   "y": 1.73,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 269,
+   "x": 10.78,
+   "y": 10.66,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 270,
+   "x": 6.18,
+   "y": 10.86,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 271,
+   "x": 0.54,
+   "y": 10.38,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 272,
+   "x": 2.65,
+   "y": 12.3,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 273,
+   "x": 10.1,
+   "y": 12.43,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 274,
+   "x": 7.32,
+   "y": 1.82,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 275,
+   "x": 8.54,
+   "y": 12.78,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 276,
+   "x": 9.79,
+   "y": 2.01,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 277,
+   "x": 9.41,
+   "y": 11.07,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 278,
+   "x": 6.43,
+   "y": 5.77,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 279,
+   "x": 6.38,
+   "y": 4.6,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 280,
+   "x": 3.13,
+   "y": 2.01,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 281,
+   "x": 1.73,
+   "y": 6.6,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 282,
+   "x": 4.09,
+   "y": 9.35,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 283,
+   "x": 11.47,
+   "y": 9.07,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 284,
+   "x": 2.46,
+   "y": 10.91,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 285,
+   "x": 11.39,
+   "y": 5.19,
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C"
+  },
+  {
+   "nr": 286,
+   "x": 2.75,
+   "y": 9.44,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 287,
+   "x": 1.01,
+   "y": 4.15,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 288,
+   "x": 3.72,
+   "y": 7.74,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 289,
+   "x": 1.48,
+   "y": 10.5,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 290,
+   "x": 5.52,
+   "y": 4.41,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 291,
+   "x": 3.31,
+   "y": 2.88,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 292,
+   "x": 2.1,
+   "y": 12.36,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 293,
+   "x": 2.8,
+   "y": 4.9,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 294,
+   "x": 11.54,
+   "y": 11.97,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 295,
+   "x": 0.37,
+   "y": 13.76,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 296,
+   "x": 11.6,
+   "y": 3.48,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 297,
+   "x": 7.33,
+   "y": 2.34,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 298,
+   "x": 11.54,
+   "y": 9.52,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 299,
+   "x": 6.13,
+   "y": 12.65,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 300,
+   "x": 6.6,
+   "y": 3.37,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 301,
+   "x": 6.85,
+   "y": 1.31,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 302,
+   "x": 4.57,
+   "y": 1.58,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 303,
+   "x": 9.95,
+   "y": 8.94,
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C"
+  },
+  {
+   "nr": 304,
+   "x": 7.02,
+   "y": 12.19,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 305,
+   "x": 9.19,
+   "y": 14.28,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 306,
+   "x": 8.55,
+   "y": 0.35,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 307,
+   "x": 2.09,
+   "y": 3.31,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 308,
+   "x": 11.01,
+   "y": 9.03,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 309,
+   "x": 4.42,
+   "y": 4.99,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 310,
+   "x": 7.61,
+   "y": 11.37,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 311,
+   "x": 1.14,
+   "y": 13.89,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 312,
+   "x": 8.45,
+   "y": 6.88,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 313,
+   "x": 9.98,
+   "y": 0.83,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 314,
+   "x": 5.27,
+   "y": 12.59,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 315,
+   "x": 0.44,
+   "y": 6.18,
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C"
+  },
+  {
+   "nr": 316,
+   "x": 5.72,
+   "y": 12.7,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 317,
+   "x": 0.36,
+   "y": 13.15,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 318,
+   "x": 0.81,
+   "y": 1.17,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 319,
+   "x": 10.86,
+   "y": 5.51,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 320,
+   "x": 2.75,
+   "y": 6.01,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 321,
+   "x": 2.21,
+   "y": 1.3,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 322,
+   "x": 7.33,
+   "y": 13.69,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 323,
+   "x": 7.29,
+   "y": 1.37,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 324,
+   "x": 7.82,
+   "y": 11.82,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 325,
+   "x": 4.35,
+   "y": 2.5,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 326,
+   "x": 5.89,
+   "y": 3.61,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 327,
+   "x": 8.15,
+   "y": 10.5,
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D"
+  },
+  {
+   "nr": 328,
+   "x": 11.62,
+   "y": 11.19,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 329,
+   "x": 9.18,
+   "y": 1.48,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 330,
+   "x": 2.37,
+   "y": 6.88,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 331,
+   "x": 2.53,
+   "y": 0.63,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 332,
+   "x": 7.27,
+   "y": 5.02,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 333,
+   "x": 7.74,
+   "y": 14.05,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 334,
+   "x": 2.52,
+   "y": 13.4,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 335,
+   "x": 10.96,
+   "y": 3.22,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 336,
+   "x": 10.68,
+   "y": 9.6,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 337,
+   "x": 9.32,
+   "y": 13.67,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 338,
+   "x": 4.35,
+   "y": 13.61,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 339,
+   "x": 10.61,
+   "y": 8.1,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 340,
+   "x": 1.58,
+   "y": 3.97,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 341,
+   "x": 8.6,
+   "y": 5.81,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 342,
+   "x": 7.46,
+   "y": 3.45,
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D"
+  },
+  {
+   "nr": 343,
+   "x": 0.7,
+   "y": 1.92,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 344,
+   "x": 0.79,
+   "y": 3.29,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 345,
+   "x": 10.29,
+   "y": 14.11,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 346,
+   "x": 11.07,
+   "y": 4.1,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 347,
+   "x": 10.91,
+   "y": 8.47,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 348,
+   "x": 6.68,
+   "y": 13.86,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 349,
+   "x": 1.14,
+   "y": 12.05,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 350,
+   "x": 5.59,
+   "y": 10.86,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 351,
+   "x": 9.14,
+   "y": 11.48,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 352,
+   "x": 5.19,
+   "y": 6.5,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 353,
+   "x": 3.11,
+   "y": 3.28,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 354,
+   "x": 3.57,
+   "y": 5.96,
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D"
+  },
+  {
+   "nr": 355,
+   "x": 10.22,
+   "y": 0.39,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 356,
+   "x": 3.06,
+   "y": 0.43,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 357,
+   "x": 6.94,
+   "y": 0.43,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 358,
+   "x": 0.56,
+   "y": 11.93,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 359,
+   "x": 11.42,
+   "y": 13.64,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 360,
+   "x": 5.17,
+   "y": 6.94,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 361,
+   "x": 4.22,
+   "y": 0.63,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 362,
+   "x": 3.47,
+   "y": 4.21,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 363,
+   "x": 1.39,
+   "y": 1.53,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 364,
+   "x": 4.83,
+   "y": 12.02,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 365,
+   "x": 8.81,
+   "y": 0.9,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 366,
+   "x": 8.72,
+   "y": 14.08,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 367,
+   "x": 3.14,
+   "y": 10.53,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 368,
+   "x": 3.21,
+   "y": 5.55,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 369,
+   "x": 1.04,
+   "y": 8.31,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 370,
+   "x": 6.98,
+   "y": 11.32,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 371,
+   "x": 7.41,
+   "y": 8.36,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 372,
+   "x": 9.41,
+   "y": 13.0,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 373,
+   "x": 8.19,
+   "y": 11.21,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 374,
+   "x": 9.4,
+   "y": 3.35,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 375,
+   "x": 1.74,
+   "y": 8.97,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 376,
+   "x": 5.58,
+   "y": 1.84,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 377,
+   "x": 2.02,
+   "y": 10.74,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 378,
+   "x": 7.78,
+   "y": 2.06,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 379,
+   "x": 3.51,
+   "y": 2.19,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 380,
+   "x": 8.8,
+   "y": 10.18,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 381,
+   "x": 2.74,
+   "y": 11.62,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 382,
+   "x": 5.09,
+   "y": 10.67,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 383,
+   "x": 9.2,
+   "y": 4.59,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 384,
+   "x": 3.97,
+   "y": 2.96,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 385,
+   "x": 8.54,
+   "y": 7.89,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 386,
+   "x": 4.6,
+   "y": 3.63,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 387,
+   "x": 8.06,
+   "y": 9.6,
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D"
+  },
+  {
+   "nr": 388,
+   "x": 11.61,
+   "y": 5.95,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 389,
+   "x": 0.48,
+   "y": 7.39,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 390,
+   "x": 8.96,
+   "y": 11.02,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 391,
+   "x": 1.51,
+   "y": 3.54,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 392,
+   "x": 11.14,
+   "y": 7.19,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 393,
+   "x": 5.24,
+   "y": 0.75,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 394,
+   "x": 10.63,
+   "y": 0.73,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 395,
+   "x": 11.15,
+   "y": 10.39,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 396,
+   "x": 5.19,
+   "y": 14.12,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 397,
+   "x": 8.6,
+   "y": 13.67,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 398,
+   "x": 1.77,
+   "y": 9.4,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 399,
+   "x": 9.93,
+   "y": 1.43,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 400,
+   "x": 1.4,
+   "y": 7.85,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 401,
+   "x": 9.59,
+   "y": 12.34,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 402,
+   "x": 9.38,
+   "y": 5.14,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 403,
+   "x": 10.13,
+   "y": 8.55,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 404,
+   "x": 9.9,
+   "y": 3.46,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 405,
+   "x": 6.75,
+   "y": 12.75,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 406,
+   "x": 2.29,
+   "y": 11.87,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 407,
+   "x": 3.92,
+   "y": 2.49,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 408,
+   "x": 4.31,
+   "y": 12.41,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 409,
+   "x": 6.84,
+   "y": 2.68,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 410,
+   "x": 2.89,
+   "y": 7.41,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 411,
+   "x": 9.05,
+   "y": 7.53,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 412,
+   "x": 4.01,
+   "y": 5.87,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 413,
+   "x": 4.63,
+   "y": 11.17,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 414,
+   "x": 3.89,
+   "y": 4.35,
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D"
+  },
+  {
+   "nr": 415,
+   "x": 9.26,
+   "y": 2.89,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 416,
+   "x": 11.15,
+   "y": 12.96,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 417,
+   "x": 11.55,
+   "y": 2.62,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 418,
+   "x": 8.71,
+   "y": 14.54,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 419,
+   "x": 0.49,
+   "y": 6.62,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 420,
+   "x": 7.58,
+   "y": 14.47,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 421,
+   "x": 11.24,
+   "y": 6.2,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 422,
+   "x": 5.11,
+   "y": 1.77,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 423,
+   "x": 9.91,
+   "y": 9.52,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 424,
+   "x": 1.71,
+   "y": 11.07,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 425,
+   "x": 1.6,
+   "y": 12.03,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 426,
+   "x": 2.02,
+   "y": 1.74,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 427,
+   "x": 10.23,
+   "y": 2.02,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 428,
+   "x": 2.1,
+   "y": 6.38,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 429,
+   "x": 6.32,
+   "y": 3.92,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 430,
+   "x": 2.49,
+   "y": 4.59,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 431,
+   "x": 8.45,
+   "y": 8.42,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 432,
+   "x": 7.67,
+   "y": 10.24,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 433,
+   "x": 6.53,
+   "y": 12.02,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 434,
+   "x": 4.15,
+   "y": 6.55,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 435,
+   "x": 3.32,
+   "y": 8.44,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 436,
+   "x": 7.9,
+   "y": 6.85,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 437,
+   "x": 5.6,
+   "y": 10.21,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 438,
+   "x": 4.71,
+   "y": 6.36,
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D"
+  },
+  {
+   "nr": 439,
+   "x": 1.67,
+   "y": 7.03,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 440,
+   "x": 1.92,
+   "y": 5.03,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 441,
+   "x": 11.17,
+   "y": 0.77,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 442,
+   "x": 2.07,
+   "y": 14.1,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 443,
+   "x": 10.94,
+   "y": 4.88,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 444,
+   "x": 3.88,
+   "y": 1.64,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 445,
+   "x": 5.42,
+   "y": 3.97,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 446,
+   "x": 4.82,
+   "y": 12.64,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 447,
+   "x": 5.52,
+   "y": 13.65,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 448,
+   "x": 10.43,
+   "y": 3.84,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 449,
+   "x": 10.3,
+   "y": 2.54,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 450,
+   "x": 9.76,
+   "y": 4.54,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 451,
+   "x": 2.45,
+   "y": 3.54,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 452,
+   "x": 5.14,
+   "y": 11.32,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 453,
+   "x": 7.61,
+   "y": 10.66,
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D"
+  },
+  {
+   "nr": 454,
+   "x": 7.77,
+   "y": 2.56,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 455,
+   "x": 0.43,
+   "y": 2.93,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 456,
+   "x": 11.41,
+   "y": 3.04,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 457,
+   "x": 0.71,
+   "y": 10.9,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 458,
+   "x": 3.27,
+   "y": 7.6,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 459,
+   "x": 2.69,
+   "y": 13.85,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 460,
+   "x": 4.19,
+   "y": 8.25,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 461,
+   "x": 9.33,
+   "y": 2.09,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 462,
+   "x": 2.81,
+   "y": 9.89,
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D"
+  },
+  {
+   "nr": 463,
+   "x": 0.35,
+   "y": 12.51,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 464,
+   "x": 0.56,
+   "y": 11.45,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 465,
+   "x": 2.39,
+   "y": 14.43,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 466,
+   "x": 11.4,
+   "y": 12.52,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 467,
+   "x": 7.05,
+   "y": 14.31,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 468,
+   "x": 11.29,
+   "y": 5.66,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 469,
+   "x": 1.1,
+   "y": 0.78,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 470,
+   "x": 10.32,
+   "y": 11.85,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 471,
+   "x": 11.02,
+   "y": 7.79,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 472,
+   "x": 1.08,
+   "y": 7.06,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 473,
+   "x": 2.65,
+   "y": 1.22,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 474,
+   "x": 1.24,
+   "y": 13.0,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 475,
+   "x": 10.71,
+   "y": 2.79,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 476,
+   "x": 8.96,
+   "y": 5.33,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 477,
+   "x": 10.14,
+   "y": 8.04,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 478,
+   "x": 1.61,
+   "y": 8.48,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 479,
+   "x": 1.85,
+   "y": 2.26,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 480,
+   "x": 9.5,
+   "y": 9.41,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 481,
+   "x": 5.03,
+   "y": 4.36,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 482,
+   "x": 2.8,
+   "y": 8.52,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 483,
+   "x": 7.81,
+   "y": 8.24,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 484,
+   "x": 3.44,
+   "y": 10.03,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 485,
+   "x": 8.49,
+   "y": 10.8,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  },
+  {
+   "nr": 486,
+   "x": 7.15,
+   "y": 3.78,
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D"
+  }
+ ],
+ "specii": [
+  {
+   "cod": "Qp",
+   "ro": "Stejar pufos",
+   "lat": "Quercus pubescens",
+   "strat": "A",
+   "buc": 21,
+   "nota": "arborele-cheie al silvostepei dobrogene; 100 % rezistent la secetă"
+  },
+  {
+   "cod": "Qb",
+   "ro": "Stejar brumăriu",
+   "lat": "Quercus pedunculiflora",
+   "strat": "A",
+   "buc": 15,
+   "nota": "stejarul de stepă al Dobrogei, frunze brumării"
+  },
+  {
+   "cod": "Tt",
+   "ro": "Tei argintiu",
+   "lat": "Tilia tomentosa",
+   "strat": "A",
+   "buc": 12,
+   "nota": "crește repede, umbră, albine în iunie"
+  },
+  {
+   "cod": "Qc",
+   "ro": "Cer",
+   "lat": "Quercus cerris",
+   "strat": "A",
+   "buc": 9,
+   "nota": "stejar rapid, tolerant la calcar"
+  },
+  {
+   "cod": "Um",
+   "ro": "Ulm de câmp",
+   "lat": "Ulmus minor",
+   "strat": "A",
+   "buc": 9,
+   "nota": "autohton, rapid; puțini, din cauza grafiozei"
+  },
+  {
+   "cod": "St",
+   "ro": "Sorb",
+   "lat": "Sorbus torminalis",
+   "strat": "A",
+   "buc": 6,
+   "nota": "rar, fructe pentru păsări, roșu toamna"
+  },
+  {
+   "cod": "Fo",
+   "ro": "Mojdrean",
+   "lat": "Fraxinus ornus",
+   "strat": "B",
+   "buc": 24,
+   "nota": "flori parfumate în mai; specie de bază în pădurile Babadag"
+  },
+  {
+   "cod": "Ac",
+   "ro": "Jugastru",
+   "lat": "Acer campestre",
+   "strat": "B",
+   "buc": 21,
+   "nota": "umple stratul mijlociu, galben toamna"
+  },
+  {
+   "cod": "At",
+   "ro": "Arțar tătăresc",
+   "lat": "Acer tataricum",
+   "strat": "B",
+   "buc": 21,
+   "nota": "samare roșii, tipic silvostepei"
+  },
+  {
+   "cod": "Co",
+   "ro": "Cărpiniță",
+   "lat": "Carpinus orientalis",
+   "strat": "B",
+   "buc": 21,
+   "nota": "arborele Dobrogei de piatră; frunziș des, ține umbra"
+  },
+  {
+   "cod": "Pp",
+   "ro": "Păr sălbatic",
+   "lat": "Pyrus pyraster",
+   "strat": "B",
+   "buc": 12,
+   "nota": "flori în aprilie, pere mici pentru păsări"
+  },
+  {
+   "cod": "Pm",
+   "ro": "Vișin turcesc",
+   "lat": "Prunus mahaleb",
+   "strat": "B",
+   "buc": 12,
+   "nota": "parfum, fructe, calcar"
+  },
+  {
+   "cod": "Pa",
+   "ro": "Cireș sălbatic",
+   "lat": "Prunus avium",
+   "strat": "B",
+   "buc": 6,
+   "nota": "crește repede, flori, cireșe pentru păsări"
+  },
+  {
+   "cod": "Ms",
+   "ro": "Măr pădureț",
+   "lat": "Malus sylvestris",
+   "strat": "B",
+   "buc": 4,
+   "nota": "flori roz, mere mici iarna pentru păsări"
+  },
+  {
+   "cod": "Cm",
+   "ro": "Corn",
+   "lat": "Cornus mas",
+   "strat": "C",
+   "buc": 27,
+   "nota": "flori în martie, coarne; lemn tare"
+  },
+  {
+   "cod": "Cr",
+   "ro": "Păducel",
+   "lat": "Crataegus monogyna",
+   "strat": "C",
+   "buc": 27,
+   "nota": "cuiburi, flori, fructe; ghimpos"
+  },
+  {
+   "cod": "Ca",
+   "ro": "Alun",
+   "lat": "Corylus avellana",
+   "strat": "C",
+   "buc": 18,
+   "nota": "alune, umbră deasă la sol"
+  },
+  {
+   "cod": "Cs",
+   "ro": "Sânger",
+   "lat": "Cornus sanguinea",
+   "strat": "C",
+   "buc": 18,
+   "nota": "ramuri roșii iarna, fructe pentru păsări"
+  },
+  {
+   "cod": "Cc",
+   "ro": "Scumpie",
+   "lat": "Cotinus coggygria",
+   "strat": "C",
+   "buc": 20,
+   "nota": "roșu toamna, calcar uscat"
+  },
+  {
+   "cod": "Pc",
+   "ro": "Corcoduș",
+   "lat": "Prunus cerasifera",
+   "strat": "C",
+   "buc": 12,
+   "nota": "primul înflorit, fructe"
+  },
+  {
+   "cod": "Lv",
+   "ro": "Lemn câinesc",
+   "lat": "Ligustrum vulgare",
+   "strat": "D",
+   "buc": 33,
+   "nota": "manta deasă, semipersistent"
+  },
+  {
+   "cod": "Ps",
+   "ro": "Porumbar",
+   "lat": "Prunus spinosa",
+   "strat": "D",
+   "buc": 27,
+   "nota": "manta ghimpoasă, flori în martie"
+  },
+  {
+   "cod": "Vl",
+   "ro": "Dârmox",
+   "lat": "Viburnum lantana",
+   "strat": "D",
+   "buc": 24,
+   "nota": "frunze pâsloase, fructe roșii-negre"
+  },
+  {
+   "cod": "Rc",
+   "ro": "Măceș",
+   "lat": "Rosa canina",
+   "strat": "D",
+   "buc": 24,
+   "nota": "măceșe, adăpost"
+  },
+  {
+   "cod": "Ev",
+   "ro": "Salbă râioasă",
+   "lat": "Euonymus verrucosus",
+   "strat": "D",
+   "buc": 15,
+   "nota": "arbust de pădure de stejar; fructe toxice"
+  },
+  {
+   "cod": "Rh",
+   "ro": "Verigar",
+   "lat": "Rhamnus cathartica",
+   "strat": "D",
+   "buc": 15,
+   "nota": "fluturi (lămâița), fructe pentru păsări"
+  },
+  {
+   "cod": "Jf",
+   "ro": "Iasomie sălbatică",
+   "lat": "Jasminum fruticans",
+   "strat": "D",
+   "buc": 12,
+   "nota": "specie dobrogeană, flori galbene"
+  },
+  {
+   "cod": "Sn",
+   "ro": "Soc",
+   "lat": "Sambucus nigra",
+   "strat": "D",
+   "buc": 9,
+   "nota": "flori, fructe; crește repede"
+  },
+  {
+   "cod": "Cl",
+   "ro": "Bășicoasă",
+   "lat": "Colutea arborescens",
+   "strat": "D",
+   "buc": 12,
+   "nota": "fixează azot, păstăi pentru copii"
+  }
+ ]
+}

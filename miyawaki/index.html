@@ -78,6 +78,7 @@
       <rect x="0" y="0" width="630.0" height="840.0" fill="#efe9d8" stroke="#6b5f3a" stroke-width="3"/>
       <g id="grid" stroke="#c8c0a6" stroke-width="1" stroke-dasharray="4 4"></g>
       <g id="mantle" fill="none" stroke="#b9a66f" stroke-width="1.5" stroke-dasharray="6 4"><rect x="70.0" y="70.0" width="490.0" height="700.0" rx="20"/></g>
+      <g id="path"></g>
       <g id="axes" font-family="system-ui, sans-serif" font-size="12" fill="#555"></g>
       <g id="plants"></g>
       <g id="north" transform="translate(600.0,-24)"><polygon points="0,-14 6,6 0,2 -6,6" fill="#333"/><text x="0" y="-18" font-size="12" text-anchor="middle" fill="#333" font-family="system-ui">N</text></g>
@@ -121,6 +122,14 @@ function draw() {
       tip.innerHTML = '<b>' + p.ro + '</b> <i>' + p.lat + '</i><br>nr. ' + p.nr + ' · x ' + p.x.toFixed(2) + ' m, y ' + p.y.toFixed(2) + ' m'; });
     g.addEventListener('mouseleave', () => tip.style.display = 'none');
     G.appendChild(g);
+  }
+  const pg = document.getElementById('path'); pg.innerHTML = '';
+  if (D.poteca) {
+    const pts = D.poteca.map(q => (q.x * S) + ',' + ((D.lungime_m - q.y) * S)).join(' ');
+    const pl = document.createElementNS(NS, 'polyline'); pl.setAttribute('points', pts); pl.setAttribute('fill', 'none'); pl.setAttribute('stroke', '#d9c7a0'); pl.setAttribute('stroke-width', 0.8 * S); pl.setAttribute('stroke-linecap', 'round'); pl.setAttribute('stroke-linejoin', 'round'); pg.appendChild(pl);
+    const pl2 = document.createElementNS(NS, 'polyline'); pl2.setAttribute('points', pts); pl2.setAttribute('fill', 'none'); pl2.setAttribute('stroke', '#a88e5c'); pl2.setAttribute('stroke-width', 1.2); pl2.setAttribute('stroke-dasharray', '6 4'); pg.appendChild(pl2);
+    if (D.loc_stat) { const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', D.loc_stat.x * S); c.setAttribute('cy', (D.lungime_m - D.loc_stat.y) * S); c.setAttribute('r', D.loc_stat.r * S); c.setAttribute('fill', '#d9c7a0'); c.setAttribute('stroke', '#a88e5c'); c.setAttribute('stroke-width', 1.2); pg.appendChild(c);
+      const t = document.createElementNS(NS, 'text'); t.setAttribute('x', D.loc_stat.x * S); t.setAttribute('y', (D.lungime_m - D.loc_stat.y) * S + 4); t.setAttribute('text-anchor', 'middle'); t.setAttribute('font-size', '11'); t.setAttribute('fill', '#6b5a33'); t.textContent = 'loc de stat'; pg.appendChild(t); }
   }
   const grid = document.getElementById('grid'); grid.innerHTML = ''; grid.style.display = gridOn ? '' : 'none';
   const ax = document.getElementById('axes'); ax.innerHTML = '';
