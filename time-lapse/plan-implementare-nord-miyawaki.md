@@ -18,7 +18,7 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 **4. Verifică ce e în pământ pe traseele țevilor.** Rețeaua de apă RAJA, canalizarea, cablul electric spre magazie, cablul de la casă la poartă. Marchează-le cu spray pe sol și notează-le în modul măsurare al aplicației (cheia de măsurători a planului Miyawaki). Șanțurile de 30–40 cm pentru PE le ocolesc sau le traversează perpendicular.
 
-**5. Alege utilajul pentru sol: excavator sau tractor cu scarificator.** Excavator mic (3–5 t) afânează la 80–100 cm, lucrează și pe sol umed, și **sapă în aceeași zi și șanțurile pentru țevi** (600 m), deci e alegerea logică dacă găsești unul la 1 600–3 600 lei pe 2–3 zile. Tractorul cu scarificator la 60–70 cm e mai ieftin, dar cere sol uscat și lasă șanțurile pe mâna ta. Decizia fixează ordinea fazei 3.
+**5. Groapa de probă și alegerea utilajului pentru sol.** Terenul a fost arat la 50 cm și discuit anul trecut, apoi a stat în pârloagă: adâncimea lucrată se păstrează, s-a tasat doar stratul de sus (crustă de 2–5 cm, 10–15 cm bătătoriți). Sapă o groapă de 60 cm în mijlocul poligonului: dacă pământul de la 30–50 cm se sfărâmă în mână și are rădăcini de buruieni, **nu e nevoie de scarificare**; ajunge cositul buruienilor, mranița întinsă, **arătură obișnuită la 30–35 cm și disc** la o săptămână, cu orice tractor din sat. Dacă dai de un strat compact și lucios (talpa plugului), alegi **excavator mic** (3–5 t), care afânează la 80–100 cm, lucrează și pe sol umed și **sapă în aceeași zi și șanțurile pentru țevi** (600 m), 1 600–3 600 lei pe 2–3 zile. Verifică și buruienile: pirul, volbura și pălămida se scot cu furca înainte de arat, plugul le înmulțește. Decizia fixează ordinea fazei 3.
 
 ## Faza 1 — Comenzile, în ordinea timpului de livrare (săptămânile 1–2)
 
@@ -63,7 +63,7 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 **21. Întinde compostul pe suprafața pădurii**, strat uniform de 10–12 cm (35–45 m³ pe 340 m²), cu roaba, cu o zi înainte de utilaj, numai dacă vremea rămâne uscată. Pe pământ ud roaba lasă șanțuri și compostul se lipește; atunci se întinde în dimineața utilajului.
 
-**22. Ziua utilajului, partea 1: afânarea pădurii.** Excavator: sapă și răstoarnă la 80–100 cm, fâșie cu fâșie, dinspre colțul de nord-est spre sud-vest, amestecând compostul, fără să calce pe ce a răsturnat; iese prin latura de sud-vest. Tractor: două treceri de scarificator încrucișate la 60–70 cm, apoi disc, pe sol uscat. În ambele cazuri utilajul lucrează până la linia de var, nu peste țărușii albi.
+**22. Ziua utilajului, partea 1: pregătirea solului pădurii.** Varianta de bază (fără talpă la groapa de probă): buruienile cosite și lăsate pe loc, mranița întinsă, **arătură la 30–35 cm** care le întoarce sub brazdă, apoi **disc** o trecere la o săptămână, pe sol zvântat. Varianta cu talpă: excavatorul sapă și răstoarnă la 80–100 cm, fâșie cu fâșie, dinspre colțul de nord-est spre sud-vest, amestecând compostul, fără să calce pe ce a răsturnat; iese prin latura de sud-vest. În ambele cazuri utilajul lucrează până la linia de var, nu peste țărușii albi.
 
 **23. Ziua utilajului, partea 2: șanțurile pentru țevi și groapa căminului.** Numai la varianta cu excavator; traseele sunt marcate cu albastru (pasul 26 se face atunci înaintea pasului 22, în aceeași zi cu trasarea brută). Șanț de 30–40 cm adâncime, 20 cm lățime; șanțul comun de la cămin, pe unde pleacă toate cele 11 țevi, de 40 cm lățime. Groapa căminului: 70 × 50 × 60 cm, cu 15 cm de pietriș pe fund. **Șanțurile spre pădure se opresc la 1 m de linia de var**, altfel afânarea le prăbușește; se continuă manual după.
 
@@ -142,7 +142,7 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 | săpt. 1 | puieți pădure, pini cu balot | ≈ 920 + 32 | idem, livrare în aceeași săptămână |
 | săpt. 1 | compost / gunoi fermentat | 45–50 m³ | trebuie să fie pe teren înaintea utilajului |
 | săpt. 1 | tocătură de crengi | ≈ 90 m³ | vine când poate firma |
-| săpt. 1 | utilaj (excavator sau tractor) | 2–3 zile | se rezervă din timp |
+| săpt. 1 | utilaj (tractor cu plug și disc, sau excavator dacă groapa de probă arată talpă) | 1–3 zile | se rezervă din timp |
 | săpt. 2 | echipamente Rain Bird + XFD | lista de la pasul 11 | 1–2 săptămâni livrare, după proba de debit |
 | săpt. 2 | PE 25 / PE 32 / tub 16 / agrafe / fitinguri | 350 / 240 / 1 000 m / 750 | Dedeman, cu mașina |
 | săpt. 2 | șipcă 2,4 × 4,8 × 4 m, bambus 90 cm, țăruși 1,5 m | 50 / 200 / 70 | se taie și se vopsesc în săptămâna 2 |
