@@ -14,6 +14,19 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Iasomie sălbatică (Jasminum fruticans) | 22 | 22 cătină roșie, Tamarix (Cobadin) |
 | Bășicoasă (Colutea arborescens) | 22 | 22 arbore de mazăre, Caragana (Mizil) |
 
+## Starea comenzilor
+
+| Furnizor | Stare | Data | Următorul pas |
+|---|---|---|---|
+| Foresta Brăila | **confirmat telefonic**: au toate speciile, fără probleme de disponibilitate | 6 octombrie 2026 | de revenit cu comanda fermă după prima brumă din noiembrie (atunci scot puieții); de întrebat atunci și de jugastru, măr pădureț, stejar pufos, ulm de câmp |
+| Matto Medusa Galați | **confirmat telefonic**: au stejar pufos și ulm de câmp | 6 octombrie 2026 | de revenit după prima brumă; comanda se leagă de aceeași săptămână cu Foresta |
+| Doi Cocoși Brăila | de sunat | | preț și stoc pentru jugastru și măr pădureț, dacă Foresta nu le are |
+| Țuțora Iași | de sunat | | tei argintiu și carpen, după răspunsul de la Cobadin |
+| Cobadin | de sunat / de vizitat | | arțar tătăresc, sâmbovină, sânger, scumpie, cătină roșie; întrebare despre tei argintiu și pin negru |
+| Mizil | de comandat online | | mărimile cele mai mici; livrare în săptămâna plantării |
+
+„După prima brumă” înseamnă că pepinierele silvice scot puieții cu rădăcină nudă abia după ce au intrat în repaus, de regulă în prima jumătate a lui noiembrie în Dobrogea. Dacă toamna rămâne caldă, cum anunță prognozele, bruma poate întârzia spre sfârșitul lui noiembrie; fereastra de plantare rămâne deschisă până la mijlocul lui decembrie, iar puieții în ghiveci de la Cobadin și Mizil pot fi plantați oricând înainte. La telefonul de revenire se cere data exactă a scosului și se fixează ridicarea sau livrarea, ca puieții să nu stea mai mult de 2–3 zile scoși.
+
 ## Pepiniera Foresta SRL — Brăila
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-foresta-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-foresta-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 

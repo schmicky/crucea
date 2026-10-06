@@ -24,6 +24,8 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 **6. Comandă puieții pentru planul nord**, pe furnizori, după `comenzi-noiembrie-plan-nord.md`, **minus cele 34 de plante ale perdelei din colțul de nord-est** (sălcioară −9, frasin −5, dud alb −4, pin negru −4, ulm de Turkestan −4, corn −3, păducel −2, stejar pufos, măceș, pom de stafide câte −1). Pepinierele silvice au campanie de toamnă cu stoc limitat: comanda se face acum, ridicarea în a doua jumătate a lui noiembrie, cu rădăcina nudă.
 
+*Stare la 6 octombrie: Foresta Brăila și Matto Medusa Galați au confirmat telefonic disponibilitatea pentru planul nord și pentru pădure; comanda fermă se dă după prima brumă din noiembrie, când scot puieții.*
+
 **7. Comandă puieții pentru pădure**, după tabelele din `plan-miyawaki-est.md`: ≈ 500 din pepiniere silvice (stejari, cer, tei, jugastru, arțar tătăresc, păr, cireș, corn, păducel, lemn câinesc, măceș, porumbar, sânger, alun), ≈ 420 din pepinierele ornamentale Mizil și Cobadin, cu înlocuitorii din `pepiniere-mizil-cobadin.md` pentru ce lipsește. **Pinul negru (32) numai cu balot sau în container**, nu cu rădăcină nudă. Cere livrarea pentru aceeași săptămână cu puieții planului nord, ca să plantezi o singură dată.
 
 **8. Comandă compostul sau gunoiul de grajd fermentat: 45–50 m³**, adică două camioane de 20–25 m³. 35–45 m³ pentru pădure, restul pentru gropile celor 291 de plante. Să fie de cel puțin un an, fără miros de amoniac, fără paie întregi. Livrarea **înainte de ziua utilajului**, descărcat în 2–3 grămezi pe latura de sud-vest a poligonului, pe iarbă, nu pe suprafața care se afânează.
