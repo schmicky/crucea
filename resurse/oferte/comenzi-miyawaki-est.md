@@ -15,7 +15,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Bășicoasă (Colutea arborescens) | 22 | 22 arbore de mazăre, Caragana (Mizil) |
 
 ## Pepiniera Foresta SRL — Brăila
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-foresta-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-foresta-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-foresta-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-foresta-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *tel. 0766413310 · ofertă pe puietiforestieri.ro (21 august 2026) · puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm, 1 leu/buc · livrare după căderea frunzei, 15–25 noiembrie*
 
@@ -34,7 +34,7 @@ Furnizorul principal: 8 specii, o treime din pădure, cel mai aproape de Crucea.
 | | **Total Pepiniera Foresta SRL** | | **304** | **339** | | |
 
 ## Pepiniera Matto Medusa SRL — Galați
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-matto-medusa-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-matto-medusa-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-matto-medusa-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-matto-medusa-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *tel. 0767477472 · ofertă 26 iulie 2026 · 1 leu/buc · alternativă: Pepiniera Selficom, Galați, 0765402805 (stejar pufos 1,5 lei)*
 
@@ -47,7 +47,7 @@ Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta 
 | | **Total Pepiniera Matto Medusa SRL** | | **57** | **63** | | |
 
 ## Pepiniera Doi Cocoși SRL — Brăila (de confirmat)
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-doi-cocosi-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-doi-cocosi-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-doi-cocosi-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-doi-cocosi-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *apare în lista pepinierelor silvice cu prețuri neintroduse (0,01 lei) · de sunat pentru preț și stoc real*
 
@@ -60,7 +60,7 @@ Singura pepinieră din listă cu jugastru. Dacă nu confirmă, jugastrul se cere
 | | **Total Pepiniera Doi Cocoși SRL** | | **47** | **52** | | |
 
 ## Pepiniera Țuțora — Iași
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-tutora.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-tutora.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-tutora.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-tutora.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *tel. 0722930780 · ofertă veche (2024): tei argintiu 2,5 lei, carpen 1,5 lei · de confirmat prețul și stocul*
 
@@ -73,7 +73,7 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 | | **Total Pepiniera Țuțora** | | **43** | **48** | | |
 
 ## Pepiniera Cobadin — Constanța
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-cobadin.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-cobadin.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-cobadin.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-cobadin.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *DN3, la intrarea în Cobadin · www.pepinieracobadin.ro · prețuri de producător, negociabile la cantitate, comandă minimă 100 lei · 50 km de Crucea, se ridică personal*
 
@@ -89,7 +89,7 @@ Puieți din semințe, adaptați climatului dobrogean. Se cer mărimile cele mai 
 | | **Total Pepiniera Cobadin** | | **151** | **168** | | |
 
 ## Pepiniera Mizil — Prahova (magazin online)
-📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-mizil.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-mizil.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-mizil.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-mizil.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
 *www.pepinieramizil.ro · livrare prin curier, transport gratuit peste 500 lei · prețurile se verifică pe site la comandă*
 
