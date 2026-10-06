@@ -20,7 +20,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 |---|---|---|---|
 | Foresta Brăila | **confirmat telefonic**: au toate speciile, fără probleme de disponibilitate | 6 octombrie 2026 | de revenit cu comanda fermă după prima brumă din noiembrie (atunci scot puieții); de întrebat atunci și de jugastru, măr pădureț, stejar pufos, ulm de câmp |
 | Matto Medusa Galați | **confirmat telefonic**: au stejar pufos și ulm de câmp | 6 octombrie 2026 | de revenit după prima brumă; comanda se leagă de aceeași săptămână cu Foresta |
-| Doi Cocoși Brăila | de sunat | | preț și stoc pentru jugastru și măr pădureț, dacă Foresta nu le are |
+| Doi Cocoși Brăila | de sunat: **0766405638**, strada Doi Cocoși nr. 2, Brăila | | preț și stoc pentru jugastru și măr pădureț, dacă Foresta nu le are |
 | Țuțora Iași | de sunat | | tei argintiu și carpen, după răspunsul de la Cobadin |
 | Cobadin | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat răspunsul; dacă nu vine în 5–7 zile, telefon; de întrebat și de tei argintiu și pin negru |
 | Mizil | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat prețurile și mărimile; comanda online după răspuns, cu livrare în săptămâna plantării |
@@ -62,7 +62,7 @@ Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta 
 ## Pepiniera Doi Cocoși SRL — Brăila (de confirmat)
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-doi-cocosi-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-doi-cocosi-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
 
-*apare în lista pepinierelor silvice cu prețuri neintroduse (0,01 lei) · de sunat pentru preț și stoc real*
+*tel. 0766405638 · strada Doi Cocoși nr. 2, Brăila · apare în lista pepinierelor silvice cu prețuri neintroduse (0,01 lei) · de sunat pentru preț și stoc real*
 
 Singura pepinieră din listă cu jugastru. Dacă nu confirmă, jugastrul se cere la Foresta sau se înlocuiește cu arțar tătăresc de la Cobadin; mărul pădureț se ia de la SC OLMA Iași (1,5 lei).
 
