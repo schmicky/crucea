@@ -135,6 +135,41 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 ---
 
+## Trasarea conturului pădurii pe teren (pentru pasul 18)
+
+Toate distanțele sunt de la **colțul de nord-est al gardului** (stâlpul unde se întâlnesc gardul de nord și cel de est). Gardurile fac între ele 84°, nu 90°, deci fiecare punct se ia **de-a lungul unui gard + perpendicular pe el**, iar punctele din mijloc se verifică și față de celălalt gard. Perpendiculara se ridică cu triunghiul 3-4-5 (sfoară cu noduri la 3, 4 și 5 m) sau cu două rulete. Vârfurile 6, 7, 8 se iau de pe gardul de est, vârfurile 1 și 2 de pe gardul de nord, 3, 4, 5 de pe oricare, cu verificare pe celălalt.
+
+| Vârf | Pe gardul de est, de la colț spre sud | Perpendicular de la gardul de est, spre curte | Pe gardul de nord, de la colț spre vest | Perpendicular de la gardul de nord, spre curte |
+|---|---:|---:|---:|---:|
+| 1 | — | 20,5 m | 20,5 m | 0,5 m |
+| 2 | 4,7 m | 20,9 m | 20,3 m | 6,8 m |
+| 3 | 9,4 m | 16,5 m | 15,4 m | 11,0 m |
+| 4 | 15,6 m | 13,5 m | 11,9 m | 16,9 m |
+| 5 | 19,2 m | 12,4 m | 10,9 m | 20,4 m |
+| 6 | 21,6 m | 0,4 m | — | — |
+| 7 | 10,8 m | 0,4 m | — | — |
+| 8 | 0,5 m | 0,3 m | 0,3 m | 0,5 m |
+
+Țărușii albi se bat **cu 1 m în afara** poligonului, pe prelungirea laturilor, ca utilajul să poată lucra până la linie: pentru vârfurile 2, 3, 4, 5 la 1 m spre curte, pe bisectoarea unghiului; pentru 1, 6, 7, 8, care sunt la 0,3–0,5 m de gard, nu se poate ieși în afară, deci se leagă o panglică colorată pe sârma gardului în dreptul lor și țărușul se bate la 1 m spre curte, pe linia laturii. Linia reală a poligonului se desenează pe sol cu var, între vârfuri.
+
+Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu aceleași repere:
+
+| Punct | Pe gardul de est spre sud | Perpendicular de la gardul de est | Pe gardul de nord spre vest | Perpendicular de la gardul de nord |
+|---|---:|---:|---:|---:|
+| alee, intrare | 6,6 m | 19,3 m | 18,5 m | 8,5 m |
+| alee 2 | 4,4 m | 15,6 m | 15,0 m | 5,9 m |
+| alee 3 | 3,7 m | 11,4 m | 10,9 m | 4,8 m |
+| alee 4 | 5,5 m | 7,8 m | 7,2 m | 6,3 m |
+| alee 5 | 8,4 m | 7,1 m | 6,2 m | 9,1 m |
+| alee, capăt | 9,1 m | 9,5 m | 8,6 m | 10,0 m |
+| luminiș, centru (rază 1,8 m) | 9,3 m | 10,8 m | 9,8 m | 10,3 m |
+
+## Jurnal
+
+- **6 octombrie 2026**: Foresta Brăila, Matto Medusa Galați și Doi Cocoși Brăila au confirmat telefonic puieții; comanda fermă după prima brumă. Cereri de ofertă trimise la Cobadin și Mizil. Mranița: cerută, se așteaptă răspunsul de disponibilitate. Șipca: livrare vineri 9 octombrie, de confirmat joi prin telefon. Unchiul Viorel cumpără drujba pentru tăiat țărușii la 50 cm. Vineri: bătut țărușii și măsurat terenul. De cumpărat de la Dedeman: sfoară colorată, spray de vopsea.
+
+---
+
 ## Lista de cumpărături, în ordinea comenzii
 
 | Când | Ce | Cantitate | De ce atunci |
