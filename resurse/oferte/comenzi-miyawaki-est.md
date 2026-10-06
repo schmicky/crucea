@@ -1,6 +1,6 @@
 # Comenzi de puieți pentru pădurea Miyawaki din colțul de nord-est
 
-Necesarul pentru schema `miyawaki/index-est.html`: **945 de puieți din 30 de specii** pe 339.6 m², împărțit pe furnizori după ofertele din `oferte-puieti-pepiniere-silvice.xlsx` și listele din `pepiniere-mizil-cobadin.md`. Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere, normale la Miyawaki (5–10 % în primul an).
+Necesarul pentru schema `miyawaki/index-est.html`: **945 de puieți din 30 de specii** pe 339.6 m², împărțit pe furnizori după ofertele din `oferte-puieti-pepiniere-silvice.xlsx` și listele din `pepiniere-mizil-cobadin.md`. Pentru fiecare furnizor există un Excel de cerere de ofertă gata de trimis, în `resurse/oferte/cereri/` (link sub titlul fiecărei secțiuni). Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere, normale la Miyawaki (5–10 % în primul an).
 
 **Ce se cere la toți furnizorii:** puieți mici, de 1–2 ani, 30–80 cm, rădăcină nudă sau ghiveci de 1–2 l (pinul negru numai ghiveci sau balot); livrare sau ridicare în aceeași săptămână, 16–22 noiembrie, cu rădăcinile în saci umezi; la recepție se numără pe specie și se înșanțează ce nu se plantează în ziua aceea.
 
@@ -15,6 +15,8 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Bășicoasă (Colutea arborescens) | 22 | 22 arbore de mazăre, Caragana (Mizil) |
 
 ## Pepiniera Foresta SRL — Brăila
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-foresta-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-foresta-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *tel. 0766413310 · ofertă pe puietiforestieri.ro (21 august 2026) · puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm, 1 leu/buc · livrare după căderea frunzei, 15–25 noiembrie*
 
 Furnizorul principal: 8 specii, o treime din pădure, cel mai aproape de Crucea. Se cere ambalare cu rădăcina în sac umed și se întreabă dacă au și jugastru, măr pădureț, stejar pufos și ulm de câmp, ca să scadă numărul de transporturi.
@@ -32,6 +34,8 @@ Furnizorul principal: 8 specii, o treime din pădure, cel mai aproape de Crucea.
 | | **Total Pepiniera Foresta SRL** | | **304** | **339** | | |
 
 ## Pepiniera Matto Medusa SRL — Galați
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-matto-medusa-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-matto-medusa-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *tel. 0767477472 · ofertă 26 iulie 2026 · 1 leu/buc · alternativă: Pepiniera Selficom, Galați, 0765402805 (stejar pufos 1,5 lei)*
 
 Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta îl aduce, comanda asta dispare.
@@ -43,6 +47,8 @@ Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta 
 | | **Total Pepiniera Matto Medusa SRL** | | **57** | **63** | | |
 
 ## Pepiniera Doi Cocoși SRL — Brăila (de confirmat)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-doi-cocosi-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-doi-cocosi-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *apare în lista pepinierelor silvice cu prețuri neintroduse (0,01 lei) · de sunat pentru preț și stoc real*
 
 Singura pepinieră din listă cu jugastru. Dacă nu confirmă, jugastrul se cere la Foresta sau se înlocuiește cu arțar tătăresc de la Cobadin; mărul pădureț se ia de la SC OLMA Iași (1,5 lei).
@@ -54,6 +60,8 @@ Singura pepinieră din listă cu jugastru. Dacă nu confirmă, jugastrul se cere
 | | **Total Pepiniera Doi Cocoși SRL** | | **47** | **52** | | |
 
 ## Pepiniera Țuțora — Iași
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-tutora.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-tutora.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *tel. 0722930780 · ofertă veche (2024): tei argintiu 2,5 lei, carpen 1,5 lei · de confirmat prețul și stocul*
 
 Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadin confirmă că „Tilia” din catalogul lor e Tilia tomentosa, teiul se ia de acolo și comanda la Iași rămâne doar carpenul (sau carpenul se ia de la Mizil).
@@ -65,6 +73,8 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 | | **Total Pepiniera Țuțora** | | **43** | **48** | | |
 
 ## Pepiniera Cobadin — Constanța
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-cobadin.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-cobadin.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *DN3, la intrarea în Cobadin · www.pepinieracobadin.ro · prețuri de producător, negociabile la cantitate, comandă minimă 100 lei · 50 km de Crucea, se ridică personal*
 
 Puieți din semințe, adaptați climatului dobrogean. Se cer mărimile cele mai mici (20–40 cm, ghiveci de 1 l sau rădăcină nudă). Se întreabă și de tei argintiu și pin negru.
@@ -79,6 +89,8 @@ Puieți din semințe, adaptați climatului dobrogean. Se cer mărimile cele mai 
 | | **Total Pepiniera Cobadin** | | **151** | **168** | | |
 
 ## Pepiniera Mizil — Prahova (magazin online)
+📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-mizil.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-mizil.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne; se completează datele de contact și data)
+
 *www.pepinieramizil.ro · livrare prin curier, transport gratuit peste 500 lei · prețurile se verifică pe site la comandă*
 
 Se aleg mărimile cele mai mici din ofertă (ghiveci 1–2 l sau rădăcină nudă „gard viu”, 20–40 cm): pentru Miyawaki puietul mic prinde mai bine și costă de 3–5 ori mai puțin decât cel de 1 m. Pinul negru numai în ghiveci sau cu balot.
