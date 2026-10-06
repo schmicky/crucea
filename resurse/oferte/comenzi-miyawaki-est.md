@@ -22,8 +22,8 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Matto Medusa Galați | **confirmat telefonic**: au stejar pufos și ulm de câmp | 6 octombrie 2026 | de revenit după prima brumă; comanda se leagă de aceeași săptămână cu Foresta |
 | Doi Cocoși Brăila | de sunat | | preț și stoc pentru jugastru și măr pădureț, dacă Foresta nu le are |
 | Țuțora Iași | de sunat | | tei argintiu și carpen, după răspunsul de la Cobadin |
-| Cobadin | de sunat / de vizitat | | arțar tătăresc, sâmbovină, sânger, scumpie, cătină roșie; întrebare despre tei argintiu și pin negru |
-| Mizil | de comandat online | | mărimile cele mai mici; livrare în săptămâna plantării |
+| Cobadin | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat răspunsul; dacă nu vine în 5–7 zile, telefon; de întrebat și de tei argintiu și pin negru |
+| Mizil | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat prețurile și mărimile; comanda online după răspuns, cu livrare în săptămâna plantării |
 
 „După prima brumă” înseamnă că pepinierele silvice scot puieții cu rădăcină nudă abia după ce au intrat în repaus, de regulă în prima jumătate a lui noiembrie în Dobrogea. Dacă toamna rămâne caldă, cum anunță prognozele, bruma poate întârzia spre sfârșitul lui noiembrie; fereastra de plantare rămâne deschisă până la mijlocul lui decembrie, iar puieții în ghiveci de la Cobadin și Mizil pot fi plantați oricând înainte. La telefonul de revenire se cere data exactă a scosului și se fixează ridicarea sau livrarea, ca puieții să nu stea mai mult de 2–3 zile scoși.
 
