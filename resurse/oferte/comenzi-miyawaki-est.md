@@ -20,7 +20,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 |---|---|---|---|
 | Foresta Brăila | **confirmat telefonic**: au toate speciile, fără probleme de disponibilitate | 6 octombrie 2026 | de revenit cu comanda fermă după prima brumă din noiembrie (atunci scot puieții); de întrebat atunci și de jugastru, măr pădureț, stejar pufos, ulm de câmp |
 | Matto Medusa Galați | **confirmat telefonic**: au stejar pufos și ulm de câmp | 6 octombrie 2026 | de revenit după prima brumă; comanda se leagă de aceeași săptămână cu Foresta |
-| Doi Cocoși Brăila | de sunat: **0766405638**, strada Doi Cocoși nr. 2, Brăila | | preț și stoc pentru jugastru și măr pădureț, dacă Foresta nu le are |
+| Doi Cocoși Brăila | **confirmat telefonic**: au jugastru și măr pădureț (0766405638, strada Doi Cocoși nr. 2) | 6 octombrie 2026 | de revenit cu comanda fermă în noiembrie, după prima brumă, odată cu Foresta (același oraș, un singur drum) |
 | Țuțora Iași | de sunat | | tei argintiu și carpen, după răspunsul de la Cobadin |
 | Cobadin | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat răspunsul; dacă nu vine în 5–7 zile, telefon; de întrebat și de tei argintiu și pin negru |
 | Mizil | **cerere de ofertă trimisă** (Excelul din `cereri/`) | 6 octombrie 2026 | de așteptat prețurile și mărimile; comanda online după răspuns, cu livrare în săptămâna plantării |
