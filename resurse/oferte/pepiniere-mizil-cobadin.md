@@ -14,6 +14,8 @@ Magazin online, livrare în toată țara (transport gratuit peste 500 lei), plan
 
 ## Pepiniera Cobadin (Constanța, DN3, la intrarea în Cobadin) — <https://www.pepinieracobadin.ro>
 
+> **Actualizare 6 octombrie 2026:** lista lor de prețuri 2024–2025 (`raspunsuri/oferta-pepiniera-cobadin-2024-2025.md`) arată material de amenajare de 1,5–3,5 m la 15–160 lei, fără sânger, tei argintiu sau pin negru. Pentru pădurea Miyawaki rămâne utilă doar cătina roșie (15 lei). Lista de mai jos e cea de pe site.
+
 Pepinieră dendro-floricolă de 5 ha, înființată în 2011; puieți din semințe și butași, adaptați climatului dobrogean; prețuri de producător, negociabile la cantitate, comandă minimă 100 lei. La 50 km de Crucea.
 
 **Arbori**: paltin de câmp (*Acer platanoides*), arțar tătăresc (*Acer tataricum*), sâmbovină (*Celtis australis*), frasin comun (*Fraxinus excelsior*), Koelreuteria (*K. paniculata*), tei (*Tilia*, specia neprecizată), arbore de mătase (*Albizia julibrissin*), catalpa (*C. bignonioides*), plop negru și plop Simon, tuia occidentală și orientală, rășinoase.

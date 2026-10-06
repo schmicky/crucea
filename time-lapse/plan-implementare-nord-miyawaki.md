@@ -168,6 +168,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 
 - **6 octombrie 2026**: Foresta Brăila, Matto Medusa Galați și Doi Cocoși Brăila au confirmat telefonic puieții; comanda fermă după prima brumă. Cereri de ofertă trimise la Cobadin și Mizil. Mranița: cerută, se așteaptă răspunsul de disponibilitate. Șipca: livrare vineri 9 octombrie, de confirmat joi prin telefon. Unchiul Viorel cumpără drujba pentru tăiat țărușii la 50 cm. Vineri: bătut țărușii și măsurat terenul. De cumpărat de la Dedeman: sfoară colorată, spray de vopsea.
 - **6 octombrie 2026, seara**: oferta de la Mizil: au doar corn (18,90 lei), alun (13,51), salbă moale (9,91) și călin (18,02); lipsesc sorb, păr sălbatic, cireș sălbatic, porumbar, dârmox, soc, arbore de mazăre, pin negru. Găsit furnizor nou: **Pepiniera Silvică Agigea** (Romsilva, Direcția Silvică Constanța, DN 38, 0241738043 / 0748143025), cu porumbar în ofertă la 0,50 lei până pe 14 octombrie; de sunat săptămâna aceasta pentru toată lista de specii lipsă. Cireșul sălbatic trece la Doi Cocoși.
+- **6 octombrie 2026, seara**: lista de prețuri Cobadin 2024–2025 (salvată în `resurse/oferte/raspunsuri/`): material de amenajare, 1,5–3,5 m, 15–160 lei; pentru pădure rămâne doar cătina roșie la 15 lei. Arțarul tătăresc, scumpia și sâmbovina trec la Agigea (de întrebat, Mizil ca rezervă), sângerul la Selficom Galați (1,2 lei).
 
 ---
 
