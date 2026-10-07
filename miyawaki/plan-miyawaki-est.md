@@ -1,6 +1,6 @@
 # Pădure Miyawaki în colțul de nord-est — Crucea
 
-Schema interactivă: [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html) · pozițiile: `plantare-miyawaki-est.json` (metri locali și procente pe planul nord, pentru suprapunere).
+Schema interactivă: [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html), desenată cu **gardul de nord orizontal, sus** (nordul geografic la 29° spre dreapta, ca săgeata) · pozițiile: `plantare-miyawaki-est.json` (metri locali cu nordul în sus și procente pe planul nord, pentru suprapunere).
 
 ## 1. Zona
 
