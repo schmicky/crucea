@@ -55,6 +55,7 @@ Udare noaptea sau dimineața devreme, o vană odată, mai–septembrie, cu pauz�
 - țeavă PE 25 mm: 350 m în total, 8 trasee de la cămin la zonele V1–V8 (îngropate, de-a lungul aleilor)
 - țeavă PE 32 mm: 240 m, 3 trasee de la cămin la pădure (V9–V11)
 - tub cu picurătoare integrate 16 mm, 1,6 l/h la 33 cm: 700 m; dopuri de spălare, 2 supape de aerisire, fitinguri de 16 mm
+- traversările aleii și luminișului: 35 traversări + 6 linii pe sub luminiș → 70 m de tub orb 16 mm în manșon PE 25 și 82 conectori bandă–tub; pe sub pietriș nu trec picurătoare, ca aleea să rămână uscată
 - tub orb PE 16 mm: 1000 m, la suprafață sub mulci, agrafe la 2 m
 - picurătoare autocompensante 4 l/h: 550 buc
 - 11 electrovane 1" 24 V într-un cămin jumbo la sursă, pe distribuitor cu teuri de 1"; programator 12 zone (ESP-TM2-12) + modul Wi-Fi și senzor de ploaie alături; filtru 120 mesh cu regulator la intrare; 5 m de cablu cu 13 fire
