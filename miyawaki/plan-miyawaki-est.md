@@ -19,17 +19,17 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 | | |
 |---|---:|
 | suprafață | 339.6 m², din care ≈ 25 m² alee și luminiș |
-| puieți | 945 |
+| puieți | 941 |
 | densitate | 3 / m² |
 | specii | 30 (cele 29 din celelalte variante + pin negru) |
 | arbori mari (A) | 171 |
 | arbori mici (B) | 225 |
-| subarboret (C) | 229 |
-| arbuști, manta (D) | 320 |
+| subarboret (C) | 226 |
+| arbuști, manta (D) | 319 |
 
-**Aleea** de 80 cm e un traseu propus (6 puncte, 17,5 m), netezit în curbe: **intră dinspre nord-vest**, de pe latura 2–3 a poligonului, lângă colțul de vest, urcă spre nord-est, cotește spre est și se întoarce spre sud-vest, în cârlig, până lângă **centrul pădurii**, într-un **luminiș rotund de 10 m²** (3,6 m diametru) cu băncuța de 1,6 m, de-a curmezișul, cu fața înapoi spre alee. **Interiorul cârligului** (≈ 35 m², între brațul de intrare și cel de întoarcere) e plantat numai cu arbuști și subarboret, cu speciile cele mai dese pe margine (lemn câinesc, porumbar, păducel, corn, sânger, dârmox, scumpie), fără niciun arbore mic sau mare: un perete verde compact de la sol, care ascunde băncuța de la intrare și de pe primul braț. Pozițiile aleii sunt în `plantare-miyawaki-est.json` (cheile `poteca`, `poteca_pct`, `carlig`) și se pot muta în aplicația planului nord. Arborii mari stau la peste 1,3 m de alee, arborii mici la peste 0,9 m; luminișul e înconjurat de arbuști și subarboret, deci la 4–5 ani băncuța e într-o cameră verde, nu sub coroane.
+**Aleea** de 80 cm e un traseu propus (6 puncte, ≈ 20 m), netezit în curbe: **intră dinspre nord-vest**, de pe latura 2–3 a poligonului, lângă colțul de vest, urcă spre nord-est, cotește spre est și se întoarce spre sud-vest, în cârlig, până în **luminișul rotund de 10 m²** (3,6 m diametru) cu băncuța de 1,6 m, de-a curmezișul, cu fața înapoi spre alee. Luminișul e așezat în punctul cel mai depărtat de marginile pădurii: **cel puțin 6 m de pădure de jur împrejur** (marginea lui la 6,2 m de contur), singurul loc din poligon unde e posibil. **Interiorul cârligului** (≈ 35 m², între brațul de intrare și cel de întoarcere) e plantat numai cu arbuști și subarboret, cu speciile cele mai dese pe margine (lemn câinesc, porumbar, păducel, corn, sânger, dârmox, scumpie), fără niciun arbore mic sau mare: un perete verde compact de la sol, care ascunde băncuța de la intrare și de pe primul braț. Pozițiile aleii sunt în `plantare-miyawaki-est.json` (cheile `poteca`, `poteca_pct`, `carlig`) și se pot muta în aplicația planului nord. Arborii mari stau la peste 1,3 m de alee, arborii mici la peste 0,9 m; luminișul e înconjurat de arbuști și subarboret, deci la 4–5 ani băncuța e într-o cameră verde, nu sub coroane.
 
-**De modificat în planul nord:** cele 34 de plante ale perdelei de est din interiorul poligonului se șterg din `pozitie-nord.json` (lista e în `plantare-miyawaki-est.json`, cheia `plante_plan_nord_in_zona`), iar comenzile de noiembrie scad cu ele: pin negru −4, frasin −5, dud alb −4, sălcioară −9, ulm de Turkestan −4 (trei sunt din rândul de pe nord, care intră acum în fâșia de 0,5 m), corn −3, păducel −2, stejar pufos −1, măceș −1, pom de stafide −1. În schimb pădurea cere puieții din tabelele de mai jos.
+**De modificat în planul nord:** cele 34 de plante ale perdelei de est din interiorul poligonului se șterg din `pozitie-nord.json` (lista e în `plantare-miyawaki-est.json`, cheia `plante_plan_nord_in_zona`), iar comenzile de noiembrie scad cu ele: sălcioară −9, frasin −5, dud alb −4, pin negru −4, corn −3, ulm de turkestan −3, măceș −2, păducel −2, stejar pufos −1, pom de stafide −1 (ulmii sunt din rândul de pe nord, care intră acum în fâșia de 0,5 m). În schimb pădurea cere puieții din tabelele de mai jos.
 
 ## 3. Speciile
 
@@ -59,18 +59,18 @@ Reguli de hotar (Cod civil art. 613): pe primii **2 m de la gardul de est și de
 ### Strat C — subarboret
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
 |---|---|---|---:|---|---|
-| Cm | Corn | *Cornus mas* | 51 | flori în martie, coarne; lemn tare | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
-| Cr | Păducel | *Crataegus monogyna* | 51 | cuiburi, flori, fructe; ghimpos | 2 oferte, de la 1.00 lei |
+| Cm | Corn | *Cornus mas* | 50 | flori în martie, coarne; lemn tare | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Cr | Păducel | *Crataegus monogyna* | 50 | cuiburi, flori, fructe; ghimpos | 2 oferte, de la 1.00 lei |
 | Ca | Alun | *Corylus avellana* | 34 | alune, umbră deasă la sol | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Cs | Sânger | *Cornus sanguinea* | 34 | ramuri roșii iarna, fructe pentru păsări | 2 oferte, de la 1.02 lei |
-| Cc | Scumpie | *Cotinus coggygria* | 37 | roșu toamna, calcar uscat | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Cc | Scumpie | *Cotinus coggygria* | 36 | roșu toamna, calcar uscat | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Pc | Corcoduș | *Prunus cerasifera* | 22 | primul înflorit, fructe | 4 oferte, de la 0.80 lei |
 
 ### Strat D — arbuști și manta
 | Cod | Specie | Nume latin | Buc. | De ce | Puieți la pepiniere silvice |
 |---|---|---|---:|---|---|
 | Lv | Lemn câinesc | *Ligustrum vulgare* | 62 | manta deasă, semipersistent | 2 oferte, de la 1.00 lei |
-| Ps | Porumbar | *Prunus spinosa* | 51 | manta ghimpoasă, flori în martie | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
+| Ps | Porumbar | *Prunus spinosa* | 50 | manta ghimpoasă, flori în martie | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Vl | Dârmox | *Viburnum lantana* | 45 | frunze pâsloase, fructe roșii-negre | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
 | Rc | Măceș | *Rosa canina* | 45 | măceșe, adăpost | 5 oferte, de la 1.00 lei |
 | Ev | Salbă râioasă | *Euonymus verrucosus* | 28 | arbust de pădure de stejar; fructe toxice | pepinieră ornamentală (Mizil, Cobadin) sau înlocuitorii din pepiniere-mizil-cobadin.md |
@@ -83,7 +83,7 @@ Pentru speciile care nu se găsesc la pepiniere (cărpiniță, salbă râioasă,
 
 ## 4. Pregătire, plantare, întreținere
 
-Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), scalate la suprafață. Pinii negri se iau cu balot sau din container (nu rădăcină nudă) și se plantează în interior, la cel puțin 2 m unul de altul. Cantități: **35–45 m³ de compost**, mulci 15–20 cm (≈ 60 m³ tocătură sau 135 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 7 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 945 de puieți în două zile.
+Ca în varianta de 9 × 12 m (`plan-miyawaki.md`), scalate la suprafață. Pinii negri se iau cu balot sau din container (nu rădăcină nudă) și se plantează în interior, la cel puțin 2 m unul de altul. Cantități: **35–45 m³ de compost**, mulci 15–20 cm (≈ 60 m³ tocătură sau 135 de baloți de paie), plasă de iepuri pe laturile dinspre curte (≈ 55 m; gardurile de hotar există), udare 20–25 l/m² o dată pe săptămână în anul 1 (≈ 7 500 l pe udare), nimic din anul 4. Echipă: 4 oameni plantează cei 941 de puieți în două zile.
 
 Zăpada: perdeaua densă de pe nord-est depune troianul la 15–45 m în curte, spre livadă; să nu fie acolo o alee de acces de iarnă.
 
