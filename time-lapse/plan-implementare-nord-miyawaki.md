@@ -2,7 +2,7 @@
 
 Ordinea de mai jos e dictată de dependențe, nu de preferințe: ce se face cu utilaje se face **înainte** de orice trasare fină (tractorul rupe sforile și scoate țărușii), țevile îngropate se pun **înainte** de gropile plantelor, iar tubul de picurare se întinde **înainte** de mulci. Cumpărăturile sunt ordonate după timpul de livrare și după ce decizie depind.
 
-Referințe: planul [plan-amenajare-nord-miyawaki.html](https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html) (291 de plante), schema pădurii [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html) (945 de puieți, 340 m²), irigarea [irigare-plan-nord-miyawaki.md](irigare-plan-nord-miyawaki.md) (11 vane), fișele de plantare [fise-plantare-nord.html](https://schmicky.github.io/crucea/time-lapse/fise-plantare-nord.html), comenzile de puieți `resurse/oferte/comenzi-noiembrie-plan-nord.md`, echipamentele `resurse/oferte/echipamente-irigare-rainbird.md`.
+Referințe: planul [plan-amenajare-nord-miyawaki.html](https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html) (291 de plante), schema pădurii [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html) (941 de puieți, 340 m²), irigarea [irigare-plan-nord-miyawaki.md](irigare-plan-nord-miyawaki.md) (11 vane), fișele de plantare [fise-plantare-nord.html](https://schmicky.github.io/crucea/time-lapse/fise-plantare-nord.html), comenzile de puieți `resurse/oferte/comenzi-noiembrie-plan-nord.md`, echipamentele `resurse/oferte/echipamente-irigare-rainbird.md`.
 
 Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a lui noiembrie, faza 5–7 în a doua jumătate a lui noiembrie, faza 8 iarna și primăvara.
 
@@ -156,18 +156,19 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 
 | Punct | Pe gardul de est spre sud | Perpendicular de la gardul de est | Pe gardul de nord spre vest | Perpendicular de la gardul de nord |
 |---|---:|---:|---:|---:|
-| alee, intrare | 6,6 m | 19,3 m | 18,5 m | 8,5 m |
-| alee 2 | 4,4 m | 15,6 m | 15,0 m | 5,9 m |
-| alee 3 | 3,7 m | 11,4 m | 10,9 m | 4,8 m |
-| alee 4 | 5,5 m | 7,8 m | 7,2 m | 6,3 m |
-| alee 5 | 8,4 m | 7,1 m | 6,2 m | 9,1 m |
-| alee, capăt | 9,1 m | 9,5 m | 8,6 m | 10,0 m |
-| luminiș, centru (rază 1,8 m) | 9,3 m | 10,8 m | 9,8 m | 10,3 m |
+| alee, intrare | 6.6 m | 19.3 m | 18.5 m | 8.5 m |
+| alee 2 | 4.0 m | 15.8 m | 15.3 m | 5.6 m |
+| alee 3 | 2.6 m | 11.1 m | 10.8 m | 3.7 m |
+| alee 4 | 4.3 m | 6.7 m | 6.2 m | 4.9 m |
+| alee 5 | 7.5 m | 5.0 m | 4.2 m | 7.9 m |
+| alee, capăt | 7.7 m | 7.1 m | 6.3 m | 8.4 m |
+| luminiș, centru (rază 1,8 m) | 7.6 m | 8.4 m | 7.6 m | 8.4 m |
 
 ## Jurnal
 
 - **6 octombrie 2026**: Foresta Brăila, Matto Medusa Galați și Doi Cocoși Brăila au confirmat telefonic puieții; comanda fermă după prima brumă. Cereri de ofertă trimise la Cobadin și Mizil. Mranița: cerută, se așteaptă răspunsul de disponibilitate. Șipca: livrare vineri 9 octombrie, de confirmat joi prin telefon. Unchiul Viorel cumpără drujba pentru tăiat țărușii la 50 cm. Vineri: bătut țărușii și măsurat terenul. De cumpărat de la Dedeman: sfoară colorată, spray de vopsea.
 - **6 octombrie 2026, seara**: oferta de la Mizil: au doar corn (18,90 lei), alun (13,51), salbă moale (9,91) și călin (18,02); lipsesc sorb, păr sălbatic, cireș sălbatic, porumbar, dârmox, soc, arbore de mazăre, pin negru. Găsit furnizor nou: **Pepiniera Silvică Agigea** (Romsilva, Direcția Silvică Constanța, DN 38, 0241738043 / 0748143025), cu porumbar în ofertă la 0,50 lei până pe 14 octombrie; de sunat săptămâna aceasta pentru toată lista de specii lipsă. Cireșul sălbatic trece la Doi Cocoși.
+- **7 octombrie 2026**: luminișul cu băncuța mutat în punctul cel mai depărtat de marginile pădurii (cel puțin 6 m de pădure de jur împrejur) și aleea în cârlig refăcută; coordonatele de trasare de mai sus sunt actualizate.
 - **6 octombrie 2026, seara**: lista de prețuri Cobadin 2024–2025 (salvată în `resurse/oferte/raspunsuri/`): material de amenajare, 1,5–3,5 m, 15–160 lei; pentru pădure rămâne doar cătina roșie la 15 lei. Arțarul tătăresc, scumpia și sâmbovina trec la Agigea (de întrebat, Mizil ca rezervă), sângerul la Selficom Galați (1,2 lei).
 
 ---
