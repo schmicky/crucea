@@ -1,6 +1,6 @@
 # Pădure Miyawaki în colțul de nord-est — Crucea
 
-Schema interactivă: [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html), desenată cu **gardul de nord orizontal, sus** (nordul geografic la 29° spre dreapta, ca săgeata) · pozițiile: `plantare-miyawaki-est.json` (metri locali cu nordul în sus și procente pe planul nord, pentru suprapunere).
+Schema interactivă: [index-est.html](https://schmicky.github.io/crucea/miyawaki/index-est.html), desenată cu **gardul de nord orizontal, sus** (nordul geografic la 29° spre dreapta, ca săgeata). Butonul „Tipărește” scoate schema pe pagina 1, legenda pe pagina 2 și apoi **câte o pagină pentru fiecare specie**: schema numai cu puieții acelei specii (numerotați ca în CSV, ceilalți gri), unde se așază (câți în interiorul cârligului, câți pe manta de hotar, câți lângă alee și luminiș) și cum se plantează (strat, distanțe, recepție) · pozițiile: `plantare-miyawaki-est.json` (metri locali cu nordul în sus și procente pe planul nord, pentru suprapunere).
 
 ## 1. Zona
 
