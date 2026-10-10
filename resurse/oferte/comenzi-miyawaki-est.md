@@ -21,11 +21,26 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Foresta Brăila | **confirmat telefonic**: au toate speciile | 6 octombrie 2026 | comanda fermă după prima brumă din noiembrie; de întrebat atunci și de jugastru, măr pădureț, stejar pufos, ulm de câmp |
 | Matto Medusa Galați | **confirmat telefonic**: stejar pufos și ulm de câmp | 6 octombrie 2026 | comanda fermă după prima brumă, în aceeași săptămână cu Foresta |
 | Doi Cocoși Brăila | **confirmat telefonic**: jugastru și măr pădureț (0766405638, strada Doi Cocoși nr. 2) | 6 octombrie 2026 | comanda fermă în noiembrie, odată cu Foresta; de cerut și cireșul sălbatic |
-| Agigea (Romsilva) | **de sunat urgent**: oferta de porumbar la 0,50 lei expiră pe 14 octombrie |  | 0241738043 / 0748143025; de întrebat de toate cele 10 specii din secțiunea lor și de corn, alun |
+| Agigea (Romsilva) | **de sunat urgent**: oferta de porumbar la 0,50 lei expiră pe 14 octombrie |  | 0241738043 / 0748143025; de întrebat de toate cele 10 specii din secțiunea lor și de corn, alun, călin, salbă moale, dârmox |
+| Salcea (Romsilva Suceava) | de sunat, după Agigea |  | 0753156196 / 0751164370; salbă moale, călin, dârmox, eventual sorb; de întrebat de prețuri la mărimi mici și de livrare prin curier |
+| Stejarul Galați | de sunat |  | 0774609287; alun, în locul celui de la Mizil; se ridică odată cu Matto Medusa și Selficom |
+| Szabó Zsolt, Tomești (Harghita) | de sunat doar dacă Agigea nu are corn |  | 0746118273; anunț de corn 15–50 cm la 1,40 lei, vechi de 2 ani; doar cu livrare prin curier |
 | Țuțora Iași | de sunat |  | tei argintiu și carpen, după răspunsul de la Cobadin |
 | Cobadin | **listă de prețuri 2024–2025 primită**: mărimi mari, 15–160 lei; fără sânger, tei argintiu, pin negru; cererea de ofertă pentru mărimi mici rămâne trimisă | 6 octombrie 2026 | rămâne doar cătina roșie (15 lei); de întrebat dacă au semănătură de arțar tătăresc, scumpie, sâmbovină la prețuri mici |
 | Selficom Galați | de sunat |  | sânger 1,2 lei (0765402805); se ridică odată cu Matto Medusa |
-| Mizil | **ofertă primită**: 4 din 12 specii (corn, alun, salbă moale, călin), 2 240 lei cu rezerva | 6 octombrie 2026 | comanda online pentru cele 4 după ce răspunde Agigea pentru corn și alun |
+| Mizil | **ofertă primită**: 4 din 12 specii (corn, alun, salbă moale, călin), 2 240 lei cu rezerva; **de renunțat** (exemplare mari, 10–19 lei) | 6 octombrie 2026 | rămâne doar dacă nu se găsește corn la Agigea, Harghita sau ICAS; alunul trece la Stejarul Galați, salba și călinul la Salcea |
+
+### Ordinea apelurilor pentru confirmare (10 octombrie 2026)
+
+1. **Agigea** (0748143025), înainte de 14 octombrie: porumbarul din ofertă, apoi corn, alun, călin, salbă moale, dârmox, pin negru, soc, arbore de mazăre, sorb, păr sălbatic. Ce confirmă ei iese din toate listele de mai jos.
+2. **Salcea, Suceava** (0753156196): ce a rămas de la Agigea dintre salbă moale, călin, dârmox, sorb; prețul la mărimi mici și livrarea prin curier.
+3. **Stejarul Galați** (0774609287): alun, 37 de bucăți; ridicare odată cu Matto Medusa.
+4. **Selficom Galați** (0765402805): sânger, 37 de bucăți; confirmarea stocului pentru noiembrie.
+5. **Țuțora Iași**: tei argintiu și carpen, după răspunsul de la Cobadin pentru tei.
+6. **Tomești, Harghita** (0746118273): corn, doar dacă Agigea nu are; livrare prin curier. În lipsă, ICAS Ștefănești (021 350 3240).
+7. **Mizil**: nu se mai sună; comanda online se face doar pentru corn, dacă a picat tot ce e mai sus.
+
+Foresta, Matto Medusa și Doi Cocoși sunt confirmate; la ele se revine după prima brumă pentru comanda fermă.
 
 „După prima brumă” înseamnă că pepinierele silvice scot puieții cu rădăcină nudă abia după ce au intrat în repaus, de regulă în prima jumătate a lui noiembrie în Dobrogea. Dacă toamna rămâne caldă, bruma poate întârzia spre sfârșitul lui noiembrie; fereastra de plantare rămâne deschisă până la mijlocul lui decembrie, iar puieții în ghiveci pot fi plantați oricând înainte. La telefonul de revenire se cere data exactă a scosului și se fixează ridicarea sau livrarea, ca puieții să nu stea mai mult de 2–3 zile scoși.
 
