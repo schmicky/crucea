@@ -32,8 +32,9 @@ clocotișul, ca arbore mic de secetă care înflorește în iulie.
 
 Lecția cea mai directă pentru pădurea Miyawaki e pinul negru din poza 3: trunchi
 sănătos, coroană rară, baza uscată pe 5–6 m — foioasele plantate odată cu el l-au
-umbrit. Pinii din schemă trebuie să stea pe margini, pe latura de sud și de vest;
-în schema actuală 8 din cei 33 sunt la peste 4 m de margine.
+umbrit. Schema pădurii a fost refăcută după acest studiu: toți cei 33 de pini stau acum
+pe banda de sud, la 1,2–4 m de marginea dinspre grădină (înainte, 8 erau în
+interior, la peste 4 m).
 
 În 10 octombrie, fără udare, frunza e încă verde la catalpă, sâmbovină, corcoduș
 roșu, cedru, ienupăr și voscovici; plopii, teii și platanii sunt galbeni de o lună.
