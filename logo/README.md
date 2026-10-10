@@ -1,9 +1,10 @@
 # Logo Vialunga
 
 Semnul arată **interiorul proprietății**, văzut de la poartă: gardul de șipcă cu poarta deschisă în
-prim-plan, **calea lungă** (via lunga) care pleacă de la poartă și șerpuiește până la ușa **casei
-dobrogene** — pereți albi, acoperiș mare de stuf în patru ape, horn, prispă — cu **iazul** cu stuf în
-dreapta, **pădurea Miyawaki** și **pinul negru** în stânga, sub soarele Dobrogei. Culorile sunt ale
+prim-plan, aleea scurtă până la ușa **casei dobrogene** — pereți albi, acoperiș mare de stuf în patru
+ape, horn, prispă cu stâlpi, ferestre mici — cu un **rând de flori** în fața ei (maci, lavandă, flori
+galbene și albe). În spate, pe tot orizontul, **pădurea Miyawaki** ca perdea deasă, cu pini negri
+printre coronamente, și **iazul** cu stuf în spate-dreapta, sub soarele Dobrogei. Culorile sunt ale
 terenului: verdele celor patru straturi ale pădurii, ocrul stepei, crem pentru alee și gard, albastru
 pentru apă, pal pentru cer.
 
