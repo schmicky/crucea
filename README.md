@@ -1,4 +1,9 @@
-<p align="center"><img src="logo/vialunga-logo.svg" alt="Vialunga — Crucea, Dobrogea" width="360"></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="logo/vialunga-logo-fond-inchis.svg">
+    <img src="logo/vialunga-logo.svg" alt="Vialunga — Crucea, Dobrogea" width="360">
+  </picture>
+</p>
 
 # Amenajare Proprietate - Crucea, Constanța
 
