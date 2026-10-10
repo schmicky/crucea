@@ -6,6 +6,12 @@ Referințe: planul [plan-amenajare-nord-miyawaki.html](https://schmicky.github.i
 
 Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a lui noiembrie, faza 5–7 în a doua jumătate a lui noiembrie, faza 8 iarna și primăvara.
 
+## Date despre teren (notate la 10 octombrie 2026)
+
+- **Împrejmuire**: completă. Trei laturi cu gard de 1,5 m spre vecini; a patra latură dă în stradă, cu gard de 0,5 m. Consecințe: oile și căpriorii nu intră; iepurii și câinii pot trece pe latura dinspre stradă, deci puieții din apropierea ei primesc plasă de 1 m cu ochiuri de 2–3 cm la bază, sau manșoane individuale pentru arborii din primul rând. Pădurea din colțul de nord-est e pe laturile cu gard de 1,5 m.
+- **Statut juridic**: intravilan; partea de nord și nord-est, unde sunt perdeaua și pădurea Miyawaki, e **intravilan agricol**. Plantarea nu cere nicio autorizație; iazul, căsuțele și parcarea, fiind în intravilan, cer certificat de urbanism și autorizație de construire de la primăria Crucea, iar pe zona agricolă nu se construiește fără schimbarea categoriei de folosință.
+- **Debitul de apă**: dovedit în practică. Anul trecut, socrul a udat cu un tub de picurare de 150 m cu picurătoare la 30 cm, de la același branșament RAJA, fără probleme: adică în jur de 1 m³/h la presiune utilă. Circuitele pădurii (V9–V11) au 187–214 m de tub și cer 0,9–1,05 m³/h fiecare, pornite pe rând de programator, deci sunt în limita dovedită; cu bandă de picurare de 1–1,6 l/h la 30 cm, consumul pe circuit scade la 0,65–1,15 m³/h. Rămâne de făcut testul cu găleata la robinet (litri în 60 de secunde) înainte de dimensionarea finală, ca să știm și rezerva.
+
 ---
 
 ## Faza 0 — Decizii și măsurători care condiționează cumpărăturile (săptămâna 1)
@@ -168,6 +174,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 
 ## Jurnal
 
+- **10 octombrie 2026, seara**: notate datele despre teren (secțiunea de mai sus): împrejmuire completă, 1,5 m pe trei laturi și 0,5 m la stradă; intravilan, cu nord și nord-est intravilan agricol; debitul de apă dovedit cu un tub de picurare de 150 m la 30 cm, udat cu succes anul trecut.
 - **10 octombrie 2026, seara, schema pădurii**: după studiul de caz din Parcul Tăbăcărie (pinul negru plantat între foioase a rămas cu coroana rară și baza uscată), **cei 33 de pini negri sunt mutați pe banda de sud a pădurii**, la 1,2–4 m de marginea dinspre grădină, în grup strâns (1,2 m între ei); înainte, 8 erau în interior, la peste 4 m. Restul schemei, aleea, luminișul, irigarea și cantitățile nu se schimbă; fișele de trasare per specie din schema tipărită sunt actualizate.
 - **10 octombrie 2026, seara**: gunoiul întins **nu miroase deloc** a doua zi după întins, nici după ce a fost mișcat cu tractorul: e gunoi fermentat, de cel puțin 6–12 luni, adică ce cerea pasul 8. Paiele rămase se descompun în sol după arat. Consecințe: plantarea **rămâne în ultima săptămână din noiembrie**; varianta martie rămâne doar rezervă pentru vreme; testul de pe 25 noiembrie se face, dar ca verificare; la plantare pământul amestecat cu gunoi se poate pune direct la rădăcină. Aratul după ploi rămâne, pentru afânare și ca gunoiul să ajungă la 20–30 cm.
 - **10 octombrie 2026, după-amiaza**: tractorul nu poate ara: roțile patinează pe stratul afânat de gunoi, pe sol uscat și tare. Se așteaptă ploile de săptămâna viitoare și 4–7 zile de uscare; aratul (25–30 cm) și discuitul se fac în aceeași zi, când un pumn de pământ strâns se leagă în bulgăre și se sfărâmă la apăsare. Gunoiul rămâne la suprafață până atunci (pierderea de azot e mică, terenul e plat). Calendarul: aratul cade realist în ultima decadă din octombrie, deci plantarea se decide pe **25 noiembrie**, cu două gropi de probă: fără miros de amoniac și fără căldură în sol → plantare 5–15 decembrie; altfel → prima decadă din martie, cu puieții reținuți la pepiniere. Între timp: țăruși și sfoară doar la colțuri, șanțul pentru coloana de apă și cablu, comenzile ferme după brumă.
