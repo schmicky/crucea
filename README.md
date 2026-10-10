@@ -1,3 +1,5 @@
+<p align="center"><img src="logo/vialunga-logo.svg" alt="Vialunga — Crucea, Dobrogea" width="360"></p>
+
 # Amenajare Proprietate - Crucea, Constanța
 
 **Pagina proiectului: [https://bit.ly/vialunga](https://bit.ly/vialunga)** — link scurt de acces la paginile publicate.
@@ -32,6 +34,7 @@ Paginile interactive ale proiectului pot fi vizitate direct în browser, prin li
 | [🔬 Studiu de caz — vegetație Kaufland](https://schmicky.github.io/crucea/studiu-caz-kaufland/) | Inventarul celor 21 de taxoni de pe banda plantată dintre parcare și carosabil, făcut din 28 de fotografii: fișă per specie în același format cu cea din planul de amenajare — lumină, creștere, udare, calendar fenologic, problemele văzute în teren și concluzia pentru Crucea |
 | [🌳 Studiu de caz — vegetație Parc Tăbăcărie](https://schmicky.github.io/crucea/studiu-caz-tabacarie/) | Studiul pereche al celui de la Kaufland: 19 taxoni din Parcul Tăbăcărie (Constanța), din trei epoci de plantare, făcut din 15 fotografii pe 10 octombrie 2026 — fișă per specie în același format, cum arată arborii după 40 de ani fără udare, pinul negru sufocat de foioase ca lecție pentru pădurea Miyawaki, 6 probleme de plantare și întreținere și concluzia pentru Crucea |
 | [📷 Galerie foto](https://schmicky.github.io/crucea/foto/) | Cele 30 de randări ale proiectului — grilă cu miniaturi, vizualizare pe tot ecranul, navigare cu tastele sau prin glisare pe telefon, plus acces la PNG-ul original |
+| [🌿 Logo Vialunga](https://schmicky.github.io/crucea/logo/vialunga-logo.svg) | Semnul proiectului (calea lungă spre pădure, sub soarele Dobrogei) și marca verbală, în SVG și PNG: vertical, orizontal, semn singur, monocrom, alb, pe fond închis, favicon; culorile și regulile de folosire în [`logo/README.md`](logo/README.md) |
 
 ### Perdea — planul nord cu perdelele de vânt
 
