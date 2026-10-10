@@ -47,3 +47,24 @@ Pepinieră dendro-floricolă de 5 ha, înființată în 2011; puieți din semin�
 Cu aceste înlocuiri, toate cele 324 de plante vin din trei surse: pepinierele silvice din Brăila/Galați (puieți de 1 leu), Mizil (comandă online) și Cobadin (drum de 50 km). Mărimile mari de la Mizil (dârmox 100–150 cm, caragana 120–150 cm) nu sunt un avantaj la Miyawaki; se cer mărimile mici sau puieți cu rădăcină nudă din categoria „gard viu”.
 
 Speciile noi în schemă: sâmbovină (Cs? — cod nou **Ce**), carpen (**Cb**), salbă moale (**Ee**), călin (**Vo**), cătină roșie (**Tr**), arbore de mazăre (**Cg**). Schema se regenerează cu aceleași poziții, doar cu codurile schimbate, dacă se confirmă înlocuirile.
+
+## Înlocuitori pentru speciile de la Mizil — căutare din 10 octombrie 2026
+
+Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul, salba moale și călinul din schemă. Nicio pepinieră silvică din sud-est nu publică aceste specii în oferte; mai jos sunt singurele surse găsite, toate de confirmat telefonic.
+
+| Specie (cod) | Sursă | Preț / mărime | Observații |
+|---|---|---|---|
+| Corn, Cm (49 + rezervă 5) | **Pepiniera Silvică Agigea**, 0748143025 | de întrebat | prima întrebare: cornul e specie de perdea în Dobrogea |
+| | Szabó Zsolt, Tomești, Harghita, 0746118273 (anunț primaimpadurire.ro) | 1,40 lei, 15–50 cm, 35 000 buc | anunț vechi de 2 ani; are și sânger; merge doar dacă trimite prin curier |
+| | ICAS, Pepiniera Ștefănești (Argeș), icas.ro, 021 350 3240 | listă de prețuri ianuarie 2025 | puieți ornamentali de pepinieră silvică, rădăcină nudă la foioasele mici |
+| | Mizil, 18,90 lei | 54 buc ≈ 1 020 lei | ultima variantă, doar pentru corn |
+| Salbă moale, Ev (27 + 3) | **Pepiniera Silvică Salcea**, Romsilva Suceava, 0753156196 / 0751164370 | în lista de puieți ornamentali | aceeași comandă cu călinul și dârmoxul; livrare de verificat |
+| | gardviuhibrid.ro | 12,90 lei, peste 50 cm | ca Mizil, fără avantaj |
+| | Pepiniera Roșie (Teleorman) | 25 lei rădăcină nudă | stoc epuizat în octombrie |
+| Călin, Rh (16 + 2) | **Pepiniera Silvică Salcea** | în listă: *Viburnum opulus* și *Viburnum lantana* (dârmox) | **o singură comandă acoperă călin + dârmox (44) + salbă moale** |
+| | planteieftine.ro | 7,77 lei, 40–60 cm, rădăcină liberă | listat ca „bulgăre de zăpadă” — poate fi soiul steril Roseum, fără fructe pentru păsări; de întrebat |
+| | Pepinierele Roman (Neamț) | 40 lei, 212 buc, comenzi 20 oct–30 nov | scump |
+| Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
+| Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |
+
+Ordinea apelurilor: Agigea (corn, dârmox, călin, salbă, porumbar), apoi Salcea pentru ce lipsește la Agigea (salbă moale, călin, dârmox, eventual sorb), apoi Harghita pentru corn dacă Agigea nu are. Mizil rămâne doar dacă nu se găsește corn nicăieri.
