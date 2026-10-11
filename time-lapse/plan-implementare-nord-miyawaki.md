@@ -121,6 +121,8 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 **39. Plantarea celor din noiembrie**: coletul la nivelul solului, 2–3 cm mai sus unde solul a fost afânat, rădăcinile întinse, tasare cu palmele, 10–20 l de apă la fiecare, țărușul de 1,5 m bătut la 10 cm de trunchi **înainte** de a umple groapa, pe partea dinspre vântul dominant (nord-est), legătură în opt cu bandă lată. Țărușul galben rămâne lângă plantă până la primăvară, ca etichetă.
 
+**39 bis. Gardul viu de la stradă, în aceeași zi cu plantele din noiembrie:** 143 de puieți de **lemn câinesc autohton** (*Ligustrum vulgare*, Foresta, 1 leu), pe 47,6 m, la **1 m în interiorul zidului de piatră**, de la 4,5 m după colțul de nord (după intrarea pavată) până la 0,5 m înainte de colțul de sud-vest, 3 pe metru. Se trasează cu sfoara paralel cu zidul, se sapă un șanț continuu de 30 cm lățime și 30 cm adâncime (nu gropi), puieții se pun la 33 cm, rădăcinile în apă 2 ore înainte, pământ amestecat cu compost, tasare, 10 l de apă pe metru, apoi tăiere la 20 cm de la sol, ca să se ramifice de jos; mulci de tocătură pe șanț. Tunderea: o dată pe an, în octombrie, din anul 3; se lasă să urce la 1,5–2 m. Cei 24 de arbuști ornamentali care stăteau la 0,5–1 m de zid (hibiscus, ploaie de aur, liliac de vară, kerria, călin, rozmarin) sunt mutați pe plan la 2,3 m, în spatele gardului. Picurarea gardului e pe zona V7, o singură linie pe toată lungimea.
+
 **40. Tubul de 16 mm și picurătoarele pe zonele V1–V4**: tubul la suprafață, de-a lungul rândurilor, prins cu agrafe la 2 m, racordat la capătul țevii zonei; la fiecare plantă numărul de picurătoare din foile 2–5, la 15–20 cm de tulpină. Picurătoarele se pun acum, înainte de mulci, cât se vede fiecare puiet.
 
 **41. Mulciul la plantele din curte**: cerc de 1 m, 8–10 cm, cu 5 cm liberi în jurul tulpinii, peste tubul de picurare. Pe cercurile cu buruieni, carton sub mulci.
@@ -184,6 +186,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 
 ## Jurnal
 
+- **11 octombrie 2026, seara**: la stradă intră un **gard viu de lemn câinesc autohton**, la 1 m în interiorul zidului de piatră, 3 pe metru: 143 de puieți pe 47,6 m (pasul 39 bis), în comanda de noiembrie la Foresta, pe planul nord ca puncte S81, pe irigare în V7. Arbuștii ornamentali de la 0,5–1 m de zid (24) sunt mutați la 2,3 m, în spatele gardului. Ulmul de Turkestan a fost respins pentru gard: samare, gărgăriță, tuns de trei ori pe vară.
 - **11 octombrie 2026**: gardul tuns al labirintului dintre căsuțe revine în plan, cum era în proiectul original (168 de lemn câinesc japonez, S34), dar **se plantează în martie**, nu în noiembrie, și în amestec cu photinia (pasul 49 bis). Pe planul nord sunt puse câte un punct S34 și unul S11 pe fiecare dintre cele 6 cârlige, ca marcaj; comanda e la Pepiniera Avramescu (Comana, Giurgiu), 1–4 lei bucata după mărime.
 - **10 octombrie 2026, noaptea**: completate datele despre teren: vecini cu curți nelucrate, pline de buruieni; pantă de 3 % de la nord-est spre stradă (vest-sud-vest); fără animale; irigare complet automată, cu verificare de la distanță, pentru că nu stă nimeni constant la Crucea; curentul în casă; presiune statică 2,2 bar; iazul rămâne unde e pe planul din DWG; miercuri 15 octombrie întâlnire cu echipa de peisagistică. Refacerea planului de irigare (banda de picurare, coloana unică, căminul de la pădure) preia cerințele de automatizare: ESP-ME3 + LNK2, senzor de debit, vană generală, senzor de ploaie, filtru de 1".
 - **10 octombrie 2026, seara**: calendarul lucrărilor grele stabilit: **iazul și parcarea în 2027, căsuțele în 2030**. Plantarea de noiembrie 2026 se limitează la perdele, pădure și zonele departe de traseul utilajelor; plantele din zona iazului, parcării și traseului se amână pentru toamna 2027; utilitățile spre căsuțe se trag în 2027, odată cu iazul (vezi „Date despre teren”).
@@ -221,6 +224,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 | săpt. 3 | nisip pentru patul țevilor | 1 m³ | la săparea șanțurilor |
 | săpt. 3 | închiriere motoburghiu cu burghie de 20 și 30 cm | 2 zile | doar în zilele plantării |
 | săpt. 3 | bandă lată de legat, carton | 1 rolă, 20 m² | la plantare |
+| săpt. 1 | lemn câinesc autohton pentru gardul de la stradă (Foresta, împreună cu cele 66 din pădure) | 158 | pasul 39 bis; șanț de 48 m |
 | primăvara | băncuță, puieți de completare | 1, 5–10 % | după iarnă |
 | primăvara (februarie, pentru martie) | lemn câinesc japonez 30–50 cm (Avramescu, 2 seturi de 100) + photinia 40–60 cm | 200 + 45 | gardul labirintului, pasul 49 bis; surplusul de lemn câinesc rămâne pentru completări |
 
