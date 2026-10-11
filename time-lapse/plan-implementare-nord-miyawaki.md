@@ -145,6 +145,8 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 **49. Primăvara (martie–aprilie):** plantele sensibile la ger din zonele V5–V8 (smochin, rodiu, kaki, migdal, mătase etc.), cu țăruși galbeni bătuți în martie după fișe, tub și picurătoare pe V5–V8, mulci; băncuța în luminiș; completarea pierderilor din pădure (5–10 % e normal) cu puieți din aceeași listă; **programatorul pornit la 1 aprilie**, anul 1: A/B/C cu frecvența mărită cu o zi și durata cu 50 %, D o dată pe săptămână 157 de minute pe circuit.
 
+**49 bis. Gardul labirintului, în prima decadă din martie (nu în noiembrie):** cele 6 cârlige dintre căsuțe se plantează cu **lemn câinesc japonez** (*Ligustrum ovalifolium*, 30–50 cm, rădăcină nudă, Pepiniera Avramescu: set de 100 la 125 lei) în amestec cu **photinia** (una la 4 plante, pentru verde iarna), 3 bucăți pe metru, în șanț, nu în gropi; lungimea celor 6 cârlige e de circa 55 m, deci 126 lemn câinesc + 42 photinia, ca cele 168 din proiectul original. Pe planul nord fiecare cârlig are câte un punct S34 (lemn câinesc) și unul S11 (photinia), ca marcaj al gardului, nu ca număr de plante. Se plantează în martie pentru că japonezul ține frunza iarna și, plantat în noiembrie, pierde 20–30 % la primul crivăț; rădăcinile 2–3 ore în apă, tăiere la 20 cm după plantare, 10 l de apă pe metru, picurarea V5 pornită de la 1 aprilie, mulci pe șanț.
+
 **50. Primul an de întreținere, scris în calendar:** pădurea se plivește de două ori (iunie, august), fără prașilă, buruienile smulse se lasă pe mulci; se completează mulciul în septembrie; se verifică legăturile arborilor din curte după fiecare furtună; în noiembrie se repetă golirea de iarnă. Din anul 2 udarea pădurii la două săptămâni, din anul 3 doar după trei săptămâni fără ploaie, din anul 4 nimic; arborii din curte după programele A, B, C din foaia 6.
 
 ---
@@ -182,6 +184,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 
 ## Jurnal
 
+- **11 octombrie 2026**: gardul tuns al labirintului dintre căsuțe revine în plan, cum era în proiectul original (168 de lemn câinesc japonez, S34), dar **se plantează în martie**, nu în noiembrie, și în amestec cu photinia (pasul 49 bis). Pe planul nord sunt puse câte un punct S34 și unul S11 pe fiecare dintre cele 6 cârlige, ca marcaj; comanda e la Pepiniera Avramescu (Comana, Giurgiu), 1–4 lei bucata după mărime.
 - **10 octombrie 2026, noaptea**: completate datele despre teren: vecini cu curți nelucrate, pline de buruieni; pantă de 3 % de la nord-est spre stradă (vest-sud-vest); fără animale; irigare complet automată, cu verificare de la distanță, pentru că nu stă nimeni constant la Crucea; curentul în casă; presiune statică 2,2 bar; iazul rămâne unde e pe planul din DWG; miercuri 15 octombrie întâlnire cu echipa de peisagistică. Refacerea planului de irigare (banda de picurare, coloana unică, căminul de la pădure) preia cerințele de automatizare: ESP-ME3 + LNK2, senzor de debit, vană generală, senzor de ploaie, filtru de 1".
 - **10 octombrie 2026, seara**: calendarul lucrărilor grele stabilit: **iazul și parcarea în 2027, căsuțele în 2030**. Plantarea de noiembrie 2026 se limitează la perdele, pădure și zonele departe de traseul utilajelor; plantele din zona iazului, parcării și traseului se amână pentru toamna 2027; utilitățile spre căsuțe se trag în 2027, odată cu iazul (vezi „Date despre teren”).
 - **10 octombrie 2026, seara**: notate datele despre teren (secțiunea de mai sus): împrejmuire completă, 1,5 m pe trei laturi și 0,5 m la stradă; intravilan, cu nord și nord-est intravilan agricol; debitul de apă dovedit cu un tub de picurare de 150 m la 30 cm, udat cu succes anul trecut.
@@ -219,6 +222,7 @@ Aleea și luminișul se trasează abia după lucrarea solului (pasul 34), cu ace
 | săpt. 3 | închiriere motoburghiu cu burghie de 20 și 30 cm | 2 zile | doar în zilele plantării |
 | săpt. 3 | bandă lată de legat, carton | 1 rolă, 20 m² | la plantare |
 | primăvara | băncuță, puieți de completare | 1, 5–10 % | după iarnă |
+| primăvara (februarie, pentru martie) | lemn câinesc japonez 30–50 cm (Avramescu, 2 seturi de 100) + photinia 40–60 cm | 200 + 45 | gardul labirintului, pasul 49 bis; surplusul de lemn câinesc rămâne pentru completări |
 
 ## Cele cinci greșeli pe care ordinea de mai sus le evită
 

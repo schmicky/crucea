@@ -100,6 +100,17 @@ De ridicat personal. Tei: catalogul spune doar „Tilia” — se întreabă dac
 | S21 | Liliac | *Syringa vulgaris* | 2 | 3 | la cerere | alternativ la Mizil |
 | S3 | Iasomie falsă | *Philadelphus coronarius* | 4 | 5 | la cerere | alternativ la Mizil |
 
+## Primăvara, în martie: gardul labirintului (comandă în februarie)
+
+Gardul tuns din cârligele labirintului dintre căsuțe, cum era în proiectul original (S34, 168 buc.), se plantează în **prima decadă din martie**, nu în noiembrie: lemnul câinesc japonez ține frunza iarna și, plantat toamna, pierde 20–30 % la primul crivăț. Pe planul nord, fiecare dintre cele 6 cârlige are un punct S34 și unul S11 ca marcaj.
+
+| Cod | Specie | Nume latin | În gard | De comandat | Preț (lei/buc) | Furnizor și observații |
+|---|---|---|---:|---:|---:|---|
+| S34 | Lemn câinesc japonez | *Ligustrum ovalifolium* | 126 | 200 (2 seturi de 100, 30–50 cm) | 1,25 | **Pepiniera Avramescu**, Comana, Giurgiu (pepinieraavramescu.ro / pepinieracomana.ro); rădăcină nudă; transport prin curier, de verificat; surplusul pentru completări |
+| S11 | Photinia | *Photinia × fraseri* | 42 | 45 (40–60 cm) | de confirmat | una la 4 plante, pentru verde iarna; Avramescu sau Cobadin; la ghiveci dacă nu există cu rădăcină nudă |
+
+Plantare la 3 bucăți pe metru, în șanț, pe circa 55 m de cârlige; tăiere la 20 cm după plantare; picurarea V5 pornită la 1 aprilie.
+
 ## Totaluri
 
 - plante „neapărat”: 145 în plan, cu rezervă circa 173 de comandat
