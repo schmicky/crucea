@@ -1,13 +1,13 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="logo/vialunga-logo-fond-inchis.svg">
-    <img src="logo/vialunga-logo.svg" alt="Vialunga — Crucea, Dobrogea" width="360">
+    <source media="(prefers-color-scheme: dark)" srcset="logo/poienel-logo-fond-inchis.svg">
+    <img src="logo/poienel-logo.svg" alt="Poienel — Crucea, Dobrogea" width="360">
   </picture>
 </p>
 
-# Amenajare Proprietate - Crucea, Constanța
+# Poienel — amenajarea proprietății de la Crucea, Constanța
 
-**Pagina proiectului: [https://bit.ly/vialunga](https://bit.ly/vialunga)** — link scurt de acces la paginile publicate.
+**Pagina proiectului: [https://bit.ly/vialunga](https://bit.ly/vialunga)** — link scurt de acces la paginile publicate. Proiectul se numește **Poienel** (poiana mică din fața casei, cu băncuța în luminișul pădurii); link-ul scurt păstrează numele vechi, Vialunga.
 
 ## Despre proiect
 
@@ -56,7 +56,7 @@ Varianta la care se lucrează acum, în ordinea în care se folosește: planul d
 
 | Pagină | Descriere |
 |---|---|
-| [🌿 Logo Vialunga](https://schmicky.github.io/crucea/logo/vialunga-logo.svg) | Semnul proiectului (interiorul proprietății văzut de la poartă: casa dobrogeană cu flori în față, pădurea deasă pe orizont, iazul în spate, sub soarele Dobrogei) și marca verbală, în SVG și PNG: vertical, orizontal, semn singur, monocrom, alb, pe fond închis, favicon; culorile și regulile de folosire în [`logo/README.md`](logo/README.md) |
+| [🌿 Logo Poienel](https://schmicky.github.io/crucea/logo/poienel-logo.svg) | Semnul proiectului (interiorul proprietății văzut de la poartă: casa dobrogeană cu flori în față, pădurea deasă pe orizont, iazul în spate, sub soarele Dobrogei) și marca verbală, în SVG și PNG: vertical, orizontal, semn singur, monocrom, alb, pe fond închis, favicon; culorile și regulile de folosire în [`logo/README.md`](logo/README.md) |
 | [📷 Galerie foto](https://schmicky.github.io/crucea/foto/) | Cele 30 de randări ale proiectului — grilă cu miniaturi, vizualizare pe tot ecranul, navigare cu tastele sau prin glisare pe telefon, plus acces la PNG-ul original |
 
 ## Paginile de la început (grădina, aplicațiile și variantele anterioare)
