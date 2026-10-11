@@ -1,6 +1,6 @@
 # Irigare prin picurare — planul nord, varianta Miyawaki
 
-Varianta planului nord cu pădurea Miyawaki în colțul de nord-est (`plan-amenajare-nord-miyawaki.html`): perdeaua planificată acolo (34 de plante) e scoasă, pădurea de 340 m² are trei circuite proprii cu tub cu picurătoare integrate. Sursa de apă: colțul de sud-est al casei, între casă și magazie. 303 plante, 506 picurătoare de 4 l/h pe 8 zone, plus V9–V11 pentru pădure (589 m de tub, 1782 picurătoare integrate); 11 electrovane, 4 programe. Schema tipăribilă: `irigare-plan-nord-miyawaki.html` / `irigare-plan-nord-miyawaki.pdf`.
+Varianta planului nord cu pădurea Miyawaki în colțul de nord-est (`plan-amenajare-nord-miyawaki.html`): perdeaua planificată acolo (34 de plante) e scoasă, pădurea de 340 m² are trei circuite proprii cu tub cu picurătoare integrate. Sursa de apă: colțul de sud-est al casei, între casă și magazie. 446 plante, 649 picurătoare de 4 l/h pe 8 zone, plus V9–V11 pentru pădure (589 m de tub, 1782 picurătoare integrate); 11 electrovane, 4 programe. Schema tipăribilă: `irigare-plan-nord-miyawaki.html` / `irigare-plan-nord-miyawaki.pdf`.
 
 ## Principiul
 
@@ -12,18 +12,18 @@ Frecvența de udare stabilește zona (ce pornește împreună), doza se regleaz�
 
 | Vană | Zonă | Program | Plante | Picurătoare | Debit l/h | Udare | l/săpt. din anul 3 | Tub 16 mm | Țeavă 25 mm de la cămin | Plante |
 |---|---|---|---:|---:|---:|---|---:|---:|---:|---|
-| V1 | Perdeaua de nord | A | 62 | 81 | 324 | 75 min × 1/săpt | 405 | 157 m | 40 m | Ulm de Turkestan 21  Sălcioară 10  Măceș 6  Kerria 5  Păducel 5  Ploaie de aur 4  Aronia 3  Liliac de vară 2  Iasomie falsă 1  Prun 1  Soc 1  Vișin 1  Nuc 1  Călin 1 |
+| V1 | Perdeaua de nord | A | 62 | 81 | 324 | 75 min × 1/săpt | 405 | 155 m | 40 m | Ulm de Turkestan 21  Sălcioară 10  Măceș 6  Kerria 5  Păducel 5  Ploaie de aur 4  Aronia 3  Liliac de vară 2  Iasomie falsă 1  Prun 1  Soc 1  Vișin 1  Nuc 1  Călin 1 |
 | V2 | Est — linia uscată | A | 19 | 19 | 76 | 75 min × 1/săpt | 95 | 76 m | 72 m | Sălcioară 12  Pin negru 7 |
 | V3 | Est — linia udă (frasini) | C | 16 | 47 | 188 | 120 min × 2/săpt | 752 | 51 m | 75 m | Corn 6  Frasin 5  Dud alb 5 |
-| V4 | Latura de sud | A | 61 | 115 | 460 | 75 min × 1/săpt | 575 | 180 m | 14 m | Sălcioară 14  Alun 11  Pin negru 10  Frasin 7  Dud alb 7  Corn 5  Arbore de mazăre 2  Cătină 2  Liliac de vară 1  Călin 1  Viță de vie 1 |
-| V7 | Stradă și terasă | B | 37 | 66 | 264 | 75 min × 2/săpt | 660 | 76 m | 13 m | Ploaie de aur 11  Lavandă 7  Hibiscus 5  Liliac de vară 3  Kerria 3  Alun 1  Cununiță 1  Călin 1  Rozmarin 1  Tei argintiu 1  Liliac 1  Nuc 1  Salcâm galben 1 |
+| V4 | Latura de sud | A | 61 | 115 | 460 | 75 min × 1/săpt | 575 | 178 m | 14 m | Sălcioară 14  Alun 11  Pin negru 10  Frasin 7  Dud alb 7  Corn 5  Arbore de mazăre 2  Cătină 2  Liliac de vară 1  Călin 1  Viță de vie 1 |
+| V7 | Stradă și terasă | B | 180 | 209 | 836 | 75 min × 2/săpt | 2 090 | 112 m | 13 m | Lemn câinesc autohton 143  Ploaie de aur 11  Lavandă 7  Hibiscus 5  Liliac de vară 3  Kerria 3  Alun 1  Cununiță 1  Călin 1  Rozmarin 1  Tei argintiu 1  Liliac 1  Nuc 1  Salcâm galben 1 |
 | V5 | Labirint și căsuțe | B | 46 | 77 | 308 | 75 min × 2/săpt | 770 | 128 m | 41 m | Lemn câinesc 6  Photinia 6  Lofantus 5  Tătăneasă 4  Coacăz negru 3  Smochin 2  Sânger 2  Agriș 2  Coacăz roșu 2  Coacăz alb 2  Păr 1  Piersic 1  Soc 1  Kaki 1  Migdal 1  Nectarin 1  Moșmon 1  Jujuba 1  Corcoduș 1  Scumpie 1  Cireș 1  Iasomie falsă 1 |
 | V6 | Grădina de bucătărie  casă | B | 41 | 67 | 268 | 75 min × 2/săpt | 670 | 128 m | 10 m | Coacăz roșu 14  Viță de vie 4  Hibiscus 4  Cătină 3  Roiniță 3  Cununiță 2  Salcie plângătoare 2  Arbore de mazăre 1  Kaki 1  Arborele de lalea 1  Magnolie 1  Oțetar 1  Rozmarin 1  Fenicul 1  Arborele de mătase 1  Rodiu 1 |
 | V8 | Pajiștea — pomi răzleți | C | 21 | 34 | 136 | 120 min × 2/săpt | 544 | 62 m | 21 m | Trandafir de Rescht 4  Lavandă 3  Potentilla 3  Paltin de câmp 2  Iasomie falsă 2  Isop 2  Salvie 2  Măr 1  Fenicul 1  Liliac 1 |
 | V9 | Pădure Miyawaki — spre gardul de est | D | 108 m² | 565 integrate | 904 | 157 min × 1/săpt (anul 1) | 2 368 (anul 1) | 187 m tub picurător | 73 m (PE 32) | tub 1 6 l/h la 33 cm  linii la 60 cm |
 | V10 | Pădure Miyawaki — mijloc | D | 108 m² | 568 integrate | 909 | 157 min × 1/săpt (anul 1) | 2 382 (anul 1) | 188 m tub picurător | 73 m (PE 32) | tub 1 6 l/h la 33 cm  linii la 60 cm |
 | V11 | Pădure Miyawaki — spre curte | D | 124 m² | 649 integrate | 1038 | 157 min × 1/săpt (anul 1) | 2 721 (anul 1) | 214 m tub picurător | 73 m (PE 32) | tub 1 6 l/h la 33 cm  linii la 60 cm |
-| | **Total plante (V1–V8)** | | **303** | **506** | | | **4 471** | **859 m** | **284 m** | |
+| | **Total plante (V1–V8)** | | **446** | **649** | | | **5 901** | **891 m** | **284 m** | |
 
 ## Programe
 
@@ -57,12 +57,12 @@ Udare noaptea sau dimineața devreme, o vană odată, mai–septembrie, cu pauz�
 - tub cu picurătoare integrate 16 mm, 1,6 l/h la 33 cm: 700 m; dopuri de spălare, 2 supape de aerisire, fitinguri de 16 mm
 - traversările aleii și luminișului: 35 traversări + 6 linii pe sub luminiș → 70 m de tub orb 16 mm în manșon PE 25 și 82 conectori bandă–tub; pe sub pietriș nu trec picurătoare, ca aleea să rămână uscată
 - tub orb PE 16 mm: 1000 m, la suprafață sub mulci, agrafe la 2 m
-- picurătoare autocompensante 4 l/h: 600 buc
+- picurătoare autocompensante 4 l/h: 750 buc
 - 11 electrovane 1" 24 V într-un cămin jumbo la sursă, pe distribuitor cu teuri de 1"; programator 12 zone (ESP-TM2-12) + modul Wi-Fi și senzor de ploaie alături; filtru 120 mesh cu regulator la intrare; 5 m de cablu cu 13 fire
 - robinet de golire la punctul cel mai jos al fiecărei zone, pentru iarnă
-- debit maxim pe o vană: 460 l/h la plante, 1038 l/h pe un circuit al pădurii — fără pompă dacă presiunea la robinet e peste 2 bar; se măsoară debitul robinetului înainte de a cumpăra tubul
+- debit maxim pe o vană: 836 l/h la plante, 1038 l/h pe un circuit al pădurii — fără pompă dacă presiunea la robinet e peste 2 bar; se măsoară debitul robinetului înainte de a cumpăra tubul
 
-Consum din anul 3: ≈ 4 471 l/săpt  ≈ 98 mc pe sezon  ≈ 979 lei la tariful RAJA 2026. Pădurea Miyawaki în anul 1: ≈ 7 471 l/săpt  164 mc  ≈ 1 635 lei pe sezon; anul 2 jumătate; apoi aproape nimic.
+Consum din anul 3: ≈ 5 901 l/săpt  ≈ 130 mc pe sezon  ≈ 1 292 lei la tariful RAJA 2026. Pădurea Miyawaki în anul 1: ≈ 7 471 l/săpt  164 mc  ≈ 1 635 lei pe sezon; anul 2 jumătate; apoi aproape nimic.
 
 ## Etape
 

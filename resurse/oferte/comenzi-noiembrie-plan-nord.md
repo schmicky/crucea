@@ -1,6 +1,6 @@
 # Comenzi de puieți pentru plantarea din noiembrie — planul nord
 
-Listele acoperă cele **145 de plante „neapărat în noiembrie”** (perdelele de vânt, arborii și fructiferii cu creștere lentă, arbuștii autohtoni) și, separat, cele **94 „dacă rămâne timp”**. Restul de 86 (specii sensibile la ger, pin negru, aromatice, perene) se comandă pentru martie–aprilie.
+Listele acoperă cele **145 de plante „neapărat în noiembrie”** (plus, din 11 octombrie, cele 143 de lemn câinesc autohton ale gardului viu de la stradă, la Foresta) (perdelele de vânt, arborii și fructiferii cu creștere lentă, arbuștii autohtoni) și, separat, cele **94 „dacă rămâne timp”**. Restul de 86 (specii sensibile la ger, pin negru, aromatice, perene) se comandă pentru martie–aprilie.
 
 Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere. Prețurile sunt cele declarate de pepinierele silvice pe puietiforestieri.ro; pentru Mizil, Cobadin și pepiniera pomicolă prețurile nu au putut fi citite și se confirmă la comandă.
 
@@ -18,6 +18,7 @@ Puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm. Livrare după c�
 | S5 | Păducel | *Crataegus monogyna* | 7 | 8 | 1.00 | perdele |
 | F28 | Măceș | *Rosa canina* | 8 | 9 | 1.00 | perdele |
 | F11 | Corcoduș | *Prunus cerasifera* | 1 | 2 | 1.00 | polenizator pentru prun |
+| S81 | Lemn câinesc autohton | *Ligustrum vulgare* | 143 | 158 | 1.00 | **gardul viu de la stradă**, adăugat la 11 octombrie: 47,6 m la 1 m în interiorul zidului, 3 pe metru, în șanț; aceeași specie ca cele 66 din pădure, se cer împreună (224 buc.) |
 
 *Dacă rămâne timp în noiembrie (altfel în martie):*
 
