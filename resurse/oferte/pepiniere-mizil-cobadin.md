@@ -68,3 +68,7 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 | Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |
 
 Ordinea apelurilor: Agigea (corn, dârmox, călin, salbă, porumbar), apoi Salcea pentru ce lipsește la Agigea (salbă moale, călin, dârmox, eventual sorb), apoi Harghita pentru corn dacă Agigea nu are. Mizil rămâne doar dacă nu se găsește corn nicăieri.
+
+## Pepiniera Avramescu (pepinieraavramescu.ro / pepinieracomana.ro) — notat la 11 octombrie 2026
+
+Sursă găsită pentru **lemn câinesc japonez** (*Ligustrum ovalifolium*), gardul tuns din proiectul original (S34, 168 buc.): rădăcină nudă la **1–4 lei bucata** după mărime (10–20 cm, 30–40 cm, 50–60 cm, 70–80 cm), set de 100 de bucăți de 30–50 cm la **125 lei** (1,25 lei/buc), cu trepte de preț până la 2 000 de bucăți; la ghiveci 25 lei. Prețul japonezului e aici la nivelul puietului silvic, deci alegerea între japonez și autohton se face după rezistență și întreținere, nu după bani. Livrarea prin curier și comanda minimă: de verificat pe site sau la telefon. Nu au în listă corn, călin, sorb sau scumpie (doar euonymus ornamental la 40–90 lei).
