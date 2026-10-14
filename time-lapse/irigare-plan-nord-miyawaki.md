@@ -1,6 +1,6 @@
 # Irigare prin picurare — planul nord, varianta Miyawaki
 
-Varianta planului nord cu pădurea Miyawaki în colțul de nord-est (`plan-amenajare-nord-miyawaki.html`): perdeaua planificată acolo (34 de plante) e scoasă, pădurea de 340 m² are trei circuite proprii cu tub cu picurătoare integrate. Sursa de apă: colțul de sud-est al casei, între casă și magazie. 494 plante, 703 picurătoare de 4 l/h pe 8 zone, plus V9–V11 pentru pădure (589 m de tub, 1782 picurătoare integrate); 11 electrovane, 4 programe. Schema tipăribilă: `irigare-plan-nord-miyawaki.html` / `irigare-plan-nord-miyawaki.pdf`.
+Varianta planului nord cu pădurea Miyawaki în colțul de nord-est (`plan-amenajare-nord-miyawaki.html`): perdeaua planificată acolo (34 de plante) e scoasă, pădurea de 340 m² are trei circuite proprii cu tub cu picurătoare integrate. Sursa de apă: colțul de sud-est al casei, între casă și magazie. 494 plante, 703 picurătoare de 4 l/h pe 8 zone, plus V9–V11 pentru pădure (589 m de tub, 1782 picurătoare integrate); 12 electrovane, 4 programe. Schema tipăribilă: `irigare-plan-nord-miyawaki.html` / `irigare-plan-nord-miyawaki.pdf`.
 
 ## Principiul
 
