@@ -60,7 +60,9 @@ Notițele luate în întâlnire, aranjate pe teme. **Decizii** = ce s-a hotărâ
 - Pădurea cere în anul 1 în jur de 7,5 m³ pe săptămână (22 l/m² pe 340 m²), curtea încă 3–4 m³. Trei cuburi acoperă o udare a pădurii dacă se reumplu din rețea între udări (la 0,5–1 m³/h, 3–6 ore); cu programatorul, umplerea și udarea se pot automatiza cu un plutitor și o vană pe alimentare.
 - Aspersoarele udă și buruienile și pierd 30–40 % prin evaporare în iulie, dar sunt mai simple de întreținut într-o pădure deasă decât 35 de traversări de bandă pe sub alee; de comparat în refacerea planului de irigare.
 
-## 8. Ce se schimbă în planuri (de aplicat după confirmare)
+## 8. Ce se schimbă în planuri
+
+*Aplicate pe 14 octombrie, seara*: gardurile de laur portughez + photinia (plan nord, irigare V12, comenzi, pasul 49 bis). *Rămân de aplicat după confirmare*: ulmii pe laturile cu magazia și cu Nicu, șablonul de 2 × 2 m pentru pădure, varianta de irigare cu rezervă și pompă.
 
 | Document | Schimbare |
 |---|---|

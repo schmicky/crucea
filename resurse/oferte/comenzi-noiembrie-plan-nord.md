@@ -1,6 +1,6 @@
 # Comenzi de puieți pentru plantarea din noiembrie — planul nord
 
-Listele acoperă cele **145 de plante „neapărat în noiembrie”** (plus, din 11 octombrie, cele 143 de lemn câinesc autohton ale gardului viu de la stradă, la Foresta) (perdelele de vânt, arborii și fructiferii cu creștere lentă, arbuștii autohtoni) și, separat, cele **94 „dacă rămâne timp”**. Restul de 86 (specii sensibile la ger, pin negru, aromatice, perene) se comandă pentru martie–aprilie.
+Listele acoperă cele **145 de plante „neapărat în noiembrie”** (perdelele de vânt, arborii și fructiferii cu creștere lentă, arbuștii autohtoni) și, separat, cele **94 „dacă rămâne timp”**. Restul de 86 (specii sensibile la ger, pin negru, aromatice, perene) se comandă pentru martie–aprilie.
 
 Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere. Prețurile sunt cele declarate de pepinierele silvice pe puietiforestieri.ro; pentru Mizil, Cobadin și pepiniera pomicolă prețurile nu au putut fi citite și se confirmă la comandă.
 
@@ -18,7 +18,6 @@ Puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm. Livrare după c�
 | S5 | Păducel | *Crataegus monogyna* | 7 | 8 | 1.00 | perdele |
 | F28 | Măceș | *Rosa canina* | 8 | 9 | 1.00 | perdele |
 | F11 | Corcoduș | *Prunus cerasifera* | 1 | 2 | 1.00 | polenizator pentru prun |
-| S81 | Lemn câinesc autohton | *Ligustrum vulgare* | 143 | 158 | 1.00 | **gardul viu de la stradă**, adăugat la 11 octombrie: 47,6 m la 1 m în interiorul zidului, 3 pe metru, în șanț; aceeași specie ca cele 66 din pădure, se cer împreună (224 buc.) |
 
 *Dacă rămâne timp în noiembrie (altfel în martie):*
 
@@ -101,16 +100,16 @@ De ridicat personal. Tei: catalogul spune doar „Tilia” — se întreabă dac
 | S21 | Liliac | *Syringa vulgaris* | 2 | 3 | la cerere | alternativ la Mizil |
 | S3 | Iasomie falsă | *Philadelphus coronarius* | 4 | 5 | la cerere | alternativ la Mizil |
 
-## Primăvara, în martie: gardul labirintului (comandă în februarie)
+## Primăvara, în martie: gardurile vii de laur portughez și photinia (comandă în februarie)
 
-Gardul tuns din cârligele labirintului dintre căsuțe, cum era în proiectul original (S34, 168 buc.), se plantează în **prima decadă din martie**, nu în noiembrie: lemnul câinesc japonez ține frunza iarna și, plantat toamna, pierde 20–30 % la primul crivăț. Pe planul nord, fiecare dintre cele 6 cârlige are un punct S34 și unul S11 ca marcaj.
+Decizia din întâlnirea cu echipa de peisagistică (14 octombrie): în **cârligele labirintului** (≈ 55 m) și la **stradă** (47,6 m, la 1 m în interiorul zidului) același gard, **laur portughez** și **photinia 'Red Robin'**, pe **două rânduri intercalate, 50 cm între plante pe rând** (4 plante pe metru). Plantare în **prima decadă din martie**, la ghiveci, în gropi umplute cu apă; nu în noiembrie, pentru că sunt veșnic verzi și prima iarnă fără rădăcini prinse ar costa 15–30 %. Pe planul nord gardul de la stradă e punct cu punct (S82 + S11); în cârlige, câte un marcaj pe cârlig.
 
-| Cod | Specie | Nume latin | În gard | De comandat | Preț (lei/buc) | Furnizor și observații |
+| Cod | Specie | Nume latin | În gard | De comandat | Preț orientativ (lei/buc) | Furnizor și observații |
 |---|---|---|---:|---:|---:|---|
-| S34 | Lemn câinesc japonez | *Ligustrum ovalifolium* | 126 | 200 (2 seturi de 100, 30–50 cm) | 1,25 | **Pepiniera Avramescu**, Comana, Giurgiu (pepinieraavramescu.ro / pepinieracomana.ro); rădăcină nudă; transport prin curier, de verificat; surplusul pentru completări |
-| S11 | Photinia | *Photinia × fraseri* | 42 | 45 (40–60 cm) | de confirmat | una la 4 plante, pentru verde iarna; Avramescu sau Cobadin; la ghiveci dacă nu există cu rădăcină nudă |
+| S82 | Laur portughez | *Prunus lusitanica* | 206 (96 stradă + 110 cârlige) | 227 | 20–40 (40–60 cm, ghiveci) | pepiniere la ghiveci (Cobadin, Avramescu, Călugăreni, Pepiniera Roșie), OLX; de cerut ofertă pe cantitate în ianuarie |
+| S11 | Photinia 'Red Robin' | *Photinia × fraseri* | 206 (95 stradă + 110 cârlige) | 227 | 15–35 (40–60 cm, ghiveci) | aceleași surse; Cobadin o are în lista 2024–2025 |
 
-Plantare la 3 bucăți pe metru, în șanț, pe circa 55 m de cârlige; tăiere la 20 cm după plantare; picurarea V5 pornită la 1 aprilie.
+Cost orientativ: 7 000–17 000 lei, cel mai mare post din comenzile de plante; se reduce cu plante mai mici (20–30 cm, 8–15 lei) sau cu butași proprii de photinia făcuți din vară.
 
 ## Totaluri
 
