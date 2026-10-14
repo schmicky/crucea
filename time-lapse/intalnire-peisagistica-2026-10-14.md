@@ -17,7 +17,7 @@ Notițele luate în întâlnire, aranjate pe teme. **Decizii** = ce s-a hotărâ
 **Decizii**
 - În **cârlige** și **la stradă**, același amestec: **laur portughez** (*Prunus lusitanica*) și **photinia 'Red Robin'**, plantate la **50 cm**, pe **două rânduri intercalate**.
 - Puieții se caută și pe **OLX**.
-- Plantare **cât mai devreme în noiembrie**.
+- Plantare **cât mai devreme în noiembrie** (decis în întâlnire); **revizuit pe 14 octombrie seara: laurul portughez și photinia se plantează în prima decadă din martie**, cu picurarea pornită de la 1 aprilie, ca să nu treacă prima iarnă fără rădăcini prinse; în noiembrie rămân pădurea, perdelele și ulmii.
 
 **De reținut la aplicare**
 - Laurul portughez e cu o clasă mai rezistent decât laurocireșul (laurul englezesc) respins pe 14 octombrie: suportă -15…-18 °C, calcarul și seceta odată prins, frunza e mai mică și nu se arde la fel; rămâne semipersistent, cu nevoie de picurare în primii 2–3 ani.
