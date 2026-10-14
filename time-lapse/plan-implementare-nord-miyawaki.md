@@ -22,6 +22,30 @@ Calendar orientativ: faza 0–2 în octombrie, faza 3–4 în prima jumătate a 
 
 ---
 
+## Întrebări pentru echipa de peisagistică (întâlnirea de miercuri, 15 octombrie 2026)
+
+Lista trimisă pe WhatsApp la 5 octombrie, actualizată cu ce s-a lămurit între timp. Primele zece sunt cele din mesaj; ce e marcat „rezolvat” se spune doar ca informare, restul se discută.
+
+1. **Amplasamentul pădurii** în colțul de nord-est, în locul capătului perdelei de est (ales ca să nu afecteze fundația de piatră a casei și livada caldă). E alegerea corectă din punctul lor de vedere? Se pierde ceva din rolul perdelei?
+2. **Pregătirea solului** — *decis*: fără scarificare la 60–80 cm (nu există utilaj); gunoi de grajd fermentat deja întins, arătură la 25–30 cm și disc după ploi, pe sol uscat. De confirmat că e suficient după aratul la 50 cm de anul trecut.
+3. **Buruienile** — *decis*: pir smuls, volbură și pălămidă cu carton sub mulci și cosit repetat. De confirmat.
+4. **Mulciul**: tocătură sau paie, și de unde 30–35 m³ la preț decent (găsit doar 150 lei/m³ și o ofertă de 2 m³ la 300 lei). Au ei o sursă?
+5. **Rădăcinile și casa**: distanțe minime ale plantelor din curte față de fundația de piatră, de iaz și de seră; dacă merită barieră anti-rădăcini undeva.
+6. **Hotarul și vecinii**: pădurea ajunge la 0,5 m de gardul de nord și de est (arbuști pe primii 2 m, arbori dincolo). Vecinii au curți nelucrate; gardul e de 1,5 m. E în regulă legal și practic? Cum se abordează vecinul de la est, care primește umbra de după-amiază?
+7. **Puieții** — *în mare parte rezolvat*: pepinierele silvice (Foresta, Matto Medusa, Doi Cocoși, Selficom, Agigea) confirmate pentru 861 de puieți; Mizil scos (exemplare mari, scumpe); de găsit încă corn, salbă moale, călin, sorb. Întrebare: acceptă înlocuitorii propuși pentru cele 5 specii de negăsit, și au ei surse pentru cele 4 lipsă?
+8. **Irigarea**: 11 vane dintr-un cămin lângă casă; pădurea trece pe bandă de picurare, cu o singură coloană PE 32 și un cămin cu 3 vane la pădure. Nou: sistemul trebuie **complet automat**, fără nimeni pe teren (ESP-ME3 cu Wi-Fi, senzor de debit, vană generală, senzor de ploaie, filtru de 1"). Părerea lor pe schemă, pe debite (dovedit ≈ 1 m³/h, 2,2 bar static) și pe automatizare.
+9. **Logistica plantării**: planul în 50 de pași, echipa de 6, plantarea în despicătură cu cazmaua în pădure, motoburghiu în curte, decizia datei (ultima săptămână din noiembrie, sau 5–15 decembrie / martie după testul gunoiului de pe 25 noiembrie). Să-l verifice.
+10. **Ce se pierde din metoda Miyawaki** prin compromisuri: retrageri față de hotar, pin negru (mutat acum pe banda de sud, după lecția din Parcul Tăbăcărie), alee în buclă și luminiș de 10 m², inel de arbuști.
+
+Noi, apărute după 5 octombrie:
+
+11. **Calendarul lucrărilor grele**: iazul și parcarea în 2027, căsuțele în 2030. Care e culoarul utilajelor de la stradă la iaz și la parcare, și ce plante din planul nord se amână din cauza lui? Unde se depozitează pământul din iaz?
+12. **Gardurile vii**: lemn câinesc autohton la stradă (1 m în interiorul zidului, 3 pe metru, noiembrie) și lemn câinesc japonez cu photinia în cârligele labirintului (martie). Sunt de acord cu speciile și cu plantarea în martie a japonezului? Photinia la stradă, una la patru, sau nu?
+13. **Analiza de sol**: recomandă analiză de laborator (pH, calcar activ, salinitate) înainte de plantare, și unde?
+14. **Panta și aerul rece**: 3 % de la nord-est spre stradă; speciile sensibile la ger (hibiscus, smochin, rodiu, migdal, nectarin) stau bine unde sunt pe plan, sau se mută mai sus?
+15. **Două specii propuse în plus**, din studiul Tăbăcărie: sâmbovina ca arbore de umbră și clocotișul ca arbore mic de secetă. Unde le-ar pune?
+16. **Ce livrează ei și ce rămâne pe documentele noastre**, ca să nu se facă același lucru de două ori: planșe, liste de plante, detalii de execuție, asistență la plantare.
+
 ## Faza 0 — Decizii și măsurători care condiționează cumpărăturile (săptămâna 1)
 
 **1. Măsoară debitul robinetului de la sursă.** Găleată de 10 l, cronometru, robinetul deschis complet, de trei ori, dimineața și seara. Litri pe oră = 36 000 / secundele pentru 10 l. Peste 1 200 l/h: pădurea rămâne pe 3 circuite (V9–V11), cum e în schemă. Sub 1 200 l/h: 4 circuite și programator cu 12 zone tot ajunge. Fără cifra asta nu comanda tubul cu picurătoare integrate.
