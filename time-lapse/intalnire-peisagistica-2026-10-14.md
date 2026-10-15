@@ -62,7 +62,7 @@ Notițele luate în întâlnire, aranjate pe teme. **Decizii** = ce s-a hotărâ
 
 ## 8. Ce se schimbă în planuri
 
-*Aplicate pe 14 octombrie, seara*: gardurile de laur portughez + photinia (plan nord, irigare V12, comenzi, pasul 49 bis). *Rămân de aplicat după confirmare*: ulmii pe laturile cu magazia și cu Nicu, șablonul de 2 × 2 m pentru pădure, varianta de irigare cu rezervă și pompă.
+*Aplicate pe 14 octombrie, seara*: gardurile de laur portughez + photinia (plan nord, irigare V12, comenzi, pasul 49 bis). *Aplicat pe 15 octombrie*: șablonul de 2 × 2 m, pe schema de plantare2 (caroiaj, 9 rețete, regula de sărit, fâșia de la gard). *Rămân de aplicat după confirmare*: ulmii pe laturile cu magazia și cu Nicu, varianta de irigare cu rezervă și pompă.
 
 | Document | Schimbare |
 |---|---|
