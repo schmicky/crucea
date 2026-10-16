@@ -14,7 +14,7 @@ if ([string]::IsNullOrEmpty($FtpPass)) {
 }
 
 # Fișiere de lucru care nu se publică pe server
-$ExcludeNames = @("sync-to-ftp.ps1", "build.mjs", "README.md")
+$ExcludeNames = @("sync-to-ftp.ps1", "build.mjs", "README.md", "CLAUDE.md")
 
 function Create-FtpDirectory {
     param(

@@ -8,6 +8,8 @@ Site-ul static publicat la <https://poienel.ro/>. Sursa de adevăr pentru specii
 2. Rulează `node build.mjs` din acest folder. Scriptul rescrie regiunile marcate `<!-- BUILD:… -->` din `index.html` (tabelul, fișele, taburile, sumarul, datele inline pentru popup și JSON-LD) și regenerează `specii.csv` și `sitemap.xml`.
 3. Verifică local (`.claude/http-server.ps1` sau orice server static) și publică cu `sync-to-ftp.ps1` (parola FTP se dă prin variabila de mediu `POIENEL_FTP_PASS` sau la prompt; nu se mai ține în script).
 
+Deciziile luate și regulile pentru actualizările viitoare sunt în `CLAUDE.md`.
+
 Restul paginii (`index.html` în afara regiunilor marcate, `robots.txt`, `llms.txt`) se editează direct.
 
 ## Ce există pentru crawlere și agenți AI
