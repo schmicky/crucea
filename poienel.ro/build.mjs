@@ -146,15 +146,16 @@ const csv = [csvHead.join(',')].concat(specii.map((s) => [
 ].map(csvCell).join(','))).join('\n') + '\n';
 fs.writeFileSync(path.join(dir, 'specii.csv'), '﻿' + csv);
 
-// 6. sitemap.xml
-const azi = new Date().toISOString().slice(0, 10);
+// 6. sitemap.xml: toate paginile HTML din folder (index.html = rădăcina), cu data ultimei modificări,
+// plus fișierele de date. O pagină nouă intră automat; nu trebuie listată de mână.
+const lastmod = (f) => fs.statSync(path.join(dir, f)).mtime.toISOString().slice(0, 10);
+const pagini = fs.readdirSync(dir).filter((f) => f.endsWith('.html')).sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)));
+const urlSitemap = (loc, f, extra = '') => `<url><loc>${loc}</loc><lastmod>${lastmod(f)}</lastmod>${extra}</url>`;
 fs.writeFileSync(path.join(dir, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>${SITE}</loc><lastmod>${azi}</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-<url><loc>${SITE}llms.txt</loc><lastmod>${azi}</lastmod><changefreq>monthly</changefreq></url>
-<url><loc>${SITE}specii.json</loc><lastmod>${azi}</lastmod><changefreq>monthly</changefreq></url>
-<url><loc>${SITE}specii.csv</loc><lastmod>${azi}</lastmod><changefreq>monthly</changefreq></url>
+${pagini.map((f) => urlSitemap(f === 'index.html' ? SITE : SITE + f, f, f === 'index.html' ? '<priority>1.0</priority>' : '')).join('\n')}
+${['llms.txt', 'specii.json', 'specii.csv'].map((f) => urlSitemap(SITE + f, f)).join('\n')}
 </urlset>
 `);
 
-console.log(`index.html, specii.csv, sitemap.xml: ${specii.length} specii (${Object.keys(TYPE).map((t) => `${TYPE[t].plural} ${counts[t]}`).join(', ')})`);
+console.log(`index.html, specii.csv, sitemap.xml (${pagini.length} pagini): ${specii.length} specii (${Object.keys(TYPE).map((t) => `${TYPE[t].plural} ${counts[t]}`).join(', ')})`);
