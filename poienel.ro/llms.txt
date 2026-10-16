@@ -1,0 +1,34 @@
+# Poienel
+
+> Poienel este o grădină în transformare la Crucea, județul Constanța (Dobrogea, România): un refugiu de weekend cu 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană, plantată la 3 plante/m². Site-ul e în limba română.
+
+Pagina principală (https://poienel.ro/) conține, direct în HTML, tabelul celor 65 de specii și câte o fișă pentru fiecare: cod, nume românesc și latin, tip, înălțime la 2 ani, la 5 ani și la maturitate, cerințe de lumină, doză și frecvență de udare în primii doi ani și calendarul lunar de udare, vegetație și înflorire. Aceleași date sunt publicate ca fișiere deschise și ca JSON-LD (schema.org: Place, Dataset, ItemList).
+
+Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia/ip = ierbacee. Planurile detaliate, schemele de plantare, irigarea, comenzile de puieți și studiile de caz sunt în proiectul GitHub „crucea”, publicat pe GitHub Pages.
+
+## Date
+
+- [specii.json](https://poienel.ro/specii.json): cele 65 de specii, cu toate câmpurile (phenology = 12 luni × [udare, vegetație, înflorire], valori 0/1)
+- [specii.csv](https://poienel.ro/specii.csv): aceleași date, tabelar, cu lunile scrise în clar
+- [sitemap.xml](https://poienel.ro/sitemap.xml)
+
+## Planuri și documentație
+
+- [Pagina proiectului](https://schmicky.github.io/crucea/): toate planurile, documentele și studiile de caz, cu descrieri
+- [Plan nord, varianta Miyawaki](https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html): planșa interactivă cu cele 291 de plante ale curții și pădurea din colțul de nord-est
+- [Pădure Miyawaki, colțul de nord-est](https://schmicky.github.io/crucea/miyawaki/index-est.html): 919 puieți din 30 de specii pe 340 m², cu fișe de plantare pe specii
+- [Plan Miyawaki (document)](https://github.com/schmicky/crucea/blob/master/miyawaki/plan-miyawaki-est.md): speciile, straturile, densitatea și pașii de plantare
+- [Schema de plantare pe caroiaj de 2 × 2 m](https://schmicky.github.io/crucea/miyawaki/index-est2.html): varianta de lucru, cu rețete pe pătrate
+- [Irigare prin picurare](https://schmicky.github.io/crucea/time-lapse/irigare-plan-nord-miyawaki.html): 11 zone, programator, picurătoare și consum pe vană
+- [Plan de implementare în 50 de pași](https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md): ordinea lucrărilor și a comenzilor
+- [Comenzi de puieți pentru pădurea Miyawaki](https://github.com/schmicky/crucea/blob/master/resurse/oferte/comenzi-miyawaki-est.md): necesar pe furnizori, prețuri, înlocuitori
+- [Fișe de plantare](https://schmicky.github.io/crucea/time-lapse/fise-plantare-nord.html): gropi, distanțe și udare pentru fiecare plantă
+- [Calendar fenologic](https://schmicky.github.io/crucea/time-lapse/plante_calendar.html): toate speciile pe luni
+- [README-ul proiectului](https://github.com/schmicky/crucea/blob/master/README.md): descrierea completă a proiectului și a fiecărui document
+
+## Optional
+
+- [Fotografii din teren](https://schmicky.github.io/crucea/foto/)
+- [Studiu de caz: pădurea Miyawaki Kaufland](https://schmicky.github.io/crucea/studiu-caz-kaufland/)
+- [Studiu de caz: Tăbăcărie](https://schmicky.github.io/crucea/studiu-caz-tabacarie/)
+- [Sistem de irigare prin picurare (ghid)](https://github.com/schmicky/crucea/blob/master/sistem-irigare-picurare.md)

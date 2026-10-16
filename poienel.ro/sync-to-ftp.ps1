@@ -2,9 +2,19 @@ param(
     [string]$SourcePath = "C:\Work\crucea\poienel.ro",
     [string]$FtpServer = "ftp.poienel.ro",
     [string]$FtpUser = "claude@poienel.ro",
-    [string]$FtpPass = "MJ2ilH4g4FCW",
+    [string]$FtpPass = $env:POIENEL_FTP_PASS,
     [string]$FtpPath = "/public_html"
 )
+
+# Parola nu se ține în script (fișierul e în repo și pe GitHub Pages): vine din
+# variabila de mediu POIENEL_FTP_PASS sau se cere la rulare.
+if ([string]::IsNullOrEmpty($FtpPass)) {
+    $secure = Read-Host "Parola FTP pentru $FtpUser" -AsSecureString
+    $FtpPass = [System.Net.NetworkCredential]::new("", $secure).Password
+}
+
+# Fișiere de lucru care nu se publică pe server
+$ExcludeNames = @("sync-to-ftp.ps1", "build.mjs", "README.md")
 
 function Create-FtpDirectory {
     param(
@@ -35,7 +45,7 @@ function Upload-FtpFolder {
     Write-Host "Uploading to FTP: $RemotePath" -ForegroundColor Cyan
 
     $files = Get-ChildItem -Path $LocalPath -Recurse -File |
-        Where-Object { $_.Name -ne "sync-to-ftp.ps1" }
+        Where-Object { $ExcludeNames -notcontains $_.Name }
 
     foreach ($file in $files) {
         $relativePath = $file.FullName.Substring($LocalPath.Length).TrimStart('\')
