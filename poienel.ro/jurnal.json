@@ -207,5 +207,44 @@
     "url": "https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html"
    }
   ]
+ },
+ {
+  "id": "2025-01-20-cheile-casei",
+  "data": "2025-01-20",
+  "taguri": [
+   "etape"
+  ],
+  "titlu": {
+   "ro": "Ziua în care am primit cheile casei de la Crucea",
+   "en": "The day we got the keys to the house at Crucea"
+  },
+  "text": {
+   "ro": [
+    "Am finalizat achiziția și am primit cheile căsuței de la Crucea, cea care avea să devină Grădina Poienel. O casă de piatră cu obloane verzi, un zid de piatră spre uliță și o curte de stepă, cu pământul încă adormit de iarnă; soare rece de ianuarie.",
+    "Fotografia e făcută de doamna care ne-a vândut casa, chiar în ziua aceea, cu noi doi, George și Ana, noii proprietari, în fața porții. De aici pornește tot: planurile, speciile, pădurea Miyawaki și jurnalul acesta."
+   ],
+   "en": [
+    "We completed the purchase and received the keys to the little house at Crucea, the one that would become the Poienel garden. A stone house with green shutters, a stone wall towards the lane and a steppe yard, the ground still asleep under winter; cold January sun.",
+    "The photo was taken by the lady who sold us the house, on that very day, with the two of us, George and Ana, the new owners, in front of the gate. Everything starts here: the plans, the species, the Miyawaki forest and this journal."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2025-01-20-cheile-casei.jpg",
+    "alt": {
+     "ro": "George și Ana, noii proprietari, în fața casei de piatră cu obloane verzi de la Crucea, în ziua în care au primit cheile",
+     "en": "George and Ana, the new owners, in front of the stone house with green shutters at Crucea, on the day they got the keys"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Pagina proiectului: planurile grădinii",
+     "en": "The project page: the garden plans (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/"
+   }
+  ]
  }
 ]

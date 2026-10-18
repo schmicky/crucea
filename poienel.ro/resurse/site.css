@@ -465,6 +465,7 @@ td a:hover { text-decoration: underline; }
 .jurnal-intrare .meta .tag { text-decoration: none; vertical-align: middle; }
 .tag-amenajare { background: #9a6700; }
 .tag-relaxare { background: #1a7a9a; }
+.tag-etape { background: #8e44ad; }
 #jurnal-tabs { margin-bottom: 16px; }
 .jurnal-foto { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
 .jurnal-foto figure { margin: 0; width: 300px; max-width: 100%; }
