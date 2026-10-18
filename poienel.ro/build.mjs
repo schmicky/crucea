@@ -92,6 +92,8 @@ const ETICHETE = {
     footerProiect: 'Proiectul', footerGithub: 'Documentația completă pe GitHub', footerGithubText: 'planuri, comenzi de puieți, oferte, studii de caz.', footerContact: 'Scrie-ne prin', footerJos: 'Crucea, Constanța',
     recomandate: [
       { href: 'https://discoverdobrogea.ro/', text: 'Descoperă Dobrogea', desc: 'locuri, trasee și povești din Dobrogea' },
+      { href: 'https://www.turistulliber.ro/', text: 'Turistul Liber', desc: 'blog de călătorii prin România' },
+      { href: 'https://epicvistaexperience.com/', text: 'Epic Vista Experience', desc: 'experiențe și călătorii' },
       { href: 'https://schmicky.github.io/crucea/', text: 'Proiectul Poienel pe GitHub Pages', desc: 'planurile, schema Miyawaki, irigarea, studiile de caz' },
     ],
   },
@@ -123,6 +125,8 @@ const ETICHETE = {
     footerProiect: 'The project', footerGithub: 'Full documentation on GitHub', footerGithubText: 'plans, sapling orders, quotes, case studies (in Romanian).', footerContact: 'Write to us via', footerJos: 'Crucea, Constanța, Romania',
     recomandate: [
       { href: 'https://discoverdobrogea.ro/', text: 'Discover Dobrogea', desc: 'places, routes and stories from Dobrogea (in Romanian)' },
+      { href: 'https://www.turistulliber.ro/', text: 'Turistul Liber', desc: 'a travel blog about Romania (in Romanian)' },
+      { href: 'https://epicvistaexperience.com/', text: 'Epic Vista Experience', desc: 'travel experiences' },
       { href: 'https://schmicky.github.io/crucea/', text: 'The Poienel project on GitHub Pages', desc: 'the plans, the Miyawaki layout, irrigation, case studies (in Romanian)' },
     ],
   },

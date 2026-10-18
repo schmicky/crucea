@@ -47,3 +47,5 @@ Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia
 - [Studiu de caz: Tăbăcărie](https://schmicky.github.io/crucea/studiu-caz-tabacarie/)
 - [Sistem de irigare prin picurare (ghid)](https://github.com/schmicky/crucea/blob/master/sistem-irigare-picurare.md)
 - [Descoperă Dobrogea](https://discoverdobrogea.ro/): locuri, trasee și povești din Dobrogea
+- [Turistul Liber](https://www.turistulliber.ro/): blog de călătorii prin România
+- [Epic Vista Experience](https://epicvistaexperience.com/): experiențe și călătorii
