@@ -349,17 +349,19 @@ tbody tr { cursor: pointer; transition: background 0.2s; }
   color: var(--text-tertiary);
 }
 
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  color: var(--text-secondary);
-  font-size: 13px;
-  border-top: 1px solid var(--border-color);
-  margin-top: 40px;
+.site-footer {
+  margin-top: 50px; padding: 30px 20px 20px;
+  background: var(--bg-secondary); border-top: 1px solid var(--border-color);
+  color: var(--text-secondary); font-size: 13px; line-height: 1.6;
 }
-
-footer a { color: var(--accent-blue); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
+.footer-coloane { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.site-footer h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-primary); margin: 0 0 8px; }
+.site-footer p { margin: 0 0 8px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin: 3px 0; }
+.site-footer a { color: var(--accent-blue); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.footer-jos { max-width: 1200px; margin: 24px auto 0; padding-top: 12px; border-top: 1px solid var(--border-color); font-size: 12px; text-align: center; }
 
 @media (max-width: 768px) {
   #popup-body { grid-template-columns: 1fr; }

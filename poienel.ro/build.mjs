@@ -71,6 +71,46 @@ ${MENIU.map((m) => `<li><a href="${m.href}"${m.href === fisier ? ' aria-current=
 </ul>
 </nav>`;
 
+// Subsolul, același pe toate paginile (regiunea BUILD:footer)
+const LINKURI_RECOMANDATE = [
+  { href: 'https://discoverdobrogea.ro/', text: 'Descoperă Dobrogea', desc: 'locuri, trasee și povești din Dobrogea' },
+  { href: 'https://schmicky.github.io/crucea/', text: 'Proiectul Poienel pe GitHub Pages', desc: 'planurile, schema Miyawaki, irigarea, studiile de caz' },
+];
+const DATE_DESCHISE = [
+  { href: 'specii.json', text: 'specii.json' }, { href: 'specii.csv', text: 'specii.csv' },
+  { href: 'atractii.json', text: 'atractii.json' }, { href: 'jurnal.json', text: 'jurnal.json' },
+  { href: 'llms.txt', text: 'llms.txt' }, { href: 'sitemap.xml', text: 'sitemap.xml' },
+];
+const extern = (l) => `<a href="${esc(l.href)}" rel="noopener" target="_blank">${esc(l.text)}</a>`;
+const footer = () => `<footer class="site-footer">
+<div class="footer-coloane">
+<section>
+<h2>Poienel</h2>
+<p>Grădină și pădure Miyawaki la Crucea, județul Constanța, în nordul Dobrogei.</p>
+<ul>
+${MENIU.filter((m) => !m.href.includes('#')).map((m) => `<li><a href="${m.href}">${m.text}</a></li>`).join('\n')}
+</ul>
+</section>
+<section>
+<h2>Linkuri recomandate</h2>
+<ul>
+${LINKURI_RECOMANDATE.map((l) => `<li>${extern(l)}${l.desc ? ` — ${esc(l.desc)}` : ''}</li>`).join('\n')}
+</ul>
+</section>
+<section>
+<h2>Date deschise</h2>
+<p>${DATE_DESCHISE.map((l) => `<a href="${l.href}">${l.text}</a>`).join(' · ')}</p>
+<p>Conținutul poate fi citit și citat liber, inclusiv de agenți AI; sursa: poienel.ro.</p>
+</section>
+<section>
+<h2>Proiectul</h2>
+<p>${extern({ href: 'https://github.com/schmicky/crucea', text: 'Documentația completă pe GitHub' })}: planuri, comenzi de puieți, oferte, studii de caz.</p>
+<p>Scrie-ne prin ${extern({ href: 'https://github.com/schmicky/crucea/issues', text: 'GitHub Issues' })}.</p>
+</section>
+</div>
+<p class="footer-jos">© Poienel ${new Date().getFullYear()} · Crucea, Constanța</p>
+</footer>`;
+
 // ───────────────────────── index.html: speciile ─────────────────────────
 const TYPE = {
   arbore:    { label: 'Arbore',    plural: 'Arbori' },
@@ -149,6 +189,7 @@ const jsonldSpecii = { '@context': 'https://schema.org', '@graph': [
 
 completeaza('index.html', {
   nav: nav('index.html'),
+  footer: footer(),
   jsonld: jsonld(jsonldSpecii),
   sumar: `${specii.length} de specii: ${Object.keys(TYPE).map((t) => `${counts[t]} ${TYPE[t].plural.toLowerCase()}`).join(', ')}.`,
   tabs: `<div class="type-tab active" data-type="all">Toate (${specii.length})</div>\n` + Object.keys(TYPE).map((t) => `<div class="type-tab" data-type="${t}">${TYPE[t].plural} (${counts[t]})</div>`).join('\n'),
@@ -206,6 +247,7 @@ const jsonldAtr = { '@context': 'https://schema.org', '@graph': [
 
 completeaza('atractii.html', {
   nav: nav('atractii.html'),
+  footer: footer(),
   jsonld: jsonld(jsonldAtr),
   sumar: `${atractii.length} obiective: ${Object.keys(CATEG).filter((c) => countsCat[c]).map((c) => `${countsCat[c]} ${CATEG[c].toLowerCase()}`).join(', ')}.`,
   lista: listaAtr,
@@ -242,6 +284,7 @@ const jsonldJurnal = { '@context': 'https://schema.org', '@graph': [
 
 completeaza('jurnal.html', {
   nav: nav('jurnal.html'),
+  footer: footer(),
   jsonld: jsonld(jsonldJurnal),
   // fără însemnări pagina e goală: nu se indexează până apare prima
   robots: `<meta name="robots" content="${jurnal.length ? 'index, follow, max-image-preview:large, max-snippet:-1' : 'noindex, follow'}">`,

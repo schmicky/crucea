@@ -33,7 +33,7 @@ Tot ce trebuie să citească un om, un motor de căutare sau un agent AI stă **
 - Date tabelare în `<table>` cu `<thead>`; fiecare rând al unui obiect (specie, plantă, zonă) are `data-*` cu codul și categoria și o ancoră (`id="…"`) la care se poate lega.
 - Numele științifice, codurile și unitățile apar în text, nu doar în popup sau în atribute. Numele latin este cheia de dezambiguizare pentru agenți.
 - Imagini cu `alt` descriptiv și `width`/`height`. Fără imagini încărcate la vedere din API-uri externe; fotografiile la cerere (clic) sunt acceptabile.
-- Fiecare pagină are o secțiune sau un `<nav>` cu linkuri către celelalte pagini ale site-ului, către pagina relevantă de pe GitHub Pages și către repo. Subsolul listează fișierele de date deschise și `llms.txt`.
+- Fiecare pagină are o secțiune sau un `<nav>` cu linkuri către celelalte pagini ale site-ului, către pagina relevantă de pe GitHub Pages și către repo. Subsolul comun (generat) listează paginile, linkurile recomandate, fișierele de date deschise și `llms.txt`.
 - Toate linkurile interne sunt relative la rădăcină (`specii.json`, `plan.html`), cele externe absolute, cu `rel="noopener"` când au `target="_blank"`.
 - Coduri și identificatori odată publicați nu se schimbă: sunt ancore, `@id`-uri în JSON-LD și linkuri pe care le pot ține alții.
 
@@ -67,6 +67,7 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 - `llms.txt`: formatul standard (H1, blockquote cu rezumatul, secțiuni cu linkuri `- [titlu](url): descriere`, `## Optional` la final). Se actualizează de mână la fiecare pagină nouă sau set de date nou și când se schimbă cifrele din rezumat. Linkurile spre GitHub Pages și repo rămân aici; `llms.txt` e harta pentru agenți.
 - URL-uri: fișiere `.html` cu nume mici, fără diacritice, cu cratime (`plan-nord.html`); canonicul rădăcinii este `https://poienel.ro/`. Nu se schimbă numele unei pagini publicate fără redirect 301 pe server.
 - CSS-ul este unul singur, `resurse/site.css`, încărcat de toate paginile; nu se pun blocuri `<style>` în pagini. Stilurile specifice unei pagini se adaugă tot acolo, sub un comentariu cu numele paginii.
+- **Subsolul** este același pe toate paginile și e generat de `build.mjs` (regiunea `BUILD:footer`): paginile site-ului, linkurile recomandate (lista `LINKURI_RECOMANDATE`), datele deschise (`DATE_DESCHISE`) și proiectul pe GitHub. Un link recomandat nou se adaugă în `LINKURI_RECOMANDATE` cu `href`, `text` și o descriere scurtă; un fișier de date nou, în `DATE_DESCHISE`. Nu se scrie `<footer>` de mână în pagini.
 - **Bara de meniu** este aceeași pe toate paginile și e generată de `build.mjs` (regiunea `BUILD:nav`, lista `MENIU`); pagina curentă primește `aria-current="page"`. O pagină nouă intră în meniu prin `MENIU`, nu prin HTML scris de mână.
 
 ## 7. Publicare și securitate
@@ -86,7 +87,7 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 
 ## Anexa: paginile existente
 
-Fiecare pagină are regiunile comune `nav` și `jsonld`, propriul JSON ca sursă și propria secțiune în `build.mjs`.
+Fiecare pagină are regiunile comune `nav`, `footer` și `jsonld`, propriul JSON ca sursă și propria secțiune în `build.mjs`.
 
 ### `index.html` — speciile grădinii
 
