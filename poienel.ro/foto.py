@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Pregătește fotografiile pentru jurnal: orientare corectă (EXIF), lățime maximă 900 px,
-miniatură de 300 px lățime în resurse/jurnal/thumb/, nume după dată și subiect.
+miniatură pătrată de 300 × 300 px (decupată din centru) în resurse/jurnal/thumb/, nume după dată și subiect.
 
 Folosire (din folderul poienel.ro, cu Pillow instalat: pip install pillow):
   python foto.py 2026-10-17 trasare-ruleta "C:\\Poze\\IMG_1234.jpg"
@@ -15,7 +15,7 @@ from PIL import Image, ImageOps
 
 DIR = Path(__file__).resolve().parent / 'resurse' / 'jurnal'
 THUMB = DIR / 'thumb'
-LATIME_MARE, LATIME_MICA, CALITATE = 900, 300, 82
+LATIME_MARE, MINIATURA, CALITATE = 900, 300, 82
 
 
 def salveaza(im, cale, latime):
@@ -28,10 +28,12 @@ def salveaza(im, cale, latime):
 
 
 def miniatura(cale_mare):
+    """Pătrat de MINIATURA px, decupat din centru, ca toate miniaturile să aibă aceeași mărime."""
     THUMB.mkdir(exist_ok=True)
-    im = ImageOps.exif_transpose(Image.open(cale_mare))
-    dim = salveaza(im, THUMB / cale_mare.name, LATIME_MICA)
-    print(f'  thumb/{cale_mare.name} {dim[0]}x{dim[1]}')
+    im = ImageOps.exif_transpose(Image.open(cale_mare)).convert('RGB')
+    im = ImageOps.fit(im, (MINIATURA, MINIATURA), Image.LANCZOS, centering=(0.5, 0.5))
+    im.save(THUMB / cale_mare.name, 'JPEG', quality=CALITATE, optimize=True, progressive=True)
+    print(f'  thumb/{cale_mare.name} {im.size[0]}x{im.size[1]}')
 
 
 def main(argv):
