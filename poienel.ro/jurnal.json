@@ -316,5 +316,118 @@
    }
   ],
   "linkuri": []
+ },
+ {
+  "id": "2025-02-02-prieteni-si-izvorul",
+  "data": "2025-02-02",
+  "taguri": [
+   "relaxare"
+  ],
+  "titlu": {
+   "ro": "Prieteni în vizită și drumul la izvorul de pe deal, după apă",
+   "en": "Friends visiting, and the walk to the spring on the hill for water"
+  },
+  "text": {
+   "ro": [
+    "Am avut prieteni în vizită la Crucea, cu copii cu tot. Am stat în curte, cu un foc mic lângă magazie, și în casă, unde cei mici au luat în stăpânire patul din camera cu pereți verzi.",
+    "După-amiază am urcat cu toții pe deal, la izvorul amenajat în piatră de sub pădurice, să luăm apă în sticle. De sus se vede toată valea, cu câmpurile și dealurile din jur; pomii erau încă goi, dar sub ei începeau să apară primele flori mărunte. Prima excursie a grupului pe dealurile noastre."
+   ],
+   "en": [
+    "We had friends visiting at Crucea, children included. We spent time in the yard, with a small fire by the shed, and in the house, where the little ones took over the bed in the green-walled room.",
+    "In the afternoon we all walked up the hill to the stone-built spring below the little wood, to fill bottles with water. From the top you see the whole valley, with the fields and the hills around; the trees were still bare, but the first tiny flowers were showing beneath them. The group's first outing on our hills."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2025-02-02-prieteni-in-curte.jpg",
+    "alt": {
+     "ro": "Prietenii cu copiii în curtea de la Crucea, lângă focul mic de la magazie, în februarie",
+     "en": "The friends with the children in the yard at Crucea, by the small fire at the shed, in February"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2025-02-02-in-casa.jpg",
+    "alt": {
+     "ro": "Un copil pe patul cu cuvertură verde din camera cu pereți verzi a casei",
+     "en": "A child on the green-covered bed in the house's green-walled room"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2025-02-02-pe-deal.jpg",
+    "alt": {
+     "ro": "Grupul urcând dealul, cu valea și câmpurile în spate",
+     "en": "The group climbing the hill, with the valley and fields behind"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2025-02-02-valea.jpg",
+    "alt": {
+     "ro": "Valea văzută de pe deal: câmpuri, drumul de țară și dealurile din jur, sub cer de februarie",
+     "en": "The valley seen from the hill: fields, the country road and the surrounding hills, under a February sky"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2025-02-02-pom-pe-deal.jpg",
+    "alt": {
+     "ro": "Un pom încă gol pe coasta dealului, cu primele flori mărunte în iarbă",
+     "en": "A still-bare tree on the hillside, with the first tiny flowers in the grass"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2025-02-02-izvorul.jpg",
+    "alt": {
+     "ro": "Izvorul amenajat în piatră de pe deal, cu sticlele umplute la țeava de apă, și copiii privind",
+     "en": "The stone-built spring on the hill, with bottles being filled at the water pipe, and the children watching"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Atracții turistice în jurul Poienelului",
+     "en": "Sights around Poienel"
+    },
+    "url": "atractii.html"
+   }
+  ]
+ },
+ {
+  "id": "2025-03-16-corcodusul-a-inflorit",
+  "data": "2025-03-16",
+  "taguri": [
+   "relaxare"
+  ],
+  "titlu": {
+   "ro": "Corcodușul a înflorit",
+   "en": "The cherry plum is in bloom"
+  },
+  "text": {
+   "ro": [
+    "Corcodușul bătrân de la poartă a înflorit, alb tot, până peste zidul de piatră și peste acoperiș: primul pom din curte care ne spune că a venit primăvara la Crucea. Pe stepă el deschide sezonul, cu două-trei săptămâni înaintea celorlalți pomi.",
+    "Corcodușul (Prunus cerasifera) rămâne în planul grădinii, ca fructifer și ca reper al calendarului fenologic: când înflorește el, începem lucrările de primăvară."
+   ],
+   "en": [
+    "The old cherry plum by the gate has flowered, all white, over the stone wall and above the roof: the first tree in the yard to tell us spring has come to Crucea. On the steppe it opens the season, two or three weeks ahead of the other fruit trees.",
+    "The cherry plum (Prunus cerasifera) stays in the garden plan, as a fruit tree and as a marker in the phenology calendar: when it flowers, we start the spring works."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2025-03-16-corcodus-inflorit.jpg",
+    "alt": {
+     "ro": "Corcodușul înflorit alb în fața casei de piatră cu obloane verzi, peste zidul și poarta de la uliță",
+     "en": "The cherry plum in white bloom in front of the stone house with green shutters, over the wall and the gate to the lane"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Fișa speciei: corcoduș (F11)",
+     "en": "Species sheet: cherry plum (F11)"
+    },
+    "url": "index.html#specie-F11"
+   }
+  ]
  }
 ]
