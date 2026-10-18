@@ -30,6 +30,16 @@ header {
 }
 
 .logo { max-width: 360px; height: auto; margin: 0 auto 20px; }
+/* Pe ecran lat: logo-ul în stânga, titlul și subtitlul în dreapta, ca antetul să fie scund */
+@media (min-width: 900px) {
+  header {
+    display: grid; grid-template-columns: auto 1fr; column-gap: 28px; align-items: center;
+    text-align: left; padding: 16px max(20px, calc((100% - 1200px) / 2));
+  }
+  header .logo { grid-row: 1 / span 2; max-width: 150px; margin: 0; }
+  header h1 { align-self: end; margin: 0 0 4px; font-size: 26px; }
+  header .tagline { align-self: start; }
+}
 h1 { margin: 0 0 8px; font-size: 28px; color: var(--accent-green); }
 .tagline { color: var(--text-secondary); font-size: 16px; margin: 0; }
 
