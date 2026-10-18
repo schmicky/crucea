@@ -86,6 +86,7 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 
 - `sync-to-ftp.ps1` urcă tot folderul în `public_html` (inclusiv `ro/`, `en/`, `resurse/` și `.htaccess`), mai puțin `$ExcludeNames` (`sync-to-ftp.ps1`, `build.mjs`, `foto.py`, `README.md`, `CLAUDE.md`). Orice fișier de lucru nou (scripturi, note, surse neprocesate) se adaugă acolo.
 - **Nicio parolă, cheie sau token în repo**, nici în acest folder, nici altundeva: repo-ul e public și tot conținutul lui ajunge pe GitHub Pages. Scriptul FTP ia parola din `$env:POIENEL_FTP_PASS` sau o cere la rulare. Workflow-ul `.github/workflows/static.yml` șterge `poienel.ro/sync-to-ftp.ps1` din artefactul Pages; dacă apar alte scripturi de publicare, se adaugă și ele acolo. Parola veche din istoricul git este compromisă și se consideră schimbată.
+- `googlec57cc0e60406bd55.html` de la rădăcină este fișierul de verificare al proprietății din Google Search Console: se urcă pe server odată cu restul, nu se șterge și nu se pune în sitemap.
 - Server local pentru verificare: `.claude/http-server.ps1` (Windows) sau `python3 -m http.server` din acest folder.
 
 ## 8. Verificare înainte de publicare (orice pagină)
