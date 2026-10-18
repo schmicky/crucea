@@ -2,36 +2,63 @@
  {
   "id": "2026-10-17-trasare-si-allah-bair",
   "data": "2026-10-17",
-  "titlu": "Trasarea terenului pentru plantarea din noiembrie și o urcare pe dealul de la Crucea",
-  "text": [
-   "Am continuat lucrările de trasare a terenului pentru plantarea din luna noiembrie. Cu ruleta întinsă pe linie și țăruși de șipcă bătuți la distanțele din plan, am marcat rândurile și pozițiile pe parcela curățată, pe lângă gardul viu de la margine; ziua a fost înnorată și rece, numai bună de lucru.",
-   "După-amiază am urcat pe dealul de la Crucea, Dealul Allah Bair, pe drumul de pământ care trece prin plantația de pin negru. Sus, iarba uscată de stepă, păducei și măceși plini de fructe roșii, tufe de scumpie ruginii și priveliștea peste vale, spre culmile din jur. E locul de unde se vede cel mai bine ce înseamnă silvostepa pe care o imităm în pădurea Miyawaki."
-  ],
+  "titlu": {
+   "ro": "Trasarea terenului pentru plantarea din noiembrie și o urcare pe dealul de la Crucea",
+   "en": "Marking out the ground for the November planting, and a climb up the hill at Crucea"
+  },
+  "text": {
+   "ro": [
+    "Am continuat lucrările de trasare a terenului pentru plantarea din luna noiembrie. Cu ruleta întinsă pe linie și țăruși de șipcă bătuți la distanțele din plan, am marcat rândurile și pozițiile pe parcela curățată, pe lângă gardul viu de la margine; ziua a fost înnorată și rece, numai bună de lucru.",
+    "După-amiază am urcat pe dealul de la Crucea, Dealul Allah Bair, pe drumul de pământ care trece prin plantația de pin negru. Sus, iarba uscată de stepă, păducei și măceși plini de fructe roșii, tufe de scumpie ruginii și priveliștea peste vale, spre culmile din jur. E locul de unde se vede cel mai bine ce înseamnă silvostepa pe care o imităm în pădurea Miyawaki."
+   ],
+   "en": [
+    "We carried on marking out the ground for the planting in November. With the tape stretched along the line and lath stakes driven in at the spacings from the plan, we marked the rows and positions on the cleared plot, along the hedge at the edge; the day was overcast and cold, just right for work.",
+    "In the afternoon we drove up the hill at Crucea, Allah Bair Hill, on the dirt track through the black pine plantation. On top, dry steppe grass, hawthorns and dog roses heavy with red fruit, rusty smoke-tree bushes and the view across the valley to the ridges around. It is the place where you best see what the forest-steppe we are imitating in the Miyawaki forest means."
+   ]
+  },
   "foto": [
    {
     "src": "resurse/jurnal/2026-10-17-trasare-ruleta.jpg",
-    "alt": "Trasarea rândurilor cu ruleta întinsă și țăruși de șipcă, pe parcela de lângă gardul viu"
+    "alt": {
+     "ro": "Trasarea rândurilor cu ruleta întinsă și țăruși de șipcă, pe parcela de lângă gardul viu",
+     "en": "Marking out the rows with the stretched tape and lath stakes, on the plot by the hedge"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-17-echipa.jpg",
-    "alt": "La trasare: țărușii pregătiți și ciocanul în mână, sub un cer de octombrie"
+    "alt": {
+     "ro": "La trasare: țărușii pregătiți și ciocanul în mână, sub un cer de octombrie",
+     "en": "At the marking out: the stakes ready and the hammer in hand, under an October sky"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-17-drum-pini.jpg",
-    "alt": "Drumul de pământ prin plantația de pin negru, spre vârful Dealului Allah Bair"
+    "alt": {
+     "ro": "Drumul de pământ prin plantația de pin negru, spre vârful Dealului Allah Bair",
+     "en": "The dirt track through the black pine plantation, towards the top of Allah Bair Hill"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-17-allah-bair.jpg",
-    "alt": "Pe Dealul Allah Bair: iarbă uscată de stepă, păducei cu fructe roșii și valea spre culmile din jur"
+    "alt": {
+     "ro": "Pe Dealul Allah Bair: iarbă uscată de stepă, păducei cu fructe roșii și valea spre culmile din jur",
+     "en": "On Allah Bair Hill: dry steppe grass, hawthorns with red fruit and the valley towards the ridges around"
+    }
    }
   ],
   "linkuri": [
    {
-    "titlu": "Planul de implementare în 50 de pași (ordinea lucrărilor și a plantării)",
+    "titlu": {
+     "ro": "Planul de implementare în 50 de pași (ordinea lucrărilor și a plantării)",
+     "en": "The 50-step implementation plan (order of works and planting)"
+    },
     "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
    },
    {
-    "titlu": "Rezervația naturală Dealul Allah Bair",
+    "titlu": {
+     "ro": "Rezervația naturală Dealul Allah Bair",
+     "en": "Allah Bair Hill Nature Reserve"
+    },
     "url": "atractii.html#dealul-allah-bair"
    }
   ]
@@ -39,28 +66,49 @@
  {
   "id": "2026-10-08-gunoi-de-grajd",
   "data": "2026-10-08",
-  "titlu": "Gunoi de grajd maturat pe zona pădurii Miyawaki",
-  "text": [
-   "Am adus gunoi de grajd maturat și l-am descărcat în grămezi, cu camioneta, pe parcela din colțul de nord-est unde se plantează pădurea Miyawaki. Gunoiul e bine fermentat, de culoare închisă, fără miros tare: exact ce trebuie pentru stratul de materie organică pe care îl cere metoda.",
-   "Apoi l-am împrăștiat cu tractorul pe toată zona de amenajare, între țărușii care marchează conturul, ca să fie încorporat în sol la afânarea de dinaintea plantării. Pe stepa noastră săracă în humus, stratul acesta e investiția care decide cât de repede pornesc puieții în primii doi ani."
-  ],
+  "titlu": {
+   "ro": "Gunoi de grajd maturat pe zona pădurii Miyawaki",
+   "en": "Well-rotted farmyard manure on the Miyawaki forest plot"
+  },
+  "text": {
+   "ro": [
+    "Am adus gunoi de grajd maturat și l-am descărcat în grămezi, cu camioneta, pe parcela din colțul de nord-est unde se plantează pădurea Miyawaki. Gunoiul e bine fermentat, de culoare închisă, fără miros tare: exact ce trebuie pentru stratul de materie organică pe care îl cere metoda.",
+    "Apoi l-am împrăștiat cu tractorul pe toată zona de amenajare, între țărușii care marchează conturul, ca să fie încorporat în sol la afânarea de dinaintea plantării. Pe stepa noastră săracă în humus, stratul acesta e investiția care decide cât de repede pornesc puieții în primii doi ani."
+   ],
+   "en": [
+    "We brought well-rotted farmyard manure and tipped it in heaps, from the pickup, on the plot in the north-east corner where the Miyawaki forest is to be planted. The manure is well fermented, dark, with no strong smell: exactly what the method's layer of organic matter calls for.",
+    "Then we spread it with the tractor over the whole area to be planted, between the stakes marking the outline, so it is worked into the soil at the loosening before planting. On our humus-poor steppe, this layer is the investment that decides how fast the saplings get going in the first two years."
+   ]
+  },
   "foto": [
    {
     "src": "resurse/jurnal/2026-10-08-gunoi-gramezi.jpg",
-    "alt": "Grămezile de gunoi de grajd maturat descărcate din camionetă pe parcela pădurii Miyawaki"
+    "alt": {
+     "ro": "Grămezile de gunoi de grajd maturat descărcate din camionetă pe parcela pădurii Miyawaki",
+     "en": "The heaps of well-rotted farmyard manure tipped from the pickup on the Miyawaki forest plot"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-08-gunoi-imprastiat.jpg",
-    "alt": "Tractorul împrăștie gunoiul de grajd pe zona de amenajare, între țărușii conturului"
+    "alt": {
+     "ro": "Tractorul împrăștie gunoiul de grajd pe zona de amenajare, între țărușii conturului",
+     "en": "The tractor spreading the farmyard manure over the planting area, between the outline stakes"
+    }
    }
   ],
   "linkuri": [
    {
-    "titlu": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+    "titlu": {
+     "ro": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+     "en": "Miyawaki forest, north-east corner: the planting plan"
+    },
     "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
    },
    {
-    "titlu": "Planul de implementare în 50 de pași",
+    "titlu": {
+     "ro": "Planul de implementare în 50 de pași",
+     "en": "The 50-step implementation plan"
+    },
     "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
    }
   ]
@@ -68,48 +116,84 @@
  {
   "id": "2026-10-02-curatenie-generala",
   "data": "2026-10-02",
-  "titlu": "Curățenie generală: cu buldoexcavatorul și manual, cu ajutor local",
-  "text": [
-   "Am făcut curățenia generală a terenului, pregătirea de dinaintea trasării și a plantării din noiembrie. Buldoexcavatorul a scos tufele bătrâne, rădăcinile și buruienile înalte și a nivelat zonele unde se plantează, iar unde nu a putut intra, printre pomii pe care îi păstrăm și pe lângă gard, am curățat manual, cu un ajutor din sat, cu roaba și uneltele.",
-   "La sfârșitul zilei terenul era pământ curat, cu urmele șenilelor încă proaspete, de la casă până în fundul curții. Următorii pași: gunoiul de grajd pe zona pădurii Miyawaki, apoi trasarea rândurilor cu ruleta și țărușii."
-  ],
+  "titlu": {
+   "ro": "Curățenie generală: cu buldoexcavatorul și manual, cu ajutor local",
+   "en": "General clearing: with the backhoe and by hand, with local help"
+  },
+  "text": {
+   "ro": [
+    "Am făcut curățenia generală a terenului, pregătirea de dinaintea trasării și a plantării din noiembrie. Buldoexcavatorul a scos tufele bătrâne, rădăcinile și buruienile înalte și a nivelat zonele unde se plantează, iar unde nu a putut intra, printre pomii pe care îi păstrăm și pe lângă gard, am curățat manual, cu un ajutor din sat, cu roaba și uneltele.",
+    "La sfârșitul zilei terenul era pământ curat, cu urmele șenilelor încă proaspete, de la casă până în fundul curții. Următorii pași: gunoiul de grajd pe zona pădurii Miyawaki, apoi trasarea rândurilor cu ruleta și țărușii."
+   ],
+   "en": [
+    "We did the general clearing of the ground, the preparation before marking out and the November planting. The backhoe pulled out the old bushes, the roots and the tall weeds and levelled the areas to be planted, and where it could not get in, among the trees we are keeping and along the fence, we cleared by hand, with a helper from the village, with the wheelbarrow and hand tools.",
+    "By the end of the day the ground was clean soil, with the tracks of the machine still fresh, from the house to the bottom of the garden. Next steps: the farmyard manure on the Miyawaki forest plot, then marking out the rows with the tape and stakes."
+   ]
+  },
   "foto": [
    {
     "src": "resurse/jurnal/2026-10-02-teren-inainte.jpg",
-    "alt": "Terenul cu iarba uscată și tufele rămase, înainte de curățenie, cu magazia mică în fund"
+    "alt": {
+     "ro": "Terenul cu iarba uscată și tufele rămase, înainte de curățenie, cu magazia mică în fund",
+     "en": "The ground with dry grass and the remaining bushes, before clearing, with the small shed at the back"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-curatenie-manuala.jpg",
-    "alt": "Curățenia manuală lângă casă: ajutorul din sat cu roaba, pe terenul deja degajat"
+    "alt": {
+     "ro": "Curățenia manuală lângă casă: ajutorul din sat cu roaba, pe terenul deja degajat",
+     "en": "Clearing by hand next to the house: the helper from the village with the wheelbarrow, on the ground already cleared"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-urme-buldoexcavator.jpg",
-    "alt": "Urmele șenilelor buldoexcavatorului pe pământul curățat, pe lângă pomii păstrați"
+    "alt": {
+     "ro": "Urmele șenilelor buldoexcavatorului pe pământul curățat, pe lângă pomii păstrați",
+     "en": "The backhoe's tracks on the cleared soil, next to the trees we kept"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-teren-nivelat.jpg",
-    "alt": "Zona nivelată de buldoexcavator, cu tufele scoase trase la margine"
+    "alt": {
+     "ro": "Zona nivelată de buldoexcavator, cu tufele scoase trase la margine",
+     "en": "The area levelled by the backhoe, with the pulled-out bushes dragged to the edge"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-sol-curatat.jpg",
-    "alt": "Solul curățat de aproape: pământ gol, cu resturi de rădăcini"
+    "alt": {
+     "ro": "Solul curățat de aproape: pământ gol, cu resturi de rădăcini",
+     "en": "The cleared soil close up: bare earth with root remains"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-teren-curatat.jpg",
-    "alt": "Terenul curățat spre fundul curții, cu magazia și pomii rămași"
+    "alt": {
+     "ro": "Terenul curățat spre fundul curții, cu magazia și pomii rămași",
+     "en": "The cleared ground towards the bottom of the garden, with the shed and the remaining trees"
+    }
    },
    {
     "src": "resurse/jurnal/2026-10-02-senile.jpg",
-    "alt": "Urmele de șenile pe pământul proaspăt nivelat, spre casă"
+    "alt": {
+     "ro": "Urmele de șenile pe pământul proaspăt nivelat, spre casă",
+     "en": "Tracks on the freshly levelled soil, towards the house"
+    }
    }
   ],
   "linkuri": [
    {
-    "titlu": "Planul de implementare în 50 de pași",
+    "titlu": {
+     "ro": "Planul de implementare în 50 de pași",
+     "en": "The 50-step implementation plan"
+    },
     "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
    },
    {
-    "titlu": "Plan nord, varianta Miyawaki",
+    "titlu": {
+     "ro": "Plan nord, varianta Miyawaki",
+     "en": "North plan, Miyawaki variant"
+    },
     "url": "https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html"
    }
   ]

@@ -32,11 +32,14 @@ Din `poienel.ro/`, pentru fiecare poză: `python3 -I foto.py <AAAA-LL-ZZ> <subie
 Adaugă în `poienel.ro/jurnal.json` un obiect:
 
 ```json
-{ "id": "AAAA-LL-ZZ-subiect", "data": "AAAA-LL-ZZ", "titlu": "…",
-  "text": ["paragraf 1", "paragraf 2"],
-  "foto": [{ "src": "resurse/jurnal/AAAA-LL-ZZ-subiect.jpg", "alt": "ce se vede" }],
-  "linkuri": [{ "titlu": "…", "url": "…" }] }
+{ "id": "AAAA-LL-ZZ-subiect", "data": "AAAA-LL-ZZ",
+  "titlu": { "ro": "…", "en": "…" },
+  "text": { "ro": ["paragraf 1", "paragraf 2"], "en": ["paragraph 1", "paragraph 2"] },
+  "foto": [{ "src": "resurse/jurnal/AAAA-LL-ZZ-subiect.jpg", "alt": { "ro": "ce se vede", "en": "what is shown" } }],
+  "linkuri": [{ "titlu": { "ro": "…", "en": "…" }, "url": "…" }] }
 ```
+
+Site-ul e bilingv: utilizatorul dă indicațiile în română, iar însemnarea se scrie **și în engleză**, în același obiect (`build.mjs` se oprește dacă lipsește o limbă). Traducerea e a ta, fără să o ceri utilizatorului.
 
 - Text la persoana întâi plural, 1–3 paragrafe, fapte din teren, cu legătura spre plan unde are sens (de ce s-a făcut lucrarea, ce urmează).
 - `alt` descrie concret ce e în poză; ordinea pozelor urmează ordinea lucrării.
@@ -46,6 +49,6 @@ Adaugă în `poienel.ro/jurnal.json` un obiect:
 ## 6. Build, verificare, commit, push
 
 1. `node build.mjs` din `poienel.ro/` (se oprește dacă lipsește o miniatură).
-2. Verificare rapidă: pagina `jurnal.html` servită local, pozele se încarcă (naturalWidth 300), fără 404; ordinea însemnărilor descrescătoare după dată.
+2. Verificare rapidă: `ro/jurnal.html` și `en/jurnal.html` servite local, pozele se încarcă (naturalWidth 300), fără 404; ordinea însemnărilor descrescătoare după dată.
 3. `git add -A poienel.ro`, commit cu mesaj „poienel.ro: însemnarea din <data>, <subiect>” (cu atribuirea cerută de sesiune), `git push -u origin <branch-curent>`.
 4. Răspuns scurt: data și titlul însemnării, pozele (nume → ce arată), ce a rămas de făcut (publicarea cu `sync-to-ftp.ps1`).

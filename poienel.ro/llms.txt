@@ -1,26 +1,32 @@
 # Poienel
 
-> Poienel este o grădină în transformare la Crucea, județul Constanța (Dobrogea, România): un refugiu de weekend cu 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană, plantată la 3 plante/m². Site-ul e în limba română.
+> Poienel este o grădină în transformare la Crucea, județul Constanța (Dobrogea, România): un refugiu de weekend cu 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană, plantată la 3 plante/m². Site-ul este în română (ro/) și engleză (en/), cu același conținut.
 
-Site-ul are trei pagini, cu aceeași bară de meniu: grădina și speciile, atracțiile turistice din jur și jurnalul. Pagina principală (https://poienel.ro/) conține, direct în HTML, tabelul celor 65 de specii și câte o fișă pentru fiecare: cod, nume românesc și latin, tip, înălțime la 2 ani, la 5 ani și la maturitate, cerințe de lumină, doză și frecvență de udare în primii doi ani și calendarul lunar de udare, vegetație și înflorire. Aceleași date sunt publicate ca fișiere deschise și ca JSON-LD (schema.org: Place, Dataset, ItemList).
+Site-ul are trei pagini, în fiecare limbă, cu aceeași bară de meniu și cu stegulețe pentru schimbarea limbii: grădina și speciile, atracțiile turistice din jur și jurnalul. Paginile conțin, direct în HTML, tabelul celor 65 de specii și câte o fișă pentru fiecare: cod, nume românesc, englezesc și latin, tip, înălțime la 2 ani, la 5 ani și la maturitate, cerințe de lumină, doză și frecvență de udare în primii doi ani și calendarul lunar de udare, vegetație și înflorire. Aceleași date sunt publicate ca fișiere deschise și ca JSON-LD (schema.org: WebSite, Place, Dataset, ItemList, TouristAttraction, Blog), cu `hreflang` între limbi.
 
-Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia/ip = ierbacee. Planurile detaliate, schemele de plantare, irigarea, comenzile de puieți și studiile de caz sunt în proiectul GitHub „crucea”, publicat pe GitHub Pages.
+Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia/ip = ierbacee. Planurile detaliate, schemele de plantare, irigarea, comenzile de puieți și studiile de caz sunt în proiectul GitHub „crucea”, publicat pe GitHub Pages (în română).
 
-## Paginile site-ului
+## Paginile site-ului (română)
 
-- [Grădina și speciile](https://poienel.ro/): tabelul și fișele celor 65 de specii, planurile
-- [Atracții turistice în jur](https://poienel.ro/atractii.html): 11 obiective la cel mult o oră de Crucea (Mănăstirea Crucea și Izvorul Tămăduirii, Dealul Allah Bair, Carsium, Capidava, Ulmetum, Cheile Dobrogei, Peștera Liliecilor, Mănăstirea Sf. Ioan Casian, Ghindărești, muzeul din Topalu), cu distanțe, acces și surse
-- [Jurnalul grădinii](https://poienel.ro/jurnal.html): însemnări datate din teren, cea mai nouă prima
+- [Grădina și speciile](https://poienel.ro/ro/index.html): tabelul și fișele celor 65 de specii, planurile
+- [Atracții turistice în jur](https://poienel.ro/ro/atractii.html): 11 obiective la cel mult o oră de Crucea (Mănăstirea Crucea și Izvorul Tămăduirii, Dealul Allah Bair, Carsium, Capidava, Ulmetum, Cheile Dobrogei, Peștera Liliecilor, Mănăstirea Sf. Ioan Casian, Ghindărești, muzeul din Topalu), cu distanțe, acces, poze și surse
+- [Jurnalul grădinii](https://poienel.ro/ro/jurnal.html): însemnări datate din teren, cu fotografii, cea mai nouă prima
 
-## Date
+## Pages in English
 
-- [specii.json](https://poienel.ro/specii.json): cele 65 de specii, cu toate câmpurile (phenology = 12 luni × [udare, vegetație, înflorire], valori 0/1)
-- [specii.csv](https://poienel.ro/specii.csv): aceleași date, tabelar, cu lunile scrise în clar
-- [atractii.json](https://poienel.ro/atractii.json): obiectivele turistice, cu categorie, localitate, distanță, descriere, sfaturi practice și surse
-- [jurnal.json](https://poienel.ro/jurnal.json): însemnările din jurnal (data, titlu, paragrafe, fotografii, linkuri)
+- [The garden and its species](https://poienel.ro/en/index.html): the table and sheets of the 65 species, the plans
+- [Sights around Poienel](https://poienel.ro/en/atractii.html): 11 sights within an hour of Crucea (Crucea Monastery and the Healing Spring, Allah Bair Hill, Carsium, Capidava, Ulmetum, the Dobrogea Gorges, the Bat Cave, Saint John Cassian Monastery, Ghindărești, the Topalu museum), with distances, access, photos and sources
+- [The garden journal](https://poienel.ro/en/jurnal.html): dated notes from the field, with photos, newest first
+
+## Date / Data
+
+- [specii.json](https://poienel.ro/specii.json): cele 65 de specii, cu toate câmpurile, textele în ambele limbi (`ro`, `en`, `lumin_note.ro/en`; `phenology` = 12 luni × [udare, vegetație, înflorire], valori 0/1) — the 65 species, bilingual
+- [specii-ro.csv](https://poienel.ro/specii-ro.csv) · [specii-en.csv](https://poienel.ro/specii-en.csv): aceleași date, tabelar, cu lunile scrise în clar — the same data as CSV, per language
+- [atractii.json](https://poienel.ro/atractii.json): obiectivele turistice, cu categorie, localitate, distanță, descriere, sfaturi practice, poză și surse, textele `{ro, en}` — the sights, bilingual
+- [jurnal.json](https://poienel.ro/jurnal.json): însemnările din jurnal (data, titlu, paragrafe, fotografii, linkuri), textele `{ro, en}` — the journal entries, bilingual
 - [sitemap.xml](https://poienel.ro/sitemap.xml)
 
-## Planuri și documentație
+## Planuri și documentație (română)
 
 - [Pagina proiectului](https://schmicky.github.io/crucea/): toate planurile, documentele și studiile de caz, cu descrieri
 - [Plan nord, varianta Miyawaki](https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html): planșa interactivă cu cele 291 de plante ale curții și pădurea din colțul de nord-est
@@ -40,3 +46,4 @@ Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia
 - [Studiu de caz: pădurea Miyawaki Kaufland](https://schmicky.github.io/crucea/studiu-caz-kaufland/)
 - [Studiu de caz: Tăbăcărie](https://schmicky.github.io/crucea/studiu-caz-tabacarie/)
 - [Sistem de irigare prin picurare (ghid)](https://github.com/schmicky/crucea/blob/master/sistem-irigare-picurare.md)
+- [Descoperă Dobrogea](https://discoverdobrogea.ro/): locuri, trasee și povești din Dobrogea

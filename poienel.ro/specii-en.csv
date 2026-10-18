@@ -1,0 +1,66 @@
+﻿code,name,latin_name,type,height_2_years,height_5_years,height_mature,light,light_note,water_l_per_watering,waterings_per_week,watering_months,growth_months,flowering_months,wikipedia
+A5,Norway maple,Acer platanoides,Tree,3.0–3.5 m,5.0–6.0 m,20–25 m,sun or part shade,Tolerates part shade while young; at maturity it wants full light.,25,2,Apr–Jul,Mar–Sep,Feb–Mar,https://en.wikipedia.org/wiki/Acer_platanoides
+A11,Persian silk tree,Albizia julibrissin,Tree,2.5–3.0 m,4.5–5.5 m,6–9 m,sun,In shade the crown gets sparse and it rarely flowers.,15,2,May–Sep,Apr–Oct,Jun–Aug,https://en.wikipedia.org/wiki/Albizia_julibrissin
+A21,Russian olive,Elaeagnus angustifolia,Tree,2.5–3.0 m,4.0–5.0 m,6–8 m,sun,,5,1,—,Mar–Oct,May–Jun,https://en.wikipedia.org/wiki/Elaeagnus_angustifolia
+A24,European ash,Fraxinus excelsior,Tree,2.5–3.5 m,5.0–6.5 m,25–30 m,sun or part shade,,30,2,May–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Fraxinus_excelsior
+A28,Tulip tree,Liriodendron tulipifera,Tree,2.5–3.5 m,5.0–7.0 m,25–30 m,sun,,30,2,May–Sep,Mar–Oct,Jun–Jul,https://en.wikipedia.org/wiki/Liriodendron_tulipifera
+A30,Saucer magnolia,Magnolia × soulangiana,Tree,1.5–2.0 m,2.5–3.5 m,6–8 m,sun or part shade,,20,2,May–Sep,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Magnolia_%C3%97_soulangiana
+A34,Austrian pine,Pinus nigra,Tree,1.2–1.8 m,2.5–3.5 m,20–30 m,sun,,5,1,—,all year,—,https://en.wikipedia.org/wiki/Pinus_nigra
+A40,Downy oak,Quercus pubescens,Tree,1.2–1.8 m,2.5–3.5 m,10–15 m,sun,,15,2,May–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Quercus_pubescens
+A43,Weeping willow,Salix babylonica,Tree,3.0–4.0 m,6.0–8.0 m,10–12 m,sun,,40,2,May–Sep,Mar–Oct,—,https://en.wikipedia.org/wiki/Salix_babylonica
+A48,Silver lime,Tilia tomentosa,Tree,2.5–3.0 m,4.5–6.0 m,25–30 m,sun or part shade,,30,2,May–Aug,Apr–Oct,Jul,https://en.wikipedia.org/wiki/Tilia_tomentosa
+A52,Siberian elm,Ulmus pumila,Tree,3.0–4.0 m,6.0–7.0 m,12–15 m,sun,,5,1,—,Apr–Oct,Mar,https://en.wikipedia.org/wiki/Ulmus_pumila
+F1,Hazel,Corylus avellana,Fruit,1.5–2.0 m,2.5–3.5 m,4–5 m,sun or part shade,"Grows in part shade too, but fruits well only with sun on the crown.",15,2,May–Sep,Mar–Oct,Jan–Feb,https://en.wikipedia.org/wiki/Corylus_avellana
+F3,Persimmon,Diospyros kaki,Fruit,1.5–2.0 m,3.0–4.0 m,6–8 m,sun,,20,2,May–Sep,Apr–Oct,May,https://en.wikipedia.org/wiki/Diospyros_kaki
+F4,Fig,Ficus carica,Fruit,1.5–2.5 m,3.0–4.0 m,4–6 m,sun,"The warmest, most sheltered spot in the garden — next to a south-facing wall is ideal.",20,2,May–Sep,Apr–Oct,—,https://en.wikipedia.org/wiki/Ficus_carica
+F6,Walnut,Juglans regia,Fruit,2.0–2.5 m,4.0–5.0 m,15–20 m,sun,,30,2,May–Sep,Apr–Oct,—,https://en.wikipedia.org/wiki/Juglans_regia
+F7,Apple,Malus domestica,Fruit,1.8–2.2 m,3.0–3.5 m,4–5 m,sun,Fruits on wood that gets sun — which is why the crown is thinned by pruning.,25,2,May–Sep,Apr–Oct,Apr–May,https://en.wikipedia.org/wiki/Malus_domestica
+F8,Medlar,Mespilus germanica,Fruit,1.5–1.8 m,2.5–3.0 m,4–6 m,sun or part shade,,15,2,May–Sep,Mar–Oct,May,https://en.wikipedia.org/wiki/Mespilus_germanica
+F9,White mulberry,Morus alba,Fruit,2.5–3.0 m,5.0–6.0 m,10–12 m,sun,,20,2,May–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Morus_alba
+F10,Sweet cherry,Prunus avium,Fruit,2.0–2.5 m,3.5–4.5 m,6–9 m,sun,,30,2,May–Aug,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_avium
+F11,Cherry plum,Prunus cerasifera,Fruit,2.0–2.5 m,4.0–5.0 m,6–8 m,sun,,20,2,May–Aug,Apr–Sep,Feb–Mar,https://en.wikipedia.org/wiki/Prunus_cerasifera
+F12,Sour cherry,Prunus cerasus,Fruit,1.8–2.2 m,3.0–3.5 m,4–5 m,sun,,20,2,May–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_cerasus
+F14,Almond,Prunus dulcis,Fruit,1.8–2.5 m,3.5–4.5 m,5–7 m,sun,,15,2,May–Aug,Mar–Oct,Feb–Mar,https://en.wikipedia.org/wiki/Prunus_dulcis
+F15,Peach,Prunus persica,Fruit,1.8–2.5 m,3.0–3.5 m,4–5 m,sun,,25,2,May–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_persica
+F16,Pomegranate,Punica granatum,Fruit,1.2–1.8 m,2.5–3.0 m,3–4 m,sun,,15,2,May–Sep,Apr–Oct,Jun–Aug,https://en.wikipedia.org/wiki/Punica_granatum
+F17,Pear,Pyrus communis,Fruit,2.0–2.5 m,3.5–4.5 m,6–10 m,sun,,25,2,May–Sep,Apr–Oct,Apr,https://en.wikipedia.org/wiki/Pyrus_communis
+F18,Jujube,Ziziphus jujuba,Fruit,1.5–2.0 m,3.0–4.0 m,6–8 m,sun,,10,2,May–Sep,Apr–Oct,Jun–Jul,https://en.wikipedia.org/wiki/Ziziphus_jujuba
+F19,Juneberry,Amelanchier lamarckii,Fruit,1.5–2.0 m,3.0–4.0 m,5–8 m,sun or part shade,,15,2,May–Aug,Apr–Oct,Apr,https://en.wikipedia.org/wiki/Amelanchier_lamarckii
+F21,Cornelian cherry,Cornus mas,Fruit,1.2–1.6 m,2.5–3.0 m,5–6 m,sun or part shade,Copes well with the forest edge — part shade doesn't bother it.,10,2,May–Aug,Mar–Oct,Feb–Mar,https://en.wikipedia.org/wiki/Cornus_mas
+F26,Sea buckthorn,Hippophae rhamnoides,Fruit,1.5–2.0 m,3.0–4.0 m,4–6 m,sun,Without direct sun it doesn't fruit at all.,3,2,—,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Hippophae_rhamnoides
+F28,Dog rose,Rosa canina,Fruit,1.2–1.8 m,2.5–3.0 m,3–4 m,sun,,5,1,Jun–Aug,Mar–Oct,May–Jun,https://en.wikipedia.org/wiki/Rosa_canina
+F29,Red currant,Ribes rubrum,Fruit,0.8–1.0 m,1.2–1.5 m,1.5 m,sun or part shade,In our climate it prefers part shade: in direct sun the leaves scorch and the fruit ripens small.,5,2,May–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_rubrum
+F30,Black currant,Ribes nigrum,Fruit,0.9–1.2 m,1.5–1.8 m,1.8–2.0 m,sun or part shade,Needs moist soil; afternoon shade helps it through summer.,5,2,May–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_nigrum
+F31,White currant,Ribes rubrum (varietatea albă),Fruit,0.8–1.0 m,1.2–1.5 m,1.5 m,sun or part shade,"White variety of red currant — same species, same care; prefers a part-shaded spot.",5,2,May–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_rubrum
+F32,Gooseberry,Ribes uva-crispa,Fruit,0.7–0.9 m,1.0–1.3 m,1.5 m,sun or part shade,Part shade protects it from powdery mildew and fruit scorch.,5,2,May–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_uva-crispa
+F33,Grapevine,Vitis vinifera,Fruit,1.5–2.0 m,2.0–2.5 m,2.0–2.5 m,sun,Grapes ripen only with a south or south-west exposure.,15,2,May–Sep,Apr–Oct,Jun,https://en.wikipedia.org/wiki/Vitis_vinifera
+F34,Siberian pea tree,Caragana arborescens,Fruit,1.5–2.0 m,3.0–4.0 m,4–6 m,sun,,5,1,Jun–Aug,Mar–Sep,Apr–May,https://en.wikipedia.org/wiki/Caragana_arborescens
+F44,Common dogwood,Cornus sanguinea,Fruit,1.2–1.8 m,2.5–3.5 m,4–5 m,sun or part shade,,8,2,May–Aug,Mar–Oct,Jun,https://en.wikipedia.org/wiki/Cornus_sanguinea
+F53,Plum,Prunus domestica,Fruit,2.0–2.5 m,3.5–4.5 m,5–6 m,sun,,25,2,May–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_domestica
+F56,Nectarine,Prunus persica var. nucipersica,Fruit,1.8–2.5 m,3.0–3.5 m,4–5 m,sun,"Like the peach: sun all day, otherwise leaf curl becomes chronic.",25,2,May–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_persica
+F59,Black chokeberry,Aronia melanocarpa,Fruit,0.9–1.2 m,1.5–2.0 m,2.0–2.5 m,sun or part shade,"Fruits more heavily in sun, but tolerates part shade.",8,2,May–Sep,Mar–Oct,Apr–May,https://en.wikipedia.org/wiki/Aronia_melanocarpa
+S3,Mock orange,Philadelphus coronarius,Shrub,1.0–1.5 m,2.0–2.5 m,3.0 m,sun or part shade,,8,2,May–Aug,Mar–Oct,Jun–Jul,https://en.wikipedia.org/wiki/Philadelphus_coronarius
+S4,Smoke tree,Cotinus coggygria,Shrub,1.0–1.5 m,2.0–3.0 m,4–5 m,sun,"The autumn colour and the ""smoke"" of flower heads appear only in sun.",8,1,Jun–Aug,Apr–Oct,Jun–Jul,https://en.wikipedia.org/wiki/Cotinus_coggygria
+S5,Hawthorn,Crataegus monogyna,Shrub,1.2–1.8 m,2.5–3.5 m,6–8 m,sun or part shade,,5,1,Jun–Aug,Mar–Oct,May,https://en.wikipedia.org/wiki/Crataegus_monogyna
+S6,Rose of Sharon,Hibiscus syriacus,Shrub,1.0–1.4 m,2.0–2.5 m,3–4 m,sun,In shade it hardly flowers.,8,2,May–Sep,Apr–Oct,Jul–Sep,https://en.wikipedia.org/wiki/Hibiscus_syriacus
+S10,Golden chain tree,Laburnum anagyroides,Shrub,1.5–2.0 m,3.0–4.0 m,5–7 m,sun or part shade,,15,2,May–Aug,Mar–Oct,May–Jun,https://en.wikipedia.org/wiki/Laburnum_anagyroides
+S11,Red tip photinia,Photinia × fraseri,Shrub,1.0–1.4 m,2.0–2.5 m,3–4 m,sun or part shade,The red shoots are more intense in sun; part shade keeps them greener.,8,1,May–Aug,all year,Apr–May,https://en.wikipedia.org/wiki/Photinia_%C3%97_fraseri
+S17,Staghorn sumac,Rhus typhina,Shrub,1.5–2.0 m,3.0–4.0 m,4–5 m,sun,,8,1,Jun–Aug,Apr–Oct,Jun–Jul,https://en.wikipedia.org/wiki/Rhus_typhina
+S18,Elder,Sambucus nigra,Shrub,1.5–2.5 m,3.0–4.0 m,4–6 m,sun or part shade,,15,2,May–Aug,Mar–Oct,Jun,https://en.wikipedia.org/wiki/Sambucus_nigra
+S21,Lilac,Syringa vulgaris,Shrub,1.0–1.5 m,2.5–3.0 m,4–5 m,sun,"Below 5–6 hours of sun, flowering visibly declines year after year.",10,2,May–Aug,Mar–Oct,Apr–May,https://en.wikipedia.org/wiki/Syringa_vulgaris
+S28,Forsythia,Forsythia × intermedia,Shrub,1.2–1.6 m,2.0–2.5 m,3.0 m,sun,In shade it makes long shoots and few flowers.,8,2,May–Aug,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Forsythia_%C3%97_intermedia
+S34,Privet,Ligustrum ovalifolium,Shrub,1.0–1.5 m,2.0–3.0 m,3–4 m,sun or part shade,Works in part shade too — which is why it's good as a hedge on the north side.,5,1,Jun–Aug,all year,Jun–Jul,https://en.wikipedia.org/wiki/Ligustrum_ovalifolium
+S38,Japanese spiraea,Spiraea japonica,Shrub,0.5–0.7 m,0.8–1.2 m,1.2–1.5 m,sun,,4,2,May–Sep,Mar–Oct,Jun–Aug,https://en.wikipedia.org/wiki/Spiraea_japonica
+S50,Japanese kerria,Kerria japonica,Shrub,0.8–1.2 m,1.5–2.0 m,2.0–2.5 m,shade,One of the few shrubs that flower in shade; in direct sun the flowers fade.,5,2,May–Sep,Mar–Oct,Apr–May,https://en.wikipedia.org/wiki/Kerria_japonica
+S69,Rose 'de Rescht',Rosa 'de Rescht',Shrub,0.7–0.9 m,1.0–1.3 m,1.2–1.5 m,sun,Below 6 hours of sun it makes few flowers and gets black spot.,10,2,May–Sep,Mar–Oct,May–Sep,https://en.wikipedia.org/wiki/Rosa
+S72,Guelder rose,Viburnum opulus,Shrub,1.2–1.6 m,2.5–3.0 m,4–5 m,sun or part shade,,10,2,May–Aug,Mar–Oct,May–Jun,https://en.wikipedia.org/wiki/Viburnum_opulus
+S80,Butterfly bush,Buddleja davidii,Shrub,1.5–2.0 m,2.0–2.5 m,2.5–3.0 m,sun,,8,2,May–Sep,Mar–Oct,Jun–Sep,https://en.wikipedia.org/wiki/Buddleja_davidii
+ar2,Lavender,Lavandula angustifolia,Aromatic,0.30–0.40 m,0.50–0.60 m,0.60–0.80 m,sun,"In shade it sprawls, doesn't flower and rots at the collar.",2,1,Jun–Aug,all year,Jun–Aug,https://en.wikipedia.org/wiki/Lavandula_angustifolia
+ar6,Rosemary,Salvia rosmarinus,Aromatic,0.40–0.60 m,0.80–1.20 m,1.20–1.50 m,sun,"Full sun and drainage — these are requirements, not preferences.",2,1,Jun–Aug,all year,Mar–May,https://en.wikipedia.org/wiki/Salvia_rosmarinus
+ar7,Sage,Salvia officinalis,Aromatic,0.40–0.50 m,0.60–0.70 m,0.70–0.80 m,sun,The aroma is stronger in sun and on poor soil.,2,1,Jun–Aug,all year,May–Jun,https://en.wikipedia.org/wiki/Salvia_officinalis
+ar9,Lemon balm,Melissa officinalis,Aromatic,0.50–0.70 m,0.60–0.80 m,0.80–1.00 m,sun or part shade,"In summer, afternoon shade keeps the leaves tender.",3,1,May–Sep,Mar–Sep,Jun–Aug,https://en.wikipedia.org/wiki/Melissa_officinalis
+ia19,Fennel,Foeniculum vulgare,Herbaceous,1.50–1.80 m,1.80–2.00 m,2.00 m,sun,,3,1,May–Sep,Mar–Oct,Jul–Aug,https://en.wikipedia.org/wiki/Foeniculum_vulgare
+ip19,Comfrey,Symphytum officinale,Herbaceous,0.60–0.90 m,0.90–1.20 m,1.20 m,sun or part shade,Tolerates the shade under trees too — which is why it's good as a mulch plant there.,5,1,May–Aug,Mar–Sep,Apr–Jun,https://en.wikipedia.org/wiki/Symphytum_officinale
+ip44,Hyssop,Hyssopus officinalis,Herbaceous,0.40–0.50 m,0.50–0.60 m,0.60 m,sun,,2,1,Jun–Sep,all year,Jun–Sep,https://en.wikipedia.org/wiki/Hyssopus_officinalis
+ip102,Anise hyssop,Agastache foeniculum,Herbaceous,0.70–0.90 m,0.90–1.20 m,1.20 m,sun,,3,1,May–Sep,Mar–Oct,Jun–Sep,https://en.wikipedia.org/wiki/Agastache_foeniculum
+ip126,Shrubby cinquefoil,Potentilla fruticosa,Herbaceous,0.50–0.70 m,0.80–1.00 m,1.00–1.20 m,sun,Flowers all season only in direct sun.,3,1,Jun–Sep,Mar–Oct,May–Sep,https://en.wikipedia.org/wiki/Potentilla_fruticosa

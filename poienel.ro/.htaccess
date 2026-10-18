@@ -1,0 +1,20 @@
+# poienel.ro: paginile sunt în ro/ și en/; resursele și datele la rădăcină
+AddDefaultCharset UTF-8
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# rădăcina: limba din browser (engleză → en, altfel ro), redirect temporar ca să poată alege altceva din meniu
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ /en/index.html [R=302,L]
+RewriteRule ^$ /ro/index.html [R=302,L]
+# vechile adrese fără limbă
+RewriteRule ^(index|atractii|jurnal)\.html$ /ro/$1.html [R=301,L]
+# www → fără www
+RewriteCond %{HTTP_HOST} ^www\.poienel\.ro$ [NC]
+RewriteRule ^(.*)$ https://poienel.ro/$1 [R=301,L]
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\.(jpg|png|svg|css|js|webp)$">
+Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+</IfModule>
