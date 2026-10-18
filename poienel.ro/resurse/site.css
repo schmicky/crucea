@@ -1,0 +1,439 @@
+/* poienel.ro — stil comun pentru toate paginile (vezi CLAUDE.md §6) */
+:root {
+  --bg-dark: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-tertiary: #eaeef2;
+  --border-color: #d0d7de;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --text-tertiary: #8c959f;
+  --accent-green: #1a7f37;
+  --accent-yellow: #9e6a03;
+  --accent-blue: #0969da;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.logo { max-width: 360px; height: auto; margin: 0 auto 20px; }
+h1 { margin: 0 0 8px; font-size: 28px; color: var(--accent-green); }
+.tagline { color: var(--text-secondary); font-size: 16px; margin: 0; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.description {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.description h2 { margin-top: 0; font-size: 20px; color: var(--accent-green); }
+.description h3 { margin-top: 24px; margin-bottom: 12px; font-size: 16px; color: var(--accent-yellow); }
+.description p { margin: 12px 0; color: var(--text-secondary); }
+.description ul { margin: 12px 0; padding-left: 24px; }
+.description li { margin: 8px 0; color: var(--text-secondary); }
+
+.plants-section { margin-top: 40px; }
+.plants-section h2 { font-size: 20px; margin-bottom: 12px; color: var(--accent-green); }
+.plants-section > p { color: var(--text-secondary); margin-bottom: 20px; }
+
+.type-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.type-tab {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.type-tab:hover { background: var(--bg-tertiary); border-color: #58a6ff; }
+.type-tab.active { background: #238636; color: white; border-color: #2ea043; }
+
+.table-wrap {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th {
+  background: var(--bg-tertiary);
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+tbody tr:hover { background: var(--bg-tertiary); }
+tbody tr { cursor: pointer; transition: background 0.2s; }
+
+/* Modal/Popup */
+#overlay-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 250;
+}
+
+#overlay-bg.visible { display: block; }
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 720px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  z-index: 300;
+  font-size: 12px;
+}
+
+#popup.visible { display: block; }
+
+@media (max-width: 768px) {
+  #popup {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    max-height: 85vh;
+    padding: 12px 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  }
+}
+
+#popup-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#popup-head > div:first-child { flex: 1; min-width: 0; }
+
+#popup-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 2px;
+}
+
+#popup-lat {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+}
+
+#popup-meta {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.popup-tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  background: #30363d;
+}
+
+#popup-x {
+  padding: 4px 9px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  align-self: flex-start;
+}
+
+#popup-x:hover { color: var(--accent-green); }
+
+#popup-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+#popup-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-photo-state {
+  color: var(--text-tertiary);
+  font-size: 11px;
+  text-align: center;
+  padding: 0 12px;
+  line-height: 1.5;
+}
+
+#popup-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+#popup-img.loaded { opacity: 1; }
+
+#popup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-section { }
+
+.info-title {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+#popup-h {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+#popup-h td {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#popup-h td:first-child { color: var(--text-secondary); }
+#popup-h td:last-child { text-align: right; font-weight: 700; color: var(--text-primary); }
+#popup-h tr:last-child td { border-bottom: none; color: var(--text-secondary); }
+
+#popup-lum {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 3px 11px;
+  background: var(--bg-dark);
+  margin-bottom: 6px;
+}
+
+#popup-lum.l-soare { border-color: #8a6d1f; color: var(--accent-yellow); }
+#popup-lum.l-mixt { border-color: #2d5a3d; color: var(--accent-green); }
+#popup-lum.l-umbra { border-color: #2f4a6d; color: var(--accent-blue); }
+
+#popup-lumd {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+#popup-w {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+#popup-w td {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#popup-w td:first-child { color: var(--text-secondary); }
+#popup-w td:last-child { text-align: right; font-weight: 700; color: var(--text-primary); }
+#popup-w tr:last-child td { border-bottom: none; }
+
+#popup-cal-bar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2px;
+}
+
+.cal-cell {
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  position: relative;
+}
+
+.cal-cell.s-repaus { background: #2c2c2c; }
+.cal-cell.s-vegetatie { background: #14532d; }
+.cal-cell.s-inflorire { background: #831843; }
+.cal-cell.s-fructificare { background: #7c2d12; }
+
+#popup-cal-months {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2px;
+  margin-top: 3px;
+}
+
+.cal-m {
+  font-size: 7px;
+  text-align: center;
+  color: var(--text-tertiary);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+footer a { color: var(--accent-blue); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  #popup-body { grid-template-columns: 1fr; }
+  #popup { width: 100%; margin: 20px; }
+}
+/* Elemente generate de build.mjs din specii.json */
+.lat { color: var(--text-secondary); font-style: italic; font-size: 11px; }
+td a { color: inherit; text-decoration: none; }
+td a:hover { text-decoration: underline; }
+[hidden] { display: none !important; }
+.tag { display: inline-block; color: white; padding: 2px 7px; border-radius: 3px; font-size: 10px; font-weight: 600; white-space: nowrap; }
+.tag-arbore { background: #2d6a2d; }
+.tag-fructifer { background: #c0392b; }
+.tag-arbust { background: #8e44ad; }
+.tag-aromat { background: #c7a200; }
+.tag-ierbacee { background: #1a7a9a; }
+.fise-section, .links-section { margin-top: 40px; }
+.fise-section h2, .links-section h2 { font-size: 20px; margin-bottom: 12px; color: var(--accent-green); }
+.fise-section > p, .links-section > p { color: var(--text-secondary); margin-bottom: 20px; }
+.fisa { border: 1px solid var(--border-color); border-radius: 6px; margin: 6px 0; background: var(--bg-secondary); }
+.fisa summary { cursor: pointer; padding: 8px 12px; font-size: 14px; }
+.fisa summary .lat { margin: 0 6px; }
+.fisa dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; padding: 4px 12px 12px; font-size: 13px; }
+.fisa dt { color: var(--text-secondary); font-weight: 600; }
+.fisa dd { margin: 0; }
+.links-section ul { padding-left: 24px; line-height: 1.7; }
+.links-section a, .fisa a { color: var(--accent-blue); text-decoration: none; }
+.links-section a:hover, .fisa a:hover { text-decoration: underline; }
+@media (max-width: 600px) { .fisa dl { grid-template-columns: 1fr; } .fisa dd { margin-bottom: 6px; } }
+
+/* Bara de meniu */
+.menu {
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky; top: 0; z-index: 50;
+}
+.menu ul { list-style: none; margin: 0 auto; padding: 0 12px; max-width: 1200px; display: flex; flex-wrap: wrap; gap: 2px; }
+.menu li { margin: 0; }
+.menu a {
+  display: block; padding: 12px 14px; color: var(--text-primary); text-decoration: none;
+  font-size: 14px; font-weight: 600; border-bottom: 3px solid transparent;
+}
+.menu a:hover { color: var(--accent-green); }
+.menu a[aria-current="page"] { color: var(--accent-green); border-bottom-color: var(--accent-green); }
+.menu .menu-brand { display: flex; align-items: center; gap: 8px; padding-left: 0; }
+.menu .menu-brand img { width: 26px; height: 26px; }
+@media (max-width: 600px) { .menu a { padding: 10px 9px; font-size: 13px; } }
+
+/* Pagina de atracții */
+.intro { color: var(--text-secondary); line-height: 1.6; max-width: 820px; }
+.atractii-lista { list-style: none; padding: 0; margin: 0 0 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.atractii-lista a { display: block; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-secondary); color: var(--text-primary); text-decoration: none; }
+.atractii-lista a:hover { border-color: var(--accent-green); }
+.atractii-lista .cat { display: block; font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+.atractie { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 20px; margin-bottom: 20px; line-height: 1.6; }
+.atractie h2 { margin: 0 0 4px; font-size: 20px; color: var(--accent-green); }
+.atractie .meta { color: var(--text-secondary); font-size: 13px; margin: 0 0 12px; }
+.atractie .meta .tag { vertical-align: middle; margin-right: 6px; }
+.atractie p { margin: 10px 0; }
+.atractie h3 { font-size: 14px; color: var(--accent-yellow); margin: 16px 0 6px; }
+.atractie ul { margin: 6px 0; padding-left: 22px; }
+.atractie li { margin: 4px 0; }
+.atractie .surse { font-size: 12px; color: var(--text-secondary); }
+.atractie a { color: var(--accent-blue); text-decoration: none; }
+.atractie a:hover { text-decoration: underline; }
+.tag-natura { background: #1a7f37; }
+.tag-religios { background: #6e40c9; }
+.tag-istorie { background: #9a6700; }
+.tag-cultura { background: #0969da; }
+.tag-peisaj { background: #1a7a9a; }
+
+/* Jurnal */
+.jurnal-intrare { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 20px; margin-bottom: 20px; line-height: 1.6; }
+.jurnal-intrare h2 { margin: 0 0 4px; font-size: 20px; color: var(--accent-green); }
+.jurnal-intrare time { color: var(--text-secondary); font-size: 13px; }
+.jurnal-intrare img { max-width: 100%; height: auto; border-radius: 6px; }
+.gol { color: var(--text-secondary); border: 1px dashed var(--border-color); border-radius: 8px; padding: 20px; }

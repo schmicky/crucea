@@ -66,7 +66,8 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 - `sitemap.xml`: generat de `build.mjs` din toate paginile HTML și fișierele de date; nu se editează de mână. După orice pagină nouă sau modificată se rulează build-ul, ca să se actualizeze `lastmod`.
 - `llms.txt`: formatul standard (H1, blockquote cu rezumatul, secțiuni cu linkuri `- [titlu](url): descriere`, `## Optional` la final). Se actualizează de mână la fiecare pagină nouă sau set de date nou și când se schimbă cifrele din rezumat. Linkurile spre GitHub Pages și repo rămân aici; `llms.txt` e harta pentru agenți.
 - URL-uri: fișiere `.html` cu nume mici, fără diacritice, cu cratime (`plan-nord.html`); canonicul rădăcinii este `https://poienel.ro/`. Nu se schimbă numele unei pagini publicate fără redirect 301 pe server.
-- Când apare a doua pagină, CSS-ul comun (variabile, antet, subsol, tabele, `.tag`, `.fisa`, `[hidden]`) se scoate într-un `resurse/site.css`, ca paginile să arate la fel; până atunci stă în `index.html`.
+- CSS-ul este unul singur, `resurse/site.css`, încărcat de toate paginile; nu se pun blocuri `<style>` în pagini. Stilurile specifice unei pagini se adaugă tot acolo, sub un comentariu cu numele paginii.
+- **Bara de meniu** este aceeași pe toate paginile și e generată de `build.mjs` (regiunea `BUILD:nav`, lista `MENIU`); pagina curentă primește `aria-current="page"`. O pagină nouă intră în meniu prin `MENIU`, nu prin HTML scris de mână.
 
 ## 7. Publicare și securitate
 
@@ -85,6 +86,8 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 
 ## Anexa: paginile existente
 
+Fiecare pagină are regiunile comune `nav` și `jsonld`, propriul JSON ca sursă și propria secțiune în `build.mjs`.
+
 ### `index.html` — speciile grădinii
 
 - Sursa: `specii.json`, 65 de specii. Câmpuri: `cod`, `ro`, `lat`, `type` (`arbore`, `fructifer`, `arbust`, `aromat`, `ierbacee`), `h2`/`h5`/`hm` (înălțimi la 2 ani, 5 ani, maturitate), `lumina` (`soare`, `mixt`, `umbra`), `lumin_note` opțional, `water_l` (litri la udare), `water_f` (udări pe săptămână vara, anii 1–2), `phenology` (12 luni ianuarie → decembrie, fiecare `[udare, vegetație, înflorire]` cu 0/1; nu există fructificare).
@@ -92,3 +95,18 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 - Regiuni generate: `jsonld` (head), `sumar`, `tabs`, `tabel`, `fise`, `date`. Un `type` nou se adaugă în `TYPE` din `build.mjs`, în `typeInfo` din JS și ca clasă CSS `.tag-<type>`.
 - Linkurile Wikipedia se construiesc din numele latin (`wiki()` în `build.mjs`), tăind `var.`, parantezele și soiul în ghilimele simple; pozele din popup vin de la API-ul Wikipedia (en), la clic.
 - Texte neregenerate care conțin cifre: meta description, Open Graph, paragrafele din `.description`, `llms.txt`.
+
+### `atractii.html` — atracțiile turistice din jur
+
+- Sursa: `atractii.json`. Câmpuri: `id` (ancora `#id`, fără diacritice), `nume`, `categorie` (`natura`, `religios`, `istorie`, `cultura`, `peisaj`; cheile `CATEG` din `build.mjs` și clasele CSS `.tag-<categorie>`), `tip_schema` (listă de tipuri schema.org pentru `additionalType`, de exemplu `PlaceOfWorship`, `Park`, `Museum`, `LandmarksOrHistoricalBuildings`), `localitate`, `comuna`, `distanta_km` (pe șosea, de la Poienel, aproximativ, număr întreg), `rezumat` (o frază, intră și în JSON-LD), `descriere` (listă de paragrafe), `practic` (listă de sfaturi de acces și vizitare), `surse` (listă de `{titlu, url}`; devin `sameAs`).
+- Lista și articolele sunt sortate după `distanta_km`. Regiuni: `sumar`, `lista`, `atractii`.
+- Fiecare obiectiv are cel puțin o sursă verificabilă; faptele (ani, dimensiuni, hramuri) se iau din surse, nu din memorie. Distanțele sunt estimări și se corectează pe măsură ce se verifică pe teren.
+- Texte neregenerate cu cifre: meta description, Open Graph, paragraful de introducere, `llms.txt`.
+
+### `jurnal.html` — jurnalul grădinii
+
+- Sursa: `jurnal.json`, listă de însemnări: `id` (opțional; implicit data), `data` (ISO `AAAA-LL-ZZ`), `titlu`, `text` (listă de paragrafe), `foto` (listă de `{src, alt}`; fișierele în `resurse/jurnal/`, nume `AAAA-LL-ZZ-descriere.jpg`, lățime maximă 1600 px, cu `alt` care spune ce se vede), `linkuri` (listă de `{titlu, url}`; relative pentru paginile site-ului).
+- Însemnările se afișează cu cea mai nouă prima; ancora e `#id`. JSON-LD: `Blog` cu `BlogPosting` pe însemnare, cu `datePublished`, `articleBody` și imaginile.
+- Cât timp `jurnal.json` e gol, build-ul pune `noindex` pe pagină (regiunea `robots`) și o lasă afară din sitemap; la prima însemnare devine indexabilă automat.
+- Însemnările sunt fapte din teren, la persoana întâi plural, cu data lucrării; nu se rescriu retroactiv decât pentru greșeli.
+

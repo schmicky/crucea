@@ -1,0 +1,354 @@
+[
+ {
+  "id": "manastirea-crucea",
+  "nume": "Mănăstirea Crucea",
+  "categorie": "religios",
+  "tip_schema": [
+   "https://schema.org/PlaceOfWorship"
+  ],
+  "localitate": "Băltăgești",
+  "comuna": "comuna Crucea",
+  "distanta_km": 4,
+  "rezumat": "Mănăstire de maici a Arhiepiscopiei Tomisului, ridicată din 2005 lângă vechiul izvor de pelerinaj de la Crucea, cu biserică de lemn în stil maramureșean.",
+  "descriere": [
+   "Mănăstirea a fost înființată la 1 iulie 2005 de Arhiepiscopia Tomisului, pe locul unde credincioșii din zonă veneau de generații la izvor. Organizarea și administrarea așezământului i-au fost încredințate maicii Teodora Tăbăranu, stareța mănăstirii; obștea numără câteva maici.",
+   "Biserica de lemn, în stil maramureșean, a fost începută în august 2005, terminată în 2007 și sfințită în 2009 de Arhiepiscopul Teodosie al Tomisului. Alături se află un paraclis tot din lemn, iar în incintă se construiește o biserică nouă, de zid.",
+   "Hramurile mănăstirii sunt Izvorul Tămăduirii (vinerea din Săptămâna Luminată, după Paști), Sfânta Cuvioasă Teodora de la Sihla (7 august) și Înălțarea Sfintei Cruci (14 septembrie). La hramul Izvorului Tămăduirii se adună cei mai mulți pelerini, continuând obiceiul de dinainte de război."
+  ],
+  "practic": [
+   "Se află la circa 4 km de satul Crucea, pe partea stângă a DN2A Constanța–Hârșova, între Crucea și Băltăgești; de la șosea e semnalizată și se ajunge pe un drum scurt.",
+   "Vizitarea e liberă, în orele de zi; ținuta decentă e de rigoare. Slujbele se țin după programul obișnuit de mănăstire, cu Sfânta Liturghie duminica și în sărbători."
+  ],
+  "surse": [
+   {
+    "titlu": "Arhiepiscopia Tomisului — Mănăstirea Crucea",
+    "url": "https://arhiepiscopiatomisului.ro/2021/11/29/manastirea-crucea/"
+   },
+   {
+    "titlu": "Ziarul Lumina — Mănăstirea „Sfânta Cruce”, izvor de apă vindecătoare",
+    "url": "https://ziarullumina.ro/societate/reportaj/manastirea-sfanta-cruce-izvor-de-apa-vindecatoare-35983.html"
+   },
+   {
+    "titlu": "CreștinOrtodox.ro — Mănăstirea Crucea",
+    "url": "https://www.crestinortodox.ro/manastiri/manastirea-crucea-117462.html"
+   }
+  ]
+ },
+ {
+  "id": "izvorul-tamaduirii",
+  "nume": "Izvorul Tămăduirii de la Crucea",
+  "categorie": "religios",
+  "tip_schema": [
+   "https://schema.org/LandmarksOrHistoricalBuildings"
+  ],
+  "localitate": "Băltăgești",
+  "comuna": "comuna Crucea",
+  "distanta_km": 4,
+  "rezumat": "Izvorul amenajat în anii 1930, considerat vindecător, în jurul căruia a crescut mai întâi pelerinajul și apoi mănăstirea.",
+  "descriere": [
+   "Izvorul se află în incinta Mănăstirii Crucea și e mai vechi decât ea. În perioada interbelică a fost amenajat de un preot din Băltăgești împreună cu sătenii, iar în fiecare an, în vinerea din Săptămâna Luminată, credincioșii din satele din jur se adunau lângă el pentru slujbă; obiceiul a dat și hramul principal al mănăstirii.",
+   "Apa e considerată de localnici curată și bună de băut, iar tradiția îi atribuie puteri tămăduitoare. Izvorul e captat și are o mică fântână amenajată, de unde pelerinii iau apă acasă."
+  ],
+  "practic": [
+   "Acces prin curtea mănăstirii, în orice zi; adu-ți recipiente dacă vrei să iei apă.",
+   "Într-o zonă de stepă săracă în apă, izvorul a fost secole la rând un reper pentru sate și pentru turmele din zonă."
+  ],
+  "surse": [
+   {
+    "titlu": "Ziarul Lumina — Mănăstirea „Sfânta Cruce”, izvor de apă vindecătoare",
+    "url": "https://ziarullumina.ro/societate/reportaj/manastirea-sfanta-cruce-izvor-de-apa-vindecatoare-35983.html"
+   },
+   {
+    "titlu": "Vatra — Mănăstirea Crucea, vechi loc de pelerinaj",
+    "url": "https://vatra-mcp.ro/artisti-si-patrimoniu/manastirile-romaniei/constanta/manastirea-crucea-constanta-vechi-loc-de-pelerinaj/"
+   }
+  ]
+ },
+ {
+  "id": "dealul-allah-bair",
+  "nume": "Rezervația naturală Dealul Allah Bair",
+  "categorie": "natura",
+  "tip_schema": [
+   "https://schema.org/Park"
+  ],
+  "localitate": "Băltăgești",
+  "comuna": "comuna Crucea",
+  "distanta_km": 6,
+  "rezumat": "Deal de calcar jurasic de 205 m, rezervație geologică, paleontologică și botanică de 10 ha, cu fosile de recif și circa 30 de specii de plante rare.",
+  "descriere": [
+   "Dealul Allah Bair (205 m) face parte din culmea Băltăgeștilor și e cel mai înalt punct din jur. A fost declarat rezervație naturală de interes național prin Legea nr. 5/2000 (cod 2.367), pe 10 ha; în jur se întind siturile Natura 2000 ROSCI0053 Dealul Allah Bair (194 ha) și ROSPA0002 Allah Bair–Capidava, arie de protecție pentru păsări.",
+   "Calcarele dealului s-au format pe fundul unei mări jurasice, din recifi de corali, și sunt pline de fosile: de la protozoare la echinoderme și vertebrate. De aceea rezervația e în primul rând geologică și paleontologică.",
+   "Pe stâncăriile de calcar cresc circa 30 de specii de plante rare, printre care clopoțelul dobrogean (Campanula romanica), endemic. Numele vine din turcă (Allah Bayır), tradus de localnici fie „Dealul lui Dumnezeu”, fie „Dealul Popii”."
+  ],
+  "practic": [
+   "Dealul se vede din Băltăgești; se urcă pe jos, pe poteci de pășune, nu există traseu marcat și nici amenajări. Încălțăminte bună, apă și pălărie: vara nu e umbră.",
+   "E arie protejată: nu se culeg plante, nu se sparg roci după fosile, nu se face foc. Primăvara (aprilie–mai) e cel mai frumos, când înfloresc plantele de stâncărie."
+  ],
+  "surse": [
+   {
+    "titlu": "Lista rezervațiilor naturale din județul Constanța (Wikipedia)",
+    "url": "https://ro.wikipedia.org/wiki/Lista_rezerva%C8%9Biilor_naturale_din_jude%C8%9Bul_Constan%C8%9Ba"
+   },
+   {
+    "titlu": "Săptămâna Verde — Dealul Allah Bair",
+    "url": "https://saptamanaverde.edu.ro/ro/dealul-allah-bair"
+   },
+   {
+    "titlu": "Descoperă Dobrogea — Rezervația Allah Bair",
+    "url": "https://discoverdobrogea.ro/rezervatia-allah-bair-spectacolul-naturii-in-judetul-constanta/"
+   },
+   {
+    "titlu": "Ordinul MMAP nr. 1252/2016 — planul de management",
+    "url": "https://legeaz.net/monitorul-oficial-63-2017/ommap-1252-2016"
+   }
+  ]
+ },
+ {
+  "id": "cetatea-carsium",
+  "nume": "Cetatea Carsium și Muzeul Carsium, Hârșova",
+  "categorie": "istorie",
+  "tip_schema": [
+   "https://schema.org/LandmarksOrHistoricalBuildings",
+   "https://schema.org/Museum"
+  ],
+  "localitate": "Hârșova",
+  "comuna": "orașul Hârșova",
+  "distanta_km": 18,
+  "rezumat": "Cetate romană ridicată pe malul înalt al Dunării, peste o așezare getică, folosită până în epoca otomană; muzeu înființat în 1904 de regele Carol I.",
+  "descriere": [
+   "Carsium a fost construită de romani din piatră și cărămidă pe locul unei așezări getice, pe malul înalt al Dunării, și a făcut parte din limesul dunărean. A fost refăcută de bizantini și, mult mai târziu, transformată în cetate otomană, de unde și zidurile vizibile azi de pe faleză.",
+   "Muzeul Carsium a fost inaugurat în 1904 de regele Carol I, redeschis în 1926 de regele Ferdinand și reînviat în 2006; azi e secție a Muzeului de Istorie Națională și Arheologie Constanța și are program și în weekend.",
+   "Cetatea a fost restaurată cu fonduri europene și a fost deschisă vizitatorilor în 2025, cu traseu muzeal și o clădire romană cu mozaic. Vara, muzeul organizează o școală de vară de arheologie la cetate."
+  ],
+  "practic": [
+   "Hârșova e la circa 18 km de Crucea pe DN2A. Cetatea e pe faleza Dunării, lângă port; muzeul e în oraș, într-o casă cu pridvor.",
+   "Tot aici: priveliștea Dunării și a bălților de pe malul celălalt și canaralele, malurile stâncoase de calcar care dau numele sitului Natura 2000 „Canaralele Dunării”."
+  ],
+  "surse": [
+   {
+    "titlu": "Adevărul — Hârșova, cetate otomană",
+    "url": "https://adevarul.ro/stiri-locale/constanta/sa-ne-cunoastem-istoria-harsova-cetate-otomana-1533753.html"
+   },
+   {
+    "titlu": "Spotmedia — Cetatea Carsium își deschide porțile",
+    "url": "https://spotmedia.ro/stiri/timp-liber/o-noua-atractie-pe-harta-turismului-cetatea-carsium-isi-deschide-portile-la-harsova"
+   },
+   {
+    "titlu": "Cercetări arheologice — The Roman frontier in Dobrudja: Hârșova (Carsium)",
+    "url": "https://cercetari-arheologice.ro/en/the-roman-frontier-in-dobrudja-5-harsova-carsium/"
+   }
+  ]
+ },
+ {
+  "id": "cetatea-capidava",
+  "nume": "Cetatea Capidava",
+  "categorie": "istorie",
+  "tip_schema": [
+   "https://schema.org/LandmarksOrHistoricalBuildings"
+  ],
+  "localitate": "Capidava",
+  "comuna": "comuna Topalu",
+  "distanta_km": 30,
+  "rezumat": "Castru roman pe malul drept al Dunării, locuit peste o mie de ani, de la Traian până în Evul Mediu; ziduri, bastioane și clădiri vizibile, cu reconstituiri istorice vara.",
+  "descriere": [
+   "Capidava a fost ridicată de romani pe malul drept al Dunării, între Cernavodă și Hârșova, ca parte a limesului. Situl are straturi din preistorie, epoca romană timpurie și târzie, epoca bizantină și Evul Mediu: a fost folosit peste un mileniu.",
+   "Se văd zidurile de incintă, bastioanele, poarta și clădiri militare și civile, între care principia (comandamentul) roman târziu, cercetat din 2013 încoace. Cetatea a fost restaurată cu fonduri europene, cu lucrări încheiate în 2015, și e administrată de Muzeul de Istorie Națională și Arheologie Constanța.",
+   "Vara, aici se ține tabăra studenților de la istorie și, periodic, spectacolul de reconstituire istorică „La marginea Imperiului”."
+  ],
+  "practic": [
+   "De la Crucea se ajunge pe DN2A spre Hârșova, apoi pe DJ223 pe malul Dunării prin Ghindărești și Topalu; circa 30 km. Programul și biletul se stabilesc de muzeul din Constanța.",
+   "Pe drum, la Topalu, merită oprirea la muzeul de artă (vezi mai jos)."
+  ],
+  "surse": [
+   {
+    "titlu": "G4Media — Turul cetăților: Capidava, Adamclisi, Histria, Topalu",
+    "url": "https://www.g4media.ro/turul-cetatilor-in-week-end-noaptea-muzeelor-in-satele-din-constanta-pentru-pasionatii-de-istorie-intrare-gratuita-pentru-vizitatori-la-capidava-adamclisi-histria-si-topalu.html"
+   },
+   {
+    "titlu": "Radio Constanța — „La Marginea Imperiului” la Cetatea Capidava",
+    "url": "https://radioconstanta.ro/2023/08/10/spectacolul-de-reconstituire-istorica-la-marginea-imperiului-continua-sambata-la-cetatea-capidava"
+   },
+   {
+    "titlu": "Cronica cercetărilor arheologice — Capidava",
+    "url": "https://cronica.cimec.ro/sandboxpdf/rapoarte/raport_5575.pdf"
+   }
+  ]
+ },
+ {
+  "id": "muzeul-topalu",
+  "nume": "Muzeul de artă „Dinu și Sevasta Vintilă”, Topalu",
+  "categorie": "cultura",
+  "tip_schema": [
+   "https://schema.org/Museum"
+  ],
+  "localitate": "Topalu",
+  "comuna": "comuna Topalu",
+  "distanta_km": 25,
+  "rezumat": "Muzeu de artă românească într-un sat de pe Dunăre, născut din colecția donată de doctorul Gheorghe Vintilă în memoria părinților săi.",
+  "descriere": [
+   "Muzeul a fost deschis în 1961, în satul natal al doctorului Gheorghe Vintilă, care și-a donat colecția de artă în memoria părinților săi, Dinu și Sevasta. Colecția cuprinde pictură, grafică și sculptură românească din secolele XIX–XX, cu lucrări ale unor artiști importanți ai epocii.",
+   "Este unul dintre puținele muzee de artă din mediul rural din România și face parte din rețeaua Muzeului de Istorie Națională și Arheologie Constanța, care îl deschide gratuit la „Noaptea muzeelor la sate”."
+  ],
+  "practic": [
+   "Topalu e pe DJ223, pe malul Dunării, la circa 25 km de Crucea; muzeul e în centrul satului. Verifică programul înainte: e deschis cu personal redus.",
+   "Se combină firesc cu Cetatea Capidava, la câțiva km mai la sud."
+  ],
+  "surse": [
+   {
+    "titlu": "G4Media — Noaptea muzeelor la sate: Capidava, Adamclisi, Histria și Topalu",
+    "url": "https://www.g4media.ro/turul-cetatilor-in-week-end-noaptea-muzeelor-in-satele-din-constanta-pentru-pasionatii-de-istorie-intrare-gratuita-pentru-vizitatori-la-capidava-adamclisi-histria-si-topalu.html"
+   }
+  ]
+ },
+ {
+  "id": "ghindaresti",
+  "nume": "Ghindărești, satul lipovenesc de pe Dunăre",
+  "categorie": "peisaj",
+  "tip_schema": [
+   "https://schema.org/TouristDestination"
+  ],
+  "localitate": "Ghindărești",
+  "comuna": "comuna Ghindărești",
+  "distanta_km": 22,
+  "rezumat": "Sat de ruși lipoveni, pescari de Dunăre, cu biserică de rit vechi, bărci pe mal și malul înalt al fluviului.",
+  "descriere": [
+   "Ghindărești e un sat de ruși lipoveni (staroveri), așezat pe malul drept al Dunării, la sud de Hârșova. Comunitatea și-a păstrat limba, portul de sărbătoare, biserica de rit vechi și meseria de pescar; satul e cunoscut pentru bărcile de pe mal și pentru peștele din bălțile Dunării.",
+   "De pe malul înalt se vede Dunărea cu ostroavele ei, iar la apus lumina pe apă e motivul pentru care mulți se opresc aici în drum spre Capidava."
+  ],
+  "practic": [
+   "Pe DJ223, între Hârșova și Topalu; circa 22 km de Crucea. În sat, respectă regulile bisericii de rit vechi (nu se intră în timpul slujbei fără acordul localnicilor, fotografiile cu discreție).",
+   "Dacă vrei pește proaspăt, întreabă la pescari, dimineața."
+  ],
+  "surse": [
+   {
+    "titlu": "Wikipedia — Ghindărești",
+    "url": "https://en.wikipedia.org/wiki/Ghind%C4%83re%C8%99ti"
+   }
+  ]
+ },
+ {
+  "id": "cetatea-ulmetum",
+  "nume": "Cetatea Ulmetum, Pantelimon",
+  "categorie": "istorie",
+  "tip_schema": [
+   "https://schema.org/LandmarksOrHistoricalBuildings"
+  ],
+  "localitate": "Pantelimon de Sus",
+  "comuna": "comuna Pantelimon",
+  "distanta_km": 35,
+  "rezumat": "Cetate romană târzie de la sfârșitul secolului al IV-lea, refăcută de Iustinian în secolul al VI-lea, pe valea Casimcei; ruine cercetate de Vasile Pârvan.",
+  "descriere": [
+   "Ulmetum a fost construită la sfârșitul secolului al IV-lea ca fortificație romană în provincia Scythia Minor, pe un drum interior care lega Dunărea de litoral. Părăsită după atacurile hunilor, a fost refăcută parțial în secolul al VI-lea, în vremea lui Iustinian, și abandonată definitiv la începutul secolului al VII-lea.",
+   "Cetatea a fost cercetată de Vasile Pârvan între 1911 și 1914, una dintre primele mari săpături arheologice din Dobrogea; cercetările au fost reluate de Muzeul de Istorie Națională și Arheologie Constanța. Se văd zidurile de incintă cu turnuri și urmele clădirilor."
+  ],
+  "practic": [
+   "Pantelimon de Sus e la circa 35 km de Crucea, pe drumul spre Târgușor; cetatea e la marginea satului, pe un platou deasupra văii. Vizitarea e liberă, fără amenajări.",
+   "Se combină cu Mănăstirea Sfântul Ioan Casian și cu Cheile Dobrogei, pe aceeași direcție."
+  ],
+  "surse": [
+   {
+    "titlu": "Wikipedia — Ulmetum (castra)",
+    "url": "https://en.wikipedia.org/wiki/Ulmetum"
+   },
+   {
+    "titlu": "Cronica cercetărilor arheologice — Ulmetum",
+    "url": "https://cronica.cimec.ro/sandboxpdf/rapoarte/raport_6410.pdf"
+   }
+  ]
+ },
+ {
+  "id": "manastirea-casian",
+  "nume": "Mănăstirea și Peștera Sfântului Ioan Casian",
+  "categorie": "religios",
+  "tip_schema": [
+   "https://schema.org/PlaceOfWorship"
+  ],
+  "localitate": "Casian",
+  "comuna": "comuna Târgușor",
+  "distanta_km": 35,
+  "rezumat": "Mănăstire din piatră albă de Dobrogea, ridicată din 2001 pe dealul Casian, și peștera din stânca de calcar unde tradiția spune că a sihăstrit Sfântul Ioan Casian, născut aici în jurul anului 360.",
+  "descriere": [
+   "Sfântul Ioan Casian s-a născut în jurul anului 360 în Scythia Minor, a trăit în Egipt, la Constantinopol și la Roma, a întemeiat două mănăstiri la Marsilia și a murit acolo în 435. Tradiția leagă locul nașterii lui de dealul Casian, deasupra văii Casimcei.",
+   "Mănăstirea a fost construită începând cu 2001, sub conducerea starețului Iustin Petre, iar vechea vatră monahală a fost reactivată oficial la 28 februarie 2003, cu binecuvântarea Arhiepiscopului Teodosie. Biserica e din piatră albă de calcar, materialul locului, iar incinta are case pentru pelerini și trapeză.",
+   "Peștera se află pe versantul nordic al dealului Casian, într-un perete de calcar; intrarea e la câțiva metri de sol și se urcă pe o scară metalică. Înăuntru se păstrează nișe pentru lumânări și inscripții vechi."
+  ],
+  "practic": [
+   "Din Crucea, prin Pantelimon spre Târgușor, circa 35 km; de la mănăstire, poteca spre peșteră pleacă din spatele incintei, trece printr-o livadă și coboară într-o vale destul de abruptă, printre stânci și tufe: cere încălțăminte bună și puțină condiție fizică.",
+   "Hramul Sfântului Ioan Casian e pe 29 februarie (28 februarie în anii nebisecți)."
+  ],
+  "surse": [
+   {
+    "titlu": "Financiarul — Mănăstirea și Peștera Sfântului Ioan Casian",
+    "url": "https://financiarul.ro/actualitate/manastirea-si-pestera-sfantului-ioan-casian-un-loc-de-inchinare-deosebit/"
+   },
+   {
+    "titlu": "Agerpres — Sărbători religioase, 28 februarie",
+    "url": "https://agerpres.ro/documentare/2026/02/28/sarbatori-religioase---28-februarie--1532657"
+   }
+  ]
+ },
+ {
+  "id": "cheile-dobrogei",
+  "nume": "Cheile Dobrogei și Recifii jurasici de la Cheia",
+  "categorie": "natura",
+  "tip_schema": [
+   "https://schema.org/Park"
+  ],
+  "localitate": "Cheia",
+  "comuna": "comuna Grădina",
+  "distanta_km": 40,
+  "rezumat": "Chei săpate în recifi de corali jurasici, vechi de peste 150 de milioane de ani, rezervație naturală fără amenajări, loc de drumeție, cățărare și observat păsări.",
+  "descriere": [
+   "Stâncile de la Cheia sunt foști recifi de corali ai mării Tethys, din Jurasic, ridicați și tăiați apoi de apa Casimcei. Rezervația naturală Recifii jurasici Cheia (cod 2.362) e cuprinsă în situl Natura 2000 ROSCI0215 și în aria de protecție pentru păsări ROSPA0019 Cheile Dobrogei; rezervația se întinde pe aproape 300 ha.",
+   "Pe calcar cresc plante de stepă și de stâncărie, iar în pereți cuibăresc păsări răpitoare; primăvara, cheile sunt pline de bujori de stepă și de irisi pitici. Nu există traseu marcat și nici infrastructură: se parchează la marginea drumului și se merge liber."
+  ],
+  "practic": [
+   "Din Crucea, prin Pantelimon și Târgușor, apoi spre Cheia; circa 40 km. Același drum duce și la Gura Dobrogei.",
+   "Arie protejată: fără foc, fără culegere de plante, fără mașini în afara drumului. Cel mai frumos în aprilie–mai și în septembrie."
+  ],
+  "surse": [
+   {
+    "titlu": "Ministerul Mediului — Regulamentul ariei protejate Cheile Dobrogei (PDF)",
+    "url": "https://mmediu.ro/app/webroot/uploads/files/2016-04-05_Regulament_Cheile_Dobrogei.pdf"
+   },
+   {
+    "titlu": "Dobrogea Explore — Ce să faci în Cheile Dobrogei",
+    "url": "https://www.dobrogeaexplore.ro/ce-sa-faci-in-cheile-dobrogei/"
+   },
+   {
+    "titlu": "Economedia — Recifurile transformate în Cheile Dobrogei",
+    "url": "https://economedia.ro/fotogalerie-cinci-destinatii-de-turism-putin-cunoscute-din-romania-de-la-stravechile-recifuri-transformate-in-cheile-dobrogei-la-palatele-art-nouveau-din-oradea.html"
+   }
+  ]
+ },
+ {
+  "id": "pestera-liliecilor",
+  "nume": "Peștera Liliecilor de la Gura Dobrogei",
+  "categorie": "natura",
+  "tip_schema": [
+   "https://schema.org/Park"
+  ],
+  "localitate": "Gura Dobrogei",
+  "comuna": "comuna Cogealac",
+  "distanta_km": 45,
+  "rezumat": "Peșteră în calcar jurasic, rezervație naturală, cu colonii mari de lilieci și urme de locuire din neolitic până în epoca romană; semnalată de Vasile Pârvan în 1926.",
+  "descriere": [
+   "Peștera se deschide în calcarele jurasice de la nord-est de satul Gura Dobrogei, pe valea Casimcei. A fost semnalată prima dată de Vasile Pârvan în 1926, iar săpăturile au scos la iveală urme de locuire neolitică, greacă și romană. E rezervație naturală (Legea 5/2000), împreună cu Peștera La Adam din apropiere.",
+   "Numele vine de la coloniile de lilieci, între cele mai mari din Dobrogea, cu specii protejate; de aceea vizitarea se face cu grijă, fără zgomot și fără lumină puternică îndreptată spre tavan."
+  ],
+  "practic": [
+   "De la parcare se urcă 10–15 minute. Una dintre intrări e un aven, nerecomandat; a doua intrare e cea folosită, dar cere lanternă frontală și încălțăminte cu aderență. Nu intra în perioada de hibernare a liliecilor (noiembrie–martie).",
+   "Circa 45 km de Crucea, pe aceeași direcție cu Cheile Dobrogei."
+  ],
+  "surse": [
+   {
+    "titlu": "Financiarul — Peștera Liliecilor, monument natural în Dobrogea",
+    "url": "https://financiarul.ro/actualitate/pestera-gura-dobrogei-adaposteste-specii-rare-de-lilieci/"
+   },
+   {
+    "titlu": "Adevărul — Batman în Dobrogea",
+    "url": "https://adevarul.ro/blogurile-adevarul/batman-in-dobrogea-1534674.html"
+   }
+  ]
+ }
+]
