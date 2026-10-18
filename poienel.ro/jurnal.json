@@ -246,5 +246,75 @@
     "url": "https://schmicky.github.io/crucea/"
    }
   ]
+ },
+ {
+  "id": "2025-05-18-gradina-de-legume",
+  "data": "2025-05-18",
+  "taguri": [
+   "amenajare"
+  ],
+  "titlu": {
+   "ro": "Bunicii încearcă o grădină de legume: un proiect mare și ambițios",
+   "en": "The grandparents try a vegetable garden: a big, ambitious project"
+  },
+  "text": {
+   "ro": [
+    "Bunicii au pus la cale o grădină de legume pe parcela din spate: rânduri lungi, trase cu sfoara, de ceapă, salată, ridichi și verdețuri, cu furtunul de udare întins pe lângă ele. E un proiect mare și ambițios pentru prima vară la Crucea, pe un pământ care nu mai fusese lucrat de ani.",
+    "Grădina de legume e și primul test al solului și al apei de aici: cât ține umezeala, cât de repede se usucă vara, ce crește bine pe stepa noastră. Ce învățăm de la rândurile acestea intră în planul pentru pomi, arbuști și pădurea Miyawaki."
+   ],
+   "en": [
+    "The grandparents have set up a vegetable garden on the back plot: long rows laid out with string, of onions, lettuce, radishes and greens, with the watering hose run alongside them. It is a big, ambitious project for the first summer at Crucea, on ground that had not been worked for years.",
+    "The vegetable garden is also the first test of the soil and water here: how well it holds moisture, how fast it dries out in summer, what grows well on our steppe. What we learn from these rows goes into the plan for the fruit trees, the shrubs and the Miyawaki forest."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2025-05-18-gradina-legume.jpg",
+    "alt": {
+     "ro": "Rândurile grădinii de legume în mai: ceapă, salată și verdețuri, cu furtunul de udare, și bunicul aplecat la lucru în fund",
+     "en": "The vegetable garden rows in May: onions, lettuce and greens, with the watering hose, and grandfather bent over at work at the back"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Pagina proiectului: planurile grădinii",
+     "en": "The project page: the garden plans (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/"
+   }
+  ]
+ },
+ {
+  "id": "2026-02-19-prima-ninsoare",
+  "data": "2026-02-19",
+  "taguri": [
+   "relaxare"
+  ],
+  "titlu": {
+   "ro": "Prima ninsoare surprinsă la noul proiect",
+   "en": "The first snowfall caught at the new project"
+  },
+  "text": {
+   "ro": [
+    "Prima ninsoare pe care am prins-o la Crucea: curtea albă, cerul senin și rece, casa cu acoperișul ei nou sub zăpadă, iar brăduții tineri din fața ei singurele pete verzi. Pe stepa dobrogeană zăpada ține puțin, așa că am venit să o vedem.",
+    "E o zi de stat și de privit, nu de lucru: pământul e înghețat, iar grădina de legume de anul trecut doarme sub strat. Zăpada topită încet e cea mai bună apă pentru pomii pe care îi plantăm la toamnă."
+   ],
+   "en": [
+    "The first snowfall we caught at Crucea: the yard white, the sky clear and cold, the house with its new roof under snow, and the young spruces in front of it the only green spots. On the Dobrogea steppe snow does not last long, so we came to see it.",
+    "A day for standing and looking, not for work: the ground is frozen and last year's vegetable garden sleeps under the cover. Slowly melting snow is the best water for the trees we plant in autumn."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-02-19-prima-ninsoare.jpg",
+    "alt": {
+     "ro": "Casa de la Crucea sub prima zăpadă, cu curtea albă, cer senin și brăduți tineri în față",
+     "en": "The house at Crucea under the first snow, with the white yard, clear sky and young spruces in front"
+    }
+   }
+  ],
+  "linkuri": []
  }
 ]
