@@ -64,5 +64,54 @@
     "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
    }
   ]
+ },
+ {
+  "id": "2026-10-02-curatenie-generala",
+  "data": "2026-10-02",
+  "titlu": "Curățenie generală: cu buldoexcavatorul și manual, cu ajutor local",
+  "text": [
+   "Am făcut curățenia generală a terenului, pregătirea de dinaintea trasării și a plantării din noiembrie. Buldoexcavatorul a scos tufele bătrâne, rădăcinile și buruienile înalte și a nivelat zonele unde se plantează, iar unde nu a putut intra, printre pomii pe care îi păstrăm și pe lângă gard, am curățat manual, cu un ajutor din sat, cu roaba și uneltele.",
+   "La sfârșitul zilei terenul era pământ curat, cu urmele șenilelor încă proaspete, de la casă până în fundul curții. Următorii pași: gunoiul de grajd pe zona pădurii Miyawaki, apoi trasarea rândurilor cu ruleta și țărușii."
+  ],
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-10-02-teren-inainte.jpg",
+    "alt": "Terenul cu iarba uscată și tufele rămase, înainte de curățenie, cu magazia mică în fund"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-curatenie-manuala.jpg",
+    "alt": "Curățenia manuală lângă casă: ajutorul din sat cu roaba, pe terenul deja degajat"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-urme-buldoexcavator.jpg",
+    "alt": "Urmele șenilelor buldoexcavatorului pe pământul curățat, pe lângă pomii păstrați"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-teren-nivelat.jpg",
+    "alt": "Zona nivelată de buldoexcavator, cu tufele scoase trase la margine"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-sol-curatat.jpg",
+    "alt": "Solul curățat de aproape: pământ gol, cu resturi de rădăcini"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-teren-curatat.jpg",
+    "alt": "Terenul curățat spre fundul curții, cu magazia și pomii rămași"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-02-senile.jpg",
+    "alt": "Urmele de șenile pe pământul proaspăt nivelat, spre casă"
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": "Planul de implementare în 50 de pași",
+    "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
+   },
+   {
+    "titlu": "Plan nord, varianta Miyawaki",
+    "url": "https://schmicky.github.io/crucea/time-lapse/plan-amenajare-nord-miyawaki.html"
+   }
+  ]
  }
 ]
