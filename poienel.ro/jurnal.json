@@ -2,6 +2,10 @@
  {
   "id": "2026-10-17-trasare-si-allah-bair",
   "data": "2026-10-17",
+  "taguri": [
+   "amenajare",
+   "relaxare"
+  ],
   "titlu": {
    "ro": "Trasarea terenului pentru plantarea din noiembrie și o urcare pe dealul de la Crucea",
    "en": "Marking out the ground for the November planting, and a climb up the hill at Crucea"
@@ -66,6 +70,9 @@
  {
   "id": "2026-10-08-gunoi-de-grajd",
   "data": "2026-10-08",
+  "taguri": [
+   "amenajare"
+  ],
   "titlu": {
    "ro": "Gunoi de grajd maturat pe zona pădurii Miyawaki",
    "en": "Well-rotted farmyard manure on the Miyawaki forest plot"
@@ -116,6 +123,9 @@
  {
   "id": "2026-10-02-curatenie-generala",
   "data": "2026-10-02",
+  "taguri": [
+   "amenajare"
+  ],
   "titlu": {
    "ro": "Curățenie generală: cu buldoexcavatorul și manual, cu ajutor local",
    "en": "General clearing: with the backhoe and by hand, with local help"

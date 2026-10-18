@@ -84,6 +84,7 @@ const ETICHETE = {
     sumarSpecii: (n, parti) => `${n} de specii: ${parti.join(', ')}.`,
     obiective: 'obiective', sumarAtr: (n, parti) => `${n} obiective: ${parti.join(', ')}.`, km: 'km', deLaPoienel: 'de Poienel', circa: 'circa', judet: 'județul Constanța', practic: 'Practic', surse: 'Surse',
     atrNume: 'Atracții turistice în jurul Poienelului', atrDesc: 'Obiective naturale, istorice și religioase la cel mult o oră de mers de Crucea, Constanța, în ordinea distanței.', paginaAtr: 'Atracții turistice în jurul Poienelului — Crucea, Constanța',
+    taguri: { amenajare: 'Amenajare', relaxare: 'Relaxare' }, filtreaza: 'Filtrează după temă',
     jurnalNume: 'Jurnalul grădinii Poienel', paginaJurnal: 'Jurnalul grădinii — Poienel, Crucea, Constanța', jurnalGol: 'Jurnalul începe în curând: primele însemnări vor fi despre măsurători, comenzile de puieți și plantarea pădurii Miyawaki din toamna lui 2026.',
     meniu: { 'index.html': 'Grădina', 'index.html#specii': 'Specii', 'atractii.html': 'Atracții turistice', 'jurnal.html': 'Jurnal', 'index.html#planuri': 'Planuri' }, meniuAria: 'Meniu principal', limba: 'Limba',
     siteDesc: 'Poienel este o grădină în transformare la Crucea, județul Constanța: 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană.',
@@ -114,6 +115,7 @@ const ETICHETE = {
     sumarSpecii: (n, parti) => `${n} species: ${parti.join(', ')}.`,
     obiective: 'sights', sumarAtr: (n, parti) => `${n} sights: ${parti.join(', ')}.`, km: 'km', deLaPoienel: 'from Poienel', circa: 'about', judet: 'Constanța County', practic: 'Practical', surse: 'Sources',
     atrNume: 'Sights around Poienel', atrDesc: 'Natural, historical and religious sights within an hour of Crucea, Constanța, in order of distance.', paginaAtr: 'Sights around Poienel — Crucea, Constanța, Romania',
+    taguri: { amenajare: 'Landscaping', relaxare: 'Leisure' }, filtreaza: 'Filter by theme',
     jurnalNume: 'The Poienel garden journal', paginaJurnal: 'Garden journal — Poienel, Crucea, Constanța', jurnalGol: 'The journal starts soon: the first entries will be about measurements, sapling orders and the planting of the Miyawaki forest in autumn 2026.',
     meniu: { 'index.html': 'The garden', 'index.html#specii': 'Species', 'atractii.html': 'Sights', 'jurnal.html': 'Journal', 'index.html#planuri': 'Plans' }, meniuAria: 'Main menu', limba: 'Language',
     siteDesc: 'Poienel is a garden in the making at Crucea, Constanța County, Romania: 65 species of trees, shrubs, fruit trees, aromatic and herbaceous plants, plus a 340 m² Miyawaki forest with 919 saplings of 30 native Dobrogea forest-steppe species.',
@@ -198,7 +200,13 @@ const webPage = (lang, f, name, mainEntityId) => ({
 const specii = citeste('specii.json');
 const atractii = citeste('atractii.json').slice().sort((a, b) => a.distanta_km - b.distanta_km);
 const jurnal = citeste('jurnal.json').slice().sort((a, b) => b.data.localeCompare(a.data));
-const TIPURI = Object.keys(ETICHETE.ro.tipuri), CATEG = Object.keys(ETICHETE.ro.categ);
+const TIPURI = Object.keys(ETICHETE.ro.tipuri), CATEG = Object.keys(ETICHETE.ro.categ), TAGURI = Object.keys(ETICHETE.ro.taguri);
+// Fiecare însemnare are cel puțin un tag din lista cunoscută (regula de etichetare e în CLAUDE.md)
+for (const j of jurnal) {
+  if (!Array.isArray(j.taguri) || !j.taguri.length) throw new Error(`Însemnarea ${j.data} nu are „taguri”`);
+  for (const t of j.taguri) if (!TAGURI.includes(t)) throw new Error(`Însemnarea ${j.data}: tag necunoscut „${t}” (permise: ${TAGURI.join(', ')})`);
+}
+const countsTag = Object.fromEntries(TAGURI.map((t) => [t, jurnal.filter((j) => j.taguri.includes(t)).length]));
 const counts = Object.fromEntries(TIPURI.map((t) => [t, specii.filter((s) => s.type === t).length]));
 const countsCat = Object.fromEntries(CATEG.map((c) => [c, atractii.filter((a) => a.categorie === c).length]));
 
@@ -322,9 +330,9 @@ ${v.practic.map((p) => `<li>${esc(p)}</li>`).join('\n')}
 
   // ── jurnal.html: însemnările ──
   const jt = (j) => ({ titlu: txt(j.titlu, lang, `jurnal ${j.data} titlu`), text: txt(j.text, lang, `jurnal ${j.data} text`) });
-  const intrari = jurnal.length ? jurnal.map((j) => { const v = jt(j); return `<article class="jurnal-intrare" id="${esc(idJurnal(j))}">
+  const intrari = jurnal.length ? jurnal.map((j) => { const v = jt(j); return `<article class="jurnal-intrare" id="${esc(idJurnal(j))}" data-taguri="${j.taguri.join(' ')}">
 <h2>${esc(v.titlu)}</h2>
-<p><time datetime="${esc(j.data)}">${dataLunga(j.data, L)}</time></p>
+<p class="meta"><time datetime="${esc(j.data)}">${dataLunga(j.data, L)}</time> ${j.taguri.map((t) => `<a class="tag tag-${t}" href="?tag=${t}#insemnari">${L.taguri[t]}</a>`).join(' ')}</p>
 ${v.text.map((p) => `<p>${esc(p)}</p>`).join('\n')}
 ${(j.foto || []).length ? `<div class="jurnal-foto">\n${j.foto.map((f) => figura(f, lang, '', `jurnal ${j.data}`, L)).join('\n')}\n</div>` : ''}
 ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l.url)}">${esc(txt(l.titlu, lang, `jurnal ${j.data} link`))}</a></li>`).join('\n')}\n</ul>` : ''}
@@ -336,7 +344,7 @@ ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l
       '@type': 'Blog', '@id': idBlog, name: L.jurnalNume, inLanguage: lang, url: urlPagina(lang, 'jurnal.html'),
       blogPost: jurnal.map((j) => { const v = jt(j); return {
         '@type': 'BlogPosting', '@id': urlPagina(lang, 'jurnal.html') + '#' + idJurnal(j), url: urlPagina(lang, 'jurnal.html') + '#' + idJurnal(j), headline: v.titlu, datePublished: j.data, inLanguage: lang,
-        articleBody: v.text.join('\n\n'), author: { '@type': 'Organization', name: 'Poienel' },
+        articleBody: v.text.join('\n\n'), keywords: j.taguri.map((t) => L.taguri[t]), author: { '@type': 'Organization', name: 'Poienel' },
         image: (j.foto || []).map((f) => ({ '@type': 'ImageObject', contentUrl: SITE + f.src, thumbnailUrl: SITE + thumbDe(f.src), caption: txt(f.alt, lang, `jurnal ${j.data} foto.alt`) })),
       }; }),
     },
@@ -344,6 +352,7 @@ ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l
   completeaza(`${lang}/jurnal.html`, {
     alternate: alternate(lang, 'jurnal.html'), nav: nav(lang, 'jurnal.html'), footer: footer(lang), jsonld: jsonld(jsonldJurnal),
     robots: `<meta name="robots" content="${jurnal.length ? 'index, follow, max-image-preview:large, max-snippet:-1' : 'noindex, follow'}">`,
+    'jurnal-tabs': `<div class="type-tab active" data-tag="all">${L.toate} (${jurnal.length})</div>\n` + TAGURI.map((t) => `<div class="type-tab" data-tag="${t}">${L.taguri[t]} (${countsTag[t]})</div>`).join('\n'),
     jurnal: intrari,
   });
 }

@@ -32,7 +32,7 @@ Din `poienel.ro/`, pentru fiecare poză: `python3 -I foto.py <AAAA-LL-ZZ> <subie
 Adaugă în `poienel.ro/jurnal.json` un obiect:
 
 ```json
-{ "id": "AAAA-LL-ZZ-subiect", "data": "AAAA-LL-ZZ",
+{ "id": "AAAA-LL-ZZ-subiect", "data": "AAAA-LL-ZZ", "taguri": ["amenajare"],
   "titlu": { "ro": "…", "en": "…" },
   "text": { "ro": ["paragraf 1", "paragraf 2"], "en": ["paragraph 1", "paragraph 2"] },
   "foto": [{ "src": "resurse/jurnal/AAAA-LL-ZZ-subiect.jpg", "alt": { "ro": "ce se vede", "en": "what is shown" } }],
@@ -41,6 +41,7 @@ Adaugă în `poienel.ro/jurnal.json` un obiect:
 
 Site-ul e bilingv: utilizatorul dă indicațiile în română, iar însemnarea se scrie **și în engleză**, în același obiect (`build.mjs` se oprește dacă lipsește o limbă). Traducerea e a ta, fără să o ceri utilizatorului.
 
+- `taguri`: le pui tu, după conținut, fără să întrebi: `amenajare` pentru lucrări (curățenie, gunoi, trasare, plantare, irigare, comenzi de puieți, măsurători), `relaxare` pentru timpul fără lucru (plimbări, urcări pe deal, vizite la obiective, oaspeți, observații de natură); amândouă când însemnarea le are pe amândouă. Lista completă și regula sunt în `poienel.ro/CLAUDE.md`.
 - Text la persoana întâi plural, 1–3 paragrafe, fapte din teren, cu legătura spre plan unde are sens (de ce s-a făcut lucrarea, ce urmează).
 - `alt` descrie concret ce e în poză; ordinea pozelor urmează ordinea lucrării.
 - `linkuri` relevante: planul pădurii Miyawaki (`https://schmicky.github.io/crucea/miyawaki/index-est.html`), planul de implementare (`https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md`), fișa unui obiectiv din `atractii.html#id` dacă e vorba de o vizită.
