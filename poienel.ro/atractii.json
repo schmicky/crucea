@@ -32,7 +32,12 @@
     "titlu": "CreștinOrtodox.ro — Mănăstirea Crucea",
     "url": "https://www.crestinortodox.ro/manastiri/manastirea-crucea-117462.html"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/manastirea-crucea.jpg",
+   "alt": "Mănăstirea Crucea văzută de sus, la poalele dealului împădurit, cu biserica albă și drumul de acces",
+   "credit": "Ziarul Lumina"
+  }
  },
  {
   "id": "izvorul-tamaduirii",
@@ -101,7 +106,11 @@
     "titlu": "Ordinul MMAP nr. 1252/2016 — planul de management",
     "url": "https://legeaz.net/monitorul-oficial-63-2017/ommap-1252-2016"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/dealul-allah-bair.jpg",
+   "alt": "Dedițel (Pulsatilla) înflorit primăvara pe stâncăriile de calcar ale Dealului Allah Bair"
+  }
  },
  {
   "id": "cetatea-carsium",
@@ -137,7 +146,11 @@
     "titlu": "Cercetări arheologice — The Roman frontier in Dobrudja: Hârșova (Carsium)",
     "url": "https://cercetari-arheologice.ro/en/the-roman-frontier-in-dobrudja-5-harsova-carsium/"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/cetatea-carsium.jpg",
+   "alt": "Canaralele de calcar de la Hârșova, pe malul Dunării, cu deschideri săpate în stâncă"
+  }
  },
  {
   "id": "cetatea-capidava",
@@ -172,7 +185,11 @@
     "titlu": "Cronica cercetărilor arheologice — Capidava",
     "url": "https://cronica.cimec.ro/sandboxpdf/rapoarte/raport_5575.pdf"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/cetatea-capidava.jpg",
+   "alt": "Cetatea Capidava din dronă: zidurile restaurate, turnurile și incinta pe malul Dunării"
+  }
  },
  {
   "id": "muzeul-topalu",
@@ -198,7 +215,11 @@
     "titlu": "G4Media — Noaptea muzeelor la sate: Capidava, Adamclisi, Histria și Topalu",
     "url": "https://www.g4media.ro/turul-cetatilor-in-week-end-noaptea-muzeelor-in-satele-din-constanta-pentru-pasionatii-de-istorie-intrare-gratuita-pentru-vizitatori-la-capidava-adamclisi-histria-si-topalu.html"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/muzeul-topalu.jpg",
+   "alt": "Clădirea Muzeului de artă „Dinu și Sevasta Vintilă” din Topalu, cu fațada din piatră și steagul la intrare"
+  }
  },
  {
   "id": "ghindaresti",
@@ -224,7 +245,11 @@
     "titlu": "Wikipedia — Ghindărești",
     "url": "https://en.wikipedia.org/wiki/Ghind%C4%83re%C8%99ti"
    }
-  ]
+  ],
+  "foto": {
+   "src": "resurse/atractii/ghindaresti.jpg",
+   "alt": "Biserica de rit vechi din Ghindărești, cu turlele ei, între casele satului și Dunăre"
+  }
  },
  {
   "id": "cetatea-ulmetum",

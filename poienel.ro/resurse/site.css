@@ -411,9 +411,18 @@ td a:hover { text-decoration: underline; }
 /* Pagina de atracții */
 .intro { color: var(--text-secondary); line-height: 1.6; max-width: 820px; }
 .atractii-lista { list-style: none; padding: 0; margin: 0 0 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
-.atractii-lista a { display: block; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-secondary); color: var(--text-primary); text-decoration: none; }
+.atractii-lista a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-secondary); color: var(--text-primary); text-decoration: none; }
 .atractii-lista a:hover { border-color: var(--accent-green); }
+.atractii-lista .nume { display: block; }
 .atractii-lista .cat { display: block; font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+.atractii-lista img, .atractii-lista .fara-foto { width: 56px; height: 56px; border-radius: 6px; flex: none; object-fit: cover; background: var(--bg-tertiary); }
+.atractie-foto { float: right; width: 300px; max-width: 45%; margin: 0 0 12px 16px; }
+.atractie-foto a { display: block; line-height: 0; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color); }
+.atractie-foto a:hover { border-color: var(--accent-green); }
+.atractie-foto img { width: 100%; height: auto; display: block; }
+.atractie-foto figcaption { font-size: 11px; color: var(--text-secondary); margin-top: 3px; text-align: right; }
+.atractie::after { content: ""; display: block; clear: both; }
+@media (max-width: 600px) { .atractie-foto { float: none; max-width: 100%; margin: 0 0 12px; } }
 .atractie { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 20px; margin-bottom: 20px; line-height: 1.6; }
 .atractie h2 { margin: 0 0 4px; font-size: 20px; color: var(--accent-green); }
 .atractie .meta { color: var(--text-secondary); font-size: 13px; margin: 0 0 12px; }

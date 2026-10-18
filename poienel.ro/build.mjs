@@ -169,10 +169,17 @@ const atractii = citeste('atractii.json').slice().sort((a, b) => a.distanta_km -
 const countsCat = Object.fromEntries(Object.keys(CATEG).map((c) => [c, atractii.filter((a) => a.categorie === c).length]));
 const urlAtr = (a) => SITE + 'atractii.html#' + a.id;
 
-const listaAtr = `<ul class="atractii-lista">\n${atractii.map((a) => `<li><a href="#${esc(a.id)}">${esc(a.nume)}<span class="cat">${CATEG[a.categorie]} · ${esc(a.localitate)} · ~${a.distanta_km} km</span></a></li>`).join('\n')}\n</ul>`;
+const listaAtr = `<ul class="atractii-lista">\n${atractii.map((a) => `<li><a href="#${esc(a.id)}">${a.foto ? `<img src="${esc(thumbDe(a.foto.src))}" alt="" width="56" height="56" loading="lazy">` : '<span class="fara-foto"></span>'}<span><span class="nume">${esc(a.nume)}</span><span class="cat">${CATEG[a.categorie]} · ${esc(a.localitate)} · ~${a.distanta_km} km</span></span></a></li>`).join('\n')}\n</ul>`;
 
+function figuraAtr(a) {
+  if (!a.foto) return '';
+  const thumb = thumbDe(a.foto.src);
+  if (!fs.existsSync(path.join(dir, thumb))) throw new Error(`Lipsește miniatura ${thumb} (rulează python foto.py)`);
+  const d = dimJpeg(thumb), D = dimJpeg(a.foto.src);
+  return `<figure class="atractie-foto"><a href="${esc(a.foto.src)}" title="Deschide fotografia mare (${D.w}×${D.h})"><img src="${esc(thumb)}" alt="${esc(a.foto.alt || '')}" width="${d.w}" height="${d.h}" loading="lazy"></a>${a.foto.credit ? `<figcaption>Foto: ${esc(a.foto.credit)}</figcaption>` : ''}</figure>\n`;
+}
 const articoleAtr = atractii.map((a) => `<article class="atractie" id="${esc(a.id)}">
-<h2>${esc(a.nume)}</h2>
+${figuraAtr(a)}<h2>${esc(a.nume)}</h2>
 <p class="meta"><span class="tag tag-${esc(a.categorie)}">${CATEG[a.categorie]}</span>${esc(a.localitate)}, ${esc(a.comuna)}, județul Constanța · circa ${a.distanta_km} km de Poienel</p>
 <p><strong>${esc(a.rezumat)}</strong></p>
 ${a.descriere.map((p) => `<p>${esc(p)}</p>`).join('\n')}
@@ -192,6 +199,7 @@ const jsonldAtr = { '@context': 'https://schema.org', '@graph': [
       '@type': 'TouristAttraction', '@id': urlAtr(a), url: urlAtr(a), name: a.nume, additionalType: a.tip_schema, description: a.rezumat,
       address: { '@type': 'PostalAddress', addressLocality: a.localitate, addressRegion: 'Constanța', addressCountry: 'RO' },
       isAccessibleForFree: true, sameAs: a.surse.map((s) => s.url),
+      ...(a.foto ? { image: { '@type': 'ImageObject', contentUrl: SITE + a.foto.src, thumbnailUrl: SITE + thumbDe(a.foto.src), caption: a.foto.alt || '', ...(a.foto.credit ? { creditText: a.foto.credit } : {}) } } : {}),
     } })),
   },
 ] };
