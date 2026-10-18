@@ -35,5 +35,34 @@
     "url": "atractii.html#dealul-allah-bair"
    }
   ]
+ },
+ {
+  "id": "2026-10-08-gunoi-de-grajd",
+  "data": "2026-10-08",
+  "titlu": "Gunoi de grajd maturat pe zona pădurii Miyawaki",
+  "text": [
+   "Am adus gunoi de grajd maturat și l-am descărcat în grămezi, cu camioneta, pe parcela din colțul de nord-est unde se plantează pădurea Miyawaki. Gunoiul e bine fermentat, de culoare închisă, fără miros tare: exact ce trebuie pentru stratul de materie organică pe care îl cere metoda.",
+   "Apoi l-am împrăștiat cu tractorul pe toată zona de amenajare, între țărușii care marchează conturul, ca să fie încorporat în sol la afânarea de dinaintea plantării. Pe stepa noastră săracă în humus, stratul acesta e investiția care decide cât de repede pornesc puieții în primii doi ani."
+  ],
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-10-08-gunoi-gramezi.jpg",
+    "alt": "Grămezile de gunoi de grajd maturat descărcate din camionetă pe parcela pădurii Miyawaki"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-08-gunoi-imprastiat.jpg",
+    "alt": "Tractorul împrăștie gunoiul de grajd pe zona de amenajare, între țărușii conturului"
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+    "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
+   },
+   {
+    "titlu": "Planul de implementare în 50 de pași",
+    "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
+   }
+  ]
  }
 ]
