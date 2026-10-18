@@ -105,7 +105,7 @@ Fiecare pagină are regiunile comune `nav` și `jsonld`, propriul JSON ca sursă
 
 ### `jurnal.html` — jurnalul grădinii
 
-- Sursa: `jurnal.json`, listă de însemnări: `id` (opțional; implicit data), `data` (ISO `AAAA-LL-ZZ`), `titlu`, `text` (listă de paragrafe), `foto` (listă de `{src, alt}`; fișierele în `resurse/jurnal/`, nume `AAAA-LL-ZZ-descriere.jpg`, lățime maximă 1600 px, cu `alt` care spune ce se vede), `linkuri` (listă de `{titlu, url}`; relative pentru paginile site-ului).
+- Sursa: `jurnal.json`, listă de însemnări: `id` (opțional; implicit data), `data` (ISO `AAAA-LL-ZZ`), `titlu`, `text` (listă de paragrafe), `foto` (listă de `{src, alt}`; fișierele în `resurse/jurnal/`, nume `AAAA-LL-ZZ-descriere.jpg`, lățime maximă 900 px, JPEG la calitate ~82, orientate corect (EXIF aplicat), cu `alt` care spune ce se vede; originalele nu se păstrează în repo), `linkuri` (listă de `{titlu, url}`; relative pentru paginile site-ului).
 - Însemnările se afișează cu cea mai nouă prima; ancora e `#id`. JSON-LD: `Blog` cu `BlogPosting` pe însemnare, cu `datePublished`, `articleBody` și imaginile.
 - Cât timp `jurnal.json` e gol, build-ul pune `noindex` pe pagină (regiunea `robots`) și o lasă afară din sitemap; la prima însemnare devine indexabilă automat.
 - Însemnările sunt fapte din teren, la persoana întâi plural, cu data lucrării; nu se rescriu retroactiv decât pentru greșeli.

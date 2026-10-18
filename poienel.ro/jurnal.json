@@ -7,10 +7,33 @@
    "Am continuat lucrările de trasare a terenului pentru plantarea din luna noiembrie. Cu ruleta întinsă pe linie și țăruși de șipcă bătuți la distanțele din plan, am marcat rândurile și pozițiile pe parcela curățată, pe lângă gardul viu de la margine; ziua a fost înnorată și rece, numai bună de lucru.",
    "După-amiază am urcat pe dealul de la Crucea, Dealul Allah Bair, pe drumul de pământ care trece prin plantația de pin negru. Sus, iarba uscată de stepă, păducei și măceși plini de fructe roșii, tufe de scumpie ruginii și priveliștea peste vale, spre culmile din jur. E locul de unde se vede cel mai bine ce înseamnă silvostepa pe care o imităm în pădurea Miyawaki."
   ],
-  "foto": [],
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-10-17-trasare-ruleta.jpg",
+    "alt": "Trasarea rândurilor cu ruleta întinsă și țăruși de șipcă, pe parcela de lângă gardul viu"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-17-echipa.jpg",
+    "alt": "La trasare: țărușii pregătiți și ciocanul în mână, sub un cer de octombrie"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-17-drum-pini.jpg",
+    "alt": "Drumul de pământ prin plantația de pin negru, spre vârful Dealului Allah Bair"
+   },
+   {
+    "src": "resurse/jurnal/2026-10-17-allah-bair.jpg",
+    "alt": "Pe Dealul Allah Bair: iarbă uscată de stepă, păducei cu fructe roșii și valea spre culmile din jur"
+   }
+  ],
   "linkuri": [
-   {"titlu": "Planul de implementare în 50 de pași (ordinea lucrărilor și a plantării)", "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"},
-   {"titlu": "Rezervația naturală Dealul Allah Bair", "url": "atractii.html#dealul-allah-bair"}
+   {
+    "titlu": "Planul de implementare în 50 de pași (ordinea lucrărilor și a plantării)",
+    "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
+   },
+   {
+    "titlu": "Rezervația naturală Dealul Allah Bair",
+    "url": "atractii.html#dealul-allah-bair"
+   }
   ]
  }
 ]
