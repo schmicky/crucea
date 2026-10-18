@@ -71,7 +71,7 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 
 ## 7. Publicare și securitate
 
-- `sync-to-ftp.ps1` urcă tot folderul în `public_html`, mai puțin `$ExcludeNames` (`sync-to-ftp.ps1`, `build.mjs`, `README.md`, `CLAUDE.md`). Orice fișier de lucru nou (scripturi, note, surse neprocesate) se adaugă acolo.
+- `sync-to-ftp.ps1` urcă tot folderul în `public_html`, mai puțin `$ExcludeNames` (`sync-to-ftp.ps1`, `build.mjs`, `foto.py`, `README.md`, `CLAUDE.md`). Orice fișier de lucru nou (scripturi, note, surse neprocesate) se adaugă acolo.
 - **Nicio parolă, cheie sau token în repo**, nici în acest folder, nici altundeva: repo-ul e public și tot conținutul lui ajunge pe GitHub Pages. Scriptul FTP ia parola din `$env:POIENEL_FTP_PASS` sau o cere la rulare. Workflow-ul `.github/workflows/static.yml` șterge `poienel.ro/sync-to-ftp.ps1` din artefactul Pages; dacă apar alte scripturi de publicare, se adaugă și ele acolo. Parola veche din istoricul git este compromisă și se consideră schimbată.
 - Server local pentru verificare: `.claude/http-server.ps1` (Windows) sau `python3 -m http.server` din acest folder.
 
@@ -105,8 +105,8 @@ Fiecare pagină are regiunile comune `nav` și `jsonld`, propriul JSON ca sursă
 
 ### `jurnal.html` — jurnalul grădinii
 
-- Sursa: `jurnal.json`, listă de însemnări: `id` (opțional; implicit data), `data` (ISO `AAAA-LL-ZZ`), `titlu`, `text` (listă de paragrafe), `foto` (listă de `{src, alt}`; fișierele în `resurse/jurnal/`, nume `AAAA-LL-ZZ-descriere.jpg`, lățime maximă 900 px, JPEG la calitate ~82, orientate corect (EXIF aplicat), cu `alt` care spune ce se vede; originalele nu se păstrează în repo), `linkuri` (listă de `{titlu, url}`; relative pentru paginile site-ului).
-- Însemnările se afișează cu cea mai nouă prima; ancora e `#id`. JSON-LD: `Blog` cu `BlogPosting` pe însemnare, cu `datePublished`, `articleBody` și imaginile.
+- Sursa: `jurnal.json`, listă de însemnări: `id` (opțional; implicit data), `data` (ISO `AAAA-LL-ZZ`), `titlu`, `text` (listă de paragrafe), `foto` (listă de `{src, alt}`; `src` e fișierul mare din `resurse/jurnal/`, nume `AAAA-LL-ZZ-descriere.jpg`, lățime maximă 900 px, cu miniatura de 300 px cu același nume în `resurse/jurnal/thumb/`; ambele le face `python foto.py <data> <subiect> <poza>` (Pillow), care aplică și orientarea EXIF; `alt` spune ce se vede; originalele nu se păstrează în repo), `linkuri` (listă de `{titlu, url}`; relative pentru paginile site-ului).
+- Însemnările se afișează cu cea mai nouă prima; ancora e `#id`. Fotografiile apar ca miniaturi de 300 px cu link spre fișierul mare; build-ul citește dimensiunile din JPEG și se oprește dacă lipsește miniatura. JSON-LD: `Blog` cu `BlogPosting` pe însemnare, cu `datePublished`, `articleBody` și `ImageObject` (fișier mare + miniatură) pe poză.
 - Cât timp `jurnal.json` e gol, build-ul pune `noindex` pe pagină (regiunea `robots`) și o lasă afară din sitemap; la prima însemnare devine indexabilă automat.
 - Însemnările sunt fapte din teren, la persoana întâi plural, cu data lucrării; nu se rescriu retroactiv decât pentru greșeli.
 

@@ -4,7 +4,7 @@ Site-ul static publicat la <https://poienel.ro/>: trei pagini (`index.html` gră
 
 ## Cum se actualizează
 
-1. Editează JSON-ul paginii: `specii.json` (o specie; `phenology` are 12 luni, fiecare `[udare, vegetație, înflorire]` cu 0 sau 1), `atractii.json` (un obiectiv) sau `jurnal.json` (o însemnare, cu `data` ISO, `titlu`, `text`, `foto`, `linkuri`; pozele în `resurse/jurnal/`).
+1. Editează JSON-ul paginii: `specii.json` (o specie; `phenology` are 12 luni, fiecare `[udare, vegetație, înflorire]` cu 0 sau 1), `atractii.json` (un obiectiv) sau `jurnal.json` (o însemnare, cu `data` ISO, `titlu`, `text`, `foto`, `linkuri`; pozele se pregătesc cu `python foto.py <data> <subiect> <poza>`, care face fișierul de 900 px și miniatura de 300 px).
 2. Rulează `node build.mjs` din acest folder. Scriptul rescrie regiunile marcate `<!-- BUILD:… -->` din cele trei pagini (meniul, tabelul, fișele, lista de obiective, însemnările, JSON-LD) și regenerează `specii.csv` și `sitemap.xml`.
 3. Verifică local (`.claude/http-server.ps1` sau orice server static) și publică cu `sync-to-ftp.ps1` (parola FTP se dă prin variabila de mediu `POIENEL_FTP_PASS` sau la prompt; nu se mai ține în script).
 

@@ -16,6 +16,19 @@ const scrie = (f, s) => fs.writeFileSync(path.join(dir, f), s);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonInline = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
 const jsonld = (o) => `<script type="application/ld+json">\n${jsonInline(o)}\n</script>`;
+// Dimensiunile unui JPEG din antetul SOF, ca să punem width/height pe <img> fără biblioteci
+function dimJpeg(fisier) {
+  const b = fs.readFileSync(path.join(dir, fisier));
+  let i = 2;
+  while (i < b.length) {
+    if (b[i] !== 0xff) throw new Error(`${fisier}: nu e JPEG valid`);
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  throw new Error(`${fisier}: fără antet SOF`);
+}
+const thumbDe = (src) => src.replace(/\/([^/]+)$/, '/thumb/$1');
 const dataRo = (iso) => { const [y, m, d] = iso.split('-').map(Number); return `${d} ${LUNI_LUNGI[m - 1]} ${y}`; };
 
 // Înlocuiește regiunile marcate dintr-o pagină; eroare dacă lipsește vreuna.
@@ -198,7 +211,12 @@ const intrariJurnal = jurnal.length ? jurnal.map((j) => `<article class="jurnal-
 <h2>${esc(j.titlu)}</h2>
 <p><time datetime="${esc(j.data)}">${dataRo(j.data)}</time></p>
 ${(j.text || []).map((p) => `<p>${esc(p)}</p>`).join('\n')}
-${(j.foto || []).map((f) => `<figure><img src="${esc(f.src)}" alt="${esc(f.alt || '')}" loading="lazy">${f.alt ? `<figcaption>${esc(f.alt)}</figcaption>` : ''}</figure>`).join('\n')}
+${(j.foto || []).length ? `<div class="jurnal-foto">\n${j.foto.map((f) => {
+  const thumb = thumbDe(f.src);
+  if (!fs.existsSync(path.join(dir, thumb))) throw new Error(`Lipsește miniatura ${thumb} (rulează python foto.py)`);
+  const d = dimJpeg(thumb), D = dimJpeg(f.src);
+  return `<figure><a href="${esc(f.src)}" title="Deschide fotografia mare (${D.w}×${D.h})"><img src="${esc(thumb)}" alt="${esc(f.alt || '')}" width="${d.w}" height="${d.h}" loading="lazy"></a>${f.alt ? `<figcaption>${esc(f.alt)}</figcaption>` : ''}</figure>`;
+}).join('\n')}\n</div>` : ''}
 ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l.url)}">${esc(l.titlu)}</a></li>`).join('\n')}\n</ul>` : ''}
 </article>`).join('\n')
   : '<p class="gol">Jurnalul începe în curând: primele însemnări vor fi despre măsurători, comenzile de puieți și plantarea pădurii Miyawaki din toamna lui 2026.</p>';
@@ -209,7 +227,7 @@ const jsonldJurnal = { '@context': 'https://schema.org', '@graph': [
     '@type': 'Blog', '@id': SITE + 'jurnal.html#blog', name: 'Jurnalul grădinii Poienel', inLanguage: 'ro', url: SITE + 'jurnal.html',
     blogPost: jurnal.map((j) => ({
       '@type': 'BlogPosting', '@id': SITE + 'jurnal.html#' + idJurnal(j), url: SITE + 'jurnal.html#' + idJurnal(j), headline: j.titlu, datePublished: j.data, inLanguage: 'ro',
-      articleBody: (j.text || []).join('\n\n'), image: (j.foto || []).map((f) => SITE + f.src), author: { '@type': 'Organization', name: 'Poienel' },
+      articleBody: (j.text || []).join('\n\n'), image: (j.foto || []).map((f) => ({ '@type': 'ImageObject', contentUrl: SITE + f.src, thumbnailUrl: SITE + thumbDe(f.src), caption: f.alt || '' })), author: { '@type': 'Organization', name: 'Poienel' },
     })),
   },
 ] };
