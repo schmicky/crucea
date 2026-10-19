@@ -87,6 +87,8 @@ const ETICHETE = {
     taguri: { amenajare: 'Amenajare', relaxare: 'Relaxare', etape: 'Etape' }, filtreaza: 'Filtrează după temă',
     jurnalNume: 'Jurnalul grădinii Poienel', paginaJurnal: 'Jurnalul grădinii — Poienel, Crucea, Constanța', jurnalGol: 'Jurnalul începe în curând: primele însemnări vor fi despre măsurători, comenzile de puieți și plantarea pădurii Miyawaki din toamna lui 2026.',
     meniu: { 'index.html': 'Grădina', 'index.html#specii': 'Specii', 'atractii.html': 'Atracții turistice', 'jurnal.html': 'Jurnal', 'index.html#planuri': 'Planuri' }, meniuAria: 'Meniu principal', limba: 'Limba',
+    vreme: { titlu: 'Vremea la Crucea', aria: 'Prognoza pe 7 zile pentru Crucea, Constanța', azi: 'Azi', maine: 'Mâine', max: 'max', min: 'min', sursa: 'Date: Open-Meteo',
+      conditii: { clear: 'Senin', mostlyClear: 'Mai mult senin', partly: 'Parțial noros', overcast: 'Noros', fog: 'Ceață', drizzle: 'Burniță', freezingDrizzle: 'Burniță înghețată', rainLight: 'Ploaie slabă', rain: 'Ploaie', rainHeavy: 'Ploaie puternică', freezingRain: 'Ploaie înghețată', snowLight: 'Ninsoare slabă', snow: 'Ninsoare', snowHeavy: 'Ninsoare puternică', snowGrains: 'Fulgi mărunți', showers: 'Averse', showersHeavy: 'Averse puternice', snowShowers: 'Averse de zăpadă', thunder: 'Furtună', hail: 'Furtună cu grindină' } },
     siteDesc: 'Poienel este o grădină în transformare la Crucea, județul Constanța: 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană.',
     footerDesc: 'Grădină și pădure Miyawaki la Crucea, județul Constanța, în nordul Dobrogei.', footerLinkuri: 'Linkuri recomandate', footerDate: 'Date deschise', footerDateText: 'Conținutul poate fi citit și citat liber, inclusiv de agenți AI; sursa: poienel.ro.',
     footerProiect: 'Proiectul', footerGithub: 'Documentația completă pe GitHub', footerGithubText: 'planuri, comenzi de puieți, oferte, studii de caz.', footerContact: 'Scrie-ne prin', footerJos: 'Crucea, Constanța',
@@ -121,6 +123,8 @@ const ETICHETE = {
     taguri: { amenajare: 'Landscaping', relaxare: 'Leisure', etape: 'Milestones' }, filtreaza: 'Filter by theme',
     jurnalNume: 'The Poienel garden journal', paginaJurnal: 'Garden journal — Poienel, Crucea, Constanța', jurnalGol: 'The journal starts soon: the first entries will be about measurements, sapling orders and the planting of the Miyawaki forest in autumn 2026.',
     meniu: { 'index.html': 'The garden', 'index.html#specii': 'Species', 'atractii.html': 'Sights', 'jurnal.html': 'Journal', 'index.html#planuri': 'Plans' }, meniuAria: 'Main menu', limba: 'Language',
+    vreme: { titlu: 'Weather at Crucea', aria: '7-day forecast for Crucea, Constanța', azi: 'Today', maine: 'Tomorrow', max: 'high', min: 'low', sursa: 'Data: Open-Meteo',
+      conditii: { clear: 'Clear', mostlyClear: 'Mostly clear', partly: 'Partly cloudy', overcast: 'Overcast', fog: 'Fog', drizzle: 'Drizzle', freezingDrizzle: 'Freezing drizzle', rainLight: 'Light rain', rain: 'Rain', rainHeavy: 'Heavy rain', freezingRain: 'Freezing rain', snowLight: 'Light snow', snow: 'Snow', snowHeavy: 'Heavy snow', snowGrains: 'Snow grains', showers: 'Showers', showersHeavy: 'Heavy showers', snowShowers: 'Snow showers', thunder: 'Thunderstorm', hail: 'Thunderstorm with hail' } },
     siteDesc: 'Poienel is a garden in the making at Crucea, Constanța County, Romania: 65 species of trees, shrubs, fruit trees, aromatic and herbaceous plants, plus a 340 m² Miyawaki forest with 919 saplings of 30 native Dobrogea forest-steppe species.',
     footerDesc: 'Garden and Miyawaki forest at Crucea, Constanța County, in northern Dobrogea, Romania.', footerLinkuri: 'Recommended links', footerDate: 'Open data', footerDateText: 'The content may be read and quoted freely, including by AI agents; source: poienel.ro.',
     footerProiect: 'The project', footerGithub: 'Full documentation on GitHub', footerGithubText: 'plans, sapling orders, quotes, case studies (in Romanian).', footerContact: 'Write to us via', footerJos: 'Crucea, Constanța, Romania',
@@ -133,6 +137,8 @@ const ETICHETE = {
     ],
   },
 };
+// Prognoza din antet (Open-Meteo, vezi resurse/vreme.js): coordonatele aproximative ale comunei Crucea
+const VREME = { lat: 44.52, lon: 28.15 };
 const DATE_DESCHISE = ['specii.json', 'specii-ro.csv', 'specii-en.csv', 'atractii.json', 'jurnal.json', 'llms.txt', 'sitemap.xml'];
 const extern = (href, text) => `<a href="${esc(href)}" rel="noopener" target="_blank">${esc(text)}</a>`;
 const dataLunga = (iso, L) => { const [y, m, d] = iso.split('-').map(Number); return L.dataRo(d, L.luniLungi[m - 1], y); };
@@ -156,6 +162,18 @@ ${Object.entries(L.meniu).map(([href, text]) => `<li><a href="${href}"${href ===
 <li class="menu-limbi" aria-label="${L.limba}">${LANGS.map((l) => `<a href="../${l}/${f}" hreflang="${l}" lang="${l}" title="${ETICHETE[l].nume}"${l === lang ? ' aria-current="true"' : ''}><img src="../resurse/flag-${l}.svg" alt="${ETICHETE[l].nume}" width="24" height="16"></a>`).join('')}</li>
 </ul>
 </nav>`;
+};
+
+// Banda cu prognoza: ascunsă până o umple resurse/vreme.js; fără JavaScript sau rețea nu apare
+const vreme = (lang) => {
+  const L = ETICHETE[lang];
+  return `<div class="vreme" id="vreme" hidden role="group" aria-label="${esc(L.vreme.aria)}">
+<span class="vreme-titlu">${esc(L.vreme.titlu)}</span>
+<ul class="vreme-zile"></ul>
+<a class="vreme-sursa" href="https://open-meteo.com/" rel="noopener" target="_blank">${esc(L.vreme.sursa)}</a>
+</div>
+<script type="application/json" id="vreme-data">${jsonInline({ lat: VREME.lat, lon: VREME.lon, lang, etichete: L.vreme })}</script>
+<script src="../resurse/vreme.js" defer></script>`;
 };
 
 const footer = (lang) => {
@@ -289,7 +307,7 @@ for (const lang of LANGS) {
   };
 
   completeaza(`${lang}/index.html`, {
-    alternate: alternate(lang, 'index.html'), nav: nav(lang, 'index.html'), footer: footer(lang), jsonld: jsonld(jsonldSpecii),
+    alternate: alternate(lang, 'index.html'), nav: nav(lang, 'index.html'), vreme: vreme(lang), footer: footer(lang), jsonld: jsonld(jsonldSpecii),
     sumar: L.sumarSpecii(specii.length, TIPURI.map((t) => `${counts[t]} ${L.plural[t].toLowerCase()}`)),
     tabs: `<div class="type-tab active" data-type="all">${L.toate} (${specii.length})</div>\n` + TIPURI.map((t) => `<div class="type-tab" data-type="${t}">${L.plural[t]} (${counts[t]})</div>`).join('\n'),
     tabel, fise,
@@ -331,7 +349,7 @@ ${v.practic.map((p) => `<li>${esc(p)}</li>`).join('\n')}
     },
   ] };
   completeaza(`${lang}/atractii.html`, {
-    alternate: alternate(lang, 'atractii.html'), nav: nav(lang, 'atractii.html'), footer: footer(lang), jsonld: jsonld(jsonldAtr),
+    alternate: alternate(lang, 'atractii.html'), nav: nav(lang, 'atractii.html'), vreme: vreme(lang), footer: footer(lang), jsonld: jsonld(jsonldAtr),
     sumar: L.sumarAtr(atractii.length, CATEG.filter((c) => countsCat[c]).map((c) => `${countsCat[c]} ${L.categ[c].toLowerCase()}`)),
     lista: listaAtr, atractii: articoleAtr,
   });
@@ -358,7 +376,7 @@ ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l
     },
   ] };
   completeaza(`${lang}/jurnal.html`, {
-    alternate: alternate(lang, 'jurnal.html'), nav: nav(lang, 'jurnal.html'), footer: footer(lang), jsonld: jsonld(jsonldJurnal),
+    alternate: alternate(lang, 'jurnal.html'), nav: nav(lang, 'jurnal.html'), vreme: vreme(lang), footer: footer(lang), jsonld: jsonld(jsonldJurnal),
     robots: `<meta name="robots" content="${jurnal.length ? 'index, follow, max-image-preview:large, max-snippet:-1' : 'noindex, follow'}">`,
     'jurnal-tabs': `<div class="type-tab active" data-tag="all">${L.toate} (${jurnal.length})</div>\n` + TAGURI.map((t) => `<div class="type-tab" data-tag="${t}">${L.taguri[t]} (${countsTag[t]})</div>`).join('\n'),
     jurnal: intrari,

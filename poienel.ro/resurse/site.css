@@ -30,15 +30,17 @@ header {
 }
 
 .logo { max-width: 360px; height: auto; margin: 0 auto 20px; }
-/* Pe ecran lat: logo-ul în stânga, titlul și subtitlul în dreapta, ca antetul să fie scund */
+/* Pe ecran lat: logo-ul în stânga, titlul, subtitlul și prognoza în dreapta, ca antetul să fie scund */
 @media (min-width: 900px) {
   header {
-    display: grid; grid-template-columns: auto 1fr; column-gap: 28px; align-items: center;
-    text-align: left; padding: 16px max(20px, calc((100% - 1200px) / 2));
+    display: grid; grid-template-columns: auto 1fr; grid-template-rows: 1fr auto auto auto 1fr;
+    column-gap: 28px; align-items: center; text-align: left;
+    padding: 16px max(20px, calc((100% - 1200px) / 2));
   }
-  header .logo { grid-row: 1 / span 2; max-width: 300px; margin: 0; }
-  header h1 { align-self: end; margin: 0 0 4px; font-size: 26px; }
-  header .tagline { align-self: start; }
+  header .logo { grid-column: 1; grid-row: 1 / span 5; max-width: 300px; margin: 0; }
+  header h1 { grid-column: 2; grid-row: 2; align-self: end; margin: 0 0 4px; font-size: 26px; }
+  header .tagline { grid-column: 2; grid-row: 3; align-self: start; }
+  header .vreme { grid-column: 2; grid-row: 4; align-self: start; width: 100%; justify-content: flex-start; }
 }
 h1 { margin: 0 0 8px; font-size: 28px; color: var(--accent-green); }
 .tagline { color: var(--text-secondary); font-size: 16px; margin: 0; }
@@ -474,3 +476,27 @@ td a:hover { text-decoration: underline; }
 .jurnal-foto img { width: 100%; height: auto; display: block; }
 .jurnal-foto figcaption { font-size: 12px; color: var(--text-secondary); line-height: 1.4; margin-top: 4px; }
 .gol { color: var(--text-secondary); border: 1px dashed var(--border-color); border-radius: 8px; padding: 20px; }
+
+/* Prognoza în antet: bandă discretă, umplută de resurse/vreme.js din Open-Meteo */
+.vreme {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  max-width: 1200px; margin: 14px auto 0; padding-top: 10px;
+  border-top: 1px solid var(--border-color); color: var(--text-secondary);
+  font-size: 12px; overflow-x: auto;
+}
+.vreme-titlu { white-space: nowrap; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.vreme-zile { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.vreme-zile li { display: flex; flex-direction: column; align-items: center; min-width: 54px; padding: 2px 4px; line-height: 1.25; cursor: default; }
+.vreme-zi { font-size: 11px; color: var(--text-secondary); }
+.vreme svg { width: 26px; height: 26px; margin: 1px 0; fill: none; stroke: var(--text-secondary); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.vreme .sol { stroke: var(--accent-yellow); }
+.vreme .nor { stroke: var(--text-secondary); fill: var(--bg-secondary); }
+.vreme .apa, .vreme .zapada { stroke: var(--accent-blue); }
+.vreme .tare { stroke-width: 2.2; }
+.vreme .zapada { stroke-width: 2.6; }
+.vreme .fulger { stroke: var(--accent-yellow); }
+.vreme-t b { color: var(--text-primary); font-weight: 600; }
+.vreme-t i { font-style: normal; color: var(--text-secondary); margin-left: 4px; }
+.vreme-sursa { font-size: 10px; color: var(--text-secondary); white-space: nowrap; text-decoration: none; }
+.vreme-sursa:hover { text-decoration: underline; }
+@media (max-width: 700px) { .vreme { justify-content: flex-start; } .vreme-titlu, .vreme-sursa { display: none; } }
