@@ -49,3 +49,4 @@ Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia
 - [Descoperă Dobrogea](https://discoverdobrogea.ro/): locuri, trasee și povești din Dobrogea
 - [Turistul Liber](https://www.turistulliber.ro/): blog de călătorii prin România
 - [Epic Vista Experience](https://epicvistaexperience.com/): experiențe și călătorii
+- [Act for Tomorrow: pădure urbană Constanța](https://greencommunity.ro/act-for-tomorrow-padure-urbana-constanta/): proiectul de pădure urbană din Constanța
