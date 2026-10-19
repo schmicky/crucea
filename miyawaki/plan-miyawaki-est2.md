@@ -112,6 +112,10 @@ Fără manoperă și fără apă.
 
 Plantarea se face cu o **ramă de 2 × 2 m** mutată pe teren, nu după puncte individuale. În ramă sunt 12 poziții fixe (4 rânduri de câte 3, de la nord: 1–3, 4–6, 7–9, 10–12, de la vest spre est, la 0,5 m de margini și între ele); latura de nord a ramei e vopsită roșu și stă mereu spre gardul de nord. Cele două poziții de arbori mari (3 și 7) formează pe tot terenul o rețea cu 1,41 m între arbori.
 
+![Rama de 2 × 2 m și lada cu 12 pahare numerotate](rama-si-lada.svg)
+
+*Desenul ramei (șablonului) și al lăzii cu 12 pahare: [SVG](rama-si-lada.svg) · [PNG](rama-si-lada.png). Pozițiile, numerotarea, cuiele și sforile, mutarea ramei, lada ținută cu „N” spre nord, paharul cu mocirlă și cei 5 pași ai unui pătrat.*
+
 Caroiajul pornește de la **2 m de gardul de est și 2 m de gardul de nord**, ca arborii din pătrate să fie legal față de hotar (Cod civil, art. 613); coloanele A, B, C… merg spre vest, rândurile 1, 2, 3… spre sud. 68 de pătrate: 25 de interior (rețetele I1–I6, în șah), 17 pe banda de sud (S1–S2, cu pini în locul arborilor mari), 26 cu rețeta de arbuști M (tăiate serios de alee sau de luminiș, sau în inelul luminișului).
 
 **Regula de sărit, singura:** Se plantează doar cuiele care cad în pădure: cuiul care cade pe alee, în luminiș sau dincolo de linia de var se sare, fără înlocuire.
