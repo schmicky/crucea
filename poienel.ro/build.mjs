@@ -188,6 +188,8 @@ ${L.recomandate.map((l) => `<li>${extern(l.href, l.text)}${l.desc ? ` — ${esc(
 </footer>`;
 };
 
+// Autorul datelor și al jurnalului: Google cere pentru creator/author un Person sau Organization, nu un Place
+const ORG = { '@type': 'Organization', '@id': SITE + '#org', name: 'Poienel', url: SITE, logo: SITE + 'resurse/poienel-logo.png', sameAs: ['https://github.com/schmicky/crucea'] };
 const WEBSITE = (lang) => ({ '@type': 'WebSite', '@id': SITE + '#website', url: SITE, name: 'Poienel', inLanguage: LANGS, description: ETICHETE[lang].siteDesc });
 const LOC = (lang) => ({
   '@type': 'Place', '@id': SITE + '#loc', name: 'Poienel', url: SITE, image: SITE + 'resurse/poienel-logo.png', description: ETICHETE[lang].siteDesc,
@@ -262,7 +264,7 @@ for (const lang of LANGS) {
     WEBSITE(lang), LOC(lang), webPage(lang, 'index.html', L.paginaSpecii, idSpecii),
     {
       '@type': 'Dataset', '@id': SITE + '#dataset', name: L.datasetNume, inLanguage: LANGS, url: urlPagina(lang, 'index.html'),
-      description: L.datasetDesc(specii.length), license: 'https://creativecommons.org/licenses/by/4.0/', creator: { '@id': SITE + '#loc' },
+      description: L.datasetDesc(specii.length), license: 'https://creativecommons.org/licenses/by/4.0/', creator: ORG, publisher: ORG,
       distribution: [
         { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: SITE + 'specii.json' },
         { '@type': 'DataDownload', encodingFormat: 'text/csv', contentUrl: SITE + 'specii-ro.csv', inLanguage: 'ro' },
@@ -348,7 +350,7 @@ ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l
       '@type': 'Blog', '@id': idBlog, name: L.jurnalNume, inLanguage: lang, url: urlPagina(lang, 'jurnal.html'),
       blogPost: jurnal.map((j) => { const v = jt(j); return {
         '@type': 'BlogPosting', '@id': urlPagina(lang, 'jurnal.html') + '#' + idJurnal(j), url: urlPagina(lang, 'jurnal.html') + '#' + idJurnal(j), headline: v.titlu, datePublished: j.data, inLanguage: lang,
-        articleBody: v.text.join('\n\n'), keywords: j.taguri.map((t) => L.taguri[t]), author: { '@type': 'Organization', name: 'Poienel' },
+        articleBody: v.text.join('\n\n'), keywords: j.taguri.map((t) => L.taguri[t]), author: ORG, publisher: ORG,
         image: (j.foto || []).map((f) => ({ '@type': 'ImageObject', contentUrl: SITE + f.src, thumbnailUrl: SITE + thumbDe(f.src), caption: txt(f.alt, lang, `jurnal ${j.data} foto.alt`) })),
       }; }),
     },
