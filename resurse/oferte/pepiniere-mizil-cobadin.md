@@ -54,7 +54,7 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 
 | Specie (cod) | Sursă | Preț / mărime | Observații |
 |---|---|---|---|
-| Corn, Cm (49 + rezervă 5) | **Pepiniera Silvică Agigea**, 0748143025 | de întrebat | prima întrebare: cornul e specie de perdea în Dobrogea |
+| Corn, Cm (49 + rezervă 5) | ~~Pepiniera Silvică Agigea~~ | **nu au** (telefon, 21 octombrie 2026) | Agigea are porumbar, scumpie, măceș, jugastru, stejar brumăriu, cer, corcoduș, vișin turcesc, păducel, sălcioară; nu are corn, alun, salbă, călin, dârmox, sorb, pin negru, soc, arbore de mazăre, păr sălbatic, arțar tătăresc, sâmbovină |
 | | Szabó Zsolt, Tomești, Harghita, 0746118273 (anunț primaimpadurire.ro) | 1,40 lei, 15–50 cm, 35 000 buc | anunț vechi de 2 ani; are și sânger; merge doar dacă trimite prin curier |
 | | ICAS, Pepiniera Ștefănești (Argeș), icas.ro, 021 350 3240 | listă de prețuri ianuarie 2025 | puieți ornamentali de pepinieră silvică, rădăcină nudă la foioasele mici |
 | | Mizil, 18,90 lei | 54 buc ≈ 1 020 lei | ultima variantă, doar pentru corn |
@@ -67,7 +67,7 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 | Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
 | Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |
 
-Ordinea apelurilor: Agigea (corn, dârmox, călin, salbă, porumbar), apoi Salcea pentru ce lipsește la Agigea (salbă moale, călin, dârmox, eventual sorb), apoi Harghita pentru corn dacă Agigea nu are. Mizil rămâne doar dacă nu se găsește corn nicăieri.
+Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); urmează Salcea (salbă moale, călin, dârmox, sorb, plus soc, păr sălbatic, arțar tătăresc, pin negru), apoi Harghita pentru corn. Mizil rămâne doar dacă nu se găsește corn nicăieri.
 
 ## Pepiniera Avramescu (pepinieraavramescu.ro / pepinieracomana.ro) — notat la 11 octombrie 2026
 
