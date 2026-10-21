@@ -12,7 +12,7 @@ Puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm. Livrare după c�
 | Cod | Specie | Nume latin | În plan | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
 | A52 | Ulm de Turkestan | *Ulmus pumila* | 24 | 27 | 1.00 | perdeaua de nord, rândul 1 |
-| A21 | Sălcioară | *Elaeagnus angustifolia* | 45 | 50 | 1.00 | perdelele N, E, S |
+| A21 | Sălcioară | *Elaeagnus angustifolia* | 45 | 50 | 1.00 | perdelele N, E, S; are și Pepiniera Silvică Agigea (confirmat telefonic, 21 octombrie 2026), la 70 km |
 | A24 | Frasin comun | *Fraxinus excelsior* | 17 | 19 | 1.00 | latura de est |
 | A5 | Paltin de câmp | *Acer platanoides* | 2 | 3 | 1.00 |  |
 | S5 | Păducel | *Crataegus monogyna* | 7 | 8 | 1.00 | perdele |
