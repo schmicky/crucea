@@ -58,16 +58,16 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 | | Szabó Zsolt, Tomești, Harghita, 0746118273 (anunț primaimpadurire.ro) | 1,40 lei, 15–50 cm, 35 000 buc | anunț vechi de 2 ani; are și sânger; merge doar dacă trimite prin curier |
 | | ICAS, Pepiniera Ștefănești (Argeș), icas.ro, 021 350 3240 | listă de prețuri ianuarie 2025 | puieți ornamentali de pepinieră silvică, rădăcină nudă la foioasele mici |
 | | Mizil, 18,90 lei | 54 buc ≈ 1 020 lei | ultima variantă, doar pentru corn |
-| Salbă moale, Ev (27 + 3) | **Pepiniera Silvică Salcea**, Romsilva Suceava, 0753156196 / 0751164370 | în lista de puieți ornamentali | aceeași comandă cu călinul și dârmoxul; livrare de verificat |
+| Salbă moale, Ev (27 + 3) | ~~Pepiniera Silvică Salcea~~ | **nu au** (telefon, 21 octombrie 2026) | Salcea are doar arțar tătăresc dintre speciile căutate (plus pin silvestru, stejar, larice, plop, salcie, salcâm) |
 | | gardviuhibrid.ro | 12,90 lei, peste 50 cm | ca Mizil, fără avantaj |
 | | Pepiniera Roșie (Teleorman) | 25 lei rădăcină nudă | stoc epuizat în octombrie |
-| Călin, Rh (16 + 2) | **Pepiniera Silvică Salcea** | în listă: *Viburnum opulus* și *Viburnum lantana* (dârmox) | **o singură comandă acoperă călin + dârmox (44) + salbă moale** |
+| Călin, Rh (16 + 2) | ~~Pepiniera Silvică Salcea~~ | **nu au** călin, nici dârmox (telefon, 21 octombrie 2026) | rămân planteieftine.ro pentru călin și ICAS / Foresta / Doi Cocoși de întrebat pentru dârmox |
 | | planteieftine.ro | 7,77 lei, 40–60 cm, rădăcină liberă | listat ca „bulgăre de zăpadă” — poate fi soiul steril Roseum, fără fructe pentru păsări; de întrebat |
 | | Pepinierele Roman (Neamț) | 40 lei, 212 buc, comenzi 20 oct–30 nov | scump |
 | Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
 | Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |
 
-Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); urmează Salcea (salbă moale, călin, dârmox, sorb, plus soc, păr sălbatic, arțar tătăresc, pin negru), apoi Harghita pentru corn. Mizil rămâne doar dacă nu se găsește corn nicăieri.
+Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); ~~Salcea~~ sunat la 21 octombrie (are doar arțar tătăresc); urmează Stejarul Galați (alun), Harghita (corn), Voivodeni (pin negru), ICAS (dârmox, corn), online pentru rest. Mizil rămâne doar dacă nu se găsește corn nicăieri.
 
 ## Pepiniera Avramescu (pepinieraavramescu.ro / pepinieracomana.ro) — notat la 11 octombrie 2026
 
