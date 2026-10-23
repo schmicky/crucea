@@ -7,9 +7,10 @@ META = dict(
     titlu='Studiu de caz — vegetația de la Peschiera del Garda',
     eyebrow='Studiu de caz · 23 octombrie 2026 · Peschiera del Garda, Italia',
     h1='Vegetația de la Peschiera del Garda',
-    lead=['''Inventar botanic făcut din 12 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
-  bastioanele cetății, promenada de pe lac, străzile din jurul portului și jardinierele din fața restaurantelor și a băncii.
-  <b>17 taxoni</b>, mulți mediteraneeni sau de climă blândă: chiparos de Italia, pin umbrelă, stejar verde, măslin, leandru,
+    lead=['''Inventar botanic făcut din 15 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
+  bastioanele cetății din Peschiera, promenada de pe lac, străzile din jurul portului, jardinierele din fața restaurantelor
+  și a băncii, plus trei poze din Sirmione, peninsula vecină de pe același lac. <b>20 de taxoni</b>, mulți mediteraneeni sau
+  de climă blândă: chiparos de Italia, pin umbrelă, stejar verde, măslin, portocal, bougainvillea, leandru, iasomie stelată,
   palmier, dafin, rozmarin, loropetalum, hortensie, abelia, dar și ienupăr târâtor, iederă și dracilă, care merg oriunde. Lacul ține iarna la câteva grade sub zero (zona 8b–9a),
   Crucea coboară din când în când la −20 °C (zona 7a).''',
           '''De aceea studiul răspunde la o întrebare pe care ți-o pui în fiecare vacanță: ce din peisajul italian trece
@@ -20,10 +21,10 @@ META = dict(
     concluzii=['''<b>Lacul face clima, nu latitudinea.</b> Peschiera e mai la nord decât Crucea, dar Garda ține iarna la
       −3…−5 °C; Dobrogea are în iernile grele −18…−22 °C. Diferența de 15 °C la minimul absolut e singurul lucru care
       contează pentru lista de mai jos: nu vara, pe care Crucea o face la fel de bine.''',
-               '''<b>Șase specii trec, șapte nu, patru sunt la limită.</b> Trec: cedrul de Himalaya, arborele lui Iuda, teiul,
-      ienupărul târâtor, iedera și dracila aurie. Nu trec: pinul umbrelă, palmierul de Chusan, dafinul, loropetalum, leandrul
-      și măslinul — îngheață la −8…−15 °C, adică o dată la 5–10 ani la Crucea — și hortensia, care nu îngheață, dar moare de
-      sete. La limită: chiparosul de Italia (soiuri rezistente, loc adăpostit), stejarul verde (experiment cu 1–2 exemplare),
+               '''<b>Șase specii trec, zece nu, patru sunt la limită.</b> Trec: cedrul de Himalaya, arborele lui Iuda, teiul,
+      ienupărul târâtor, iedera și dracila aurie. Nu trec: portocalul și bougainvillea (−3…−5 °C, mor în orice iarnă), pinul
+      umbrelă, palmierul de Chusan, dafinul, loropetalum, leandrul, măslinul și iasomia stelată — îngheață la −8…−15 °C,
+      adică o dată la 5–10 ani la Crucea — și hortensia, care nu îngheață, dar moare de sete. La limită: chiparosul de Italia (soiuri rezistente, loc adăpostit), stejarul verde (experiment cu 1–2 exemplare),
       rozmarinul (soiuri rezistente, la zidul de sud al casei) și abelia (lângă casă, cu arsuri în iernile grele).''',
                '''<b>Silueta mediteraneană se obține cu specii de stepă.</b> Pinul negru din schemă face la 40 de ani aceeași
       coroană plată ca pinul umbrelă; ienupărul de Virginia (în stoc la Agigea) dă coloana chiparosului; stejarul pufos
@@ -45,15 +46,16 @@ META = dict(
                '''<b>Nicio specie din poze nu e în planurile Crucea, dar șase ar merita:</b> cedrul de Himalaya ca arbore
       solitar pe pajiștea de sud (propus deja după Tăbăcărie), arborele lui Iuda ca arbore mic de secetă lângă casă,
       stejarul verde ca experiment de la Agigea, rozmarinul ca bordură aromatică la zidul de sud, ienupărul târâtor pe
-      taluzuri și iedera pe gardul de plasă. Pinul umbrelă, măslinul, leandrul, palmierul și hortensia rămân în Italia.'''],
-    nr_poze=12,
+      taluzuri și iedera pe gardul de plasă. Pinul umbrelă, măslinul, portocalul, bougainvillea, leandrul, palmierul și hortensia rămân în Italia; cățărătoarele
+      înflorite de pe zidurile din Sirmione se fac la Crucea cu trompeta (Campsis), glicina și caprifoiul.'''],
+    nr_poze=15,
     footer='''Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele o permit
   și la nivel de gen sau grup acolo unde nu — cele nesigure sunt marcate ca atare în fișă. Înălțimile și dozele de
   udare sunt estimări pentru material de pepinieră obișnuit în clima Dobrogei, nu măsurători pe exemplarele din poze;
   rezistențele la ger sunt cele din literatura horticolă pentru exemplare mature, plantele tinere sunt mai sensibile.
   Fotografiile sunt proprii, făcute la Peschiera del Garda (Veneto, Italia) pe 23 octombrie 2026, în parcul de pe
-  bastioane, pe promenada lacului, pe străzile din jurul portului și la jardinierele din fața restaurantelor și a băncii;
-  numerotarea p1–p12 urmează ordinea în care au fost trimise. Studiile pereche:
+  bastioane, pe promenada lacului, pe străzile din jurul portului, la jardinierele din fața restaurantelor și a băncii, iar p13–p15 în Sirmione,
+  pe aceeași latură a lacului; numerotarea p1–p15 urmează ordinea în care au fost trimise. Studiile pereche:
   <a href="../studiu-caz-kaufland/">banda plantată de la Kaufland</a> și <a href="../studiu-caz-tabacarie/">Parcul Tăbăcărie</a>.<br>
   Parte din proiectul de amenajare Poienel, Crucea — <a href="../">înapoi la proiect</a>.''',
     cache='peschiera-wiki')
@@ -133,7 +135,7 @@ TAXONI = [
       problema="Cloroză de fier pe frunzele de jos: galbene cu nervuri roșii, apoi uscate. Plantă de sol acid într-o jardinieră cu substrat calcaros și apă dură; și udată, și îngrășată, tot se îngălbenește.",
       crucea="Îngheață la −10…−12 °C și cere sol acid: în loessul calcaros din Crucea ar arăta ca jumătatea de jos a tufei din poză din primul an, apoi ar muri în prima iarnă grea. Frunza purpurie o dai cu corcodușul roșu (deja în plan) sau cu dracila purpurie (Berberis thunbergii „Atropurpurea”), care rezistă la −30 °C."),
  dict(id='hydrangea', lum='umbra', lumd="Semiumbră obligatorie; în soare de stepă se ofilește zilnic de la prânz.",
-      lat='Hydrangea macrophylla', ro='Hortensie', tip='arbust', en='Hydrangea macrophylla', row='Hortensie', poze=['p10', 'p04'],
+      lat='Hydrangea macrophylla', ro='Hortensie', tip='arbust', en='Hydrangea macrophylla', row='Hortensie', poze=['p10', 'p04', 'p13'],
       nota="Gardul viu de 1,5 m din fața băncii, în poza 10: tufe late, frunze mari, ovale, dințate, verde-închis, și zeci de inflorescențe sferice trecute, roz-brune, lăsate pe tufă ca decor de toamnă. În poza 4, aceleași tufe în fundal, deasupra loropetalumului. Pe partea umbrită a clădirilor și udate — altfel nu ar fi avut frunza întreagă în octombrie.",
       h2='0,6–0,8 m', h5='1,0–1,5 m', hm='1,5–2 m', apa=dict(l=15, f=3),
       luni=luni((R, 3), (V, 3), (I, 3), (V, 1), (R, 2)), verdict='evita',
@@ -173,6 +175,22 @@ TAXONI = [
       h2='0,4–0,5 m', h5='0,8–1,0 m', hm='1,0–1,5 m', apa=dict(l=5, f=1),
       luni=luni((R, 3), (V, 1), (I, 1), (V, 4), (F, 2), (R, 1)), verdict='retine',
       crucea="Rezistă la −30 °C, la secetă și la sol calcaros, fără boli, spinoasă (păsările cuibăresc în ea). Forma aurie dă pata de culoare deschisă, forma purpurie („Atropurpurea”) înlocuiește loropetalum. La Crucea: bordură lângă casă și la parcare, 3 plante la metru, sau tufe izolate pe pajiște; nu în pădure, unde e deja dracila sălbatică."),
+ dict(id='citrus', lum='soare', lat='Citrus', cv='probabil × aurantium sau sinensis', ro='Portocal', tip='arbore', en='Citrus × sinensis', row='Portocal', poze=['p13'], incert=True,
+      nota="Arborele de 5–6 m cu coroană rotundă, deasă, din curtea din Sirmione (poza 13): frunze pieloase, lanceolate, verde-închis lucios, cu pețiol aripat, fructe rotunde, încă verzi și câteva portocalii, de 6–8 cm, în coroană. Trunchi drept, curățat până la 2 m. Dulce sau amar nu se vede din poză; portocalul amar e cel obișnuit pe străzile din nordul Italiei. La bază, hortensii și un gard de iasomie stelată.",
+      h2='1,0–1,5 m', h5='2,0–2,5 m', hm='4–6 m', apa=dict(l=15, f=2),
+      luni=luni((F, 2), (P, 2), (I, 1), (P, 5), (F, 2)), verdict='evita',
+      crucea="Îngheață la −5…−7 °C, deci la Crucea moare în prima iarnă, nu într-una grea. Dacă vrei fructul: un portocal amar sau un kumquat în hârdău, afară din mai în octombrie, iarna în magazie sau în casă, cum se ține și la Constanța. În grădină, în locul lui, gutuiul: coroană rotundă, frunză mare, fruct galben în octombrie, −25 °C."),
+ dict(id='trachelospermum', lum='mixt', lumd="Înflorește mai bogat în soare, dar suportă și semiumbra zidurilor.",
+      lat='Trachelospermum jasminoides', ro='Iasomie stelată', tip='arbust', en='Trachelospermum jasminoides', poze=['p14', 'p13'],
+      nota="Cele două arcade de 3 m de la intrarea în curte (poza 14): cățărătoare cu frunze mici, ovale, pieloase, verde-închis lucios, tunse pe schelet metalic până arată ca un gard viu în formă de boltă; câteva vârfuri de lăstari ies din tunsoare. Sub arcade, un portocal pe tulpină în jardinieră rotundă. În poza 13, aceeași plantă ca gard viu, în dreapta.",
+      h2='1,0–1,5 m pe suport', h5='3–4 m', hm='5–8 m pe suport', apa=dict(l=10, f=1),
+      luni=luni((P, 5), (I, 2), (P, 5)), verdict='evita',
+      crucea="Rezistă la −12…−15 °C la adăpostul unui zid; la Crucea, în câmp deschis, ar pierde frunza în fiecare iarnă și ar muri la prima de −18 °C. Arcada parfumată de la intrare se face cu caprifoi (Lonicera periclymenum sau L. japonica „Halliana”), care rezistă la −25 °C, înflorește din mai până în septembrie și miroase seara la fel de tare; pe gard, iedera din poza 7."),
+ dict(id='bougainvillea', lum='soare', lat='Bougainvillea', ro='Bougainvillea', tip='arbust', en='Bougainvillea', poze=['p15'],
+      nota="Casa de piatră din Sirmione (poza 15), acoperită de la etaj până la acoperiș de o singură plantă, cu bractee purpurii la vârf și bractee uscate, bej, pe restul tufei — a înflorit tot anul și la 23 octombrie mai are vârfurile colorate. Trunchiul gros, de 15–20 cm, iese dintr-o alveolă de un metru la colțul casei, lângă un măslin în jardinieră; exemplar de 30–40 de ani, celebru în oraș.",
+      h2='1,5–2,0 m pe suport', h5='4–5 m', hm='8–12 m pe suport', apa=dict(l=10, f=1),
+      luni=luni((P, 4), (I, 6), (P, 2)), verdict='evita',
+      crucea="Îngheață la −3…−5 °C: plantă de ghiveci la Constanța, moartă la Crucea în noiembrie. Zidul colorat de pe casă se face în Dobrogea cu trompeta (Campsis radicans, flori portocalii din iulie în septembrie, −25 °C, cere zid solid) sau cu glicina pentru mai; purpuriul din poză îl dă o clematită (Clematis „Jackmanii”) pe spalier, cu rădăcina la umbră."),
 ]
 
 PROBLEME = [
