@@ -7,9 +7,9 @@ META = dict(
     titlu='Studiu de caz — vegetația de la Peschiera del Garda',
     eyebrow='Studiu de caz · 23 octombrie 2026 · Peschiera del Garda, Italia',
     h1='Vegetația de la Peschiera del Garda',
-    lead=['''Inventar botanic făcut din 3 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
-  bastioanele cetății și promenada de pe lac. <b>8 taxoni</b>, aproape toți mediteraneeni sau de climă blândă: chiparos
-  de Italia, pin umbrelă, stejar verde, cedru, palmier, dafin. Lacul ține iarna la câteva grade sub zero (zona 8b–9a),
+    lead=['''Inventar botanic făcut din 5 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
+  bastioanele cetății, promenada de pe lac și jardinierele unui restaurant. <b>11 taxoni</b>, aproape toți mediteraneeni
+  sau de climă blândă: chiparos de Italia, pin umbrelă, stejar verde, cedru, palmier, dafin, rozmarin, loropetalum, hortensie. Lacul ține iarna la câteva grade sub zero (zona 8b–9a),
   Crucea coboară din când în când la −20 °C (zona 7a).''',
           '''De aceea studiul răspunde la o întrebare pe care ți-o pui în fiecare vacanță: ce din peisajul italian trece
   de iernile Dobrogei și ce nu. Pentru fiecare specie fișa spune ce s-a văzut, cât rezistă la ger, dacă merită un loc la
@@ -19,28 +19,34 @@ META = dict(
     concluzii=['''<b>Lacul face clima, nu latitudinea.</b> Peschiera e mai la nord decât Crucea, dar Garda ține iarna la
       −3…−5 °C; Dobrogea are în iernile grele −18…−22 °C. Diferența de 15 °C la minimul absolut e singurul lucru care
       contează pentru lista de mai jos: nu vara, pe care Crucea o face la fel de bine.''',
-               '''<b>Trei specii trec, trei nu, două sunt la limită.</b> Trec: cedrul de Himalaya, arborele lui Iuda și teiul.
-      Nu trec: pinul umbrelă, palmierul de Chusan și dafinul — îngheață la −12…−15 °C, adică o dată la 5–10 ani la Crucea.
-      La limită: chiparosul de Italia (soiuri rezistente, loc adăpostit) și stejarul verde (experiment cu 1–2 exemplare).''',
+               '''<b>Trei specii trec, cinci nu, trei sunt la limită.</b> Trec: cedrul de Himalaya, arborele lui Iuda și teiul.
+      Nu trec: pinul umbrelă, palmierul de Chusan, dafinul și loropetalum — îngheață la −10…−15 °C, adică o dată la 5–10 ani
+      la Crucea — și hortensia, care nu îngheață, dar moare de sete. La limită: chiparosul de Italia (soiuri rezistente, loc
+      adăpostit), stejarul verde (experiment cu 1–2 exemplare) și rozmarinul (soiuri rezistente, la zidul de sud al casei).''',
                '''<b>Silueta mediteraneană se obține cu specii de stepă.</b> Pinul negru din schemă face la 40 de ani aceeași
       coroană plată ca pinul umbrelă; ienupărul de Virginia (în stoc la Agigea) dă coloana chiparosului; stejarul pufos
       ține frunza brună toată iarna și dă același verde-închis ca stejarul verde din aprilie până în noiembrie.''',
                '''<b>Agigea are stejar verde în pepinieră</b> (confirmat la 21 octombrie). Asta face experimentul ieftin: două
       exemplare în colțul cel mai adăpostit, lângă casă, cu mulci gros, și vezi în 5 ierni dacă rămân. Nu în perdea și nu
       în pădure, unde o iarnă grea ar lăsa goluri.''',
+               '''<b>Solul calcaros se vede și în Italia.</b> Loropetalum din jardinieră, plantă de sol acid, are frunzele
+      îngălbenite cu nervurile roșii — cloroză de fier pe substrat calcaros, într-o jardinieră udată. Loessul din Crucea e
+      la fel de calcaros: plantele acidofile (loropetalum, hortensie, rododendron, afin) nu intră în plan, oricât ar fi de
+      frumoase în ghivecele din Italia.''',
                '''<b>Greșelile sunt aceleași ca la Constanța.</b> Chiparoși elagați până la 10 m ca să se vadă vila, pini de
-      20 m în alveole de un metru pătrat, sol gol și bătătorit sub stejarii verzi. Clima e alta, deciziile proaste sunt
-      la fel; la tine se evită toate trei de la plantare.''',
-               '''<b>Nicio specie din poze nu e în planurile Crucea, dar trei ar merita:</b> cedrul de Himalaya ca arbore
-      solitar pe pajiștea de sud (propus deja după Tăbăcărie), arborele lui Iuda ca arbore mic de secetă lângă casă și
-      stejarul verde ca experiment de la Agigea. Pinul umbrelă rămâne în Italia.'''],
-    nr_poze=3,
+      20 m în alveole de un metru pătrat, sol gol și bătătorit sub stejarii verzi, jardinieră cu plante de sol acid pe
+      calcar. Clima e alta, deciziile proaste sunt la fel; la tine se evită toate de la plantare.''',
+               '''<b>Nicio specie din poze nu e în planurile Crucea, dar patru ar merita:</b> cedrul de Himalaya ca arbore
+      solitar pe pajiștea de sud (propus deja după Tăbăcărie), arborele lui Iuda ca arbore mic de secetă lângă casă,
+      stejarul verde ca experiment de la Agigea și rozmarinul ca bordură aromatică la zidul de sud. Pinul umbrelă,
+      palmierul și hortensia rămân în Italia.'''],
+    nr_poze=5,
     footer='''Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele o permit
   și la nivel de gen sau grup acolo unde nu — cele nesigure sunt marcate ca atare în fișă. Înălțimile și dozele de
   udare sunt estimări pentru material de pepinieră obișnuit în clima Dobrogei, nu măsurători pe exemplarele din poze;
   rezistențele la ger sunt cele din literatura horticolă pentru exemplare mature, plantele tinere sunt mai sensibile.
   Fotografiile sunt proprii, făcute la Peschiera del Garda (Veneto, Italia) pe 23 octombrie 2026, în parcul de pe
-  bastioane și pe promenada lacului; numerotarea p1–p3 urmează ordinea în care au fost trimise. Studiile pereche:
+  bastioane, pe promenada lacului și la jardinierele unui restaurant; numerotarea p1–p5 urmează ordinea în care au fost trimise. Studiile pereche:
   <a href="../studiu-caz-kaufland/">banda plantată de la Kaufland</a> și <a href="../studiu-caz-tabacarie/">Parcul Tăbăcărie</a>.<br>
   Parte din proiectul de amenajare Poienel, Crucea — <a href="../">înapoi la proiect</a>.''',
     cache='peschiera-wiki')
@@ -106,6 +112,25 @@ TAXONI = [
       h2='2,5–3,0 m', h5='5,0–6,0 m', hm='20–30 m, coroană 12–15 m', apa=dict(l=25, f=2),
       luni=luni((R, 3), (V, 2), (I, 1), (V, 3), (F, 2), (R, 1)), verdict='neutru',
       crucea="Teii pucios și cu frunza mică vor apă în adâncime și cad din august în stepă; singurul care rezistă la Crucea e teiul argintiu, deja în plan (A48 / Tt), cu dosul frunzei alb-pâslos. Exemplarul de aici arată ce face un tei cu apă la picior, nu ce face în Dobrogea."),
+ dict(id='rosmarinus', lum='soare', lumd="Soare plin și sol uscat; la umbră sau în sol greu putrezește la rădăcină.",
+      lat='Salvia rosmarinus', ro='Rozmarin', tip='arbust', en='Salvia rosmarinus', row='Rozmarin', poze=['p05'],
+      nota="Bordura verde-închis din prim-planul pozei 5, în jardiniera din fața restaurantului: tufe dese, culcate, de 40–50 cm, cu frunze aciculare, verzi pe față și albicioase pe dos, mirositoare. Forma târâtoare („Prostratus”), sănătoasă, fără uscări, cu câteva buruieni (trifoi, oxalis) printre tufe.",
+      h2='0,3–0,5 m', h5='0,5–0,8 m', hm='0,5–1,5 m, lățime 1–2 m', apa=dict(l=5, f=1),
+      luni=luni((P, 2), (I, 3), (P, 4), (I, 2), (P, 1)), verdict='neutru',
+      crucea="Forma târâtoare din poză îngheață la −10 °C; soiurile verticale rezistente („Arp”, „Hill Hardy”, „Madalene Hill”) trec de −18…−20 °C pe sol uscat și drenat. La Crucea merge ca bordură aromatică la zidul de sud al casei, cu pietriș la rădăcină și fără udare după primul an, nu în câmp deschis. Înflorește din martie, când albinele n-au altceva."),
+ dict(id='loropetalum', lum='mixt', lumd="Frunza rămâne purpurie doar în soare; la umbră se face verde-bronz.",
+      lat='Loropetalum chinense', cv="var. rubrum", ro='Loropetalum', tip='arbust', en='Loropetalum chinense', poze=['p04', 'p05'],
+      nota="Arbustul cu frunze mici, ovale, purpurii-violet din jardiniera de pe zidul de piatră (poza 4) și din spatele rozmarinului (poza 5). Pe jumătatea de jos a tufei din poza 4, frunzele sunt galben-roz cu nervurile roșii și unele s-au uscat: cloroză de fier, tipică plantelor de sol acid puse pe substrat calcaros. Specie chinezească, înrudită cu hamamelisul, plantată pentru frunza colorată.",
+      h2='0,6–0,8 m', h5='1,2–1,5 m', hm='2–3 m', apa=dict(l=10, f=2),
+      luni=luni((P, 2), (I, 2), (P, 8)), verdict='evita',
+      problema="Cloroză de fier pe frunzele de jos: galbene cu nervuri roșii, apoi uscate. Plantă de sol acid într-o jardinieră cu substrat calcaros și apă dură; și udată, și îngrășată, tot se îngălbenește.",
+      crucea="Îngheață la −10…−12 °C și cere sol acid: în loessul calcaros din Crucea ar arăta ca jumătatea de jos a tufei din poză din primul an, apoi ar muri în prima iarnă grea. Frunza purpurie o dai cu corcodușul roșu (deja în plan) sau cu dracila purpurie (Berberis thunbergii „Atropurpurea”), care rezistă la −30 °C."),
+ dict(id='hydrangea', lum='umbra', lumd="Semiumbră obligatorie; în soare de stepă se ofilește zilnic de la prânz.",
+      lat='Hydrangea macrophylla', ro='Hortensie', tip='arbust', en='Hydrangea macrophylla', row='Hortensie', poze=['p04'],
+      nota="Tufele din fundalul pozei 4, deasupra loropetalumului: frunze mari, ovale, dințate, verde-închis, și inflorescențe sferice uscate, roz-brune, rămase din vară. Plantate pe partea umbrită a zidului, udate — altfel nu ar fi avut frunza întreagă în octombrie.",
+      h2='0,6–0,8 m', h5='1,0–1,5 m', hm='1,5–2 m', apa=dict(l=15, f=3),
+      luni=luni((R, 3), (V, 3), (I, 3), (V, 1), (R, 2)), verdict='evita',
+      crucea="Rezistă la ger, dar nu la sete: cere 15–20 l pe săptămână toată vara, semiumbră și sol acid pentru culoarea albastră. La Crucea, fără om și cu apă drămuită, e planta care moare prima în iulie. Dacă vrei o tufă cu flori mari lângă casă: hortensia paniculată (Hydrangea paniculata), care suportă soarele și seceta de două ori mai bine, sau liliacul."),
 ]
 
 PROBLEME = [
@@ -113,6 +138,8 @@ PROBLEME = [
       text="Cei doi chiparoși au trunchiul gol pe 8–10 m, cu ramurile tăiate de jos în sus ca să rămână vederea spre vilă. Coroana rămasă e prea mică pentru un arbore de 25 m, trunchiul stă în vânt fără sprijin și fiecare rană de tăiere e o poartă pentru cancerul de scoarță; vârful din stânga are deja uscări. La tine: coniferele columnare nu se elaghează niciodată; dacă vrei vedere printre ele, se plantează mai rar, nu se taie."),
  dict(titlu='Pini de 20 m în alveole de un metru', unde='poza 3', poza='p03',
       text="Pinii umbrelă de pe promenadă au rădăcinile sub dale și sub carosabil, în alveole de circa 1 m², și trunchiurile înclinate spre lac. Pavajul se ridică, rădăcinile se taie la fiecare reparație și arborii dezechilibrați se rup la furtună. La tine: arborii mari la cel puțin 3 m de alei, parcare și fundații, cu solul liber pe toată proiecția coroanei; alveola de un metru e bună doar pentru un arbust."),
+ dict(titlu='Plante de sol acid pe substrat calcaros', unde='poza 4', poza='p04',
+      text="Loropetalum și hortensia sunt plante de sol acid; jardiniera e pe calcar, cu apă dură din rețea. Rezultatul se vede pe jumătatea de jos a tufei: frunze galbene cu nervurile roșii, apoi uscate, oricât e udată. La tine: loessul din Crucea e calcaros (pH 7,5–8), deci nicio plantă acidofilă — loropetalum, hortensie cu flori albastre, rododendron, afin, camelie — nu intră în plan; pentru frunză purpurie, corcoduș roșu sau dracilă."),
  dict(titlu='Sol gol și bătătorit sub stejarii verzi', unde='poza 2', poza='p02',
       text="Sub șirul de stejari verzi nu crește nimic: umbră densă tot anul, frunzar pielos care se descompune greu și pietriș bătătorit de pași. Solul fără acoperire se tasează și se spală la ploaie. La tine: sub persistentele dese nu se plănuiește pajiște; se lasă frunzarul și se completează cu mulci, sau se pune un acoperitor de umbră (iederă, voscovici) de la plantare."),
 ]
