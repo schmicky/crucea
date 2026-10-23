@@ -39,7 +39,7 @@ Statisticile din antet (taxoni, arbori, arbuști, conifere, fotografii, probleme
 | `h2`, `h5`, `hm` | da (nu la spontan) | înălțimea la 2 ani, 5 ani, maturitate, ca text: `'1,0–1,5 m'`, `'20–30 m, coroană 10 m'` |
 | `apa` | da (nu la spontan) | `dict(l=litri pe udare, f=udări pe săptămână)` pentru primul an; pagina derivă anii 2 și 3 |
 | `luni` | da | 12 stări, una pe lună, din `luni((R,2),(I,1),(V,7),(R,2))`; stări: `R` repaus, `P` frunziș peren, `V` vegetație, `I` înflorire, `F` fructificare |
-| `verdict` | da | `retine` (de reținut) · `neutru` (cu rezerve) · `evita` (de evitat) |
+| `verdict` | da | `retine` (de reținut) · `neutru` (cu rezerve) · `evita` (de evitat); `retine` pune insigna verde „✓ Potrivit la Crucea" pe fotografia din grilă, eticheta din fișă și aprinde filtrul „Potrivite la Crucea" |
 | `problema` | nu | o propoziție despre ce e în neregulă cu exemplarul din poză; aprinde filtrul „Cu probleme" |
 | `crucea` | da | **concluzia pentru proiect**: merită sau nu la Crucea, unde, cu ce condiții, ce lecție dă pentru plan |
 
