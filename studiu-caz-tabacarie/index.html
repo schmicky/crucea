@@ -63,6 +63,9 @@
   .card .ph img { width: 100%; height: 100%; object-fit: cover; display: block;
                   opacity: 0; transition: opacity .3s; }
   .card .ph img.gata { opacity: 1; }
+  .card .ph .ok { position: absolute; top: 8px; left: 8px; z-index: 2; background: #1f6f3f; color: #fff; font-size: 11px;
+                  font-weight: 700; letter-spacing: .02em; padding: 4px 10px; border-radius: 999px; box-shadow: 0 1px 4px rgba(0,0,0,.55); }
+  .tag.ok     { background: #1f6f3f; color: #fff; }
   .card .body { padding: 10px 12px 12px; flex: 1; display: flex; flex-direction: column; }
   .card .ro { font-weight: 700; color: #c9d1d9; line-height: 1.3; }
   .card .lat { font-style: italic; color: #8b949e; font-size: 12px; margin-top: 1px; }
@@ -1109,6 +1112,8 @@ function chipuri() {
       et + ' <span style="opacity:.6">' + n(k) + '</span></button>').join('') +
     '<button class="chip' + (filtru === 'plan' ? ' on' : '') + '" onclick="setFiltru(\'plan\')">' +
     'Și în planul Crucea <span style="opacity:.6">' + TAXONI.filter(x => x.inPlan).length + '</span></button>' +
+    '<button class="chip' + (filtru === 'ok' ? ' on' : '') + '" onclick="setFiltru(\'ok\')">' +
+    '✓ Potrivite la Crucea <span style="opacity:.6">' + TAXONI.filter(x => x.verdict === 'retine').length + '</span></button>' +
     '<button class="chip' + (filtru === 'umbra' ? ' on' : '') + '" onclick="setFiltru(\'umbra\')">' +
     'Merg la umbră <span style="opacity:.6">' + TAXONI.filter(x => x.lum !== 'soare').length + '</span></button>' +
     '<button class="chip' + (filtru === 'prob' ? ' on' : '') + '" onclick="setFiltru(\'prob\')">' +
@@ -1119,6 +1124,7 @@ function setFiltru(k) { filtru = k; chipuri(); grila(); }
 function potrivit(t) {
   if (filtru === 'toate') return true;
   if (filtru === 'plan')  return !!t.inPlan;
+  if (filtru === 'ok')    return t.verdict === 'retine';
   if (filtru === 'prob')  return !!t.problema;
   if (filtru === 'umbra') return t.lum !== 'soare';
   return t.tip === filtru;
@@ -1130,7 +1136,8 @@ function grila() {
     const idx = TAXONI.indexOf(t);
     const [et, cls] = VERDICT[t.verdict];
     return '<article class="card" onclick="deschide(' + idx + ')">' +
-      '<div class="ph"><img loading="lazy" src="poze/thumb/' + t.poze[0] + '.webp" alt="' +
+      '<div class="ph">' + (t.verdict === 'retine' ? '<span class="ok" title="Specie potrivită pentru Crucea">✓ Potrivit la Crucea</span>' : '') +
+        '<img loading="lazy" src="poze/thumb/' + t.poze[0] + '.webp" alt="' +
         esc(t.ro) + '" onload="this.classList.add(\'gata\')"></div>' +
       '<div class="body">' +
         '<div class="ro">' + esc(t.ro) + '</div>' +
@@ -1161,7 +1168,7 @@ function deschide(i) {
   const t = TAXONI[i];
   document.getElementById('f-ro').textContent  = t.ro;
   document.getElementById('f-lat').innerHTML   = esc(t.lat) + (t.cv ? ' <span style="font-style:normal;color:#6e7681">' + esc(t.cv) + '</span>' : '');
-  document.getElementById('f-tags').innerHTML  = etichete(t);
+  document.getElementById('f-tags').innerHTML  = (t.verdict === 'retine' ? '<span class="tag ok">✓ potrivit la Crucea</span>' : '') + etichete(t);
 
   const pz = document.getElementById('f-poze');
   pz.className = t.poze.length === 1 ? 'una' : '';
