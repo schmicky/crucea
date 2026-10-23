@@ -1,0 +1,118 @@
+# -*- coding: utf-8 -*-
+# Datele studiului de caz Peschiera del Garda (Italia), 23 octombrie 2026. Pagina se regenerează cu
+# python3 .claude/skills/studiu-caz-vegetatie/scripts/build.py studiu-caz-peschiera
+R, P, V, I, F = 'repaus', 'persistent', 'vegetatie', 'inflorire', 'fructificare'
+
+META = dict(
+    titlu='Studiu de caz — vegetația de la Peschiera del Garda',
+    eyebrow='Studiu de caz · 23 octombrie 2026 · Peschiera del Garda, Italia',
+    h1='Vegetația de la Peschiera del Garda',
+    lead=['''Inventar botanic făcut din 3 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
+  bastioanele cetății și promenada de pe lac. <b>8 taxoni</b>, aproape toți mediteraneeni sau de climă blândă: chiparos
+  de Italia, pin umbrelă, stejar verde, cedru, palmier, dafin. Lacul ține iarna la câteva grade sub zero (zona 8b–9a),
+  Crucea coboară din când în când la −20 °C (zona 7a).''',
+          '''De aceea studiul răspunde la o întrebare pe care ți-o pui în fiecare vacanță: ce din peisajul italian trece
+  de iernile Dobrogei și ce nu. Pentru fiecare specie fișa spune ce s-a văzut, cât rezistă la ger, dacă merită un loc la
+  Crucea și cu ce specie de stepă se obține aceeași siluetă fără risc. Studiile pereche: <a href="../studiu-caz-kaufland/">banda
+  de la Kaufland</a> (ce rezistă pe asfalt) și <a href="../studiu-caz-tabacarie/">Parcul Tăbăcărie</a> (cum arată după 40 de ani).'''],
+    concluzii_titlu='Ce arată Peschiera',
+    concluzii=['''<b>Lacul face clima, nu latitudinea.</b> Peschiera e mai la nord decât Crucea, dar Garda ține iarna la
+      −3…−5 °C; Dobrogea are în iernile grele −18…−22 °C. Diferența de 15 °C la minimul absolut e singurul lucru care
+      contează pentru lista de mai jos: nu vara, pe care Crucea o face la fel de bine.''',
+               '''<b>Trei specii trec, trei nu, două sunt la limită.</b> Trec: cedrul de Himalaya, arborele lui Iuda și teiul.
+      Nu trec: pinul umbrelă, palmierul de Chusan și dafinul — îngheață la −12…−15 °C, adică o dată la 5–10 ani la Crucea.
+      La limită: chiparosul de Italia (soiuri rezistente, loc adăpostit) și stejarul verde (experiment cu 1–2 exemplare).''',
+               '''<b>Silueta mediteraneană se obține cu specii de stepă.</b> Pinul negru din schemă face la 40 de ani aceeași
+      coroană plată ca pinul umbrelă; ienupărul de Virginia (în stoc la Agigea) dă coloana chiparosului; stejarul pufos
+      ține frunza brună toată iarna și dă același verde-închis ca stejarul verde din aprilie până în noiembrie.''',
+               '''<b>Agigea are stejar verde în pepinieră</b> (confirmat la 21 octombrie). Asta face experimentul ieftin: două
+      exemplare în colțul cel mai adăpostit, lângă casă, cu mulci gros, și vezi în 5 ierni dacă rămân. Nu în perdea și nu
+      în pădure, unde o iarnă grea ar lăsa goluri.''',
+               '''<b>Greșelile sunt aceleași ca la Constanța.</b> Chiparoși elagați până la 10 m ca să se vadă vila, pini de
+      20 m în alveole de un metru pătrat, sol gol și bătătorit sub stejarii verzi. Clima e alta, deciziile proaste sunt
+      la fel; la tine se evită toate trei de la plantare.''',
+               '''<b>Nicio specie din poze nu e în planurile Crucea, dar trei ar merita:</b> cedrul de Himalaya ca arbore
+      solitar pe pajiștea de sud (propus deja după Tăbăcărie), arborele lui Iuda ca arbore mic de secetă lângă casă și
+      stejarul verde ca experiment de la Agigea. Pinul umbrelă rămâne în Italia.'''],
+    nr_poze=3,
+    footer='''Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele o permit
+  și la nivel de gen sau grup acolo unde nu — cele nesigure sunt marcate ca atare în fișă. Înălțimile și dozele de
+  udare sunt estimări pentru material de pepinieră obișnuit în clima Dobrogei, nu măsurători pe exemplarele din poze;
+  rezistențele la ger sunt cele din literatura horticolă pentru exemplare mature, plantele tinere sunt mai sensibile.
+  Fotografiile sunt proprii, făcute la Peschiera del Garda (Veneto, Italia) pe 23 octombrie 2026, în parcul de pe
+  bastioane și pe promenada lacului; numerotarea p1–p3 urmează ordinea în care au fost trimise. Studiile pereche:
+  <a href="../studiu-caz-kaufland/">banda plantată de la Kaufland</a> și <a href="../studiu-caz-tabacarie/">Parcul Tăbăcărie</a>.<br>
+  Parte din proiectul de amenajare Poienel, Crucea — <a href="../">înapoi la proiect</a>.''',
+    cache='peschiera-wiki')
+
+def luni(*spec):
+    """spec: perechi (stare, nr_luni) în ordine, total 12."""
+    out = []
+    for s, n in spec:
+        out += [s] * n
+    assert len(out) == 12, out
+    return out
+
+TAXONI = [
+ dict(id='cupressus-sempervirens', lum='soare', lumd="Ramurile de jos se usucă la cea mai mică umbrire; de aceea coloana rămâne plină doar în soare din toate părțile.",
+      lat='Cupressus sempervirens', ro='Chiparos de Italia', tip='conifer', en='Cupressus sempervirens', row='Chiparos',
+      poze=['p01'],
+      nota="Cei doi arbori columnari din prim-planul pozei 1, de 20–25 m, cu trunchiul gol pe 8–10 m și coroana îngustă, verde-închis, pe jumătatea de sus. Ramurile au fost tăiate de jos în sus de-a lungul anilor ca să se vadă vila din spate; coroana rămasă e subțire, cu vârful stâng puțin rărit și brun. Solzii mărunți, lipiți de ramuri, și portul în fus sunt ale chiparosului de Italia, forma „stricta”.",
+      h2='1,5–2,0 m', h5='4,0–5,0 m', hm='20–25 m, coroană 1,5–3 m', apa=dict(l=10, f=1),
+      luni=luni((P, 2), (I, 1), (P, 6), (F, 2), (P, 1)), verdict='neutru',
+      problema="Elagat până la 8–10 m: trunchiul gol stă în vânt fără protecția ramurilor, coroana rămasă e prea mică pentru înălțime, iar vârful din stânga arată uscări — fie secetă pe un arbore dezechilibrat, fie cancerul de scoarță (Seiridium) care intră prin rănile de tăiere.",
+      crucea="La limită la Crucea: exemplarele mature rezistă la −15 °C, iar soiurile selectate („Totem”, „Stricta” de pepinieră europeană) trec de −18…−20 °C cu arsuri; în Constanța și Mangalia există exemplare de 30 de ani, dar în stepă, la vânt, tinerii se usucă pe partea bătută de crivăț. Dacă vrei silueta: 2–3 exemplare pe latura de sud a casei, adăpostite de perdea, și nu înainte ca perdeaua să aibă 3 m. Ieftin și sigur: ienupăr de Virginia în formă columnară, în stoc la Agigea."),
+ dict(id='cedrus-deodara', lum='soare', lat='Cedrus deodara', ro='Cedru de Himalaya', tip='conifer',
+      en='Cedrus deodara', row='Cedru de Himalaya', poze=['p01', 'p02'],
+      nota="Coniferul cu vârful aplecat și ramurile în etaje orizontale din mijlocul pozei 1, între chiparoși, și în colțul din dreapta-sus al pozei 2. Ace moi, verde-albăstrui, în smocuri; ramurile tinere atârnă la capete. Exemplar de 15–18 m, cu coroana plină până jos acolo unde are loc — semn că a fost plantat la distanță corectă de vecini.",
+      h2='1,5–2,0 m', h5='4,0–5,0 m', hm='20–30 m, coroană 10–12 m', apa=dict(l=15, f=1),
+      luni=luni((P, 9), (F, 2), (P, 1)), verdict='retine',
+      crucea="Aceeași concluzie ca la Tăbăcărie, unde cedrii de 25 de ani arată la fel: rezistă la −20 °C odată prins, suportă vara dobrogeană și e singurul conifer mare care rămâne frumos fără udare. Un exemplar solitar pe pajiștea de sud, cu 12 m liberi de jur împrejur; se protejează de vânt în primele 3 ierni."),
+ dict(id='pinus-pinea', lum='soare', lumd="Coroana în umbrelă se formează doar cu soare din toate părțile; în aliniament des, ca aici, trunchiurile se lungesc și coroanele se contopesc.",
+      lat='Pinus pinea', ro='Pin umbrelă, pin de piatră', tip='conifer', en='Pinus pinea', row='Pin de piatră',
+      poze=['p03', 'p01'],
+      nota="Aliniamentul de pe promenada lacului din poza 3: zeci de arbori de 15–20 m, trunchi gol pe 6–8 m, scoarță roșcată în plăci, coroană plată, în umbrelă, cu conuri mari rotunde. Trunchiurile sunt înclinate spre lac, spre lumină și contra vântului de pe uscat; alveolele din pavaj au cam un metru pătrat. În poza 1, un exemplar în stânga, deasupra stejarilor verzi.",
+      h2='0,8–1,2 m', h5='2,5–3,5 m', hm='15–25 m, coroană 12–15 m', apa=dict(l=10, f=1),
+      luni=luni((P, 4), (I, 1), (P, 7)), verdict='evita',
+      problema="Arbori de 20 m în alveole de 1 m², cu rădăcinile sub pavaj și carosabil; trunchiurile înclinate spre lac pun toată greutatea coroanei pe o parte. Un aliniament care arată superb și costă primăria pavajul ridicat în fiecare an.",
+      crucea="Simbolul peisajului italian și tocmai de aceea tentant, dar îngheață la −12…−15 °C: iernile din 2012 și 2017 au omorât exemplarele plantate pe litoralul românesc, iar la Crucea, în interior, e și mai frig. Pinul negru din schema pădurii face la 40–50 de ani aceeași coroană plată și roșcată, pe un arbore care a trecut prin toate iernile Dobrogei."),
+ dict(id='quercus-ilex', lum='soare', lumd="Tânăr suportă semiumbra; matur vrea soare, altfel coroana se răsfiră.",
+      lat='Quercus ilex', ro='Stejar verde', tip='arbore', en='Quercus ilex', row='Stejar verde', poze=['p02', 'p01'],
+      nota="Șirul de patru arbori de 10–12 m de lângă zidul de piatră din poza 2 și masa verde-închis din mijlocul pozei 1. Frunze mici, lanceolate, pieloase, verde-închis lucios pe față și cenușii-pâsloase pe dos, cu marginea întreagă sau ușor dințată la lăstarii tineri; scoarță neagră, crăpată mărunt. Coroana e densă și verde în octombrie, când teiul de alături a început să cadă. Sub ei nu crește nimic.",
+      h2='1,0–1,5 m', h5='2,5–3,5 m', hm='15–20 m, coroană 10–15 m', apa=dict(l=15, f=1),
+      luni=luni((P, 3), (V, 1), (I, 1), (P, 5), (F, 2)), verdict='neutru',
+      crucea="Rezistă la −15 °C, pierde frunza la −18…−20 °C și se reface din lemn; în Constanța există exemplare mature, în Crucea nu știm. Pepiniera Agigea are puieți (confirmat la 21 octombrie), deci experimentul costă câțiva lei: 2 exemplare în colțul cel mai adăpostit de lângă casă, pe sud, cu mulci gros, și se judecă după 5 ierni. Nu în perdea și nu în pădure, unde o iarnă grea ar lăsa goluri; acolo stejarul pufos, care ține frunza brună toată iarna, e varianta sigură."),
+ dict(id='trachycarpus', lum='mixt', lat='Trachycarpus fortunei', ro='Palmier de Chusan', tip='arbore',
+      en='Trachycarpus fortunei', row='Trachycarpus fortunei', poze=['p02', 'p03'],
+      nota="Palmierul cu frunze în evantai din fundalul pozei 2, în dreapta, lângă zid, și cel din stânga pozei 3, în spatele mașinilor. Trunchi subțire, îmbrăcat în fibre brune; frunze palmate rigide. Exemplare de 4–5 m, sănătoase, plantate ca accent exotic.",
+      h2='0,6–0,8 m', h5='1,5–2,0 m', hm='8–12 m', apa=dict(l=15, f=1),
+      luni=luni((P, 5), (I, 1), (P, 4), (F, 1), (P, 1)), verdict='evita',
+      crucea="Cel mai rezistent palmier (−15 °C scurt, cu frunzele arse), dar în stepă e un obiect străin: nu dă umbră, nu hrănește nicio pasăre sau insectă de aici, trebuie învelit iarna și arată rupt după fiecare crivăț. Nu are ce căuta în proiect."),
+ dict(id='laurus', lum='mixt', lumd="Se mulțumește cu semiumbra de sub arbori; în soare plin, pe secetă, frunza se arde.",
+      lat='Laurus nobilis', ro='Dafin', tip='arbust', en='Laurus nobilis', row='Dafin', poze=['p01'], incert=True,
+      nota="Tufa de 3–4 m din colțul din dreapta-jos al pozei 1, cu frunze lanceolate, pieloase, verde-deschis lucios, dese până la sol. Portul în tufă cu mai multe tulpini și frunza îngustă trimit la dafin; de la distanță poate fi și laur englezesc, care are frunza mai lată și mai închisă.",
+      h2='0,8–1,2 m', h5='2,0–3,0 m', hm='5–10 m', apa=dict(l=10, f=2),
+      luni=luni((P, 3), (I, 1), (P, 6), (F, 2)), verdict='evita',
+      crucea="Îngheață la −10…−12 °C până la sol și pornește din nou din rădăcină, deci la Crucea ar fi un arbust de un metru refăcut la fiecare 3–4 ani, nu un arbore. Dacă vrei frunza de dafin la bucătărie, un exemplar în ghiveci mare, iernat în magazie. Pentru gardul viu persistent rămâne laurul portughez, ales deja pentru stradă și cârlige."),
+ dict(id='cercis', lum='soare', lat='Cercis siliquastrum', ro='Arborele lui Iuda', tip='arbore',
+      en='Cercis siliquastrum', row='Arborele lui Iuda', poze=['p01'], incert=True,
+      nota="Arborele cu ramuri negre, noduroase, din dreapta pozei 1, lângă chiparosul din dreapta: coroană largă și rărită, frunze rotunde rămase puține, cu pete galben-roșcate, și păstăi brun-roșcate atârnând în ciorchini. Ramificația sinuoasă și păstăile sunt ale arborelui lui Iuda; fără flori în cadru, determinarea rămâne probabilă.",
+      h2='1,5–2,0 m', h5='3,0–4,0 m', hm='6–10 m, coroană 6–8 m', apa=dict(l=15, f=1),
+      luni=luni((R, 3), (I, 1), (V, 5), (F, 2), (R, 1)), verdict='retine',
+      crucea="Trece de −20 °C: crește în București, Constanța, Iași, pe sol calcaros și uscat, fără boli. Arbore mic, înflorit roz pe lemn în aprilie, înainte de frunze, cu păstăi care hrănesc păsările iarna. Un exemplar în fața casei sau la intrare, în soare plin, și unul la marginea pajiștii; alături de clocotișul din Tăbăcărie, e al doilea arbore mic de secetă care merită să intre în plan."),
+ dict(id='tilia', lum='mixt', lumd="Tânăr suportă semiumbra; matur vrea coroana în soare.",
+      lat='Tilia', cv='probabil cordata sau × europaea', ro='Tei', tip='arbore', en='Tilia', row='Tei', poze=['p03', 'p02'], incert=True,
+      nota="Arborele cu frunze late, galben-verzi, din stânga pozei 3, deasupra mașinilor, și, probabil, cel din stânga pozei 2. Frunzele cordate și coloritul galben de octombrie sunt de tei; specia nu se vede de la distanță. Pe promenadă, cu apa lacului la 20 m, teiul e încă verde-galben, nu rărit ca teii din Tăbăcărie.",
+      h2='2,5–3,0 m', h5='5,0–6,0 m', hm='20–30 m, coroană 12–15 m', apa=dict(l=25, f=2),
+      luni=luni((R, 3), (V, 2), (I, 1), (V, 3), (F, 2), (R, 1)), verdict='neutru',
+      crucea="Teii pucios și cu frunza mică vor apă în adâncime și cad din august în stepă; singurul care rezistă la Crucea e teiul argintiu, deja în plan (A48 / Tt), cu dosul frunzei alb-pâslos. Exemplarul de aici arată ce face un tei cu apă la picior, nu ce face în Dobrogea."),
+]
+
+PROBLEME = [
+ dict(titlu='Chiparoși elagați până la 10 m', unde='poza 1', poza='p01',
+      text="Cei doi chiparoși au trunchiul gol pe 8–10 m, cu ramurile tăiate de jos în sus ca să rămână vederea spre vilă. Coroana rămasă e prea mică pentru un arbore de 25 m, trunchiul stă în vânt fără sprijin și fiecare rană de tăiere e o poartă pentru cancerul de scoarță; vârful din stânga are deja uscări. La tine: coniferele columnare nu se elaghează niciodată; dacă vrei vedere printre ele, se plantează mai rar, nu se taie."),
+ dict(titlu='Pini de 20 m în alveole de un metru', unde='poza 3', poza='p03',
+      text="Pinii umbrelă de pe promenadă au rădăcinile sub dale și sub carosabil, în alveole de circa 1 m², și trunchiurile înclinate spre lac. Pavajul se ridică, rădăcinile se taie la fiecare reparație și arborii dezechilibrați se rup la furtună. La tine: arborii mari la cel puțin 3 m de alei, parcare și fundații, cu solul liber pe toată proiecția coroanei; alveola de un metru e bună doar pentru un arbust."),
+ dict(titlu='Sol gol și bătătorit sub stejarii verzi', unde='poza 2', poza='p02',
+      text="Sub șirul de stejari verzi nu crește nimic: umbră densă tot anul, frunzar pielos care se descompune greu și pietriș bătătorit de pași. Solul fără acoperire se tasează și se spală la ploaie. La tine: sub persistentele dese nu se plănuiește pajiște; se lasă frunzarul și se completează cu mulci, sau se pune un acoperitor de umbră (iederă, voscovici) de la plantare."),
+]
