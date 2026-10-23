@@ -1,10 +1,11 @@
 # Studiu de caz — vegetația de la Peschiera del Garda
 
-Inventar botanic făcut din 12 fotografii, la fața locului, pe 23 octombrie 2026, la
+Inventar botanic făcut din 15 fotografii, la fața locului, pe 23 octombrie 2026, la
 Peschiera del Garda (Veneto, Italia), pe malul de sud al lacului Garda: parcul de pe
-bastioanele cetății, promenada de pe lac, străzile din jurul portului și jardinierele
-din fața restaurantelor și a băncii. **17 taxoni** — 5 arbori, 8 arbuști și 4 conifere,
-mulți mediteraneeni sau de climă blândă, dar și câțiva care merg oriunde.
+bastioanele cetății, promenada de pe lac, străzile din jurul portului, jardinierele
+din fața restaurantelor și a băncii, plus trei poze din Sirmione, peninsula vecină de pe
+același lac. **20 de taxoni** — 6 arbori, 10 arbuști și 4 conifere, mulți mediteraneeni
+sau de climă blândă, dar și câțiva care merg oriunde.
 
 Studiul răspunde la întrebarea din fiecare vacanță: ce din peisajul italian trece de
 iernile Dobrogei și ce nu. Lacul ține iarna la −3…−5 °C (zona 8b–9a), Crucea coboară
@@ -21,18 +22,18 @@ Studiile pereche: [banda de la Kaufland](../studiu-caz-kaufland/) (ce rezistă p
   Wikipedia și o concluzie pentru Crucea (de reținut / cu rezerve / de evitat)
 - `date.py` — datele studiului (fișele, problemele, textele paginii); pagina se regenerează cu
   `python3 .claude/skills/studiu-caz-vegetatie/scripts/build.py studiu-caz-peschiera`
-- `poze/thumb/p01..p12.webp` — miniaturi, latura lungă 480 px
-- `poze/mare/p01..p12.webp` — imagini de vizualizare, latura lungă 1400 px
+- `poze/thumb/p01..p15.webp` — miniaturi, latura lungă 480 px
+- `poze/mare/p01..p15.webp` — imagini de vizualizare, latura lungă 1400 px
 
-Numerotarea `p01`–`p12` urmează ordinea în care au fost trimise pozele (`poze/origine.txt`).
+Numerotarea `p01`–`p15` urmează ordinea în care au fost trimise pozele (`poze/origine.txt`).
 Originalele (3000×4000) nu sunt incluse.
 
 ## De reținut
 
 Șase specii trec de iernile din Crucea: cedrul de Himalaya, arborele lui Iuda, teiul,
-ienupărul târâtor, iedera și dracila aurie. Șapte nu trec: pinul umbrelă, palmierul de
-Chusan, dafinul, loropetalum, leandrul și măslinul îngheață la −8…−15 °C, hortensia
-moare de sete. Patru sunt la limită: chiparosul de Italia (soiuri rezistente, loc
+ienupărul târâtor, iedera și dracila aurie. Zece nu trec: portocalul și bougainvillea mor în
+orice iarnă (−3…−5 °C), pinul umbrelă, palmierul de Chusan, dafinul, loropetalum,
+leandrul, măslinul și iasomia stelată îngheață la −8…−15 °C, hortensia moare de sete. Patru sunt la limită: chiparosul de Italia (soiuri rezistente, loc
 adăpostit lângă casă), rozmarinul (soiuri rezistente, la zidul de sud), abelia (lângă
 casă) și stejarul verde, pe care Pepiniera Silvică Agigea îl are în stoc, deci experimentul cu
 două exemplare în colțul adăpostit costă câțiva lei.
@@ -49,7 +50,8 @@ Nicio specie din poze nu e în planurile Crucea; ar merita să intre cedrul de H
 (arbore mic de secetă lângă casă), stejarul verde ca experiment, rozmarinul ca
 bordură aromatică la zidul de sud, ienupărul târâtor pe taluzuri și iedera pe gardul
 de plasă. Gardurile vii de leandru și zidurile de iederă de aici se fac la Crucea cu
-laurul portughez și photinia, deja alese; frunza argintie a măslinului o dă sălcioara.
+laurul portughez și photinia, deja alese; frunza argintie a măslinului o dă sălcioara, iar cățărătoarele înflorite de pe
+zidurile din Sirmione se fac cu trompeta, glicina și caprifoiul.
 
 Cele cinci probleme — chiparoșii elagați până la 10 m, pinii de 20 m în alveole de un
 metru pătrat, plantele de sol acid pe calcar, gardul viu otrăvitor de leandru pe trotuar
@@ -59,7 +61,7 @@ Constanța, în altă climă.
 ## Precizări
 
 Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele
-o permit și la nivel de gen sau grup acolo unde nu; cele nesigure (4 din 17) sunt
+o permit și la nivel de gen sau grup acolo unde nu; cele nesigure (5 din 20) sunt
 marcate în pagină ca „determinare probabilă". Înălțimile și dozele de udare sunt
 estimări pentru material de pepinieră obișnuit în clima Dobrogei, nu măsurători pe
 exemplarele fotografiate; rezistențele la ger sunt cele din literatura horticolă pentru
