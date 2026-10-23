@@ -16,6 +16,8 @@ de plantare ies la iveală abia la maturitate.
   fotografii, ce s-a văzut în teren, cerința de lumină, înălțimea la 2 ani / 5 ani /
   maturitate, dozele de udare din primii doi ani, calendarul fenologic, linkuri către
   Wikipedia și o concluzie pentru Crucea (de reținut / cu rezerve / de evitat)
+- `date.py` — datele studiului (fișele, problemele, textele paginii); pagina se regenerează cu
+  `python3 .claude/skills/studiu-caz-vegetatie/scripts/build.py studiu-caz-tabacarie`
 - `poze/thumb/p01..p15.webp` — miniaturi, latura lungă 480 px
 - `poze/mare/p01..p15.webp` — imagini de vizualizare, latura lungă 1400 px
 
