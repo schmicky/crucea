@@ -21,7 +21,9 @@ Modelele: `studiu-caz-kaufland/` (banda plantată, 21 de taxoni, 28 de poze) și
    trimise, pentru că utilizatorul se referă la ele ca „poza 3":
    `python3 .claude/skills/studiu-caz-vegetatie/scripts/poze.py studiu-caz-<slug> <poza1> <poza2> …`
    (sau `--dir <director>` pentru ordinea numelor). Scriptul face `poze/thumb` (480 px) și `poze/mare` (1400 px) WebP și
-   `poze/origine.txt`. Originalele nu intră în repo.
+   `poze/origine.txt`. Originalele nu intră în repo. Dacă `import PIL` dă eroare, rulează scriptul cu `/usr/bin/python3`
+   (interpretorul de sistem are Pillow) sau instalează `pillow` cu `pip`. Pentru poze adăugate ulterior (p06, p07…), același
+   script cu `--de-la <nr>` continuă numerotarea și completează `origine.txt`.
 
 3. **Uită-te la fiecare poză, pe rând, cu Read**, și notează pentru fiecare: toate speciile vizibile (și cele din fundal și
    acoperitorii), caracterele după care le determini, vârsta plantării, starea la data vizitei, distanțele față de construcții,

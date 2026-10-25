@@ -14,7 +14,8 @@ function findModule() {
   throw new Error('playwright-core lipsește: npm i playwright-core (în scratchpad) sau PW_MODULE=<cale>');
 }
 const { chromium } = findModule();
-const exe = fs.readdirSync('/opt/pw-browsers').filter(d => d.startsWith('chromium-')).map(d => `/opt/pw-browsers/${d}/chrome-linux/chrome`).find(fs.existsSync);
+const exe = process.env.CHROME_BIN || require('child_process').execSync("find /opt/pw-browsers -maxdepth 3 -type f -name chrome 2>/dev/null | sort | tail -1").toString().trim();
+if (!exe) throw new Error('Chromium lipsește sub /opt/pw-browsers; dă CHROME_BIN=<cale>');
 const srv = http.createServer((q, s) => {
   const p = path.join(root, decodeURIComponent(q.url.split('?')[0]));
   const f = fs.existsSync(p) && fs.statSync(p).isDirectory() ? path.join(p, 'index.html') : p;
