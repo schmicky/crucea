@@ -7,7 +7,7 @@ META = dict(
     titlu='Studiu de caz — vegetația de la Peschiera del Garda',
     eyebrow='Studiu de caz · 23 octombrie 2026 · Peschiera del Garda, Italia',
     h1='Vegetația de la Peschiera del Garda',
-    lead=['''Inventar botanic făcut din 18 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
+    lead=['''Inventar botanic făcut din 19 fotografii, la fața locului, pe malul de sud al lacului Garda: parcul de pe
   bastioanele cetății din Peschiera, promenada de pe lac, străzile din jurul portului, jardinierele din fața restaurantelor
   și a băncii, plus poze din Sirmione și din parcul Gardaland, pe același mal al lacului. <b>23 de taxoni</b>, mulți mediteraneeni sau
   de climă blândă: chiparos de Italia, pin umbrelă, stejar verde, măslin, portocal, bougainvillea, leandru, iasomie stelată,
@@ -51,14 +51,14 @@ META = dict(
       stejarul verde ca experiment de la Agigea, rozmarinul ca bordură aromatică la zidul de sud, ienupărul târâtor pe
       taluzuri și iedera pe gardul de plasă. Pinul umbrelă, măslinul, portocalul, bougainvillea, leandrul, palmierul și hortensia rămân în Italia; cățărătoarele
       înflorite de pe zidurile din Sirmione se fac la Crucea cu trompeta (Campsis), glicina și caprifoiul.'''],
-    nr_poze=18,
+    nr_poze=19,
     footer='''Determinările sunt făcute din fotografii, la nivel de specie acolo unde caracterele o permit
   și la nivel de gen sau grup acolo unde nu — cele nesigure sunt marcate ca atare în fișă. Înălțimile și dozele de
   udare sunt estimări pentru material de pepinieră obișnuit în clima Dobrogei, nu măsurători pe exemplarele din poze;
   rezistențele la ger sunt cele din literatura horticolă pentru exemplare mature, plantele tinere sunt mai sensibile.
   Fotografiile sunt proprii, făcute la Peschiera del Garda (Veneto, Italia) pe 23 octombrie 2026, în parcul de pe
-  bastioane, pe promenada lacului, pe străzile din jurul portului, la jardinierele din fața restaurantelor și a băncii, iar p13–p15 în Sirmione și p16–p18 în parcul Gardaland, pe 25 octombrie,
-  pe aceeași latură a lacului; numerotarea p1–p18 urmează ordinea în care au fost trimise. Studiile pereche:
+  bastioane, pe promenada lacului, pe străzile din jurul portului, la jardinierele din fața restaurantelor și a băncii, iar p13–p15 în Sirmione și p16–p18 în parcul Gardaland, pe 25 octombrie, p19 pe 27 octombrie, într-un oraș din apropiere,
+  pe aceeași latură a lacului; numerotarea p1–p19 urmează ordinea în care au fost trimise. Studiile pereche:
   <a href="../studiu-caz-kaufland/">banda plantată de la Kaufland</a> și <a href="../studiu-caz-tabacarie/">Parcul Tăbăcărie</a>.<br>
   Parte din proiectul de amenajare Poienel, Crucea — <a href="../">înapoi la proiect</a>.''',
     cache='peschiera-wiki')
@@ -74,12 +74,12 @@ def luni(*spec):
 TAXONI = [
  dict(id='cupressus-sempervirens', lum='soare', lumd="Ramurile de jos se usucă la cea mai mică umbrire; de aceea coloana rămâne plină doar în soare din toate părțile.",
       lat='Cupressus sempervirens', ro='Chiparos de Italia', tip='conifer', en='Cupressus sempervirens', row='Chiparos',
-      poze=['p01'],
-      nota="Cei doi arbori columnari din prim-planul pozei 1, de 20–25 m, cu trunchiul gol pe 8–10 m și coroana îngustă, verde-închis, pe jumătatea de sus. Ramurile au fost tăiate de jos în sus de-a lungul anilor ca să se vadă vila din spate; coroana rămasă e subțire, cu vârful stâng puțin rărit și brun. Solzii mărunți, lipiți de ramuri, și portul în fus sunt ale chiparosului de Italia, forma „stricta”.",
+      poze=['p19', 'p01'],
+      nota="Cei doi arbori columnari din prim-planul pozei 1, de 20–25 m, cu trunchiul gol pe 8–10 m și coroana îngustă, verde-închis, pe jumătatea de sus. Ramurile au fost tăiate de jos în sus de-a lungul anilor ca să se vadă vila din spate; coroana rămasă e subțire, cu vârful stâng puțin rărit și brun. Solzii mărunți, lipiți de ramuri, și portul în fus sunt ale chiparosului de Italia, forma „stricta”. Poza 19, dintr-un oraș din apropiere, pe 27 octombrie, arată cum arată aceeași specie netăiată: aliniament de 15–20 m pe o stradă în pantă, lângă un zid vechi, cu coroana plină și deasă de la sol până la vârf, îngustă ca un fus, pe arbori de 60–80 de ani. Niciun vârf uscat, nicio ramură goală — asta e forma pe care o cumperi când cumperi un chiparos.",
       h2='1,5–2,0 m', h5='4,0–5,0 m', hm='20–25 m, coroană 1,5–3 m', apa=dict(l=10, f=1),
       luni=luni((P, 2), (I, 1), (P, 6), (F, 2), (P, 1)), verdict='neutru',
       problema="Elagat până la 8–10 m: trunchiul gol stă în vânt fără protecția ramurilor, coroana rămasă e prea mică pentru înălțime, iar vârful din stânga arată uscări — fie secetă pe un arbore dezechilibrat, fie cancerul de scoarță (Seiridium) care intră prin rănile de tăiere.",
-      crucea="La limită la Crucea: exemplarele mature rezistă la −15 °C, iar soiurile selectate („Totem”, „Stricta” de pepinieră europeană) trec de −18…−20 °C cu arsuri; în Constanța și Mangalia există exemplare de 30 de ani, dar în stepă, la vânt, tinerii se usucă pe partea bătută de crivăț. Dacă vrei silueta: 2–3 exemplare pe latura de sud a casei, adăpostite de perdea, și nu înainte ca perdeaua să aibă 3 m. Ieftin și sigur: ienupăr de Virginia în formă columnară, în stoc la Agigea."),
+      crucea="La limită la Crucea: exemplarele mature rezistă la −15 °C, iar soiurile selectate („Totem”, „Stricta” de pepinieră europeană) trec de −18…−20 °C cu arsuri; în Constanța și Mangalia există exemplare de 30 de ani, dar în stepă, la vânt, tinerii se usucă pe partea bătută de crivăț. Dacă vrei silueta: 2–3 exemplare pe latura de sud a casei, adăpostite de perdea, și nu înainte ca perdeaua să aibă 3 m. Ieftin și sigur: ienupăr de Virginia în formă columnară, în stoc la Agigea. Și, dacă îi plantezi, lecția pozei 19: nu se taie nimic din ei, niciodată; coloana plină de la sol e tot farmecul."),
  dict(id='cedrus-deodara', lum='soare', lat='Cedrus deodara', ro='Cedru de Himalaya', tip='conifer',
       en='Cedrus deodara', row='Cedru de Himalaya', poze=['p01', 'p02'],
       nota="Coniferul cu vârful aplecat și ramurile în etaje orizontale din mijlocul pozei 1, între chiparoși, și în colțul din dreapta-sus al pozei 2. Ace moi, verde-albăstrui, în smocuri; ramurile tinere atârnă la capete. Exemplar de 15–18 m, cu coroana plină până jos acolo unde are loc — semn că a fost plantat la distanță corectă de vecini.",

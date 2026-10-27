@@ -1,10 +1,10 @@
 # Studiu de caz — vegetația de la Peschiera del Garda
 
-Inventar botanic făcut din 18 fotografii, la fața locului, pe 23 și 25 octombrie 2026, la
+Inventar botanic făcut din 19 fotografii, la fața locului, pe 23–27 octombrie 2026, la
 Peschiera del Garda (Veneto, Italia), pe malul de sud al lacului Garda: parcul de pe
 bastioanele cetății, promenada de pe lac, străzile din jurul portului, jardinierele
-din fața restaurantelor și a băncii, plus poze din Sirmione și din parcul Gardaland, pe
-același mal al lacului. **23 de taxoni** — 7 arbori, 12 arbuști și 4 conifere, mulți
+din fața restaurantelor și a băncii, plus poze din Sirmione, din parcul Gardaland și dintr-un oraș
+din apropiere. **23 de taxoni** — 7 arbori, 12 arbuști și 4 conifere, mulți
 mediteraneeni sau de climă blândă, dar și câțiva care merg oriunde.
 
 Studiul răspunde la întrebarea din fiecare vacanță: ce din peisajul italian trece de
@@ -22,10 +22,10 @@ Studiile pereche: [banda de la Kaufland](../studiu-caz-kaufland/) (ce rezistă p
   Wikipedia și o concluzie pentru Crucea (de reținut / cu rezerve / de evitat)
 - `date.py` — datele studiului (fișele, problemele, textele paginii); pagina se regenerează cu
   `python3 .claude/skills/studiu-caz-vegetatie/scripts/build.py studiu-caz-peschiera`
-- `poze/thumb/p01..p18.webp` — miniaturi, latura lungă 480 px
-- `poze/mare/p01..p18.webp` — imagini de vizualizare, latura lungă 1400 px
+- `poze/thumb/p01..p19.webp` — miniaturi, latura lungă 480 px
+- `poze/mare/p01..p19.webp` — imagini de vizualizare, latura lungă 1400 px
 
-Numerotarea `p01`–`p18` urmează ordinea în care au fost trimise pozele (`poze/origine.txt`).
+Numerotarea `p01`–`p19` urmează ordinea în care au fost trimise pozele (`poze/origine.txt`).
 Originalele (3000×4000) nu sunt incluse.
 
 ## De reținut
