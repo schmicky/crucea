@@ -443,5 +443,58 @@
     "url": "index.html#specie-F11"
    }
   ]
+ },
+ {
+  "id": "2026-10-31-motoburghiu-si-curatenie",
+  "data": "2026-10-31",
+  "taguri": [
+   "amenajare"
+  ],
+  "titlu": {
+   "ro": "Curățenie în curte și în magazie, test cu motoburghiul",
+   "en": "Clearing the yard and the shed, and a test run of the power auger"
+  },
+  "text": {
+   "ro": [
+    "O zi frumoasă la Crucea, bună de lucru în aer liber. Am continuat curățenia în curte și am făcut curățenie în magazie.",
+    "Am testat motoburghiul și lucrul în echipă pe parcela trasată: gaura rezultată e curată, cu pereți drepți. Ne pregătim să plantăm săptămâna viitoare ulmul de Turkestan."
+   ],
+   "en": [
+    "A beautiful day at Crucea, good for working outdoors. We carried on clearing the yard and we cleaned out the shed.",
+    "We tested the power auger and working as a team on the marked-out plot: the resulting hole is clean, with straight walls. We are getting ready to plant the Turkestan elm next week."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-10-31-moto-burghiu.jpg",
+    "alt": {
+     "ro": "Un om din echipă testează motoburghiul pe parcela trasată, cu țărușii în fundal și grămada de crengi în stânga",
+     "en": "A team member testing the power auger on the marked-out plot, with the stakes in the background and the pile of branches on the left"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-10-31-gaura.jpg",
+    "alt": {
+     "ro": "O gaură făcută cu motoburghiul: pereți drepți, pământul scos în jur și pământ închis la culoare la fund",
+     "en": "A hole made with the power auger: straight walls, the soil thrown up around it and dark soil at the bottom"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-10-31-gauri-echipa.jpg",
+    "alt": {
+     "ro": "Mai multe gropi făcute cu motoburghiul pe parcelă, cu un om în genunchi lângă ele și o grămadă de pământ închis la culoare în fundal",
+     "en": "Several holes made with the power auger on the plot, with a man kneeling beside them and a pile of dark soil in the background"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Fișa speciei: ulm de Turkestan (A52)",
+     "en": "Species sheet: Siberian elm (A52)"
+    },
+    "url": "index.html#specie-A52"
+   }
+  ]
  }
 ]
