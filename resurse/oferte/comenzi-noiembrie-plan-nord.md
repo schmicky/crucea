@@ -4,9 +4,9 @@ Listele acoperă cele **145 de plante „neapărat în noiembrie”** (perdelele
 
 Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere. Prețurile sunt cele declarate de pepinierele silvice pe puietiforestieri.ro; pentru Mizil, Cobadin și pepiniera pomicolă prețurile nu au putut fi citite și se confirmă la comandă.
 
-## Furnizor nou (31 octombrie 2026) — nume de completat
+## Ionuț — Suceava (găsit la 31 octombrie 2026)
 
-Găsit de George; a confirmat pe WhatsApp că are măceș, păducel, frasin comun, tei argintiu, pin negru (doar rădăcină liberă), sălcioară, mojdrean și ulm; nu are paltin și nuc. Cantitățile cerute, plan nord + pădure, cu rezervă: sălcioară 40, frasin comun 14, mojdrean 49, tei argintiu 26, pin negru 55 (în martie), ulm 41 (355 cu gardul viu de ulm pe perimetru), măceș 67, păducel 60. Prețurile, mărimile și transportul de confirmat; dacă sunt bune, speciile de mai jos marcate cu aceleași nume se iau de aici, nu de la Foresta/Agigea/Țuțora.
+A confirmat pe WhatsApp că are măceș, păducel, frasin comun, tei argintiu, pin negru (doar rădăcină liberă), sălcioară, mojdrean și ulm; nu are paltin și nuc. Cantitățile cerute, plan nord + pădure, cu rezervă: sălcioară 40, frasin comun 14, mojdrean 49, tei argintiu 26, pin negru 55 (în martie), ulm 41 (355 cu gardul viu de ulm pe perimetru), măceș 67, păducel 60. Prețurile, mărimile și transportul de confirmat; dacă sunt bune, speciile de mai jos marcate cu aceleași nume se iau de aici, nu de la Foresta/Agigea/Țuțora.
 
 ## Pepiniera Foresta SRL — Brăila
 *tel. 0766413310 · ofertă actualizată 21 august 2026 (puietiforestieri.ro)*
