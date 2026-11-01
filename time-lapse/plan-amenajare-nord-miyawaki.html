@@ -121,7 +121,7 @@
     /* Filtrul pe furnizori (selecție multiplă) */
     #furnizor-wrap { position: relative; display: flex; align-items: center; gap: 6px; }
     #furnizor-btn.on { background: #1f6feb; border-color: #388bfd; color: #fff; }
-    #furnizor-panel { display: none; position: absolute; top: 34px; left: 0; z-index: 60; min-width: 260px;
+    #furnizor-panel { display: none; position: fixed; z-index: 60; min-width: 260px;  /* fixed: bara are overflow hidden */
                       background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 8px 10px;
                       box-shadow: 0 8px 24px rgba(0,0,0,.6); max-height: 70vh; overflow-y: auto; }
     #furnizor-panel.visible { display: block; }
@@ -2166,7 +2166,12 @@ function furnizorPermite(code) {
 function toggleFurnizori(e) {
   e.stopPropagation();
   const pan = document.getElementById('furnizor-panel');
-  if (!pan.classList.contains('visible')) renderFurnizori();
+  if (!pan.classList.contains('visible')) {
+    renderFurnizori();
+    const r = document.getElementById('furnizor-btn').getBoundingClientRect();
+    pan.style.top = (r.bottom + 6) + 'px';
+    pan.style.left = Math.max(8, Math.min(r.left, window.innerWidth - 300)) + 'px';
+  }
   pan.classList.toggle('visible');
 }
 document.addEventListener('click', () => document.getElementById('furnizor-panel').classList.remove('visible'));
