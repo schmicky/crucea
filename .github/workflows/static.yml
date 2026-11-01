@@ -77,6 +77,8 @@ jobs:
           cat body.html >> index.html
           printf '</main>\n</body>\n</html>\n' >> index.html
           rm body.html
+      - name: Scoate fișierele de lucru ale poienel.ro din artefact
+        run: rm -f poienel.ro/sync-to-ftp.ps1
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

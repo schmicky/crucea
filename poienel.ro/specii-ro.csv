@@ -1,0 +1,66 @@
+﻿cod,nume,nume_latin,tip,inaltime_2_ani,inaltime_5_ani,inaltime_matur,lumina,nota_lumina,apa_l_udare,udari_pe_saptamana,luni_udare,luni_vegetatie,luni_inflorire,wikipedia
+A5,Paltin de câmp,Acer platanoides,Arbore,"3,0–3,5 m","5,0–6,0 m",20–25 m,soare sau semiumbră,Suportă semiumbra cât e tânăr; la maturitate vrea lumină deplină.,25,2,Apr–Iul,Mar–Sep,Feb–Mar,https://en.wikipedia.org/wiki/Acer_platanoides
+A11,Arborele de mătase,Albizia julibrissin,Arbore,"2,5–3,0 m","4,5–5,5 m",6–9 m,soare,La umbră coroana se răsfiră și înflorește rar.,15,2,Mai–Sep,Apr–Oct,Iun–Aug,https://en.wikipedia.org/wiki/Albizia_julibrissin
+A21,Sălcioară,Elaeagnus angustifolia,Arbore,"2,5–3,0 m","4,0–5,0 m",6–8 m,soare,,5,1,—,Mar–Oct,Mai–Iun,https://en.wikipedia.org/wiki/Elaeagnus_angustifolia
+A24,Frasin,Fraxinus excelsior,Arbore,"2,5–3,5 m","5,0–6,5 m",25–30 m,soare sau semiumbră,,30,2,Mai–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Fraxinus_excelsior
+A28,Arborele de lalea,Liriodendron tulipifera,Arbore,"2,5–3,5 m","5,0–7,0 m",25–30 m,soare,,30,2,Mai–Sep,Mar–Oct,Iun–Iul,https://en.wikipedia.org/wiki/Liriodendron_tulipifera
+A30,Magnolie,Magnolia × soulangiana,Arbore,"1,5–2,0 m","2,5–3,5 m",6–8 m,soare sau semiumbră,,20,2,Mai–Sep,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Magnolia_%C3%97_soulangiana
+A34,Pin negru,Pinus nigra,Arbore,"1,2–1,8 m","2,5–3,5 m",20–30 m,soare,,5,1,—,tot anul,—,https://en.wikipedia.org/wiki/Pinus_nigra
+A40,Stejar pufos,Quercus pubescens,Arbore,"1,2–1,8 m","2,5–3,5 m",10–15 m,soare,,15,2,Mai–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Quercus_pubescens
+A43,Salcie plângătoare,Salix babylonica,Arbore,"3,0–4,0 m","6,0–8,0 m",10–12 m,soare,,40,2,Mai–Sep,Mar–Oct,—,https://en.wikipedia.org/wiki/Salix_babylonica
+A48,Tei argintiu,Tilia tomentosa,Arbore,"2,5–3,0 m","4,5–6,0 m",25–30 m,soare sau semiumbră,,30,2,Mai–Aug,Apr–Oct,Iul,https://en.wikipedia.org/wiki/Tilia_tomentosa
+A52,Ulm de Turkestan,Ulmus pumila,Arbore,"3,0–4,0 m","6,0–7,0 m",12–15 m,soare,,5,1,—,Apr–Oct,Mar,https://en.wikipedia.org/wiki/Ulmus_pumila
+F1,Alun,Corylus avellana,Fructifer,"1,5–2,0 m","2,5–3,5 m",4–5 m,soare sau semiumbră,"Crește și la semiumbră, dar fructifică bine doar cu soare pe coroană.",15,2,Mai–Sep,Mar–Oct,Ian–Feb,https://en.wikipedia.org/wiki/Corylus_avellana
+F3,Kaki,Diospyros kaki,Fructifer,"1,5–2,0 m","3,0–4,0 m",6–8 m,soare,,20,2,Mai–Sep,Apr–Oct,Mai,https://en.wikipedia.org/wiki/Diospyros_kaki
+F4,Smochin,Ficus carica,Fructifer,"1,5–2,5 m","3,0–4,0 m",4–6 m,soare,Cel mai cald și mai adăpostit loc din curte — lângă un zid sudic e ideal.,20,2,Mai–Sep,Apr–Oct,—,https://en.wikipedia.org/wiki/Ficus_carica
+F6,Nuc,Juglans regia,Fructifer,"2,0–2,5 m","4,0–5,0 m",15–20 m,soare,,30,2,Mai–Sep,Apr–Oct,—,https://en.wikipedia.org/wiki/Juglans_regia
+F7,Măr,Malus domestica,Fructifer,"1,8–2,2 m","3,0–3,5 m",4–5 m,soare,Fructifică pe lemnul care prinde soare — de aceea coroana se rărește prin tăiere.,25,2,Mai–Sep,Apr–Oct,Apr–Mai,https://en.wikipedia.org/wiki/Malus_domestica
+F8,Moșmon,Mespilus germanica,Fructifer,"1,5–1,8 m","2,5–3,0 m",4–6 m,soare sau semiumbră,,15,2,Mai–Sep,Mar–Oct,Mai,https://en.wikipedia.org/wiki/Mespilus_germanica
+F9,Dud alb,Morus alba,Fructifer,"2,5–3,0 m","5,0–6,0 m",10–12 m,soare,,20,2,Mai–Aug,Apr–Oct,—,https://en.wikipedia.org/wiki/Morus_alba
+F10,Cireș,Prunus avium,Fructifer,"2,0–2,5 m","3,5–4,5 m",6–9 m,soare,,30,2,Mai–Aug,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_avium
+F11,Corcoduș,Prunus cerasifera,Fructifer,"2,0–2,5 m","4,0–5,0 m",6–8 m,soare,,20,2,Mai–Aug,Apr–Sep,Feb–Mar,https://en.wikipedia.org/wiki/Prunus_cerasifera
+F12,Vișin,Prunus cerasus,Fructifer,"1,8–2,2 m","3,0–3,5 m",4–5 m,soare,,20,2,Mai–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_cerasus
+F14,Migdal,Prunus dulcis,Fructifer,"1,8–2,5 m","3,5–4,5 m",5–7 m,soare,,15,2,Mai–Aug,Mar–Oct,Feb–Mar,https://en.wikipedia.org/wiki/Prunus_dulcis
+F15,Piersic,Prunus persica,Fructifer,"1,8–2,5 m","3,0–3,5 m",4–5 m,soare,,25,2,Mai–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_persica
+F16,Rodiu,Punica granatum,Fructifer,"1,2–1,8 m","2,5–3,0 m",3–4 m,soare,,15,2,Mai–Sep,Apr–Oct,Iun–Aug,https://en.wikipedia.org/wiki/Punica_granatum
+F17,Păr,Pyrus communis,Fructifer,"2,0–2,5 m","3,5–4,5 m",6–10 m,soare,,25,2,Mai–Sep,Apr–Oct,Apr,https://en.wikipedia.org/wiki/Pyrus_communis
+F18,Jujuba,Ziziphus jujuba,Fructifer,"1,5–2,0 m","3,0–4,0 m",6–8 m,soare,,10,2,Mai–Sep,Apr–Oct,Iun–Iul,https://en.wikipedia.org/wiki/Ziziphus_jujuba
+F19,Pom de stafide,Amelanchier lamarckii,Fructifer,"1,5–2,0 m","3,0–4,0 m",5–8 m,soare sau semiumbră,,15,2,Mai–Aug,Apr–Oct,Apr,https://en.wikipedia.org/wiki/Amelanchier_lamarckii
+F21,Corn,Cornus mas,Fructifer,"1,2–1,6 m","2,5–3,0 m",5–6 m,soare sau semiumbră,Suportă bine marginea de pădure — semiumbra nu-l deranjează.,10,2,Mai–Aug,Mar–Oct,Feb–Mar,https://en.wikipedia.org/wiki/Cornus_mas
+F26,Cătină,Hippophae rhamnoides,Fructifer,"1,5–2,0 m","3,0–4,0 m",4–6 m,soare,Fără soare direct nu fructifică deloc.,3,2,—,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Hippophae_rhamnoides
+F28,Măceș,Rosa canina,Fructifer,"1,2–1,8 m","2,5–3,0 m",3–4 m,soare,,5,1,Iun–Aug,Mar–Oct,Mai–Iun,https://en.wikipedia.org/wiki/Rosa_canina
+F29,Coacăz roșu,Ribes rubrum,Fructifer,"0,8–1,0 m","1,2–1,5 m","1,5 m",soare sau semiumbră,În clima de la noi preferă semiumbra: la soare direct frunzele se ard și fructul se coace mărunt.,5,2,Mai–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_rubrum
+F30,Coacăz negru,Ribes nigrum,Fructifer,"0,9–1,2 m","1,5–1,8 m","1,8–2,0 m",soare sau semiumbră,Cere sol reavăn; semiumbra de după-amiază îl ajută vara.,5,2,Mai–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_nigrum
+F31,Coacăz alb,Ribes rubrum (varietatea albă),Fructifer,"0,8–1,0 m","1,2–1,5 m","1,5 m",soare sau semiumbră,"Varietate albă de coacăz roșu — aceeași specie, aceeași îngrijire; preferă poziția semiumbrită.",5,2,Mai–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_rubrum
+F32,Agriș,Ribes uva-crispa,Fructifer,"0,7–0,9 m","1,0–1,3 m","1,5 m",soare sau semiumbră,Semiumbra îl ferește de făinare și de arsura fructelor.,5,2,Mai–Sep,Mar–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Ribes_uva-crispa
+F33,Viță de vie,Vitis vinifera,Fructifer,"1,5–2,0 m","2,0–2,5 m","2,0–2,5 m",soare,Strugurii se coc doar cu expunere sudică sau sud-vestică.,15,2,Mai–Sep,Apr–Oct,Iun,https://en.wikipedia.org/wiki/Vitis_vinifera
+F34,Arbore de mazăre,Caragana arborescens,Fructifer,"1,5–2,0 m","3,0–4,0 m",4–6 m,soare,,5,1,Iun–Aug,Mar–Sep,Apr–Mai,https://en.wikipedia.org/wiki/Caragana_arborescens
+F44,Sânger,Cornus sanguinea,Fructifer,"1,2–1,8 m","2,5–3,5 m",4–5 m,soare sau semiumbră,,8,2,Mai–Aug,Mar–Oct,Iun,https://en.wikipedia.org/wiki/Cornus_sanguinea
+F53,Prun,Prunus domestica,Fructifer,"2,0–2,5 m","3,5–4,5 m",5–6 m,soare,,25,2,Mai–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_domestica
+F56,Nectarin,Prunus persica var. nucipersica,Fructifer,"1,8–2,5 m","3,0–3,5 m",4–5 m,soare,"Ca piersicul: soare toată ziua, altfel bășicarea foilor devine cronică.",25,2,Mai–Aug,Apr–Sep,Mar–Apr,https://en.wikipedia.org/wiki/Prunus_persica
+F59,Aronia,Aronia melanocarpa,Fructifer,"0,9–1,2 m","1,5–2,0 m","2,0–2,5 m",soare sau semiumbră,"Rodește mai bogat la soare, dar suportă și semiumbra.",8,2,Mai–Sep,Mar–Oct,Apr–Mai,https://en.wikipedia.org/wiki/Aronia_melanocarpa
+S3,Iasomie falsă,Philadelphus coronarius,Arbust,"1,0–1,5 m","2,0–2,5 m","3,0 m",soare sau semiumbră,,8,2,Mai–Aug,Mar–Oct,Iun–Iul,https://en.wikipedia.org/wiki/Philadelphus_coronarius
+S4,Scumpie,Cotinus coggygria,Arbust,"1,0–1,5 m","2,0–3,0 m",4–5 m,soare,"Culoarea de toamnă și ""fumul"" de inflorescențe apar doar la soare.",8,1,Iun–Aug,Apr–Oct,Iun–Iul,https://en.wikipedia.org/wiki/Cotinus_coggygria
+S5,Păducel,Crataegus monogyna,Arbust,"1,2–1,8 m","2,5–3,5 m",6–8 m,soare sau semiumbră,,5,1,Iun–Aug,Mar–Oct,Mai,https://en.wikipedia.org/wiki/Crataegus_monogyna
+S6,Hibiscus,Hibiscus syriacus,Arbust,"1,0–1,4 m","2,0–2,5 m",3–4 m,soare,La umbră aproape nu înflorește.,8,2,Mai–Sep,Apr–Oct,Iul–Sep,https://en.wikipedia.org/wiki/Hibiscus_syriacus
+S10,Salcâm galben,Laburnum anagyroides,Arbust,"1,5–2,0 m","3,0–4,0 m",5–7 m,soare sau semiumbră,,15,2,Mai–Aug,Mar–Oct,Mai–Iun,https://en.wikipedia.org/wiki/Laburnum_anagyroides
+S11,Photinia,Photinia × fraseri,Arbust,"1,0–1,4 m","2,0–2,5 m",3–4 m,soare sau semiumbră,Lăstarii roșii sunt mai intenși la soare; semiumbra îi ține mai mult verzi.,8,1,Mai–Aug,tot anul,Apr–Mai,https://en.wikipedia.org/wiki/Photinia_%C3%97_fraseri
+S17,Oțetar,Rhus typhina,Arbust,"1,5–2,0 m","3,0–4,0 m",4–5 m,soare,,8,1,Iun–Aug,Apr–Oct,Iun–Iul,https://en.wikipedia.org/wiki/Rhus_typhina
+S18,Soc,Sambucus nigra,Arbust,"1,5–2,5 m","3,0–4,0 m",4–6 m,soare sau semiumbră,,15,2,Mai–Aug,Mar–Oct,Iun,https://en.wikipedia.org/wiki/Sambucus_nigra
+S21,Liliac,Syringa vulgaris,Arbust,"1,0–1,5 m","2,5–3,0 m",4–5 m,soare,"Sub 5–6 ore de soare, înflorirea scade vizibil de la an la an.",10,2,Mai–Aug,Mar–Oct,Apr–Mai,https://en.wikipedia.org/wiki/Syringa_vulgaris
+S28,Ploaie de aur,Forsythia × intermedia,Arbust,"1,2–1,6 m","2,0–2,5 m","3,0 m",soare,La umbră face lăstari lungi și puține flori.,8,2,Mai–Aug,Apr–Oct,Mar–Apr,https://en.wikipedia.org/wiki/Forsythia_%C3%97_intermedia
+S34,Lemn câinesc,Ligustrum ovalifolium,Arbust,"1,0–1,5 m","2,0–3,0 m",3–4 m,soare sau semiumbră,Merge și la semiumbră — de aceea e bun ca gard viu pe latura nordică.,5,1,Iun–Aug,tot anul,Iun–Iul,https://en.wikipedia.org/wiki/Ligustrum_ovalifolium
+S38,Cununiță,Spiraea japonica,Arbust,"0,5–0,7 m","0,8–1,2 m","1,2–1,5 m",soare,,4,2,Mai–Sep,Mar–Oct,Iun–Aug,https://en.wikipedia.org/wiki/Spiraea_japonica
+S50,Kerria,Kerria japonica,Arbust,"0,8–1,2 m","1,5–2,0 m","2,0–2,5 m",umbră,Unul dintre puținii arbuști care înfloresc la umbră; la soare direct floarea se decolorează.,5,2,Mai–Sep,Mar–Oct,Apr–Mai,https://en.wikipedia.org/wiki/Kerria_japonica
+S69,Trandafir de Rescht,Rosa 'de Rescht',Arbust,"0,7–0,9 m","1,0–1,3 m","1,2–1,5 m",soare,Sub 6 ore de soare face puține flori și se îmbolnăvește de pătare neagră.,10,2,Mai–Sep,Mar–Oct,Mai–Sep,https://en.wikipedia.org/wiki/Rosa
+S72,Călin,Viburnum opulus,Arbust,"1,2–1,6 m","2,5–3,0 m",4–5 m,soare sau semiumbră,,10,2,Mai–Aug,Mar–Oct,Mai–Iun,https://en.wikipedia.org/wiki/Viburnum_opulus
+S80,Liliac de vară,Buddleja davidii,Arbust,"1,5–2,0 m","2,0–2,5 m","2,5–3,0 m",soare,,8,2,Mai–Sep,Mar–Oct,Iun–Sep,https://en.wikipedia.org/wiki/Buddleja_davidii
+ar2,Lavandă,Lavandula angustifolia,Aromatic,"0,30–0,40 m","0,50–0,60 m","0,60–0,80 m",soare,"La umbră se întinde, nu înflorește și putrezește la colet.",2,1,Iun–Aug,tot anul,Iun–Aug,https://en.wikipedia.org/wiki/Lavandula_angustifolia
+ar6,Rozmarin,Salvia rosmarinus,Aromatic,"0,40–0,60 m","0,80–1,20 m","1,20–1,50 m",soare,"Soare plin și drenaj — sunt condițiile obligatorii, nu preferințe.",2,1,Iun–Aug,tot anul,Mar–Mai,https://en.wikipedia.org/wiki/Salvia_rosmarinus
+ar7,Salvie,Salvia officinalis,Aromatic,"0,40–0,50 m","0,60–0,70 m","0,70–0,80 m",soare,Aroma e mai puternică la soare și pe sol sărac.,2,1,Iun–Aug,tot anul,Mai–Iun,https://en.wikipedia.org/wiki/Salvia_officinalis
+ar9,Roiniță,Melissa officinalis,Aromatic,"0,50–0,70 m","0,60–0,80 m","0,80–1,00 m",soare sau semiumbră,"Vara, semiumbra de după-amiază îi ține frunza fragedă.",3,1,Mai–Sep,Mar–Sep,Iun–Aug,https://en.wikipedia.org/wiki/Melissa_officinalis
+ia19,Fenicul,Foeniculum vulgare,Ierbacee,"1,50–1,80 m","1,80–2,00 m","2,00 m",soare,,3,1,Mai–Sep,Mar–Oct,Iul–Aug,https://en.wikipedia.org/wiki/Foeniculum_vulgare
+ip19,Tătăneasă,Symphytum officinale,Ierbacee,"0,60–0,90 m","0,90–1,20 m","1,20 m",soare sau semiumbră,Suportă și umbra de sub arbori — de aceea e bună ca plantă de mulci acolo.,5,1,Mai–Aug,Mar–Sep,Apr–Iun,https://en.wikipedia.org/wiki/Symphytum_officinale
+ip44,Isop,Hyssopus officinalis,Ierbacee,"0,40–0,50 m","0,50–0,60 m","0,60 m",soare,,2,1,Iun–Sep,tot anul,Iun–Sep,https://en.wikipedia.org/wiki/Hyssopus_officinalis
+ip102,Lofantus,Agastache foeniculum,Ierbacee,"0,70–0,90 m","0,90–1,20 m","1,20 m",soare,,3,1,Mai–Sep,Mar–Oct,Iun–Sep,https://en.wikipedia.org/wiki/Agastache_foeniculum
+ip126,Potentilla,Potentilla fruticosa,Ierbacee,"0,50–0,70 m","0,80–1,00 m","1,00–1,20 m",soare,Înflorește tot sezonul doar cu soare direct.,3,1,Iun–Sep,Mar–Oct,Mai–Sep,https://en.wikipedia.org/wiki/Potentilla_fruticosa

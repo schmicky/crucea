@@ -1,0 +1,22 @@
+# poienel.ro — tot conținutul e public și poate fi indexat, inclusiv de crawlerele AI.
+User-agent: *
+Allow: /
+
+# Crawlere AI (explicit, ca să nu fie nicio îndoială)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://poienel.ro/sitemap.xml
