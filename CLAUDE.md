@@ -13,3 +13,7 @@ Reguli de lucru stabilite cu George Șerban:
   `studiu-caz-*/index.html`) se refac din scripturile lor, nu se editează de mână, ca datele și paginile să nu se despartă.
 - **Jurnalul** proiectului e în `time-lapse/plan-implementare-nord-miyawaki.md`: fiecare decizie sau răspuns de la furnizori
   primește o intrare datată, cea mai nouă prima.
+- **Filtrul pe furnizori din planul nord** (`time-lapse/plan-amenajare-nord-miyawaki.html`, constanta `FURNIZORI` din pagină):
+  ori de câte ori se schimbă listele de comenzi (`resurse/oferte/comenzi-noiembrie-plan-nord.md`, `comenzi-miyawaki-est.md`) sau un
+  furnizor confirmă/infirmă specii, se actualizează și corespondența furnizor → coduri din pagină, în aceeași ordine cu comenzile
+  (Ionuț Suceava primul). Pădurea Miyawaki (stratul separat) nu se filtrează.
