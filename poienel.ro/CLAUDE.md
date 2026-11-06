@@ -99,12 +99,18 @@ Conversii convenționale: valorile pe luni (vectori de 12 × 0/1) se afișează 
 5. Pagina e în `sitemap.xml` și în `llms.txt`; linkurile interne duc la fișiere care există.
 6. După upload: fiecare URL nou răspunde 200 cu tipul corect (`text/html; charset=utf-8`, `application/json`, `text/csv`, `text/plain` pentru `robots.txt` și `llms.txt`); `www` redirecționează spre domeniul fără `www`.
 
+## Cache-ul resurselor
+
+`.htaccess` ține `jpg`, `png`, `svg`, `css`, `js` și `webp` în cache o săptămână. Ca o schimbare de CSS sau JS să ajungă imediat la toți, `build.mjs` adaugă la linkurile spre `site.css`, `specii.js`, `jurnal.js` și `vreme.js` un `?v=<hash>` calculat din conținutul fișierului, în toate paginile. Un script sau o foaie de stil nouă se adaugă în `RESURSE_VERSIONATE` din `build.mjs` și se leagă în pagină cu `../resurse/<fișier>` (build-ul pune versiunea). Pozele noi au nume noi, deci nu au nevoie de versiune. După orice schimbare în `resurse/` se rulează `node build.mjs` și se urcă și paginile, nu doar fișierul schimbat.
+
 ## Prognoza meteo din antet
 
 - **Sursa:** Open-Meteo (`api.open-meteo.com`), gratuit, fără cheie, doar pentru uz necomercial, cu atribuire (linkul „Date: Open-Meteo” din bandă rămâne; licența datelor e CC BY 4.0). Dacă site-ul devine comercial, trebuie plan plătit sau altă sursă.
 - **Cererea:** `daily=weather_code,temperature_2m_max,temperature_2m_min`, `forecast_days=7`, fus orar `Europe/Bucharest`, coordonatele din `VREME` în `build.mjs` (aproximative pentru comuna Crucea; se schimbă acolo și se rulează build-ul).
 - **Afișare:** pentru fiecare zi, numele zilei (Azi / Mâine / zi abreviată), o pictogramă proprie în SVG cu contur și culorile din șablon, temperatura maximă (îngroșată) și minima. Descrierea completă e în `title` și `aria-label`. Codurile WMO se grupează în `key()` din `resurse/vreme.js`; o pictogramă sau o descriere nouă se adaugă acolo și în `ETICHETE.*.vreme.conditii`, în ambele limbi.
 - **Cache:** `localStorage`, o oră, doar dacă prognoza începe de azi; la rețea căzută se folosește ultima prognoză de azi, cel mult 24 de ore.
+- **Pictogramele au mărimea lor pe element** (`width="26" height="26"` și atributele de desen în `svg()` din `vreme.js`): un SVG fără mărime ia 100% din lățime, iar pe un telefon cu `site.css` vechi în cache pictogramele ieșeau de 310 × 310 px. Orice SVG generat de un script primește mărimea pe element, nu doar în CSS.
+- **Pe telefon** (sub 700 px) banda e un card alb: titlul și sursa pe un rând, apoi cele 7 zile în coloane egale (`grid`, fără derulare), pictograme de 22 px, maxima deasupra minimei. Atribuirea „Date: Open-Meteo” rămâne vizibilă și pe telefon.
 - **Așezare:** regiunea generată `BUILD:vreme`, în `<header>`, după subtitlu, pe toate paginile. Pe ecran lat stă în coloana din dreapta, sub titlu, lângă logo, deci nu mărește antetul; pe ecran îngust e un rând care derulează orizontal.
 
 ## Anexa: paginile existente

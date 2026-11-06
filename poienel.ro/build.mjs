@@ -5,6 +5,7 @@
 // Orice text din JSON care se afișează trebuie să fie {ro, en}; build-ul se oprește dacă lipsește o limbă.
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
@@ -383,6 +384,18 @@ ${(j.linkuri || []).length ? `<ul>\n${j.linkuri.map((l) => `<li><a href="${esc(l
     'jurnal-tabs': `<div class="type-tab active" data-tag="all">${L.toate} (${jurnal.length})</div>\n` + TAGURI.map((t) => `<div class="type-tab" data-tag="${t}">${L.taguri[t]} (${countsTag[t]})</div>`).join('\n'),
     jurnal: intrari,
   });
+}
+
+// ───────────────────────── versiunea resurselor ─────────────────────────
+// Adaugă ?v=<hash> la CSS și JS în toate paginile: la fiecare schimbare a fișierului adresa se schimbă,
+// deci browserul (și telefonul) nu mai poate folosi o copie veche din cache (vezi Cache-Control din .htaccess).
+const RESURSE_VERSIONATE = ['site.css', 'specii.js', 'jurnal.js', 'vreme.js'];
+const versiuni = Object.fromEntries(RESURSE_VERSIONATE.map((f) => [f, createHash('sha1').update(fs.readFileSync(path.join(dir, 'resurse', f))).digest('hex').slice(0, 8)]));
+for (const lang of LANGS) for (const f of PAGINI) {
+  const rel = `${lang}/${f}`;
+  const html = fs.readFileSync(path.join(dir, rel), 'utf8');
+  const nou = html.replace(/(\.\.\/resurse\/(site\.css|specii\.js|jurnal\.js|vreme\.js))(\?v=[0-9a-f]+)?"/g, (_, a, nume) => `${a}?v=${versiuni[nume]}"`);
+  if (nou !== html) scrie(rel, nou);
 }
 
 // ───────────────────────── sitemap.xml: toate paginile în ambele limbi, cu hreflang ─────────────────────────
