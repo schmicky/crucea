@@ -50,3 +50,4 @@ Codurile speciilor: A = arbori, F = fructiferi, S = arbuști, ar = aromatice, ia
 - [Turistul Liber](https://www.turistulliber.ro/): blog de călătorii prin România
 - [Epic Vista Experience](https://epicvistaexperience.com/): experiențe și călătorii
 - [Act for Tomorrow: pădure urbană Constanța](https://greencommunity.ro/act-for-tomorrow-padure-urbana-constanta/): proiectul de pădure urbană din Constanța
+- [Rezervația Allah Bair, Dobrogea](https://peterlengyel.wordpress.com/2011/08/26/rezervatia-allah-bair-dobrogea/): articol de blog despre rezervație, din 2011
