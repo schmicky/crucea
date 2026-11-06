@@ -571,5 +571,65 @@
     "url": "index.html#specie-F10"
    }
   ]
+ },
+ {
+  "id": "2026-05-15-prima-cosire-si-bujorii",
+  "data": "2026-05-15",
+  "taguri": [
+   "amenajare",
+   "relaxare"
+  ],
+  "titlu": {
+   "ro": "Prima cosire a anului și bujorii înfloriți",
+   "en": "The first mowing of the year, and the peonies are in bloom"
+  },
+  "text": {
+   "ro": [
+    "15 mai: prima cosire de anul acesta. Am cosit iarba și buruienile cu motocoasa, iar iarba tăiată s-a adunat în grămezi.",
+    "Am constatat cu bucurie că au înflorit bujorii: prima floare roșie s-a deschis, iar ceilalți muguri sunt gata să se deschidă."
+   ],
+   "en": [
+    "15 May: the first mowing of the year. We cut the grass and weeds with the brushcutter, and the cut grass was gathered into heaps.",
+    "We noticed with delight that the peonies are in bloom: the first crimson flower has opened, and the other buds are ready to open."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-05-15-curte-cosita.jpg",
+    "alt": {
+     "ro": "Pom tânăr pe peluza proaspăt cosită, cu o fâșie de pământ afânat în spate, iar dincolo de zid casele și dealurile din jur",
+     "en": "A young tree on the freshly mown lawn, with a strip of loosened soil behind it, and beyond the wall the houses and the surrounding hills"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-05-15-bujori.jpg",
+    "alt": {
+     "ro": "Tufele de bujori din curte, cu o floare roșie deschisă și mai mulți muguri, lângă vița de vie și un conifer",
+     "en": "The peony bushes in the yard, with one red flower open and several buds, next to the grapevine and a conifer"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-05-15-motocoasa.jpg",
+    "alt": {
+     "ro": "Un om cosește cu motocoasa buruienile înalte de lângă gard, iar iarba tăiată rămâne pe jos",
+     "en": "A man cutting the tall weeds by the fence with a brushcutter, the cut grass left on the ground"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-05-15-iarba-cosita.jpg",
+    "alt": {
+     "ro": "Grămadă de iarbă cosită pe parcelă, cu pomi și acoperișuri în fundal",
+     "en": "A heap of cut grass on the plot, with trees and roofs in the background"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-05-15-gramada-crengi.jpg",
+    "alt": {
+     "ro": "Grămadă de crengi acoperită cu iarbă cosită, pe parcelă, sub cer senin",
+     "en": "A pile of branches covered with cut grass on the plot, under a clear sky"
+    }
+   }
+  ],
+  "linkuri": []
  }
 ]
