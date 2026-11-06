@@ -539,5 +539,37 @@
    }
   ],
   "linkuri": []
+ },
+ {
+  "id": "2026-06-22-cirese-si-buruieni",
+  "data": "2026-06-22",
+  "taguri": [
+   "amenajare",
+   "relaxare"
+  ],
+  "titlu": {
+   "ro": "Am cules cireșe, iar buruienilor le merge foarte bine",
+   "en": "Cherry picking, and the weeds are doing very well"
+  },
+  "text": {
+   "ro": [
+    "22 iunie: am cules cireșe. Cireșul din curte e încărcat de fructe, unele roșii, altele galben-roșiatice.",
+    "Buruienilor le merge foarte bine: pe lângă casă și pe parcelă au crescut înalte, mai sus decât un copil."
+   ],
+   "en": [
+    "22 June: we picked cherries. The cherry tree in the yard is laden with fruit, some red, some yellow-red.",
+    "The weeds are doing very well: around the house and on the plot they have grown tall, taller than a child."
+   ]
+  },
+  "foto": [],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Fișa speciei: cireș (F10)",
+     "en": "Species sheet: sweet cherry (F10)"
+    },
+    "url": "index.html#specie-F10"
+   }
+  ]
  }
 ]
