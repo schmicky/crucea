@@ -561,7 +561,36 @@
     "The weeds are doing very well: around the house and on the plot they have grown tall, taller than a child."
    ]
   },
-  "foto": [],
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-06-22-buruieni-inalte.jpg",
+    "alt": {
+     "ro": "Buruieni dese și înalte pe parcelă, cu pomi și acoperișul unei case în fundal",
+     "en": "Dense, tall weeds on the plot, with trees and the roof of a house in the background"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-06-22-cirese-punga.jpg",
+    "alt": {
+     "ro": "Cireșe galben-roșiatice culese într-o pungă mov, așezată în iarbă sub o ramură de cireș",
+     "en": "Yellow-red cherries picked into a purple bag, set in the grass under a cherry branch"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-06-22-cires-copil.jpg",
+    "alt": {
+     "ro": "Un băiat râzând lângă cireșul încărcat cu fructe roșii, cu mâna pe o ramură",
+     "en": "A boy laughing next to the cherry tree laden with red fruit, with his hand on a branch"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-06-22-poteca-casa.jpg",
+    "alt": {
+     "ro": "Un copil pe poteca de beton de lângă casă, sub vița de vie, lângă buruieni mai înalte decât el",
+     "en": "A child on the concrete path beside the house, under the grapevine, next to weeds taller than him"
+    }
+   }
+  ],
   "linkuri": [
    {
     "titlu": {
@@ -594,6 +623,13 @@
    ]
   },
   "foto": [
+   {
+    "src": "resurse/jurnal/2026-05-15-marginea-drumului.jpg",
+    "alt": {
+     "ro": "Iarba cosită de pe marginea drumului, lângă zidul de piatră, cu casele din depărtare",
+     "en": "The cut grass on the roadside by the stone wall, with houses in the distance"
+    }
+   },
    {
     "src": "resurse/jurnal/2026-05-15-curte-cosita.jpg",
     "alt": {
