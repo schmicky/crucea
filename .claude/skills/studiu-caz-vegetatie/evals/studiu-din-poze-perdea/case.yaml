@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: studiu-din-poze-perdea
+expected_outcome: |
+  Un director nou studiu-caz-<slug>/ cu poze/thumb și poze/mare (p01..p09, WebP), date.py cu META, TAXONI și PROBLEME
+  după schema skill-ului, index.html generat cu scripts/build.py (nu scris de mână), README.md al studiului,
+  un rând nou în tabelul „Studii de caz din teren" din README.md al proiectului și o intrare în jurnalul din
+  time-lapse/plan-implementare-nord-miyawaki.md. Fișele descriu ce se vede în poze, marchează determinările nesigure,
+  leagă speciile de codurile din planul nord (inPlan) și dau verdictul pentru Crucea; concluziile răspund la întrebarea
+  despre perdeaua de nord. Testul de fum trece și capturile sunt trimise utilizatorului.

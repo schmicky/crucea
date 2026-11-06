@@ -118,6 +118,25 @@
 
     #count-badge { font-size: 11px; color: #8b949e; margin-left: auto; white-space: nowrap; }
 
+    /* Filtrul pe furnizori (selecție multiplă) */
+    #furnizor-wrap { position: relative; display: flex; align-items: center; gap: 6px; }
+    #furnizor-btn.on { background: #1f6feb; border-color: #388bfd; color: #fff; }
+    #furnizor-panel { display: none; position: fixed; z-index: 60; min-width: 260px;  /* fixed: bara are overflow hidden */
+                      background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 8px 10px;
+                      box-shadow: 0 8px 24px rgba(0,0,0,.6); max-height: 70vh; overflow-y: auto; }
+    #furnizor-panel.visible { display: block; }
+    #furnizor-panel label { display: flex; align-items: center; gap: 8px; padding: 5px 2px; font-size: 12px;
+                            color: #c9d1d9; cursor: pointer; white-space: nowrap; }
+    #furnizor-panel label input { accent-color: #2ea043; cursor: pointer; }
+    #furnizor-panel label .n { margin-left: auto; color: #8b949e; font-size: 11px; }
+    #furnizor-panel label.gol { color: #6e7681; }
+    #furnizor-panel .fp-head { display: flex; justify-content: space-between; align-items: center; gap: 10px;
+                               font-size: 11px; color: #8b949e; padding-bottom: 6px; border-bottom: 1px solid #30363d; margin-bottom: 4px; }
+    #furnizor-panel .fp-head button { background: none; border: 1px solid #30363d; color: #c9d1d9; border-radius: 5px;
+                                      font-size: 11px; padding: 2px 8px; cursor: pointer; }
+    #furnizor-count { font-size: 11px; color: #8b949e; white-space: nowrap; }
+    .pdot.ascuns, .gdot.ascuns { display: none !important; }
+
     /* ── Map area ── */
     #map-wrap {
       flex: 1;
@@ -723,6 +742,14 @@
     <button class="btn"        id="btn-edit"      onclick="setAppMode('edit')">✏ Editare</button>
     <button class="btn"        id="btn-measure"   onclick="setAppMode('measure')">📏 Măsurare</button>
     <button class="btn"        id="btn-overlay"   onclick="setAppMode('overlay')">🛰 Suprapunere</button>
+  </div>
+  <div class="tb-sep"></div>
+
+  <!-- Filtru pe furnizori: arată doar speciile confirmate de furnizorii bifați -->
+  <div id="furnizor-wrap">
+    <button class="btn" id="furnizor-btn" onclick="toggleFurnizori(event)" title="Arată doar plantele pe care le primești de la furnizorii bifați">🏷 Furnizor ▾</button>
+    <div id="furnizor-panel" onclick="event.stopPropagation()"></div>
+    <span id="furnizor-count"></span>
   </div>
   <div class="tb-sep"></div>
 
@@ -2101,7 +2128,82 @@ mapWrap.addEventListener('touchend', () => {
   lastTouchDist = null;
 });
 
-// ══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+// FILTRU PE FURNIZORI
+// Corespondența furnizor → coduri de specii din planul nord, după listele din
+// resurse/oferte/comenzi-noiembrie-plan-nord.md și comenzi-miyawaki-est.md.
+// Se actualizează odată cu listele (regula e în CLAUDE.md). Pădurea Miyawaki
+// (stratul separat) nu e filtrată. Ordinea = ordinea comenzilor.
+// ═══════════════════════════════════════════════════════
+const FURNIZORI = [
+  { nume: 'Ionuț Suceava',               coduri: ['A21','A24','A52','A34','A48','F28','S5','S81'],
+    nota: 'confirmat 31 oct – 1 nov 2026: sălcioară, frasin comun, ulm, pin negru (martie), tei argintiu, măceș, păducel, lemn câinesc, mojdrean' },
+  { nume: 'Foresta Brăila',              coduri: ['A52','A21','A24','A5','S5','F28','F11','F9'],
+    nota: 'confirmat 6 oct 2026: toate speciile din lista lor' },
+  { nume: 'Pepiniera Silvică Agigea',    coduri: ['A21','S5','F28','F11','S4'],
+    nota: 'confirmat 21 oct 2026: sălcioară, păducel, măceș, corcoduș, scumpie (+ specii doar pentru pădure)' },
+  { nume: 'Matto Medusa Galați',         coduri: ['A40'],
+    nota: 'confirmat 6 oct 2026: stejar pufos, ulm de câmp' },
+  { nume: 'Selficom Galați',             coduri: ['F44','A40','F28'],
+    nota: 'ofertă: sânger, stejar pufos, măceș' },
+  { nume: 'Țuțora Iași',                 coduri: ['A48'],
+    nota: 'ofertă veche: tei argintiu, carpen' },
+  { nume: 'Cobadin',                     coduri: ['A48','S4','S21','S3'],
+    nota: 'listă de prețuri 2024–2025, mărimi mari' },
+  { nume: 'Mizil (online)',              coduri: ['F1','F21','F6','F29','F30','F31','F59','F32','F19','S18','S21','S72','S3','S38','S4','F34','F44','S28','S50','S69','A43'],
+    nota: 'magazin online, exemplare mari; ultimă variantă' },
+  { nume: 'Pepinieră pomicolă (SCDP Constanța / Nalbant)', coduri: ['F17','F7','F53','F12','F10','F8','F26'],
+    nota: 'pomi altoiți și cătină, de sunat pentru soiuri' },
+];
+const FURNIZORI_KEY = 'nord-miyawaki-furnizori';
+let furnizoriBifati = new Set();
+try { furnizoriBifati = new Set(JSON.parse(localStorage.getItem(FURNIZORI_KEY) || '[]')); } catch (e) {}
+function furnizorPermite(code) {
+  if (!furnizoriBifati.size) return true;
+  for (const f of FURNIZORI) if (furnizoriBifati.has(f.nume) && f.coduri.includes(code)) return true;
+  return false;
+}
+function toggleFurnizori(e) {
+  e.stopPropagation();
+  const pan = document.getElementById('furnizor-panel');
+  if (!pan.classList.contains('visible')) {
+    renderFurnizori();
+    const r = document.getElementById('furnizor-btn').getBoundingClientRect();
+    pan.style.top = (r.bottom + 6) + 'px';
+    pan.style.left = Math.max(8, Math.min(r.left, window.innerWidth - 300)) + 'px';
+  }
+  pan.classList.toggle('visible');
+}
+document.addEventListener('click', () => document.getElementById('furnizor-panel').classList.remove('visible'));
+function renderFurnizori() {
+  const pan = document.getElementById('furnizor-panel');
+  const nr = f => points.filter(p => f.coduri.includes(p.code)).length;
+  pan.innerHTML = '<div class="fp-head"><span>Arată doar ce primesc de la:</span>' +
+    '<button onclick="setFurnizori([])">Toți</button></div>' +
+    FURNIZORI.map(f => '<label class="' + (nr(f) ? '' : 'gol') + '" title="' + f.nota.replace(/"/g, '&quot;') + '">' +
+      '<input type="checkbox" ' + (furnizoriBifati.has(f.nume) ? 'checked ' : '') +
+      'onchange="toggleFurnizor(this.value, this.checked)" value="' + f.nume.replace(/"/g, '&quot;') + '">' +
+      f.nume + '<span class="n">' + nr(f) + '</span></label>').join('');
+}
+function toggleFurnizor(nume, on) {
+  if (on) furnizoriBifati.add(nume); else furnizoriBifati.delete(nume);
+  aplicaFurnizori();
+}
+function setFurnizori(lista) {
+  furnizoriBifati = new Set(lista);
+  renderFurnizori();
+  aplicaFurnizori();
+}
+function aplicaFurnizori() {
+  try { localStorage.setItem(FURNIZORI_KEY, JSON.stringify([...furnizoriBifati])); } catch (e) {}
+  const btn = document.getElementById('furnizor-btn');
+  btn.classList.toggle('on', furnizoriBifati.size > 0);
+  btn.textContent = furnizoriBifati.size ? '🏷 ' + [...furnizoriBifati].join(' + ') + ' ▾' : '🏷 Furnizor ▾';
+  updateAllDots();
+  updateCount();
+}
+
+// ═══════════════════════════════════════════════════════
 // DOTS
 // ══════════════════════════════════════════════════════════════
 function imgW() { return planImg.offsetWidth  || 1200; }
@@ -2136,6 +2238,7 @@ function positionDot(dot, p) {
 }
 
 function styleDot(dot, p) {
+  dot.classList.toggle('ascuns', !furnizorPermite(p.code));
   const info   = DB[p.code] || { type: 'arbore' };
   const sz     = typeSizePx[info.type] || 50;
   dot.style.width  = sz + 'px';
@@ -2190,6 +2293,7 @@ window.addEventListener('resize', () => {
   repositionAllDots(); renderMeasures();
   geoResized();
 });
+window.addEventListener('load', () => { if (furnizoriBifati.size) aplicaFurnizori(); });
 
 // ══════════════════════════════════════════════════════════════
 // NAVIGARE LUNI
@@ -2517,6 +2621,7 @@ function geoZoomHint() {
 }
 
 function styleGeoDot(el, p) {
+  el.classList.toggle('ascuns', !furnizorPermite(p.code));
   const info  = DB[p.code] || { type: 'arbore' };
   const sz    = GEO_SIZE[info.type] || 16;
   const state = getState(p.code, curMonth);
@@ -2912,7 +3017,11 @@ mapWrap.addEventListener('click', e => {
 // COUNT
 // ══════════════════════════════════════════════════════════════
 function updateCount() {
-  document.getElementById('count-badge').textContent = `${points.length} puncte`;
+  const vizibile = points.filter(p => furnizorPermite(p.code)).length;
+  document.getElementById('count-badge').textContent = furnizoriBifati.size
+    ? `${vizibile} din ${points.length} puncte` : `${points.length} puncte`;
+  const fc = document.getElementById('furnizor-count');
+  if (fc) fc.textContent = furnizoriBifati.size ? `${vizibile} plante` : '';
 }
 
 // ══════════════════════════════════════════════════════════════

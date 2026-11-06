@@ -4,6 +4,10 @@ Listele acoperă cele **145 de plante „neapărat în noiembrie”** (perdelele
 
 Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere. Prețurile sunt cele declarate de pepinierele silvice pe puietiforestieri.ro; pentru Mizil, Cobadin și pepiniera pomicolă prețurile nu au putut fi citite și se confirmă la comandă.
 
+## Ionuț — Suceava (găsit la 31 octombrie 2026)
+
+A confirmat pe WhatsApp că are măceș, păducel, frasin comun, tei argintiu, pin negru (doar rădăcină liberă), sălcioară, mojdrean, ulm și (1 noiembrie) lemn câinesc; nu are paltin și nuc. Cantitățile cerute, plan nord + pădure, cu rezervă: sălcioară 40, frasin comun 14, mojdrean 49, tei argintiu 26, pin negru 55 (în martie), ulm 41 (355 cu gardul viu de ulm pe perimetru), măceș 67, păducel 60, lemn câinesc 66 (toate pentru pădure; la stradă și pe cârlige lemnul câinesc a fost înlocuit cu laur portughez și photinia). Prețuri primite pe 2 noiembrie: măceș 5, păducel 5, frasin 4, tei argintiu 10, sălcioară 3, mojdrean 3, lemn câinesc 4, soc 10, alun 10, ulm 4 lei/buc (pin negru fără preț). Comanda completă cu 400 de ulmi ar fi 794 de puieți, 3 802 lei, plus transport din Suceava. Foresta dă aceleași specii comune la 1 leu, deci de la Ionuț se iau doar teiul argintiu, alunul, socul și eventual pinul; mărimea puieților de întrebat.
+
 ## Pepiniera Foresta SRL — Brăila
 *tel. 0766413310 · ofertă actualizată 21 august 2026 (puietiforestieri.ro)*
 
@@ -12,7 +16,7 @@ Puieți forestieri de 1–2 ani, rădăcină nudă, 40–80 cm. Livrare după c�
 | Cod | Specie | Nume latin | În plan | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
 | A52 | Ulm de Turkestan | *Ulmus pumila* | 24 | 27 | 1.00 | perdeaua de nord, rândul 1 |
-| A21 | Sălcioară | *Elaeagnus angustifolia* | 45 | 50 | 1.00 | perdelele N, E, S |
+| A21 | Sălcioară | *Elaeagnus angustifolia* | 45 | 50 | 1.00 | perdelele N, E, S; are și Pepiniera Silvică Agigea (confirmat telefonic, 21 octombrie 2026), la 70 km |
 | A24 | Frasin comun | *Fraxinus excelsior* | 17 | 19 | 1.00 | latura de est |
 | A5 | Paltin de câmp | *Acer platanoides* | 2 | 3 | 1.00 |  |
 | S5 | Păducel | *Crataegus monogyna* | 7 | 8 | 1.00 | perdele |
