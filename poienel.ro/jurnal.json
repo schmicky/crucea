@@ -496,5 +496,48 @@
     "url": "index.html#specie-A52"
    }
   ]
+ },
+ {
+  "id": "2026-09-05-buruienile",
+  "data": "2026-09-05",
+  "taguri": [
+   "amenajare"
+  ],
+  "titlu": {
+   "ro": "Buruienilor le merge foarte bine",
+   "en": "The weeds are doing very well"
+  },
+  "text": {
+   "ro": [
+    "5 septembrie: buruienilor le merge foarte bine. Parcela e acoperită de un covor des de buruieni, iar iarba înaltă, cu spice, a ajuns să cuprindă din ambele părți poteca de la poartă."
+   ],
+   "en": [
+    "5 September: the weeds are doing very well. The plot is covered in a dense carpet of them, and tall, spiky grass has closed in on both sides of the path to the gate."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-09-05-covor-buruieni.jpg",
+    "alt": {
+     "ro": "Covor des de buruieni pe parcelă, cu flori mici violete, iar în fundal pomii și o construcție de lemn",
+     "en": "A dense carpet of weeds on the plot, with small purple flowers, and trees and a timber structure in the background"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-09-05-poteca-poarta.jpg",
+    "alt": {
+     "ro": "Poteca de beton spre poartă, strânsă între ierburi înalte cu spice, cu zidul de piatră și poarta în fundal",
+     "en": "The concrete path to the gate, hemmed in by tall grass with seed spikes, with the stone wall and the gate in the background"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-09-05-parcela.jpg",
+    "alt": {
+     "ro": "Parcela acoperită de buruieni sub cer senin, cu un singur copac înalt în fundal",
+     "en": "The plot covered in weeds under a clear sky, with a single tall tree in the background"
+    }
+   }
+  ],
+  "linkuri": []
  }
 ]
