@@ -49,7 +49,8 @@
     if (c === 95) return 'thunder'; if (c >= 96) return 'hail';
     return 'overcast';
   }
-  const svg = (k) => '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICON[ALIAS[k] || k] || ICON.overcast) + '</svg>';
+  // width/height și atributele de desen sunt pe element: fără stilurile din site.css (cache vechi) pictograma rămâne mică
+  const svg = (k) => '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[ALIAS[k] || k] || ICON.overcast) + '</svg>';
   const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
   function render(d) {

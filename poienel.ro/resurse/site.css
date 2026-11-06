@@ -29,7 +29,7 @@ header {
   text-align: center;
 }
 
-.logo { max-width: 360px; height: auto; margin: 0 auto 20px; }
+.logo { max-width: min(360px, 100%); height: auto; margin: 0 auto 20px; }
 /* Pe ecran lat: logo-ul în stânga, titlul, subtitlul și prognoza în dreapta, ca antetul să fie scund */
 @media (min-width: 900px) {
   header {
@@ -490,7 +490,7 @@ td a:hover { text-decoration: underline; }
 .vreme-zi { font-size: 11px; color: var(--text-secondary); }
 .vreme svg { width: 26px; height: 26px; margin: 1px 0; fill: none; stroke: var(--text-secondary); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .vreme .sol { stroke: var(--accent-yellow); }
-.vreme .nor { stroke: var(--text-secondary); fill: var(--bg-secondary); }
+.vreme .nor { stroke: var(--text-secondary); fill: var(--vreme-fundal, var(--bg-secondary)); }
 .vreme .apa, .vreme .zapada { stroke: var(--accent-blue); }
 .vreme .tare { stroke-width: 2.2; }
 .vreme .zapada { stroke-width: 2.6; }
@@ -499,4 +499,19 @@ td a:hover { text-decoration: underline; }
 .vreme-t i { font-style: normal; color: var(--text-secondary); margin-left: 4px; }
 .vreme-sursa { font-size: 10px; color: var(--text-secondary); white-space: nowrap; text-decoration: none; }
 .vreme-sursa:hover { text-decoration: underline; }
-@media (max-width: 700px) { .vreme { justify-content: flex-start; } .vreme-titlu, .vreme-sursa { display: none; } }
+/* Pe telefon: card alb cu titlul și sursa pe un rând, apoi cele 7 zile în coloane egale (încap fără derulare) */
+@media (max-width: 700px) {
+  .vreme {
+    --vreme-fundal: var(--bg-dark);
+    flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 10px;
+    margin: 14px 0 0; padding: 8px 6px 6px; overflow: visible;
+    background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 10px;
+  }
+  .vreme-titlu { order: 1; padding-left: 6px; }
+  .vreme-sursa { order: 2; padding-right: 6px; }
+  .vreme-zile { order: 3; width: 100%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; }
+  .vreme-zile li { min-width: 0; padding: 2px 0; }
+  .vreme svg { width: 22px; height: 22px; }
+  .vreme-t { display: flex; flex-direction: column; align-items: center; }
+  .vreme-t i { margin-left: 0; }
+}
