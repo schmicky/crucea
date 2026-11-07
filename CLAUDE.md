@@ -12,7 +12,7 @@ Reguli de lucru stabilite cu George Șerban:
 - **Fișierele generate** (`miyawaki/index-est*.html`, `plan-miyawaki-est*.md`, `resurse/oferte/comenzi-miyawaki-est.md`,
   `studiu-caz-*/index.html`) se refac din scripturile lor, nu se editează de mână, ca datele și paginile să nu se despartă.
   Scripturile stau **în repo** (`miyawaki/scripts/`, `.claude/skills/*/scripts/`), nu în scratchpad-ul sesiunii, care se pierde;
-  schema 3 a pădurii se regenerează cu `python3 miyawaki/scripts/gen-est3.py` (generatoarele schemelor 1 și 2 și `comenzi.py`
+  schemele 3 și 4 ale pădurii se regenerează cu `python3 miyawaki/scripts/gen-est3.py` / `gen-est4.py` (generatoarele schemelor 1 și 2 și `comenzi.py`
   s-au pierdut; paginile lor rămân ca referință și se editează doar dacă e strict necesar).
 - **Jurnalul** proiectului e în `time-lapse/plan-implementare-nord-miyawaki.md`: fiecare decizie sau răspuns de la furnizori
   primește o intrare datată, cea mai nouă prima.
