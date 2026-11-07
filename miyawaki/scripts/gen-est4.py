@@ -179,6 +179,7 @@ F = C2['fasie']
 sablon = (f'<p><b>Rama de 3 × 3 m și cele 30 de cuie:</b> ramă din șipcă cu latura de nord vopsită roșu, ținută mereu spre gardul de nord; cuie la 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m pe laturile de nord și de sud și la 0,25 · 0,75 · 1,25 · 1,75 · 2,25 · 2,75 m pe laturile de est și de vest; sforile între cuiele opuse dau cele 30 de poziții, numerotate 1–30 de la nord spre sud și de la vest spre est. '
           f'<b>O singură rețetă</b>: fiecare specie are mereu același cui, în orice pătrat; pe pătratele de sud, patru cuie de arbori mari primesc pin negru. Caroiajul pornește de la 2 m de gardul de est și 2 m de gardul de nord; coloanele A, B, C… merg spre vest, rândurile 1, 2, 3… spre sud; {len(SQ)} de pătrate. '
           f'<b>Fără lăzi</b>: un singur set de 30 de saci numerotați pe o roabă, umplut dimineața din snopi; fișa cui → specie e una pentru toată pădurea.</p>'
+          '<p><b>De tipărit:</b> <a href="retete-est4.pdf">cele două rețete pe A4 orizontal, cu numele complet al speciei la fiecare cui (PDF)</a> · <a href="retete-est4.html">varianta HTML</a> · <a href="rama-3x3.png">desenul ramei cu fișa cui → specie (PNG)</a>.</p>'
           '<p class="rama-img"><a href="rama-3x3.svg"><img src="rama-3x3.svg" alt="Rama de 3 × 3 m cu 30 de cuie și fișa cui → specie" style="width:100%;max-width:1100px;display:block;border:1px solid #ddd;border-radius:6px"></a></p>')
 regula = f'<p><b>Regula de sărit (singura):</b> {H.escape(REG)} Plantele cu spini care ajung lângă alee (păducel, porumbar, măceș) se taie la sol în anul 2, când se redeschide aleea.</p>'
 fasie_txt = (f'<p><b>Fâșia de la gard (F), {len(fasie)} puieți, se plantează prima, pe linie, fără ramă:</b> {H.escape(F["descriere"])} Rotația speciilor pe fiecare rând: ' + ' → '.join(f'<span class="cod" style="background:{COL[SP[c]["strat"]]}">{c}</span>' for c in F['rotatie']) + ' și de la capăt.</p>')
@@ -251,3 +252,44 @@ md = re.sub(r'## 6\. Caroiaj.*', sec6, md, count=1, flags=re.S)
 md = re.sub(r'\| puieți \| \d+ \|', f'| puieți | {tot} |', md, count=1)
 open(f'{R}/plan-miyawaki-est4.md', 'w', encoding='utf-8').write(md)
 print('scris: plantare-miyawaki-est4.json, index-est4.html, plan-miyawaki-est4.md, rama-3x3.svg')
+
+# ── retete-est4.html: cele două rețete pe A4 orizontal, cu numele complet al speciei la fiecare cui ──
+def rt_full_svg(k):
+    Wm = 170.0; m = 10.0; w = Wm - 2 * m; px = lambda u: m + u * w / 3; py = lambda v: m + (3 - v) * w / 3
+    o = [f'<svg viewBox="0 0 {Wm} {Wm + 4}" width="{Wm}mm" height="{Wm + 4}mm" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, Segoe UI, Helvetica, Arial, sans-serif">',
+         f'<rect x="{m}" y="{m}" width="{w}" height="{w}" fill="#efe9d8" stroke="#6b5f3a" stroke-width="0.6"/>',
+         f'<rect x="{m - 2}" y="{m - 2.2}" width="{w + 4}" height="2.2" fill="#c62828"/><text x="{Wm / 2}" y="{m - 3.5}" font-size="3.2" font-weight="700" text-anchor="middle" fill="#c62828">LATURA ROȘIE = SPRE GARDUL DE NORD</text>']
+    for u in US: o.append(f'<line x1="{px(u):.1f}" y1="{m}" x2="{px(u):.1f}" y2="{Wm - m}" stroke="#999" stroke-width="0.25" stroke-dasharray="1 1"/><text x="{px(u):.1f}" y="{Wm - m + 4}" font-size="2.8" text-anchor="middle" fill="#444">{str(u).replace(".", ",")} m</text>')
+    for v in VS: o.append(f'<line x1="{m}" y1="{py(v):.1f}" x2="{Wm - m}" y2="{py(v):.1f}" stroke="#999" stroke-width="0.25" stroke-dasharray="1 1"/><text x="{m - 1.5}" y="{py(v) + 1:.1f}" font-size="2.8" text-anchor="end" fill="#444">{f"{v:.2f}".replace(".", ",")}</text>')
+    for p in RETETE[k]:
+        x, y = px(p['u']), py(p['v']); r = 4.2 if p['strat'] == 'A' else 3.4; nume = SP[p['cod']]['ro']
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 1.4:.1f}" font-size="4" font-weight="700" text-anchor="middle" fill="#fff">{p["poz"]}</text>')
+        if k == 'S' and p['cod'] == 'Pn': o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 1}" fill="none" stroke="#0b3d91" stroke-width="0.5" stroke-dasharray="1 0.7"/>')
+        parts = nume.split(', ')[0].split(' ')
+        if len(nume) > 13 and len(parts) > 1:
+            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(" ".join(parts[:-1]))}</text><text x="{x:.1f}" y="{y + r + 6.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(parts[-1])}</text>')
+        else:
+            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
+    return ''.join(o) + '</svg>'
+def rt_full_page(k):
+    desc = {'I': f'rețeta de interior — {uses["I"]} pătrate; fiecare specie o dată, mojdreanul de două ori (cuiele 4 și 22)',
+            'S': f'rețeta benzii de sud — {uses["S"]} pătrate; aceeași așezare, cu pin negru la cuiele ' + ', '.join(str(p) for p in sorted(TPL) if S_LAY[p] == 'Pn') + ' (cerc albastru) în locul teiului, cerului, ulmului și sorbului'}[k]
+    rows = ''.join(f'<tr><td class="n">{p["poz"]}</td><td><span class="sw" style="background:{COL[p["strat"]]}"></span>{H.escape(SP[p["cod"]]["ro"])}</td><td><i>{H.escape(SP[p["cod"]]["lat"])}</i></td><td>{NUME_STRAT[p["strat"]]}</td></tr>' for p in RETETE[k])
+    return (f'<section class="pg"><h1>Rețeta {k} <small>— {desc}</small></h1><div class="row">{rt_full_svg(k)}<div class="tbl"><table><thead><tr><th>Cui</th><th>Specie</th><th>Nume latin</th><th>Strat</th></tr></thead><tbody>{rows}</tbody></table>'
+            f'<p class="foot">Rama de 3 × 3 m, cuie la 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m (nord/sud) și 0,25 … 2,75 m din 0,5 în 0,5 (est/vest); numerotarea 1–30 de la nord spre sud, de la vest spre est. Regula de sărit: cuiul care cade pe alee, în luminiș sau dincolo de var se sare. Despicătura se închide cu palmele, nu cu piciorul. Pădurea Miyawaki Poienel, Crucea — schema de plantare 4, {len(SQ)} de pătrate.</p></div></div></section>')
+html = f'''<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>Rețetele schemei 4 — rama de 3 × 3 m</title>
+<style>
+@page {{ size: A4 landscape; margin: 9mm; }}
+body {{ margin: 0; font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif; color: #222; background: #fff; }}
+.pg {{ width: 279mm; height: 190mm; page-break-after: always; break-after: page; overflow: hidden; }}
+.pg:last-child {{ page-break-after: auto; }}
+h1 {{ font-size: 15px; margin: 0 0 3mm; color: #1f4d33; }} h1 small {{ font-weight: 400; color: #444; font-size: 11px; }}
+.row {{ display: flex; gap: 6mm; align-items: flex-start; }}
+.tbl {{ flex: 1; }} table {{ border-collapse: collapse; font-size: 9.5px; width: 100%; }}
+td, th {{ padding: 0.6mm 1.5mm; border-bottom: 0.2mm solid #e3ddcc; text-align: left; }} td.n {{ font-weight: 700; width: 6mm; }}
+.sw {{ display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; vertical-align: middle; margin-right: 1.5mm; }}
+.foot {{ font-size: 8.5px; color: #444; margin: 3mm 0 0; line-height: 1.35; }}
+@media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
+</style></head><body>{rt_full_page('I')}{rt_full_page('S')}</body></html>'''
+open(f'{R}/retete-est4.html', 'w', encoding='utf-8').write(html)
+print('scris: retete-est4.html')
