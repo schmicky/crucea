@@ -1,6 +1,6 @@
 # Comenzi de puieți pentru pădurea Miyawaki din colțul de nord-est
 
-Necesarul pentru schema `miyawaki/index-est.html`: **919 de puieți din 30 de specii** pe 339.6 m², împărțit pe furnizori după ofertele din `oferte-puieti-pepiniere-silvice.xlsx` și listele din `pepiniere-mizil-cobadin.md`. Pentru fiecare furnizor există un Excel de cerere de ofertă gata de trimis, în `resurse/oferte/cereri/` (link sub titlul fiecărei secțiuni). Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere, normale la Miyawaki (5–10 % în primul an).
+Necesarul pentru schema `miyawaki/index-est4.html`: **899 de puieți din 30 de specii** pe 345.6 m², împărțit pe furnizori după ofertele din `oferte-puieti-pepiniere-silvice.xlsx` și listele din `pepiniere-mizil-cobadin.md`. Pentru fiecare furnizor există un Excel de cerere de ofertă gata de trimis, în `resurse/oferte/cereri/` (link sub titlul fiecărei secțiuni). Cantitatea „de comandat” include o rezervă de 10 % (minimum o bucată) pentru pierderi la prindere, normale la Miyawaki (5–10 % în primul an).
 
 **Ce se cere la toți furnizorii:** puieți mici, de 1–2 ani, 30–80 cm, rădăcină nudă sau ghiveci de 1–2 l (pinul negru numai ghiveci sau balot); livrare sau ridicare în aceeași săptămână, 16–22 noiembrie, cu rădăcinile în saci umezi; la recepție se numără pe specie și se înșanțează ce nu se plantează în ziua aceea.
 
@@ -8,11 +8,11 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 
 | Specie din schemă | Buc. | Înlocuitor și furnizor |
 |---|---:|---|
-| Cărpiniță (Carpinus orientalis) | 38 | 19 carpen comun (Țuțora Iași) + 19 sâmbovină (Agigea nu are; Cobadin 50 lei; altfel tot carpen) |
-| Salbă râioasă (Euonymus verrucosus) | 27 | 27 salbă moale (Mizil, 9,91 lei) |
-| Verigar (Rhamnus cathartica) | 27 | 16 călin (Mizil, 18,02 lei) + 11 măceș (Foresta) |
-| Iasomie sălbatică (Jasminum fruticans) | 22 | 22 cătină roșie, Tamarix (Cobadin, 15 lei) |
-| Bășicoasă (Colutea arborescens) | 22 | 22 arbore de mazăre, Caragana (Agigea nu are; Mizil fără stoc; de găsit sau înlocuit cu păducel) |
+| Cărpiniță (Carpinus orientalis) | 24 | 12 carpen comun (Țuțora Iași) + 12 sâmbovină (Agigea nu are; Cobadin 50 lei; altfel tot carpen) |
+| Salbă râioasă (Euonymus verrucosus) | 36 | 36 salbă moale (Mizil, 9,91 lei) |
+| Verigar (Rhamnus cathartica) | 46 | 28 călin (Mizil, 18,02 lei) + 18 măceș (Foresta) |
+| Iasomie sălbatică (Jasminum fruticans) | 27 | 27 cătină roșie, Tamarix (Cobadin, 15 lei) |
+| Bășicoasă (Colutea arborescens) | 20 | 20 arbore de mazăre, Caragana (Agigea nu are; Mizil fără stoc; de găsit sau înlocuit cu păducel) |
 
 ## Starea comenzilor
 
@@ -22,7 +22,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Matto Medusa Galați | **confirmat telefonic**: stejar pufos și ulm de câmp | 6 octombrie 2026 | comanda fermă după prima brumă, în aceeași săptămână cu Foresta |
 | Doi Cocoși Brăila | **confirmat telefonic**: jugastru și măr pădureț (0766405638, strada Doi Cocoși nr. 2) | 6 octombrie 2026 | comanda fermă în noiembrie, odată cu Foresta; de cerut și cireșul sălbatic |
 | Agigea (Romsilva) | **confirmat telefonic**: au porumbar, scumpie, măceș, jugastru, stejar brumăriu, cer, corcoduș, vișin turcesc, păducel, sălcioară (și frasin de Pennsylvania, stejar verde, ienupăr de Virginia, glădiță, plop, nefolosite); **nu au** corn, alun, salbă moale, călin, dârmox, pin negru, soc, arbore de mazăre, sorb, păr sălbatic, arțar tătăresc, sâmbovină | 21 octombrie 2026 | de cerut prețuri și mărimi; comanda fermă în noiembrie pentru porumbar și scumpie; de decis dacă jugastrul și speciile comune cu Foresta se iau de aici (70 km) |
-| Ionuț, Suceava | **prețuri primite pe 2 noiembrie 2026**: măceș 5, păducel 5, frasin comun 4, tei argintiu 10, sălcioară 3, mojdrean 3, lemn câinesc 4, soc 10, alun 10, ulm 4 lei/buc; pin negru fără preț încă; **nu au** paltin, nuc. Față de Foresta (1 leu la ulm, măceș, păducel, lemn câinesc, mojdrean, sălcioară, frasin) e de 3–5 ori mai scump; merită doar pentru tei argintiu, alun, soc și, după preț, pin negru | 2 noiembrie 2026 | de întrebat mărimea puieților (dacă sunt de 1–1,5 m prețul e corect); recomandare: de la Ionuț tei 26, alun 51, soc 21, pin 55 (≈ 980 lei fără pin), restul de la Foresta; preia din pădure mojdreanul (49), păducelul (60, 84 cu înlocuirea arborelui de mazăre), măceșul (67), lemnul câinesc (66), teiul argintiu (26, până acum Țuțora 2,50 lei), pinul negru (55, de plantat în martie: rădăcina liberă de pin nu se pune în noiembrie) și ulmul de câmp (18, ca ulm de Turkestan); Foresta rămâne cu stejar brumăriu, cer, vișin turcesc, corcoduș, lemn câinesc |
+| Ionuț, Suceava | **prețuri primite pe 2 noiembrie 2026**: măceș 5, păducel 5, frasin comun 4, tei argintiu 10, sălcioară 3, mojdrean 3, lemn câinesc 4, soc 10, alun 10, ulm 4 lei/buc; pin negru fără preț încă; **nu au** paltin, nuc. Față de Foresta (1 leu la ulm, măceș, păducel, lemn câinesc, mojdrean, sălcioară, frasin) e de 3–5 ori mai scump; merită doar pentru tei argintiu, alun, soc și, după preț, pin negru | 2 noiembrie 2026 | de întrebat mărimea puieților (dacă sunt de 1–1,5 m prețul e corect); recomandare (aliniată pe schema 4): de la Ionuț tei argintiu 19, alun 27, soc 29 (≈ 750 lei), pin negru 52 în martie dacă e sub 3 lei, restul de la Foresta; ar putea prelua din pădure mojdreanul (52), păducelul (46, 68 cu înlocuirea arborelui de mazăre), măceșul (68), lemnul câinesc (60), teiul argintiu (19, până acum Țuțora 2,50 lei), pinul negru (52 cu planul nord, în martie) și ulmul (39 cu planul nord, 353 cu gardul viu); Foresta rămâne cu stejar brumăriu, cer, vișin turcesc, corcoduș, lemn câinesc |
 | Salcea (Romsilva Suceava) | **confirmat telefonic**: au arțar tătăresc (și pin silvestru, stejar, larice, plop, salcie, salcâm, nefolosite); **nu au** salbă moale, călin, dârmox, sorb, soc, păr sălbatic, pin negru | 21 octombrie 2026 | 0753156196 / 0751164370; comanda de arțar tătăresc în noiembrie, prin curier; de cerut prețul și mărimea |
 | Stejarul Galați | de sunat |  | 0774609287; alun, în locul celui de la Mizil; se ridică odată cu Matto Medusa și Selficom |
 | Szabó Zsolt, Tomești (Harghita) | **de sunat**: Agigea nu are corn | 21 octombrie 2026 | 0746118273; anunț de corn 15–50 cm la 1,40 lei, vechi de 2 ani; doar cu livrare prin curier |
@@ -56,15 +56,15 @@ Furnizorul principal: 8 specii, o treime din pădure, cel mai aproape de Crucea.
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Qb | Stejar brumăriu | *Quercus pedunculiflora* | 28 | 31 | 1,00 | strat A; alternativ AGRARCRIS Vaslui 0,9 lei, Milandra Galați 1 leu |
-| Qc | Cer | *Quercus cerris* | 16 | 18 | 1,00 | strat A |
-| Fo | Mojdrean | *Fraxinus ornus* | 44 | 49 | 1,00 | strat B; alternativ Rădăuți Prut (Botoșani) 0,24 lei |
-| Pm | Vișin turcesc | *Prunus mahaleb* | 22 | 25 | 1,00 | strat B; singura ofertă silvică |
-| Cr | Păducel | *Crataegus monogyna* | 49 | 54 | 1,00 | strat C; și pe manta, la hotar |
-| Pc | Corcoduș | *Prunus cerasifera* | 22 | 25 | 1,00 | strat C |
-| Lv | Lemn câinesc | *Ligustrum vulgare* | 60 | 66 | 1,00 | strat D, manta; are și Ionuț, Suceava (1 noiembrie); alternativ Hortiart Suceava 1 leu |
-| Rc | Măceș | *Rosa canina* | 55 | 61 | 1,00 | strat D: 44 din schemă + 11 în locul verigarului |
-| | **Total Pepiniera Foresta SRL** | | **296** | **329** | | |
+| Qb | Stejar brumăriu | *Quercus pedunculiflora* | 26 | 29 | 1,00 | strat A; alternativ AGRARCRIS Vaslui 0,9 lei, Milandra Galați 1 leu |
+| Qc | Cer | *Quercus cerris* | 15 | 17 | 1,00 | strat A |
+| Fo | Mojdrean | *Fraxinus ornus* | 47 | 52 | 1,00 | strat B; alternativ Rădăuți Prut (Botoșani) 0,24 lei |
+| Pm | Vișin turcesc | *Prunus mahaleb* | 28 | 31 | 1,00 | strat B; singura ofertă silvică |
+| Cr | Păducel | *Crataegus monogyna* | 36 | 40 | 1,00 | strat C; și pe manta, la hotar |
+| Pc | Corcoduș | *Prunus cerasifera* | 20 | 22 | 1,00 | strat C |
+| Lv | Lemn câinesc | *Ligustrum vulgare* | 54 | 60 | 1,00 | strat D, manta; are și Ionuț, Suceava (1 noiembrie); alternativ Hortiart Suceava 1 leu |
+| Rc | Măceș | *Rosa canina* | 55 | 61 | 1,00 | strat D: 37 din schemă + 18 în locul verigarului |
+| | **Total Pepiniera Foresta SRL** | | **281** | **312** | | |
 
 ## Pepiniera Matto Medusa SRL — Galați
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-matto-medusa-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-matto-medusa-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -75,9 +75,9 @@ Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta 
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Qp | Stejar pufos | *Quercus pubescens* | 39 | 43 | 1,00 | strat A, specia-cheie a silvostepei dobrogene |
-| Um | Ulm de câmp | *Ulmus minor* | 16 | 18 | 1,00 | strat A; alternativ Rădăuți Prut (Botoșani) 0,9 lei |
-| | **Total Pepiniera Matto Medusa SRL** | | **55** | **61** | | |
+| Qp | Stejar pufos | *Quercus pubescens* | 27 | 30 | 1,00 | strat A, specia-cheie a silvostepei dobrogene |
+| Um | Ulm de câmp | *Ulmus minor* | 14 | 16 | 1,00 | strat A; alternativ Rădăuți Prut (Botoșani) 0,9 lei |
+| | **Total Pepiniera Matto Medusa SRL** | | **41** | **46** | | |
 
 ## Pepiniera Doi Cocoși SRL — Brăila (de confirmat)
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-doi-cocosi-srl.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-doi-cocosi-srl.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -88,10 +88,10 @@ Confirmat telefonic la 6 octombrie: au jugastru și măr pădureț. Lista lor in
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Ac | Jugastru | *Acer campestre* | 38 | 42 | de confirmat | strat B |
-| Ms | Măr pădureț | *Malus sylvestris* | 8 | 9 | de confirmat | strat B; alternativ SC OLMA Iași 1,5 lei |
-| Pa | Cireș sălbatic | *Prunus avium* | 11 | 13 | de confirmat | strat B; mutat de la Mizil (nu-l au); alternativ Țuțora Iași 1,5 lei |
-| | **Total Pepiniera Doi Cocoși SRL** | | **57** | **64** | | |
+| Ac | Jugastru | *Acer campestre* | 21 | 24 | de confirmat | strat B |
+| Ms | Măr pădureț | *Malus sylvestris* | 25 | 28 | de confirmat | strat B; alternativ SC OLMA Iași 1,5 lei |
+| Pa | Cireș sălbatic | *Prunus avium* | 26 | 29 | de confirmat | strat B; mutat de la Mizil (nu-l au); alternativ Țuțora Iași 1,5 lei |
+| | **Total Pepiniera Doi Cocoși SRL** | | **72** | **81** | | |
 
 ## Pepiniera Țuțora — Iași
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-tutora.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-tutora.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -102,9 +102,9 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Tt | Tei argintiu | *Tilia tomentosa* | 22 | 25 | 2,50 | strat A; alternativ Cobadin, dacă au tei argintiu |
-| Co | Carpen comun (în locul cărpiniței) | *Carpinus betulus* | 19 | 21 | 1,50 | strat B; înlocuitor pentru 19 din cele 38 cărpinițe; alternativ Mizil |
-| | **Total Pepiniera Țuțora** | | **41** | **46** | | |
+| Tt | Tei argintiu | *Tilia tomentosa* | 16 | 18 | 2,50 | strat A; alternativ Cobadin, dacă au tei argintiu |
+| Co | Carpen comun (în locul cărpiniței) | *Carpinus betulus* | 12 | 14 | 1,50 | strat B; înlocuitor pentru 12 din cele 24 cărpinițe; alternativ Mizil |
+| | **Total Pepiniera Țuțora** | | **28** | **32** | | |
 
 ## Pepiniera Silvică Agigea — Romsilva, Direcția Silvică Constanța
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-silvica-agigea.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-silvica-agigea.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -115,9 +115,9 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Ps | Porumbar | *Prunus spinosa* | 49 | 54 | 0,50 + TVA | strat D, manta ghimpoasă; în stoc (21 octombrie); prețul din oferta de pe bursataraneasca.ro, de reconfirmat |
-| Cc | Scumpie | *Cotinus coggygria* | 36 | 40 | de întrebat | strat C; în stoc (21 octombrie); Cobadin 80 lei era prea scump, Mizil nu mai e nevoie |
-| | **Total Pepiniera Silvică Agigea** | | **85** | **94** | | |
+| Ps | Porumbar | *Prunus spinosa* | 57 | 63 | 0,50 + TVA | strat D, manta ghimpoasă; în stoc (21 octombrie); prețul din oferta de pe bursataraneasca.ro, de reconfirmat |
+| Cc | Scumpie | *Cotinus coggygria* | 37 | 41 | de întrebat | strat C; în stoc (21 octombrie); Cobadin 80 lei era prea scump, Mizil nu mai e nevoie |
+| | **Total Pepiniera Silvică Agigea** | | **94** | **104** | | |
 
 ## Pepiniera Silvică Salcea — Romsilva, Direcția Silvică Suceava
 
@@ -127,8 +127,8 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| At | Arțar tătăresc | *Acer tataricum* | 38 | 42 | de întrebat | strat B; în stoc (21 octombrie); singura sursă silvică găsită; livrare prin curier, rădăcină nudă în sac umed |
-| | **Total Pepiniera Silvică Salcea** | | **38** | **42** | | |
+| At | Arțar tătăresc | *Acer tataricum* | 22 | 25 | de întrebat | strat B; în stoc (21 octombrie); singura sursă silvică găsită; livrare prin curier, rădăcină nudă în sac umed |
+| | **Total Pepiniera Silvică Salcea** | | **22** | **25** | | |
 
 ## Specii încă fără furnizor — după răspunsurile de la Agigea și Salcea (21 octombrie 2026)
 *nicio pepinieră confirmată; următoarele apeluri: Stejarul Galați, Tomești (Harghita), Voivodeni (Reghin), ICAS Ștefănești, OLMA Iași, online*
@@ -137,14 +137,14 @@ Nici Agigea, nici Salcea nu au speciile de mai jos (nici cornul, alunul, salba m
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Pn | Pin negru | *Pinus nigra* | 33 | 37 | de găsit | strat A; Pepiniera Silvică Voivodeni, Reghin, 1,45 lei (transport lung); Salcea are doar pin silvestru (nepotrivit); altfel ghiveci de 2–3 l la 45–60 lei online |
-| Vl | Dârmox | *Viburnum lantana* | 44 | 49 | de găsit | strat D; Salcea nu are (21 octombrie); de întrebat la Foresta și Doi Cocoși la comanda fermă, la ICAS Ștefănești; GardenExpert 21,80 lei |
-| Sn | Soc | *Sambucus nigra* | 16 | 18 | de găsit | strat D; planteieftine.ro 5 lei (50–80 cm, rădăcină liberă); Salcea nu are |
-| Cl | Arbore de mazăre (în locul bășicoasei) | *Caragana arborescens* | 22 | 25 | de găsit | strat D; Pepiniera Roșie 35 lei (scump); altfel înlocuire cu 22 păducel de la Foresta sau Agigea |
-| St | Sorb | *Sorbus torminalis* | 11 | 13 | de găsit | strat A; 2biz.ro 15 lei, 40–60 cm; Salcea nu are; dacă nu există, se înlocuiește cu cer de la Foresta/Agigea și pădurea rămâne cu 29 de specii |
-| Pp | Păr sălbatic | *Pyrus pyraster* | 22 | 25 | de găsit | strat B; SC OLMA, Iași, 0767806245, 2,5 lei; Salcea nu are; de întrebat la Doi Cocoși |
-| Co | Sâmbovină (în locul cărpiniței) | *Celtis australis* | 19 | 21 | de găsit | strat B; Cobadin 50 lei (3 ani, prea scump); dacă nu se găsește ieftin, tot carpen de la Țuțora, adică 38 carpeni în total |
-| | **Total Specii încă fără furnizor** | | **167** | **188** | | |
+| Pn | Pin negru | *Pinus nigra* | 30 | 33 | de găsit | strat A; Pepiniera Silvică Voivodeni, Reghin, 1,45 lei (transport lung); Salcea are doar pin silvestru (nepotrivit); altfel ghiveci de 2–3 l la 45–60 lei online |
+| Vl | Dârmox | *Viburnum lantana* | 39 | 43 | de găsit | strat D; Salcea nu are (21 octombrie); de întrebat la Foresta și Doi Cocoși la comanda fermă, la ICAS Ștefănești; GardenExpert 21,80 lei |
+| Sn | Soc | *Sambucus nigra* | 26 | 29 | de găsit | strat D; planteieftine.ro 5 lei (50–80 cm, rădăcină liberă); Salcea nu are |
+| Cl | Arbore de mazăre (în locul bășicoasei) | *Caragana arborescens* | 20 | 22 | de găsit | strat D; Pepiniera Roșie 35 lei (scump); altfel înlocuire cu 20 păducel de la Foresta sau Agigea |
+| St | Sorb | *Sorbus torminalis* | 17 | 19 | de găsit | strat A; 2biz.ro 15 lei, 40–60 cm; Salcea nu are; dacă nu există, se înlocuiește cu cer de la Foresta/Agigea și pădurea rămâne cu 29 de specii |
+| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | 22 | de găsit | strat B; SC OLMA, Iași, 0767806245, 2,5 lei; Salcea nu are; de întrebat la Doi Cocoși |
+| Co | Sâmbovină (în locul cărpiniței) | *Celtis australis* | 12 | 14 | de găsit | strat B; Cobadin 50 lei (3 ani, prea scump); dacă nu se găsește ieftin, tot carpen de la Țuțora, adică 24 carpeni în total |
+| | **Total Specii încă fără furnizor** | | **164** | **182** | | |
 
 ## Pepiniera Selficom — Galați
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-selficom.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-selficom.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -155,8 +155,8 @@ Singura pepinieră din zonă cu sânger la preț silvic (Cobadin nu-l are în li
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Cs | Sânger | *Cornus sanguinea* | 33 | 37 | 1,20 | strat C; alternativ Pepiniera Zăval (Dolj) 1,02 lei sau Agigea |
-| | **Total Pepiniera Selficom** | | **33** | **37** | | |
+| Cs | Sânger | *Cornus sanguinea* | 39 | 43 | 1,20 | strat C; alternativ Pepiniera Zăval (Dolj) 1,02 lei sau Agigea |
+| | **Total Pepiniera Selficom** | | **39** | **43** | | |
 
 ## Pepiniera Cobadin — Constanța
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-cobadin.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-cobadin.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -167,8 +167,8 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Jf | Cătină roșie (în locul iasomiei sălbatice) | *Tamarix ramosissima* | 22 | 25 | 15,00 (2024) | strat D, manta; înlocuitor pentru iasomia sălbatică; alternativ planteieftine.ro Tamarix tetrandra, rădăcină liberă |
-| | **Total Pepiniera Cobadin** | | **22** | **25** | | |
+| Jf | Cătină roșie (în locul iasomiei sălbatice) | *Tamarix ramosissima* | 27 | 30 | 15,00 (2024) | strat D, manta; înlocuitor pentru iasomia sălbatică; alternativ planteieftine.ro Tamarix tetrandra, rădăcină liberă |
+| | **Total Pepiniera Cobadin** | | **27** | **30** | | |
 
 ## Pepiniera Mizil — Prahova (magazin online)
 📎 **Cerere de ofertă de trimis:** [cerere-oferta-pepiniera-mizil.xlsx](https://github.com/schmicky/crucea/raw/master/resurse/oferte/cereri/cerere-oferta-pepiniera-mizil.xlsx) (Excel cu lista speciilor și cantităților, fără notele interne, cu datele de contact și data completate)
@@ -179,18 +179,18 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Cm | Corn | *Cornus mas* | 49 | 54 | 18,90 | strat C; Agigea nu are (21 octombrie); înainte de Mizil se încearcă Tomești (Harghita) și ICAS |
-| Ca | Alun | *Corylus avellana* | 33 | 37 | 13,51 | strat C; Agigea nu are (21 octombrie); se încearcă Pepiniera Stejarul, Galați, 0774609287 |
-| Ev | Salbă moale (în locul salbei râioase) | *Euonymus europaeus* | 27 | 30 | 9,91 | strat D; înlocuitor; Mizil are |
-| Rh | Călin (în locul verigarului) | *Viburnum opulus* | 16 | 18 | 18,02 | strat D; înlocuitor pentru 16 din cei 27 verigari (restul 11 = măceș, la Foresta); Mizil are |
-| | **Total Pepiniera Mizil** | | **125** | **139** | | |
+| Cm | Corn | *Cornus mas* | 43 | 48 | 18,90 | strat C; Agigea nu are (21 octombrie); înainte de Mizil se încearcă Tomești (Harghita) și ICAS |
+| Ca | Alun | *Corylus avellana* | 24 | 27 | 13,51 | strat C; Agigea nu are (21 octombrie); se încearcă Pepiniera Stejarul, Galați, 0774609287 |
+| Ev | Salbă moale (în locul salbei râioase) | *Euonymus europaeus* | 36 | 40 | 9,91 | strat D; înlocuitor; Mizil are |
+| Rh | Călin (în locul verigarului) | *Viburnum opulus* | 28 | 31 | 18,02 | strat D; înlocuitor pentru 28 din cei 46 verigari (restul 18 = măceș, la Foresta); Mizil are |
+| | **Total Pepiniera Mizil** | | **131** | **146** | | |
 
 ## Totaluri
 
-- în schemă: 919 de puieți; de comandat cu rezervă: 1025
-- de la pepinierele silvice (Foresta, Matto Medusa, Doi Cocoși, Țuțora, Agigea, Selficom): 673 de puieți; cost cunoscut ≈ 2671 lei fără transport (Doi Cocoși și speciile „de întrebat” de la Agigea neincluse; la 0,5–1,5 lei bucata ar fi încă ≈ 200–300 lei)
-- de la Cobadin: 25 de cătini roșii la 15 lei → ≈ 375 lei; de la Selficom 37 sângeri → ≈ 44 lei
-- de la Mizil: 139 de puieți, după oferta primită ≈ 2,142 lei; scade dacă Agigea are corn și alun
+- în schemă: 899 de puieți; de comandat cu rezervă: 1001
+- de la pepinierele silvice (Foresta, Matto Medusa, Doi Cocoși, Țuțora, Agigea, Selficom): 643 de puieți; cost cunoscut ≈ 507 lei fără transport (Doi Cocoși și speciile „de întrebat” de la Agigea neincluse; la 0,5–1,5 lei bucata ar fi încă ≈ 200–300 lei)
+- de la Cobadin: 30 de cătini roșii la 15 lei → ≈ 450 lei; de la Selficom 43 sângeri → ≈ 52 lei
+- de la Mizil: 146 de puieți, după oferta primită ≈ 2 227 lei; scade dacă Agigea are corn și alun
 - **total orientativ: 3 500–5 500 lei**, plus 3–4 transporturi; în intervalul din `plan-miyawaki-est.md`; cele 11 specii fără furnizor (secțiunea „fără furnizor” plus corn, alun, salbă moale și călin din secțiunea Mizil) nu sunt în costul cunoscut
 
 ## Ordinea recomandată
@@ -201,3 +201,5 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 4. Stejarul Galați (alun), Tomești (corn), Voivodeni (pin negru), ICAS Ștefănești (dârmox, corn), online (soc, călin, salbă, sorb, păr sălbatic) pentru cele 11 specii fără furnizor; Mizil doar pentru corn, dacă a picat tot.
 5. Țuțora Iași doar pentru ce a rămas (tei argintiu, carpen). Online (planteieftine.ro) pentru soc (5 lei) și călin (7,77 lei).
 6. Din comenzile de noiembrie ale planului nord (`comenzi-noiembrie-plan-nord.md`) se scad cele 34 plante ale perdelei din colțul de nord-est: sălcioară 9, frasin 5, dud alb 4, pin negru 4, corn 3, ulm de turkestan 3, măceș 2, păducel 2, stejar pufos 1, pom de stafide 1.
+
+_Cantitățile aliniate pe schema 4 (`plantare-miyawaki-est4.json`) cu `resurse/oferte/scripts/aliniaza-comenzi.py`._
