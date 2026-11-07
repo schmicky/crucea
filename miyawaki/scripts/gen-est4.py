@@ -16,7 +16,8 @@ D = json.loads(re.search(r'const D = (\{.*?\});\n', page, re.S).group(1))
 J = json.load(open(f'{R}/plantare-miyawaki-est2.json', encoding='utf-8'))
 SP = {s['cod']: s for s in D['specii']}
 NUME_STRAT = {'A': 'arbore mare', 'B': 'arbore mic', 'C': 'subarboret', 'D': 'arbust'}
-COL = {'A': '#1b5e20', 'B': '#43a047', 'C': '#9e9d24', 'D': '#e08a1e'}
+COL = {'A': '#f5c518', 'B': '#2f80ed', 'C': '#2e9e44', 'D': '#2b2b2b'}   # galben = soare (cei mai înalți), albastru = cer, verde, negru = pământ
+TXT = {'A': '#222', 'B': '#fff', 'C': '#fff', 'D': '#fff'}                 # textul pe cerc: închis pe galben
 L = 3.0
 US = [0.3, 0.9, 1.5, 2.1, 2.7]; VS = [2.75, 2.25, 1.75, 1.25, 0.75, 0.25]       # 5 coloane × 6 rânduri = 30 de poziții
 TPL = {i + 1: (u, v) for i, (v, u) in enumerate((v, u) for v in VS for u in US)}  # 1–5 rândul de nord, de la vest la est
@@ -145,7 +146,7 @@ def rama_svg():
         y = Y0r + (3 - v) * S; o.append(f'<line x1="{X0r}" y1="{y:.0f}" x2="{X0r + 3 * S}" y2="{y:.0f}" stroke="#555" stroke-width="2" stroke-dasharray="7 5"/><circle cx="{X0r - t / 2}" cy="{y:.0f}" r="5" fill="#222"/><circle cx="{X0r + 3 * S + t / 2}" cy="{y:.0f}" r="5" fill="#222"/><text x="{X0r - t - 8}" y="{y + 5:.0f}" font-size="14" text-anchor="end" fill="#333">{v:.2f} m</text>'.replace('.', ','))
     for nr, (u, v) in TPL.items():
         x, y = X0r + u * S, Y0r + (3 - v) * S; c = I_LAY[nr]; st = SP[c]['strat']; r = 24 if st == 'A' else 19
-        o.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{COL[st]}" stroke="#fff" stroke-width="3"/><text x="{x:.0f}" y="{y + 5:.0f}" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">{c}</text><text x="{x:.0f}" y="{y - r - 4:.0f}" font-size="13" font-weight="700" fill="#333" text-anchor="middle">{nr}</text>')
+        o.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{COL[st]}" stroke="#fff" stroke-width="3"/><text x="{x:.0f}" y="{y + 5:.0f}" font-size="15" font-weight="700" fill="{TXT[st]}" text-anchor="middle">{c}</text><text x="{x:.0f}" y="{y - r - 4:.0f}" font-size="13" font-weight="700" fill="#333" text-anchor="middle">{nr}</text>')
         if S_LAY[nr] == 'Pn': o.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r + 5}" fill="none" stroke="#0b3d91" stroke-width="3" stroke-dasharray="4 3"/>')
     o.append(f'<text x="{X0r - t}" y="{Y0r + 3 * S + t + 56}" font-size="14" fill="#333">Cuie pe scânduri: 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m (sus/jos) și 0,25 · 0,75 · 1,25 · 1,75 · 2,25 · 2,75 m (stânga/dreapta); sfori între cuiele opuse; numerotarea 1–30 de la nord spre sud, de la vest spre est.</text>')
     o.append(f'<text x="{X0r - t}" y="{Y0r + 3 * S + t + 78}" font-size="14" fill="#333">Cercul albastru punctat: pe pătratele de sud (S), la aceste cuie se pune pin negru în locul speciei scrise. Șipcă de 4,8 × 2,4 cm (4 bucăți de 3,05 m), diagonală, două mânere, doi oameni.</text>')
@@ -154,7 +155,7 @@ def rama_svg():
     o.append(f'<text x="{fx}" y="{fy}" font-size="20" font-weight="700" fill="#333">Fișa cui → specie (aceeași pentru toate pătratele)</text>')
     for i, nr in enumerate(sorted(TPL)):
         c = I_LAY[nr]; st = SP[c]['strat']; col = i // 15; row = i % 15; x = fx + col * 300; y = fy + 34 + row * 36
-        o.append(f'<text x="{x}" y="{y}" font-size="16" font-weight="700" fill="#333">{nr}</text><rect x="{x + 34}" y="{y - 15}" width="38" height="21" rx="4" fill="{COL[st]}"/><text x="{x + 53}" y="{y}" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">{c}</text><text x="{x + 82}" y="{y}" font-size="15" fill="#333">{H.escape(SP[c]["ro"])}' + (f' <tspan fill="#0b3d91" font-weight="700">· pe S: pin negru</tspan>' if S_LAY[nr] == 'Pn' else '') + '</text>')
+        o.append(f'<text x="{x}" y="{y}" font-size="16" font-weight="700" fill="#333">{nr}</text><rect x="{x + 34}" y="{y - 15}" width="38" height="21" rx="4" fill="{COL[st]}"/><text x="{x + 53}" y="{y}" font-size="13" font-weight="700" fill="{TXT[st]}" text-anchor="middle">{c}</text><text x="{x + 82}" y="{y}" font-size="15" fill="#333">{H.escape(SP[c]["ro"])}' + (f' <tspan fill="#0b3d91" font-weight="700">· pe S: pin negru</tspan>' if S_LAY[nr] == 'Pn' else '') + '</text>')
     for i, ln in enumerate(['Fără lăzi: un singur set de 30 de saci numerotați, pe roabă, umplut dimineața din snopi;', 'alergătorul dă sacul cu numărul cuiului. Pe pătratele S, 4 saci în plus cu pin negru.', 'Cazmaua: despicătură, coletul la nivelul solului, închis apăsând cu palmele', '(niciodată cu piciorul), un smuls ușor de verificare.']):
         o.append(f'<text x="{fx}" y="{fy + 34 + 15 * 36 + 10 + i * 22}" font-size="14" fill="#333">{ln}</text>')
     return ''.join(o) + '</svg>'
@@ -168,7 +169,7 @@ def rt_svg(k, size=230):
     for v in VS: o.append(f'<line x1="{m}" y1="{py(v):.1f}" x2="{size - m}" y2="{py(v):.1f}" stroke="#bbb" stroke-width=".6" stroke-dasharray="3 3"/>')
     for p in RETETE[k]:
         r = {'A': 9, 'B': 8, 'C': 7, 'D': 6}[p['strat']]
-        o.append(f'<circle cx="{px(p["u"]):.1f}" cy="{py(p["v"]):.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="1.2"/><text x="{px(p["u"]):.1f}" y="{py(p["v"]) + 2.5:.1f}" font-size="6.5" font-weight="700" text-anchor="middle" fill="#fff" font-family="system-ui">{p["cod"]}</text><text x="{px(p["u"]):.1f}" y="{py(p["v"]) - r - 1.5:.1f}" font-size="6" text-anchor="middle" fill="#555" font-family="system-ui">{p["poz"]}</text>')
+        o.append(f'<circle cx="{px(p["u"]):.1f}" cy="{py(p["v"]):.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="1.2"/><text x="{px(p["u"]):.1f}" y="{py(p["v"]) + 2.5:.1f}" font-size="6.5" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}" font-family="system-ui">{p["cod"]}</text><text x="{px(p["u"]):.1f}" y="{py(p["v"]) - r - 1.5:.1f}" font-size="6" text-anchor="middle" fill="#555" font-family="system-ui">{p["poz"]}</text>')
     return ''.join(o) + '</svg>'
 def rt_block(k):
     desc = {'I': 'interior: fiecare specie o dată pe pătrat (mojdreanul de două ori)', 'S': 'banda de sud: aceeași rețetă, cu pin negru la cuiele ' + ', '.join(str(p) for p in sorted(TPL) if S_LAY[p] == 'Pn') + ' în locul cerului, ulmului, sorbului și teiului'}[k]
@@ -190,7 +191,7 @@ def cant_rows():
     for s in 'ABCD':
         for sp in [x for x in specii if x['strat'] == s]:
             n_f = sum(1 for p in fasie if p['cod'] == sp['cod']); n_q = sp['buc'] - n_f; rez = sp['buc'] + max(1, math.ceil(sp['buc'] * 0.1))
-            o.append(f'<tr><td><span class="cod" style="background:{COL[s]}">{sp["cod"]}</span></td><td>{H.escape(sp["ro"])}<br><i style="color:#666">{H.escape(sp["lat"])}</i></td><td>{NUME_STRAT[s]}</td><td class="n">{n_q}</td><td class="n">{n_f}</td><td class="n"><b>{sp["buc"]}</b></td><td class="n">{rez}</td><td class="n" style="color:#777">{sp["buc_tinta"]}</td></tr>')
+            o.append(f'<tr><td><span class="cod" style="background:{COL[s]};color:{TXT[s]}">{sp["cod"]}</span></td><td>{H.escape(sp["ro"])}<br><i style="color:#666">{H.escape(sp["lat"])}</i></td><td>{NUME_STRAT[s]}</td><td class="n">{n_q}</td><td class="n">{n_f}</td><td class="n"><b>{sp["buc"]}</b></td><td class="n">{rez}</td><td class="n" style="color:#777">{sp["buc_tinta"]}</td></tr>')
     rez_tot = sum(x['buc'] + max(1, math.ceil(x['buc'] * 0.1)) for x in specii)
     o.append(f'<tr><td></td><td><b>Total</b></td><td></td><td class="n"><b>{tot - len(fasie)}</b></td><td class="n"><b>{len(fasie)}</b></td><td class="n"><b>{tot}</b></td><td class="n"><b>{rez_tot}</b></td><td class="n" style="color:#777">{sum(x["buc_tinta"] for x in specii)}</td></tr>')
     return ''.join(o)
@@ -210,6 +211,9 @@ out = re.sub(r'(<h2>Straturi</h2>\n).*?(\n    <h2>Specii)', lambda m: m.group(1)
 out = re.sub(r'(<tbody>\n).*?(\n    </tbody>)', lambda m: m.group(1) + ''.join(f'<tr class="sp" data-cod="{s["cod"]}" onclick="onlySpecies(&quot;{s["cod"]}&quot;)"><td><span class="cod" style="background:{COL[s["strat"]]}">{s["cod"]}</span></td><td>{H.escape(s["ro"])}<br><i style="color:#666">{H.escape(s["lat"])}</i></td><td class="n">{s["buc"]}</td></tr>' for s in specii) + m.group(2), out, count=1, flags=re.S)
 out = re.sub(r'<div id="rt-pages">.*?</div>\n<div class="retete retete-screen">.*?</div>\n<div id="sp-pages">', lambda m: printp + '\n' + screen + '\n<div id="sp-pages">', out, count=1, flags=re.S)
 out = re.sub(r'const D = \{.*?\};\n', lambda m: 'const D = ' + json.dumps(D4, ensure_ascii=False) + ';\n', out, count=1, flags=re.S)
+out = re.sub(r'COL = \{"A": "#1b5e20", "B": "#43a047", "C": "#9e9d24", "D": "#e08a1e"\}', 'COL = ' + json.dumps(COL), out, count=1)
+out = out.replace('  .plant text { font-size:9px; font-weight:600; fill:#fff;', '  .plant[data-strat="A"] text { fill:#222 !important; }\n  .plant text { font-size:9px; font-weight:600; fill:#fff;', 1)
+out = out.replace("t.setAttribute('font-size', '9'); t.setAttr", "t.setAttribute('font-size', '9'); if (p.strat === 'A') t.setAttribute('fill', '#222'); t.setAttr", 1)
 out = out.replace('plantare-miyawaki-est2', 'plantare-miyawaki-est4').replace('plan-miyawaki-est2.md', 'plan-miyawaki-est4.md').replace("'Pătrate 2 m", "'Pătrate 3 m").replace('>Pătrate 2 m ✓<', '>Pătrate 3 m ✓<')
 out = out.replace("bg.setAttribute('width', 52)", "bg.setAttribute('width', 44)")
 assert 'est2' not in out.replace('index-est2', ''), [l[:80] for l in out.split('\n') if 'est2' in l][:3]
@@ -263,7 +267,7 @@ def rt_full_svg(k):
     for v in VS: o.append(f'<line x1="{m}" y1="{py(v):.1f}" x2="{Wm - m}" y2="{py(v):.1f}" stroke="#999" stroke-width="0.25" stroke-dasharray="1 1"/><text x="{m - 1.5}" y="{py(v) + 1:.1f}" font-size="2.8" text-anchor="end" fill="#444">{f"{v:.2f}".replace(".", ",")}</text>')
     for p in RETETE[k]:
         x, y = px(p['u']), py(p['v']); r = 4.2 if p['strat'] == 'A' else 3.4; nume = SP[p['cod']]['ro']
-        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 1.4:.1f}" font-size="4" font-weight="700" text-anchor="middle" fill="#fff">{p["poz"]}</text>')
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 1.4:.1f}" font-size="4" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>')
         if k == 'S' and p['cod'] == 'Pn': o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 1}" fill="none" stroke="#0b3d91" stroke-width="0.5" stroke-dasharray="1 0.7"/>')
         parts = nume.split(', ')[0].split(' ')
         if len(nume) > 13 and len(parts) > 1:
