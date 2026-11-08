@@ -289,7 +289,7 @@ h1 {{ font-size: 15px; margin: 0 0 3mm; color: #1f4d33; }} h1 small {{ font-weig
 .row {{ display: flex; gap: 5mm; align-items: flex-start; }} .row > svg {{ flex: 0 0 auto; }}
 .tbl {{ flex: 1; }} table {{ border-collapse: collapse; font-size: 9.5px; width: 100%; }}
 td, th {{ padding: 0.6mm 1.5mm; border-bottom: 0.2mm solid #e3ddcc; text-align: left; }} td.n {{ font-weight: 700; width: 6mm; }}
-table.big {{ font-size: 17px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 8.5mm; font-size: 18px; padding-right: 0; text-align: right; }} table.big td.sp, table.big th.sp {{ padding-left: 1.5mm; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 39mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
+table.big {{ font-size: 16px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 8mm; font-size: 17px; padding-right: 0; text-align: right; }} table.big td.sp, table.big th.sp {{ padding-left: 1.5mm; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 40mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
 .sw {{ display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; vertical-align: middle; margin-right: 1.5mm; }}
 .foot {{ font-size: 8.5px; color: #444; margin: 3mm 0 0; line-height: 1.35; }}
 @media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
