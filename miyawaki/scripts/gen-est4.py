@@ -269,7 +269,7 @@ def rt_full_svg(k):
         x, y = px(p['u']), py(p['v']); r = 6.2 if p['strat'] == 'A' else 5.4; nume = SP[p['cod']]['ro']
         o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 2.4:.1f}" font-size="6.8" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>')
         if k == 'S' and p['cod'] == 'Pn': o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 1}" fill="none" stroke="#0b3d91" stroke-width="0.5" stroke-dasharray="1 0.7"/>')
-        nume = nume.split(', ')[0]; fs = 3.3 if len(nume) <= 12 else (3.0 if len(nume) <= 15 else 2.7)
+        nume = nume.split(', ')[0]; fs = 3.9 if len(nume) <= 11 else (3.5 if len(nume) <= 14 else 3.1)
         o.append(f'<text x="{x:.1f}" y="{y + r + 3.4:.1f}" font-size="{fs}" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
     return ''.join(o) + '</svg>'
 def rt_full_page(k):
@@ -286,10 +286,10 @@ body {{ margin: 0; font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-se
 .pg {{ width: 279mm; height: 190mm; page-break-after: always; break-after: page; overflow: hidden; }}
 .pg:last-child {{ page-break-after: auto; }}
 h1 {{ font-size: 15px; margin: 0 0 3mm; color: #1f4d33; }} h1 small {{ font-weight: 400; color: #444; font-size: 11px; }}
-.row {{ display: flex; gap: 6mm; align-items: flex-start; }}
+.row {{ display: flex; gap: 5mm; align-items: flex-start; }} .row > svg {{ flex: 0 0 auto; }}
 .tbl {{ flex: 1; }} table {{ border-collapse: collapse; font-size: 9.5px; width: 100%; }}
 td, th {{ padding: 0.6mm 1.5mm; border-bottom: 0.2mm solid #e3ddcc; text-align: left; }} td.n {{ font-weight: 700; width: 6mm; }}
-table.big {{ font-size: 14.5px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 7.5mm; font-size: 16px; padding-right: 0; text-align: right; }} table.big td.sp, table.big th.sp {{ padding-left: 1.5mm; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 40mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
+table.big {{ font-size: 17px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 8.5mm; font-size: 18px; padding-right: 0; text-align: right; }} table.big td.sp, table.big th.sp {{ padding-left: 1.5mm; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 39mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
 .sw {{ display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; vertical-align: middle; margin-right: 1.5mm; }}
 .foot {{ font-size: 8.5px; color: #444; margin: 3mm 0 0; line-height: 1.35; }}
 @media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
