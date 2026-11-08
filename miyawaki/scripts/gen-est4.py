@@ -278,8 +278,9 @@ def rt_full_svg(k):
 def rt_full_page(k):
     desc = {'I': f'rețeta de interior — {uses["I"]} pătrate; fiecare specie o dată, mojdreanul de două ori (cuiele 4 și 22)',
             'S': f'rețeta benzii de sud — {uses["S"]} pătrate; aceeași așezare, cu pin negru la cuiele ' + ', '.join(str(p) for p in sorted(TPL) if S_LAY[p] == 'Pn') + ' (cerc albastru) în locul teiului, cerului, ulmului și sorbului'}[k]
-    rows = ''.join(f'<tr><td class="n">{p["poz"]}</td><td><span class="sw" style="background:{COL[p["strat"]]}"></span>{H.escape(SP[p["cod"]]["ro"])}</td><td><i>{H.escape(SP[p["cod"]]["lat"])}</i></td><td>{NUME_STRAT[p["strat"]]}</td></tr>' for p in RETETE[k])
-    return (f'<section class="pg"><h1>Rețeta {k} <small>— {desc}</small></h1><div class="row">{rt_full_svg(k)}<div class="tbl"><table><thead><tr><th>Cui</th><th>Specie</th><th>Nume latin</th><th>Strat</th></tr></thead><tbody>{rows}</tbody></table>'
+    R15 = RETETE[k]
+    rows = ''.join(f'<tr><td class="n">{R15[i]["poz"]}</td><td><span class="sw" style="background:{COL[R15[i]["strat"]]}"></span>{H.escape(SP[R15[i]["cod"]]["ro"])}</td><td class="gap"></td><td class="n">{R15[i + 15]["poz"]}</td><td><span class="sw" style="background:{COL[R15[i + 15]["strat"]]}"></span>{H.escape(SP[R15[i + 15]["cod"]]["ro"])}</td></tr>' for i in range(15))
+    return (f'<section class="pg"><h1>Rețeta {k} <small>— {desc}</small></h1><div class="row">{rt_full_svg(k)}<div class="tbl"><table class="big"><thead><tr><th class="n">Cui</th><th class="sp">Specie</th><th class="gap"></th><th class="n">Cui</th><th class="sp">Specie</th></tr></thead><tbody>{rows}</tbody></table>'
             f'<p class="foot">Rama de 3 × 3 m, cuie la 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m (nord/sud) și 0,25 … 2,75 m din 0,5 în 0,5 (est/vest); numerotarea 1–30 de la nord spre sud, de la vest spre est. Regula de sărit: cuiul care cade pe alee, în luminiș sau dincolo de var se sare. Despicătura se închide cu palmele, nu cu piciorul. Pădurea Miyawaki Poienel, Crucea — schema de plantare 4, {len(SQ)} de pătrate.</p></div></div></section>')
 html = f'''<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>Rețetele schemei 4 — rama de 3 × 3 m</title>
 <style>
@@ -291,6 +292,7 @@ h1 {{ font-size: 15px; margin: 0 0 3mm; color: #1f4d33; }} h1 small {{ font-weig
 .row {{ display: flex; gap: 6mm; align-items: flex-start; }}
 .tbl {{ flex: 1; }} table {{ border-collapse: collapse; font-size: 9.5px; width: 100%; }}
 td, th {{ padding: 0.6mm 1.5mm; border-bottom: 0.2mm solid #e3ddcc; text-align: left; }} td.n {{ font-weight: 700; width: 6mm; }}
+table.big {{ font-size: 14.5px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 8mm; font-size: 16px; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 40mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
 .sw {{ display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; vertical-align: middle; margin-right: 1.5mm; }}
 .foot {{ font-size: 8.5px; color: #444; margin: 3mm 0 0; line-height: 1.35; }}
 @media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
