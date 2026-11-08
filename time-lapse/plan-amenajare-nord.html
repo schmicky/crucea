@@ -170,7 +170,7 @@
       position: absolute;
       top: 0; left: 0;
       transform-origin: 0 0;
-      will-change: transform;
+      /* fără will-change: cu el, Chrome pe telefon ține planul ca un singur strat uriaș pre-rasterizat și la zoom rămân dale albe */
     }
     #plan-img {
       display: block;
@@ -1834,7 +1834,9 @@ function setScale(s, cx, cy) {
   const old = scale;
   // minimul e mic pentru că planul e uriaș (5056 px): pe telefon
   // încadrarea cere ~0,08, deci o limită de 0,1 ar bloca zoom-out-ul
-  scale = Math.max(0.03, Math.min(10, s));
+  // pe telefon, zoomul se plafonează ca stratul rasterizat (6172 px × scară × DPR) să nu depășească ~6000 px: peste, dalele rămân albe
+  const maxS = (window.innerWidth < 900 || navigator.maxTouchPoints > 0) ? Math.max(0.6, 6000 / (6172 * (window.devicePixelRatio || 1))) : 10;
+  scale = Math.max(0.03, Math.min(maxS, s));
   tx = cx - (cx - tx) * (scale / old);
   ty = cy - (cy - ty) * (scale / old);
   applyTransform();
