@@ -269,17 +269,14 @@ def rt_full_svg(k):
         x, y = px(p['u']), py(p['v']); r = 6.2 if p['strat'] == 'A' else 5.4; nume = SP[p['cod']]['ro']
         o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 2.4:.1f}" font-size="6.8" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>')
         if k == 'S' and p['cod'] == 'Pn': o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 1}" fill="none" stroke="#0b3d91" stroke-width="0.5" stroke-dasharray="1 0.7"/>')
-        parts = nume.split(', ')[0].split(' ')
-        if len(nume) > 13 and len(parts) > 1:
-            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(" ".join(parts[:-1]))}</text><text x="{x:.1f}" y="{y + r + 6.6:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(parts[-1])}</text>')
-        else:
-            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
+        nume = nume.split(', ')[0]; fs = 3.3 if len(nume) <= 12 else (3.0 if len(nume) <= 15 else 2.7)
+        o.append(f'<text x="{x:.1f}" y="{y + r + 3.4:.1f}" font-size="{fs}" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
     return ''.join(o) + '</svg>'
 def rt_full_page(k):
     desc = {'I': f'rețeta de interior — {uses["I"]} pătrate; fiecare specie o dată, mojdreanul de două ori (cuiele 4 și 22)',
             'S': f'rețeta benzii de sud — {uses["S"]} pătrate; aceeași așezare, cu pin negru la cuiele ' + ', '.join(str(p) for p in sorted(TPL) if S_LAY[p] == 'Pn') + ' (cerc albastru) în locul teiului, cerului, ulmului și sorbului'}[k]
     R15 = RETETE[k]
-    rows = ''.join(f'<tr><td class="n">{R15[i]["poz"]}</td><td><span class="sw" style="background:{COL[R15[i]["strat"]]}"></span>{H.escape(SP[R15[i]["cod"]]["ro"])}</td><td class="gap"></td><td class="n">{R15[i + 15]["poz"]}</td><td><span class="sw" style="background:{COL[R15[i + 15]["strat"]]}"></span>{H.escape(SP[R15[i + 15]["cod"]]["ro"])}</td></tr>' for i in range(15))
+    rows = ''.join(f'<tr><td class="n">{R15[i]["poz"]}</td><td class="sp"><span class="sw" style="background:{COL[R15[i]["strat"]]}"></span>{H.escape(SP[R15[i]["cod"]]["ro"])}</td><td class="gap"></td><td class="n">{R15[i + 15]["poz"]}</td><td class="sp"><span class="sw" style="background:{COL[R15[i + 15]["strat"]]}"></span>{H.escape(SP[R15[i + 15]["cod"]]["ro"])}</td></tr>' for i in range(15))
     return (f'<section class="pg"><h1>Rețeta {k} <small>— {desc}</small></h1><div class="row">{rt_full_svg(k)}<div class="tbl"><table class="big"><thead><tr><th class="n">Cui</th><th class="sp">Specie</th><th class="gap"></th><th class="n">Cui</th><th class="sp">Specie</th></tr></thead><tbody>{rows}</tbody></table>'
             f'<p class="foot">Rama de 3 × 3 m, cuie la 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m (nord/sud) și 0,25 … 2,75 m din 0,5 în 0,5 (est/vest); numerotarea 1–30 de la nord spre sud, de la vest spre est. Regula de sărit: cuiul care cade pe alee, în luminiș sau dincolo de var se sare. Despicătura se închide cu palmele, nu cu piciorul. Pădurea Miyawaki Poienel, Crucea — schema de plantare 4, {len(SQ)} de pătrate.</p></div></div></section>')
 html = f'''<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>Rețetele schemei 4 — rama de 3 × 3 m</title>
@@ -292,7 +289,7 @@ h1 {{ font-size: 15px; margin: 0 0 3mm; color: #1f4d33; }} h1 small {{ font-weig
 .row {{ display: flex; gap: 6mm; align-items: flex-start; }}
 .tbl {{ flex: 1; }} table {{ border-collapse: collapse; font-size: 9.5px; width: 100%; }}
 td, th {{ padding: 0.6mm 1.5mm; border-bottom: 0.2mm solid #e3ddcc; text-align: left; }} td.n {{ font-weight: 700; width: 6mm; }}
-table.big {{ font-size: 14.5px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 8mm; font-size: 16px; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 40mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
+table.big {{ font-size: 14.5px; table-layout: fixed; }} table.big td, table.big th {{ padding: 1.5mm 1.5mm; white-space: nowrap; overflow: hidden; }} table.big td.n, table.big th.n {{ width: 7.5mm; font-size: 16px; padding-right: 0; text-align: right; }} table.big td.sp, table.big th.sp {{ padding-left: 1.5mm; }} table.big .gap {{ width: 3mm; border: 0; }} table.big .sp {{ width: 40mm; }} table.big .sw {{ width: 4.2mm; height: 4.2mm; margin-right: 2mm; }}
 .sw {{ display: inline-block; width: 3mm; height: 3mm; border-radius: 50%; vertical-align: middle; margin-right: 1.5mm; }}
 .foot {{ font-size: 8.5px; color: #444; margin: 3mm 0 0; line-height: 1.35; }}
 @media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
