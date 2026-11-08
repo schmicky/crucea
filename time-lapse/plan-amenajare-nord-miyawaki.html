@@ -833,7 +833,8 @@
 <!-- ── Map area ── -->
 <div id="map-wrap">
   <div id="map-inner">
-    <img id="plan-img" src="plan-nord.jpg" draggable="false" alt="Plan grădină">
+    <img id="plan-img" src="plan-nord-3000.jpg" srcset="plan-nord-1800.jpg 1800w, plan-nord-3000.jpg 3000w, plan-nord.jpg 6172w" sizes="(max-width: 900px) 200vw, 150vw" decoding="async" draggable="false" alt="Plan grădină">
+    <!-- srcset: pe telefon imaginea de 6172 px (35 Mpx) nu se rasterizează întreagă la zoom (rămân bucăți albe); 3000 px ajung pentru ecran, cea mare rămâne pentru desktop mare și tipărit -->
     <svg id="miyawaki-layer" xmlns="http://www.w3.org/2000/svg"></svg>
     <svg id="measure-layer" xmlns="http://www.w3.org/2000/svg"></svg>
     <div id="dots-layer"></div>
