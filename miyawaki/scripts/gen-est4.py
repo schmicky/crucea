@@ -266,14 +266,14 @@ def rt_full_svg(k):
     for u in US: o.append(f'<line x1="{px(u):.1f}" y1="{m}" x2="{px(u):.1f}" y2="{Wm - m}" stroke="#999" stroke-width="0.25" stroke-dasharray="1 1"/><text x="{px(u):.1f}" y="{Wm - m + 4}" font-size="2.8" text-anchor="middle" fill="#444">{str(u).replace(".", ",")} m</text>')
     for v in VS: o.append(f'<line x1="{m}" y1="{py(v):.1f}" x2="{Wm - m}" y2="{py(v):.1f}" stroke="#999" stroke-width="0.25" stroke-dasharray="1 1"/><text x="{m - 1.5}" y="{py(v) + 1:.1f}" font-size="2.8" text-anchor="end" fill="#444">{f"{v:.2f}".replace(".", ",")}</text>')
     for p in RETETE[k]:
-        x, y = px(p['u']), py(p['v']); r = 4.2 if p['strat'] == 'A' else 3.4; nume = SP[p['cod']]['ro']
-        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 1.4:.1f}" font-size="4" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>')
+        x, y = px(p['u']), py(p['v']); r = 6.2 if p['strat'] == 'A' else 5.4; nume = SP[p['cod']]['ro']
+        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="{y + 2.4:.1f}" font-size="6.8" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>')
         if k == 'S' and p['cod'] == 'Pn': o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 1}" fill="none" stroke="#0b3d91" stroke-width="0.5" stroke-dasharray="1 0.7"/>')
         parts = nume.split(', ')[0].split(' ')
         if len(nume) > 13 and len(parts) > 1:
-            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(" ".join(parts[:-1]))}</text><text x="{x:.1f}" y="{y + r + 6.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(parts[-1])}</text>')
+            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(" ".join(parts[:-1]))}</text><text x="{x:.1f}" y="{y + r + 6.6:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(parts[-1])}</text>')
         else:
-            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="2.9" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
+            o.append(f'<text x="{x:.1f}" y="{y + r + 3.2:.1f}" font-size="3.3" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
     return ''.join(o) + '</svg>'
 def rt_full_page(k):
     desc = {'I': f'rețeta de interior — {uses["I"]} pătrate; fiecare specie o dată, mojdreanul de două ori (cuiele 4 și 22)',
