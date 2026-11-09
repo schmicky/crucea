@@ -482,7 +482,7 @@ td a:hover { text-decoration: underline; }
   display: flex; align-items: center; justify-content: center; gap: 14px;
   max-width: 1200px; margin: 14px auto 0; padding-top: 10px;
   border-top: 1px solid var(--border-color); color: var(--text-secondary);
-  font-size: 12px; overflow-x: auto;
+  font-size: 12px; overflow-x: auto; flex-wrap: wrap;
 }
 .vreme-titlu { white-space: nowrap; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
 .vreme-zile { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
@@ -497,8 +497,16 @@ td a:hover { text-decoration: underline; }
 .vreme .fulger { stroke: var(--accent-yellow); }
 .vreme-t b { color: var(--text-primary); font-weight: 600; }
 .vreme-t i { font-style: normal; color: var(--text-secondary); margin-left: 4px; }
-.vreme-sursa { font-size: 10px; color: var(--text-secondary); white-space: nowrap; text-decoration: none; }
-.vreme-sursa:hover { text-decoration: underline; }
+.vreme-sursa { flex: 1 1 auto; text-align: right; font-size: 10px; color: var(--text-secondary); white-space: nowrap; }
+.vreme-sursa a { color: inherit; text-decoration: none; }
+.vreme-sursa a:hover { text-decoration: underline; }
+/* Răsărit și apus de azi: două pictograme mici cu ora, lângă prognoză */
+.vreme-soare { display: flex; align-items: center; gap: 12px; padding-left: 14px; border-left: 1px solid var(--border-color); }
+.vreme-soare > span { display: flex; align-items: center; gap: 2px; white-space: nowrap; cursor: default; }
+.vreme-soare svg { width: 22px; height: 22px; fill: none; stroke: var(--text-secondary); }
+.vreme-soare .sol { stroke: var(--accent-yellow); }
+.vreme-soare .sageata { stroke: var(--text-primary); stroke-width: 2; }
+.vreme-soare b { color: var(--text-primary); font-weight: 600; font-variant-numeric: tabular-nums; }
 /* Pe telefon: card alb cu titlul și sursa pe un rând, apoi cele 7 zile în coloane egale (încap fără derulare) */
 @media (max-width: 700px) {
   .vreme {
@@ -508,7 +516,8 @@ td a:hover { text-decoration: underline; }
     background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 10px;
   }
   .vreme-titlu { order: 1; padding-left: 6px; }
-  .vreme-sursa { order: 2; padding-right: 6px; }
+  .vreme-soare { order: 2; margin-left: auto; padding: 0 6px 0 0; border-left: 0; gap: 8px; }
+  .vreme-sursa { order: 4; flex-basis: 100%; text-align: center; padding-top: 2px; }
   .vreme-zile { order: 3; width: 100%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; }
   .vreme-zile li { min-width: 0; padding: 2px 0; }
   .vreme svg { width: 22px; height: 22px; }
