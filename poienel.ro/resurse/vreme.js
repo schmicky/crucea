@@ -1,4 +1,4 @@
-// Prognoza pe 7 zile din Open-Meteo (gratuit, fără cheie, CORS deschis), pentru banda din antet.
+// Prognoza pe 7 zile din Open-Meteo și răsăritul/apusul din SunriseSunset.io (ambele gratuite, fără cheie, CORS deschis), pentru banda din antet.
 // Este un adaos: fără JavaScript sau fără rețea banda rămâne ascunsă și pagina nu se schimbă.
 // Configurația (coordonate, etichete în limba paginii) vine din <script id="vreme-data">, generat de build.mjs.
 (function () {
@@ -53,33 +53,67 @@
   const svg = (k) => '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[ALIAS[k] || k] || ICON.overcast) + '</svg>';
   const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
-  function render(d) {
-    const days = d.daily.time, code = d.daily.weather_code, tmax = d.daily.temperature_2m_max, tmin = d.daily.temperature_2m_min;
-    const fmt = new Intl.DateTimeFormat(C.lang, { weekday: 'short' });
-    box.querySelector('.vreme-zile').innerHTML = days.map((iso, i) => {
-      const p = iso.split('-').map(Number);
-      let nume = i === 0 ? T.azi : i === 1 ? T.maine : fmt.format(new Date(p[0], p[1] - 1, p[2])).replace('.', '');
-      nume = nume.charAt(0).toUpperCase() + nume.slice(1);
-      const k = key(code[i]), desc = T.conditii[ALIAS[k] && !T.conditii[k] ? ALIAS[k] : k] || '';
-      const mx = Math.round(tmax[i]), mn = Math.round(tmin[i]);
-      const aria = nume + ': ' + desc + ', ' + T.max + ' ' + mx + '°, ' + T.min + ' ' + mn + '°';
-      return '<li title="' + esc(aria) + '" aria-label="' + esc(aria) + '"><span class="vreme-zi">' + esc(nume) + '</span>' + svg(k) +
-        '<span class="vreme-t"><b>' + mx + '°</b><i>' + mn + '°</i></span></li>';
-    }).join('');
-    box.hidden = false;
+  // Prognoza (Open-Meteo) și soarele (SunriseSunset.io) se încarcă independent; fiecare apare când sosește
+  const state = { meteo: null, soare: null };
+  const hhmm = (t) => { // "06:52:17", "6:52:17" sau "6:52:17 AM" → "06:52"
+    const m = /^(\d{1,2}):(\d{2})(?::\d{2})?\s*(AM|PM)?$/i.exec(String(t || '').trim());
+    if (!m) return null;
+    let h = +m[1]; const ap = (m[3] || '').toUpperCase();
+    if (ap === 'PM' && h < 12) h += 12; if (ap === 'AM' && h === 12) h = 0;
+    return String(h).padStart(2, '0') + ':' + m[2];
+  };
+  const soarePe = () => { const o = {}; ((state.soare && state.soare.results) || []).forEach((r) => { const a = hhmm(r.sunrise), b = hhmm(r.sunset); if (a && b) o[r.date] = { r: a, s: b }; }); return o; };
+
+  function draw() {
+    const sun = soarePe();
+    if (state.meteo) {
+      const d = state.meteo, days = d.daily.time, code = d.daily.weather_code, tmax = d.daily.temperature_2m_max, tmin = d.daily.temperature_2m_min;
+      const fmt = new Intl.DateTimeFormat(C.lang, { weekday: 'short' });
+      box.querySelector('.vreme-zile').innerHTML = days.map((iso, i) => {
+        const p = iso.split('-').map(Number);
+        let nume = i === 0 ? T.azi : i === 1 ? T.maine : fmt.format(new Date(p[0], p[1] - 1, p[2])).replace('.', '');
+        nume = nume.charAt(0).toUpperCase() + nume.slice(1);
+        const k = key(code[i]), desc = T.conditii[ALIAS[k] && !T.conditii[k] ? ALIAS[k] : k] || '';
+        const mx = Math.round(tmax[i]), mn = Math.round(tmin[i]);
+        let aria = nume + ': ' + desc + ', ' + T.max + ' ' + mx + '°, ' + T.min + ' ' + mn + '°';
+        if (sun[iso]) aria += ', ' + T.rasarit.toLowerCase() + ' ' + sun[iso].r + ', ' + T.apus.toLowerCase() + ' ' + sun[iso].s;
+        return '<li title="' + esc(aria) + '" aria-label="' + esc(aria) + '"><span class="vreme-zi">' + esc(nume) + '</span>' + svg(k) +
+          '<span class="vreme-t"><b>' + mx + '°</b><i>' + mn + '°</i></span></li>';
+      }).join('');
+    }
+    const prima = state.soare && state.soare.results && state.soare.results[0];
+    const azi0 = prima && sun[prima.date];
+    const sb = box.querySelector('.vreme-soare');
+    if (azi0) {
+      sb.querySelector('.vreme-rasarit b').textContent = azi0.r;
+      sb.querySelector('.vreme-apus b').textContent = azi0.s;
+      sb.hidden = false;
+    }
+    if (state.meteo || azi0) box.hidden = false;
   }
-  const valid = (d) => d && d.daily && Array.isArray(d.daily.time) && d.daily.time.length >= 3 && d.daily.weather_code && d.daily.temperature_2m_max && d.daily.temperature_2m_min;
-  const azi = () => { const n = new Date(); return n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0'); };
-  let cached = null;
-  try { cached = JSON.parse(localStorage.getItem(CACHE)); } catch (e) {}
-  // cache de o oră, ca să nu apelăm API-ul la fiecare pagină; ținut doar dacă începe de azi
-  if (cached && valid(cached.d) && Date.now() - cached.t < 3600e3 && cached.d.daily.time[0] === azi()) { render(cached.d); return; }
-  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 6000);
-  fetch(URL, { signal: ctl.signal }).then((r) => (r.ok ? r.json() : Promise.reject(r.status))).then((d) => {
-    if (!valid(d)) throw new Error('format');
-    try { localStorage.setItem(CACHE, JSON.stringify({ t: Date.now(), d })); } catch (e) {}
-    render(d);
-  }).catch(() => {
-    if (cached && valid(cached.d) && Date.now() - cached.t < 24 * 3600e3) render(cached.d); // rețea căzută: ultima prognoză, dacă e de azi
-  }).finally(() => clearTimeout(timer));
+
+  const ziRo = (plus) => { // data de azi în România (YYYY-MM-DD), plus n zile
+    const d = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Bucharest' }));
+    d.setDate(d.getDate() + (plus || 0));
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  };
+  const citeste = (k) => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+  // Cache local: valabil o oră, doar dacă începe de azi; la rețea căzută se folosește ultima copie de azi, cel mult 24 de ore
+  function ia(url, cheie, ok, deAzi) {
+    const c = citeste(cheie);
+    const bun = c && ok(c.d) && deAzi(c.d);
+    if (bun && Date.now() - c.t < 3600e3) return Promise.resolve(c.d);
+    const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 6000);
+    return fetch(url, { signal: ctl.signal }).then((r) => (r.ok ? r.json() : Promise.reject(r.status))).then((d) => {
+      if (!ok(d)) throw new Error('format');
+      try { localStorage.setItem(cheie, JSON.stringify({ t: Date.now(), d })); } catch (e) {}
+      return d;
+    }).catch(() => (bun && Date.now() - c.t < 24 * 3600e3 ? c.d : null)).finally(() => clearTimeout(timer));
+  }
+  const okMeteo = (d) => d && d.daily && Array.isArray(d.daily.time) && d.daily.time.length >= 3 && d.daily.weather_code && d.daily.temperature_2m_max && d.daily.temperature_2m_min;
+  const okSoare = (d) => d && d.status === 'OK' && Array.isArray(d.results) && d.results.length >= 1;
+  const SOARE_URL = 'https://api.sunrisesunset.io/json?lat=' + C.lat + '&lng=' + C.lon + '&date_start=' + ziRo(0) + '&date_end=' + ziRo(6) + '&time_format=24&timezone=' + encodeURIComponent('Europe/Bucharest');
+
+  ia(URL, CACHE, okMeteo, (d) => d.daily.time[0] === ziRo(0)).then((d) => { state.meteo = d; draw(); });
+  ia(SOARE_URL, 'poienel-soare-v1', okSoare, (d) => d.results[0].date === ziRo(0)).then((d) => { state.soare = d; draw(); });
 })();

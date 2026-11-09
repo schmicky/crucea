@@ -88,7 +88,7 @@ const ETICHETE = {
     taguri: { amenajare: 'Amenajare', relaxare: 'Relaxare', etape: 'Etape' }, filtreaza: 'Filtrează după temă',
     jurnalNume: 'Jurnalul grădinii Poienel', paginaJurnal: 'Jurnalul grădinii — Poienel, Crucea, Constanța', jurnalGol: 'Jurnalul începe în curând: primele însemnări vor fi despre măsurători, comenzile de puieți și plantarea pădurii Miyawaki din toamna lui 2026.',
     meniu: { 'index.html': 'Grădina', 'index.html#specii': 'Specii', 'atractii.html': 'Atracții turistice', 'jurnal.html': 'Jurnal', 'index.html#planuri': 'Planuri' }, meniuAria: 'Meniu principal', limba: 'Limba',
-    vreme: { titlu: 'Vremea la Crucea', aria: 'Prognoza pe 7 zile pentru Crucea, Constanța', azi: 'Azi', maine: 'Mâine', max: 'max', min: 'min', sursa: 'Date: Open-Meteo',
+    vreme: { titlu: 'Vremea la Crucea', aria: 'Prognoza pe 7 zile pentru Crucea, Constanța', azi: 'Azi', maine: 'Mâine', max: 'max', min: 'min', rasarit: 'Răsărit', apus: 'Apus', sursaDate: 'Date',
       conditii: { clear: 'Senin', mostlyClear: 'Mai mult senin', partly: 'Parțial noros', overcast: 'Noros', fog: 'Ceață', drizzle: 'Burniță', freezingDrizzle: 'Burniță înghețată', rainLight: 'Ploaie slabă', rain: 'Ploaie', rainHeavy: 'Ploaie puternică', freezingRain: 'Ploaie înghețată', snowLight: 'Ninsoare slabă', snow: 'Ninsoare', snowHeavy: 'Ninsoare puternică', snowGrains: 'Fulgi mărunți', showers: 'Averse', showersHeavy: 'Averse puternice', snowShowers: 'Averse de zăpadă', thunder: 'Furtună', hail: 'Furtună cu grindină' } },
     siteDesc: 'Poienel este o grădină în transformare la Crucea, județul Constanța: 65 de specii de arbori, arbuști, pomi fructiferi, plante aromatice și ierbacee, plus o pădure Miyawaki de 340 m² cu 919 puieți din 30 de specii autohtone de silvostepă dobrogeană.',
     footerDesc: 'Grădină și pădure Miyawaki la Crucea, județul Constanța, în nordul Dobrogei.', footerLinkuri: 'Linkuri recomandate', footerDate: 'Date deschise', footerDateText: 'Conținutul poate fi citit și citat liber, inclusiv de agenți AI; sursa: poienel.ro.',
@@ -125,7 +125,7 @@ const ETICHETE = {
     taguri: { amenajare: 'Landscaping', relaxare: 'Leisure', etape: 'Milestones' }, filtreaza: 'Filter by theme',
     jurnalNume: 'The Poienel garden journal', paginaJurnal: 'Garden journal — Poienel, Crucea, Constanța', jurnalGol: 'The journal starts soon: the first entries will be about measurements, sapling orders and the planting of the Miyawaki forest in autumn 2026.',
     meniu: { 'index.html': 'The garden', 'index.html#specii': 'Species', 'atractii.html': 'Sights', 'jurnal.html': 'Journal', 'index.html#planuri': 'Plans' }, meniuAria: 'Main menu', limba: 'Language',
-    vreme: { titlu: 'Weather at Crucea', aria: '7-day forecast for Crucea, Constanța', azi: 'Today', maine: 'Tomorrow', max: 'high', min: 'low', sursa: 'Data: Open-Meteo',
+    vreme: { titlu: 'Weather at Crucea', aria: '7-day forecast for Crucea, Constanța', azi: 'Today', maine: 'Tomorrow', max: 'high', min: 'low', rasarit: 'Sunrise', apus: 'Sunset', sursaDate: 'Data',
       conditii: { clear: 'Clear', mostlyClear: 'Mostly clear', partly: 'Partly cloudy', overcast: 'Overcast', fog: 'Fog', drizzle: 'Drizzle', freezingDrizzle: 'Freezing drizzle', rainLight: 'Light rain', rain: 'Rain', rainHeavy: 'Heavy rain', freezingRain: 'Freezing rain', snowLight: 'Light snow', snow: 'Snow', snowHeavy: 'Heavy snow', snowGrains: 'Snow grains', showers: 'Showers', showersHeavy: 'Heavy showers', snowShowers: 'Snow showers', thunder: 'Thunderstorm', hail: 'Thunderstorm with hail' } },
     siteDesc: 'Poienel is a garden in the making at Crucea, Constanța County, Romania: 65 species of trees, shrubs, fruit trees, aromatic and herbaceous plants, plus a 340 m² Miyawaki forest with 919 saplings of 30 native Dobrogea forest-steppe species.',
     footerDesc: 'Garden and Miyawaki forest at Crucea, Constanța County, in northern Dobrogea, Romania.', footerLinkuri: 'Recommended links', footerDate: 'Open data', footerDateText: 'The content may be read and quoted freely, including by AI agents; source: poienel.ro.',
@@ -170,10 +170,15 @@ ${Object.entries(L.meniu).map(([href, text]) => `<li><a href="${href}"${href ===
 // Banda cu prognoza: ascunsă până o umple resurse/vreme.js; fără JavaScript sau rețea nu apare
 const vreme = (lang) => {
   const L = ETICHETE[lang];
+  const ic = (cls, d) => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="sol"><path d="M4 15h16M7.5 15a4.5 4.5 0 0 1 9 0M12 5.4v2M5.6 8.2L7 9.6M18.4 8.2L17 9.6M3 12.2h1.8M19.2 12.2H21"/></g><path class="${cls}" d="${d}"/></svg>`;
   return `<div class="vreme" id="vreme" hidden role="group" aria-label="${esc(L.vreme.aria)}">
 <span class="vreme-titlu">${esc(L.vreme.titlu)}</span>
 <ul class="vreme-zile"></ul>
-<a class="vreme-sursa" href="https://open-meteo.com/" rel="noopener" target="_blank">${esc(L.vreme.sursa)}</a>
+<div class="vreme-soare" hidden>
+<span class="vreme-rasarit" title="${esc(L.vreme.rasarit)}">${ic('sageata', 'M12 22.6v-5M9.6 19.8l2.4-2.4 2.4 2.4')}<b></b></span>
+<span class="vreme-apus" title="${esc(L.vreme.apus)}">${ic('sageata', 'M12 17.6v5M9.6 20.2l2.4 2.4 2.4-2.4')}<b></b></span>
+</div>
+<span class="vreme-sursa">${esc(L.vreme.sursaDate)}: <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo</a> · Powered by <a href="https://sunrisesunset.io" rel="noopener" target="_blank">SunriseSunset.io</a></span>
 </div>
 <script type="application/json" id="vreme-data">${jsonInline({ lat: VREME.lat, lon: VREME.lon, lang, etichete: L.vreme })}</script>
 <script src="../resurse/vreme.js" defer></script>`;
