@@ -667,5 +667,105 @@
    }
   ],
   "linkuri": []
+ },
+ {
+  "id": "2026-11-11-inceputul-plantarii",
+  "data": "2026-11-11",
+  "taguri": [
+   "amenajare",
+   "etape"
+  ],
+  "titlu": {
+   "ro": "Am început plantarea: ulm de Turkestan, sălcioară, frasin comun și pin negru",
+   "en": "We started planting: Turkestan elm, Russian olive, common ash and Austrian pine"
+  },
+  "text": {
+   "ro": [
+    "11 noiembrie: am început plantarea. Azi am plantat ulmul de Turkestan, sălcioara, frasinul comun și pinul negru.",
+    "Lucrăm în echipă: unchiul Viorel face găurile cu motoburghiul, nea Costică ajută la măsurători, apoi mocirlim groapa cu apă, punem puietul forestier și îl acoperim cu pământ.",
+    "De la curier am primit 786 de puieți, în valoare de 3.395 lei: ulm 400 buc. (1.600 lei), pin negru 55 buc. (275 lei), sălcioară 40 buc. (120 lei), frasin comun 15 buc. (60 lei), mojdrean 50 buc. (150 lei), tei argintiu 26 buc. (260 lei), măceș 70 buc. (350 lei), păducel 60 buc. (300 lei) și lemn câinesc 70 buc. (280 lei). Ce nu am plantat azi rămâne în șanț, în „școală”, și plantăm săptămâna viitoare.",
+    "La final le-am arătat echipei planul pădurii Miyawaki, iar toți au fost foarte surprinși și neîncrezători că o pădure cu o densitate atât de mare se poate dezvolta."
+   ],
+   "en": [
+    "11 November: we started planting. Today we planted the Turkestan elm, the Russian olive, the common ash and the Austrian (black) pine.",
+    "We work as a team: Uncle Viorel drills the holes with the power auger, Mr Costică helps with the measuring, then we puddle the hole with water, set in the bare-root forest sapling and cover it with soil.",
+    "The courier delivered 786 saplings worth 3,395 lei: elm 400 (1,600 lei), Austrian pine 55 (275 lei), Russian olive 40 (120 lei), common ash 15 (60 lei), manna ash 50 (150 lei), silver lime 26 (260 lei), dog rose 70 (350 lei), hawthorn 60 (300 lei) and privet 70 (280 lei). What we did not plant today stays heeled in the trench, in the \"school\" (the Romanian term for a temporary nursery bed), and we will plant it next week.",
+    "At the end I showed the team the plan for the Miyawaki forest, and everyone was very surprised, and doubtful that a forest planted at such a density can grow."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-11-11-pin-negru.jpg",
+    "alt": {
+     "ro": "Un pin negru foarte mic, lângă un marcaj de lemn vopsit portocaliu",
+     "en": "A very small Austrian pine next to a wooden marker painted orange"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-11-lucru-in-echipa.jpg",
+    "alt": {
+     "ro": "Echipa la plantare pe parcela marcată cu țăruși, unul cu o găleată albă, cu un furtun galben pe jos",
+     "en": "The team planting on the plot marked with stakes, one carrying a white bucket, with a yellow hose on the ground"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-11-scoala-puieti.jpg",
+    "alt": {
+     "ro": "„Școala”: puieții neplantați, legați în mănunchiuri, lângă șanțul în care rămân până săptămâna viitoare",
+     "en": "The \"school\": the unplanted saplings, tied in bundles, beside the trench where they stay until next week"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-11-gauri-si-masuratori.jpg",
+    "alt": {
+     "ro": "Unchiul Viorel face găuri cu motoburghiul, iar nea Costică ajută la măsurători, pe terenul curățat de lângă pergolă",
+     "en": "Uncle Viorel drilling holes with the power auger while Mr Costică helps with the measuring, on the cleared ground by the pergola"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-11-planul-miyawaki.jpg",
+    "alt": {
+     "ro": "Echipa în jurul mesei din curte, în timp ce le arăt planul pădurii Miyawaki",
+     "en": "The team around the table in the yard while I show them the plan for the Miyawaki forest"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+     "en": "Miyawaki forest, north-east corner: the planting plan (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
+   },
+   {
+    "titlu": {
+     "ro": "Fișa speciei: ulm de Turkestan (A52)",
+     "en": "Species sheet: Siberian elm (A52)"
+    },
+    "url": "index.html#specie-A52"
+   },
+   {
+    "titlu": {
+     "ro": "Fișa speciei: sălcioară (A21)",
+     "en": "Species sheet: Russian olive (A21)"
+    },
+    "url": "index.html#specie-A21"
+   },
+   {
+    "titlu": {
+     "ro": "Fișa speciei: frasin (A24)",
+     "en": "Species sheet: European ash (A24)"
+    },
+    "url": "index.html#specie-A24"
+   },
+   {
+    "titlu": {
+     "ro": "Fișa speciei: pin negru (A34)",
+     "en": "Species sheet: Austrian pine (A34)"
+    },
+    "url": "index.html#specie-A34"
+   }
+  ]
  }
 ]
