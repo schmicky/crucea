@@ -23,7 +23,7 @@ rows = [
  ('Stejar pufos', 'Quercus pubescens', buc['Qp'], NORD['A40'], 'Matto Medusa Galați', 'arborele-cheie; 1 leu'),
  ('Stejar brumăriu', 'Quercus pedunculiflora', buc['Qb'], 0, 'Foresta Brăila', '1 leu'),
  ('Cer', 'Quercus cerris', buc['Qc'], 0, 'Foresta Brăila', '1 leu'),
- ('Ulm de câmp', 'Ulmus minor', buc['Um'], 0, 'Matto Medusa Galați', '1 leu; poate fi înlocuit cu ulm de Turkestan din surplus'),
+ ('Ulm de câmp', 'Ulmus minor', buc['Um'], 0, 'Agigea', 'au în stoc (12 noiembrie); preț de întrebat; alternativ Matto Medusa 1 leu'),
  ('Sorb', 'Sorbus torminalis', buc['St'], 0, 'de găsit (2biz.ro 15 lei)', 'dacă nu există, se înlocuiește cu cer'),
  ('Jugastru', 'Acer campestre', buc['Ac'], 0, 'Doi Cocoși Brăila', 'preț de confirmat; are și Agigea'),
  ('Arțar tătăresc', 'Acer tataricum', buc['At'], 0, 'Salcea Suceava', 'curier; preț de întrebat'),

@@ -76,7 +76,7 @@ Stejarul pufos e arborele-cheie al pădurii și nu-l are Foresta. Dacă Foresta 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
 | Qp | Stejar pufos | *Quercus pubescens* | 27 | 30 | 1,00 | strat A, specia-cheie a silvostepei dobrogene |
-| Um | Ulm de câmp | *Ulmus minor* | 14 | 16 | 1,00 | strat A; alternativ Rădăuți Prut (Botoșani) 0,9 lei |
+| Um | Ulm de câmp | *Ulmus minor* | 14 | 16 | 1,00 | strat A; **are și Agigea (12 noiembrie), de unde se ia odată cu porumbarul și scumpia**; alternativ Rădăuți Prut (Botoșani) 0,9 lei |
 | | **Total Pepiniera Matto Medusa SRL** | | **41** | **46** | | |
 
 ## Pepiniera Doi Cocoși SRL — Brăila (de confirmat)
