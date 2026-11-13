@@ -74,6 +74,7 @@ FURN = [
  ('Pepiniera Cobadin', '0746037827', 'Constanța', 'DN3, la intrarea în Cobadin, Constanța; contact@pepinieracobadin.ro', 'cătină roșie 15 lei; 50 km'),
  ('Szabó Zsolt', '0746118273', 'Harghita', 'Tomești, Harghita; curier', 'corn 1,40 lei (anunț vechi), sânger'),
  ('ICAS, Pepiniera Ștefănești', '021 350 3240', 'Argeș', 'Ștefănești, Argeș; icas.ro', 'sunat 13 noiembrie: NU au puieți forestieri'),
+ ('ICAS, Stațiunea Călărași', 'de completat', 'Călărași', 'Călărași; icas.ro', 'cerere trimisă 13 noiembrie cu toate speciile de găsit (corn, alun, soc, dârmox, salbă moale, călin, păr sălbatic, sorb, arbore de mazăre, sâmbovină); răspuns așteptat'),
  ('SC OLMA', '0767806245', 'Iași', 'Iași', 'păr sălbatic 2,50 lei, măr pădureț 1,50'),
  ('Pepiniera Mizil (magazin online)', 'site', 'Prahova', 'Mizil, Prahova; livrare prin curier', 'ultimă variantă: corn 18,90, alun 13,51, salbă moale 9,91, călin 18,02'),
  ('SCDP Constanța / Pepiniera Pomicolă Nalbant', 'de căutat', 'Constanța / Tulcea', 'Valu lui Traian, Constanța / Nalbant, Tulcea', 'pomi altoiți, cătină albă, nuc'),
