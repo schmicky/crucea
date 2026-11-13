@@ -21,8 +21,8 @@ CO_CARPEN = math.ceil(buc['Co'] / 2); CO_SAMB = buc['Co'] - CO_CARPEN; RH_CALIN 
 # (specie, nume latin, necesar pădure, necesar curte, furnizor, observație)
 rows = [
  ('Stejar pufos', 'Quercus pubescens', buc['Qp'], NORD['A40'], 'Matto Medusa Galați', 'arborele-cheie; 1 leu'),
- ('Stejar brumăriu', 'Quercus pedunculiflora', buc['Qb'], 0, 'Foresta Brăila', '1 leu'),
- ('Cer', 'Quercus cerris', buc['Qc'], 0, 'Foresta Brăila', '1 leu'),
+ ('Stejar brumăriu', 'Quercus pedunculiflora', buc['Qb'], 0, 'Foresta Brăila', '1 leu; are și Agigea (telefon 21 oct) și DS Tulcea/Galați (lista Romsilva, 1,5–2,5 lei)'),
+ ('Cer', 'Quercus cerris', buc['Qc'], 0, 'Agigea', 'lista Romsilva toamna 2026: DS Constanța are cer, 1,5–2,0 lei; alternativ Foresta 1 leu'),
  ('Ulm de câmp', 'Ulmus minor', buc['Um'], 0, 'Agigea', 'au în stoc (12 noiembrie); preț de întrebat; alternativ Matto Medusa 1 leu'),
  ('Sorb', 'Sorbus torminalis', buc['St'], 0, 'de găsit (2biz.ro 15 lei)', 'dacă nu există, se înlocuiește cu cer'),
  ('Jugastru', 'Acer campestre', buc['Ac'], 0, 'Doi Cocoși Brăila', 'preț de confirmat; are și Agigea'),
@@ -67,7 +67,8 @@ FURN = [
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
  ('Pepiniera Selficom', '0765402805', 'Galați', 'Galați', 'sânger 1,20 lei; același drum cu Matto Medusa'),
  ('Pepiniera Stejarul', '0774609287', 'Galați', 'Galați', 'alun, de sunat'),
- ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; 70 km, ridicare personală'),
+ ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; lista Romsilva toamna 2026: cer, lemn câinesc; 70 km, ridicare personală'),
+ ('Direcția Silvică Tulcea (Romsilva)', 'de căutat', 'Tulcea', 'pepinierele DS Tulcea', 'lista Romsilva toamna 2026: stejar brumăriu 1,5–2,5, corcoduș 1,2–2,2, sălcioară; rezervă'),
  ('Pepiniera Silvică Salcea (Romsilva)', '0753156196 / 0751164370', 'Suceava', 'Salcea, Suceava; curier', 'arțar tătăresc, confirmat 21 octombrie'),
  ('Pepiniera Țuțora', '0722930780', 'Iași', 'Țuțora, Iași', 'carpen 1,50 lei (ofertă 2024)'),
  ('Pepiniera Cobadin', '0746037827', 'Constanța', 'DN3, la intrarea în Cobadin, Constanța; contact@pepinieracobadin.ro', 'cătină roșie 15 lei; 50 km'),

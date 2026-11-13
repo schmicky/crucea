@@ -31,6 +31,10 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Selficom Galați | de sunat |  | sânger 1,2 lei (0765402805); se ridică odată cu Matto Medusa |
 | Mizil | **ofertă primită**: 4 din 12 specii (corn, alun, salbă moale, călin), 2 240 lei cu rezerva; **de renunțat** (exemplare mari, 10–19 lei) | 6 octombrie 2026 | rămâne doar dacă nu se găsește corn la Harghita sau ICAS (Agigea nu are); alunul trece la Stejarul Galați, salba și călinul la Salcea |
 
+### Lista Romsilva cu excedentul de puieți, toamna 2026 (găsită la 13 noiembrie)
+
+`raspunsuri/romsilva-preturi-puieti-toamna-2026.pdf`: prețuri medii fără TVA și direcțiile silvice cu excedent în octombrie 2026. Utile pentru proiect: **Constanța (Agigea)**: cer 1,5–2,0 lei, lemn câinesc 2,0; **Tulcea**: stejar brumăriu 1,5–2,5, corcoduș 1,2–2,2, sălcioară; **Galați**: stejar brumăriu, ulm de Turkestan 1,8–2,0; **Vrancea**: pin negru 1,8, vișin turcesc 1,7, măceș 0,7–2,1. Lista nu are corn, alun, dârmox, salbă, călin, soc, sorb, păr sălbatic. Consecință: cerul se cere la Agigea odată cu porumbarul, scumpia și ulmul de câmp; Direcția Silvică Tulcea e furnizor de rezervă pentru stejar brumăriu și corcoduș.
+
 ### Ordinea apelurilor pentru confirmare (actualizată la 31 octombrie 2026)
 
 0. **Ionuț, Suceava (31 octombrie)**: prețuri și mărimi pentru mojdrean, păducel, măceș, lemn câinesc, tei argintiu, sălcioară, frasin, ulm, pin negru; dacă sunt la nivelul pepinierelor silvice (1–2,5 lei), ia de la el tot ce are și scade speciile respective din Foresta, Țuțora și Voivodeni.
