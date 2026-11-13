@@ -56,12 +56,12 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 |---|---|---|---|
 | Corn, Cm (49 + rezervă 5) | ~~Pepiniera Silvică Agigea~~ | **nu au** (telefon, 21 octombrie 2026) | Agigea are porumbar, scumpie, măceș, jugastru, stejar brumăriu, cer, corcoduș, vișin turcesc, păducel, sălcioară; nu are corn, alun, salbă, călin, dârmox, sorb, pin negru, soc, arbore de mazăre, păr sălbatic, arțar tătăresc, sâmbovină |
 | | Szabó Zsolt, Tomești, Harghita, 0746118273 (anunț primaimpadurire.ro) | 1,40 lei, 15–50 cm, 35 000 buc | anunț vechi de 2 ani; are și sânger; merge doar dacă trimite prin curier |
-| | ICAS, Pepiniera Ștefănești (Argeș), icas.ro, 021 350 3240 | listă de prețuri ianuarie 2025 | puieți ornamentali de pepinieră silvică, rădăcină nudă la foioasele mici |
+| | ~~ICAS, Pepiniera Ștefănești (Argeș), 021 350 3240~~ | **nu au puieți forestieri** (telefon, 13 noiembrie 2026) | pista venea dintr-o listă de prețuri ICAS din ianuarie 2025, niciodată confirmată |
 | | Mizil, 18,90 lei | 54 buc ≈ 1 020 lei | ultima variantă, doar pentru corn |
 | Salbă moale, Ev (27 + 3) | ~~Pepiniera Silvică Salcea~~ | **nu au** (telefon, 21 octombrie 2026) | Salcea are doar arțar tătăresc dintre speciile căutate (plus pin silvestru, stejar, larice, plop, salcie, salcâm) |
 | | gardviuhibrid.ro | 12,90 lei, peste 50 cm | ca Mizil, fără avantaj |
 | | Pepiniera Roșie (Teleorman) | 25 lei rădăcină nudă | stoc epuizat în octombrie |
-| Călin, Rh (16 + 2) | ~~Pepiniera Silvică Salcea~~ | **nu au** călin, nici dârmox (telefon, 21 octombrie 2026) | rămân planteieftine.ro pentru călin și ICAS / Foresta / Doi Cocoși de întrebat pentru dârmox |
+| Călin, Rh (16 + 2) | ~~Pepiniera Silvică Salcea~~ | **nu au** călin, nici dârmox (telefon, 21 octombrie 2026) | rămân planteieftine.ro pentru călin și Foresta / Doi Cocoși de întrebat pentru dârmox (ICAS nu are) |
 | | planteieftine.ro | 7,77 lei, 40–60 cm, rădăcină liberă | listat ca „bulgăre de zăpadă” — poate fi soiul steril Roseum, fără fructe pentru păsări; de întrebat |
 | | Pepinierele Roman (Neamț) | 40 lei, 212 buc, comenzi 20 oct–30 nov | scump |
 | Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
