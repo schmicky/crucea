@@ -67,7 +67,7 @@ FURN = [
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
  ('Pepiniera Selficom', '0765402805', 'Galați', 'Galați', 'sânger 1,20 lei; același drum cu Matto Medusa'),
  ('Pepiniera Stejarul', '0774609287', 'Galați', 'Galați', 'alun, de sunat'),
- ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; COMANDĂ FERMĂ 13 noiembrie: porumbar 65, scumpie 45, ulm de câmp 20, cer 20, stejar brumăriu 30, vișin turcesc 35, corcoduș 25, jugastru 25 (265); 14 nov: la 1–2 ani mai au doar măceș, sălcioară, stejar verde, frasin de Pennsylvania — speciile comandate sunt probabil exemplare mari; vârsta și prețul de confirmat înainte de ridicare'),
+ ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; COMANDĂ FERMĂ 13 noiembrie: porumbar 65, scumpie 45, ulm de câmp 20, cer 20, stejar brumăriu 30, vișin turcesc 35, corcoduș 25, jugastru 25 (265); confirmată; în plus mai au la 1–2 ani măceș, sălcioară, stejar verde, frasin de Pennsylvania (nu sunt necesare); prețul total și ziua ridicării de confirmat'),
  ('Direcția Silvică Tulcea (Romsilva)', 'de căutat', 'Tulcea', 'pepinierele DS Tulcea', 'lista Romsilva toamna 2026: stejar brumăriu 1,5–2,5, corcoduș 1,2–2,2, sălcioară; rezervă'),
  ('Pepiniera Silvică Salcea (Romsilva)', '0753156196 / 0751164370', 'Suceava', 'Salcea, Suceava; curier', 'arțar tătăresc, confirmat 21 octombrie'),
  ('Pepiniera Țuțora', '0722930780', 'Iași', 'Țuțora, Iași', 'carpen 1,50 lei (ofertă 2024)'),
