@@ -63,7 +63,7 @@ rows = [
 FURN = [
  ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei; 13 nov: mai are soc și alun de 2 ani la 10 lei, altceva nu'),
  ('Pepiniera Foresta SRL', '0766413310', 'Brăila', 'Brăila', 'puieți forestieri 1–2 ani, 1 leu; confirmat 6 octombrie; 13 noiembrie: fără comandă prealabilă, se sună din drum și scoate puieții pe loc'),
- ('Pepiniera Doi Cocoși SRL', '0766405638', 'Brăila', 'str. Doi Cocoși nr. 2, Brăila', 'confirmat telefonic 6 octombrie; prețuri de confirmat; același drum cu Foresta'),
+ ('Pepiniera Doi Cocoși SRL', '0766405638', 'Brăila', 'str. Doi Cocoși nr. 2, Brăila', 'confirmat 6 octombrie; 13 noiembrie: se sună cu câteva ore înainte și pregătesc puieții; prețuri la ridicare; același drum cu Foresta'),
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
  ('Pepiniera Selficom', '0765402805', 'Galați', 'Galați', 'sânger 1,20 lei; același drum cu Matto Medusa'),
  ('Pepiniera Stejarul', '0774609287', 'Galați', 'Galați', 'alun, de sunat'),
