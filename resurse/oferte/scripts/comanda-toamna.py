@@ -34,7 +34,7 @@ rows = [
  ('Cireș sălbatic', 'Prunus avium', buc['Pa'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Corn', 'Cornus mas', buc['Cm'], NORD['F21'], 'de găsit (Tomești 1,40 lei; ICAS; Mizil 18,90)', ''),
- ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei; Mizil 13,51)', ''),
+ ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei, 2 ani, confirmat 13 nov; Mizil 13,51)', ''),
  ('Sânger', 'Cornus sanguinea', buc['Cs'], NORD['F44'], 'Selficom Galați', '1,20 lei'),
  ('Scumpie', 'Cotinus coggygria', buc['Cc'], NORD['S4'], 'Agigea', 'în stoc; preț de întrebat'),
  ('Corcoduș', 'Prunus cerasifera', buc['Pc'], NORD['F11'], 'Foresta Brăila', '1 leu; are și Agigea'),
@@ -44,7 +44,7 @@ rows = [
  ('Verigar → măceș', 'Rosa canina', RH_MACES, 0, 'Ionuț Suceava (primit)', 'acoperit din cei 70 de măceși primiți (48 necesari la rândul „Măceș” + 20 aici = 68)'),
  ('Salbă râioasă → salbă moale', 'Euonymus europaeus', buc['Ev'], 0, 'de găsit (gardviuhibrid.ro 12,90; Mizil 9,91)', 'înlocuitor'),
  ('Iasomie sălbatică → cătină roșie', 'Tamarix ramosissima', buc['Jf'], 0, 'Cobadin', '15 lei; sau planteieftine.ro'),
- ('Soc', 'Sambucus nigra', buc['Sn'], 0, 'de găsit (planteieftine.ro 5 lei; Ionuț 10 lei)', ''),
+ ('Soc', 'Sambucus nigra', buc['Sn'], 0, 'de găsit (planteieftine.ro 5 lei; Ionuț 10 lei, 2 ani, confirmat 13 nov)', ''),
  ('Bășicoasă → arbore de mazăre', 'Caragana arborescens', buc['Cl'], 0, 'de găsit (Pepiniera Roșie 35 lei)', 'altfel păducel din surplus'),
  ('Mojdrean', 'Fraxinus ornus', buc['Fo'], 0, 'Ionuț Suceava (primit)', ''),
  ('Tei argintiu', 'Tilia tomentosa', buc['Tt'], NORD['A48'], 'Ionuț Suceava (primit)', ''),
@@ -61,7 +61,7 @@ rows = [
  ('Cătină albă', 'Hippophae rhamnoides', 0, NORD['F26'], 'pepinieră pomicolă (SCDP Constanța / Nalbant)', '4 femele + 1 mascul'),
 ]
 FURN = [
- ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei'),
+ ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei; 13 nov: mai are soc și alun de 2 ani la 10 lei, altceva nu'),
  ('Pepiniera Foresta SRL', '0766413310', 'Brăila', 'Brăila', 'puieți forestieri 1–2 ani, 1 leu; confirmat telefonic 6 octombrie; livrare după căderea frunzei'),
  ('Pepiniera Doi Cocoși SRL', '0766405638', 'Brăila', 'str. Doi Cocoși nr. 2, Brăila', 'confirmat telefonic 6 octombrie; prețuri de confirmat; același drum cu Foresta'),
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
