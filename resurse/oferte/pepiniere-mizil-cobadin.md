@@ -67,7 +67,7 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 | Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
 | Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |
 
-Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); ~~Salcea~~ sunat la 21 octombrie (are doar arțar tătăresc); urmează Stejarul Galați (alun), ~~Harghita (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești~~ (nu au), ICAS Călărași și Periland (cereri trimise), online pentru rest. Mizil rămâne doar dacă nu se găsește corn nicăieri.
+Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); ~~Salcea~~ sunat la 21 octombrie (are doar arțar tătăresc); urmează Stejarul Galați (alun), ~~Harghita (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești~~ (nu au), ICAS Călărași (cerere trimisă; Periland a răspuns pe e-mail că nu are nimic din listă, 13 noiembrie), online pentru rest. Mizil rămâne doar dacă nu se găsește corn nicăieri.
 
 ## Pepiniera Avramescu (pepinieraavramescu.ro / pepinieracomana.ro) — notat la 11 octombrie 2026
 

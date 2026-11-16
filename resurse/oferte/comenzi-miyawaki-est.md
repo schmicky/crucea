@@ -147,7 +147,7 @@ Nici Agigea, nici Salcea nu au speciile de mai jos (nici cornul, alunul, salba m
 | Sn | Soc | *Sambucus nigra* | 26 | 29 | de găsit | strat D; planteieftine.ro 5 lei (50–80 cm, rădăcină liberă); Salcea nu are |
 | Cl | Arbore de mazăre (în locul bășicoasei) | *Caragana arborescens* | 20 | 22 | de găsit | strat D; Pepiniera Roșie 35 lei (scump); altfel înlocuire cu 20 păducel de la Foresta sau Agigea |
 | St | Sorb | *Sorbus torminalis* | 17 | 19 | de găsit | strat A; 2biz.ro 15 lei, 40–60 cm; Salcea nu are; dacă nu există, se înlocuiește cu cer de la Foresta/Agigea și pădurea rămâne cu 29 de specii |
-| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | 22 | de găsit | strat B; SC OLMA (0767806245) e de fapt Ionuț Suceava și nu are (13 noiembrie); Salcea nu are; de întrebat la Foresta și Doi Cocoși la ridicare; ICAS Călărași, Periland |
+| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | 22 | de găsit | strat B; SC OLMA (0767806245) e de fapt Ionuț Suceava și nu are (13 noiembrie); Salcea nu are; de întrebat la Foresta și Doi Cocoși la ridicare; ICAS Călărași; Periland nu are (e-mail, 13 noiembrie) |
 | Co | Sâmbovină (în locul cărpiniței) | *Celtis australis* | 12 | 14 | de găsit | strat B; Cobadin 50 lei (3 ani, prea scump); dacă nu se găsește ieftin, tot carpen de la Țuțora, adică 24 carpeni în total |
 | | **Total Specii încă fără furnizor** | | **164** | **182** | | |
 
@@ -184,7 +184,7 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Cm | Corn | *Cornus mas* | 43 | 48 | 18,90 | strat C; Agigea nu are (21 octombrie); Tomești nu livrează toamna asta (13 noiembrie); ICAS Ștefănești nu are; rămân ICAS Călărași, Periland, Foresta/Doi Cocoși la ridicare, apoi Mizil |
+| Cm | Corn | *Cornus mas* | 43 | 48 | 18,90 | strat C; Agigea nu are (21 octombrie); Tomești nu livrează toamna asta (13 noiembrie); ICAS Ștefănești nu are; Periland nu are (e-mail, 13 noiembrie); rămân ICAS Călărași, Foresta/Doi Cocoși la ridicare, apoi Mizil |
 | Ca | Alun | *Corylus avellana* | 24 | 27 | 13,51 | strat C; Agigea nu are (21 octombrie); se încearcă Pepiniera Stejarul, Galați, 0774609287 |
 | Ev | Salbă moale (în locul salbei râioase) | *Euonymus europaeus* | 36 | 40 | 9,91 | strat D; înlocuitor; Mizil are |
 | Rh | Călin (în locul verigarului) | *Viburnum opulus* | 28 | 31 | 18,02 | strat D; înlocuitor pentru 28 din cei 46 verigari (restul 18 = măceș, la Foresta); Mizil are |
@@ -203,7 +203,7 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 1. **Agigea, sunat la 21 octombrie**: porumbar și scumpie sigure de aici; de cerut prețurile și mărimile; de decis dacă se mută aici jugastrul și speciile comune cu Foresta, ca să scadă un drum la Brăila.
 2. Foresta, Matto Medusa, Doi Cocoși: confirmate; comanda fermă după prima brumă, cu cireșul sălbatic adăugat la Doi Cocoși.
 3. Cobadin: doar cătina roșie, de ridicat personal; dacă răspund că au semănătură mică de arțar tătăresc, scumpie sau sâmbovină, se iau de acolo. Selficom Galați pentru sânger, odată cu drumul la Matto Medusa.
-4. Stejarul Galați (alun), ~~Tomești (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești (dârmox, corn)~~ (nu au), ICAS Călărași și Periland (cerere trimisă), online (soc, călin, salbă, sorb, păr sălbatic) pentru speciile fără furnizor; Mizil doar pentru corn, dacă a picat tot.
+4. Stejarul Galați (alun), ~~Tomești (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești (dârmox, corn)~~ (nu au), ICAS Călărași (cerere trimisă), ~~Periland~~ (nu au nimic din listă, e-mail 13 noiembrie), online (soc, călin, salbă, sorb, păr sălbatic) pentru speciile fără furnizor; Mizil doar pentru corn, dacă a picat tot.
 5. Țuțora Iași doar pentru ce a rămas (tei argintiu, carpen). Online (planteieftine.ro) pentru soc (5 lei) și călin (7,77 lei).
 6. Din comenzile de noiembrie ale planului nord (`comenzi-noiembrie-plan-nord.md`) se scad cele 34 plante ale perdelei din colțul de nord-est: sălcioară 9, frasin 5, dud alb 4, pin negru 4, corn 3, ulm de turkestan 3, măceș 2, păducel 2, stejar pufos 1, pom de stafide 1.
 
