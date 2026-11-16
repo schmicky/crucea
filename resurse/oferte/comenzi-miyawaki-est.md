@@ -147,7 +147,7 @@ Nici Agigea, nici Salcea nu au speciile de mai jos (nici cornul, alunul, salba m
 | Sn | Soc | *Sambucus nigra* | 26 | 29 | de găsit | strat D; planteieftine.ro 5 lei (50–80 cm, rădăcină liberă); Salcea nu are |
 | Cl | Arbore de mazăre (în locul bășicoasei) | *Caragana arborescens* | 20 | 22 | de găsit | strat D; Pepiniera Roșie 35 lei (scump); altfel înlocuire cu 20 păducel de la Foresta sau Agigea |
 | St | Sorb | *Sorbus torminalis* | 17 | 19 | de găsit | strat A; 2biz.ro 15 lei, 40–60 cm; Salcea nu are; dacă nu există, se înlocuiește cu cer de la Foresta/Agigea și pădurea rămâne cu 29 de specii |
-| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | 22 | de găsit | strat B; SC OLMA (0767806245) e de fapt Ionuț Suceava și nu are (13 noiembrie); Salcea nu are; de întrebat la Foresta și Doi Cocoși la ridicare; ICAS Călărași; Periland nu are (e-mail, 13 noiembrie) |
+| Pp | Păr sălbatic | *Pyrus pyraster* | 20 | 22 | de găsit | strat B; **Pepiniera Greenland** 1,40 lei, 1 an, rădăcină nudă, 30 000 în stoc (inventar puietiforestieri.ro, noiembrie 2026; locația de aflat pe puietiforestieri.ro/sc-greenland/); SC OLMA (0767806245) e de fapt Ionuț Suceava și nu are (13 noiembrie); Salcea nu are; de întrebat la Foresta și Doi Cocoși la ridicare; ICAS Călărași; Periland nu are |
 | Co | Sâmbovină (în locul cărpiniței) | *Celtis australis* | 12 | 14 | de găsit | strat B; Cobadin 50 lei (3 ani, prea scump); dacă nu se găsește ieftin, tot carpen de la Țuțora, adică 24 carpeni în total |
 | | **Total Specii încă fără furnizor** | | **164** | **182** | | |
 
