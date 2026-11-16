@@ -29,7 +29,7 @@ rows = [
  ('Arțar tătăresc', 'Acer tataricum', buc['At'], 0, 'Salcea Suceava', 'curier; preț de întrebat'),
  ('Cărpiniță → carpen comun', 'Carpinus betulus', CO_CARPEN, 0, 'Țuțora Iași', 'înlocuitor, 1,50 lei'),
  ('Cărpiniță → sâmbovină', 'Celtis australis', CO_SAMB, 0, 'de găsit (Cobadin 50 lei, scump)', 'altfel tot carpen'),
- ('Păr sălbatic', 'Pyrus pyraster', buc['Pp'], 0, 'de găsit (OLMA Iași 2,5 lei)', 'de întrebat și la Doi Cocoși'),
+ ('Păr sălbatic', 'Pyrus pyraster', buc['Pp'], 0, 'de găsit (Foresta / Doi Cocoși la ridicare; ICAS Călărași, Periland)', 'OLMA = Ionuț Suceava, nu are (13 nov)'),
  ('Vișin turcesc', 'Prunus mahaleb', buc['Pm'], 0, 'Agigea', 'comandă fermă 13 nov (35 buc.)'),
  ('Cireș sălbatic', 'Prunus avium', buc['Pa'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
@@ -61,7 +61,7 @@ rows = [
  ('Cătină albă', 'Hippophae rhamnoides', 0, NORD['F26'], 'pepinieră pomicolă (SCDP Constanța / Nalbant)', '4 femele + 1 mascul'),
 ]
 FURN = [
- ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei; 13 nov: mai are soc și alun de 2 ani la 10 lei, altceva nu'),
+ ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei; 13 nov: mai are soc și alun de 2 ani la 10 lei, altceva nu; „SC OLMA” (0767806245) e același furnizor — fără păr sălbatic, fără măr pădureț'),
  ('Pepiniera Foresta SRL', '0766413310', 'Brăila', 'Brăila', 'puieți forestieri 1–2 ani, 1 leu; confirmat 6 octombrie; 13 noiembrie: fără comandă prealabilă, se sună din drum și scoate puieții pe loc'),
  ('Pepiniera Doi Cocoși SRL', '0766405638', 'Brăila', 'str. Doi Cocoși nr. 2, Brăila', 'confirmat 6 octombrie; 13 noiembrie: se sună cu câteva ore înainte și pregătesc puieții; prețuri la ridicare; același drum cu Foresta'),
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
@@ -75,7 +75,6 @@ FURN = [
  ('Szabó Zsolt', '0746118273', 'Harghita', 'Tomești, Harghita; curier', 'sunat 13 noiembrie: NU livrează toamna asta, de revenit la primăvară; corn 1,40 lei, sânger'),
  ('ICAS, Pepiniera Ștefănești', '021 350 3240', 'Argeș', 'Ștefănești, Argeș; icas.ro', 'sunat 13 noiembrie: NU au puieți forestieri'),
  ('ICAS, Stațiunea Călărași', 'de completat', 'Călărași', 'Călărași; icas.ro', 'cerere trimisă 13 noiembrie cu toate speciile de găsit (corn, alun, soc, dârmox, salbă moale, călin, păr sălbatic, sorb, arbore de mazăre, sâmbovină); răspuns așteptat'),
- ('SC OLMA', '0767806245', 'Iași', 'Iași', 'păr sălbatic 2,50 lei, măr pădureț 1,50'),
  ('Pepiniera Mizil (magazin online)', 'site', 'Prahova', 'Mizil, Prahova; livrare prin curier', 'ultimă variantă: corn 18,90, alun 13,51, salbă moale 9,91, călin 18,02'),
  ('SCDP Constanța / Pepiniera Pomicolă Nalbant', 'de căutat', 'Constanța / Tulcea', 'Valu lui Traian, Constanța / Nalbant, Tulcea', 'pomi altoiți, cătină albă, nuc'),
 ]
@@ -86,7 +85,7 @@ thin = Side(style='thin', color='BFBFBF'); box = Border(left=thin, right=thin, t
 ws['A1'] = 'Comanda de puieți pentru toamna 2026 — pădurea Miyawaki (schema 4) și planul nord'; ws['A1'].font = Font(name=F, size=13, bold=True)
 ws['A2'] = 'Necesarul include rezerva de 10 % (minimum 1). Fără arbuștii ornamentali și gardurile vii de laur/photinia, care se plantează primăvara. Coloanele galbene se completează pe măsură ce comanzi și primești.'; ws['A2'].font = Font(name=F, size=9, italic=True)
 hdr = ['Specie', 'Nume latin', 'Necesar pădure', 'Necesar curte', 'Necesar total (+10 %)', 'Furnizor', 'Județ', 'Cantitate comandată', 'Cantitate recepționată', 'Rămâne de primit', 'Observații']
-JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Matto Medusa': 'Galați', 'Selficom': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'OLMA': 'Iași', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
+JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Matto Medusa': 'Galați', 'Selficom': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
 def judet(fu): return next((j for k, j in JUD.items() if k in fu), '')
 r0 = 4
 for c, h in enumerate(hdr, 1):
