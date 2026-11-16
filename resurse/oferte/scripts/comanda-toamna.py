@@ -29,7 +29,7 @@ rows = [
  ('Arțar tătăresc', 'Acer tataricum', buc['At'], 0, 'Salcea Suceava', 'curier; preț de întrebat'),
  ('Cărpiniță → carpen comun', 'Carpinus betulus', CO_CARPEN, 0, 'de găsit (Țuțora nu răspunde; grupul WhatsApp, ICAS Călărași)', 'înlocuitor; Țuțora 1,50 lei, ofertă 2024, neconfirmat 13 nov'),
  ('Cărpiniță → sâmbovină', 'Celtis australis', CO_SAMB, 0, 'de găsit (Cobadin 50 lei, scump)', 'altfel tot carpen'),
- ('Păr sălbatic', 'Pyrus pyraster', buc['Pp'], 0, 'de găsit (Foresta / Doi Cocoși la ridicare; ICAS Călărași)', 'OLMA = Ionuț Suceava, nu are; Periland nu are (13 nov)'),
+ ('Păr sălbatic', 'Pyrus pyraster', buc['Pp'], 0, 'de găsit (Pepiniera Greenland 1,40 lei, 1 an, rădăcină nudă — inventar puietiforestieri.ro; Foresta / Doi Cocoși la ridicare; ICAS Călărași)', 'OLMA = Ionuț Suceava, nu are; Periland nu are (13 nov)'),
  ('Vișin turcesc', 'Prunus mahaleb', buc['Pm'], 0, 'Agigea', 'comandă fermă 13 nov (35 buc.)'),
  ('Cireș sălbatic', 'Prunus avium', buc['Pa'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
@@ -57,7 +57,7 @@ rows = [
  ('Frasin comun', 'Fraxinus excelsior', 0, NORD['A24'], 'Ionuț Suceava (primit)', 'plantat 11 noiembrie'),
  ('Paltin de câmp', 'Acer platanoides', 0, NORD['A5'], 'Foresta Brăila', '1 leu'),
  ('Dud alb', 'Morus alba', 0, NORD['F9'], 'Foresta Brăila', '1 leu; să fie Morus alba'),
- ('Nuc', 'Juglans regia', 0, NORD['F6'], 'pepinieră pomicolă / Mizil', 'puiet din sămânță'),
+ ('Nuc', 'Juglans regia', 0, NORD['F6'], 'de găsit (Pepiniera Guranda / O.S. Trușești, Botoșani, 2 lei, 2 ani, rădăcină nudă; pepinieră pomicolă)', 'puiet din sămânță'),
  ('Cătină albă', 'Hippophae rhamnoides', 0, NORD['F26'], 'pepinieră pomicolă (SCDP Constanța / Nalbant)', '4 femele + 1 mascul'),
 ]
 FURN = [
