@@ -35,7 +35,7 @@ rows = [
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Corn', 'Cornus mas', buc['Cm'], NORD['F21'], 'de găsit (ICAS Călărași, cerere trimisă; Foresta / Doi Cocoși la ridicare; Mizil 18,90)', 'Tomești nu livrează toamna asta, la primăvară; ICAS Ștefănești și Periland nu au (13 nov)'),
  ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei, 2 ani, confirmat 13 nov; Mizil 13,51)', ''),
- ('Sânger', 'Cornus sanguinea', buc['Cs'], NORD['F44'], 'Selficom Galați', '1,20 lei'),
+ ('Sânger', 'Cornus sanguinea', buc['Cs'], NORD['F44'], 'de găsit (Foresta / Doi Cocoși la ridicare; ICAS Călărași; Zăval Dolj 1,02 lei)', 'Selficom nu are nimic, doar salcâm (13 nov)'),
  ('Scumpie', 'Cotinus coggygria', buc['Cc'], NORD['S4'], 'Agigea', 'în stoc; preț de întrebat'),
  ('Corcoduș', 'Prunus cerasifera', buc['Pc'], NORD['F11'], 'Agigea', 'comandă fermă 13 nov (25 buc.)'),
  ('Porumbar', 'Prunus spinosa', buc['Ps'], 0, 'Agigea', '0,50 lei + TVA'),
@@ -65,7 +65,6 @@ FURN = [
  ('Pepiniera Foresta SRL', '0766413310', 'Brăila', 'Brăila', 'puieți forestieri 1–2 ani, 1 leu; confirmat 6 octombrie; 13 noiembrie: fără comandă prealabilă, se sună din drum și scoate puieții pe loc'),
  ('Pepiniera Doi Cocoși SRL', '0766405638', 'Brăila', 'str. Doi Cocoși nr. 2, Brăila', 'confirmat 6 octombrie; 13 noiembrie: se sună cu câteva ore înainte și pregătesc puieții; prețuri la ridicare; același drum cu Foresta'),
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
- ('Pepiniera Selficom', '0765402805', 'Galați', 'Galați', 'sânger 1,20 lei; același drum cu Matto Medusa'),
  ('Pepiniera Stejarul', '0774609287', 'Galați', 'Galați', 'alun, de sunat'),
  ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; COMANDĂ FERMĂ 13 noiembrie: porumbar 65, scumpie 45, ulm de câmp 20, cer 20, stejar brumăriu 30, vișin turcesc 35, corcoduș 25, jugastru 25 (265); confirmată; în plus mai au la 1–2 ani măceș, sălcioară, stejar verde, frasin de Pennsylvania (nu sunt necesare); prețul total și ziua ridicării de confirmat'),
  ('Direcția Silvică Tulcea (Romsilva)', 'de căutat', 'Tulcea', 'pepinierele DS Tulcea', 'lista Romsilva toamna 2026: stejar brumăriu 1,5–2,5, corcoduș 1,2–2,2, sălcioară; rezervă'),
@@ -85,7 +84,7 @@ thin = Side(style='thin', color='BFBFBF'); box = Border(left=thin, right=thin, t
 ws['A1'] = 'Comanda de puieți pentru toamna 2026 — pădurea Miyawaki (schema 4) și planul nord'; ws['A1'].font = Font(name=F, size=13, bold=True)
 ws['A2'] = 'Necesarul include rezerva de 10 % (minimum 1). Fără arbuștii ornamentali și gardurile vii de laur/photinia, care se plantează primăvara. Coloanele galbene se completează pe măsură ce comanzi și primești.'; ws['A2'].font = Font(name=F, size=9, italic=True)
 hdr = ['Specie', 'Nume latin', 'Necesar pădure', 'Necesar curte', 'Necesar total (+10 %)', 'Furnizor', 'Județ', 'Cantitate comandată', 'Cantitate recepționată', 'Rămâne de primit', 'Observații']
-JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Matto Medusa': 'Galați', 'Selficom': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
+JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Matto Medusa': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
 def judet(fu): return next((j for k, j in JUD.items() if k in fu), '')
 r0 = 4
 for c, h in enumerate(hdr, 1):
