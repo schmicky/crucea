@@ -26,7 +26,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | Salcea (Romsilva Suceava) | **confirmat telefonic**: au arțar tătăresc (și pin silvestru, stejar, larice, plop, salcie, salcâm, nefolosite); **nu au** salbă moale, călin, dârmox, sorb, soc, păr sălbatic, pin negru | 21 octombrie 2026 | 0753156196 / 0751164370; comanda de arțar tătăresc în noiembrie, prin curier; de cerut prețul și mărimea |
 | ICAS, Stațiunea Călărași | **cerere trimisă pe 13 noiembrie** cu toate speciile fără furnizor (corn, alun, soc, dârmox, salbă moale, călin, păr sălbatic, sorb, arbore de mazăre, sâmbovină) | 13 noiembrie 2026 | pepinieră de stat din stepă, 120 km; răspuns așteptat |
 | Stejarul Galați | de sunat |  | 0774609287; alun, în locul celui de la Mizil; se ridică odată cu Matto Medusa și Selficom |
-| Szabó Zsolt, Tomești (Harghita) | **de sunat**: Agigea nu are corn | 21 octombrie 2026 | 0746118273; anunț de corn 15–50 cm la 1,40 lei, vechi de 2 ani; doar cu livrare prin curier |
+| ~~Szabó Zsolt, Tomești (Harghita)~~ | **nu livrează toamna asta** (telefon): „reveniți la primăvară, căutați în altă parte” | 13 noiembrie 2026 | 0746118273; corn 15–50 cm la 1,40 lei; rămâne variantă pentru completările din primăvara 2027 |
 | Țuțora Iași | de sunat |  | tei argintiu și carpen, după răspunsul de la Cobadin |
 | Cobadin | **listă de prețuri 2024–2025 primită**: mărimi mari, 15–160 lei; fără sânger, tei argintiu, pin negru; cererea de ofertă pentru mărimi mici rămâne trimisă | 6 octombrie 2026 | rămâne doar cătina roșie (15 lei); de întrebat dacă au semănătură de arțar tătăresc, scumpie, sâmbovină la prețuri mici |
 | Selficom Galați | de sunat |  | sânger 1,2 lei (0765402805); se ridică odată cu Matto Medusa |
@@ -44,7 +44,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 3. **Stejarul Galați** (0774609287): alun, 37 de bucăți; ridicare odată cu Matto Medusa.
 4. **Selficom Galați** (0765402805): sânger, 37 de bucăți; confirmarea stocului pentru noiembrie.
 5. **Țuțora Iași**: tei argintiu și carpen, după răspunsul de la Cobadin pentru tei.
-6. **Tomești, Harghita** (0746118273): corn (Agigea nu are) și eventual sânger; livrare prin curier. ICAS Ștefănești: sunat pe 13 noiembrie, nu au puieți forestieri — scos din liste.
+6. ~~**Tomești, Harghita** (0746118273): corn (Agigea nu are) și eventual sânger; livrare prin curier.~~ Sunat pe 13 noiembrie: nu livrează toamna asta, de revenit la primăvară. ICAS Ștefănești: sunat pe 13 noiembrie, nu au puieți forestieri — scos din liste. Cornul rămâne la ICAS Călărași / Periland / Foresta-Doi Cocoși la ridicare, apoi Mizil.
 7. **Voivodeni, Reghin** (pepiniera silvică): pin negru 1,45 lei, dacă Salcea nu are; altfel ghiveci online.
 8. **Mizil**: nu se mai sună; comanda online se face doar pentru corn, dacă a picat tot ce e mai sus.
 
@@ -136,7 +136,7 @@ Teiul argintiu nu există la nicio pepinieră silvică din sud-est. Dacă Cobadi
 | | **Total Pepiniera Silvică Salcea** | | **22** | **25** | | |
 
 ## Specii încă fără furnizor — după răspunsurile de la Agigea și Salcea (21 octombrie 2026)
-*nicio pepinieră confirmată; următoarele apeluri: Stejarul Galați, Tomești (Harghita), OLMA Iași, online (ICAS Ștefănești: nu au puieți forestieri, 13 noiembrie)*
+*nicio pepinieră confirmată; următoarele apeluri: Stejarul Galați, OLMA Iași, online (ICAS Ștefănești: nu au puieți forestieri; Tomești: nu livrează toamna asta, la primăvară — 13 noiembrie)*
 
 Nici Agigea, nici Salcea nu au speciile de mai jos (nici cornul, alunul, salba moale și călinul, care rămân în secțiunea Mizil ca ultimă variantă). Sursele din coloana „Observații” sunt cele găsite până acum, toate de confirmat telefonic; cantitățile nu intră în costul cunoscut.
 
@@ -184,7 +184,7 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 
 | Cod schemă | Specie de comandat | Nume latin | În schemă | De comandat | Preț (lei/buc) | Observații |
 |---|---|---|---:|---:|---:|---|
-| Cm | Corn | *Cornus mas* | 43 | 48 | 18,90 | strat C; Agigea nu are (21 octombrie); înainte de Mizil se încearcă Tomești (Harghita); ICAS nu are |
+| Cm | Corn | *Cornus mas* | 43 | 48 | 18,90 | strat C; Agigea nu are (21 octombrie); Tomești nu livrează toamna asta (13 noiembrie); ICAS Ștefănești nu are; rămân ICAS Călărași, Periland, Foresta/Doi Cocoși la ridicare, apoi Mizil |
 | Ca | Alun | *Corylus avellana* | 24 | 27 | 13,51 | strat C; Agigea nu are (21 octombrie); se încearcă Pepiniera Stejarul, Galați, 0774609287 |
 | Ev | Salbă moale (în locul salbei râioase) | *Euonymus europaeus* | 36 | 40 | 9,91 | strat D; înlocuitor; Mizil are |
 | Rh | Călin (în locul verigarului) | *Viburnum opulus* | 28 | 31 | 18,02 | strat D; înlocuitor pentru 28 din cei 46 verigari (restul 18 = măceș, la Foresta); Mizil are |
@@ -203,7 +203,7 @@ Lista lor de prețuri arată **material de amenajare, nu puieți de împădurire
 1. **Agigea, sunat la 21 octombrie**: porumbar și scumpie sigure de aici; de cerut prețurile și mărimile; de decis dacă se mută aici jugastrul și speciile comune cu Foresta, ca să scadă un drum la Brăila.
 2. Foresta, Matto Medusa, Doi Cocoși: confirmate; comanda fermă după prima brumă, cu cireșul sălbatic adăugat la Doi Cocoși.
 3. Cobadin: doar cătina roșie, de ridicat personal; dacă răspund că au semănătură mică de arțar tătăresc, scumpie sau sâmbovină, se iau de acolo. Selficom Galați pentru sânger, odată cu drumul la Matto Medusa.
-4. Stejarul Galați (alun), Tomești (corn), Voivodeni (pin negru), ICAS Ștefănești (dârmox, corn), online (soc, călin, salbă, sorb, păr sălbatic) pentru cele 11 specii fără furnizor; Mizil doar pentru corn, dacă a picat tot.
+4. Stejarul Galați (alun), ~~Tomești (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești (dârmox, corn)~~ (nu au), ICAS Călărași și Periland (cerere trimisă), online (soc, călin, salbă, sorb, păr sălbatic) pentru speciile fără furnizor; Mizil doar pentru corn, dacă a picat tot.
 5. Țuțora Iași doar pentru ce a rămas (tei argintiu, carpen). Online (planteieftine.ro) pentru soc (5 lei) și călin (7,77 lei).
 6. Din comenzile de noiembrie ale planului nord (`comenzi-noiembrie-plan-nord.md`) se scad cele 34 plante ale perdelei din colțul de nord-est: sălcioară 9, frasin 5, dud alb 4, pin negru 4, corn 3, ulm de turkestan 3, măceș 2, păducel 2, stejar pufos 1, pom de stafide 1.
 
