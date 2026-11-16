@@ -27,7 +27,7 @@ Cele 5 specii care nu se găsesc la nicio pepinieră sunt înlocuite ca în `pep
 | ICAS, Stațiunea Călărași | **cerere trimisă pe 13 noiembrie** cu toate speciile fără furnizor (corn, alun, soc, dârmox, salbă moale, călin, păr sălbatic, sorb, arbore de mazăre, sâmbovină) | 13 noiembrie 2026 | pepinieră de stat din stepă, 120 km; răspuns așteptat |
 | Stejarul Galați | de sunat |  | 0774609287; alun, în locul celui de la Mizil; se ridică odată cu Matto Medusa |
 | ~~Szabó Zsolt, Tomești (Harghita)~~ | **nu livrează toamna asta** (telefon): „reveniți la primăvară, căutați în altă parte” | 13 noiembrie 2026 | 0746118273; corn 15–50 cm la 1,40 lei; rămâne variantă pentru completările din primăvara 2027 |
-| Țuțora Iași | de sunat |  | tei argintiu și carpen, după răspunsul de la Cobadin |
+| Țuțora Iași | **nu răspunde la telefon** — neconfirmat | 13 noiembrie 2026 | 0722930780; carpenul trece la „de găsit”; teiul argintiu a venit de la Ionuț |
 | Cobadin | **listă de prețuri 2024–2025 primită**: mărimi mari, 15–160 lei; fără sânger, tei argintiu, pin negru; cererea de ofertă pentru mărimi mici rămâne trimisă | 6 octombrie 2026 | rămâne doar cătina roșie (15 lei); de întrebat dacă au semănătură de arțar tătăresc, scumpie, sâmbovină la prețuri mici |
 | ~~Selficom Galați~~ | **nu au nimic** (telefon): doar salcâm | 13 noiembrie 2026 | 0765402805; oferta de sânger de pe puietiforestieri.ro nu mai e valabilă; sângerul trece la „de găsit” |
 | Mizil | **ofertă primită**: 4 din 12 specii (corn, alun, salbă moale, călin), 2 240 lei cu rezerva; **de renunțat** (exemplare mari, 10–19 lei) | 6 octombrie 2026 | rămâne doar dacă nu se găsește corn la Harghita (Agigea și ICAS nu au); alunul trece la Stejarul Galați, salba și călinul la Salcea |
