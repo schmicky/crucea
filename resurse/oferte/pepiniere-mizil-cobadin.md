@@ -69,6 +69,10 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 
 Ordinea apelurilor: ~~Agigea~~ sunat la 21 octombrie (are doar porumbar și scumpie dintre speciile căutate); ~~Salcea~~ sunat la 21 octombrie (are doar arțar tătăresc); urmează Stejarul Galați (alun), ~~Harghita (corn)~~ (nu livrează toamna asta, 13 noiembrie), Voivodeni (pin negru), ~~ICAS Ștefănești~~ (nu au), ICAS Călărași (cerere trimisă; Periland a răspuns pe e-mail că nu are nimic din listă, 13 noiembrie), online pentru rest. Mizil rămâne doar dacă nu se găsește corn nicăieri.
 
+## Pepiniera Greenland — Brăila (găsită în inventarul puietiforestieri.ro, 13 noiembrie 2026)
+
+S.C. Greenland S.R.L., pepinieră silvică autorizată, str. Erou Comisar Popovici nr. 30, Brăila; Stan Ionel, 0722254455, stangreenland76@gmail.com. Rădăcină nudă, 1–2 ani: păr sălbatic 1,40 lei (30 000), mojdrean 1,00, măceș 1,40, păducel 1,40, lemn câinesc 1,40, sălcioară 1,30, vișin turcesc 1,40, dud 1,40, stejar brumăriu 1,00, cer 1,00, ulm de câmp și de Turkestan 1,00, frasin de baltă, glădiță, salcâm. Pentru proiect: **păr sălbatic (22)**, de confirmat telefonic; se ridică în același drum cu Foresta și Doi Cocoși.
+
 ## Pepiniera Avramescu (pepinieraavramescu.ro / pepinieracomana.ro) — notat la 11 octombrie 2026
 
 Sursă găsită pentru **lemn câinesc japonez** (*Ligustrum ovalifolium*), gardul tuns din proiectul original (S34, 168 buc.): rădăcină nudă la **1–4 lei bucata** după mărime (10–20 cm, 30–40 cm, 50–60 cm, 70–80 cm), set de 100 de bucăți de 30–50 cm la **125 lei** (1,25 lei/buc), cu trepte de preț până la 2 000 de bucăți; la ghiveci 25 lei. Prețul japonezului e aici la nivelul puietului silvic, deci alegerea între japonez și autohton se face după rezistență și întreținere, nu după bani. Livrarea prin curier și comanda minimă: de verificat pe site sau la telefon. Nu au în listă corn, călin, sorb sau scumpie (doar euonymus ornamental la 40–90 lei).
