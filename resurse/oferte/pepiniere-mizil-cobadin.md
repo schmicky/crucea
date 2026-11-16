@@ -62,7 +62,7 @@ Scop: renunțarea la Mizil (exemplare mari, 10–19 lei) fără a pierde cornul,
 | | gardviuhibrid.ro | 12,90 lei, peste 50 cm | ca Mizil, fără avantaj |
 | | Pepiniera Roșie (Teleorman) | 25 lei rădăcină nudă | stoc epuizat în octombrie |
 | Călin, Rh (16 + 2) | ~~Pepiniera Silvică Salcea~~ | **nu au** călin, nici dârmox (telefon, 21 octombrie 2026) | rămân planteieftine.ro pentru călin și Foresta / Doi Cocoși de întrebat pentru dârmox (ICAS nu are) |
-| | planteieftine.ro | 7,77 lei, 40–60 cm, rădăcină liberă | listat ca „bulgăre de zăpadă” — poate fi soiul steril Roseum, fără fructe pentru păsări; de întrebat |
+| | planteieftine.ro (lista din 13 noiembrie 2026, `raspunsuri/planteieftine-produse-2026-11.xlsx`) | 8,10 lei, 15–30 cm, rădăcină liberă; tufă 100–120 cm 26,10 | listat ca „bulgăre de zăpadă” — poate fi soiul steril Roseum, fără fructe pentru păsări; de întrebat |
 | | Pepinierele Roman (Neamț) | 40 lei, 212 buc, comenzi 20 oct–30 nov | scump |
 | Sorb, St (11 + 2) | 2biz.ro | 15 lei, 40–60 cm, rădăcină nudă | pepinierele silvice nu cultivă sorbul; Mizil fără stoc |
 | Cărpiniță, verigar, bășicoasă, iasomie sălbatică | — | — | nicio sursă în România; rămân înlocuite ca mai sus |

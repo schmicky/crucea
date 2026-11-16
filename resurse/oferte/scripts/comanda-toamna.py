@@ -33,18 +33,18 @@ rows = [
  ('Vișin turcesc', 'Prunus mahaleb', buc['Pm'], 0, 'Agigea', 'comandă fermă 13 nov (35 buc.)'),
  ('Cireș sălbatic', 'Prunus avium', buc['Pa'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
- ('Corn', 'Cornus mas', buc['Cm'], NORD['F21'], 'de găsit (ICAS Călărași, cerere trimisă; Foresta / Doi Cocoși la ridicare; Mizil 18,90)', 'Tomești nu livrează toamna asta, la primăvară; ICAS Ștefănești și Periland nu au (13 nov)'),
- ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei, 2 ani, confirmat 13 nov; Mizil 13,51)', ''),
+ ('Corn', 'Cornus mas', buc['Cm'], NORD['F21'], 'de găsit (ICAS Călărași, cerere trimisă; Foresta / Doi Cocoși la ridicare; Mizil 18,90; planteieftine.ro doar soiul Jolico 22 lei)', 'Tomești nu livrează toamna asta, la primăvară; ICAS Ștefănești și Periland nu au (13 nov)'),
+ ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei, 2 ani, confirmat 13 nov; Mizil 13,51; planteieftine.ro ghiveci 14,40)', ''),
  ('Sânger', 'Cornus sanguinea', buc['Cs'], NORD['F44'], 'Zăval, O.S. Sadova, Dolj (1,13 lei, 3 ani, curier) — mesaj trimis 13 nov, răspuns așteptat; altfel Foresta / Doi Cocoși la ridicare, ICAS Călărași', 'Selficom nu are nimic, doar salcâm (13 nov)'),
  ('Scumpie', 'Cotinus coggygria', buc['Cc'], NORD['S4'], 'Agigea', 'în stoc; preț de întrebat'),
  ('Corcoduș', 'Prunus cerasifera', buc['Pc'], NORD['F11'], 'Agigea', 'comandă fermă 13 nov (25 buc.)'),
  ('Porumbar', 'Prunus spinosa', buc['Ps'], 0, 'Agigea', '0,50 lei + TVA'),
  ('Dârmox', 'Viburnum lantana', buc['Vl'], 0, 'de găsit (GardenExpert 21,80)', 'de întrebat la Foresta și Doi Cocoși la ridicare; ICAS nu are'),
- ('Verigar → călin', 'Viburnum opulus', RH_CALIN, 0, 'de găsit (planteieftine.ro 7,77; Mizil 18,02)', 'înlocuitor'),
+ ('Verigar → călin', 'Viburnum opulus', RH_CALIN, 0, 'planteieftine.ro 8,10 lei, 15–30 cm, rădăcină liberă (listă 13 nov) — de comandat; Mizil 18,02', 'înlocuitor; de confirmat că e specia, nu soiul steril Roseum'),
  ('Verigar → măceș', 'Rosa canina', RH_MACES, 0, 'Ionuț Suceava (primit)', 'acoperit din cei 70 de măceși primiți (48 necesari la rândul „Măceș” + 20 aici = 68)'),
  ('Salbă râioasă → salbă moale', 'Euonymus europaeus', buc['Ev'], 0, 'de găsit (gardviuhibrid.ro 12,90; Mizil 9,91)', 'înlocuitor'),
  ('Iasomie sălbatică → cătină roșie', 'Tamarix ramosissima', buc['Jf'], 0, 'Cobadin', '15 lei; sau planteieftine.ro'),
- ('Soc', 'Sambucus nigra', buc['Sn'], 0, 'de găsit (planteieftine.ro 5 lei; Ionuț 10 lei, 2 ani, confirmat 13 nov)', ''),
+ ('Soc', 'Sambucus nigra', buc['Sn'], 0, 'de găsit (Ionuț 10 lei, 2 ani, confirmat 13 nov; planteieftine.ro doar soiul Sampo la ghiveci 14,40)', 'socul de 5 lei nu mai e în lista planteieftine (13 nov)'),
  ('Bășicoasă → arbore de mazăre', 'Caragana arborescens', buc['Cl'], 0, 'de găsit (Pepiniera Roșie 35 lei)', 'altfel păducel din surplus'),
  ('Mojdrean', 'Fraxinus ornus', buc['Fo'], 0, 'Ionuț Suceava (primit)', ''),
  ('Tei argintiu', 'Tilia tomentosa', buc['Tt'], NORD['A48'], 'Ionuț Suceava (primit)', ''),
@@ -58,7 +58,7 @@ rows = [
  ('Paltin de câmp', 'Acer platanoides', 0, NORD['A5'], 'Foresta Brăila', '1 leu'),
  ('Dud alb', 'Morus alba', 0, NORD['F9'], 'Foresta Brăila', '1 leu; să fie Morus alba'),
  ('Nuc', 'Juglans regia', 0, NORD['F6'], 'de găsit (Pepiniera Guranda / O.S. Trușești, Botoșani, 2 lei, 2 ani, rădăcină nudă; pepinieră pomicolă)', 'puiet din sămânță'),
- ('Cătină albă', 'Hippophae rhamnoides', 0, NORD['F26'], 'pepinieră pomicolă (SCDP Constanța / Nalbant)', '4 femele + 1 mascul'),
+ ('Cătină albă', 'Hippophae rhamnoides', 0, NORD['F26'], 'pepinieră pomicolă (SCDP Constanța / Nalbant); planteieftine.ro set 3 femele + 1 mascul 50 lei', '4 femele + 1 mascul'),
 ]
 FURN = [
  ('Ionuț, Suceava', 'WhatsApp (numărul la George)', 'Suceava', 'Suceava; livrare prin curier', 'livrat 11 noiembrie 2026: 786 puieți, 3 395 lei; 13 nov: mai are soc și alun de 2 ani la 10 lei, altceva nu; „SC OLMA” (0767806245) e același furnizor — fără păr sălbatic, fără măr pădureț'),
@@ -76,6 +76,7 @@ FURN = [
  ('Szabó Zsolt', '0746118273', 'Harghita', 'Tomești, Harghita; curier', 'sunat 13 noiembrie: NU livrează toamna asta, de revenit la primăvară; corn 1,40 lei, sânger'),
  ('ICAS, Pepiniera Ștefănești', '021 350 3240', 'Argeș', 'Ștefănești, Argeș; icas.ro', 'sunat 13 noiembrie: NU au puieți forestieri'),
  ('ICAS, Stațiunea Călărași', 'de completat', 'Călărași', 'Călărași; icas.ro', 'cerere trimisă 13 noiembrie cu toate speciile de găsit (corn, alun, soc, dârmox, salbă moale, călin, păr sălbatic, sorb, arbore de mazăre, sâmbovină); răspuns așteptat'),
+ ('planteieftine.ro (magazin online)', 'site, formular', 'online', 'livrare prin curier; lista de produse din 13 noiembrie 2026 în raspunsuri/planteieftine-produse-2026-11.xlsx', 'călin (Viburnum opulus) 8,10 lei, 15–30 cm, rădăcină liberă (de întrebat dacă e specia cu fructe sau soiul steril Roseum) sau tufă 100–120 cm 26,10; soc negru doar soiul Sampo la ghiveci 14,40; alun la ghiveci 14,40; corn doar soiul fructifer Jolico 22 lei; set cătină 3 femele + 1 mascul 50 lei; porumbar și păducel 13,50; sălcioară 9; ulm de Turkestan 0,90–1,62; nu au sânger, dârmox, salbă moale, păr sălbatic, sorb, arbore de mazăre, carpen, sâmbovină, nuc comun'),
  ('Pepiniera Mizil (magazin online)', 'site', 'Prahova', 'Mizil, Prahova; livrare prin curier', 'ultimă variantă: corn 18,90, alun 13,51, salbă moale 9,91, călin 18,02'),
  ('SCDP Constanța / Pepiniera Pomicolă Nalbant', 'de căutat', 'Constanța / Tulcea', 'Valu lui Traian, Constanța / Nalbant, Tulcea', 'pomi altoiți, cătină albă, nuc'),
 ]
@@ -86,7 +87,7 @@ thin = Side(style='thin', color='BFBFBF'); box = Border(left=thin, right=thin, t
 ws['A1'] = 'Comanda de puieți pentru toamna 2026 — pădurea Miyawaki (schema 4) și planul nord'; ws['A1'].font = Font(name=F, size=13, bold=True)
 ws['A2'] = 'Necesarul include rezerva de 10 % (minimum 1). Fără arbuștii ornamentali și gardurile vii de laur/photinia, care se plantează primăvara. Coloanele galbene se completează pe măsură ce comanzi și primești.'; ws['A2'].font = Font(name=F, size=9, italic=True)
 hdr = ['Specie', 'Nume latin', 'Necesar pădure', 'Necesar curte', 'Necesar total (+10 %)', 'Furnizor', 'Județ', 'Cantitate comandată', 'Cantitate recepționată', 'Rămâne de primit', 'Observații']
-JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Greenland': 'Brăila', 'Zăval': 'Dolj', 'Matto Medusa': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
+JUD = {'Ionuț': 'Suceava', 'Foresta': 'Brăila', 'Doi Cocoși': 'Brăila', 'Greenland': 'Brăila', 'Zăval': 'Dolj', 'Matto Medusa': 'Galați', 'Stejarul': 'Galați', 'Agigea': 'Constanța', 'Salcea': 'Suceava', 'Țuțora': 'Iași', 'Cobadin': 'Constanța', 'Tomești': 'Harghita', 'planteieftine': 'online', 'Mizil': 'Prahova', 'SCDP': 'Constanța / Tulcea', 'pomicolă': 'Constanța / Tulcea', 'ICAS': 'Argeș', '2biz': 'online', 'planteieftine': 'online', 'gardviuhibrid': 'online', 'Roșie': 'Teleorman', 'GardenExpert': 'online'}
 def judet(fu): return next((j for k, j in JUD.items() if k in fu), '')
 r0 = 4
 for c, h in enumerate(hdr, 1):
