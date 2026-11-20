@@ -16,29 +16,31 @@ NORD_RO = {'A21': 'Sălcioară', 'A24': 'Frasin comun', 'A52': 'Ulm de Turkestan
 # corespondența cod pădure → cod plan nord (aceeași specie)
 LEG = {'Qp': 'A40', 'Tt': 'A48', 'Cr': 'S5', 'Rc': 'F28', 'Pc': 'F11', 'Cm': 'F21', 'Ca': 'F1', 'Cs': 'F44', 'Cc': 'S4', 'Pn': 'A34', 'Um': None}
 # primit de la Ionuț, 11 noiembrie
-PRIMIT = {'Ulm de Turkestan': 400, 'Pin negru': 55, 'Sălcioară': 40, 'Frasin comun': 15, 'Mojdrean': 50, 'Tei argintiu': 26, 'Măceș': 70, 'Păducel': 60, 'Lemn câinesc': 70}
+# ridicat de la Agigea, 20 noiembrie (puieți de 2–3 ani)
+PRIMIT_AGIGEA = {'Porumbar': 65, 'Scumpie': 45, 'Ulm de câmp': 20, 'Cer': 20, 'Stejar brumăriu': 30, 'Vișin turcesc': 35, 'Corcoduș': 25, 'Jugastru': 25}
+PRIMIT = {'Ulm de Turkestan': 400, 'Pin negru': 55, 'Sălcioară': 40, 'Frasin comun': 15, 'Mojdrean': 50, 'Tei argintiu': 26, 'Măceș': 70, 'Păducel': 60, 'Lemn câinesc': 70, **PRIMIT_AGIGEA}
 CO_CARPEN = math.ceil(buc['Co'] / 2); CO_SAMB = buc['Co'] - CO_CARPEN; RH_CALIN = round(buc['Rh'] * 0.6); RH_MACES = buc['Rh'] - RH_CALIN
 # (specie, nume latin, necesar pădure, necesar curte, furnizor, observație)
 rows = [
  ('Stejar pufos', 'Quercus pubescens', buc['Qp'], NORD['A40'], 'Matto Medusa Galați', 'arborele-cheie; 1 leu'),
- ('Stejar brumăriu', 'Quercus pedunculiflora', buc['Qb'], 0, 'Agigea', '1 leu; are și Agigea (telefon 21 oct) și DS Tulcea/Galați (lista Romsilva, 1,5–2,5 lei)'),
- ('Cer', 'Quercus cerris', buc['Qc'], 0, 'Agigea', 'lista Romsilva toamna 2026: DS Constanța are cer, 1,5–2,0 lei; alternativ Foresta 1 leu'),
- ('Ulm de câmp', 'Ulmus minor', buc['Um'], 0, 'Agigea', 'au în stoc (12 noiembrie); preț de întrebat; alternativ Matto Medusa 1 leu'),
+ ('Stejar brumăriu', 'Quercus pedunculiflora', buc['Qb'], 0, 'Agigea (primit)', '1 leu; are și Agigea (telefon 21 oct) și DS Tulcea/Galați (lista Romsilva, 1,5–2,5 lei)'),
+ ('Cer', 'Quercus cerris', buc['Qc'], 0, 'Agigea (primit)', 'lista Romsilva toamna 2026: DS Constanța are cer, 1,5–2,0 lei; alternativ Foresta 1 leu'),
+ ('Ulm de câmp', 'Ulmus minor', buc['Um'], 0, 'Agigea (primit)', 'au în stoc (12 noiembrie); preț de întrebat; alternativ Matto Medusa 1 leu'),
  ('Sorb', 'Sorbus torminalis', buc['St'], 0, 'de găsit (2biz.ro 15 lei)', 'dacă nu există, se înlocuiește cu cer'),
- ('Jugastru', 'Acer campestre', buc['Ac'], 0, 'Agigea', 'comandă fermă 13 nov (25 buc.)'),
+ ('Jugastru', 'Acer campestre', buc['Ac'], 0, 'Agigea (primit)', 'comandă fermă 13 nov (25 buc.)'),
  ('Arțar tătăresc', 'Acer tataricum', buc['At'], 0, 'Salcea Suceava', 'curier; preț de întrebat'),
  ('Cărpiniță → carpen comun', 'Carpinus betulus', CO_CARPEN, 0, 'de găsit (Țuțora nu răspunde; grupul WhatsApp, ICAS Călărași)', 'înlocuitor; Țuțora 1,50 lei, ofertă 2024, neconfirmat 13 nov'),
  ('Cărpiniță → sâmbovină', 'Celtis australis', CO_SAMB, 0, 'de găsit (Cobadin 50 lei, scump)', 'altfel tot carpen'),
  ('Păr sălbatic', 'Pyrus pyraster', buc['Pp'], 0, 'Greenland Brăila (1,40 lei, 1 an) — mesaj trimis 13 nov, răspuns așteptat', 'OLMA = Ionuț Suceava, nu are; Periland nu are (13 nov)'),
- ('Vișin turcesc', 'Prunus mahaleb', buc['Pm'], 0, 'Agigea', 'comandă fermă 13 nov (35 buc.)'),
+ ('Vișin turcesc', 'Prunus mahaleb', buc['Pm'], 0, 'Agigea (primit)', 'comandă fermă 13 nov (35 buc.)'),
  ('Cireș sălbatic', 'Prunus avium', buc['Pa'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Măr pădureț', 'Malus sylvestris', buc['Ms'], 0, 'Doi Cocoși Brăila', 'preț de confirmat'),
  ('Corn', 'Cornus mas', buc['Cm'], NORD['F21'], 'de găsit (ICAS Călărași, cerere trimisă; Foresta / Doi Cocoși la ridicare; Mizil 18,90; planteieftine.ro doar soiul Jolico 22 lei)', 'Tomești nu livrează toamna asta, la primăvară; ICAS Ștefănești și Periland nu au (13 nov)'),
  ('Alun', 'Corylus avellana', buc['Ca'], NORD['F1'], 'de găsit (Stejarul Galați; Ionuț 10 lei, 2 ani, confirmat 13 nov; Mizil 13,51; planteieftine.ro ghiveci 14,40)', ''),
  ('Sânger', 'Cornus sanguinea', buc['Cs'], NORD['F44'], 'Zăval, O.S. Sadova, Dolj (1,13 lei, 3 ani, rădăcină nudă) — CONFIRMAT 18 nov; transportul de rezolvat', 'Selficom nu are nimic, doar salcâm (13 nov)'),
- ('Scumpie', 'Cotinus coggygria', buc['Cc'], NORD['S4'], 'Agigea', 'în stoc; preț de întrebat'),
- ('Corcoduș', 'Prunus cerasifera', buc['Pc'], NORD['F11'], 'Agigea', 'comandă fermă 13 nov (25 buc.)'),
- ('Porumbar', 'Prunus spinosa', buc['Ps'], 0, 'Agigea', '0,50 lei + TVA'),
+ ('Scumpie', 'Cotinus coggygria', buc['Cc'], NORD['S4'], 'Agigea (primit)', 'în stoc; preț de întrebat'),
+ ('Corcoduș', 'Prunus cerasifera', buc['Pc'], NORD['F11'], 'Agigea (primit)', 'comandă fermă 13 nov (25 buc.)'),
+ ('Porumbar', 'Prunus spinosa', buc['Ps'], 0, 'Agigea (primit)', '0,50 lei + TVA'),
  ('Dârmox', 'Viburnum lantana', buc['Vl'], 0, 'de găsit (GardenExpert 21,80)', 'de întrebat la Foresta și Doi Cocoși la ridicare; ICAS nu are'),
  ('Verigar → călin', 'Viburnum opulus', RH_CALIN, 0, 'planteieftine.ro 8,10 lei, 15–30 cm, rădăcină liberă (listă 13 nov) — de comandat; Mizil 18,02', 'înlocuitor; de confirmat că e specia, nu soiul steril Roseum'),
  ('Verigar → măceș', 'Rosa canina', RH_MACES, 0, 'Ionuț Suceava (primit)', 'acoperit din cei 70 de măceși primiți (48 necesari la rândul „Măceș” + 20 aici = 68)'),
@@ -68,7 +70,7 @@ FURN = [
  ('Pepiniera Zăval (Ocolul Silvic Sadova, Direcția Silvică Dolj)', 'de completat', 'Dolj', 'Zăval, Dolj; puietiforestieri.ro/pepiniera-zaval-ocolul-silvic-sadova-directia-silvica-dolj/; doar prin curier (230 km)', 'inventar puietiforestieri.ro noiembrie 2026: sânger 1,13 lei (3 ani, rădăcină nudă, 3 900), stejar brumăriu 1,54, sălcioară 1,05; mesaj trimis 13 noiembrie pentru sânger 46; CONFIRMAT 18 noiembrie; transportul (curier, 230 km) de rezolvat — de cerut scurtarea tulpinilor la 50 cm înainte de împachetare'),
  ('Pepiniera Matto Medusa SRL', '0767477472', 'Galați', 'Galați', 'confirmat telefonic 6 octombrie; 1 leu'),
  ('Pepiniera Stejarul', '0774609287', 'Galați', 'Galați', 'alun, de sunat'),
- ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; COMANDĂ FERMĂ 13 noiembrie: porumbar 65, scumpie 45, ulm de câmp 20, cer 20, stejar brumăriu 30, vișin turcesc 35, corcoduș 25, jugastru 25 (265); confirmată; în plus mai au la 1–2 ani măceș, sălcioară, stejar verde, frasin de Pennsylvania (nu sunt necesare); prețul total și ziua ridicării de confirmat'),
+ ('Pepiniera Silvică Agigea (Romsilva)', '0241738043 / 0748143025 (ing. Orac)', 'Constanța', 'DN 38, Agigea, Constanța; pepiniera@constanta.rosilva.ro', 'stoc confirmat 21 octombrie; COMANDĂ FERMĂ 13 noiembrie: porumbar 65, scumpie 45, ulm de câmp 20, cer 20, stejar brumăriu 30, vișin turcesc 35, corcoduș 25, jugastru 25 (265); RIDICATĂ 20 noiembrie: puieți de 2–3 ani, mai mari decât cei de la Ionuț; recomandarea inginerului: gropi de 50 × 50 cm și mocirlire cu pământ galben și balegă de vacă; prețul de completat'),
  ('Direcția Silvică Tulcea (Romsilva)', 'de căutat', 'Tulcea', 'pepinierele DS Tulcea', 'lista Romsilva toamna 2026: stejar brumăriu 1,5–2,5, corcoduș 1,2–2,2, sălcioară; rezervă'),
  ('Pepiniera Silvică Salcea (Romsilva)', '0753156196 / 0751164370', 'Suceava', 'Salcea, Suceava; curier', 'arțar tătăresc, confirmat 21 octombrie'),
  ('Pepiniera Țuțora', '0722930780', 'Iași', 'Țuțora, Iași', 'carpen 1,50 lei (ofertă 2024); 13 nov: nu răspunde la telefon, neconfirmat'),
@@ -97,7 +99,7 @@ for sp, la, np_, nc, fu, obs in rows:
     tot = rez(np_ + nc)
     primit = PRIMIT.get(sp.split(' → ')[-1] if '→' in sp else sp, 0) if 'primit' in fu else 0
     COMANDAT = {'Porumbar': 65, 'Scumpie': 45, 'Ulm de câmp': 20, 'Cer': 20, 'Stejar brumăriu': 30, 'Vișin turcesc': 35, 'Corcoduș': 25, 'Jugastru': 25}   # Agigea, comandă fermă 13 nov
-    comandat = COMANDAT.get(sp, 0) if fu == 'Agigea' else 0
+    comandat = COMANDAT.get(sp, 0) if fu.startswith('Agigea') else 0
     vals = [sp, la, np_, nc, f'=ROUNDUP((C{r}+D{r})*1.1,0)', fu, judet(fu), (primit or comandat) or None, primit if primit else None, f'=H{r}-I{r}', obs]
     for c, v in enumerate(vals, 1):
         cell = ws.cell(r, c, v); cell.font = N; cell.border = box
@@ -109,7 +111,7 @@ for sp, la, np_, nc, fu, obs in rows:
 last = r - 1
 ws.cell(r, 1, 'Total').font = B
 for col in 'CDEHIJ': ws[f'{col}{r}'] = f'=SUM({col}{r0 + 1}:{col}{last})'; ws[f'{col}{r}'].font = B; ws[f'{col}{r}'].border = box
-ws.cell(r0 + 1 + len(rows) + 1, 1, 'Legendă: verde = primit de la Ionuț pe 11 noiembrie (cantitatea e trecută deja); galben = de completat la comandă și la recepție; „Rămâne de primit” = comandat − recepționat.').font = Font(name=F, size=9, italic=True)
+ws.cell(r0 + 1 + len(rows) + 1, 1, 'Legendă: verde = primit (Ionuț, 11 noiembrie; Agigea, 20 noiembrie — cantitatea e trecută deja); galben = de completat la comandă și la recepție; „Rămâne de primit” = comandat − recepționat.').font = Font(name=F, size=9, italic=True)
 ws['E4'].comment = Comment('Necesar pădure + curte, +10 % rezervă, rotunjit în sus. Sursa: plantare-miyawaki-est4.json și pozitie-nord-miyawaki.json.', 'Poienel')
 # furnizorii
 rf = r + 4
