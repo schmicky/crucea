@@ -330,6 +330,57 @@ def fas_legend(segs):
     ordine = F['rotatie'] if isinstance(F.get('rotatie'), list) else [c for c in ('Cs', 'Rh', 'Ps', 'Cm', 'Vl', 'Cc', 'Rc', 'Lv', 'Ev', 'Cr') if c in cnt]
     seen = []; [seen.append(c) for c in ordine if c not in seen]
     return '<table class="leg"><tr>' + ''.join(f'<td><span class="sw" style="background:{COL[SP[c]["strat"]]}"></span><b>{H.escape(FAS_NUME.get(c, SP[c]["ro"]))}</b> {cnt[c]}' + (f' (din care {n_rh} pe pozițiile verigarului)' if c == 'Rc' else '') + '</td>' for c in seen if c != 'Rh') + '</tr></table>'
+def fas_module_page():
+    """Pagina 3: dreptunghiul care se repetă (geometria) și rotația celor 12 specii."""
+    S = 40.0; ox, oy = 22.0, 12.0           # 1 m = 40 mm; originea = gardul, la stânga
+    X = lambda m: ox + m * S; Y = lambda m: oy + m * S
+    rows = [0.8, 1.3, 1.8]; W_m = 2.4
+    o = [f'<svg viewBox="0 0 150 120" width="150mm" height="120mm" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, Segoe UI, Helvetica, Arial, sans-serif">',
+         f'<rect x="{X(0) - 6}" y="{oy - 3}" width="{W_m * S + 12}" height="3" fill="#8d7b55"/><text x="{X(W_m / 2)}" y="{oy - 4.5}" font-size="3.4" font-weight="700" text-anchor="middle" fill="#6b5f3a">GARDUL</text>',
+         f'<rect x="{X(0)}" y="{Y(rows[0])}" width="{1.2 * S}" height="{1.0 * S}" fill="#fff6d6" stroke="#c62828" stroke-width="0.6" stroke-dasharray="2 1.2"/>',
+         f'<text x="{X(0.6)}" y="{Y(rows[0]) - 6}" font-size="3" font-weight="700" text-anchor="middle" fill="#c62828">dreptunghiul care se repetă: 1,2 × 1,0 m, 6 plante</text>']
+    for rm in rows: o.append(f'<line x1="{X(-0.15)}" y1="{Y(rm)}" x2="{X(W_m + 0.15)}" y2="{Y(rm)}" stroke="#bbb" stroke-width="0.3" stroke-dasharray="1.2 1"/>')
+    for ri, rm in enumerate(rows):
+        off = 0.3 if ri == 1 else 0.0; k = 0; xm = off
+        while xm <= W_m + 0.01:
+            inside = X(0) - 0.5 <= X(xm) < X(1.2) - 0.5
+            o.append(f'<circle cx="{X(xm):.1f}" cy="{Y(rm):.1f}" r="3" fill="{"#2b2b2b" if inside else "#bdbdbd"}" stroke="#fff" stroke-width="0.5"/>')
+            xm += 0.6; k += 1
+    def dim(x1, y1, x2, y2, txt, dx=0, dy=0, col='#1f4d33'):
+        return (f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="0.5" marker-start="url(#a)" marker-end="url(#a)"/>'
+                f'<text x="{(x1 + x2) / 2 + dx:.1f}" y="{(y1 + y2) / 2 + dy:.1f}" font-size="3.6" font-weight="700" text-anchor="middle" fill="{col}">{txt}</text>')
+    o.insert(1, '<defs><marker id="a" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L6,3 L0,6 z" fill="#1f4d33"/></marker></defs>')
+    xr = X(W_m + 0.3)
+    o.append(dim(xr, oy, xr, Y(0.8), '0,8 m', dx=8, dy=1))
+    o.append(dim(xr, Y(0.8), xr, Y(1.3), '0,5 m', dx=8, dy=1))
+    o.append(dim(xr, Y(1.3), xr, Y(1.8), '0,5 m', dx=8, dy=1))
+    yb = Y(1.8) + 9
+    o.append(dim(X(0), yb, X(0.6), yb, '0,6 m', dy=5))
+    o.append(dim(X(0.6), yb, X(1.2), yb, '0,6 m', dy=5))
+    o.append(dim(X(0), Y(1.3) + 5.5, X(0.3), Y(1.3) + 5.5, '0,3 m', dy=4.5, col='#c62828'))
+    o.append(dim(X(0), Y(0.8), X(0.3), Y(1.3), '0,58 m', dx=-8, dy=0, col='#2f80ed'))
+    o.append(f'<text x="{X(0) - 16}" y="{yb + 10}" font-size="3" fill="#333">pe rând: o plantă la 0,6 m · între rânduri 0,5 m · rândul din mijloc decalat cu 0,3 m,</text>')
+    o.append(f'<text x="{X(0) - 16}" y="{yb + 14.5}" font-size="3" fill="#333">deci pe diagonală 0,58 m · dreptunghiul se repetă la fiecare 1,2 m de gard · 5 plante pe metru de gard</text>')
+    svg = ''.join(o) + '</svg>'
+    rot = F['rotatie']; n = len(rot)
+    starts = {}
+    for p in sorted(fasie, key=lambda p: p['poz']): starts.setdefault(p['patrat'], []).append(p)
+    def rotsvg():
+        w = 20.5; o = [f'<svg viewBox="0 0 {n * w + 4} 42" width="{n * w + 4}mm" height="42mm" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, Segoe UI, Helvetica, Arial, sans-serif">']
+        for i, c in enumerate(rot):
+            x = 2 + w * i + w / 2; nume = FAS_NUME.get(c, SP[c]['ro'])
+            o.append(f'<circle cx="{x:.1f}" cy="9" r="6.2" fill="{COL[SP[c]["strat"]]}" stroke="#fff" stroke-width="0.6"/><text x="{x:.1f}" y="11" font-size="6" font-weight="700" text-anchor="middle" fill="{TXT[SP[c]["strat"]]}">{i + 1}</text>')
+            fs = 3.6 if len(nume) <= 11 else 3.1
+            o.append(f'<text x="{x:.1f}" y="21" font-size="{fs}" text-anchor="middle" fill="#222">{H.escape(nume)}</text>')
+            if i < n - 1: o.append(f'<text x="{x + w / 2:.1f}" y="10.5" font-size="4" text-anchor="middle" fill="#999">›</text>')
+        o.append(f'<text x="{2 + n * w / 2:.1f}" y="31" font-size="3.6" font-weight="700" text-anchor="middle" fill="#1f4d33">… și de la capăt: a 13-a plantă e iar {H.escape(FAS_NUME.get(rot[0], SP[rot[0]]["ro"]))}</text>')
+        return ''.join(o) + '</svg>'
+    segs = fas_rows()
+    rows_txt = ''.join(f'<li><b>{"Nord" if k[0] == "F-N" else "Est"}, rândul la {str(k[1]).replace(".", ",")} m</b>: începe cu poziția {ps[0]["poz"]}, adică <b>{H.escape(FAS_NUME.get(ps[0]["cod"], SP[ps[0]["cod"]]["ro"]))}</b> (a {(ps[0]["poz"] - 1) % n + 1}-a din rotație), {len(ps)} plante</li>' for k, ps in segs)
+    return (f'<section class="pg"><h1>Dreptunghiul care se repetă și rotația speciilor <small>— cum numeri distanțele și la câte plante revine aceeași specie</small></h1>'
+            f'<div class="row"><div>{svg}</div><div class="txt"><h2>Speciile: se repetă la fiecare {n} plante ({str(round(n * 0.6, 1)).replace('.', ',')} m de rând)</h2>'
+            f'<p>Numărătoarea merge <b>fără întrerupere</b> de la o poziție la alta (1 → 194): când se termină un rând, următorul continuă rotația de unde a rămas, nu o ia de la capăt. De aceea fiecare rând începe cu altă specie:</p><ul>{rows_txt}</ul>'
+            f'<p>Practic: pe fiecare sfoară, pui plantele în ordinea rotației de mai sus, pornind de la specia cu care începe rândul; după {n} plante o iei de la capăt. Aceeași specie nu ajunge niciodată vecină cu ea însăși, nici pe rând, nici pe diagonală.</p></div></div><div class="rot">{rotsvg()}</div></section>')
 segsN = [s for s in fas_rows() if s[0][0] == 'F-N']; segsE = [s for s in fas_rows() if s[0][0] == 'F-E']
 foot = ('<p class="foot"><b>Cum se trasează:</b> sfoara paralelă cu gardul la 0,8 m, apoi la 1,3 m, apoi la 1,8 m; pe fiecare sfoară câte o plantă la 0,6 m, începând din colțul de nord-est; '
         'rândul din mijloc (1,3 m) pornește cu 0,3 m mai târziu, ca plantele să fie în șah. Numerele sunt ordinea de plantare (1–98 pe nord, 99–194 pe est). '
@@ -344,10 +395,12 @@ h1 {{ font-size: 15px; margin: 0 0 2mm; color: #1f4d33; }} h1 small {{ font-weig
 table.leg {{ border-collapse: collapse; font-size: 11px; margin: 2mm 0 0; }} table.leg td {{ padding: 1mm 2.5mm 1mm 0; white-space: nowrap; }}
 .sw {{ display: inline-block; width: 3.2mm; height: 3.2mm; border-radius: 50%; vertical-align: middle; margin-right: 1.2mm; }}
 .foot {{ font-size: 9.5px; color: #333; margin: 2.5mm 0 0; line-height: 1.4; }}
+.row {{ display: flex; gap: 6mm; align-items: flex-start; }} .row > div:first-child {{ flex: 0 0 auto; }} .txt {{ flex: 1; font-size: 11.5px; line-height: 1.45; }} .txt h2 {{ font-size: 13px; margin: 0 0 2mm; color: #1f4d33; }} .txt ul {{ margin: 1mm 0 2mm; padding-left: 5mm; }} .txt li {{ margin: 0.6mm 0; }} .txt p {{ margin: 1.5mm 0; }} .rot {{ margin-top: 3mm; }}
 @media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
 </style></head><body>
 <section class="pg"><h1>Fâșia de la gardul de nord <small>— {sum(len(ps) for _, ps in segsN)} de puieți, 3 rânduri, de la colțul de nord-est spre vest</small></h1>{fas_page('nord', segsN)}{fas_legend(segsN)}{foot}</section>
 <section class="pg"><h1>Fâșia de la gardul de est <small>— {sum(len(ps) for _, ps in segsE)} de puieți, 3 rânduri, de la colțul de nord-est spre sud</small></h1>{fas_page('est', segsE)}{fas_legend(segsE)}{foot}</section>
+{fas_module_page()}
 </body></html>'''
 open(f'{R}/fasie-est4.html', 'w', encoding='utf-8').write(fhtml)
 print('scris: fasie-est4.html')
