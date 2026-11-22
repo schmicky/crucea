@@ -180,7 +180,7 @@ F = C2['fasie']
 sablon = (f'<p><b>Rama de 3 × 3 m și cele 30 de cuie:</b> ramă din șipcă cu latura de nord vopsită roșu, ținută mereu spre gardul de nord; cuie la 0,3 · 0,9 · 1,5 · 2,1 · 2,7 m pe laturile de nord și de sud și la 0,25 · 0,75 · 1,25 · 1,75 · 2,25 · 2,75 m pe laturile de est și de vest; sforile între cuiele opuse dau cele 30 de poziții, numerotate 1–30 de la nord spre sud și de la vest spre est. '
           f'<b>O singură rețetă</b>: fiecare specie are mereu același cui, în orice pătrat; pe pătratele de sud, patru cuie de arbori mari primesc pin negru. Caroiajul pornește de la 2 m de gardul de est și 2 m de gardul de nord; coloanele A, B, C… merg spre vest, rândurile 1, 2, 3… spre sud; {len(SQ)} de pătrate. '
           f'<b>Fără lăzi</b>: un singur set de 30 de saci numerotați pe o roabă, umplut dimineața din snopi; fișa cui → specie e una pentru toată pădurea.</p>'
-          '<p><b>De tipărit:</b> <a href="schema-est4.pdf">toată schema (planșa, legenda, rama și regula, rețetele, lista pătratelor, cantitățile, câte o pagină pe specie — PDF)</a> · <a href="retete-est4.pdf">cele două rețete pe A4 orizontal, cu numele complet al speciei la fiecare cui (PDF)</a> · <a href="retete-est4.html">varianta HTML</a> · <a href="rama-3x3.png">desenul ramei cu fișa cui → specie (PNG)</a>.</p>'
+          '<p><b>De tipărit:</b> <a href="schema-est4.pdf">toată schema (planșa, legenda, rama și regula, rețetele, lista pătratelor, cantitățile, câte o pagină pe specie — PDF)</a> · <a href="retete-est4.pdf">cele două rețete pe A4 orizontal, cu numele complet al speciei la fiecare cui (PDF)</a> · <a href="retete-est4.html">varianta HTML</a> · <a href="fasie-est4.pdf">fâșia de la gard: cele 3 rânduri, cu numărul și specia fiecărei poziții, câte o pagină pe gard (PDF)</a> · <a href="rama-3x3.png">desenul ramei cu fișa cui → specie (PNG)</a>.</p>'
           '<p class="rama-img"><a href="rama-3x3.svg"><img src="rama-3x3.svg" alt="Rama de 3 × 3 m cu 30 de cuie și fișa cui → specie" style="width:100%;max-width:1100px;display:block;border:1px solid #ddd;border-radius:6px"></a></p>')
 regula = f'<p><b>Regula de sărit (singura):</b> {H.escape(REG)} Plantele cu spini care ajung lângă alee (păducel, porumbar, măceș) se taie la sol în anul 2, când se redeschide aleea.</p>'
 fasie_txt = (f'<p><b>Fâșia de la gard (F), {len(fasie)} puieți, se plantează prima, pe linie, fără ramă:</b> {H.escape(F["descriere"])} Rotația speciilor pe fiecare rând: ' + ' → '.join(f'<span class="cod" style="background:{COL[SP[c]["strat"]]}">{c}</span>' for c in F['rotatie']) + ' și de la capăt.</p>')
@@ -296,3 +296,58 @@ table.big {{ font-size: 16px; table-layout: fixed; }} table.big td, table.big th
 </style></head><body>{rt_full_page('I')}{rt_full_page('S')}</body></html>'''
 open(f'{R}/retete-est4.html', 'w', encoding='utf-8').write(html)
 print('scris: retete-est4.html')
+
+# ── fasie-est4.html: fâșia de la gard (breteaua), două pagini A4 orizontale, câte una pe gard ──
+FAS_NUME = {'Rh': 'Măceș*', 'Ev': 'Salbă moale*'}   # ce se plantează efectiv pe pozițiile verigarului și ale salbei râioase
+def fas_rows():
+    gn = D['gard_nord'][0]['y']; (x1, y1), (x2, y2) = [(g['x'], g['y']) for g in D['gard_est']]
+    de = lambda p: abs((x2 - x1) * (y1 - p['y']) - (x1 - p['x']) * (y2 - y1)) / math.hypot(x2 - x1, y2 - y1)
+    segs = []
+    for p in sorted(fasie, key=lambda p: p['poz']):
+        key = (p['patrat'], round((gn - p['y']) if p['patrat'] == 'F-N' else de(p), 1))
+        if segs and segs[-1][0] == key: segs[-1][1].append(p)
+        else: segs.append([key, [p]])
+    return segs
+def fas_page(gard, segs):
+    W = 277.0; x0 = 16.0; n_max = max(len(ps) for _, ps in segs); pitch = (W - x0 - 6) / n_max; r = 3.6
+    ys = [21.0, 61.0, 101.0]
+    o = [f'<svg viewBox="0 0 {W} 134" width="{W}mm" height="134mm" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, Segoe UI, Helvetica, Arial, sans-serif">',
+         f'<rect x="{x0 - 4}" y="3" width="{W - x0 + 2}" height="2.4" fill="#8d7b55"/><text x="{(W + x0) / 2}" y="2.2" font-size="3" text-anchor="middle" fill="#6b5f3a">GARDUL DE {gard.upper()}</text>',
+         f'<text x="{x0 - 4}" y="9.5" font-size="3.2" font-weight="700" fill="#c62828">◀ START: colțul de nord-est</text>',
+         f'<text x="{W - 4}" y="9.5" font-size="3.2" text-anchor="end" fill="#444">{"spre vest ▶" if gard == "nord" else "spre sud ▶"}</text>']
+    for (key, ps), y in zip(segs, ys):
+        off = 0.5 * pitch if abs(key[1] - 1.3) < 0.05 else 0.0
+        o.append(f'<line x1="{x0 - 2}" y1="{y}" x2="{W - 4}" y2="{y}" stroke="#bbb" stroke-width="0.3" stroke-dasharray="1.2 1"/>')
+        o.append(f'<text x="{x0 - 4}" y="{y - 4.6}" font-size="3" font-weight="700" fill="#1f4d33">Rândul la {str(key[1]).replace(".", ",")} m de gard · {len(ps)} plante</text>')
+        for i, p in enumerate(ps):
+            x = x0 + off + i * pitch; c = p['cod']; nume = FAS_NUME.get(c, SP[c]['ro'])
+            o.append(f'<circle cx="{x:.2f}" cy="{y}" r="{r}" fill="{COL[p["strat"]]}" stroke="#fff" stroke-width="0.4"/>'
+                     f'<text x="{x:.2f}" y="{y + 1.7}" font-size="4.3" font-weight="700" text-anchor="middle" fill="{TXT[p["strat"]]}">{p["poz"]}</text>'
+                     f'<text transform="translate({x + 1.3:.2f},{y + r + 1.5}) rotate(90)" font-size="3.5" fill="#222">{H.escape(nume)}</text>')
+    return ''.join(o) + '</svg>'
+def fas_legend(segs):
+    cnt = collections.Counter(p['cod'] for _, ps in segs for p in ps); n_rh = cnt.pop('Rh', 0); cnt['Rc'] += n_rh
+    ordine = F['rotatie'] if isinstance(F.get('rotatie'), list) else [c for c in ('Cs', 'Rh', 'Ps', 'Cm', 'Vl', 'Cc', 'Rc', 'Lv', 'Ev', 'Cr') if c in cnt]
+    seen = []; [seen.append(c) for c in ordine if c not in seen]
+    return '<table class="leg"><tr>' + ''.join(f'<td><span class="sw" style="background:{COL[SP[c]["strat"]]}"></span><b>{H.escape(FAS_NUME.get(c, SP[c]["ro"]))}</b> {cnt[c]}' + (f' (din care {n_rh} pe pozițiile verigarului)' if c == 'Rc' else '') + '</td>' for c in seen if c != 'Rh') + '</tr></table>'
+segsN = [s for s in fas_rows() if s[0][0] == 'F-N']; segsE = [s for s in fas_rows() if s[0][0] == 'F-E']
+foot = ('<p class="foot"><b>Cum se trasează:</b> sfoara paralelă cu gardul la 0,8 m, apoi la 1,3 m, apoi la 1,8 m; pe fiecare sfoară câte o plantă la 0,6 m, începând din colțul de nord-est; '
+        'rândul din mijloc (1,3 m) pornește cu 0,3 m mai târziu, ca plantele să fie în șah. Numerele sunt ordinea de plantare (1–98 pe nord, 99–194 pe est). '
+        'Verde = subarboret (strat C), negru = arbuști (strat D). <b>*</b> Pe pozițiile verigarului se plantează măceș, pe cele ale salbei râioase salbă moale (speciile originale nu există în pepiniere). '
+        'Pozițiile speciilor care încă lipsesc rămân cu un băț și se completează în martie.</p>')
+fhtml = f'''<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>Fâșia de la gard — schema 4</title>
+<style>
+@page {{ size: A4 landscape; margin: 9mm; }}
+body {{ margin: 0; font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif; color: #222; background: #fff; }}
+.pg {{ width: 279mm; height: 190mm; page-break-after: always; break-after: page; overflow: hidden; }} .pg:last-child {{ page-break-after: auto; }}
+h1 {{ font-size: 15px; margin: 0 0 2mm; color: #1f4d33; }} h1 small {{ font-weight: 400; color: #444; font-size: 11px; }}
+table.leg {{ border-collapse: collapse; font-size: 11px; margin: 2mm 0 0; }} table.leg td {{ padding: 1mm 2.5mm 1mm 0; white-space: nowrap; }}
+.sw {{ display: inline-block; width: 3.2mm; height: 3.2mm; border-radius: 50%; vertical-align: middle; margin-right: 1.2mm; }}
+.foot {{ font-size: 9.5px; color: #333; margin: 2.5mm 0 0; line-height: 1.4; }}
+@media screen {{ body {{ background: #888; }} .pg {{ background: #fff; margin: 6mm auto; padding: 9mm; box-shadow: 0 2px 10px rgba(0,0,0,.4); }} }}
+</style></head><body>
+<section class="pg"><h1>Fâșia de la gardul de nord <small>— {sum(len(ps) for _, ps in segsN)} de puieți, 3 rânduri, de la colțul de nord-est spre vest</small></h1>{fas_page('nord', segsN)}{fas_legend(segsN)}{foot}</section>
+<section class="pg"><h1>Fâșia de la gardul de est <small>— {sum(len(ps) for _, ps in segsE)} de puieți, 3 rânduri, de la colțul de nord-est spre sud</small></h1>{fas_page('est', segsE)}{fas_legend(segsE)}{foot}</section>
+</body></html>'''
+open(f'{R}/fasie-est4.html', 'w', encoding='utf-8').write(fhtml)
+print('scris: fasie-est4.html')
