@@ -855,5 +855,79 @@
     "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
    }
   ]
+ },
+ {
+  "id": "2026-11-23-scoala-si-patratele-de-3x3",
+  "data": "2026-11-23",
+  "taguri": [
+   "amenajare"
+  ],
+  "titlu": {
+   "ro": "Puieții la „școală” și țăruși pentru pătratele de 3 × 3 m",
+   "en": "Saplings in the \"school\", and stakes for the 3 × 3 m squares"
+  },
+  "text": {
+   "ro": [
+    "23 noiembrie: fiind ploios, nu s-a putut planta. Am pus puieții la „școală”, în șanț, cu câte un țăruș cu numele speciei, și am continuat trasarea.",
+    "Am bătut țăruși ca să marchez pătrate de 3 × 3 m, ca să pot planta conform schemei."
+   ],
+   "en": [
+    "23 November: it was rainy, so we could not plant. We put the saplings in the \"school\", the temporary nursery trench, each group with a stake carrying the species name, and carried on marking out.",
+    "I drove in stakes to mark out 3 × 3 m squares, so that I can plant according to the layout."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-11-23-santul-scoala.jpg",
+    "alt": {
+     "ro": "Un om din echipă cu lopata lângă șanțul „școlii”, între puieții așezați pe grupe, cu țăruși etichetați, pe pământ ud după ploaie",
+     "en": "A team member with a shovel beside the \"school\" trench, among saplings laid out in groups with labelled stakes, on rain-soaked ground"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-23-scoala-puieti.jpg",
+    "alt": {
+     "ro": "„Școala” de aproape: puieți fără frunze așezați în noroi, cu țăruși pe care scrie cer, tei argintiu și mojdrean",
+     "en": "The \"school\" up close: leafless saplings laid in the mud, with stakes labelled cer (Turkey oak), tei argintiu (silver lime) and mojdrean (manna ash)"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-23-selfie-teren.jpg",
+    "alt": {
+     "ro": "Selfie pe terenul frezat al pădurii, cu țărușii și aleea marcată cu sfoară albastră în fundal, sub cer noros",
+     "en": "A selfie on the tilled ground of the forest, with the stakes and the path marked in blue string behind, under an overcast sky"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-23-panorama-teren.jpg",
+    "alt": {
+     "ro": "Terenul frezat al pădurii, cu aleea în buclă marcată cu sfoară albastră și cu țăruși în rânduri, sub cer noros",
+     "en": "The tilled ground of the forest, with the looping path marked in blue string and stakes in rows, under an overcast sky"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-23-tarusi-sfoara.jpg",
+    "alt": {
+     "ro": "Țăruși de lemn, unii cu vârf albastru, și sfoară albastră întinsă pe solul frezat, marcând aleea și pătratele",
+     "en": "Wooden stakes, some with blue tips, and blue string stretched over the tilled soil, marking the path and the squares"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Puieții de la Agigea și prima trasare, 21 noiembrie",
+     "en": "The saplings from Agigea and the first marking out, 21 November"
+    },
+    "url": "jurnal.html#2026-11-21-puietii-de-la-agigea-si-trasarea"
+   },
+   {
+    "titlu": {
+     "ro": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+     "en": "Miyawaki forest, north-east corner: the planting plan (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
+   }
+  ]
  }
 ]
