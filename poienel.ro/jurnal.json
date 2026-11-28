@@ -929,5 +929,96 @@
     "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
    }
   ]
+ },
+ {
+  "id": "2026-11-27-inceputul-plantarii-padurii",
+  "data": "2026-11-27",
+  "taguri": [
+   "amenajare",
+   "etape"
+  ],
+  "titlu": {
+   "ro": "Am început plantarea pădurii Miyawaki: 380 de puieți",
+   "en": "We started planting the Miyawaki forest: 380 saplings"
+  },
+  "text": {
+   "ro": [
+    "27 noiembrie: am început plantarea pădurii Miyawaki. Am marcat cu spray de marcare rutieră locul fiecărui puiet și am plantat speciile pe rând, de la stejarul brumăriu, cu care am început, până la măceș, ultimul: 380 de puieți în total, după schema pădurii și rețetele pe pătrate de 3 × 3 m, pe terenul trasat pe 23 noiembrie.",
+    "Fâșia de la gard: 129 de puieți (măceș 33, porumbar 32, lemn câinesc 32, păducel 16, scumpie 16). Pătratele: 251 de puieți (mojdrean 47, vișin turcesc 28, stejar brumăriu 26, porumbar 25, lemn câinesc 22, jugastru 21, scumpie 21, măceș 21, corcoduș 20, păducel 20). Pozițiile speciilor care nu au sosit încă rămân marcate cu băț, pentru martie.",
+    "Pinul negru, teiul argintiu, cerul și ulmul de câmp au rămas în șanț, la „școală”, pentru următoarea zi de plantare. La sfârșitul zilei au ajuns și baloții de paie, trei baloți rotunzi, pe care îi vom folosi ca mulci."
+   ],
+   "en": [
+    "27 November: we started planting the Miyawaki forest. We marked the spot of every sapling with road-marking spray and planted the species one after another, from the brumăriu oak (Quercus pedunculiflora), which we began with, to the dog rose, the last: 380 saplings in all, following the forest layout and the recipes for 3 × 3 m squares, on the ground marked out on 23 November.",
+    "The strip along the fence: 129 saplings (dog rose 33, blackthorn 32, privet 32, hawthorn 16, smoke tree 16). The squares: 251 saplings (manna ash 47, mahaleb cherry 28, brumăriu oak 26, blackthorn 25, privet 22, field maple 21, smoke tree 21, dog rose 21, cherry plum 20, hawthorn 20). The positions of the species that have not arrived yet stay marked with a stick, for March.",
+    "The Austrian pine, the silver lime, the Turkey oak and the field elm stayed in the trench, in the \"school\", for the next planting day. At the end of the day the straw bales also arrived, three round bales, which we will use as mulch."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-11-27-puiet-radacini.jpg",
+    "alt": {
+     "ro": "Doi oameni lângă gropile făcute cu motoburghiul: unul ține un puiet cu rădăcinile tăiate, celălalt arată locul, între puieții deja plantați",
+     "en": "Two people beside the holes made with the power auger: one holding a sapling with trimmed roots, the other pointing at the spot, among the saplings already planted"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-27-motoburghiu-gaura.jpg",
+    "alt": {
+     "ro": "Un om din echipă face o groapă cu motoburghiul la marginea parcelei, lângă țăruși cu vârf albastru, sfoara aleii și urmele portocalii de spray",
+     "en": "A team member drilling a hole with the power auger at the edge of the plot, near blue-tipped stakes, the string of the path and orange spray marks"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-27-plantare-galeti.jpg",
+    "alt": {
+     "ro": "Plantarea pe parcela marcată cu spray portocaliu: doi oameni la lucru, găleți cu apă pentru mocirlit, motoburghiul în fundal și o găină printre puieți",
+     "en": "Planting on the plot marked with orange spray: two people at work, buckets of water for puddling, the power auger in the background and a hen among the saplings"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-27-panorama-plantare.jpg",
+    "alt": {
+     "ro": "Pădurea în plantare: poinița circulară marcată cu sfoară albastră, puieții cu marcaje portocalii la bază și trei oameni la lucru",
+     "en": "The forest being planted: the circular clearing marked with blue string, saplings with orange marks at the base and three people at work"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-27-reteta-interior.jpg",
+    "alt": {
+     "ro": "Rețeta I, rețeta de interior, tipărită și laminată: pătratul de 3 × 3 m cu 30 de poziții numerotate și specia fiecăreia, cu latura roșie spre gardul de nord",
+     "en": "Recipe I, the interior recipe, printed and laminated: the 3 × 3 m square with 30 numbered positions and the species of each, with the red side towards the north fence"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-27-baloti-paie.jpg",
+    "alt": {
+     "ro": "Trei baloți rotunzi de paie, în plasă, la lăsarea serii, pentru mulci, cu parcela plantată în fundal",
+     "en": "Three round straw bales, in netting, at dusk, for mulch, with the planted plot in the background"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Puieții la „școală” și trasarea pătratelor, 23 noiembrie",
+     "en": "The saplings in the \"school\" and marking out the squares, 23 November"
+    },
+    "url": "jurnal.html#2026-11-23-scoala-si-patratele-de-3x3"
+   },
+   {
+    "titlu": {
+     "ro": "Pădure Miyawaki, schema 4: planul de plantare",
+     "en": "Miyawaki forest, layout 4: the planting plan (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/miyawaki/index-est4.html"
+   },
+   {
+    "titlu": {
+     "ro": "Jurnalul proiectului: deciziile de plantare",
+     "en": "The project journal: the planting decisions (in Romanian)"
+    },
+    "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
+   }
+  ]
  }
 ]
