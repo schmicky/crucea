@@ -767,5 +767,93 @@
     "url": "index.html#specie-A34"
    }
   ]
+ },
+ {
+  "id": "2026-11-21-puietii-de-la-agigea-si-trasarea",
+  "data": "2026-11-21",
+  "taguri": [
+   "amenajare"
+  ],
+  "titlu": {
+   "ro": "Puieții de la Agigea și trasarea aleii și a poiniței secrete",
+   "en": "The saplings from Agigea, and marking out the access path and the secret clearing"
+  },
+  "text": {
+   "ro": [
+    "21 noiembrie: am adus materialul săditor de la Pepiniera Silvică Agigea: 265 de puieți de 2–3 ani, mai mari decât ne așteptam, din opt specii: porumbar 65, scumpie 45, vișin turcesc 35, stejar brumăriu 30, corcoduș 25, jugastru 25, cer 20 și ulm de câmp 20.",
+    "Am profitat de vremea frumoasă ca să trasez aleea de acces și poinița secretă din pădurea Miyawaki, cu ruleta și țăruși, pe solul frezat."
+   ],
+   "en": [
+    "21 November: we collected the planting material from the Agigea Forestry Nursery: 265 saplings, 2–3 years old and bigger than we expected, of eight species: blackthorn 65, smoke tree 45, mahaleb cherry 35, brumăriu oak (Quercus pedunculiflora) 30, cherry plum 25, field maple 25, Turkey oak 20 and field elm 20.",
+    "We took advantage of the beautiful weather to mark out the access path and the secret clearing of the Miyawaki forest, with the tape and stakes, on the tilled soil."
+   ]
+  },
+  "foto": [
+   {
+    "src": "resurse/jurnal/2026-11-21-masina-incarcata.jpg",
+    "alt": {
+     "ro": "Mașina încărcată cu puieți legați în mănunchiuri, în saci negri, pe drum",
+     "en": "The car loaded with saplings tied in bundles, in black bags, on the road"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-manunchi-sac-albastru.jpg",
+    "alt": {
+     "ro": "Un mănunchi de puieți cu frunze galbene de toamnă, într-un sac albastru legat cu bandă",
+     "en": "A bundle of saplings with yellow autumn leaves, in a blue bag sealed with tape"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-frunze-tepoase.jpg",
+    "alt": {
+     "ro": "Un puiet cu frunze lucioase, cu marginea țepoasă",
+     "en": "A sapling with glossy leaves with spiny edges"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-manunchi-fara-frunze.jpg",
+    "alt": {
+     "ro": "Un mănunchi de puieți fără frunze, într-un sac negru",
+     "en": "A bundle of leafless saplings in a black bag"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-ramuri-spinoase.jpg",
+    "alt": {
+     "ro": "Ramuri spinoase ale unor puieți fără frunze",
+     "en": "Thorny branches of leafless saplings"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-trasare-ruleta.jpg",
+    "alt": {
+     "ro": "Ruletele întinse pe terenul frezat, la trasarea aleii și a poiniței",
+     "en": "Measuring tapes stretched out on the tilled ground, marking out the path and the clearing"
+    }
+   },
+   {
+    "src": "resurse/jurnal/2026-11-21-aleea-tarusi.jpg",
+    "alt": {
+     "ro": "Terenul frezat al pădurii, cu aleea marcată prin țăruși cu vârf albastru și sfoară albastră, cu ruleta întinsă în față",
+     "en": "The tilled ground of the forest, with the path marked by blue-tipped stakes and blue string, and the tape stretched out in front"
+    }
+   }
+  ],
+  "linkuri": [
+   {
+    "titlu": {
+     "ro": "Pădure Miyawaki, colțul de nord-est: planul de plantare",
+     "en": "Miyawaki forest, north-east corner: the planting plan (in Romanian)"
+    },
+    "url": "https://schmicky.github.io/crucea/miyawaki/index-est.html"
+   },
+   {
+    "titlu": {
+     "ro": "Jurnalul proiectului: comanda de la Agigea și deciziile de plantare",
+     "en": "The project journal: the Agigea order and the planting decisions (in Romanian)"
+    },
+    "url": "https://github.com/schmicky/crucea/blob/master/time-lapse/plan-implementare-nord-miyawaki.md"
+   }
+  ]
  }
 ]
